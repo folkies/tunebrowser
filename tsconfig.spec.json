@@ -9,7 +9,6 @@
     "module": "commonjs"
   },
   "files": [
-    "src/test.ts",
     "src/polyfills.ts"
   ],
   "include": [
