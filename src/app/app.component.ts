@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import abcjs from 'abcjs';
+import { SearchService } from './search.service';
 
 @Component({
     selector: 'app-root',
@@ -9,6 +10,11 @@ import abcjs from 'abcjs';
 export class AppComponent {
     title = 'folkies';
     rawAbc: string;
+    query: string;
+
+    constructor(private searchService: SearchService) {
+
+    }
 
     get abcText(): string {
         return this.rawAbc;
@@ -18,5 +24,12 @@ export class AppComponent {
         this.rawAbc = text;
         console.log('new text: ' + this.rawAbc);
         abcjs.renderAbc('notation', this.rawAbc);
+    }
+
+    findTunes(): void {
+        const tunes = this.searchService.findTunes(this.query);
+        if (tunes.length > 0) {
+            abcjs.renderAbc('notation', tunes[0].abc);
+        }
     }
 }

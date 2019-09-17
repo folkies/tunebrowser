@@ -2,6 +2,7 @@
 <div style="text-align:center">
   <h1>Welcome to Folkies!</h1>
 </div>
-<h2>Enter some ABC notation:</h2>
-<textarea [(ngModel)]="abcText"></textarea>
+<h2>Enter your query:</h2>
+<input [(ngModel)]="query">
+<button (click)="findTunes()">Search</button>
 <div id="notation"></div>

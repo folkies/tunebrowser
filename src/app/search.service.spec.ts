@@ -9,7 +9,8 @@ describe('SearchService', () => {
     beforeAll(() => {
         const text = fs.readFileSync('src/assets/tunebook.abc', 'utf8');
         tunebook = new TuneBook(text);
-        searchService = new SearchService(tunebook);
+        searchService = new SearchService(undefined);
+        searchService.tunebook = tunebook;
     });
 
     test('should find by ID', () => {
