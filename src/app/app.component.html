@@ -5,4 +5,10 @@
 <h2>Enter your query:</h2>
 <input [(ngModel)]="query">
 <button (click)="findTunes()">Search</button>
+<div id="noMatches" *ngIf="noResults()"><p>No matching tunes</p></div>
+<div id="overview" *ngIf="multipleResults()">
+    <ul>
+        <li *ngFor="let tune of tunes">{{tune.title}}</li>
+    </ul>
+</div>
 <div id="notation"></div>

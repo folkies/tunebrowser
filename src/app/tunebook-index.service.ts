@@ -2,12 +2,15 @@ import { TuneBook, TuneBookEntry } from 'abcjs';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class SearchService {
-    public tunebook: TuneBook;
+export class TunebookIndex {
     private titleToIdMap: Map<string, string> = new Map();
     private normalizedTitleToIdMap: Map<string, string> = new Map();
 
-    public buildIndex(): void {
+    constructor(private tunebook: TuneBook) {
+        this.buildIndex();
+    }
+
+    private buildIndex(): void {
         this.tunebook.tunes.forEach(tune => {
             this.titleToIdMap.set(tune.title, tune.id);
             this.normalizedTitleToIdMap.set(this.normalize(tune.title), tune.id);

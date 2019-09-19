@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchService } from 'src/app/search.service';
+import { TuneBookLoaderService } from './tunebook-loader.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchService } from 'src/app/search.service';
     FormsModule
   ],
   providers: [
-      SearchService
+      SearchService,
+      TuneBookLoaderService
   ],
   bootstrap: [AppComponent]
 })
