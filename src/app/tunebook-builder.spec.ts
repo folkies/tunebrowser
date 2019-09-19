@@ -45,8 +45,6 @@ function processFile(file: string): void {
     const tuneBook = new TuneBook(abc);
     const firstTune = tuneBook.tunes[0].abc;
     tuneMap.set(id, firstTune);
-    console.log(file);
-    console.log(firstTune);
 }
 
 function extractId(fileName: string): string {

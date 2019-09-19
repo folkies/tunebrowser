@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import abcjs, { TuneBookEntry } from 'abcjs';
-import { TunebookIndex } from './tunebook-index.service';
+import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     rawAbc: string;
     query: string;
     tunes: TuneBookEntry[] = [];
-    private tuneBookIndex: TunebookIndex;
+    private tuneBookIndex: TuneBookIndex;
 
     constructor(private tuneBookLoaderService: TuneBookLoaderService) {
 
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 
     async ngOnInit(): Promise<void> {
         const tuneBook = await this.tuneBookLoaderService.loadTuneBook();
-        this.tuneBookIndex = new TunebookIndex(tuneBook);
+        this.tuneBookIndex = new TuneBookIndex(tuneBook);
     }
 
     get abcText(): string {

@@ -1,20 +1,19 @@
 import { TuneBook } from 'abcjs';
 import fs from 'fs';
-import { SearchService } from './search.service';
+import { TuneBookIndex } from './tunebook-index';
 
-describe('SearchService', () => {
+describe('TuneBookIndex', () => {
     let tunebook: TuneBook;
-    let searchService: SearchService;
+    let tuneBookIndex: TuneBookIndex;
 
     beforeAll(() => {
         const text = fs.readFileSync('src/assets/tunebook.abc', 'utf8');
         tunebook = new TuneBook(text);
-        searchService = new SearchService(undefined);
-        searchService.tunebook = tunebook;
+        tuneBookIndex = new TuneBookIndex(tunebook);
     });
 
     test('should find by ID', () => {
-        const tunes = searchService.findTunes('273');
+        const tunes = tuneBookIndex.findTunes('273');
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(1);
         const tune = tunes[0];
@@ -22,13 +21,13 @@ describe('SearchService', () => {
     });
 
     test('should not find by non-existing ID', () => {
-        const tunes = searchService.findTunes('1234567');
+        const tunes = tuneBookIndex.findTunes('1234567');
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(0);
     });
 
     test('should find by title', () => {
-        const tunes = searchService.findTunes('Boys Of Malin');
+        const tunes = tuneBookIndex.findTunes('Boys Of Malin');
         expect(tunes).toBeDefined();
         const tune = tunes[0];
         expect(tune.title).toBe('Boys Of Malin');
@@ -36,7 +35,7 @@ describe('SearchService', () => {
     });
 
     test('should find by lower-case title', () => {
-        const tunes = searchService.findTunes('boys of malin');
+        const tunes = tuneBookIndex.findTunes('boys of malin');
         expect(tunes).toBeDefined();
         const tune = tunes[0];
         expect(tune.title).toBe('Boys Of Malin');
@@ -44,7 +43,7 @@ describe('SearchService', () => {
     });
 
     test('should find by word from title', () => {
-        const tunes = searchService.findTunes('malin');
+        const tunes = tuneBookIndex.findTunes('malin');
         expect(tunes).toBeDefined();
         const tune = tunes[0];
         expect(tune.title).toBe('Boys Of Malin');
@@ -52,7 +51,7 @@ describe('SearchService', () => {
     });
 
     test('should find multiple tunes', () => {
-        const tunes = searchService.findTunes('banshee');
+        const tunes = tuneBookIndex.findTunes('banshee');
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(2);
         expect(tunes[0].title).toBe('Lilting Banshee');
