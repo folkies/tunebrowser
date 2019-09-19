@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { TuneBookLoaderService } from './tunebook-loader.service';
 import { HttpClientModule } from '@angular/common/http';
 
-xdescribe('AppComponent', () => {
+describe('AppComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
