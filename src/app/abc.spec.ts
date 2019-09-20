@@ -89,6 +89,6 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         const tunebook = new TuneBook(text);
         const fanny = tunebook.getTuneByTitle('Fanny Power');
         expect(fanny).toBeDefined();
-        console.log(fanny.abc);
+        expect(fanny.id).toBe('281');
     });
 });

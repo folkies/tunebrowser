@@ -1,14 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>Welcome to Folkies!</h1>
+    <h1>Welcome to Folkies!</h1>
 </div>
+
 <h2>Enter your query:</h2>
+
 <input [(ngModel)]="query">
 <button (click)="findTunes()">Search</button>
-<div id="noMatches" *ngIf="noResults()"><p>No matching tunes</p></div>
-<div id="overview" *ngIf="multipleResults()">
-    <ul>
-        <li *ngFor="let tune of tunes">{{tune.title}}</li>
-    </ul>
+
+<div id="noMatches" *ngIf="noResults()">
+    <p>No matching tunes</p>
 </div>
+
+<div id="overview" *ngIf="multipleResults()">
+    <table>
+        <tr *ngFor="let tune of tunes">
+            <td>{{tune.id}}</td>
+            <td><a href="#" (click)="!!renderTune(tune)">{{tune.title}}</a></td>
+            <td [innerHTML]="svgMap.get(tune.id) | safeHtml"></td>
+        </tr>
+    </table>
+</div>
+
 <div id="notation"></div>
