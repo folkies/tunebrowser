@@ -8,7 +8,7 @@ export class TuneBookLoaderService {
     }
 
     async loadTuneBook(): Promise<TuneBook> {
-        return this.httpClient.get('/assets/tunebook.abc', { responseType: 'text' })
+        return this.httpClient.get('assets/tunebook.abc', { responseType: 'text' })
             .toPromise()
             .then(data => new TuneBook(data.toString()));
     }
