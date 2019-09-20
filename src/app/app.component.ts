@@ -50,9 +50,10 @@ export class AppComponent implements OnInit {
         }
     }
 
-    renderTune(tune: TuneBookEntry) {
+    renderTune(tune: TuneBookEntry): boolean {
         this.tunes = [tune];
         abcjs.renderAbc('notation', tune.abc);
+        return true;
     }
 
     renderSnippet(tune: TuneBookEntry) {
@@ -79,7 +80,7 @@ export class AppComponent implements OnInit {
                 const bars = line.split('|');
                 if (bars.length > 1) {
                     musicSeen = true;
-                    filteredLines.push(bars.slice(0, 2).join('|'));
+                    filteredLines.push(bars.slice(0, 3).join('|'));
                 }
             }
         }

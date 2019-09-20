@@ -1,10 +1,10 @@
 <div style="text-align:center">
-    <h1>Welcome to Folkies!</h1>
+    <h1>Tunebook Browser</h1>
 </div>
 
-<h2>Enter your query:</h2>
+<h2>Find tunes</h2>
 
-<input [(ngModel)]="query">
+<input [(ngModel)]="query" placeholder="tune number or (part of) title">
 <button (click)="findTunes()">Search</button>
 
 <div id="noMatches" *ngIf="noResults()">
