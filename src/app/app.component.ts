@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     }
 
     multipleResults(): boolean {
-        return this.tunes.length > 1;
+        return this.tunes.length >= 2;
     }
 
     findTunes(): void {
