@@ -1,25 +1,27 @@
-<div>
-    <h1>Tunebook Browser</h1>
+<div class="ui-widget">
+    <div>
+        <h1>Tunebook Browser</h1>
+    </div>
+
+    <h2>Find tunes</h2>
+
+    <input type="text" pInputText [(ngModel)]="query" size="30" placeholder="tune number or (part of) title">
+    <p-button (click)="findTunes()" label="Search"></p-button>
+
+    <div id="noMatches" *ngIf="noResults()">
+        <p>No matching tunes</p>
+    </div>
+
+    <div id="overview" *ngIf="multipleResults()">
+        <table>
+            <tr *ngFor="let tune of tunes">
+                <td><a href="#" (click)="renderTune(tune)">{{tune.title}}</a></td>
+                <td>
+                    <app-snippet-view [tune]="tune.abc"></app-snippet-view>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <app-tune-view *ngIf="uniqueResult()" [tune]="currentTune()"></app-tune-view>
 </div>
-
-<h2>Find tunes</h2>
-
-<input [(ngModel)]="query" placeholder="tune number or (part of) title">
-<button (click)="findTunes()">Search</button>
-
-<div id="noMatches" *ngIf="noResults()">
-    <p>No matching tunes</p>
-</div>
-
-<div id="overview" *ngIf="multipleResults()">
-    <table>
-        <tr *ngFor="let tune of tunes">
-            <td><a href="#" (click)="renderTune(tune)">{{tune.title}}</a></td>
-            <td>
-                <app-snippet-view [tune]="tune.abc"></app-snippet-view>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<app-tune-view *ngIf="uniqueResult()" [tune]="currentTune()"></app-tune-view>
