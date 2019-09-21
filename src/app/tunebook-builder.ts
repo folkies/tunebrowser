@@ -1,5 +1,7 @@
-import { TuneBook } from 'abcjs';
+import { TuneBook, TuneBookEntry } from 'abcjs';
 import fs from 'fs';
+
+import windows1252 from 'windows-1252';
 
 export interface Reference {
     numeric: number;
@@ -9,9 +11,6 @@ export interface Reference {
 export class TuneBookBuilder {
 
     tuneMap = new Map<string, string>();
-
-    constructor(private inputDir: string) {
-    }
 
     referenceCompare(left: string, right: string): number {
         const leftPair = this.toReference(left);
@@ -42,13 +41,32 @@ export class TuneBookBuilder {
         return '0' <= c && c <= '9';
     }
 
-    processFile(file: string): void {
-        const text = fs.readFileSync(`${this.inputDir}/${file}`).toString();
+    processSingleFile(file: string): void {
+        const text = fs.readFileSync(file).toString();
         const id = this.extractId(file);
         const abc = text.replace(/^X:.*/, `X: ${id}`);
         const tuneBook = new TuneBook(abc);
         const firstTune = tuneBook.tunes[0].abc;
         this.tuneMap.set(id, firstTune);
+    }
+
+    processBookFile(file: string): void {
+        const bytes = fs.readFileSync(file).toString('binary');
+        const text = windows1252.decode(bytes);
+        const abc = text.replace(/^%%abc-.*$/mg, '');
+        const tuneBook = new TuneBook(abc);
+        tuneBook.tunes.forEach(entry => this.processTuneBookEntry(entry));
+    }
+
+    processTuneBookEntry(entry: TuneBookEntry): void {
+        const id = this.extractIdFromTitle(entry.title);
+        const abc = entry.abc.replace(/^X:.*/m, `X: ${id}`);
+        this.tuneMap.set(id, abc);
+    }
+
+    extractIdFromTitle(title: string) {
+        const words = title.trim().split(' ');
+        return words.shift();
     }
 
     extractId(fileName: string): string {
@@ -59,5 +77,10 @@ export class TuneBookBuilder {
             start = 1;
         }
         return fileName.substring(start, dot);
+    }
+
+    buildSortedBook(): string {
+        const sortedMap = new Map([...this.tuneMap].sort((left, right) => this.referenceCompare(left[0], right[0])));
+        return Array.from(sortedMap.values()).join('\n\n');
     }
 }

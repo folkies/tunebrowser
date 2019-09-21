@@ -1,13 +1,14 @@
 import fs from 'fs';
 import { TuneBookBuilder } from './tunebook-builder';
 
-const inputDir = '/home/hwellmann/tmp/tunes';
+const singleFileDir = '/home/hwellmann/tmp/tunes';
+const bookDir = '/home/hwellmann/tmp/ds';
 
-describe('Tunebook builder', () => {
+describe('TuneBookBuilder', () => {
     let builder: TuneBookBuilder;
 
     beforeEach(() => {
-        builder = new TuneBookBuilder(inputDir);
+        builder = new TuneBookBuilder();
     });
 
     test('should parse reference with suffix', () => {
@@ -30,12 +31,17 @@ describe('Tunebook builder', () => {
         expect(builder.referenceCompare('12b', '12a')).toBeGreaterThan(0);
     });
 
-    test('should build tunebook', () => {
-        const files = fs.readdirSync(inputDir);
-        files.forEach(f => builder.processFile(f));
+    test('should build tunebook from single files', () => {
+        const files = fs.readdirSync(singleFileDir);
+        files.forEach(f => builder.processSingleFile(`${singleFileDir}/${f}`));
 
-        const sortedMap = new Map([...builder.tuneMap].sort((left, right) => builder.referenceCompare(left[0], right[0])));
-        const text = Array.from(sortedMap.values()).join('\n\n');
-        fs.writeFileSync('mytunebook.abc', text);
+        fs.writeFileSync('bookFromSingleFiles.abc', builder.buildSortedBook());
+    });
+
+    test('should build tunebook from books', () => {
+        const files = fs.readdirSync(bookDir);
+        files.forEach(f => builder.processBookFile(`${bookDir}/${f}`));
+
+        fs.writeFileSync('bookFromBooks.abc', builder.buildSortedBook());
     });
 });
