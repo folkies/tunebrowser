@@ -1,7 +1,7 @@
 import { TuneBook, TuneBookEntry } from 'abcjs';
 import fs from 'fs';
 
-import windows1252 from 'windows-1252';
+import iconv from 'iconv-lite';
 
 export interface Reference {
     numeric: number;
@@ -51,8 +51,8 @@ export class TuneBookBuilder {
     }
 
     processBookFile(file: string): void {
-        const bytes = fs.readFileSync(file).toString('binary');
-        const text = windows1252.decode(bytes);
+        const bytes = fs.readFileSync(file);
+        const text = iconv.decode(bytes, 'windows1252');
         const abc = text.replace(/^%%abc-.*$/mg, '');
         const tuneBook = new TuneBook(abc);
         tuneBook.tunes.forEach(entry => this.processTuneBookEntry(entry));
