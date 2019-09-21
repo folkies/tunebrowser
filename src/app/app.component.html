@@ -15,9 +15,10 @@
     <table>
         <tr *ngFor="let tune of tunes">
             <td><a href="#" (click)="!!renderTune(tune)">{{tune.title}}</a></td>
-            <td [innerHTML]="svgMap.get(tune.id) | safeHtml"></td>
+            <td><app-snippet-view [tune]="tune.abc"></app-snippet-view></td>
         </tr>
     </table>
 </div>
 
-<div id="notation"></div>
+<app-tune-view *ngIf="uniqueResult()" [tune]="currentTune()"></app-tune-view>
+

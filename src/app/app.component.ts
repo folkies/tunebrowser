@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import abcjs, { TuneBookEntry } from 'abcjs';
+import { TuneBookEntry } from 'abcjs';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
 
@@ -18,7 +17,7 @@ export class AppComponent implements OnInit {
 
     private tuneBookIndex: TuneBookIndex;
 
-    constructor(private tuneBookLoaderService: TuneBookLoaderService, private domSanitizer: DomSanitizer) {
+    constructor(private tuneBookLoaderService: TuneBookLoaderService) {
 
     }
 
@@ -39,51 +38,16 @@ export class AppComponent implements OnInit {
         return this.tunes.length >= 2;
     }
 
+    currentTune(): string {
+        return this.uniqueResult() ? this.tunes[0].abc : '';
+    }
+
     findTunes(): void {
         this.tunes = this.tuneBookIndex.findTunes(this.query);
-        if (this.uniqueResult()) {
-            abcjs.renderAbc('notation', this.tunes[0].abc);
-        } else if (this.multipleResults()) {
-            this.tunes.forEach(tune => this.renderSnippet(tune));
-        } else {
-            abcjs.renderAbc('notation', '');
-        }
     }
 
     renderTune(tune: TuneBookEntry): boolean {
         this.tunes = [tune];
-        abcjs.renderAbc('notation', tune.abc);
         return true;
-    }
-
-    renderSnippet(tune: TuneBookEntry) {
-        const snippet = this.buildSnippet(tune.abc);
-        abcjs.renderAbc('notation', snippet);
-        const notationElem = document.getElementById('notation');
-        this.svgMap.set(tune.id, notationElem.innerHTML);
-        notationElem.innerHTML = '';
-    }
-
-    private buildSnippet(abc: string): string {
-        const lines = abc.split('\n');
-        const filteredLines = [];
-        let musicSeen = false;
-        for (const line of lines) {
-            if (/^[A-Za-z]:/.test(line)) {
-                if (/^[XMLK]:/.test(line)) {
-                    filteredLines.push(line);
-                }
-            } else {
-                if (musicSeen) {
-                    break;
-                }
-                const bars = line.split('|');
-                if (bars.length > 1) {
-                    musicSeen = true;
-                    filteredLines.push(bars.slice(0, 3).join('|'));
-                }
-            }
-        }
-        return filteredLines.join('\n');
     }
 }
