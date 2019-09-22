@@ -6,7 +6,8 @@
     <h2>Find tunes</h2>
 
     <form>
-        <input name="query" type="text" pInputText [(ngModel)]="query" size="30" placeholder="tune number or part of title">
+        <input name="query" type="text" pInputText [(ngModel)]="query" size="30"
+            placeholder="tune number or part of title">
         <p-button (click)="findTunes()" label="Search"></p-button>
     </form>
 
@@ -15,14 +16,16 @@
     </div>
 
     <div id="overview" *ngIf="multipleResults()">
-        <table>
-            <tr *ngFor="let tune of tunes">
-                <td><a href="#" (click)="renderTune(tune)">{{tune.title}}</a></td>
-                <td>
-                    <app-snippet-view [tune]="tune.abc"></app-snippet-view>
-                </td>
-            </tr>
-        </table>
+        <p-table [value]="tunes">
+            <ng-template pTemplate="body" let-tune>
+                <tr>
+                    <td><a href="#" (click)="renderTune(tune)">{{tune.title}}</a></td>
+                    <td>
+                        <app-snippet-view [tune]="tune.abc"></app-snippet-view>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
     </div>
 
     <app-tune-view *ngIf="uniqueResult()" [tune]="currentTune()"></app-tune-view>

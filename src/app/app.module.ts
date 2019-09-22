@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';
 import { AppComponent } from './app.component';
 import { SnippetViewComponent } from './snippet-view/snippet-view.component';
 import { TuneViewComponent } from './tune-view/tune-view.component';
@@ -21,7 +22,8 @@ import { TuneBookLoaderService } from './tunebook-loader.service';
         ButtonModule,
         HttpClientModule,
         InputTextModule,
-        FormsModule
+        FormsModule,
+        TableModule
     ],
     providers: [
         TuneBookIndex,
