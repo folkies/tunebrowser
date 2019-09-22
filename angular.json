@@ -20,7 +20,10 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
+                "src/favicon.ico",
+                "src/favicon-16x16.png",
+                "src/favicon-32x32.png",
+                "src/site.webmanifest",
               "src/assets"
             ],
             "styles": [
@@ -89,8 +92,9 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+                "src/favicon*",
+                "src/site.webmanifest",
+                "src/assets"
             ],
             "styles": [
                 "node_modules/primeicons/primeicons.css",
