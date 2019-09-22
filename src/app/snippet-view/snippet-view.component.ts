@@ -17,12 +17,10 @@ export class SnippetViewComponent implements AfterViewInit, OnChanges {
     constructor() { }
 
     ngAfterViewInit() {
-        console.log('Snippet AfterViewInit');
         this.renderSnippet();
     }
 
     ngOnChanges() {
-        console.log('Snippet OnChanges');
         this.renderSnippet();
     }
 
