@@ -27,7 +27,7 @@ export class SnippetViewComponent implements AfterViewInit, OnChanges {
     private renderSnippet(): void {
         if (this.div !== undefined && this.tune.length > 0) {
             const snippet = this.buildSnippet(this.tune);
-            abcjs.renderAbc(this.div.nativeElement, snippet);
+            abcjs.renderAbc(this.div.nativeElement, snippet, { scale: 0.8, paddingtop: 0, paddingbottom: 0 });
         }
     }
 
