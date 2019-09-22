@@ -16,7 +16,7 @@
     </div>
 
     <div id="overview" *ngIf="multipleResults()">
-        <p-table [value]="tunes">
+        <p-table [value]="tunes" [paginator]="true" [rows]="5" [autoLayout]="true">
             <ng-template pTemplate="body" let-tune>
                 <tr>
                     <td><a href="#" (click)="renderTune(tune)">{{tune.title}}</a></td>
