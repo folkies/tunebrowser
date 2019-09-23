@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
     tunes: TuneBookEntry[] = [];
     svgMap: Map<string, string> = new Map();
 
+    private searchCompleted = false;
+
     private tuneBookIndex: TuneBookIndex;
 
     constructor(private tuneBookLoaderService: TuneBookLoaderService) {
@@ -27,7 +29,7 @@ export class AppComponent implements OnInit {
     }
 
     noResults(): boolean {
-        return this.tunes.length === 0;
+        return this.searchCompleted && this.tunes.length === 0;
     }
 
     uniqueResult(): boolean {
@@ -44,6 +46,7 @@ export class AppComponent implements OnInit {
 
     findTunes(): void {
         this.tunes = this.tuneBookIndex.findTunes(this.query);
+        this.searchCompleted = true;
     }
 
     renderTune(tune: TuneBookEntry): boolean {

@@ -26,7 +26,12 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
     private renderNotation(): void {
         if (this.div !== undefined && this.tune.length > 0) {
             abcjs.renderAbc(this.div.nativeElement, this.tune,
-                { paddingleft: 0, paddingright: 0, paddingtop: 0, paddingbottom: 0 });
+                {
+                    paddingleft: 0,
+                    paddingright: 0,
+                    paddingtop: 0,
+                    paddingbottom: 0,
+                });
         }
     }
 }

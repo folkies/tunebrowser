@@ -11,12 +11,12 @@
         </div>
     </div>
 
-    <div class="p-grid">
+    <div class="p-grid search-panel">
         <div class="p-col-12">
             <form>
                 <input name="query" type="text" pInputText [(ngModel)]="query" size="30"
                     placeholder="tune number or part of title">
-                <p-button (click)="findTunes()" label="Search"></p-button>
+                <p-button (click)="findTunes()" label="Search" styleClass="search-button"></p-button>
             </form>
         </div>
     </div>
