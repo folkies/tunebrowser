@@ -1,3 +1,8 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+
+@include mat-core();
+
 button.search-button {
     margin-left: 0.5em;
 }
@@ -6,3 +11,33 @@ div.search-panel {
     margin-bottom: 1em;
 }
 
+body {
+    margin: 0;
+}
+
+mat-form-field {
+    width: 20em;
+}
+
+.full-height {
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+mat-sidenav-container {
+    height: 100%;
+}
+
+.main-content {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.tune-link {
+    cursor: pointer;
+}
+  

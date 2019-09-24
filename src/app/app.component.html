@@ -1,50 +1,67 @@
-<div class="ui-widget">
-    <div class="p-grid">
-        <div class="p-col-12">
-            <h1>Tunebook Browser</h1>
-        </div>
-    </div>
+<mat-sidenav-container>
+    <mat-sidenav #snav fullscreen>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/home" (click)="snav.close()">
+                <mat-icon>search</mat-icon> <span class="nav-caption">Search</span>
+            </a>
+            <a mat-list-item routerLink="/owner" (click)="snav.close()">
+                <mat-icon>info</mat-icon> <span class="nav-caption">About</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="full-height">
+            <mat-toolbar color="primary">
+                <button mat-icon-button (click)="snav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <h1 class="mat-h1">Tunebook Browser</h1>
+            </mat-toolbar>
 
-    <div class="p-grid">
-        <div class="p-col-12">
-            <h2>Find tunes</h2>
-        </div>
-    </div>
+            <div class="main-content">
+                <div>
+                    <h2 class="mat-h2">Find tunes</h2>
+                </div>
 
-    <div class="p-grid search-panel">
-        <div class="p-col-12">
-            <form>
-                <input name="query" type="text" pInputText [(ngModel)]="query" size="30"
-                    placeholder="tune number or part of title">
-                <p-button (click)="findTunes()" label="Search" styleClass="search-button"></p-button>
-            </form>
-        </div>
-    </div>
+                <div class="search-panel">
+                    <form>
+                        <mat-form-field class="example-full-width">
+                            <input matInput name="query" type="text" [(ngModel)]="query"
+                                placeholder="tune number or part of title">
+                        </mat-form-field>
+                        <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
+                            color="primary">Search</button>
+                    </form>
+                </div>
 
-    <div class="p-grid" id="noMatches" *ngIf="noResults()">
-        <div class="p-col-12">
-            <p>No matching tunes</p>
-        </div>
-    </div>
+                <div id="noMatches" *ngIf="noResults()">
+                    <p>No matching tunes</p>
+                </div>
 
-    <div class="p-grid" id="overview" *ngIf="multipleResults()">
-        <div class="p-col-12">
-            <p-table [value]="tunes" [paginator]="true" [rows]="5" [autoLayout]="true">
-                <ng-template pTemplate="body" let-tune>
-                    <tr>
-                        <td><a href="#" (click)="renderTune(tune)">{{tune.title}}</a></td>
-                        <td>
-                            <app-snippet-view [tune]="tune.abc"></app-snippet-view>
-                        </td>
-                    </tr>
-                </ng-template>
-            </p-table>
-        </div>
-    </div>
+                <div id="overview" *ngIf="multipleResults()">
+                    <table mat-table [dataSource]="tunes">
+                        <ng-container matColumnDef="title">
+                            <th mat-header-cell *matHeaderCellDef>Title</th>
+                            <td mat-cell *matCellDef="let tune"><span class="tune-link"
+                                    (click)="renderTune(tune)">{{tune.title}}</span></td>
+                        </ng-container>
 
-    <div class="p-grid">
-        <div class="p-col-12">
-            <app-tune-view *ngIf="uniqueResult()" [tune]="currentTune()"></app-tune-view>
+                        <ng-container matColumnDef="snippet">
+                            <th mat-header-cell *matHeaderCellDef>Snippet</th>
+                            <td mat-cell *matCellDef="let tune" class="tune-link" (click)="renderTune(tune)">
+                                <app-snippet-view [tune]="tune.abc"></app-snippet-view>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+
+                <div>
+                    <app-tune-view *ngIf="uniqueResult()" [tune]="currentTune()"></app-tune-view>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -24,6 +24,9 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
+                "src/apple-touch-icon.png",
+                "src/android-chrome-192x192.png",
+                "src/android-chrome-512x512.png",
                 "src/favicon.ico",
                 "src/favicon-16x16.png",
                 "src/favicon-32x32.png",
@@ -31,10 +34,6 @@
               "src/assets"
             ],
             "styles": [
-                "node_modules/primeicons/primeicons.css",
-                "node_modules/primeng/resources/themes/nova-light/theme.css",
-                "node_modules/primeng/resources/primeng.min.css",
-                "node_modules/primeflex/primeflex.css",
                 "src/styles.scss"
             ],
             "scripts": []

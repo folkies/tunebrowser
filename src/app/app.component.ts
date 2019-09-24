@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
     query: string;
     tunes: TuneBookEntry[] = [];
     svgMap: Map<string, string> = new Map();
+    displayedColumns: string[] = ['title', 'snippet'];
 
     private searchCompleted = false;
 

@@ -1,10 +1,16 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-import { TableModule } from 'primeng/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SnippetViewComponent } from './snippet-view/snippet-view.component';
 import { TuneViewComponent } from './tune-view/tune-view.component';
@@ -18,12 +24,18 @@ import { TuneBookLoaderService } from './tunebook-loader.service';
         SnippetViewComponent
     ],
     imports: [
+        BrowserAnimationsModule,
         BrowserModule,
-        ButtonModule,
         HttpClientModule,
-        InputTextModule,
         FormsModule,
-        TableModule
+        MatButtonModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatSidenavModule,
+        MatTableModule,
+        MatToolbarModule
     ],
     providers: [
         TuneBookIndex,
