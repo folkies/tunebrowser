@@ -5,10 +5,14 @@
   "projects": {
     "folkies": {
       "projectType": "application",
-      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "schematics": { 
+          "@schematics/angular:component" : {
+              "styles" : "scss"
+          }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -31,7 +35,7 @@
                 "node_modules/primeng/resources/themes/nova-light/theme.css",
                 "node_modules/primeng/resources/primeng.min.css",
                 "node_modules/primeflex/primeflex.css",
-                "src/styles.css"
+                "src/styles.scss"
             ],
             "scripts": []
           },
@@ -101,7 +105,7 @@
                 "node_modules/primeng/resources/themes/nova-light/theme.css",
                 "node_modules/primeng/resources/primeng.min.css",
                 "node_modules/primeflex/primeflex.css",
-                "src/styles.css"
+                "src/styles.scss"
             ],
             "scripts": []
           }
