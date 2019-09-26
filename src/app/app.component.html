@@ -44,9 +44,8 @@
                             <tbody>
                                 <tr *cdkVirtualFor="let tune of tunes">
                                     <td><span class="tune-link mat-body"
-                                        (click)="renderTune(tune)">{{tune.title}}</span></td>
-                                    <td class="tune-link"
-                                    (click)="renderTune(tune)">
+                                            (click)="renderTune(tune)">{{tune.title}}</span></td>
+                                    <td class="tune-link" (click)="renderTune(tune)">
                                         <app-snippet-view [tune]="tune.abc"></app-snippet-view>
                                     </td>
                                 </tr>
@@ -56,8 +55,9 @@
 
                 </div>
 
-                <div>
-                    <app-tune-view *ngIf="uniqueResult()" [tune]="currentTune()"></app-tune-view>
+                <div *ngIf="uniqueResult()">
+                    <app-tune-view [tune]="currentTune()"></app-tune-view>
+                    <app-tune-player [tune]="currentTune()"></app-tune-player>
                 </div>
             </div>
         </div>

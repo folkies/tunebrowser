@@ -13,13 +13,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SnippetViewComponent } from './snippet-view/snippet-view.component';
+import { TunePlayerComponent } from './tune-player/tune-player.component';
 import { TuneViewComponent } from './tune-view/tune-view.component';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
- 
+
 @NgModule({
     declarations: [
         AppComponent,
+        TunePlayerComponent,
         TuneViewComponent,
         SnippetViewComponent
     ],

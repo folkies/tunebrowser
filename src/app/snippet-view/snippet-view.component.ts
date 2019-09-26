@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
-import abcjs from 'abcjs';
+import abcjs from 'abcjs/midi';
 
 
 @Component({
