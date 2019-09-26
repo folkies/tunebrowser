@@ -1,4 +1,4 @@
-import { TuneBook, TuneBookEntry } from 'abcjs';
+import { TuneBook, TuneBookEntry } from 'abcjs/midi';
 import { Injectable } from '@angular/core';
 
 @Injectable()

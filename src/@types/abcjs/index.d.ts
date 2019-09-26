@@ -1,4 +1,4 @@
-declare module "abcjs" {
+declare module "abcjs/midi" {
     export class TuneBook {
         tunes: TuneBookEntry[];
         constructor(abc: string);
@@ -71,6 +71,7 @@ declare module "abcjs" {
 
     export function numberOfTunes(abc: string): number;
     export function renderAbc(output: string, abc: string, params?: ParseParams | RenderParams): Tune[];
+    export function renderMidi(output: string, abc: string): Tune[];
     export function parseOnly(abc: string, params?: ParseParams): Tune[];
     export const signature: string;
 }

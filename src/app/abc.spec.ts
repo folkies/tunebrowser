@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { numberOfTunes, TuneBook, parseOnly, signature } from 'abcjs';
+import { numberOfTunes, TuneBook, parseOnly, signature } from 'abcjs/midi';
 
 describe('ABCJS', () => {
     const abcTunebook = `X: 20a

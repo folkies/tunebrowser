@@ -1,4 +1,4 @@
-import { TuneBook, TuneBookEntry } from 'abcjs';
+import { TuneBook, TuneBookEntry } from 'abcjs/midi';
 import fs from 'fs';
 
 import iconv from 'iconv-lite';

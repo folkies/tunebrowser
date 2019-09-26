@@ -1,4 +1,4 @@
-import { TuneBook } from 'abcjs';
+import { TuneBook } from 'abcjs/midi';
 import fs from 'fs';
 import { TuneBookIndex } from './tunebook-index';
 
@@ -17,7 +17,7 @@ describe('TuneBookIndex', () => {
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(1);
         const tune = tunes[0];
-        expect(tune.title).toBe('Boys Of Malin');
+        expect(tune.title).toBe('273 The Boys Of Malin');
     });
 
     test('should not find by non-existing ID', () => {
@@ -30,7 +30,7 @@ describe('TuneBookIndex', () => {
         const tunes = tuneBookIndex.findTunes('Boys Of Malin');
         expect(tunes).toBeDefined();
         const tune = tunes[0];
-        expect(tune.title).toBe('Boys Of Malin');
+        expect(tune.title).toBe('273 The Boys Of Malin');
         expect(tune.id).toBe('273');
     });
 
@@ -38,7 +38,7 @@ describe('TuneBookIndex', () => {
         const tunes = tuneBookIndex.findTunes('boys of malin');
         expect(tunes).toBeDefined();
         const tune = tunes[0];
-        expect(tune.title).toBe('Boys Of Malin');
+        expect(tune.title).toBe('273 The Boys Of Malin');
         expect(tune.id).toBe('273');
     });
 
@@ -46,7 +46,7 @@ describe('TuneBookIndex', () => {
         const tunes = tuneBookIndex.findTunes('malin');
         expect(tunes).toBeDefined();
         const tune = tunes[0];
-        expect(tune.title).toBe('Boys Of Malin');
+        expect(tune.title).toBe('273 The Boys Of Malin');
         expect(tune.id).toBe('273');
     });
 
@@ -54,9 +54,9 @@ describe('TuneBookIndex', () => {
         const tunes = tuneBookIndex.findTunes('banshee');
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(2);
-        expect(tunes[0].title).toBe('Lilting Banshee');
+        expect(tunes[0].title).toBe('30    Lilting Banshee');
         expect(tunes[0].id).toBe('30');
-        expect(tunes[1].title).toBe('Banshee, The');
+        expect(tunes[1].title).toBe('63    The Banshee');
         expect(tunes[1].id).toBe('63');
     });
 
