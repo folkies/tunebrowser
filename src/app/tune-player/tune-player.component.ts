@@ -25,7 +25,13 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
     private renderMidiPlayer(): void {
         if (this.div !== undefined && this.tune.length > 0) {
-            abcjs.renderMidi(this.div.nativeElement, this.tune, { chordsOff: true });
+            abcjs.renderMidi(this.div.nativeElement, this.tune, {
+                chordsOff: true, program: this.instrumentByName('flute')
+            });
         }
+    }
+
+    private instrumentByName(name: string): number {
+        return abcjs.synth.instrumentIndexToName.indexOf(name.toLowerCase());
     }
 }

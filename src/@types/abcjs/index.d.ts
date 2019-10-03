@@ -100,9 +100,14 @@ declare module "abcjs/midi" {
         midiListener?: (abcJsElement: any, midiEvent: any) => void;
     }
 
+    export interface Synth {
+        instrumentIndexToName: string[];
+    }
+
     export function numberOfTunes(abc: string): number;
     export function renderAbc(output: string, abc: string, params?: ParseParams | RenderParams): Tune[];
     export function renderMidi(output: string, abc: string, params?: MidiParams): Tune[];
     export function parseOnly(abc: string, params?: ParseParams): Tune[];
     export const signature: string;
+    export const synth: Synth;
 }
