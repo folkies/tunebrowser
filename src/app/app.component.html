@@ -1,10 +1,13 @@
 <mat-sidenav-container fullscreen>
     <mat-sidenav #snav>
         <mat-nav-list>
-            <a mat-list-item routerLink="/home" (click)="snav.close()">
+            <a mat-list-item routerLink="/search" (click)="snav.close()">
                 <mat-icon>search</mat-icon> <span class="nav-caption">Search</span>
             </a>
-            <a mat-list-item routerLink="/owner" (click)="snav.close()">
+            <a mat-list-item routerLink="/browse" (click)="snav.close()">
+                <mat-icon>list</mat-icon> <span class="nav-caption">Browse</span>
+            </a>
+            <a mat-list-item routerLink="/about" (click)="snav.close()">
                 <mat-icon>info</mat-icon> <span class="nav-caption">About</span>
             </a>
         </mat-nav-list>
@@ -19,46 +22,7 @@
             </mat-toolbar>
 
             <div class="main-content">
-                <div>
-                    <h2 class="mat-h2">Find tunes</h2>
-                </div>
-
-                <div class="search-panel">
-                    <form>
-                        <mat-form-field class="example-full-width">
-                            <input matInput name="query" type="text" [(ngModel)]="query"
-                                placeholder="tune number or part of title">
-                        </mat-form-field>
-                        <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
-                            color="primary">Search</button>
-                    </form>
-                </div>
-
-                <div id="noMatches" *ngIf="noResults()">
-                    <p>No matching tunes</p>
-                </div>
-
-                <div id="overview" *ngIf="multipleResults()">
-                    <cdk-virtual-scroll-viewport [itemSize]="50">
-                        <table>
-                            <tbody>
-                                <tr *cdkVirtualFor="let tune of tunes">
-                                    <td><span class="tune-link mat-body"
-                                            (click)="renderTune(tune)">{{tune.title}}</span></td>
-                                    <td class="tune-link" (click)="renderTune(tune)">
-                                        <app-snippet-view [tune]="tune.abc"></app-snippet-view>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </cdk-virtual-scroll-viewport>
-
-                </div>
-
-                <div *ngIf="uniqueResult()">
-                    <app-tune-view [tune]="currentTune()"></app-tune-view>
-                    <app-tune-player [tune]="currentTune()"></app-tune-player>
-                </div>
+                <router-outlet></router-outlet>
             </div>
         </div>
     </mat-sidenav-content>

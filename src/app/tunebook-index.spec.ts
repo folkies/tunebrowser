@@ -9,7 +9,8 @@ describe('TuneBookIndex', () => {
     beforeAll(() => {
         const text = fs.readFileSync('src/assets/tunebook.abc', 'utf8');
         tunebook = new TuneBook(text);
-        tuneBookIndex = new TuneBookIndex(tunebook);
+        tuneBookIndex = new TuneBookIndex();
+        tuneBookIndex.setTuneBook(tunebook);
     });
 
     test('should find by ID', () => {

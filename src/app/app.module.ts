@@ -17,10 +17,28 @@ import { TunePlayerComponent } from './tune-player/tune-player.component';
 import { TuneViewComponent } from './tune-view/tune-view.component';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
+import { RouterModule, Routes } from '@angular/router';
+import { BrowseComponent } from './browse/browse.component';
+import { TunePageComponent } from './tune-page/tune-page.component';
+import { SearchComponent } from './search/search.component';
+
+const appRoutes: Routes = [
+    { path: 'search', component: SearchComponent },
+    { path: 'browse', component: BrowseComponent },
+    { path: 'tune/:ref', component: TunePageComponent },
+    {
+        path: '',
+        redirectTo: '/search',
+        pathMatch: 'full'
+    }
+];
 
 @NgModule({
     declarations: [
         AppComponent,
+        BrowseComponent,
+        SearchComponent,
+        TunePageComponent,
         TunePlayerComponent,
         TuneViewComponent,
         SnippetViewComponent
@@ -37,6 +55,7 @@ import { TuneBookLoaderService } from './tunebook-loader.service';
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
+        RouterModule.forRoot(appRoutes),
         ScrollingModule
     ],
     providers: [

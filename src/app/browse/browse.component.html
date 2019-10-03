@@ -1,0 +1,10 @@
+<div>
+    <h2 class="mat-h2">Browse Tunebook</h2>
+
+    <mat-list>
+        <mat-list-item *ngFor="let entry of entries">
+            <div class="tune-link" routerLink="../tune/{{entry.id}}">{{entry.title}}</div>
+        </mat-list-item>
+    </mat-list>
+</div>
+

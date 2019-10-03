@@ -16,5 +16,5 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "fullscreen",
-    "start_url": "https://folkies.github.io/tunebook/"
+    "start_url": "/tunebook/"
 }

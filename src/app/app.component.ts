@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TuneBookEntry } from 'abcjs/midi';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
 
@@ -10,48 +9,13 @@ import { TuneBookLoaderService } from './tunebook-loader.service';
 })
 export class AppComponent implements OnInit {
     title = 'folkies';
-    rawAbc: string;
-    query: string;
-    tunes: TuneBookEntry[] = [];
-    svgMap: Map<string, string> = new Map();
-    displayedColumns: string[] = ['title', 'snippet'];
 
-    private searchCompleted = false;
-
-    private tuneBookIndex: TuneBookIndex;
-
-    constructor(private tuneBookLoaderService: TuneBookLoaderService) {
+    constructor(private tuneBookLoaderService: TuneBookLoaderService, private tuneBookIndex: TuneBookIndex) {
 
     }
 
-    async ngOnInit(): Promise<void> {
-        const tuneBook = await this.tuneBookLoaderService.loadTuneBook();
-        this.tuneBookIndex = new TuneBookIndex(tuneBook);
+    ngOnInit(): void {
+        this.tuneBookLoaderService.loadTuneBook().then(tuneBook => this.tuneBookIndex.setTuneBook(tuneBook));
     }
 
-    noResults(): boolean {
-        return this.searchCompleted && this.tunes.length === 0;
-    }
-
-    uniqueResult(): boolean {
-        return this.tunes.length === 1;
-    }
-
-    multipleResults(): boolean {
-        return this.tunes.length >= 2;
-    }
-
-    currentTune(): string {
-        return this.uniqueResult() ? this.tunes[0].abc : '';
-    }
-
-    findTunes(): void {
-        this.tunes = this.tuneBookIndex.findTunes(this.query);
-        this.searchCompleted = true;
-    }
-
-    renderTune(tune: TuneBookEntry): boolean {
-        this.tunes = [tune];
-        return true;
-    }
 }
