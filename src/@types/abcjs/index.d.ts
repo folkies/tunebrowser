@@ -22,8 +22,8 @@ declare module "abcjs/midi" {
         paddingright?: number;
         paddingleft?: number;
         add_classes?: boolean;
-        clickListener?: (abcElem: any, tuneNumber: number, classes: string[]) => void;
         responsive?: string; 
+        clickListener?: (abcElem: any, tuneNumber: number, classes: string[]) => void;
     }
 
     export interface ParseParams {
@@ -69,9 +69,40 @@ declare module "abcjs/midi" {
         millisecondsPerMeasure(bpmOverride?: number): number;
     }
 
+    export interface InlineControls {
+        selectionToggle?: boolean;
+        loopToggle?: boolean; 
+        standard?: boolean;
+        tempo?: boolean; 
+        startPlaying?: boolean;
+    }
+    
+    export interface MidiParams {
+        qpm?: number;
+        program?: number;
+        midiTranspose?: number;
+        voicesOff?: boolean;
+        chordsOff?: boolean;
+        generateDownload?: boolean;
+        generateInline?: boolean;
+        downloadClass?: string;
+        downloadLabel?: string;
+        preTextDownload?: string;
+        postTextDownload?: string;
+        preTextInline?: string;
+        postTextInline?: string;
+        context?: string;
+        inlineControls?: InlineControls;
+        drum?: string;
+        drumBars?: number;
+        drumIntro?: number;
+
+        midiListener?: (abcJsElement: any, midiEvent: any) => void;
+    }
+
     export function numberOfTunes(abc: string): number;
     export function renderAbc(output: string, abc: string, params?: ParseParams | RenderParams): Tune[];
-    export function renderMidi(output: string, abc: string): Tune[];
+    export function renderMidi(output: string, abc: string, params?: MidiParams): Tune[];
     export function parseOnly(abc: string, params?: ParseParams): Tune[];
     export const signature: string;
 }
