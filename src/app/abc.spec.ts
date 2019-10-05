@@ -8,6 +8,7 @@ R: polka
 M: 2/4
 L: 1/8
 K: Ador
+F: http://example.com/tunes/20a
 |:A>B cg|de cA|B/c/B/A/ Gd|AB GE|
 A>B cg|de cA|B/c/B/A/ Gd|BA A2:|
 |:d>e fa|ga fd|g/e/d/c/ Bd/c/|B/A/G B/A/G/B/|
@@ -60,16 +61,6 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         expect(tunes.length).toBe(2);
         const tune = tunes[0];
 
-        const values = {
-            barLength: tune.getBarLength(),
-            beatLength: tune.getBeatLength(),
-            beatsPerMeasure: tune.getBeatsPerMeasure(),
-            bpm: tune.getBpm(),
-            meter: tune.getMeter(),
-            meterFraction: tune.getMeterFraction(),
-            pickupLength: tune.getPickupLength(),
-        };
-
         expect(tune.media).toBe('screen');
         expect(tune.getBarLength()).toBe(0.5);
         expect(tune.getBeatLength()).toBe(0.25);
@@ -78,16 +69,18 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         expect(tune.getMeter()).toEqual({ type: 'specified', value: [{ num: '2', den: '4' }] });
         expect(tune.getMeterFraction()).toEqual({ num: 2, den: 4 });
         expect(tune.version).toBe('1.0.1');
+        expect(tune.metaText.url).toBe('http://example.com/tunes/20a');
+        expect(tune.metaText.rhythm).toBe('polka');
     });
 
     test('should get signature', () => {
-        expect(signature).toBe('abcjs-basic v5.8.1');
+        expect(signature).toBe('abcjs-midi v5.8.1');
     });
 
     test('should read large tunebook', () => {
         const text = fs.readFileSync('src/assets/tunebook.abc', 'utf8');
         const tunebook = new TuneBook(text);
-        const fanny = tunebook.getTuneByTitle('Fanny Power');
+        const fanny = tunebook.getTuneByTitle('281  Fanny Power');
         expect(fanny).toBeDefined();
         expect(fanny.id).toBe('281');
     });

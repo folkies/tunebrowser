@@ -1,0 +1,10 @@
+<div>
+    <h2 class="mat-h2">Tunebooks</h2>
+
+    <mat-list>
+        <mat-list-item *ngFor="let book of books">
+            <div class="tune-link" routerLink="../book/{{book.descriptor.path}}">{{book.descriptor.name}}</div>
+        </mat-list-item>
+    </mat-list>
+</div>
+

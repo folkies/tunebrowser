@@ -52,11 +52,27 @@ declare module "abcjs/midi" {
         type: string;
     }
 
+    export interface MetaText {
+        author?: string;
+        book?: string;
+        composer?: string;
+        discography?: string;
+        url?: string;
+        group?: string;
+        instruction?: string;
+        notes?: string;
+        origin?: string;
+        rhythm?: string;
+        source?: string;
+        unalignedWords?: string;
+        transcription?: string;
+    }
+
     export interface Tune {
         formatting: object;
         lines: object[];
         media: string;
-        metaText: object;
+        metaText: MetaText;
         version: string;
 
         getBarLength(): number;

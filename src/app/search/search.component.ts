@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TuneBookEntry } from 'abcjs/midi';
 import { TuneBookIndex } from '../tunebook-index';
 import { TuneBookLoaderService } from '../tunebook-loader.service';
+import { TuneQuery } from '../tune-query';
+import { IndexEntry } from '../index-entry';
 
 
 @Component({
@@ -12,7 +14,7 @@ export class SearchComponent {
 
     rawAbc: string;
     query: string;
-    tunes: TuneBookEntry[] = [];
+    tunes: IndexEntry[] = [];
     svgMap: Map<string, string> = new Map();
     displayedColumns: string[] = ['title', 'snippet'];
 
@@ -35,15 +37,15 @@ export class SearchComponent {
     }
 
     currentTune(): string {
-        return this.uniqueResult() ? this.tunes[0].abc : '';
+        return this.uniqueResult() ? this.tuneBookIndex.getAbc(this.tunes[0]) : '';
     }
 
     findTunes(): void {
-        this.tunes = this.tuneBookIndex.findTunes(this.query);
+        this.tunes = this.tuneBookIndex.findTunes(new TuneQuery(this.query));
         this.searchCompleted = true;
     }
 
-    renderTune(tune: TuneBookEntry): boolean {
+    renderTune(tune: IndexEntry): boolean {
         this.tunes = [tune];
         return true;
     }

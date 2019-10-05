@@ -11,15 +11,17 @@ import { ActivatedRoute } from '@angular/router';
 export class BrowseComponent {
 
     entries: TuneBookEntry[] = [];
+    book: string;
 
     constructor(private index: TuneBookIndex, private route: ActivatedRoute) {
         this.index.tuneBookReady.subscribe(event => this.onReady(event));
-        this.route.paramMap.subscribe(paramMap => this.onReady());
+        this.route.paramMap.subscribe(paramMap => {
+            this.book = paramMap.get('path');
+            this.onReady(this.book);
+        });
     }
 
     private onReady(event?: string) {
-        if (this.entries.length === 0 || event !== undefined) {
-            this.entries = this.index.findAllTunes();
-        }
+        this.entries = this.index.findAllTunes(this.book);
     }
 }

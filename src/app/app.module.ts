@@ -11,21 +11,23 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { BooksListComponent } from './books-list/books-list.component';
+import { BrowseComponent } from './browse/browse.component';
+import { SearchComponent } from './search/search.component';
 import { SnippetViewComponent } from './snippet-view/snippet-view.component';
+import { TunePageComponent } from './tune-page/tune-page.component';
 import { TunePlayerComponent } from './tune-player/tune-player.component';
 import { TuneViewComponent } from './tune-view/tune-view.component';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
-import { RouterModule, Routes } from '@angular/router';
-import { BrowseComponent } from './browse/browse.component';
-import { TunePageComponent } from './tune-page/tune-page.component';
-import { SearchComponent } from './search/search.component';
 
 const appRoutes: Routes = [
     { path: 'search', component: SearchComponent },
-    { path: 'browse', component: BrowseComponent },
-    { path: 'tune/:ref', component: TunePageComponent },
+    { path: 'books', component: BooksListComponent },
+    { path: 'book/:path', component: BrowseComponent },
+    { path: 'tune/:path/:ref', component: TunePageComponent },
     {
         path: '',
         redirectTo: '/search',
@@ -36,12 +38,14 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
+        BooksListComponent,
         BrowseComponent,
         SearchComponent,
         TunePageComponent,
         TunePlayerComponent,
         TuneViewComponent,
-        SnippetViewComponent
+        SnippetViewComponent,
+        BooksListComponent
     ],
     imports: [
         BrowserAnimationsModule,

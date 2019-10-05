@@ -1,57 +1,78 @@
-import { TuneBook, TuneBookEntry } from 'abcjs/midi';
 import { Injectable } from '@angular/core';
-import { Subject, Observable } from 'rxjs';
+import { TuneBookEntry } from 'abcjs/midi';
+import { Observable, Subject } from 'rxjs';
+import { IndexEntry } from './index-entry';
+import { TuneQuery } from './tune-query';
+import { TuneBookReference } from './tunebook-reference';
 
 @Injectable()
 export class TuneBookIndex {
-    private titleToIdMap: Map<string, string> = new Map();
-    private normalizedTitleToIdMap: Map<string, string> = new Map();
-    private tunebook: TuneBook;
+    private pathToBookMap: Map<string, TuneBookReference> = new Map();
+    private entries: IndexEntry[] = [];
 
     private tuneBookReadySource = new Subject<string>();
 
     tuneBookReady: Observable<string> = this.tuneBookReadySource.asObservable();
 
-    setTuneBook(tunebook: TuneBook) {
-        this.tunebook = tunebook;
-        this.buildIndex();
-    }
-
     isReady(): boolean {
-        return this.tunebook !== undefined;
+        return this.entries.length > 0;
     }
 
-    private buildIndex(): void {
-        this.tunebook.tunes.forEach(tune => {
-            this.titleToIdMap.set(tune.title, tune.id);
-            this.normalizedTitleToIdMap.set(this.normalize(tune.title), tune.id);
+    addTuneBook(tuneBookRef: TuneBookReference) {
+        this.pathToBookMap.set(tuneBookRef.descriptor.path, tuneBookRef);
+        tuneBookRef.tuneBook.tunes.forEach(tune => {
+            this.entries.push(this.createEntry(tune, tuneBookRef));
         });
-        this.tuneBookReadySource.next('tunebook.abc');
+        this.tuneBookReadySource.next(tuneBookRef.descriptor.name);
+    }
+
+    private createEntry(tune: TuneBookEntry, tuneBookRef: TuneBookReference): IndexEntry {
+        return new IndexEntry(tune.id, tuneBookRef.descriptor.path, tune.title, this.normalize(tune.title));
     }
 
     private normalize(title: string): string {
         return title.trim().toLocaleLowerCase();
     }
 
-    public findTunes(query: string): TuneBookEntry[] {
-        const trimmed = query.trim();
+    public findTunes(tuneQuery: TuneQuery): IndexEntry[] {
+        const trimmed = tuneQuery.query.trim();
+        const books = Array.from(this.pathToBookMap.values()).filter(book => tuneQuery.matchesRef(book));
         if (this.startsWithDigit(trimmed)) {
-            const tune = this.tunebook.getTuneById(trimmed);
-            return tune ? [tune] : [];
+            const matchingEntries: IndexEntry[] = [];
+            books.forEach(book => {
+                const tune = book.tuneBook.getTuneById(trimmed);
+                if (tune !== null) {
+                    const entry = new IndexEntry(tune.id, book.descriptor.path, tune.title, this.normalize(tune.title));
+                    matchingEntries.push(entry);
+                }
+            });
+            return matchingEntries;
+        } else {
+            const normalized = this.normalize(trimmed);
+            return this.entries.filter(entry => this.matchesEntry(tuneQuery, normalized, entry));
         }
-        const tunes: TuneBookEntry[] = [];
-        const normalized = this.normalize(trimmed);
-        this.normalizedTitleToIdMap.forEach((id, title) => {
-            if (title.includes(normalized)) {
-                tunes.push(this.tunebook.getTuneById(id));
-            }
-        });
-        return tunes;
     }
 
-    findAllTunes(): TuneBookEntry[] {
-        return this.tunebook.tunes;
+    matchesEntry(query: TuneQuery, normalized: string, indexEntry: IndexEntry): boolean {
+        if (!query.matchesName(indexEntry.book)) {
+            return false;
+        }
+        return indexEntry.titleNormalized.includes(normalized);
     }
+
+    public getAbc(entry: IndexEntry): string {
+        const tuneBookRef = this.pathToBookMap.get(entry.book);
+        return tuneBookRef.tuneBook.getTuneById(entry.id).abc;
+    }
+
+    findAllTunes(bookName: string): TuneBookEntry[] {
+        return this.pathToBookMap.get(bookName).tuneBook.tunes;
+    }
+
+    getBooks(): TuneBookReference[] {
+        return Array.from(this.pathToBookMap.values());
+    }
+
 
     private startsWithDigit(query: string) {
         const c = query.charAt(0);
