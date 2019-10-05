@@ -13,14 +13,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { BooksListComponent } from './books-list/books-list.component';
+import { BooksListComponent } from './component/books-list/books-list.component';
 import { SearchComponent } from './component/search/search.component';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { SnippetViewComponent } from './snippet-view/snippet-view.component';
-import { TunePageComponent } from './tune-page/tune-page.component';
-import { TunePlayerComponent } from './tune-player/tune-player.component';
-import { TuneViewComponent } from './tune-view/tune-view.component';
+import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
+import { TunePageComponent } from './component/tune-page/tune-page.component';
+import { TunePlayerComponent } from './component/tune-player/tune-player.component';
+import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { BrowseComponent } from './component/browse/browse.component';
 
 const appRoutes: Routes = [

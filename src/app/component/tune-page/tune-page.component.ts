@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { TuneBookIndex } from '../service/tunebook-index';
-import { TuneQuery } from '../tune-query';
+import { TuneBookIndex } from '../../service/tunebook-index';
+import { TuneQuery } from '../../tune-query';
 
 @Component({
     selector: 'app-tune-page',

@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import abcjs from 'abcjs/midi';
 
-
 @Component({
     selector: 'app-snippet-view',
     templateUrl: './snippet-view.component.html'

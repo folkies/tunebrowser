@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TuneBookIndex } from '../service/tunebook-index';
-import { TuneBookReference } from '../tunebook-reference';
+import { TuneBookIndex } from '../../service/tunebook-index';
+import { TuneBookReference } from '../../tunebook-reference';
 
 @Component({
     selector: 'app-books-list',
