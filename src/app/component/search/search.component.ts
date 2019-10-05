@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IndexEntry } from '../../index-entry';
+import { IndexEntry } from '../../model/index-entry';
 import { TuneBookIndex } from '../../service/tunebook-index';
-import { TuneQuery } from '../../tune-query';
+import { TuneQuery } from '../../model/tune-query';
 
 
 @Component({

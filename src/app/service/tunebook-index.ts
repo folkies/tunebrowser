@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { TuneBookEntry } from 'abcjs/midi';
 import { Observable, Subject } from 'rxjs';
-import { IndexEntry } from '../index-entry';
-import { TuneQuery } from '../tune-query';
-import { TuneBookReference } from '../tunebook-reference';
+import { IndexEntry } from '../model/index-entry';
+import { TuneQuery } from '../model/tune-query';
+import { TuneBookReference } from '../model/tunebook-reference';
 
 @Injectable()
 export class TuneBookIndex {

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { TuneBookDescriptor } from './tunebook-collection';
-import { TuneBookReference } from './tunebook-reference';
+import { TuneBookDescriptor } from './model/tunebook-collection';
+import { TuneBookReference } from './model/tunebook-reference';
 
 @Component({
     selector: 'app-root',
