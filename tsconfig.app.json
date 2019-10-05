@@ -12,7 +12,7 @@
     "src/**/*.ts"
   ],
   "exclude": [
-    "src/app/tunebook-builder.ts",  
+    "src/app/service/tunebook-builder.ts",  
     "src/test.ts",
     "src/**/*.spec.ts"
   ]

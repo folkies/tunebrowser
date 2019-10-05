@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { TuneBookLoaderService } from './tunebook-loader.service';
+import { TuneBookLoaderService } from './service/tunebook-loader.service';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {

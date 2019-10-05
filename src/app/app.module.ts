@@ -20,8 +20,8 @@ import { SnippetViewComponent } from './snippet-view/snippet-view.component';
 import { TunePageComponent } from './tune-page/tune-page.component';
 import { TunePlayerComponent } from './tune-player/tune-player.component';
 import { TuneViewComponent } from './tune-view/tune-view.component';
-import { TuneBookIndex } from './tunebook-index';
-import { TuneBookLoaderService } from './tunebook-loader.service';
+import { TuneBookIndex } from './service/tunebook-index';
+import { TuneBookLoaderService } from './service/tunebook-loader.service';
 
 const appRoutes: Routes = [
     { path: 'search', component: SearchComponent },

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TuneBookIndex } from '../tunebook-index';
+import { TuneBookIndex } from '../service/tunebook-index';
 import { TuneBookReference } from '../tunebook-reference';
 
 @Component({

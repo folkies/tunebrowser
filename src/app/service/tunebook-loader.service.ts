@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TuneBook } from 'abcjs/midi';
-import { TuneBookCollection } from "./tunebook-collection"
+import { TuneBookCollection } from "../tunebook-collection"
 
 @Injectable()
 export class TuneBookLoaderService {

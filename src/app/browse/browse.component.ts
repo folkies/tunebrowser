@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TuneBookIndex } from '../tunebook-index';
+import { TuneBookIndex } from '../service/tunebook-index';
 import { TuneBookEntry } from 'abcjs/midi';
 import { ActivatedRoute } from '@angular/router';
 

@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { TuneBookEntry } from 'abcjs/midi';
-import { TuneBookIndex } from '../tunebook-index';
-import { TuneBookLoaderService } from '../tunebook-loader.service';
-import { TuneQuery } from '../tune-query';
+import { Component } from '@angular/core';
 import { IndexEntry } from '../index-entry';
+import { TuneBookIndex } from '../service/tunebook-index';
+import { TuneQuery } from '../tune-query';
 
 
 @Component({
