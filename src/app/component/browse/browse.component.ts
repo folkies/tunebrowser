@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TuneBookIndex } from '../service/tunebook-index';
 import { TuneBookEntry } from 'abcjs/midi';
 import { ActivatedRoute } from '@angular/router';
+import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 
 @Component({
