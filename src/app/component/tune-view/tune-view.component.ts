@@ -31,7 +31,8 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
                     paddingright: 0,
                     paddingtop: 0,
                     paddingbottom: 0,
-                    staffwidth: 1000
+                    staffwidth: 1000,
+                    responsive: 'resize'
                 });
         }
     }

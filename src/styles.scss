@@ -23,11 +23,17 @@ mat-sidenav mat-icon {
 .main-content {
     padding-top: 10px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .tune-link {
     cursor: pointer;
 }
+
+.tune-link.tune-title {
+    min-width: 30px;
+}
+
 .tunebook-link {
     font-size: 120%;
     font-weight: bolder;
@@ -40,9 +46,23 @@ cdk-virtual-scroll-viewport {
 
 .abcjs-inline-midi {
     max-width: 1000px;
+    margin-bottom: 1em;
 }
 
 div.tunebook-item {
     display: flex;
     flex-flow: column;
+}
+
+/* overrides hard-wired height from Angular Material by more specific selector */
+app-books-list .mat-list-base .mat-list-item {
+    height: 60px;
+}
+
+div.tune-view {
+    max-width: 1000px;
+}
+
+app-tune-player {
+    margin-bottom: 1em;
 }

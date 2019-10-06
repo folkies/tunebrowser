@@ -27,7 +27,7 @@
         <table>
             <tbody>
                 <tr *cdkVirtualFor="let tune of tunes">
-                    <td>
+                    <td class="tune-link tune-title">
                         <div><span class="tune-link mat-body" (click)="renderTune(tune)">{{tune.title}}</span></div>
                         <div class="mat-small">{{getBookName(tune)}}</div>
                     </td>
@@ -42,6 +42,6 @@
 </div>
 
 <div *ngIf="uniqueResult()">
-    <app-tune-view [tune]="currentTune()"></app-tune-view>
     <app-tune-player [tune]="currentTune()"></app-tune-player>
+    <app-tune-view [tune]="currentTune()"></app-tune-view>
 </div>
