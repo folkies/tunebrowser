@@ -5,10 +5,10 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 
 @Component({
-    selector: 'app-browse',
-    templateUrl: './browse.component.html'
+    selector: 'app-tunes-list',
+    templateUrl: './tunes-list.component.html'
 })
-export class BrowseComponent {
+export class TunesListComponent {
 
     entries: TuneBookEntry[] = [];
     book: string;

@@ -16,18 +16,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { SearchComponent } from './component/search/search.component';
-import { TuneBookIndex } from './service/tunebook-index';
-import { TuneBookLoaderService } from './service/tunebook-loader.service';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
 import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
-import { BrowseComponent } from './component/browse/browse.component';
+import { TunesListComponent } from './component/tunes-list/tunes-list.component';
+import { TuneBookIndex } from './service/tunebook-index';
+import { TuneBookLoaderService } from './service/tunebook-loader.service';
 
 const appRoutes: Routes = [
     { path: 'search', component: SearchComponent },
     { path: 'books', component: BooksListComponent },
-    { path: 'book/:path', component: BrowseComponent },
+    { path: 'book/:path', component: TunesListComponent },
     { path: 'tune/:path/:ref', component: TunePageComponent },
     {
         path: '',
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     declarations: [
         AppComponent,
         BooksListComponent,
-        BrowseComponent,
+        TunesListComponent,
         SearchComponent,
         TunePageComponent,
         TunePlayerComponent,
