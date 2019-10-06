@@ -1,7 +1,7 @@
 {
     "books": [
         {
-            "path": "tunebook.abc",
+            "path": "LearnerSession.abc",
             "name": "Learner Session",
             "description": "All tunes from the Hamburg Learner Session"
         },
