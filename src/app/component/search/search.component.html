@@ -25,7 +25,7 @@
                     <td><span class="tune-link mat-body"
                             (click)="renderTune(tune)">{{tune.title}}</span></td>
                     <td class="tune-link" (click)="renderTune(tune)">
-                        <app-snippet-view [tune]="tune.abc"></app-snippet-view>
+                        <app-snippet-view [tune]="getAbc(tune)"></app-snippet-view>
                     </td>
                 </tr>
             </tbody>

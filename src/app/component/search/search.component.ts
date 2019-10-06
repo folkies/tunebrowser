@@ -47,4 +47,8 @@ export class SearchComponent {
         this.tunes = [tune];
         return true;
     }
+
+    getAbc(entry: IndexEntry): string {
+        return this.tuneBookIndex.getAbc(entry);
+    }
 }
