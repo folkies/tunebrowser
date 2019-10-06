@@ -3,10 +3,6 @@
 
 @include mat-core();
 
-button.search-button {
-    margin-left: 0.5em;
-}
-
 div.search-panel {
     margin-bottom: 1em;
 }
@@ -17,6 +13,7 @@ body {
 
 mat-form-field {
     width: 15em;
+    margin-right: 0.5em;
 }
 
 mat-sidenav mat-icon {

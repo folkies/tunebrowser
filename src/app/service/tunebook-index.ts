@@ -73,6 +73,9 @@ export class TuneBookIndex {
         return Array.from(this.pathToBookMap.values());
     }
 
+    getBook(entry: IndexEntry): TuneBookReference {
+        return this.pathToBookMap.get(entry.book);
+    }
 
     private startsWithDigit(query: string) {
         const c = query.charAt(0);

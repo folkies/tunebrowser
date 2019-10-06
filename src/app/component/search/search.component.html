@@ -5,8 +5,13 @@
 <div class="search-panel">
     <form>
         <mat-form-field class="example-full-width">
-            <input matInput name="query" type="text" [(ngModel)]="query"
-                placeholder="tune number or part of title">
+            <input matInput name="query" type="text" [(ngModel)]="query" placeholder="tune number or part of title">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tunebooks</mat-label>
+            <mat-select multiple [(value)]="selectedBooks">
+                <mat-option *ngFor="let book of books()" [value]="book.descriptor.path">{{book.descriptor.name}}</mat-option>
+            </mat-select>
         </mat-form-field>
         <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
             color="primary">Search</button>
@@ -22,8 +27,10 @@
         <table>
             <tbody>
                 <tr *cdkVirtualFor="let tune of tunes">
-                    <td><span class="tune-link mat-body"
-                            (click)="renderTune(tune)">{{tune.title}}</span></td>
+                    <td>
+                        <div><span class="tune-link mat-body" (click)="renderTune(tune)">{{tune.title}}</span></div>
+                        <div class="mat-small">{{getBookName(tune)}}</div>
+                    </td>
                     <td class="tune-link" (click)="renderTune(tune)">
                         <app-snippet-view [tune]="getAbc(tune)"></app-snippet-view>
                     </td>

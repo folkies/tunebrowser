@@ -1,25 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { IndexEntry } from '../../model/index-entry';
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { TuneQuery } from '../../model/tune-query';
+import { TuneBookReference } from 'src/app/model/tunebook-reference';
 
 
 @Component({
     selector: 'app-search',
     templateUrl: './search.component.html'
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit, AfterViewInit {
 
     rawAbc: string;
     query: string;
     tunes: IndexEntry[] = [];
     svgMap: Map<string, string> = new Map();
     displayedColumns: string[] = ['title', 'snippet'];
+    selectedBooks: string[] = [];
 
     private searchCompleted = false;
 
     constructor(private tuneBookIndex: TuneBookIndex) {
 
+    }
+
+    ngOnInit() {
+        this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.path];
+    }
+
+    ngAfterViewInit() {
     }
 
     noResults(): boolean {
@@ -39,7 +48,11 @@ export class SearchComponent {
     }
 
     findTunes(): void {
-        this.tunes = this.tuneBookIndex.findTunes(new TuneQuery(this.query));
+        if (this.selectedBooks === undefined || this.selectedBooks.length === 0) {
+            this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.path];
+        }
+        const query = new TuneQuery(this.query, this.selectedBooks);
+        this.tunes = this.tuneBookIndex.findTunes(query);
         this.searchCompleted = true;
     }
 
@@ -50,5 +63,13 @@ export class SearchComponent {
 
     getAbc(entry: IndexEntry): string {
         return this.tuneBookIndex.getAbc(entry);
+    }
+
+    getBookName(entry: IndexEntry): string {
+        return this.tuneBookIndex.getBook(entry).descriptor.name;
+    }
+
+    books(): TuneBookReference[] {
+        return this.tuneBookIndex.getBooks();
     }
 }

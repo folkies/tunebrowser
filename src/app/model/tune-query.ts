@@ -6,17 +6,21 @@ export class TuneQuery {
     }
 
     matchesRef(tuneBookRef: TuneBookReference): boolean {
-        if (!this.books) {
+        if (this.allBooks()) {
             return true;
         }
         return this.books.includes(tuneBookRef.descriptor.path);
     }
 
     matchesName(bookName: string): boolean {
-        if (!this.books) {
+        if (this.allBooks()) {
             return true;
         }
         return this.books.includes(bookName);
+    }
+
+    private allBooks(): boolean {
+        return !this.books || this.books.length === 0;
     }
     
 }
