@@ -1,5 +1,4 @@
 import { TuneBookReference } from './tunebook-reference';
-import { IndexEntry } from './index-entry';
 
 export class TuneQuery {
     constructor(public query: string, public books?: string[]) {
