@@ -31,11 +31,21 @@ mat-sidenav mat-icon {
 .tune-link {
     cursor: pointer;
 }
-  
+.tunebook-link {
+    font-size: 120%;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
 cdk-virtual-scroll-viewport { 
     height: 70vh; 
 }
 
 .abcjs-inline-midi {
     max-width: 1000px;
+}
+
+div.tunebook-item {
+    display: flex;
+    flex-flow: column;
 }
