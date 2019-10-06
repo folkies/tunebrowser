@@ -27,8 +27,8 @@ import { TuneBookLoaderService } from './service/tunebook-loader.service';
 const appRoutes: Routes = [
     { path: 'search', component: SearchComponent },
     { path: 'books', component: BooksListComponent },
-    { path: 'book/:path', component: TunesListComponent },
-    { path: 'tune/:path/:ref', component: TunePageComponent },
+    { path: 'book/:id', component: TunesListComponent },
+    { path: 'tune/:bookId/:ref', component: TunePageComponent },
     {
         path: '',
         redirectTo: '/search',

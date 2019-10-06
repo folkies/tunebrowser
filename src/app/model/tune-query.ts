@@ -9,7 +9,7 @@ export class TuneQuery {
         if (this.allBooks()) {
             return true;
         }
-        return this.books.includes(tuneBookRef.descriptor.path);
+        return this.books.includes(tuneBookRef.descriptor.id);
     }
 
     matchesName(bookName: string): boolean {

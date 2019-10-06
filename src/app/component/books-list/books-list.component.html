@@ -4,7 +4,7 @@
     <mat-list>
         <mat-list-item *ngFor="let book of books">
             <div class="tunebook-item">
-                <div class="tunebook-link" routerLink="../book/{{book.descriptor.path}}">{{book.descriptor.name}}</div>
+                <div class="tunebook-link" routerLink="../book/{{book.descriptor.id}}">{{book.descriptor.name}}</div>
                 <div class="tunebook-description">{{book.descriptor.description}}</div>
             </div>
         </mat-list-item>

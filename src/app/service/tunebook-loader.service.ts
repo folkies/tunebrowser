@@ -8,14 +8,23 @@ export class TuneBookLoaderService {
     constructor(private httpClient: HttpClient) {
     }
 
+    /**
+     * Loads the tunebook from the given path.
+     * @param path path relative to the `assets` folder.
+     * @returns parsed tunebook
+     */
     async loadTuneBook(path: string): Promise<TuneBook> {
         return this.httpClient.get(`assets/${path}`, { responseType: 'text' })
             .toPromise()
             .then(data => new TuneBook(data.toString()));
     }
 
+    /**
+     * Loads the tunebook collection manifest with metadata for all tunebooks.
+     * @returns tunebook collection manifest
+     */
     async loadTuneBookCollection(): Promise<TuneBookCollection> {
         return this.httpClient.get<TuneBookCollection>('assets/tunebook-collection.json')
-            .toPromise()        
+            .toPromise()
     }
 }

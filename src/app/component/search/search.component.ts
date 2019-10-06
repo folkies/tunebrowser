@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-        this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.path];
+        this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
     }
 
     ngAfterViewInit() {
@@ -49,7 +49,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
     findTunes(): void {
         if (this.selectedBooks === undefined || this.selectedBooks.length === 0) {
-            this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.path];
+            this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
         }
         const query = new TuneQuery(this.query, this.selectedBooks);
         this.tunes = this.tuneBookIndex.findTunes(query);

@@ -7,7 +7,7 @@ import { TuneBookReference } from '../model/tunebook-reference';
 
 @Injectable()
 export class TuneBookIndex {
-    private pathToBookMap: Map<string, TuneBookReference> = new Map();
+    private idToBookMap: Map<string, TuneBookReference> = new Map();
     private entries: IndexEntry[] = [];
 
     private tuneBookReadySource = new Subject<string>();
@@ -19,7 +19,7 @@ export class TuneBookIndex {
     }
 
     addTuneBook(tuneBookRef: TuneBookReference) {
-        this.pathToBookMap.set(tuneBookRef.descriptor.path, tuneBookRef);
+        this.idToBookMap.set(tuneBookRef.descriptor.id, tuneBookRef);
         tuneBookRef.tuneBook.tunes.forEach(tune => {
             this.entries.push(this.createEntry(tune, tuneBookRef));
         });
@@ -27,7 +27,7 @@ export class TuneBookIndex {
     }
 
     private createEntry(tune: TuneBookEntry, tuneBookRef: TuneBookReference): IndexEntry {
-        return new IndexEntry(tune.id, tuneBookRef.descriptor.path, tune.title, this.normalize(tune.title));
+        return new IndexEntry(tune.id, tuneBookRef.descriptor.id, tune.title, this.normalize(tune.title));
     }
 
     private normalize(title: string): string {
@@ -36,13 +36,13 @@ export class TuneBookIndex {
 
     public findTunes(tuneQuery: TuneQuery): IndexEntry[] {
         const trimmed = tuneQuery.query.trim();
-        const books = Array.from(this.pathToBookMap.values()).filter(book => tuneQuery.matchesRef(book));
         if (this.startsWithDigit(trimmed)) {
             const matchingEntries: IndexEntry[] = [];
+            const books = Array.from(this.idToBookMap.values()).filter(book => tuneQuery.matchesRef(book));
             books.forEach(book => {
                 const tune = book.tuneBook.getTuneById(trimmed);
                 if (tune !== null) {
-                    const entry = new IndexEntry(tune.id, book.descriptor.path, tune.title, this.normalize(tune.title));
+                    const entry = new IndexEntry(tune.id, book.descriptor.id, tune.title, this.normalize(tune.title));
                     matchingEntries.push(entry);
                 }
             });
@@ -61,20 +61,20 @@ export class TuneBookIndex {
     }
 
     public getAbc(entry: IndexEntry): string {
-        const tuneBookRef = this.pathToBookMap.get(entry.book);
+        const tuneBookRef = this.idToBookMap.get(entry.book);
         return tuneBookRef.tuneBook.getTuneById(entry.id).abc;
     }
 
-    findAllTunes(bookName: string): TuneBookEntry[] {
-        return this.pathToBookMap.get(bookName).tuneBook.tunes;
+    findAllTunesInBook(bookId: string): TuneBookEntry[] {
+        return this.idToBookMap.get(bookId).tuneBook.tunes;
     }
 
     getBooks(): TuneBookReference[] {
-        return Array.from(this.pathToBookMap.values());
+        return Array.from(this.idToBookMap.values());
     }
 
     getBook(entry: IndexEntry): TuneBookReference {
-        return this.pathToBookMap.get(entry.book);
+        return this.idToBookMap.get(entry.book);
     }
 
     private startsWithDigit(query: string) {

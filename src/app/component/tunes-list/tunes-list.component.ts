@@ -16,12 +16,12 @@ export class TunesListComponent {
     constructor(private index: TuneBookIndex, private route: ActivatedRoute) {
         this.index.tuneBookReady.subscribe(event => this.onReady(event));
         this.route.paramMap.subscribe(paramMap => {
-            this.book = paramMap.get('path');
+            this.book = paramMap.get('id');
             this.onReady(this.book);
         });
     }
 
     private onReady(event?: string) {
-        this.entries = this.index.findAllTunes(this.book);
+        this.entries = this.index.findAllTunesInBook(this.book);
     }
 }

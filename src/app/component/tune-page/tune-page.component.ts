@@ -11,7 +11,7 @@ export class TunePageComponent implements OnInit {
 
     tune = '';
 
-    private path: string;
+    private bookId: string;
     private ref: string;
 
     constructor(private index: TuneBookIndex, private route: ActivatedRoute) { }
@@ -19,19 +19,19 @@ export class TunePageComponent implements OnInit {
     ngOnInit() {
         this.route.paramMap.subscribe(map => this.consumeRef(map));
         this.index.tuneBookReady.subscribe(() => {
-            this.displayTune(this.path, this.ref);
+            this.displayTune(this.bookId, this.ref);
         });
     }
 
     private consumeRef(map: ParamMap): void {
         this.ref = map.get('ref');
-        this.path = map.get('path');        
-        this.displayTune(this.path, this.ref);
+        this.bookId = map.get('bookId');        
+        this.displayTune(this.bookId, this.ref);
     }
 
-    private displayTune(path: string, ref: string): void {
+    private displayTune(bookId: string, ref: string): void {
         if (ref !== undefined && this.index.isReady()) {
-            const tunes = this.index.findTunes(new TuneQuery(ref, [path]));
+            const tunes = this.index.findTunes(new TuneQuery(ref, [bookId]));
             if (tunes.length > 0) {
                 this.tune = this.index.getAbc(tunes[0]);
             }
