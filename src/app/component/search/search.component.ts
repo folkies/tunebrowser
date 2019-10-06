@@ -3,6 +3,7 @@ import { IndexEntry } from '../../model/index-entry';
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { TuneQuery } from '../../model/tune-query';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
     private searchCompleted = false;
 
-    constructor(private tuneBookIndex: TuneBookIndex) {
+    constructor(private tuneBookIndex: TuneBookIndex, private router: Router) {
 
     }
 
@@ -54,11 +55,16 @@ export class SearchComponent implements OnInit, AfterViewInit {
         const query = new TuneQuery(this.query, this.selectedBooks);
         this.tunes = this.tuneBookIndex.findTunes(query);
         this.searchCompleted = true;
+
+        if (this.uniqueResult()) {
+            this.navigateToTune(this.tunes[0]);
+        }
     }
 
-    renderTune(tune: IndexEntry): boolean {
-        this.tunes = [tune];
-        return true;
+    navigateToTune(tune: IndexEntry): void {
+        const bookId = tune.book;
+        const tuneId = tune.id;
+        this.router.navigate([`/tune/${bookId}/${tuneId}`]);
     }
 
     getAbc(entry: IndexEntry): string {

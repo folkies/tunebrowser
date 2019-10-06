@@ -28,10 +28,10 @@
             <tbody>
                 <tr *cdkVirtualFor="let tune of tunes">
                     <td class="tune-link tune-title">
-                        <div><span class="tune-link mat-body" (click)="renderTune(tune)">{{tune.title}}</span></div>
+                        <div><span class="tune-link mat-body" (click)="navigateToTune(tune)">{{tune.title}}</span></div>
                         <div class="mat-small">{{getBookName(tune)}}</div>
                     </td>
-                    <td class="tune-link" (click)="renderTune(tune)">
+                    <td class="tune-link" (click)="navigateToTune(tune)">
                         <app-snippet-view [tune]="getAbc(tune)"></app-snippet-view>
                     </td>
                 </tr>
@@ -39,9 +39,4 @@
         </table>
     </cdk-virtual-scroll-viewport>
 
-</div>
-
-<div *ngIf="uniqueResult()">
-    <app-tune-player [tune]="currentTune()"></app-tune-player>
-    <app-tune-view [tune]="currentTune()"></app-tune-view>
 </div>
