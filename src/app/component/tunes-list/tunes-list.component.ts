@@ -11,17 +11,21 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 export class TunesListComponent {
 
     entries: TuneBookEntry[] = [];
-    book: string;
+    bookId: string;
 
     constructor(private index: TuneBookIndex, private route: ActivatedRoute) {
         this.index.tuneBookReady.subscribe(event => this.onReady(event));
         this.route.paramMap.subscribe(paramMap => {
-            this.book = paramMap.get('id');
-            this.onReady(this.book);
+            this.bookId = paramMap.get('id');
+            this.onReady(this.bookId);
         });
     }
 
+    bookName(): string {
+        return this.index.getBookById(this.bookId).descriptor.name;
+    }
+
     private onReady(event?: string) {
-        this.entries = this.index.findAllTunesInBook(this.book);
+        this.entries = this.index.findAllTunesInBook(this.bookId);
     }
 }

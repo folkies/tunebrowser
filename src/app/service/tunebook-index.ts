@@ -77,6 +77,10 @@ export class TuneBookIndex {
         return this.idToBookMap.get(entry.book);
     }
 
+    getBookById(bookId: string): TuneBookReference {
+        return this.idToBookMap.get(bookId);
+    }
+
     private startsWithDigit(query: string) {
         const c = query.charAt(0);
         return '0' <= c && c <= '9';

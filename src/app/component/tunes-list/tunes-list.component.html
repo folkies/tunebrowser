@@ -1,9 +1,9 @@
 <div>
-    <h2 class="mat-h2">Browse Tunebook</h2>
+    <h2 class="mat-h2">{{bookName()}}</h2>
 
     <mat-list>
         <mat-list-item *ngFor="let entry of entries">
-            <div class="tune-link" routerLink="../../tune/{{book}}/{{entry.id}}">{{entry.title}}</div>
+            <div class="tune-link" routerLink="../../tune/{{bookId}}/{{entry.id}}">{{entry.title}}</div>
         </mat-list-item>
     </mat-list>
 </div>
