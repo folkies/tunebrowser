@@ -23,11 +23,13 @@ import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
 
 const appRoutes: Routes = [
-    { path: 'search', component: SearchComponent },
     { path: 'books', component: BooksListComponent },
+    { path: 'edit', component: TuneEditorComponent },
     { path: 'book/:id', component: TunesListComponent },
+    { path: 'search', component: SearchComponent },
     { path: 'tune/:bookId/:ref', component: TunePageComponent },
     {
         path: '',
@@ -42,6 +44,7 @@ const appRoutes: Routes = [
         BooksListComponent,
         TunesListComponent,
         SearchComponent,
+        TuneEditorComponent,
         TunePageComponent,
         TunePlayerComponent,
         TuneViewComponent,
