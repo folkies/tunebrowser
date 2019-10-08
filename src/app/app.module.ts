@@ -17,13 +17,13 @@ import { AppComponent } from './app.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { SearchComponent } from './component/search/search.component';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
+import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
 import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
 
 const appRoutes: Routes = [
     { path: 'books', component: BooksListComponent },

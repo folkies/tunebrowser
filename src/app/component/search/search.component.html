@@ -4,10 +4,10 @@
 
 <div class="search-panel">
     <form>
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="query">
             <input matInput name="query" type="text" [(ngModel)]="query" placeholder="tune number or part of title">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="tunebooks">
             <mat-label>Tunebooks</mat-label>
             <mat-select multiple [(value)]="selectedBooks">
                 <mat-option *ngFor="let book of books()" [value]="book.descriptor.id">{{book.descriptor.name}}</mat-option>

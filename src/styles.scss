@@ -11,9 +11,21 @@ body {
     margin: 0;
 }
 
-mat-form-field {
+mat-form-field.query, mat-form-field.tunebooks {
     width: 15em;
     margin-right: 0.5em;
+}
+
+mat-form-field.editor {
+    width: 1000px;
+    height: 15em;
+    margin-bottom: 5em;
+}
+
+mat-form-field.editor textarea {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    height: 15em;
 }
 
 mat-sidenav mat-icon {
