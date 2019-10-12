@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import abcjs from 'abcjs/midi';
+import { saveAs } from 'file-saver';
+import { GoogleDriveService } from 'src/app/service/google-drive.service';
 
 @Component({
     selector: 'app-tune-editor',
@@ -22,7 +24,8 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     @ViewChild('notation', { static: false })
     div: ElementRef;
 
-    constructor() { }
+    constructor(private googleDrive: GoogleDriveService) { 
+    }
 
     ngAfterViewInit() {
         this.renderNotation();
@@ -30,6 +33,18 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
 
     ngOnChanges() {
         this.renderNotation();
+    }
+
+    save() {
+        this.googleDrive.saveTextFile("NewTune.abc", this.tune);
+    }
+
+    signIn() {
+        this.googleDrive.signIn();
+    }
+
+    signOut() {
+        this.googleDrive.signOut();
     }
 
     private renderNotation(): void {

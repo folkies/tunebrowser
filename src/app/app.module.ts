@@ -24,6 +24,7 @@ import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { GoogleDriveService } from './service/google-drive.service';
 
 const appRoutes: Routes = [
     { path: 'books', component: BooksListComponent },
@@ -68,6 +69,7 @@ const appRoutes: Routes = [
         ScrollingModule
     ],
     providers: [
+        GoogleDriveService,
         TuneBookIndex,
         TuneBookLoaderService
     ],
