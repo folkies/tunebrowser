@@ -14,6 +14,8 @@ export class TuneBookIndex {
 
     tuneBookReady: Observable<string> = this.tuneBookReadySource.asObservable();
 
+    readonly defaultBook = 'learner';
+
     isReady(): boolean {
         return this.entries.length > 0;
     }

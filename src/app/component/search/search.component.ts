@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-        this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
+        this.selectedBooks = [this.tuneBookIndex.defaultBook];
     }
 
     ngAfterViewInit() {

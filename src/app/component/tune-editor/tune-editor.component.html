@@ -4,9 +4,9 @@
         <textarea name="abc-area" matInput [(ngModel)]="tune" placeholder="Enter abc notation"></textarea>
     </mat-form-field>
 
-    <button mat-raised-button (click)="save()" label="Save" class="search-button" color="primary">Save</button>
-    <button mat-raised-button (click)="signIn()" label="Sign in" class="search-button" color="primary">Sign in</button>
-    <button mat-raised-button (click)="signOut()" label="Sign out" class="search-button" color="primary">Sign out</button>
+    <button mat-raised-button (click)="save()" label="Save" class="search-button" color="primary" [disabled]="!signedIn">Save</button>
+    <button mat-raised-button (click)="signIn()" label="Sign in" class="search-button" color="primary" [disabled]="signedIn">Sign in</button>
+    <button mat-raised-button (click)="signOut()" label="Sign out" class="search-button" color="primary" [disabled]="!signedIn">Sign out</button>
 </form>
 
 <div #notation class="tune-view"></div>

@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, ChangeDetectorRef } from '@angular/core';
 import abcjs from 'abcjs/midi';
-import { saveAs } from 'file-saver';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 
 @Component({
@@ -8,6 +7,7 @@ import { GoogleDriveService } from 'src/app/service/google-drive.service';
     templateUrl: './tune-editor.component.html'
 })
 export class TuneEditorComponent implements AfterViewInit, OnChanges {
+    signedIn = true;
 
     private abc = '';
 
@@ -24,7 +24,12 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     @ViewChild('notation', { static: false })
     div: ElementRef;
 
-    constructor(private googleDrive: GoogleDriveService) { 
+    constructor(private googleDrive: GoogleDriveService, private ref: ChangeDetectorRef) {
+        this.googleDrive.authenticationStatus.subscribe(authStatus => {
+            this.signedIn = authStatus;
+            console.info("observed signedIn = " + this.signedIn);
+            this.ref.detectChanges();
+        });
     }
 
     ngAfterViewInit() {
@@ -36,7 +41,7 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     }
 
     save() {
-        this.googleDrive.saveTextFile("NewTune.abc", this.tune);
+        this.googleDrive.saveTextFile('NewTune.abc', this.tune);
     }
 
     signIn() {
