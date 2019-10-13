@@ -19,4 +19,8 @@ export class BooksListComponent {
     private onReady(event?: string) {
         this.books = this.index.getBooks();
     }
+
+    createTuneBook() {
+        
+    }
 }

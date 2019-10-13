@@ -1,0 +1,19 @@
+<div>
+    <h2 class="mat-h2">New tunebook</h2>
+</div>
+
+<div class="create-book-panel">
+    <form>
+        <mat-form-field class="query">
+            <input matInput name="title" type="text" [(ngModel)]="title" placeholder="Title">
+        </mat-form-field>
+        <mat-form-field class="query">
+            <input matInput name="description" type="text" [(ngModel)]="description" placeholder="Description">
+        </mat-form-field>
+        <mat-form-field class="query">
+            <input matInput name="id" type="text" [(ngModel)]="id" placeholder="ID used in URL or file name">
+        </mat-form-field>
+        <button mat-raised-button (click)="createBook()" label="Create" class="create-book-button"
+            color="primary">Create Book</button>
+    </form>
+</div>

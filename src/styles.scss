@@ -66,6 +66,15 @@ div.tunebook-item {
     flex-flow: column;
 }
 
+div.create-book-panel form {
+    display: flex;
+    flex-flow: column;
+}
+
+button.create-book-button {
+    width: max-content;
+}
+
 /* overrides hard-wired height from Angular Material by more specific selector */
 app-books-list .mat-list-base .mat-list-item {
     height: 60px;

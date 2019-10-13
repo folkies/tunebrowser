@@ -9,12 +9,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
+import { CreateBookComponent } from './component/create-book/create-book.component';
 import { SearchComponent } from './component/search/search.component';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
 import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
@@ -22,12 +24,13 @@ import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
+import { GoogleDriveService } from './service/google-drive.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { GoogleDriveService } from './service/google-drive.service';
 
 const appRoutes: Routes = [
     { path: 'books', component: BooksListComponent },
+    { path: 'createBook', component: CreateBookComponent },
     { path: 'edit', component: TuneEditorComponent },
     { path: 'book/:id', component: TunesListComponent },
     { path: 'search', component: SearchComponent },
@@ -43,6 +46,7 @@ const appRoutes: Routes = [
     declarations: [
         AppComponent,
         BooksListComponent,
+        CreateBookComponent,
         TunesListComponent,
         SearchComponent,
         TuneEditorComponent,
@@ -64,6 +68,7 @@ const appRoutes: Routes = [
         MatListModule,
         MatSelectModule,
         MatSidenavModule,
+        MatSnackBarModule,
         MatToolbarModule,
         RouterModule.forRoot(appRoutes),
         ScrollingModule
