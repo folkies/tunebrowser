@@ -9,6 +9,11 @@ const SCOPES = 'https://www.googleapis.com/auth/drive.appfolder https://www.goog
 
 const TUNE_FOLDER = 'Tune Browser';
 
+export interface FileReference {
+    id: string;
+    name: string;
+}
+
 @Injectable()
 export class GoogleDriveService {
 
@@ -19,29 +24,38 @@ export class GoogleDriveService {
     authenticationStatus: Observable<boolean> = this.authenticationStatusSource.asObservable();
 
 
-    constructor() {
-        this.authenticationStatusSource.next(true);
-        gapi.load('client:auth2', () => this.initClient());
+    initialize(): Promise<void> {
+        //this.authenticationStatusSource.next(true);
+
+        return new Promise((resolve, reject) => {
+            gapi.load('client:auth2', async () => {
+                await this.initClient();
+                resolve();
+            });
+        });
 
     }
 
-    private initClient() {
-        gapi.client.init({
+    private async initClient() {
+        await gapi.client.init({
             apiKey: API_KEY,
             clientId: CLIENT_ID,
             discoveryDocs: DISCOVERY_DOCS,
             scope: SCOPES
-        }).then(() => {
-            this.googleAuth = gapi.auth2.getAuthInstance();
-            const user = this.googleAuth.currentUser.get();
-            console.info('Google API client initialized');
-            if (user.getId() === null) {
-                this.authenticationStatusSource.next(false);
-            } else {
-                console.info("user id = " + user.getId());
-                this.authenticationStatusSource.next(true);
-            }
-        }).catch((error) => console.log(error));
+        });
+
+        await gapi.client.load('drive', 'v3');
+
+        this.googleAuth = gapi.auth2.getAuthInstance();
+        const user = this.googleAuth.currentUser.get();
+        console.info('Google API client initialized');
+
+        if (user.getId() === null) {
+            this.authenticationStatusSource.next(false);
+        } else {
+            console.info("user id = " + user.getId());
+            this.authenticationStatusSource.next(true);
+        }
     }
 
     async signIn() {
@@ -59,12 +73,12 @@ export class GoogleDriveService {
     }
 
     isSignedOut(): boolean {
-        return this.googleAuth && ! this.googleAuth.isSignedIn.get();
+        return this.googleAuth && !this.googleAuth.isSignedIn.get();
     }
 
     async saveTextFile(fileName: string, content: string): Promise<string> {
         try {
-            const folderId = await this.findOrCreateFolder('My Tunes');
+            const folderId = await this.findOrCreateFolder(TUNE_FOLDER);
 
             const resource = {
                 name: fileName,
@@ -95,6 +109,26 @@ export class GoogleDriveService {
         }
     }
 
+    async getTextFile(fileId: string): Promise<string> {
+        const response = await gapi.client.drive.files.get({
+            fileId: fileId,
+            alt: 'media'
+        });
+        return response.body;
+    }
+
+    async listTextFiles(folderId: string): Promise<FileReference[]> {
+        const response = await gapi.client.drive.files.list({
+            q: `'${folderId}' in parents`,
+            pageSize: 100
+        });
+        return response.result.files.map(file => this.toRef(file));
+    }
+
+    private toRef(file: gapi.client.drive.File): FileReference {
+        return { id: file.id, name: file.name };
+    }
+
     async createFolder(folderName: string): Promise<string> {
         const response = await gapi.client.drive.files.create({
             resource: {
@@ -102,19 +136,19 @@ export class GoogleDriveService {
                 mimeType: 'application/vnd.google-apps.folder'
             }
         });
-        console.info('Created "My Tunes" folder with id = ' + response.result.id);
+        console.info(`Created folder ${folderName} with id = ${response.result.id}`);
         return response.result.id;
     }
 
     async findOrCreateFolder(folderName: string): Promise<string> {
         const response = await gapi.client.drive.files.list({
-            q: `name = "${TUNE_FOLDER}"`
+            q: `name = "${folderName}" and "root" in parents`
         });
         const files = response.result.files;
         if (files.length === 1) {
             return files[0].id;
         }
-        return this.createFolder(TUNE_FOLDER);
+        return this.createFolder(folderName);
     }
 
 }

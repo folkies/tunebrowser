@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TuneBook } from 'abcjs/midi';
-import { TuneBookCollection } from "../model/tunebook-collection"
+import { TuneBookCollection } from "../model/tunebook-collection";
+import { Loader } from './loader';
 
 @Injectable()
-export class TuneBookLoaderService {
+export class TuneBookLoaderService implements Loader {
     constructor(private httpClient: HttpClient) {
     }
 

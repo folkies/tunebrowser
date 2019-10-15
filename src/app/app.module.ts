@@ -25,8 +25,10 @@ import { TunePlayerComponent } from './component/tune-player/tune-player.compone
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
 import { GoogleDriveService } from './service/google-drive.service';
+import { GoogleDriveTunebookLoaderService } from './service/google-drive-tunebook-loader.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { TuneBookCollectionService } from './service/tunebook-collection.service';
 
 const appRoutes: Routes = [
     { path: 'books', component: BooksListComponent },
@@ -75,6 +77,8 @@ const appRoutes: Routes = [
     ],
     providers: [
         GoogleDriveService,
+        GoogleDriveTunebookLoaderService,
+        TuneBookCollectionService,
         TuneBookIndex,
         TuneBookLoaderService
     ],

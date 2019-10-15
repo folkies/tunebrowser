@@ -34,4 +34,8 @@ export interface TuneBookDescriptor {
      * More verbose description of this tunebook.
      */
     description: string;
+
+    storage: string;
+
+    status: string;
 }

@@ -1,26 +1,24 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { TuneBookIndex } from '../../service/tunebook-index';
+import { Component, OnInit } from '@angular/core';
+import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookReference } from '../../model/tunebook-reference';
 
 @Component({
     selector: 'app-books-list',
     templateUrl: './books-list.component.html'
 })
-export class BooksListComponent {
+export class BooksListComponent implements OnInit {
 
     books: TuneBookReference[] = [];
 
-    constructor(private index: TuneBookIndex, private route: ActivatedRoute) {
-        this.index.tuneBookReady.subscribe(event => this.onReady(event));
-        this.route.paramMap.subscribe(paramMap => this.onReady());
+    constructor(private collectionService: TuneBookCollectionService) {
     }
 
-    private onReady(event?: string) {
-        this.books = this.index.getBooks();
-    }
+    ngOnInit() {
+        this.books = this.collectionService.getBooks();
+        this.collectionService.collectionLoaded.subscribe(event => this.books = this.collectionService.getBooks());
+    }    
 
     createTuneBook() {
-        
+
     }
 }
