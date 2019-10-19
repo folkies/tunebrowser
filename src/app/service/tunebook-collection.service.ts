@@ -1,11 +1,11 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 import { TuneBookCollection, TuneBookDescriptor } from '../model/tunebook-collection';
+import { TuneBookReference } from '../model/tunebook-reference';
 import { GoogleDriveTunebookLoaderService } from './google-drive-tunebook-loader.service';
 import { Loader } from './loader';
-import { TuneBookLoaderService } from './tunebook-loader.service';
-import { TuneBookReference } from '../model/tunebook-reference';
-import { Observable, Subject } from 'rxjs';
 import { TuneBookIndex } from './tunebook-index';
+import { TuneBookLoaderService } from './tunebook-loader.service';
 
 @Injectable()
 export class TuneBookCollectionService  {
