@@ -24,6 +24,7 @@ export class TuneBookCollectionService  {
     }
 
     loadCollections() {
+        this.collection.books = [];
         this.loaders.forEach(loader => this.loadCollection(loader));
     }
 

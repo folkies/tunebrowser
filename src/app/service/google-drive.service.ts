@@ -25,15 +25,12 @@ export class GoogleDriveService {
 
 
     initialize(): Promise<void> {
-        //this.authenticationStatusSource.next(true);
-
         return new Promise((resolve, reject) => {
             gapi.load('client:auth2', async () => {
                 await this.initClient();
                 resolve();
             });
         });
-
     }
 
     private async initClient() {
@@ -54,6 +51,7 @@ export class GoogleDriveService {
             this.authenticationStatusSource.next(false);
         } else {
             console.info("user id = " + user.getId());
+            console.info("isSignedIn = " + this.googleAuth.isSignedIn.get());
             this.authenticationStatusSource.next(true);
         }
     }

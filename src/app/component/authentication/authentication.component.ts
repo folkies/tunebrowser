@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class AuthenticationComponent {
 
     signedIn: boolean;
 
-    constructor(private route: ActivatedRoute, private googleDrive: GoogleDriveService) {
+    constructor(private route: ActivatedRoute, private router: Router, private googleDrive: GoogleDriveService) {
         this.googleDrive.authenticationStatus.subscribe(authStatus => {
             this.signedIn = authStatus;
             console.info("observed signedIn = " + this.signedIn);
@@ -26,5 +26,6 @@ export class AuthenticationComponent {
         else if ('logout' === action) {
             this.googleDrive.signOut();
         }
+        this.router.navigate(['/books']);
     }
 }

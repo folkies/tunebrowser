@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookReference } from '../../model/tunebook-reference';
+import { GoogleDriveService } from 'src/app/service/google-drive.service';
 
 @Component({
     selector: 'app-books-list',
@@ -9,8 +10,12 @@ import { TuneBookReference } from '../../model/tunebook-reference';
 export class BooksListComponent implements OnInit {
 
     books: TuneBookReference[] = [];
+    
+    get signedOut(): boolean {
+        return this.googleDriveService.isSignedOut();
+    }
 
-    constructor(private collectionService: TuneBookCollectionService) {
+    constructor(private collectionService: TuneBookCollectionService, private googleDriveService: GoogleDriveService) {
     }
 
     ngOnInit() {

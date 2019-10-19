@@ -10,6 +10,9 @@
             <a mat-list-item routerLink="/login" (click)="snav.close()" *ngIf="!signedIn">
                 <mat-icon>exit_to_app</mat-icon> <span class="nav-caption">Log in</span>
             </a>
+            <a mat-list-item routerLink="/logout" (click)="snav.close()" *ngIf="signedIn">
+                <mat-icon>cancel</mat-icon> <span class="nav-caption">Log out</span>
+            </a>
             <a mat-list-item routerLink="/about" (click)="snav.close()">
                 <mat-icon>info</mat-icon> <span class="nav-caption">About</span>
             </a>
