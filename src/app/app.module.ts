@@ -32,9 +32,10 @@ import { TuneBookCollectionService } from './service/tunebook-collection.service
 import { AuthenticationComponent } from './component/authentication/authentication.component';
 
 const appRoutes: Routes = [
+    { path: 'about', component: SearchComponent },
     { path: 'books', component: BooksListComponent },
     { path: 'createBook', component: CreateBookComponent },
-    { path: 'edit', component: TuneEditorComponent },
+    { path: 'edit/:id', component: TuneEditorComponent },
     { path: 'book/:id', component: TunesListComponent },
     { path: 'login', component: AuthenticationComponent },
     { path: 'logout', component: AuthenticationComponent },

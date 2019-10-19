@@ -3,6 +3,7 @@ import { TuneBook } from 'abcjs/midi';
 import { TuneBookCollection, TuneBookDescriptor } from "../model/tunebook-collection";
 import { FileReference, GoogleDriveService } from './google-drive.service';
 import { Loader } from './loader';
+import { TuneBookReference } from '../model/tunebook-reference';
 
 const TUNE_FOLDER = 'Tune Browser';
 
@@ -17,9 +18,10 @@ export class GoogleDriveTunebookLoaderService implements Loader {
      * @param path path relative to the `assets` folder.
      * @returns parsed tunebook
      */
-    async loadTuneBook(path: string): Promise<TuneBook> {
-        const abc = await this.googleDrive.getTextFile(path);
-        return new TuneBook(abc);
+    async loadTuneBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
+        const abc = await this.googleDrive.getTextFile(descriptor.path);
+        const tuneBook = new TuneBook(abc);
+        return new TuneBookReference(tuneBook, descriptor, abc);
     }
 
     /**
@@ -45,5 +47,4 @@ export class GoogleDriveTunebookLoaderService implements Loader {
             storage: 'googledrive'
         };
     }
-
 }

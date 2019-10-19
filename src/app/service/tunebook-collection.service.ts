@@ -29,7 +29,7 @@ export class TuneBookCollectionService  {
     }
 
     getBooks(): TuneBookReference[] {
-        return this.collection.books.map(book => new TuneBookReference(null, book));
+        return this.collection.books.map(book => new TuneBookReference(null, book, ''));
     }
 
     private loadCollection(loader: Loader) {
@@ -44,8 +44,7 @@ export class TuneBookCollectionService  {
 
     private async loadBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
         const loader = this.selectLoader(descriptor);
-        const book = await loader.loadTuneBook(descriptor.path);
-        const ref = new TuneBookReference(book, descriptor);
+        const ref = await loader.loadTuneBook(descriptor);
         this.index.addTuneBook(ref);
         return ref;
     }

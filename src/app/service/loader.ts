@@ -1,7 +1,7 @@
-import { TuneBook } from 'abcjs/midi';
-import { TuneBookCollection } from '../model/tunebook-collection';
+import { TuneBookCollection, TuneBookDescriptor } from '../model/tunebook-collection';
+import { TuneBookReference } from '../model/tunebook-reference';
 
 export interface Loader {
-    loadTuneBook(path: string): Promise<TuneBook>;
+    loadTuneBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference>;
     loadTuneBookCollection(): Promise<TuneBookCollection>;
 }

@@ -3,6 +3,11 @@
 
     <mat-list>
         <mat-list-item *ngFor="let book of books">
+            <div class="tunebook-button">
+                <button mat-icon-button routerLink="../edit/{{book.descriptor.id}}" *ngIf="isEditable(book)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </div>
             <div class="tunebook-item">
                 <div class="tunebook-link" routerLink="../book/{{book.descriptor.id}}">{{book.descriptor.name}}</div>
                 <div class="tunebook-description">{{book.descriptor.description}}</div>

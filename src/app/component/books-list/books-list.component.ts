@@ -23,7 +23,7 @@ export class BooksListComponent implements OnInit {
         this.collectionService.collectionLoaded.subscribe(event => this.books = this.collectionService.getBooks());
     }    
 
-    createTuneBook() {
-
+    isEditable(bookRef: TuneBookReference) {
+        return bookRef.descriptor.storage === 'googledrive';
     }
 }

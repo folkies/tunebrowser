@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TuneBook } from 'abcjs/midi';
-import { TuneBookCollection } from "../model/tunebook-collection";
+import { TuneBookCollection, TuneBookDescriptor } from "../model/tunebook-collection";
 import { Loader } from './loader';
+import { TuneBookReference } from '../model/tunebook-reference';
 
 @Injectable()
 export class TuneBookLoaderService implements Loader {
@@ -14,10 +15,10 @@ export class TuneBookLoaderService implements Loader {
      * @param path path relative to the `assets` folder.
      * @returns parsed tunebook
      */
-    async loadTuneBook(path: string): Promise<TuneBook> {
-        return this.httpClient.get(`assets/${path}`, { responseType: 'text' })
-            .toPromise()
-            .then(data => new TuneBook(data.toString()));
+    async loadTuneBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
+        const abc = await this.httpClient.get(`assets/${descriptor.path}`, { responseType: 'text' }).toPromise();
+        const tuneBook = new TuneBook(abc);
+        return new TuneBookReference(tuneBook, descriptor, abc);
     }
 
     /**
