@@ -15,6 +15,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { AuthenticationComponent } from './component/authentication/authentication.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
 import { SearchComponent } from './component/search/search.component';
@@ -24,12 +25,12 @@ import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
-import { GoogleDriveService } from './service/google-drive.service';
+import { CaretTrackerDirective } from './directive/caret-tracker.directive';
 import { GoogleDriveTunebookLoaderService } from './service/google-drive-tunebook-loader.service';
+import { GoogleDriveService } from './service/google-drive.service';
+import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { TuneBookCollectionService } from './service/tunebook-collection.service';
-import { AuthenticationComponent } from './component/authentication/authentication.component';
 
 const appRoutes: Routes = [
     { path: 'about', component: SearchComponent },
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
         AppComponent,
         AuthenticationComponent,
         BooksListComponent,
+        CaretTrackerDirective,
         CreateBookComponent,
         TunesListComponent,
         SearchComponent,

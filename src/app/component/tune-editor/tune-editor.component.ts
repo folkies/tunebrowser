@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, ChangeDetectorRef } from '@angular/core';
-import abcjs from 'abcjs/midi';
-import { GoogleDriveService } from 'src/app/service/google-drive.service';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TuneBookIndex } from 'src/app/service/tunebook-index';
+import abcjs from 'abcjs/midi';
+import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
-import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y';
+import { GoogleDriveService } from 'src/app/service/google-drive.service';
+import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-tune-editor',
@@ -18,7 +18,6 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     @Input()
     set tune(abc: string) {
         this.abc = abc;
-        this.renderNotation();
     }
 
     get tune(): string {
@@ -41,20 +40,25 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     }
 
     ngAfterViewInit() {
-        this.renderNotation();
+        this.renderNotation(this.abc);
     }
 
     ngOnChanges() {
-        this.renderNotation();
+        this.renderNotation(this.abc);
+    }
+
+    onCaret(caret: ICaret) {
+        console.log(`textPos = ${caret.textPos}`);
+        this.renderNotation(this.extractTuneAtCaret(caret.textPos));
     }
 
     save() {
         this.googleDrive.saveTextFile(this.bookRef.descriptor.path, this.tune);
     }
 
-    private renderNotation(): void {
-        if (this.div !== undefined && this.tune.length > 0) {
-            abcjs.renderAbc(this.div.nativeElement, this.tune,
+    private renderNotation(abc: string): void {
+        if (this.div !== undefined && abc.length > 0) {
+            abcjs.renderAbc(this.div.nativeElement, abc,
                 {
                     paddingleft: 0,
                     paddingright: 0,
@@ -64,5 +68,14 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
                     responsive: 'resize'
                 });
         }
+    }
+
+    private extractTuneAtCaret(pos: number): string {
+        const start = Math.max(0, this.abc.lastIndexOf('X:', pos));
+        let end = this.abc.indexOf('X:', start + 2);
+        if (end === -1) {
+            end = this.abc.length;
+        }
+        return this.abc.substring(start, end);
     }
 }

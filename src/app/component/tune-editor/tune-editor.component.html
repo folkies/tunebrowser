@@ -1,7 +1,7 @@
 <form class="example-form">
 
     <mat-form-field class="editor">
-        <textarea name="abc-area" matInput [(ngModel)]="tune" placeholder="Enter abc notation"></textarea>
+        <textarea caretTracker (caret)="onCaret($event)" name="abc-area" matInput [(ngModel)]="tune" placeholder="Enter ABC notation"></textarea>
     </mat-form-field>
 
     <button mat-raised-button (click)="save()" label="Save" class="search-button" color="primary">Save</button>
