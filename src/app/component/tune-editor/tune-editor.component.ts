@@ -5,6 +5,7 @@ import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-tune-editor',
@@ -30,7 +31,8 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     constructor(
         private index: TuneBookIndex,
         private googleDrive: GoogleDriveService,
-        private route: ActivatedRoute) {
+        private route: ActivatedRoute,
+        private snackBar: MatSnackBar) {
 
         this.route.paramMap.subscribe(paramMap => {
             this.bookId = paramMap.get('id');
@@ -52,8 +54,10 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
         this.renderNotation(this.extractTuneAtCaret(caret.textPos));
     }
 
-    save() {
-        this.googleDrive.saveTextFile(this.bookRef.descriptor.path, this.tune);
+    async save() {
+        console.log(`saving ${this.bookRef.descriptor.path}`);
+        await this.googleDrive.updateTextFile(this.bookRef.descriptor.path, this.tune);
+        this.snackBar.open(`Updated ${this.bookRef.descriptor.name} on Google Drive`, 'Dismiss', { duration: 3000 });
     }
 
     private renderNotation(abc: string): void {

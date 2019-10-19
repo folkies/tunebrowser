@@ -74,7 +74,7 @@ export class GoogleDriveService {
         return this.googleAuth && !this.googleAuth.isSignedIn.get();
     }
 
-    async saveTextFile(fileName: string, content: string): Promise<string> {
+    async createTextFile(fileName: string, content: string): Promise<string> {
         try {
             const folderId = await this.findOrCreateFolder(TUNE_FOLDER);
 
@@ -102,7 +102,27 @@ export class GoogleDriveService {
             return response.result.id;
         }
         catch (error) {
-            console.error('Error saving file', error);
+            console.error('Error creating file', error);
+            return null;
+        }
+    }
+
+    async updateTextFile(fileId: string, content: string): Promise<string> {
+        try {
+            const response = await gapi.client.request<gapi.client.drive.File>({
+                path: '/upload/drive/v3/files/' + fileId,
+                method: 'PATCH',
+                params: {
+                    uploadType: 'media'
+                },
+                headers: { 'Content-Type': 'text/plain' },
+                body: content
+            });
+            console.log(`Updated file with id = ${response.result.id}`);
+            return response.result.id;
+        }
+        catch (error) {
+            console.error('Error updating file', error);
             return null;
         }
     }

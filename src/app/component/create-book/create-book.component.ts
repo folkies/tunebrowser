@@ -16,7 +16,7 @@ export class CreateBookComponent {
 
     async createBook(): Promise<void> {
         const fileName = `${this.id}.abc`;
-        await this.googleDrive.saveTextFile(fileName, '');
+        await this.googleDrive.createTextFile(fileName, '');
         this.snackBar.open(`Created ${fileName} on Google Drive`, 'Dismiss', { duration: 3000 });
     }
 }
