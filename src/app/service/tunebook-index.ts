@@ -28,6 +28,16 @@ export class TuneBookIndex {
         this.tuneBookReadySource.next(tuneBookRef.descriptor.name);
     }
 
+    updateTuneBook(tuneBookRef: TuneBookReference) {
+        this.deleteTuneBook(tuneBookRef);
+        this.addTuneBook(tuneBookRef);
+    }
+
+    deleteTuneBook(tuneBookRef: TuneBookReference) {
+        this.idToBookMap.delete(tuneBookRef.descriptor.id);
+        this.entries = this.entries.filter(entry => entry.book !== tuneBookRef.descriptor.id);
+    }
+
     private createEntry(tune: TuneBookEntry, tuneBookRef: TuneBookReference): IndexEntry {
         return new IndexEntry(tune.id, tuneBookRef.descriptor.id, tune.title, this.normalize(tune.title));
     }
@@ -36,7 +46,7 @@ export class TuneBookIndex {
         return title.trim().toLocaleLowerCase();
     }
 
-    public findTunes(tuneQuery: TuneQuery): IndexEntry[] {
+    findTunes(tuneQuery: TuneQuery): IndexEntry[] {
         const trimmed = tuneQuery.query.trim();
         if (this.startsWithDigit(trimmed)) {
             const matchingEntries: IndexEntry[] = [];
@@ -62,7 +72,7 @@ export class TuneBookIndex {
         return indexEntry.titleNormalized.includes(normalized);
     }
 
-    public getAbc(entry: IndexEntry): string {
+    getAbc(entry: IndexEntry): string {
         const tuneBookRef = this.idToBookMap.get(entry.book);
         return tuneBookRef.tuneBook.getTuneById(entry.id).abc;
     }

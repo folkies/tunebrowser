@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import abcjs from 'abcjs/midi';
+import abcjs, { TuneBook } from 'abcjs/midi';
 import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
@@ -57,6 +57,9 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     async save() {
         console.log(`saving ${this.bookRef.descriptor.path}`);
         await this.googleDrive.updateTextFile(this.bookRef.descriptor.path, this.tune);
+        this.bookRef.abc = this.tune;
+        this.bookRef.tuneBook = new TuneBook(this.tune);
+        this.index.updateTuneBook(this.bookRef);
         this.snackBar.open(`Updated ${this.bookRef.descriptor.name} on Google Drive`, 'Dismiss', { duration: 3000 });
     }
 
