@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TuneBookIndex } from './service/tunebook-index';
-import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { TuneBookDescriptor } from './model/tunebook-collection';
-import { TuneBookReference } from './model/tunebook-reference';
-import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { GoogleDriveService } from './service/google-drive.service';
+import { TuneBookCollectionService } from './service/tunebook-collection.service';
 
 @Component({
     selector: 'app-root',
@@ -12,26 +8,20 @@ import { GoogleDriveService } from './service/google-drive.service';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    title = 'folkies';
+    signedIn: boolean;
 
     constructor(
-        private tuneBookLoaderService: TuneBookLoaderService, 
-        private tuneBookIndex: TuneBookIndex, 
         private collectionService: TuneBookCollectionService,
         private googleDriveService: GoogleDriveService) {
 
+        this.googleDriveService.authenticationStatus.subscribe(authStatus => {
+            this.signedIn = authStatus;
+            console.info("observed signedIn = " + this.signedIn);
+        });
     }
 
     async ngOnInit(): Promise<void> {
-        // const tuneBookCollection = await this.tuneBookLoaderService.loadTuneBookCollection();
-        // tuneBookCollection.books.forEach(descriptor => this.addBookToIndex(descriptor));
         await this.googleDriveService.initialize();
         this.collectionService.loadCollections();
     }
-
-    private addBookToIndex(descriptor: TuneBookDescriptor): void {
-        this.tuneBookLoaderService.loadTuneBook(descriptor.path)
-            .then(tuneBook => this.tuneBookIndex.addTuneBook(new TuneBookReference(tuneBook, descriptor)));
-    }
-
 }

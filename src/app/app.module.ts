@@ -29,12 +29,15 @@ import { GoogleDriveTunebookLoaderService } from './service/google-drive-tuneboo
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
+import { AuthenticationComponent } from './component/authentication/authentication.component';
 
 const appRoutes: Routes = [
     { path: 'books', component: BooksListComponent },
     { path: 'createBook', component: CreateBookComponent },
     { path: 'edit', component: TuneEditorComponent },
     { path: 'book/:id', component: TunesListComponent },
+    { path: 'login', component: AuthenticationComponent },
+    { path: 'logout', component: AuthenticationComponent },
     { path: 'search', component: SearchComponent },
     { path: 'tune/:bookId/:ref', component: TunePageComponent },
     {
@@ -47,6 +50,7 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
+        AuthenticationComponent,
         BooksListComponent,
         CreateBookComponent,
         TunesListComponent,
