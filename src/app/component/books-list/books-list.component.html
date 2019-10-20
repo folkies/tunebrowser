@@ -4,8 +4,9 @@
     <mat-list>
         <mat-list-item *ngFor="let book of books">
             <div class="tunebook-button">
-                <button mat-icon-button routerLink="../edit/{{book.descriptor.id}}" *ngIf="isEditable(book)">
-                    <mat-icon>edit</mat-icon>
+                &nbsp;
+                <button mat-icon-button routerLink="../edit/{{book.descriptor.id}}" [disabled]="!isEditable(book)">
+                    <mat-icon  *ngIf="isEditable(book)">edit</mat-icon>
                 </button>
             </div>
             <div class="tunebook-item">
@@ -15,6 +16,6 @@
         </mat-list-item>
     </mat-list>
 
-    <button mat-raised-button routerLink="../createBook" class="new-book-button" color="primary" [disabled]="signedOut">New Book</button>
+    <button mat-raised-button routerLink="../createBook" class="create-book-button" color="primary" [disabled]="signedOut">New Book</button>
 
 </div>

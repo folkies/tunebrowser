@@ -64,6 +64,8 @@ cdk-virtual-scroll-viewport {
 div.tunebook-item {
     display: flex;
     flex-flow: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 div.create-book-panel form {
@@ -72,12 +74,13 @@ div.create-book-panel form {
 }
 
 button.create-book-button {
+    margin-top: 1em;
     width: max-content;
 }
 
 /* overrides hard-wired height from Angular Material by more specific selector */
 app-books-list .mat-list-base .mat-list-item {
-    height: 60px;
+    height: auto;
 }
 
 div.tune-view {
