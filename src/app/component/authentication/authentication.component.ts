@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 
+/**
+ * Handles sign-in and sign-out with Google.
+ */
 @Component({
     selector: 'app-authentication',
     templateUrl: './authentication.component.html'
