@@ -49,20 +49,17 @@ export class TuneBookIndex {
     findTunes(tuneQuery: TuneQuery): IndexEntry[] {
         const trimmed = tuneQuery.query.trim();
         if (this.startsWithDigit(trimmed)) {
-            const matchingEntries: IndexEntry[] = [];
             const books = Array.from(this.idToBookMap.values()).filter(book => tuneQuery.matchesRef(book));
-            books.forEach(book => {
-                const tune = book.tuneBook.getTuneById(trimmed);
-                if (tune !== null) {
-                    const entry = new IndexEntry(tune.id, book.descriptor.id, tune.title, this.normalize(tune.title));
-                    matchingEntries.push(entry);
-                }
-            });
-            return matchingEntries;
+            return books.map(book => this.findEntryById(book, trimmed)).filter(entry => entry !== undefined)
         } else {
             const normalized = this.normalize(trimmed);
             return this.entries.filter(entry => this.matchesEntry(tuneQuery, normalized, entry));
         }
+    }
+
+    findEntryById(book: TuneBookReference, id: string) {
+        const tune = book.tuneBook.getTuneById(id);
+        return (tune === null) ? undefined : new IndexEntry(tune.id, book.descriptor.id, tune.title, this.normalize(tune.title));
     }
 
     matchesEntry(query: TuneQuery, normalized: string, indexEntry: IndexEntry): boolean {
