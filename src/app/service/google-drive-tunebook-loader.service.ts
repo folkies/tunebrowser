@@ -19,7 +19,7 @@ export class GoogleDriveTunebookLoaderService implements Loader {
      * @returns parsed tunebook
      */
     async loadTuneBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
-        const abc = await this.googleDrive.getTextFile(descriptor.path);
+        const abc = await this.googleDrive.getTextFile(descriptor.uri);
         const tuneBook = new TuneBook(abc);
         return new TuneBookReference(tuneBook, descriptor, abc);
     }
@@ -42,7 +42,7 @@ export class GoogleDriveTunebookLoaderService implements Loader {
             description: 'Private tunebook from Google Drive',
             id: fileRef.name,
             name: fileRef.name.replace('\.abc', ''),
-            path: fileRef.id,
+            uri: fileRef.id,
             status: 'loading',
             storage: 'googledrive'
         };

@@ -12,11 +12,11 @@ export class TuneBookLoaderService implements Loader {
 
     /**
      * Loads the tunebook from the given path.
-     * @param path path relative to the `assets` folder.
-     * @returns parsed tunebook
+     * @param descriptor tune book descriptor. path path relative to the `assets` folder.
+     * @returns tune book reference
      */
     async loadTuneBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
-        const abc = await this.httpClient.get(`assets/${descriptor.path}`, { responseType: 'text' }).toPromise();
+        const abc = await this.httpClient.get(`assets/${descriptor.uri}`, { responseType: 'text' }).toPromise();
         const tuneBook = new TuneBook(abc);
         return new TuneBookReference(tuneBook, descriptor, abc);
     }

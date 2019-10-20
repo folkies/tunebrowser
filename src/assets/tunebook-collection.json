@@ -2,15 +2,17 @@
     "books": [
         {
             "id": "learner",
-            "path": "LearnerSession.abc",
+            "uri": "LearnerSession.abc",
             "name": "Learner Session",
-            "description": "All tunes from the Hamburg Learner Session"
+            "description": "All tunes from the Hamburg Learner Session",
+            "storage": "assets"
         },
         {
             "id": "oneill1001",
-            "path": "ONeill1001.abc",
+            "uri": "ONeill1001.abc",
             "name": "O'Neill 1001",
-            "description": "Francis O'Neill: The Dance Music of Ireland (1907)"
+            "description": "Francis O'Neill: The Dance Music of Ireland (1907)",
+            "storage": "assets"
         }
     ]
 }

@@ -55,8 +55,8 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
     }
 
     async save() {
-        console.log(`saving ${this.bookRef.descriptor.path}`);
-        await this.googleDrive.updateTextFile(this.bookRef.descriptor.path, this.tune);
+        console.log(`saving ${this.bookRef.descriptor.uri}`);
+        await this.googleDrive.updateTextFile(this.bookRef.descriptor.uri, this.tune);
         this.bookRef.abc = this.tune;
         this.bookRef.tuneBook = new TuneBook(this.tune);
         this.index.updateTuneBook(this.bookRef);

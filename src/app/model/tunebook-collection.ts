@@ -23,7 +23,7 @@ export interface TuneBookDescriptor {
     /**
      * Relative path of the tunebook from the `assets` folder.
      */
-    path: string;
+    uri: string;
 
     /**
      * Display name.
