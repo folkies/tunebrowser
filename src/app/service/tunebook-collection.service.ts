@@ -6,9 +6,10 @@ import { GoogleDriveTunebookLoaderService } from './google-drive-tunebook-loader
 import { Loader } from './loader';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
+import { TuneBook } from 'abcjs/midi';
 
 @Injectable()
-export class TuneBookCollectionService  {
+export class TuneBookCollectionService {
     private loaders: Loader[];
     private collection: TuneBookCollection = { books: [] };
 
@@ -16,7 +17,7 @@ export class TuneBookCollectionService  {
     collectionLoaded: Observable<string>;
 
     constructor(
-        private websiteLoader: TuneBookLoaderService, 
+        private websiteLoader: TuneBookLoaderService,
         private driveLoader: GoogleDriveTunebookLoaderService,
         private index: TuneBookIndex) {
         this.loaders = [this.websiteLoader, this.driveLoader];
@@ -30,6 +31,17 @@ export class TuneBookCollectionService  {
 
     getBooks(): TuneBookReference[] {
         return this.collection.books.map(book => new TuneBookReference(null, book, ''));
+    }
+
+    async addBook(descriptor: TuneBookDescriptor): Promise<string> {
+        this.collection.books.push(descriptor);
+        const driveBooks = this.collection.books.filter(book => book.storage === 'googledrive');
+        const ref = new TuneBookReference(new TuneBook(''), descriptor, '');
+        this.index.addTuneBook(ref);
+
+        const updated = this.driveLoader.updateTuneBookCollection({ books: driveBooks });
+        this.collectionLoadedSource.next('');
+        return updated;
     }
 
     private loadCollection(loader: Loader) {

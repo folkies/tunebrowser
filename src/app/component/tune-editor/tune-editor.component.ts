@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     selector: 'app-tune-editor',
     templateUrl: './tune-editor.component.html'
 })
-export class TuneEditorComponent implements AfterViewInit, OnChanges {
+export class TuneEditorComponent implements AfterViewInit {
     private abc = '';
     private bookId: string;
     private bookRef: TuneBookReference;
@@ -39,18 +39,21 @@ export class TuneEditorComponent implements AfterViewInit, OnChanges {
             this.bookRef = this.index.getBookById(this.bookId);
             this.tune = this.bookRef.abc;
         });
+
+        this.index.tuneBookReady.subscribe(id => {
+            if (id === this.bookId) {
+                this.bookRef = this.index.getBookById(this.bookId);
+                this.tune = this.bookRef.abc;
+                this.renderNotation(this.abc);
+            }
+        });
     }
 
     ngAfterViewInit() {
         this.renderNotation(this.abc);
     }
 
-    ngOnChanges() {
-        this.renderNotation(this.abc);
-    }
-
     onCaret(caret: ICaret) {
-        console.log(`textPos = ${caret.textPos}`);
         this.renderNotation(this.extractTuneAtCaret(caret.textPos));
     }
 

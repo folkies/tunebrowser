@@ -166,6 +166,7 @@ export class GoogleDriveService {
         if (files.length === 1) {
             return files[0].id;
         }
-        return this.createFolder(folderName);
+        const folderId = this.createFolder(folderName);
+        return folderId;
     }
 }

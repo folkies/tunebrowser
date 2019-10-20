@@ -25,7 +25,7 @@ export class TuneBookIndex {
         tuneBookRef.tuneBook.tunes.forEach(tune => {
             this.entries.push(this.createEntry(tune, tuneBookRef));
         });
-        this.tuneBookReadySource.next(tuneBookRef.descriptor.name);
+        this.tuneBookReadySource.next(tuneBookRef.descriptor.id);
     }
 
     updateTuneBook(tuneBookRef: TuneBookReference) {

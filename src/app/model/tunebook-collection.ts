@@ -37,5 +37,5 @@ export interface TuneBookDescriptor {
 
     storage: string;
 
-    status: string;
+    status?: string;
 }
