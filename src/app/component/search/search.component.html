@@ -5,16 +5,16 @@
 <div class="search-panel">
     <form>
         <mat-form-field class="query">
-            <input matInput name="query" type="text" [(ngModel)]="query" placeholder="tune number or part of title">
+            <input matInput name="query" type="text" [(ngModel)]="query" placeholder="Tune number or part of title">
         </mat-form-field>
         <mat-form-field class="tunebooks">
-            <mat-label>Tunebooks</mat-label>
+            <mat-label>Tune books</mat-label>
             <mat-select multiple [(value)]="selectedBooks">
                 <mat-option *ngFor="let book of books()" [value]="book.descriptor.id">{{book.descriptor.name}}</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field class="tags">
-            <input matInput name="tags" type="text" [(ngModel)]="tags" placeholder="Comma-separated list of tags">
+            <input matInput name="tags" type="text" [(ngModel)]="tags" placeholder="Tags">
         </mat-form-field>
         <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
             color="primary">Search</button>
@@ -22,7 +22,7 @@
 </div>
 
 <div id="noMatches" *ngIf="noResults()">
-    <p>No matching tunes</p>
+    <p class="mat-body">No matching tunes</p>
 </div>
 
 <div id="overview" *ngIf="multipleResults()">
@@ -41,5 +41,4 @@
             </tbody>
         </table>
     </cdk-virtual-scroll-viewport>
-
 </div>

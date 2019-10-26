@@ -4,6 +4,7 @@ import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.s
 import { TuneQuery } from '../../model/tune-query';
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { GoogleDriveService } from 'src/app/service/google-drive.service';
 
 @Component({
     selector: 'app-tune-page',
@@ -19,6 +20,7 @@ export class TunePageComponent implements OnInit {
 
     constructor(
         private index: TuneBookIndex,
+        private googleDriveService: GoogleDriveService,
         private route: ActivatedRoute,
         private snackBar: MatSnackBar,
         private collectionService: TuneBookCollectionService) {
@@ -29,6 +31,10 @@ export class TunePageComponent implements OnInit {
         this.index.tuneBookReady.subscribe(() => {
             this.displayTune(this.bookId, this.ref);
         });
+    }
+
+    get signedOut(): boolean {
+        return this.googleDriveService.isSignedOut();
     }
 
     async save(): Promise<string> {

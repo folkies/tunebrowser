@@ -4,8 +4,8 @@
 <form class="tags-form">
 
     <mat-form-field class="tags">
-        <input name="tags" matInput [(ngModel)]="allTags" placeholder="Comma-separated list of tags">
+        <input name="tags" matInput [(ngModel)]="allTags" placeholder="Tags" [readOnly]="signedOut">
     </mat-form-field>
 
-    <button mat-raised-button (click)="save()" label="Save" class="search-button" color="primary">Save</button>
+    <button mat-raised-button (click)="save()" label="Save" class="search-button" color="primary" [disabled]="signedOut">Save</button>
 </form>

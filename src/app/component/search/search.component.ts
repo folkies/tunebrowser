@@ -53,14 +53,20 @@ export class SearchComponent implements OnInit, AfterViewInit {
         if (this.selectedBooks === undefined || this.selectedBooks.length === 0) {
             this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
         }
-        const tags = this.tags.split(/\s*,\s*/);
-        const query = new TuneQuery(this.query, this.selectedBooks, tags);
+        const query = new TuneQuery(this.query, this.selectedBooks, this.getTagList());
         this.tunes = this.tuneBookIndex.findTunes(query);
         this.searchCompleted = true;
 
         if (this.uniqueResult()) {
             this.navigateToTune(this.tunes[0]);
         }
+    }
+
+    private getTagList(): string[] {
+        if (!this.tags) {
+            return undefined;
+        }
+        return this.tags.split(/\s*,\s*/).filter(tag => tag.length > 0);
     }
 
     navigateToTune(tune: IndexEntry): void {
