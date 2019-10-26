@@ -1,7 +1,15 @@
 import { TuneBookReference } from './tunebook-reference';
 
+export function titleQuery(title: string): TuneQuery {
+    return new TuneQuery(title);
+}
+
+export function tagQuery(...tags: string[]) {
+    return new TuneQuery(undefined, undefined, tags);
+}
+
 export class TuneQuery {
-    constructor(public query: string, public books?: string[]) {
+    constructor(public title: string, public books?: string[], public tags?: string[]) {
 
     }
 

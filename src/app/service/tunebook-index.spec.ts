@@ -1,20 +1,43 @@
 import { TuneBook } from 'abcjs/midi';
 import fs from 'fs';
 import { TuneBookIndex } from './tunebook-index';
+import { TuneBookDescriptor } from '../model/tunebook-collection';
+import { TuneBookReference } from '../model/tunebook-reference';
+import { titleQuery, tagQuery } from '../model/tune-query';
 
 describe('TuneBookIndex', () => {
     let tunebook: TuneBook;
     let tuneBookIndex: TuneBookIndex;
+    let tuneBookDescriptor: TuneBookDescriptor;
+    let tuneBookRef: TuneBookReference;
 
     beforeAll(() => {
-        const text = fs.readFileSync('src/assets/tunebook.abc', 'utf8');
+        const text = fs.readFileSync('src/assets/LearnerSession.abc', 'utf8');
         tunebook = new TuneBook(text);
+        tuneBookDescriptor = {
+            id: 'learner',
+            name: 'Test Tunes',
+            description: 'Test Tunes',
+            storage: 'website',
+            uri: 'LearnerSession.abc',
+            tunes: [
+                {
+                    id: '32',
+                    tags: ['gold']
+                }, 
+                {
+                    id: '40',
+                    tags: ['gold', 'silver']
+                }, 
+            ]
+        }
+        tuneBookRef = new TuneBookReference(tunebook, tuneBookDescriptor, text);
         tuneBookIndex = new TuneBookIndex();
-        tuneBookIndex.setTuneBook(tunebook);
+        tuneBookIndex.addTuneBook(tuneBookRef);
     });
 
     test('should find by ID', () => {
-        const tunes = tuneBookIndex.findTunes('273');
+        const tunes = tuneBookIndex.findTunes(titleQuery('273'));
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(1);
         const tune = tunes[0];
@@ -22,13 +45,13 @@ describe('TuneBookIndex', () => {
     });
 
     test('should not find by non-existing ID', () => {
-        const tunes = tuneBookIndex.findTunes('1234567');
+        const tunes = tuneBookIndex.findTunes(titleQuery('1234567'));
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(0);
     });
 
     test('should find by title', () => {
-        const tunes = tuneBookIndex.findTunes('Boys Of Malin');
+        const tunes = tuneBookIndex.findTunes(titleQuery('Boys Of Malin'));
         expect(tunes).toBeDefined();
         const tune = tunes[0];
         expect(tune.title).toBe('273 The Boys Of Malin');
@@ -36,7 +59,7 @@ describe('TuneBookIndex', () => {
     });
 
     test('should find by lower-case title', () => {
-        const tunes = tuneBookIndex.findTunes('boys of malin');
+        const tunes = tuneBookIndex.findTunes(titleQuery('boys of malin'));
         expect(tunes).toBeDefined();
         const tune = tunes[0];
         expect(tune.title).toBe('273 The Boys Of Malin');
@@ -44,7 +67,7 @@ describe('TuneBookIndex', () => {
     });
 
     test('should find by word from title', () => {
-        const tunes = tuneBookIndex.findTunes('malin');
+        const tunes = tuneBookIndex.findTunes(titleQuery('malin'));
         expect(tunes).toBeDefined();
         const tune = tunes[0];
         expect(tune.title).toBe('273 The Boys Of Malin');
@@ -52,13 +75,31 @@ describe('TuneBookIndex', () => {
     });
 
     test('should find multiple tunes', () => {
-        const tunes = tuneBookIndex.findTunes('banshee');
+        const tunes = tuneBookIndex.findTunes(titleQuery('banshee'));
         expect(tunes).toBeDefined();
         expect(tunes.length).toBe(2);
         expect(tunes[0].title).toBe('30    Lilting Banshee');
         expect(tunes[0].id).toBe('30');
         expect(tunes[1].title).toBe('63    The Banshee');
         expect(tunes[1].id).toBe('63');
+    });
+
+    test('should find by tag', () => {
+        const tunes = tuneBookIndex.findTunes(tagQuery('silver'));
+        expect(tunes).toBeDefined();
+        expect(tunes.length).toBe(1);
+        expect(tunes[0].title).toBe('40    Miss Monaghan');
+        expect(tunes[0].id).toBe('40');
+    });
+
+    test('should find multiple tunes by tag', () => {
+        const tunes = tuneBookIndex.findTunes(tagQuery('gold'));
+        expect(tunes).toBeDefined();
+        expect(tunes.length).toBe(2);
+        expect(tunes[0].title).toBe('32    Chief O\'Neill\'s');
+        expect(tunes[0].id).toBe('32');
+        expect(tunes[1].title).toBe('40    Miss Monaghan');
+        expect(tunes[1].id).toBe('40');
     });
 
 });

@@ -4,6 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { IndexEntry } from '../model/index-entry';
 import { TuneQuery } from '../model/tune-query';
 import { TuneBookReference } from '../model/tunebook-reference';
+import { TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
 
 @Injectable()
 export class TuneBookIndex {
@@ -39,15 +40,25 @@ export class TuneBookIndex {
     }
 
     private createEntry(tune: TuneBookEntry, tuneBookRef: TuneBookReference): IndexEntry {
-        return new IndexEntry(tune.id, tuneBookRef.descriptor.id, tune.title, this.normalize(tune.title));
+        const tuneDescriptor = this.findTuneDescriptor(tune.id, tuneBookRef.descriptor);
+        const tags = tuneDescriptor && tuneDescriptor.tags;
+        return new IndexEntry(tune.id, tuneBookRef.descriptor.id, tune.title, this.normalize(tune.title), tags);
     }
 
+    private findTuneDescriptor(tuneId: string, tuneBookDescriptor: TuneBookDescriptor): TuneDescriptor {
+        if (tuneBookDescriptor.tunes === undefined) {
+            return undefined;
+        }
+
+        return tuneBookDescriptor.tunes.find(tune => tune.id === tuneId);
+    } 
+
     private normalize(title: string): string {
-        return title.trim().toLocaleLowerCase();
+        return title && title.trim().toLocaleLowerCase();
     }
 
     findTunes(tuneQuery: TuneQuery): IndexEntry[] {
-        const trimmed = tuneQuery.query.trim();
+        const trimmed = tuneQuery.title && tuneQuery.title.trim();
         if (this.startsWithDigit(trimmed)) {
             const books = Array.from(this.idToBookMap.values()).filter(book => tuneQuery.matchesRef(book));
             return books.map(book => this.findEntryById(book, trimmed)).filter(entry => entry !== undefined)
@@ -62,11 +73,15 @@ export class TuneBookIndex {
         return (tune === null) ? undefined : new IndexEntry(tune.id, book.descriptor.id, tune.title, this.normalize(tune.title));
     }
 
-    matchesEntry(query: TuneQuery, normalized: string, indexEntry: IndexEntry): boolean {
+    matchesEntry(query: TuneQuery, titleNormalized: string, indexEntry: IndexEntry): boolean {
         if (!query.matchesName(indexEntry.book)) {
             return false;
         }
-        return indexEntry.titleNormalized.includes(normalized);
+
+        if (query.tags && !query.tags.find(tag => indexEntry.hasTag(tag))) {
+            return false;
+        }
+        return !query.title || indexEntry.titleNormalized.includes(titleNormalized);
     }
 
     getAbc(entry: IndexEntry): string {
@@ -91,6 +106,9 @@ export class TuneBookIndex {
     }
 
     private startsWithDigit(query: string) {
+        if (!query) {
+            return false;
+        }
         const c = query.charAt(0);
         return '0' <= c && c <= '9';
     }

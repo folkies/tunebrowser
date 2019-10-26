@@ -38,4 +38,11 @@ export interface TuneBookDescriptor {
     storage: string;
 
     status?: string;
+
+    tunes?: TuneDescriptor[];
+}
+
+export interface TuneDescriptor {
+    id: string;
+    tags?: string[];
 }
