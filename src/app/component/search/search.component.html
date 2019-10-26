@@ -26,6 +26,7 @@
 </div>
 
 <div id="overview" *ngIf="multipleResults()">
+    <p class="mat-body">{{tunes.length}} tunes</p>
     <cdk-virtual-scroll-viewport [itemSize]="50">
         <table>
             <tbody>
