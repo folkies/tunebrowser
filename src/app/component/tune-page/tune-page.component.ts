@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { TuneBookIndex } from '../../service/tunebook-index';
+import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneQuery } from '../../model/tune-query';
+import { TuneBookIndex } from '../../service/tunebook-index';
 
 @Component({
     selector: 'app-tune-page',
@@ -10,11 +11,16 @@ import { TuneQuery } from '../../model/tune-query';
 export class TunePageComponent implements OnInit {
 
     tune = '';
+    allTags = '';
 
     private bookId: string;
     private ref: string;
 
-    constructor(private index: TuneBookIndex, private route: ActivatedRoute) { }
+    constructor(
+        private index: TuneBookIndex,
+        private route: ActivatedRoute,
+        private collectionService: TuneBookCollectionService) {
+    }
 
     ngOnInit() {
         this.route.paramMap.subscribe(map => this.consumeRef(map));
@@ -23,9 +29,14 @@ export class TunePageComponent implements OnInit {
         });
     }
 
+    save(): Promise<string> {
+        const tags = this.allTags.split(/\s*,/);
+        return this.collectionService.setTagsForTune(this.ref, this.bookId, tags);
+    }
+
     private consumeRef(map: ParamMap): void {
         this.ref = map.get('ref');
-        this.bookId = map.get('bookId');        
+        this.bookId = map.get('bookId');
         this.displayTune(this.bookId, this.ref);
     }
 
@@ -33,7 +44,11 @@ export class TunePageComponent implements OnInit {
         if (ref !== undefined && this.index.isReady()) {
             const tunes = this.index.findTunes(new TuneQuery(ref, [bookId]));
             if (tunes.length > 0) {
-                this.tune = this.index.getAbc(tunes[0]);
+                const entry = tunes[0];
+                this.tune = this.index.getAbc(entry);
+                if (entry.tags) { 
+                    this.allTags = entry.tags.join(' ,');
+                }
             }
         }
     }

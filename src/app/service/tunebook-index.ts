@@ -68,9 +68,14 @@ export class TuneBookIndex {
         }
     }
 
-    findEntryById(book: TuneBookReference, id: string) {
-        const tune = book.tuneBook.getTuneById(id);
-        return (tune === null) ? undefined : new IndexEntry(tune.id, book.descriptor.id, tune.title, this.normalize(tune.title));
+    findEntryById(book: TuneBookReference, id: string): IndexEntry {
+        return this.entries.find(entry => entry.book === book.descriptor.id && entry.id === id);
+    }
+
+    setTagsForTune(tuneId: string, tuneBookId: string, tags: string[]): void {
+        const bookRef = this.getBookById(tuneBookId);
+        const entry = this.findEntryById(bookRef, tuneId);
+        entry.tags = tags;
     }
 
     matchesEntry(query: TuneQuery, titleNormalized: string, indexEntry: IndexEntry): boolean {

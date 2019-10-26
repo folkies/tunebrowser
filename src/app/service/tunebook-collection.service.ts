@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
+import { TuneBook } from 'abcjs/midi';
 import { Observable, Subject } from 'rxjs';
-import { TuneBookCollection, TuneBookDescriptor } from '../model/tunebook-collection';
+import { TuneBookCollection, TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
 import { GoogleDriveTunebookLoaderService } from './google-drive-tunebook-loader.service';
 import { Loader } from './loader';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
-import { TuneBook } from 'abcjs/midi';
 
 @Injectable()
 export class TuneBookCollectionService {
     private loaders: Loader[];
     private collection: TuneBookCollection = { books: [] };
+    private numLoaded = 0;
 
     private collectionLoadedSource = new Subject<string>();
     collectionLoaded: Observable<string>;
@@ -39,19 +40,88 @@ export class TuneBookCollectionService {
         const ref = new TuneBookReference(new TuneBook(''), descriptor, '');
         this.index.addTuneBook(ref);
 
-        const updated = this.driveLoader.updateTuneBookCollection({ books: driveBooks });
+        const updated = await this.driveLoader.updateTuneBookCollection({ books: driveBooks });
+        this.collectionLoadedSource.next('');
+        return updated;
+    }
+
+    async setTagsForTune(tuneId: string, tuneBookId: string, tags: string[]): Promise<string> {
+        const book = this.collection.books.find(book => book.id === tuneBookId);
+        if (book.tunes === undefined) {
+            book.tunes = [];
+        }
+        let tune = book.tunes.find(tune => tune.id === tuneId);
+        if (tune === undefined) {
+            book.tunes.push({ id: tuneId, tags });
+        } else {
+            tune.tags = tags;
+        }
+        this.index.setTagsForTune(tuneId, tuneBookId, tags);
+        const updated = await this.driveLoader.updateTuneBookCollection(this.collection);
         this.collectionLoadedSource.next('');
         return updated;
     }
 
     private loadCollection(loader: Loader) {
-        loader.loadTuneBookCollection().then(c => this.addBooks(c));
+        loader.loadTuneBookCollection().then(c => this.mergeCollection(c));
     }
 
-    private addBooks(loadedCollection: TuneBookCollection) {
-        this.collection.books.push(...loadedCollection.books);
+    private mergeCollection(loadedCollection: TuneBookCollection) {
         this.collectionLoadedSource.next('');
-        loadedCollection.books.forEach(book => this.loadBook(book));
+        this.numLoaded++;
+        loadedCollection.books.forEach(book => this.mergeBook(book));
+        if (this.numLoaded == this.loaders.length) {
+            this.addTagsToIndex();
+        }
+    }
+
+    private mergeBook(descriptor: TuneBookDescriptor): void {
+        let book = this.collection.books.find(book => book.id === descriptor.id);
+        if (book === undefined) {
+            this.collection.books.push(descriptor);
+        } else if (descriptor.tunes) {
+            if (book.tunes === undefined) {
+                book.tunes = descriptor.tunes;
+            } else {
+                this.mergeTunes(book.tunes, descriptor.tunes);
+            }
+
+        }
+        this.loadBook(descriptor);
+    }
+
+    private mergeTunes(existingTunes: TuneDescriptor[], addedTunes: TuneDescriptor[]) {
+        addedTunes.forEach(addedTune => {
+            const existingTune = existingTunes.find(tune => tune.id === addedTune.id);
+            if (existingTune === null) {
+                existingTunes.push(addedTune);
+            } else {
+                this.mergeTune(existingTune, addedTune);
+            }
+        });
+    }
+
+    private mergeTune(existingTune: TuneDescriptor, addedTune: TuneDescriptor) {
+        if (existingTune.tags === undefined) {
+            existingTune.tags = addedTune.tags;
+        } else if (addedTune.tags) {
+            const tags = new Set(existingTune.tags);
+            addedTune.tags.forEach(tag => tags.add(tag));
+            existingTune.tags = Array.from(tags.keys());
+        }
+    }
+
+    private addTagsToIndex(): void {
+        for (let book of this.collection.books) {
+            if (!book.tunes) {
+                continue;
+            }
+            for (let tune of book.tunes) {
+                if (tune.tags) {
+                    this.index.setTagsForTune(tune.id, book.id, tune.tags);
+                }
+            }
+        }
     }
 
     private async loadBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
