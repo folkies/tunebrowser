@@ -3,6 +3,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneQuery } from '../../model/tune-query';
 import { TuneBookIndex } from '../../service/tunebook-index';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-tune-page',
@@ -19,6 +20,7 @@ export class TunePageComponent implements OnInit {
     constructor(
         private index: TuneBookIndex,
         private route: ActivatedRoute,
+        private snackBar: MatSnackBar,
         private collectionService: TuneBookCollectionService) {
     }
 
@@ -29,9 +31,11 @@ export class TunePageComponent implements OnInit {
         });
     }
 
-    save(): Promise<string> {
-        const tags = this.allTags.split(/\s*,/);
-        return this.collectionService.setTagsForTune(this.ref, this.bookId, tags);
+    async save(): Promise<string> {
+        const tags = this.allTags.split(/\s*,\s*/);
+        const id = await this.collectionService.setTagsForTune(this.ref, this.bookId, tags);
+        this.snackBar.open(`Updated tags on Google Drive`, 'Dismiss', { duration: 3000 });
+        return id;
     }
 
     private consumeRef(map: ParamMap): void {
@@ -47,7 +51,7 @@ export class TunePageComponent implements OnInit {
                 const entry = tunes[0];
                 this.tune = this.index.getAbc(entry);
                 if (entry.tags) { 
-                    this.allTags = entry.tags.join(' ,');
+                    this.allTags = entry.tags.join(', ');
                 }
             }
         }

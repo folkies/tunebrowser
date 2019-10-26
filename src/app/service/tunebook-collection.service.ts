@@ -12,7 +12,7 @@ import { TuneBookLoaderService } from './tunebook-loader.service';
 export class TuneBookCollectionService {
     private loaders: Loader[];
     private collection: TuneBookCollection = { books: [] };
-    private numLoaded = 0;
+    private loadedBookIds: string[] = [];
 
     private collectionLoadedSource = new Subject<string>();
     collectionLoaded: Observable<string>;
@@ -67,12 +67,8 @@ export class TuneBookCollectionService {
     }
 
     private mergeCollection(loadedCollection: TuneBookCollection) {
-        this.collectionLoadedSource.next('');
-        this.numLoaded++;
         loadedCollection.books.forEach(book => this.mergeBook(book));
-        if (this.numLoaded == this.loaders.length) {
-            this.addTagsToIndex();
-        }
+        this.collectionLoadedSource.next('');
     }
 
     private mergeBook(descriptor: TuneBookDescriptor): void {
@@ -85,7 +81,6 @@ export class TuneBookCollectionService {
             } else {
                 this.mergeTunes(book.tunes, descriptor.tunes);
             }
-
         }
         this.loadBook(descriptor);
     }
@@ -125,9 +120,16 @@ export class TuneBookCollectionService {
     }
 
     private async loadBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
+        if (this.loadedBookIds.indexOf(descriptor.id) >= 0) {
+            return;
+        }
         const loader = this.selectLoader(descriptor);
         const ref = await loader.loadTuneBook(descriptor);
+        this.loadedBookIds.push(descriptor.id);
         this.index.addTuneBook(ref);
+        if (this.loadedBookIds.length === this.collection.books.length) {
+            this.addTagsToIndex();
+        }
         return ref;
     }
 

@@ -13,6 +13,9 @@
                 <mat-option *ngFor="let book of books()" [value]="book.descriptor.id">{{book.descriptor.name}}</mat-option>
             </mat-select>
         </mat-form-field>
+        <mat-form-field class="tags">
+            <input matInput name="tags" type="text" [(ngModel)]="tags" placeholder="Comma-separated list of tags">
+        </mat-form-field>
         <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
             color="primary">Search</button>
     </form>

@@ -5,6 +5,7 @@ import { IndexEntry } from '../model/index-entry';
 import { TuneQuery } from '../model/tune-query';
 import { TuneBookReference } from '../model/tunebook-reference';
 import { TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
+import { removeSummaryDuplicates } from '@angular/compiler';
 
 @Injectable()
 export class TuneBookIndex {

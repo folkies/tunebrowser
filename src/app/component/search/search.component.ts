@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
     rawAbc: string;
     query: string;
+    tags: string;
     tunes: IndexEntry[] = [];
     svgMap: Map<string, string> = new Map();
     displayedColumns: string[] = ['title', 'snippet'];
@@ -52,7 +53,8 @@ export class SearchComponent implements OnInit, AfterViewInit {
         if (this.selectedBooks === undefined || this.selectedBooks.length === 0) {
             this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
         }
-        const query = new TuneQuery(this.query, this.selectedBooks);
+        const tags = this.tags.split(/\s*,\s*/);
+        const query = new TuneQuery(this.query, this.selectedBooks, tags);
         this.tunes = this.tuneBookIndex.findTunes(query);
         this.searchCompleted = true;
 
