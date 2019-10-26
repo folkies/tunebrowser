@@ -5,6 +5,8 @@ import { TuneQuery } from '../../model/tune-query';
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
+import { csvToArray } from 'src/app/service/tags';
+
 
 @Component({
     selector: 'app-tune-page',
@@ -38,7 +40,7 @@ export class TunePageComponent implements OnInit {
     }
 
     async save(): Promise<string> {
-        const tags = this.allTags.split(/\s*,\s*/);
+        const tags = csvToArray(this.allTags);
         const id = await this.collectionService.setTagsForTune(this.ref, this.bookId, tags);
         this.snackBar.open(`Updated tags on Google Drive`, 'Dismiss', { duration: 3000 });
         return id;

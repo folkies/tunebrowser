@@ -1,10 +1,10 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { IndexEntry } from '../../model/index-entry';
-import { TuneBookIndex } from '../../service/tunebook-index';
-import { TuneQuery } from '../../model/tune-query';
-import { TuneBookReference } from 'src/app/model/tunebook-reference';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { TuneBookReference } from 'src/app/model/tunebook-reference';
+import { csvToArray } from 'src/app/service/tags';
+import { IndexEntry } from '../../model/index-entry';
+import { TuneQuery } from '../../model/tune-query';
+import { TuneBookIndex } from '../../service/tunebook-index';
 
 @Component({
     selector: 'app-search',
@@ -53,20 +53,13 @@ export class SearchComponent implements OnInit, AfterViewInit {
         if (this.selectedBooks === undefined || this.selectedBooks.length === 0) {
             this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
         }
-        const query = new TuneQuery(this.query, this.selectedBooks, this.getTagList());
+        const query = new TuneQuery(this.query, this.selectedBooks, csvToArray(this.tags));
         this.tunes = this.tuneBookIndex.findTunes(query);
         this.searchCompleted = true;
 
         if (this.uniqueResult()) {
             this.navigateToTune(this.tunes[0]);
         }
-    }
-
-    private getTagList(): string[] {
-        if (!this.tags) {
-            return undefined;
-        }
-        return this.tags.split(/\s*,\s*/).filter(tag => tag.length > 0);
     }
 
     navigateToTune(tune: IndexEntry): void {
