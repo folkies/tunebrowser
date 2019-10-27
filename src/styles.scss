@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-mat-form-field.query, mat-form-field.tunebooks {
+.search-panel mat-form-field, .tags-form mat-form-field {
     width: 15em;
     margin-right: 0.5em;
 }
@@ -44,6 +44,10 @@ mat-sidenav mat-icon {
 
 .tune-link.tune-title {
     min-width: 30px;
+}
+
+.tunebook-list .tunebook-button {
+    width: 40px;
 }
 
 .tunebook-link {

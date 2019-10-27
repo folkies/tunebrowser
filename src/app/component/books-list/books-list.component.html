@@ -1,10 +1,9 @@
 <div>
     <h2 class="mat-h2">Tunebooks</h2>
 
-    <mat-list>
+    <mat-list class="tunebook-list">
         <mat-list-item *ngFor="let book of books">
             <div class="tunebook-button">
-                &nbsp;
                 <button mat-icon-button routerLink="../edit/{{book.descriptor.id}}" [disabled]="!isEditable(book)">
                     <mat-icon  *ngIf="isEditable(book)">edit</mat-icon>
                 </button>
