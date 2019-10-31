@@ -18,7 +18,7 @@ describe('TuneBookIndex', () => {
             id: 'learner',
             name: 'Test Tunes',
             description: 'Test Tunes',
-            storage: 'website',
+            storage: 'assets',
             uri: 'LearnerSession.abc',
             tunes: [
                 {

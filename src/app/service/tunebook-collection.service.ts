@@ -7,6 +7,7 @@ import { GoogleDriveTunebookLoaderService } from './google-drive-tunebook-loader
 import { Loader } from './loader';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
+import { MissingTranslationStrategy } from '@angular/compiler/src/core';
 
 @Injectable()
 export class TuneBookCollectionService {
@@ -62,47 +63,59 @@ export class TuneBookCollectionService {
         return updated;
     }
 
-    private loadCollection(loader: Loader) {
-        loader.loadTuneBookCollection().then(c => this.mergeCollection(c));
-    }
-
-    private mergeCollection(loadedCollection: TuneBookCollection) {
-        loadedCollection.books.forEach(book => this.mergeBook(book));
+    private async loadCollection(loader: Loader) {
+        const c = await loader.loadTuneBookCollection();
+        this.mergeCollections(this.collection, c);
         this.collectionLoadedSource.next('');
     }
 
-    private mergeBook(descriptor: TuneBookDescriptor): void {
-        let book = this.collection.books.find(book => book.id === descriptor.id);
-        if (book === undefined) {
-            this.collection.books.push(descriptor);
-        } else if (descriptor.tunes) {
-            if (book.tunes === undefined) {
-                book.tunes = descriptor.tunes;
-            } else {
-                this.mergeTunes(book.tunes, descriptor.tunes);
-            }
-        }
-        this.loadBook(descriptor);
+    mergeCollections(target: TuneBookCollection, mixin: TuneBookCollection): void {
+        mixin.books.forEach(mixinBook => this.mergeBooks(target.books, mixinBook));
     }
 
-    private mergeTunes(existingTunes: TuneDescriptor[], addedTunes: TuneDescriptor[]) {
-        addedTunes.forEach(addedTune => {
-            const existingTune = existingTunes.find(tune => tune.id === addedTune.id);
-            if (existingTune === null) {
-                existingTunes.push(addedTune);
+    private mergeBooks(targetBooks: TuneBookDescriptor[], mixinBook: TuneBookDescriptor) {
+        let targetBook = targetBooks.find(book => book.id === mixinBook.id);
+        if (targetBook === undefined) {
+            targetBooks.push(mixinBook);
+        } else if (mixinBook.tunes) {
+            if (targetBook.tunes === undefined) {
+                targetBook.tunes = mixinBook.tunes;
             } else {
-                this.mergeTune(existingTune, addedTune);
+                this.mergeTunes(targetBook.tunes, mixinBook.tunes);
+            }
+        }
+    }
+
+    private mergeTunes(targetTunes: TuneDescriptor[], mixinTunes: TuneDescriptor[]) {
+        mixinTunes.forEach(mixinTune => {
+            const targetTune = targetTunes.find(tune => tune.id === mixinTune.id);
+            if (targetTune === null) {
+                targetTunes.push(mixinTune);
+            } else {
+                this.mergeTune(targetTune, mixinTune);
             }
         });
     }
 
-    private mergeTune(existingTune: TuneDescriptor, addedTune: TuneDescriptor) {
-        if (existingTune.tags === undefined) {
-            existingTune.tags = addedTune.tags;
-        } else if (addedTune.tags) {
-            const tags = new Set(existingTune.tags);
-            addedTune.tags.forEach(tag => tags.add(tag));
-            existingTune.tags = Array.from(tags.keys());
+    private mergeTune(targetTune: TuneDescriptor, mixinTune: TuneDescriptor) {
+        if (targetTune.displayId === undefined) {
+            targetTune.displayId = mixinTune.displayId;
+        }
+
+        if (targetTune.key === undefined) {
+            targetTune.key = mixinTune.key;
+        }
+
+        if (targetTune.rhythm === undefined) {
+            targetTune.rhythm = mixinTune.rhythm;
+        }
+
+        if (targetTune.tags === undefined) {
+            targetTune.tags = mixinTune.tags;
+        } else if (mixinTune.tags) {
+            const tags = new Set(targetTune.tags);
+            mixinTune.tags.forEach(tag => tags.add(tag));
+            targetTune.tags = Array.from(tags.keys());
         }
     }
 

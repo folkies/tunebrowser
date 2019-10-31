@@ -11,6 +11,8 @@ export interface TuneBookCollection {
     books: TuneBookDescriptor[];
 }
 
+export type Storage = 'assets' | 'googledrive';
+
 /**
  * Tunebook model.
  */
@@ -35,14 +37,20 @@ export interface TuneBookDescriptor {
      */
     description: string;
 
-    storage: string;
-
-    status?: string;
+    storage: Storage;
 
     tunes?: TuneDescriptor[];
 }
 
+export interface Key {
+    root: string;
+    mode: string;
+}
+
 export interface TuneDescriptor {
     id: string;
+    displayId?: string;
+    rhythm?: string;
+    key?: Key;
     tags?: string[];
 }

@@ -68,6 +68,20 @@ declare module "abcjs/midi" {
         transcription?: string;
     }
 
+    export interface Staff {
+        key: Key;
+        meter: Meter;
+    }
+
+    export interface MultiStaff {
+        staff: Staff;
+    }
+
+    export interface Key {
+        mode: string;
+        root: string;
+    }
+
     export interface Tune {
         formatting: object;
         lines: object[];

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { numberOfTunes, TuneBook, parseOnly, signature } from 'abcjs/midi';
+import { numberOfTunes, TuneBook, parseOnly, signature, MultiStaff } from 'abcjs/midi';
 
 describe('ABCJS', () => {
     const abcTunebook = `X: 20a
@@ -71,6 +71,10 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         expect(tune.version).toBe('1.0.1');
         expect(tune.metaText.url).toBe('http://example.com/tunes/20a');
         expect(tune.metaText.rhythm).toBe('polka');
+        const multiStaff = tune.lines[0] as MultiStaff;
+        const key = multiStaff.staff[0].key;
+        expect(key.root).toBe('A');
+        expect(key.mode).toBe('Dor');
     });
 
     test('should get signature', () => {
@@ -78,7 +82,7 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
     });
 
     test('should read large tunebook', () => {
-        const text = fs.readFileSync('src/assets/tunebook.abc', 'utf8');
+        const text = fs.readFileSync('src/assets/LearnerSession.abc', 'utf8');
         const tunebook = new TuneBook(text);
         const fanny = tunebook.getTuneByTitle('281  Fanny Power');
         expect(fanny).toBeDefined();

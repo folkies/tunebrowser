@@ -3,9 +3,8 @@ import { TuneBookEntry } from 'abcjs/midi';
 import { Observable, Subject } from 'rxjs';
 import { IndexEntry } from '../model/index-entry';
 import { TuneQuery } from '../model/tune-query';
-import { TuneBookReference } from '../model/tunebook-reference';
 import { TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
-import { removeSummaryDuplicates } from '@angular/compiler';
+import { TuneBookReference } from '../model/tunebook-reference';
 
 @Injectable()
 export class TuneBookIndex {
@@ -43,7 +42,7 @@ export class TuneBookIndex {
     private createEntry(tune: TuneBookEntry, tuneBookRef: TuneBookReference): IndexEntry {
         const tuneDescriptor = this.findTuneDescriptor(tune.id, tuneBookRef.descriptor);
         const tags = tuneDescriptor && tuneDescriptor.tags;
-        return new IndexEntry(tune.id, tuneBookRef.descriptor.id, tune.title, this.normalize(tune.title), tags);
+        return new IndexEntry(tune.id, tuneBookRef.descriptor.id, tune.title, this.normalize(tune.title), undefined, undefined, tags);
     }
 
     private findTuneDescriptor(tuneId: string, tuneBookDescriptor: TuneBookDescriptor): TuneDescriptor {

@@ -4,6 +4,9 @@
     "emitDecoratorMetadata": true,
     "outDir": "./out-tsc/spec",
     "types": [
+      "gapi",
+      "gapi.auth2",
+      "gapi.client.drive",
       "jest",
       "node"
     ],
