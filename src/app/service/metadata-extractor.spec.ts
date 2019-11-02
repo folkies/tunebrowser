@@ -1,10 +1,10 @@
-import { Extractor } from './extractor';
+import { MetadataExtractor } from './metadata-extractor';
 import { TuneBookDescriptor, TuneBookCollection } from '../model/tunebook-collection';
 import { TuneBookCollectionService } from './tunebook-collection.service';
 import fs from 'fs';
 
 function mergeMetadata(targetCollection: TuneBookCollection, book: TuneBookDescriptor) {
-        const extractor = new Extractor();
+        const extractor = new MetadataExtractor();
         const abc = fs.readFileSync(`src/assets/${book.uri}`, 'utf8');
         const tunes = extractor.extract(abc);
         const mixin: TuneBookDescriptor = {
@@ -28,8 +28,5 @@ describe('Extractor', () => {
         targetCollection.books.forEach(book => mergeMetadata(targetCollection, book));
 
         fs.writeFileSync('merged-collection.json', JSON.stringify(targetCollection));
-
     });
-
-
 });

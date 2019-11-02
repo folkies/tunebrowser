@@ -1,24 +1,23 @@
-import { MultiStaff, parseOnly, TuneBook, TuneBookEntry } from 'abcjs/midi';
-import { Key, Mode } from '../model/index-entry';
-import { TuneDescriptor  } from '../model/tunebook-collection';
+import { MultiStaff, parseOnly, TuneBook, TuneBookEntry, Key } from 'abcjs/midi';
+import { TuneDescriptor } from '../model/tunebook-collection';
 
 const MODE_MAP = {
-    "": "maj",
-    "m": "min",
-    "maj": "maj",
+    "": "",
+    "m": "m",
+    "maj": "",
     "dor": "dor",
-    "min": "mín",
+    "min": "mix",
     "lyd": "lyd",
     "mix": "mix",
     "phr": "phr",
     "loc": "loc"
 };
 
-export function normalizeMode(mode: string): Mode {
-    return MODE_MAP[mode.toLowerCase()];
+export function normalizeKey(root: string, mode: string): string {
+    return `${root}${MODE_MAP[mode.toLowerCase()]}`;
 }
 
-export class Extractor {
+export class MetadataExtractor {
     extract(tuneBookAbc: string): TuneDescriptor[] {
         const tuneBook = new TuneBook(tuneBookAbc);
         return tuneBook.tunes.map(tune => this.extractMetadata(tune));
@@ -28,7 +27,7 @@ export class Extractor {
         const tune = parseOnly(tuneBookEntry.abc)[0];
         const rhythm = tune.metaText.rhythm && tune.metaText.rhythm.toLowerCase();
         const staff = tune.lines.find(line => line['staff'] !== undefined) as MultiStaff;
-        let key: Key;
+        let key: Key = { root: 'C', mode: 'maj' };
         if (staff === undefined) {
             console.log(`${tuneBookEntry.id} ${tuneBookEntry.title}: ${rhythm} in undefined key`);
         } else {
@@ -38,10 +37,7 @@ export class Extractor {
         return {
             id: tuneBookEntry.id,
             rhythm,
-            key: {
-                root: key.root,
-                mode: normalizeMode(key.mode)
-            }
+            key: normalizeKey(key.root, key.mode)
         }
     }
 }

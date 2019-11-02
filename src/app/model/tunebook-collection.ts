@@ -51,6 +51,6 @@ export interface TuneDescriptor {
     id: string;
     displayId?: string;
     rhythm?: string;
-    key?: Key;
+    key?: string;
     tags?: string[];
 }
