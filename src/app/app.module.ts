@@ -1,4 +1,3 @@
-import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +14,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { AboutComponent } from './component/about/about.component';
 import { AuthenticationComponent } from './component/authentication/authentication.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
@@ -31,7 +31,6 @@ import { GoogleDriveService } from './service/google-drive.service';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { AboutComponent } from './component/about/about.component';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -81,8 +80,7 @@ const appRoutes: Routes = [
         MatSidenavModule,
         MatSnackBarModule,
         MatToolbarModule,
-        RouterModule.forRoot(appRoutes),
-        ScrollingModule
+        RouterModule.forRoot(appRoutes)
     ],
     providers: [
         GoogleDriveService,

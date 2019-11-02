@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { csvToArray } from 'src/app/service/tags';
@@ -73,6 +73,27 @@ export class SearchComponent implements OnInit {
         return this.tuneBookIndex.getBook(entry).descriptor.name;
     }
 
+    getRhythmAndKey(entry: IndexEntry): string {
+        if (entry.rhythm === undefined && entry.key === undefined) {
+            return '';
+        }
+        if (entry.key === undefined) {
+            return entry.rhythm;
+        }
+        if (entry.rhythm === undefined) {
+            return entry.key;
+        }
+        return `${entry.rhythm} in ${entry.key}`;
+    }
+    
+    hasTags(entry: IndexEntry): boolean {
+        return entry.tags && entry.tags.length > 0;
+    }
+ 
+    getTags(entry: IndexEntry): string {
+        return entry.tags.join(', ');
+    }
+ 
     books(): TuneBookReference[] {
         return this.tuneBookIndex.getBooks();
     }
