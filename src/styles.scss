@@ -58,6 +58,10 @@ mat-sidenav mat-icon {
     cursor: pointer;
 }
 
+cdk-virtual-scroll-viewport { 
+    height: 70vh; 
+}
+
 tr.tune-preview {
     height:100px;
     max-height:100px;

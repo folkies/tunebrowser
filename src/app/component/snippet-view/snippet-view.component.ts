@@ -22,6 +22,7 @@ export class SnippetViewComponent implements AfterViewInit, OnChanges {
     }
 
     ngOnChanges() {
+        this.rendered = false;
         this.renderSnippet();
     }
 

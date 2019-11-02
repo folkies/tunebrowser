@@ -1,3 +1,4 @@
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -80,7 +81,8 @@ const appRoutes: Routes = [
         MatSidenavModule,
         MatSnackBarModule,
         MatToolbarModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        ScrollingModule
     ],
     providers: [
         GoogleDriveService,

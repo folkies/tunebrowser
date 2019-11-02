@@ -34,19 +34,21 @@
 
 <div id="overview" *ngIf="multipleResults()">
     <p class="mat-body">{{tunes.length}} tunes</p>
-    <table>
-        <tbody>
-            <tr class="tune-preview" *ngFor="let tune of tunes">
-                <td class="tune-link tune-title">
-                    <div><span class="tune-link mat-body" (click)="navigateToTune(tune)">{{tune.title}}</span></div>
-                    <div class="mat-small">{{getBookName(tune)}}</div>
-                    <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
-                    <div class="mat-small" *ngIf="hasTags(tune)">Tags: {{getTags(tune)}}</div>
-                </td>
-                <td class="tune-link" (click)="navigateToTune(tune)">
-                    <app-snippet-view [tune]="getAbc(tune)"></app-snippet-view>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <cdk-virtual-scroll-viewport [itemSize]="100">
+        <table>
+            <tbody>
+                <tr class="tune-preview" *cdkVirtualFor="let tune of tunes">
+                    <td class="tune-link tune-title">
+                        <div><span class="tune-link mat-body" (click)="navigateToTune(tune)">{{tune.title}}</span></div>
+                        <div class="mat-small">{{getBookName(tune)}}</div>
+                        <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
+                        <div class="mat-small" *ngIf="hasTags(tune)">Tags: {{getTags(tune)}}</div>
+                    </td>
+                    <td class="tune-link" (click)="navigateToTune(tune)">
+                        <app-snippet-view [tune]="getAbc(tune)"></app-snippet-view>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </cdk-virtual-scroll-viewport>
 </div>
