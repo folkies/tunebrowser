@@ -17,13 +17,12 @@ function mergeMetadata(targetCollection: TuneBookCollection, book: TuneBookDescr
         };
         const mixinCollection: TuneBookCollection = { books: [mixin]};
         const service = new TuneBookCollectionService(undefined, undefined, undefined);
-        service.mergeCollections(targetCollection, mixinCollection);
-
+        service.loadAndMergeCollections(targetCollection, mixinCollection);
 }
 
-describe('Extractor', () => {
+describe('MetadataExtractor', () => {
     test('should get key and rhythm', () => {
-        const json = fs.readFileSync('src/assets/tunebook-collection.json', 'utf8');
+        const json = fs.readFileSync('src/assets/tunebooks.json', 'utf8');
         const targetCollection = JSON.parse(json) as TuneBookCollection;
         targetCollection.books.forEach(book => mergeMetadata(targetCollection, book));
 

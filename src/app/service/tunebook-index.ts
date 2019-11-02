@@ -42,7 +42,15 @@ export class TuneBookIndex {
     private createEntry(tune: TuneBookEntry, tuneBookRef: TuneBookReference): IndexEntry {
         const tuneDescriptor = this.findTuneDescriptor(tune.id, tuneBookRef.descriptor);
         const tags = tuneDescriptor && tuneDescriptor.tags;
-        return new IndexEntry(tune.id, tuneBookRef.descriptor.id, tune.title, this.normalize(tune.title), undefined, undefined, tags);
+        const rhythm = tuneDescriptor && tuneDescriptor.rhythm;
+        const key = tuneDescriptor && tuneDescriptor.key;
+        return new IndexEntry(tune.id,
+            tuneBookRef.descriptor.id,
+            tune.title,
+            this.normalize(tune.title),
+            rhythm,
+            key,
+            tags);
     }
 
     private findTuneDescriptor(tuneId: string, tuneBookDescriptor: TuneBookDescriptor): TuneDescriptor {
@@ -51,7 +59,7 @@ export class TuneBookIndex {
         }
 
         return tuneBookDescriptor.tunes.find(tune => tune.id === tuneId);
-    } 
+    }
 
     private normalize(title: string): string {
         return title && title.trim().toLocaleLowerCase();
@@ -83,9 +91,18 @@ export class TuneBookIndex {
             return false;
         }
 
+        if (query.rhythm && indexEntry.rhythm !== query.rhythm) {
+            return false;
+        }
+
+        if (query.key && indexEntry.key !== query.key) {
+            return false;
+        }
+
         if (query.tags && !query.tags.find(tag => indexEntry.hasTag(tag))) {
             return false;
         }
+
         return !query.title || indexEntry.titleNormalized.includes(titleNormalized);
     }
 

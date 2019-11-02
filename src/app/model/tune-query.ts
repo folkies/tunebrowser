@@ -5,12 +5,11 @@ export function titleQuery(title: string): TuneQuery {
 }
 
 export function tagQuery(...tags: string[]) {
-    return new TuneQuery(undefined, undefined, tags);
+    return new TuneQuery(undefined, undefined, undefined, undefined, tags);
 }
 
 export class TuneQuery {
-    constructor(public title: string, public books?: string[], public tags?: string[]) {
-
+    constructor(public title: string, public rhythm?: string, public key?: string, public books?: string[], public tags?: string[]) {
     }
 
     matchesRef(tuneBookRef: TuneBookReference): boolean {
@@ -29,6 +28,5 @@ export class TuneQuery {
 
     private allBooks(): boolean {
         return !this.books || this.books.length === 0;
-    }
-    
+    }   
 }

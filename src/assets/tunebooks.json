@@ -1,0 +1,25 @@
+{
+    "books": [
+        {
+            "id": "learner",
+            "uri": "LearnerSession.abc",
+            "name": "Learner Session",
+            "description": "All tunes from the Hamburg Learner Session",
+            "storage": "assets"
+        },
+        {
+            "id": "oneill1001",
+            "uri": "ONeill1001.abc",
+            "name": "O'Neill 1001",
+            "description": "Francis O'Neill: The Dance Music of Ireland (1907)",
+            "storage": "assets"
+        },
+        { 
+            "id": "oneill1850",
+            "uri": "ONeill1850.abc",
+            "name": "O'Neill 1850",
+            "description": "Francis O'Neill: Music of Ireland (1903)",
+            "storage": "assets"
+        }
+    ]
+}

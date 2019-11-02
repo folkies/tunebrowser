@@ -54,7 +54,7 @@ export class TunePageComponent implements OnInit {
 
     private displayTune(bookId: string, ref: string): void {
         if (ref !== undefined && this.index.isReady()) {
-            const tunes = this.index.findTunes(new TuneQuery(ref, [bookId]));
+            const tunes = this.index.findTunes(new TuneQuery(ref, undefined, undefined, [bookId]));
             if (tunes.length > 0) {
                 const entry = tunes[0];
                 this.tune = this.index.getAbc(entry);

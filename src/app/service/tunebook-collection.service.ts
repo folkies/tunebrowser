@@ -7,7 +7,6 @@ import { GoogleDriveTunebookLoaderService } from './google-drive-tunebook-loader
 import { Loader } from './loader';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookLoaderService } from './tunebook-loader.service';
-import { MissingTranslationStrategy } from '@angular/compiler/src/core';
 
 @Injectable()
 export class TuneBookCollectionService {
@@ -65,24 +64,33 @@ export class TuneBookCollectionService {
 
     private async loadCollection(loader: Loader) {
         const c = await loader.loadTuneBookCollection();
-        this.mergeCollections(this.collection, c);
+        this.loadAndMergeCollections(this.collection, c);
         this.collectionLoadedSource.next('');
+    }
+
+    loadAndMergeCollections(target: TuneBookCollection, mixin: TuneBookCollection): void {
+        mixin.books.forEach(mixinBook => { 
+            const mergedBook = this.mergeBooks(target.books, mixinBook); 
+            this.loadBook(mergedBook);
+        });
     }
 
     mergeCollections(target: TuneBookCollection, mixin: TuneBookCollection): void {
         mixin.books.forEach(mixinBook => this.mergeBooks(target.books, mixinBook));
     }
 
-    private mergeBooks(targetBooks: TuneBookDescriptor[], mixinBook: TuneBookDescriptor) {
+    private mergeBooks(targetBooks: TuneBookDescriptor[], mixinBook: TuneBookDescriptor): TuneBookDescriptor {
         let targetBook = targetBooks.find(book => book.id === mixinBook.id);
         if (targetBook === undefined) {
             targetBooks.push(mixinBook);
+            return mixinBook;
         } else if (mixinBook.tunes) {
             if (targetBook.tunes === undefined) {
                 targetBook.tunes = mixinBook.tunes;
             } else {
                 this.mergeTunes(targetBook.tunes, mixinBook.tunes);
             }
+            return targetBook;
         }
     }
 

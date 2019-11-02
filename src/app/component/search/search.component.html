@@ -7,6 +7,12 @@
         <mat-form-field class="query">
             <input matInput name="query" type="text" [(ngModel)]="query" placeholder="Tune number or part of title">
         </mat-form-field>
+        <mat-form-field class="rhythm">
+            <input matInput name="rhythm" type="text" [(ngModel)]="rhythm" placeholder="Rhythm">
+        </mat-form-field>
+        <mat-form-field class="key">
+            <input matInput name="key" type="text" [(ngModel)]="key" placeholder="Key">
+        </mat-form-field>
         <mat-form-field class="tunebooks">
             <mat-label>Tune books</mat-label>
             <mat-select multiple [(value)]="selectedBooks">

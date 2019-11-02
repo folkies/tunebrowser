@@ -10,14 +10,13 @@ import { TuneBookIndex } from '../../service/tunebook-index';
     selector: 'app-search',
     templateUrl: './search.component.html'
 })
-export class SearchComponent implements OnInit, AfterViewInit {
+export class SearchComponent implements OnInit {
 
-    rawAbc: string;
     query: string;
+    rhythm: string;
+    key: string;
     tags: string;
     tunes: IndexEntry[] = [];
-    svgMap: Map<string, string> = new Map();
-    displayedColumns: string[] = ['title', 'snippet'];
     selectedBooks: string[] = [];
 
     private searchCompleted = false;
@@ -28,9 +27,6 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.selectedBooks = [this.tuneBookIndex.defaultBook];
-    }
-
-    ngAfterViewInit() {
     }
 
     noResults(): boolean {
@@ -53,7 +49,8 @@ export class SearchComponent implements OnInit, AfterViewInit {
         if (this.selectedBooks === undefined || this.selectedBooks.length === 0) {
             this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
         }
-        const query = new TuneQuery(this.query, this.selectedBooks, csvToArray(this.tags));
+        const rhythm = this.rhythm && this.rhythm.toLowerCase();
+        const query = new TuneQuery(this.query, rhythm, this.key, this.selectedBooks, csvToArray(this.tags));
         this.tunes = this.tuneBookIndex.findTunes(query);
         this.searchCompleted = true;
 
