@@ -16,7 +16,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awesome required by abcjs MIDI player -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        (function(){
+          var redirect = sessionStorage.redirect;
+          delete sessionStorage.redirect;
+          if (redirect && redirect != location.href) {
+            history.replaceState(null, null, redirect);
+          }
+        })();
+      </script>
+      <script src="https://apis.google.com/js/api.js"></script>
 </head>
 
 <body>
