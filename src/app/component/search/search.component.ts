@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
     tunes: IndexEntry[] = [];
     selectedBooks: string[] = [];
 
-    private searchCompleted = false;
+    searchCompleted = false;
 
     constructor(private tuneBookIndex: TuneBookIndex, private router: Router) {
 

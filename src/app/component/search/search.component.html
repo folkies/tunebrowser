@@ -1,31 +1,34 @@
-<div>
-    <h2 class="mat-h2">Find tunes</h2>
-</div>
-
 <div class="search-panel">
-    <form>
-        <mat-form-field class="query">
-            <input matInput name="query" type="text" [(ngModel)]="query" placeholder="Tune number or part of title">
-        </mat-form-field>
-        <mat-form-field class="rhythm">
-            <input matInput name="rhythm" type="text" [(ngModel)]="rhythm" placeholder="Rhythm">
-        </mat-form-field>
-        <mat-form-field class="key">
-            <input matInput name="key" type="text" [(ngModel)]="key" placeholder="Key">
-        </mat-form-field>
-        <mat-form-field class="tunebooks">
-            <mat-label>Tune books</mat-label>
-            <mat-select multiple [(value)]="selectedBooks">
-                <mat-option *ngFor="let book of books()" [value]="book.descriptor.id">{{book.descriptor.name}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-form-field class="tags">
-            <input matInput name="tags" type="text" [(ngModel)]="tags" placeholder="Tags">
-        </mat-form-field>
-        <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
-            color="primary">Search</button>
-    </form>
+    <mat-expansion-panel [expanded]="!searchCompleted">
+        <mat-expansion-panel-header>
+            <mat-panel-title>Find tunes</mat-panel-title>
+        </mat-expansion-panel-header>
+        <form>
+            <mat-form-field class="query">
+                <input matInput name="query" type="text" [(ngModel)]="query" placeholder="Tune number or part of title">
+            </mat-form-field>
+            <mat-form-field class="rhythm">
+                <input matInput name="rhythm" type="text" [(ngModel)]="rhythm" placeholder="Rhythm">
+            </mat-form-field>
+            <mat-form-field class="key">
+                <input matInput name="key" type="text" [(ngModel)]="key" placeholder="Key">
+            </mat-form-field>
+            <mat-form-field class="tunebooks">
+                <mat-label>Tune books</mat-label>
+                <mat-select multiple [(value)]="selectedBooks">
+                    <mat-option *ngFor="let book of books()" [value]="book.descriptor.id">{{book.descriptor.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="tags">
+                <input matInput name="tags" type="text" [(ngModel)]="tags" placeholder="Tags">
+            </mat-form-field>
+        </form>
+        <mat-action-row>
+            <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
+                color="primary">Search</button>
+        </mat-action-row>
+    </mat-expansion-panel>
 </div>
 
 <div id="noMatches" *ngIf="noResults()">
