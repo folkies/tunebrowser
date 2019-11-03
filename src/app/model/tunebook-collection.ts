@@ -42,11 +42,6 @@ export interface TuneBookDescriptor {
     tunes?: TuneDescriptor[];
 }
 
-export interface Key {
-    root: string;
-    mode: string;
-}
-
 export interface TuneDescriptor {
     id: string;
     displayId?: string;
