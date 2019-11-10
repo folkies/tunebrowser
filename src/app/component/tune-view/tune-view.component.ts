@@ -25,7 +25,9 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
 
     private renderNotation(): void {
         if (this.div !== undefined && this.tune.length > 0) {
-            abcjs.renderAbc(this.div.nativeElement, this.tune,
+            abcjs.renderAbc(
+                this.div.nativeElement, 
+                this.includeNumberInTitle(this.tune),
                 {
                     paddingleft: 0,
                     paddingright: 0,
@@ -35,5 +37,15 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
                     responsive: 'resize'
                 });
         }
+    }
+
+    private includeNumberInTitle(abc: string): string {
+        const match = abc.match(/^T:(\s*)(\d+[a-z]?\s*)/m);
+        if (match) {
+            return abc;
+        }
+        const idMatch = abc.match(/^X:(\s*)(\w+)/);
+        const id = idMatch[2];
+        return abc.replace(/^T:/m, `T: ${id} `);
     }
 }

@@ -25,6 +25,10 @@ export class TunesListComponent {
         return this.index.getBookById(this.bookId).descriptor.name;
     }
 
+    titleWithoutNumber(entry: TuneBookEntry): string {
+        return entry.title.replace(/^\d+[a-z]?/, '');
+    }
+
     private onReady(event?: string) {
         this.entries = this.index.findAllTunesInBook(this.bookId);
     }
