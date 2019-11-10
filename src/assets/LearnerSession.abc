@@ -3786,3 +3786,35 @@ M:5/8
 "Em"e>fg "D"fd|"Em"e>fg "D"fd|f/g/f/e/d "Am"cB|"G"d>cB "Am"cg|
 M:2/4
 "Am"de cA|"G"B/c/B/A/ Gd|1"Am"BA A2:|2BA e/d/c/B/||
+
+X: 283
+T: 283  Dennis Doody's
+M:2/4
+L:1/16
+D:Donal Lunny - Donal Lunny
+R:polka
+K:Edor
+"Em" G2E2 E2D2 |  B,2E2 E2G2 | "D" FGAF D3E | F2G2 A2BA |
+"Em" G2E2 E2D2 | B,2E2 E2F2 | "G" G2A2 B3A | "D" G2F2 d4 :|
+"Em" B2e2 efed | B2e2 e2d2 | "Bm" Bcd2 e2f2 | "G" g4 e2f2 |
+"G"g4 "D"f2gf| "Em"e2B2 B2A2 | B2E2 E3F | "G" G2A2 B2A2 :|
+
+X: 284
+T: 284  The Dingle Regatta
+M: 12/8
+L: 1/8
+R: slide
+K: G
+|:"G" d^cd e2d BAB d2B| "D"A3 AGA "G"B2A G2B|d^cd e2d BAB d2B|"D"A3 B2A "G"G3 G2B:|
+|:"D"d3 def "G"g3 gfg|"D"a3 aga "G"b2ag2e|"D"d3 def "G"g3 gfg|"D"a2gf2e def "G"g3:|
+|:"G"gag dgd BdB G3|"D"FGA DEF "G"GAB d2e|~g3 ~d3 ~B3 ~G3|"D"FGA DEF "G"G6:|
+
+X: 285
+T: 285  Lochaber Badger
+R: reel
+C: Fred Morrison
+M: 4/4
+L: 1/8
+K: Emin
+|:"Em"B2AG AG"C"E2- | ~E2DE GD"Bm7"EG | B2AG AG"Em"E2 | ED"Bm7"GD "Em"E4 :|
+|:"Em"~E2DE GE"Am7"A2- | ~A2AG Ad"Bm7"B2- | ~B2AG AG"Em"E2 | ED"Bm7"GD "Em"E4 :|
