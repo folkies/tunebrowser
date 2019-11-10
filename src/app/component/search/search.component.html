@@ -23,11 +23,11 @@
             <mat-form-field class="tags">
                 <input matInput name="tags" type="text" [(ngModel)]="tags" placeholder="Tags">
             </mat-form-field>
+            <mat-action-row>
+                <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
+                    color="primary">Search</button>
+            </mat-action-row>
         </form>
-        <mat-action-row>
-            <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
-                color="primary">Search</button>
-        </mat-action-row>
     </mat-expansion-panel>
 </div>
 
