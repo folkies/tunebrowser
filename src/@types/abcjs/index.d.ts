@@ -96,6 +96,7 @@ declare module "abcjs/midi" {
         getMeter(): Meter;
         getMeterFraction(): Fraction;
         getPickupLength(): number;
+        getKeySignature(): Key;
         millisecondsPerMeasure(bpmOverride?: number): number;
     }
 

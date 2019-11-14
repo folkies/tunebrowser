@@ -25,15 +25,8 @@ export class MetadataExtractor {
 
     extractMetadata(tuneBookEntry: TuneBookEntry): TuneDescriptor {
         const tune = parseOnly(tuneBookEntry.abc)[0];
+        const key = tune.getKeySignature();
         const rhythm = tune.metaText.rhythm && tune.metaText.rhythm.toLowerCase();
-        const staff = tune.lines.find(line => line['staff'] !== undefined) as MultiStaff;
-        let key: Key = { root: 'C', mode: 'maj' };
-        if (staff === undefined) {
-            console.log(`${tuneBookEntry.id} ${tuneBookEntry.title}: ${rhythm} in undefined key`);
-        } else {
-            key = staff.staff[0].key;
-            console.log(`${tuneBookEntry.id} ${tuneBookEntry.title}: ${rhythm} in ${key.root}${key.mode}`);
-        }
         return {
             id: tuneBookEntry.id,
             rhythm,

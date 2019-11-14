@@ -23,7 +23,7 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
-    "abcjs": "^5.8.1",
+    "abcjs": "^5.10.2",
     "file-saver": "^2.0.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",

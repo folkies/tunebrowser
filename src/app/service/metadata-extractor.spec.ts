@@ -17,7 +17,7 @@ function mergeMetadata(targetCollection: TuneBookCollection, book: TuneBookDescr
         };
         const mixinCollection: TuneBookCollection = { books: [mixin]};
         const service = new TuneBookCollectionService(undefined, undefined, undefined);
-        service.loadAndMergeCollections(targetCollection, mixinCollection);
+        service.mergeCollections(targetCollection, mixinCollection);
 }
 
 describe('MetadataExtractor', () => {
