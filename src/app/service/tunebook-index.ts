@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TuneBookEntry } from 'abcjs/midi';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { IndexEntry } from '../model/index-entry';
 import { TuneQuery } from '../model/tune-query';
 import { TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
@@ -12,13 +12,19 @@ export class TuneBookIndex {
     private entries: IndexEntry[] = [];
 
     private tuneBookReadySource = new Subject<string>();
+    private allReadySource = new BehaviorSubject<boolean>(false);
 
     tuneBookReady: Observable<string> = this.tuneBookReadySource.asObservable();
+    allReady: Observable<boolean> = this.allReadySource.asObservable();
 
     readonly defaultBook = 'learner';
 
     isReady(): boolean {
         return this.entries.length > 0;
+    }
+
+    fireAllReady(): void {
+        this.allReadySource.next(true);
     }
 
     addTuneBook(tuneBookRef: TuneBookReference) {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { csvToArray } from 'src/app/service/tags';
 import { IndexEntry } from '../../model/index-entry';
@@ -21,12 +21,38 @@ export class SearchComponent implements OnInit {
 
     searchCompleted = false;
 
-    constructor(private tuneBookIndex: TuneBookIndex, private router: Router) {
+    private indexReady = false;
+    private queryParams: ParamMap;
 
+    constructor(
+        private tuneBookIndex: TuneBookIndex,
+        private route: ActivatedRoute,         
+        private router: Router) {
     }
 
     ngOnInit() {
         this.selectedBooks = [this.tuneBookIndex.defaultBook];
+        this.route.queryParamMap.subscribe(map => this.consumeParameters(map));
+        this.tuneBookIndex.allReady.subscribe(ready => {
+            this.indexReady = ready;
+            this.extractParamsAndRunQuery();
+        });
+    }
+
+    private extractParamsAndRunQuery() {
+        if (this.indexReady && this.queryParams.keys.length > 0) {
+            this.query = this.queryParams.get('q');
+            this.key = this.queryParams.get('key');
+            this.rhythm = this.queryParams.get('rhythm');
+            this.selectedBooks = this.queryParams.getAll('book');
+            this.tags = this.queryParams.getAll('tag').join(', ');
+            this.runQuery();
+        }
+    }
+
+    private consumeParameters(params: ParamMap): void {
+        this.queryParams = params;
+        this.extractParamsAndRunQuery();
     }
 
     noResults(): boolean {
@@ -46,6 +72,16 @@ export class SearchComponent implements OnInit {
     }
 
     findTunes(): void {
+        this.router.navigate(['/search'], { queryParams: {
+            q: this.query,
+            rhythm: this.rhythm,
+            key: this.key,
+            book: this.selectedBooks,
+            tag: csvToArray(this.tags)
+        }});
+    }
+
+    private runQuery() {
         if (this.selectedBooks === undefined || this.selectedBooks.length === 0) {
             this.selectedBooks = [this.tuneBookIndex.getBooks()[0].descriptor.id];
         }

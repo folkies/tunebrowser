@@ -1,4 +1,4 @@
-import { MultiStaff, parseOnly, TuneBook, TuneBookEntry, Key } from 'abcjs/midi';
+import { parseOnly, TuneBook, TuneBookEntry } from 'abcjs/midi';
 import { TuneDescriptor } from '../model/tunebook-collection';
 
 const MODE_MAP = {

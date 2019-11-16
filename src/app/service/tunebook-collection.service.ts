@@ -138,6 +138,7 @@ export class TuneBookCollectionService {
                 }
             }
         }
+        this.index.fireAllReady();
     }
 
     private async loadBook(descriptor: TuneBookDescriptor): Promise<TuneBookReference> {
