@@ -7,11 +7,23 @@ import abcjs from 'abcjs/midi';
 })
 export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
-    @Input()
-    tune = '';
+    private bpm = 100;
 
     @ViewChild('midiplayer', { static: false })
     div: ElementRef;
+
+    @Input()
+    tune = '';
+
+    @Input()
+    set tempo(tempo: number) {
+        this.bpm = tempo;
+        this.renderMidiPlayer();
+    }
+
+    get tempo(): number {
+        return this.bpm;
+    }
 
     constructor() { }
 
@@ -26,7 +38,9 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     private renderMidiPlayer(): void {
         if (this.div !== undefined && this.tune.length > 0) {
             abcjs.renderMidi(this.div.nativeElement, this.tune, {
-                chordsOff: true, program: this.instrumentByName('flute')
+                chordsOff: true, 
+                program: this.instrumentByName('flute'),
+                qpm: this.tempo
             });
         }
     }

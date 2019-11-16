@@ -77,8 +77,9 @@ app-snippet-view div {
 }
 
 .abcjs-inline-midi {
-    max-width: 1000px;
+    width: 780px;
     margin-bottom: 1em;
+    display: inline-flex;
 }
 
 div.tunebook-item {
@@ -107,10 +108,26 @@ div.tune-view {
     max-width: 1000px;
 }
 
+div.player-controls {
+    display: inline;
+}
+
+.player-controls .mat-slider-horizontal {
+    width: 140px;
+}
+
 app-tune-player {
     margin-bottom: 1em;
 }
 
 div.tunebook-button {
     width: 48px;
+}
+
+div.midi-player {
+    display: inline;
+}
+
+.tempo-slider {
+    margin-left: 2em;
 }
