@@ -1,9 +1,11 @@
 <div class="player-controls">
-    <app-tune-player #player [tune]="tune"></app-tune-player>
-    <span class="tempo-slider">
+    <div class="player">
+        <app-tune-player #player [tune]="tune"></app-tune-player>
+    </div>
+    <div class="tempo-slider">
         <mat-label class="mat-body">Tempo</mat-label>
         <mat-slider thumbLabel [(ngModel)]="player.tempo" [min]="50" [max]="360"></mat-slider>
-    </span>
+    </div>
 </div>
 <app-tune-view [tune]="tune"></app-tune-view>
 
