@@ -1,7 +1,10 @@
 name: Release
 
-on: [create]
-
+on:
+  push:
+    tags:
+    - '*'
+    
 jobs:
   build:
 
