@@ -31,14 +31,14 @@ describe('TuneBookBuilder', () => {
         expect(builder.referenceCompare('12b', '12a')).toBeGreaterThan(0);
     });
 
-    test('should build tunebook from single files', () => {
+    test.skip('should build tunebook from single files', () => {
         const files = fs.readdirSync(singleFileDir);
         files.forEach(f => builder.processSingleFile(`${singleFileDir}/${f}`));
 
         fs.writeFileSync('bookFromSingleFiles.abc', builder.buildSortedBook());
     });
 
-    test('should build tunebook from books', () => {
+    test.skip('should build tunebook from books', () => {
         const files = fs.readdirSync(bookDir);
         files.forEach(f => builder.processBookFile(`${bookDir}/${f}`));
 
