@@ -3818,3 +3818,27 @@ L: 1/8
 K: Emin
 |:"Em"B2AG AG"C"E2- | ~E2DE GD"Bm7"EG | B2AG AG"Em"E2 | ED"Bm7"GD "Em"E4 :|
 |:"Em"~E2DE GE"Am7"A2- | ~A2AG Ad"Bm7"B2- | ~B2AG AG"Em"E2 | ED"Bm7"GD "Em"E4 :|
+
+X: 286
+T: 286  Josefin's
+M: 3/4
+L: 1/8
+C: Roger Tallroth (Väsen)
+R: waltz
+K: Gmaj
+"G"D2G2A2|B2 d3 c|B2A2G2|D4 E2|"C" C3CC2|E2G2F2|E3FE2|"D"D6|
+"G"D2G2A2|B2 d3 c|B2A2G2|D4 E2|"C"C4 C2| E2F2G2|1:("D"A6|A6):||2:("D"A6|A2)B2c2||
+|:"G"d2B2d2|g4f2|"C"e6|"G"d6|"C"c2e2d2|c2B2A2|"G"B3c B2|"D"A2B2c2|
+"G"d2B2d2|g4f2|"C"e6|"G"d6|"C"c2e2d2|c2B2A2|"G"B3c B2|"D"A2B2c2|
+"Em"B2A2G2|"D"F4G2|"C"G6|C2D2C2|"G"B,2D2G2|"D"F2E2F2|"G"G6:|
+
+X: 287
+T: 287  Marino Waltz
+R: waltz
+M: 3/4
+L: 1/8
+K: Gmaj
+d e>f|"G"g2d3B | "Bm"F4B2 | "C"E4c2 | "D"D6 | "C"C2D2E2 | "D"F2D3A | "G"G2D2B2 | "D"A3 d e>f|
+"G"g2d3B | "D"F4f2 | "C"e2d3c | E4e2 | "D"d2c2A2 |F4B2 | "G"G6 |1 G6 :|2 G4D2 ||
+"D"D2E2F2 | "G"G2A2B2 | "Bm"B6 | "D"F6 | "C"E6 | c4E2 | G6 | "D"F6 |
+"C"C2D2E2 | "D"F2D2A2 | "G"G2D2d2 | "C"e4d2 | "D7"c2A2F2 | "D"D4B2 | "G"G6 | G6 :|
