@@ -1,6 +1,20 @@
 import fs from 'fs';
 import { numberOfTunes, TuneBook, parseOnly, signature, MultiStaff } from 'abcjs/midi';
 
+function includeNumberInTitle(abc: string): string {
+    const match = abc.match(/^T:(\s*)(\d+[a-z]?\s*)/m);
+    if (match) {
+        return abc;
+    }
+    const idMatch = abc.match(/^X:(\s*)(\w+)/);
+    const id = idMatch[2];
+    const titleMatch = abc.match(/^T:(\s*)(.+)(, The)$/m);
+    const title = titleMatch[2];
+    const article = titleMatch[3] ? 'The ' : '';
+    return abc.replace(titleMatch[0], `T: ${id} ${article}${title}`);
+}
+
+
 describe('ABCJS', () => {
     const abcTunebook = `X: 20a
 T: The Tolka
@@ -87,5 +101,15 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         const fanny = tunebook.getTuneByTitle('281  Fanny Power');
         expect(fanny).toBeDefined();
         expect(fanny.id).toBe('281');
+    });
+
+
+    test('should include number in title', () => {
+        const abc = `X:33
+T:Humours Of Clonmult, The
+T:Secondary Title
+        `;
+        const replaced = includeNumberInTitle(abc);
+        expect(replaced).toContain('33 The Humours Of Clonmult');
     });
 });
