@@ -12,7 +12,7 @@ function mergeMetadata(targetCollection: TuneBookCollection, book: TuneBookDescr
             description: '',
             name: '',
             storage: 'assets',
-            tunes: tunes,
+            tunes,
             uri: ''
         };
         const mixinCollection: TuneBookCollection = { books: [mixin]};

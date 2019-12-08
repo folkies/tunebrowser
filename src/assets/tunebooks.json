@@ -8,6 +8,13 @@
             "storage": "assets"
         },
         {
+            "id": "rover",
+            "uri": "Rover.abc",
+            "name": "Rover Session",
+            "description": "Some tunes played at the Hamburg Irish Rover Session on Sundays",
+            "storage": "assets"
+        },
+        {
             "id": "oneill1001",
             "uri": "ONeill1001.abc",
             "name": "O'Neill 1001",
