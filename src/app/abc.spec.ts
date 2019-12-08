@@ -8,7 +8,7 @@ function includeNumberInTitle(abc: string): string {
     }
     const idMatch = abc.match(/^X:(\s*)(\w+)/);
     const id = idMatch[2];
-    const titleMatch = abc.match(/^T:(\s*)(.+)(, The)$/m);
+    const titleMatch = abc.match(/^T:(\s*)(.+?)(, The)?$/m);
     const title = titleMatch[2];
     const article = titleMatch[3] ? 'The ' : '';
     return abc.replace(titleMatch[0], `T: ${id} ${article}${title}`);

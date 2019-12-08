@@ -26,7 +26,7 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
     private renderNotation(): void {
         if (this.div !== undefined && this.tune.length > 0) {
             abcjs.renderAbc(
-                this.div.nativeElement, 
+                this.div.nativeElement,
                 this.includeNumberInTitle(this.tune),
                 {
                     paddingleft: 0,
@@ -46,7 +46,7 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
         }
         const idMatch = abc.match(/^X:(\s*)(\w+)/);
         const id = idMatch[2];
-        const titleMatch = abc.match(/^T:(\s*)(.+)(, The)$/m);
+        const titleMatch = abc.match(/^T:(\s*)(.+?)(, The)?$/m);
         const title = titleMatch[2];
         const article = titleMatch[3] ? 'The ' : '';
         return abc.replace(titleMatch[0], `T: ${id} ${article}${title}`);

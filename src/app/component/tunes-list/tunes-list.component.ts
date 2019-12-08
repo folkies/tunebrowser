@@ -26,7 +26,12 @@ export class TunesListComponent {
     }
 
     titleWithoutNumber(entry: TuneBookEntry): string {
-        return entry.title.replace(/^\d+[a-z]?/, '');
+         let title = entry.title.replace(/^\d+[a-z]?/, '');
+         if (title.endsWith(', The')) {
+             title = title.replace(/, The$/, '');
+             title = 'The ' + title;
+         }
+         return title;
     }
 
     private onReady(event?: string) {
