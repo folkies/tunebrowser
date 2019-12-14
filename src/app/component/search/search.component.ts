@@ -5,10 +5,32 @@ import { csvToArray } from 'src/app/service/tags';
 import { IndexEntry } from '../../model/index-entry';
 import { TuneQuery } from '../../model/tune-query';
 import { TuneBookIndex } from '../../service/tunebook-index';
+import { FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
+import { Subject } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
+
+export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
+
+    private contentScrolledSource = new Subject<string>();
+
+    constructor() {
+        super(100, 400, 1000);
+        this.contentScrolledSource.asObservable().pipe(debounceTime(100)).subscribe(() => {
+            super.onContentScrolled();
+        });
+    }
+
+    onContentScrolled(): void {
+        this.contentScrolledSource.next('');
+    }
+}
+
+
 
 @Component({
     selector: 'app-search',
-    templateUrl: './search.component.html'
+    templateUrl: './search.component.html',
+    providers: [{provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy}]
 })
 export class SearchComponent implements OnInit {
 
@@ -26,7 +48,7 @@ export class SearchComponent implements OnInit {
 
     constructor(
         private tuneBookIndex: TuneBookIndex,
-        private route: ActivatedRoute,         
+        private route: ActivatedRoute,
         private router: Router) {
     }
 
@@ -72,13 +94,15 @@ export class SearchComponent implements OnInit {
     }
 
     findTunes(): void {
-        this.router.navigate(['/search'], { queryParams: {
-            q: this.query,
-            rhythm: this.rhythm,
-            key: this.key,
-            book: this.selectedBooks,
-            tag: csvToArray(this.tags)
-        }});
+        this.router.navigate(['/search'], {
+            queryParams: {
+                q: this.query,
+                rhythm: this.rhythm,
+                key: this.key,
+                book: this.selectedBooks,
+                tag: csvToArray(this.tags)
+            }
+        });
     }
 
     private runQuery() {
@@ -121,15 +145,15 @@ export class SearchComponent implements OnInit {
         }
         return `${entry.rhythm} in ${entry.key}`;
     }
-    
+
     hasTags(entry: IndexEntry): boolean {
         return entry.tags && entry.tags.length > 0;
     }
- 
+
     getTags(entry: IndexEntry): string {
         return entry.tags.join(', ');
     }
- 
+
     books(): TuneBookReference[] {
         return this.tuneBookIndex.getBooks();
     }

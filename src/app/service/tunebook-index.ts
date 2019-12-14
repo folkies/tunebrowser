@@ -75,7 +75,7 @@ export class TuneBookIndex {
         const trimmed = tuneQuery.title && tuneQuery.title.trim();
         if (this.startsWithDigit(trimmed)) {
             const books = Array.from(this.idToBookMap.values()).filter(book => tuneQuery.matchesRef(book));
-            return books.map(book => this.findEntryById(book, trimmed)).filter(entry => entry !== undefined)
+            return books.map(book => this.findEntryById(book, trimmed)).filter(entry => entry !== undefined);
         } else {
             const normalized = this.normalize(trimmed);
             return this.entries.filter(entry => this.matchesEntry(tuneQuery, normalized, entry));
