@@ -15,7 +15,7 @@ export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy 
 
     constructor() {
         super(100, 400, 1000);
-        this.contentScrolledSource.asObservable().pipe(debounceTime(100)).subscribe(() => {
+        this.contentScrolledSource.asObservable().pipe(debounceTime(200)).subscribe(() => {
             super.onContentScrolled();
         });
     }

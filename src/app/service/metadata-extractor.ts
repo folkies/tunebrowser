@@ -34,3 +34,31 @@ export class MetadataExtractor {
         }
     }
 }
+
+/**
+ * Extracts a snippet of the first two or three bars, including only a minimum subset of headers.
+ * We include everything up to the third bar line, which covers at least two bars and and optional upbeat.
+ * @param abc complete tune
+ * @returns snippet (incipit)
+ */
+export function extractSnippet(abc: string): string {
+    const lines = abc.split('\n');
+    const filteredLines = [];
+    const bars = [];
+    for (const line of lines) {
+        // headers
+        if (/^[A-Za-z]:/.test(line)) {
+            // only keep headers absolutely required
+            if (/^[XMLK]:/.test(line)) {
+                filteredLines.push(line);
+            }
+        } else {
+            bars.push(...line.split('|'));
+            if (bars.length > 2) {
+                filteredLines.push(bars.slice(0, 3).join('|'));
+                break;
+            }
+        }
+    }
+    return filteredLines.join('\n');
+}
