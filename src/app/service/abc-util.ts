@@ -13,25 +13,39 @@ const MODE_MAP = {
     "loc": "loc"
 };
 
+/**
+ * Normalizes a key representation, e.g. Gmaj -> G.
+ * @param root root note
+ * @param mode mode name
+ * @returns normalized key
+ */
 export function normalizeKey(root: string, mode: string): string {
     return `${root}${MODE_MAP[mode.toLowerCase()]}`;
 }
 
-export class MetadataExtractor {
-    extract(tuneBookAbc: string): TuneDescriptor[] {
-        const tuneBook = new TuneBook(tuneBookAbc);
-        return tuneBook.tunes.map(tune => this.extractMetadata(tune));
-    }
+/**
+ * Extracts metadata for all tunes from a tunebook.
+ * @param tuneBookAbc tunebook as ABC string
+ * @returns array of metadata (id, rhythm and normalized key)
+ */
+export function extractAllMetadata(tuneBookAbc: string): TuneDescriptor[] {
+    const tuneBook = new TuneBook(tuneBookAbc);
+    return tuneBook.tunes.map(tune => this.extractMetadata(tune));
+}
 
-    extractMetadata(tuneBookEntry: TuneBookEntry): TuneDescriptor {
-        const tune = parseOnly(tuneBookEntry.abc)[0];
-        const key = tune.getKeySignature();
-        const rhythm = tune.metaText.rhythm && tune.metaText.rhythm.toLowerCase();
-        return {
-            id: tuneBookEntry.id,
-            rhythm,
-            key: normalizeKey(key.root, key.mode)
-        }
+/**
+ * Extracts metadata from the given tune.
+ * @param tuneBookAbc tune as ABC string
+ * @returns metadata (id, rhythm and normalized key)
+ */
+export function extractMetadata(tuneBookEntry: TuneBookEntry): TuneDescriptor {
+    const tune = parseOnly(tuneBookEntry.abc)[0];
+    const key = tune.getKeySignature();
+    const rhythm = tune.metaText.rhythm && tune.metaText.rhythm.toLowerCase();
+    return {
+        id: tuneBookEntry.id,
+        rhythm,
+        key: normalizeKey(key.root, key.mode)
     }
 }
 
