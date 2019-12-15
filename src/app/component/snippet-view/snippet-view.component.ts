@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 import abcjs from 'abcjs/midi';
-import { extractSnippet } from 'src/app/service/metadata-extractor';
+import { extractSnippet } from 'src/app/service/abc-util';
 
 @Component({
     selector: 'app-snippet-view',
