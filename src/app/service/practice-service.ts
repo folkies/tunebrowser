@@ -1,20 +1,8 @@
 import { Injectable } from '@angular/core';
 import { addDays, differenceInDays } from 'date-fns';
+import { RepertoireItem, TuneReference, Repertoire } from './repertoire'; 
 
-export interface TuneReference {
-    bookId: string;
-    tuneId: string;
-}
-
-export interface Repertoire {
-    id: string;
-    instrument: string;
-    items: RepertoireItem[];
-    maxAge: number;
-    numTunesPerSession: number;
-}
-
-export class RepertoireItem {
+export class RepertoireItemImpl implements RepertoireItem {
     private practiceHistory: Date[] = [];
     due?: Date;
 

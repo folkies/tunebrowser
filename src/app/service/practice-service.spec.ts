@@ -1,11 +1,12 @@
 import { addDays } from 'date-fns';
 import fs from 'fs';
-import { PracticeService, Repertoire, RepertoireItem, TuneReference } from './practice-service';
+import { PracticeService, RepertoireItemImpl } from './practice-service';
+import { Repertoire, TuneReference } from './repertoire';
 
 
 function addTune(repertoire: Repertoire, name: string, added: string, practiced?: string) {
     const ref: TuneReference = { bookId: 'learner', tuneId: name };
-    const item = new RepertoireItem(ref, new Date(added));
+    const item = new RepertoireItemImpl(ref, new Date(added));
     if (practiced) {
         item.practicedOn(new Date(practiced));
     }
