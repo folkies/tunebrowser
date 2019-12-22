@@ -34,6 +34,9 @@ import { GoogleDriveService } from './service/google-drive.service';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { PracticeService } from './service/practice-service';
+import { RepertoireRepository } from './service/repertoire-repository';
+import { PracticeComponent } from './component/practice/practice.component';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -43,6 +46,7 @@ const appRoutes: Routes = [
     { path: 'book/:id', component: TunesListComponent },
     { path: 'login', component: AuthenticationComponent },
     { path: 'logout', component: AuthenticationComponent },
+    { path: 'practice', component: PracticeComponent },
     { path: 'search', component: SearchComponent },
     { path: 'tune/:bookId/:ref', component: TunePageComponent },
     {
@@ -60,12 +64,13 @@ const appRoutes: Routes = [
         BooksListComponent,
         CaretTrackerDirective,
         CreateBookComponent,
-        TunesListComponent,
+        PracticeComponent,
         SearchComponent,
         TuneEditorComponent,
         TunePageComponent,
         TunePlayerComponent,
         TuneViewComponent,
+        TunesListComponent,
         SnippetViewComponent,
         BooksListComponent
     ],
@@ -91,6 +96,8 @@ const appRoutes: Routes = [
     providers: [
         GoogleDriveService,
         GoogleDriveTunebookLoaderService,
+        PracticeService,
+        RepertoireRepository,
         TuneBookCollectionService,
         TuneBookIndex,
         TuneBookLoaderService

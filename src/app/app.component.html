@@ -7,6 +7,9 @@
             <a mat-list-item routerLink="/books" (click)="snav.close()">
                 <mat-icon>list</mat-icon> <span class="nav-caption">Browse</span>
             </a>
+            <a mat-list-item routerLink="/practice" (click)="snav.close()" *ngIf="signedIn">
+                <mat-icon>music_note</mat-icon> <span class="nav-caption">Practice</span>
+            </a>
             <a mat-list-item routerLink="/login" (click)="snav.close()" *ngIf="!signedIn">
                 <mat-icon>exit_to_app</mat-icon> <span class="nav-caption">Log in</span>
             </a>

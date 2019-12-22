@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { addDays, differenceInDays } from 'date-fns';
-import { RepertoireItem, TuneReference, Repertoire } from './repertoire'; 
+import { RepertoireItem, TuneReference, Repertoire } from '../model/repertoire'; 
 
 export class RepertoireItemImpl implements RepertoireItem {
     private practiceHistory: Date[] = [];

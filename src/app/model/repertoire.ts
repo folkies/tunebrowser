@@ -20,3 +20,7 @@ export interface RepertoireItem {
     lastPracticed(): Date;
     practicedOn(date: Date): void;
 }
+
+export interface RepertoireCollection {
+    repertoires: Repertoire[];
+}

@@ -1,7 +1,7 @@
 import { addDays } from 'date-fns';
 import fs from 'fs';
 import { PracticeService, RepertoireItemImpl } from './practice-service';
-import { Repertoire, TuneReference } from './repertoire';
+import { Repertoire, TuneReference } from '../model/repertoire';
 
 
 function addTune(repertoire: Repertoire, name: string, added: string, practiced?: string) {
