@@ -16,4 +16,8 @@
 
     <button mat-raised-button (click)="save()" label="Save" class="search-button" color="primary"
         [disabled]="signedOut">Save</button>
+
 </form>
+
+<button mat-raised-button (click)="openDialog()" class="repertoire-button" color="primary"
+[disabled]="signedOut">Add to repertoire</button>

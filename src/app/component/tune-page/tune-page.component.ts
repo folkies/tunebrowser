@@ -6,6 +6,9 @@ import { TuneBookIndex } from '../../service/tunebook-index';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { csvToArray } from 'src/app/service/tags';
+import { RepertoireRepository } from 'src/app/service/repertoire-repository';
+import { MatDialog } from '@angular/material/dialog';
+import { AddToRepertoireComponent } from './add-to-repertoire.component';
 
 
 @Component({
@@ -25,7 +28,9 @@ export class TunePageComponent implements OnInit {
         private googleDriveService: GoogleDriveService,
         private route: ActivatedRoute,
         private snackBar: MatSnackBar,
-        private collectionService: TuneBookCollectionService) {
+        private dialog: MatDialog,
+        private collectionService: TuneBookCollectionService,
+        private repertoireRepository: RepertoireRepository) {
     }
 
     ngOnInit() {
@@ -44,6 +49,20 @@ export class TunePageComponent implements OnInit {
         const id = await this.collectionService.setTagsForTune(this.ref, this.bookId, tags);
         this.snackBar.open(`Updated tags on Google Drive`, 'Dismiss', { duration: 3000 });
         return id;
+    }
+
+    async openDialog(): Promise<void> {
+        const dialogRef = this.dialog.open(AddToRepertoireComponent);
+        dialogRef.afterClosed().subscribe(added => this.addToRepertoire(added));
+    }
+
+    private async addToRepertoire(added: Date): Promise<void> {
+        if (!added) {
+            return;
+        }
+        const tuneRef = { bookId: this.bookId, tuneId: this.ref };
+        await this.repertoireRepository.addRepertoireItem(tuneRef, added);
+        this.snackBar.open(`Added to repertoire on Google Drive`, 'Dismiss', { duration: 3000 });
     }
 
     private consumeRef(map: ParamMap): void {

@@ -19,7 +19,8 @@ export interface RepertoireItem {
     numPracticed(): number;
     lastPracticed(): Date;
     practicedOn(date: Date): void;
-}
+    referencedBy(ref: TuneReference): boolean;
+}    
 
 export interface RepertoireCollection {
     repertoires: Repertoire[];

@@ -27,6 +27,13 @@ export class RepertoireItemImpl implements RepertoireItem {
             this.practiceHistory.splice(0, this.practiceHistory.length - INTERVALS.length);
         }
     }
+
+    referencedBy(ref: TuneReference): boolean {
+        if (!ref) {
+            return false;
+        }
+        return this.tune.bookId == ref.bookId && this.tune.tuneId === ref.tuneId;
+    }
 }
 
 const INTERVALS : number [] = [ 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 6, 6, 15 ];

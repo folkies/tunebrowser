@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Add to repertoire</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput name="added" type="text" [(ngModel)]="added" placeholder="Added on">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="result()" cdkFocusInitial>Ok</button>
+</div>

@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog'; 
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,6 +26,7 @@ import { SearchComponent } from './component/search/search.component';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
 import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
 import { TunePageComponent } from './component/tune-page/tune-page.component';
+import { AddToRepertoireComponent } from './component/tune-page/add-to-repertoire.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
@@ -59,6 +61,7 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AboutComponent,
+        AddToRepertoireComponent,
         AppComponent,
         AuthenticationComponent,
         BooksListComponent,
@@ -74,12 +77,16 @@ const appRoutes: Routes = [
         SnippetViewComponent,
         BooksListComponent
     ],
+    entryComponents: [
+        AddToRepertoireComponent
+    ],
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
         HttpClientModule,
         FormsModule,
         MatButtonModule,
+        MatDialogModule,
         MatExpansionModule,
         MatFormFieldModule,
         MatIconModule,
