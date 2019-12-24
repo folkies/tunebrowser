@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { GoogleDriveService } from './google-drive.service';
-import { RepertoireCollection, TuneReference } from '../model/repertoire';
+import { RepertoireCollection, TuneReference, referencedBy } from '../model/repertoire';
 import { RepertoireItemImpl } from './practice-service';
 
 const TUNE_FOLDER = 'Tune Browser';
@@ -49,7 +49,7 @@ export class RepertoireRepository {
         const repertoire = (repertoireId)
             ? collection.repertoires.find(r => r.id === repertoireId)
             : collection.repertoires[0];
-        const item = repertoire.items.find(item => item.referencedBy(tuneRef));
+        const item = repertoire.items.find(item => referencedBy(item, tuneRef));
         if (item) {
             item.added = added;
         } else {

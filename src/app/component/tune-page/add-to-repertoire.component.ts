@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -7,16 +8,13 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class AddToRepertoireComponent {
 
-    added: string = new Date().toDateString();
+    added: FormControl = new FormControl(new Date());
 
     constructor(
-        public dialogRef: MatDialogRef<AddToRepertoireComponent>) { }
+        public dialogRef: MatDialogRef<AddToRepertoireComponent>) {             
+        }
 
     onNoClick(): void {
         this.dialogRef.close(undefined);
-    }
-
-    result(): Date {
-        return new Date(this.added);
     }
 }

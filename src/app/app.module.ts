@@ -1,9 +1,11 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog'; 
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,23 +24,23 @@ import { AboutComponent } from './component/about/about.component';
 import { AuthenticationComponent } from './component/authentication/authentication.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
+import { PracticeComponent } from './component/practice/practice.component';
 import { SearchComponent } from './component/search/search.component';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
 import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
-import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { AddToRepertoireComponent } from './component/tune-page/add-to-repertoire.component';
+import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
 import { CaretTrackerDirective } from './directive/caret-tracker.directive';
 import { GoogleDriveTunebookLoaderService } from './service/google-drive-tunebook-loader.service';
 import { GoogleDriveService } from './service/google-drive.service';
+import { PracticeService } from './service/practice-service';
+import { RepertoireRepository } from './service/repertoire-repository';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { PracticeService } from './service/practice-service';
-import { RepertoireRepository } from './service/repertoire-repository';
-import { PracticeComponent } from './component/practice/practice.component';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -86,17 +88,20 @@ const appRoutes: Routes = [
         HttpClientModule,
         FormsModule,
         MatButtonModule,
+        MatDatepickerModule,
         MatDialogModule,
         MatExpansionModule,
         MatFormFieldModule,
         MatIconModule,
         MatInputModule,
         MatListModule,
+        MatNativeDateModule,
         MatSelectModule,
         MatSidenavModule,
         MatSliderModule,
         MatSnackBarModule,
         MatToolbarModule,
+        ReactiveFormsModule,
         RouterModule.forRoot(appRoutes),
         ScrollingModule
     ],

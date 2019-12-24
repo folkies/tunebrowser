@@ -7,7 +7,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { csvToArray } from 'src/app/service/tags';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, throwMatDialogContentAlreadyAttachedError } from '@angular/material/dialog';
 import { AddToRepertoireComponent } from './add-to-repertoire.component';
 
 
