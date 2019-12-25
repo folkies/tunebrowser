@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, NgZone } from '@angular/core';
 import abcjs from 'abcjs/midi';
 import { extractSnippet } from 'src/app/service/abc-util';
 
@@ -16,7 +16,8 @@ export class SnippetViewComponent implements AfterViewInit, OnChanges {
 
     private rendered = false;
 
-    constructor() { }
+    constructor(private zone: NgZone) {        
+    }
 
     ngAfterViewInit() {
         this.renderSnippet();
@@ -24,7 +25,7 @@ export class SnippetViewComponent implements AfterViewInit, OnChanges {
 
     ngOnChanges() {
         this.rendered = false;
-        this.renderSnippet();
+        this.zone.runOutsideAngular(() => this.renderSnippet());
     }
 
     private renderSnippet(): void {
