@@ -37,10 +37,10 @@
 
 <div id="overview" *ngIf="multipleResults()">
     <p class="mat-body">{{tunes.length}} tunes</p>
-    <cdk-virtual-scroll-viewport>
+    <cdk-virtual-scroll-viewport class="search-result-viewport" te>
         <table>
             <tbody>
-                <tr class="tune-preview" *cdkVirtualFor="let tune of tunes">
+                <tr class="tune-preview" *cdkVirtualFor="let tune of tunes; templateCacheSize: 0">
                     <td class="tune-link tune-title">
                         <div><span class="tune-link mat-body" (click)="navigateToTune(tune)">{{tune.title}}</span></div>
                         <div class="mat-small">{{getBookName(tune)}}</div>
