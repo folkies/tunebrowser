@@ -1,4 +1,19 @@
 <div>
     <h2 class="mat-h2">Practice</h2>
-</div>
 
+    <div id="initial" *ngIf="initial()">
+        <button mat-raised-button (click)="buildAssignment()" class="search-button" color="primary">Get
+            assignment</button>
+    </div>
+
+    <div id="assignment" *ngIf="! initial()">
+        <mat-list>
+            <mat-list-item *ngFor="let entry of entries">
+                <div class="tune-link" routerLink="../tune/{{entry.book}}/{{entry.id}}">{{titleWithoutNumber(entry)}}</div>
+            </mat-list-item>
+        </mat-list>
+
+        <button mat-raised-button (click)="markAsPracticed()" label="All done" class="search-button" color="primary">All
+            done</button>
+    </div>
+</div>

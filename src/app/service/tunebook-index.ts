@@ -5,6 +5,7 @@ import { IndexEntry } from '../model/index-entry';
 import { TuneQuery } from '../model/tune-query';
 import { TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
+import { TuneReference } from '../model/repertoire';
 
 @Injectable()
 export class TuneBookIndex {
@@ -84,6 +85,10 @@ export class TuneBookIndex {
 
     findEntryById(book: TuneBookReference, id: string): IndexEntry {
         return this.entries.find(entry => entry.book === book.descriptor.id && entry.id === id);
+    }
+
+    findEntryByTuneReference(ref: TuneReference): IndexEntry {
+        return this.entries.find(entry => entry.book === ref.bookId && entry.id === ref.tuneId);
     }
 
     setTagsForTune(tuneId: string, tuneBookId: string, tags: string[]): void {
