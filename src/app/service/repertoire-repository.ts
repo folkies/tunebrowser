@@ -1,10 +1,20 @@
 import { Injectable } from '@angular/core';
+import { referencedBy, Repertoire, RepertoireCollection, TuneReference } from '../model/repertoire';
 import { GoogleDriveService } from './google-drive.service';
-import { RepertoireCollection, TuneReference, referencedBy, Repertoire } from '../model/repertoire';
 import { RepertoireItemImpl } from './practice-service';
 
 const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
+
+function reviveRepertoireItem(key: string, value: any): any {
+    if (key === "added" || key === "due") {
+        return new Date(value);
+    }
+    if (key === "practiceHistory") {
+        return (value as string[]).map(date => new Date(date));
+    }
+    return value;
+}
 
 @Injectable()
 export class RepertoireRepository {
@@ -36,7 +46,7 @@ export class RepertoireRepository {
             collectionJson = await this.googleDrive.getTextFile(collectionRef.id);
         }
 
-        this.repertoireCollection = JSON.parse(collectionJson);
+        this.repertoireCollection = JSON.parse(collectionJson, reviveRepertoireItem);
         return this.repertoireCollection;
     }
 
