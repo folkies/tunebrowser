@@ -6,7 +6,7 @@ import { RepertoireItemImpl } from './practice-service';
 const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
 
-function reviveRepertoireItem(key: string, value: any): any {
+export function reviveRepertoireItem(key: string, value: any): any {
     if (key === "added" || key === "due") {
         return new Date(value);
     }
