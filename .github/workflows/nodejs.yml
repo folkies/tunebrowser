@@ -27,3 +27,4 @@ jobs:
         npm run build
       env:
         CI: true
+        TZ: Europe/Berlin
