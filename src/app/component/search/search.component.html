@@ -37,7 +37,7 @@
 
 <div id="overview" *ngIf="multipleResults()">
     <p class="mat-body">{{tunes.length}} tunes</p>
-    <cdk-virtual-scroll-viewport class="search-result-viewport" te>
+    <cdk-virtual-scroll-viewport class="search-result-viewport">
         <table>
             <tbody>
                 <tr class="tune-preview" *cdkVirtualFor="let tune of tunes; templateCacheSize: 0">

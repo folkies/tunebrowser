@@ -18,7 +18,7 @@ export interface RepertoireItem {
     added: Date;
     due?: Date;
     practiceHistory: Date[];
-}    
+}
 
 export function referencedBy(item: RepertoireItem, ref: TuneReference): boolean {
     if (item && ref) {
@@ -37,7 +37,6 @@ export function lastPracticed(item: RepertoireItem): Date {
 export function numPracticed(item: RepertoireItem): number {
     return item.practiceHistory.length;
 }
-
 
 export function practicedOn(item: RepertoireItem, date: Date, maxLength: number): void {
     item.practiceHistory.push(date);

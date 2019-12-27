@@ -11,7 +11,7 @@ export class AddToRepertoireComponent {
     added: FormControl = new FormControl(new Date());
 
     constructor(
-        public dialogRef: MatDialogRef<AddToRepertoireComponent>) {             
+        public dialogRef: MatDialogRef<AddToRepertoireComponent>) {
         }
 
     onNoClick(): void {

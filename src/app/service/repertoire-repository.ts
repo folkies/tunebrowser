@@ -71,7 +71,7 @@ export class RepertoireRepository {
             repertoire.items.push(new RepertoireItemImpl(tuneRef, added));
         }
         return this.saveCollection(collection);
-    } 
+    }
 
     async findRepertoire(repertoireId?: string): Promise<Repertoire> {
         const collection = await this.load();

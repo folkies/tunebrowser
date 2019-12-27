@@ -62,11 +62,11 @@ export class PracticeService {
     private isDueOnDay(item: RepertoireItem, day: Date): boolean {
         return differenceInDays(item.due, day) <= 0;
     }
- 
+
     private isRecentOnDay(item: RepertoireItem, day: Date): boolean {
         return differenceInDays(day, item.added) <= 30;
     }
- 
+
     private computeDueDate(item: RepertoireItem, repertoire: Repertoire, day: Date): void {
         const age = differenceInDays(randomized(day || new Date()), item.added);
         if (age > repertoire.maxAge || numPracticed(item) >= INTERVALS.length) {
