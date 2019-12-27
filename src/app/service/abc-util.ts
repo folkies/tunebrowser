@@ -76,3 +76,17 @@ export function extractSnippet(abc: string): string {
     }
     return filteredLines.join('\n');
 }
+
+/**
+ * Strips an optional number prefix from the given title, and moves an optinal ", The" suffix to the front.
+ * @param titleWithNumber title with optional prefix and suffix
+ * @returns title for display, without number
+ */
+export function titleWithoutNumber(titleWithNumber: string): string {
+    let title = titleWithNumber.replace(/^\d+[a-z]?\s*/, '');
+    if (title.endsWith(', The')) {
+        title = title.replace(/, The$/, '');
+        title = 'The ' + title;
+    }
+    return title;
+}

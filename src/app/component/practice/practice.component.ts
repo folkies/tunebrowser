@@ -5,6 +5,7 @@ import { RepertoireItem } from 'src/app/model/repertoire';
 import { PracticeService } from 'src/app/service/practice-service';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
+import { titleWithoutNumber } from 'src/app/service/abc-util';
 
 @Component({
     selector: 'practice',
@@ -14,6 +15,8 @@ export class PracticeComponent {
 
     entries: IndexEntry[];
     assignment: RepertoireItem[];
+
+    titleWithoutNumber = titleWithoutNumber;
 
     constructor(
         private snackBar: MatSnackBar, 
@@ -31,15 +34,6 @@ export class PracticeComponent {
         this.assignment = this.practiceService.buildPracticeSession(repertoire, new Date());
         this.entries = this.assignment.map(item => this.index.findEntryByTuneReference(item.tune))
     }
-
-    titleWithoutNumber(entry: IndexEntry): string {
-        let title = entry.title.replace(/^\d+[a-z]?/, '');
-        if (title.endsWith(', The')) {
-            title = title.replace(/, The$/, '');
-            title = 'The ' + title;
-        }
-        return title;
-   }
 
    async markAsPracticed(): Promise<void> {
        this.practiceService.markAsPracticed(this.assignment, new Date());

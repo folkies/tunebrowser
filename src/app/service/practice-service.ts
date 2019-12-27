@@ -62,7 +62,7 @@ export class PracticeService {
     private isDueOnDay(item: RepertoireItem, day: Date): boolean {
         return differenceInDays(item.due, day) <= 0;
     }
-
+ 
     private isRecentOnDay(item: RepertoireItem, day: Date): boolean {
         return differenceInDays(day, item.added) <= 30;
     }

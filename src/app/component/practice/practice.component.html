@@ -9,7 +9,7 @@
     <div id="assignment" *ngIf="! initial()">
         <mat-list>
             <mat-list-item *ngFor="let entry of entries">
-                <div class="tune-link" routerLink="../tune/{{entry.book}}/{{entry.id}}">{{titleWithoutNumber(entry)}}</div>
+                <div class="tune-link" routerLink="../tune/{{entry.book}}/{{entry.id}}">{{titleWithoutNumber(entry.title)}}</div>
             </mat-list-item>
         </mat-list>
 
