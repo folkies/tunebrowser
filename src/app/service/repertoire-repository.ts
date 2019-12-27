@@ -6,7 +6,13 @@ const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
 export const INTERVALS : number[] = [ 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 6, 6, 15 ];
 
-export function reviveRepertoireItem(key: string, value: any): any {
+/**
+ * Repertoire reviver function for `JSON.parse()`.
+ * @param key JSON key
+ * @param value  JSON value
+ * @return revived object with correct class
+ */
+export function reviveRepertoire(key: string, value: any): any {
     if (key === "added" || key === "due") {
         return new Date(value);
     }
@@ -51,17 +57,25 @@ export class RepertoireItemImpl implements RepertoireItem {
     }
 }
 
-
-
+/**
+ * Repository for repertoires. Used Google Drive as storage. The repository may contain multiple repertoires
+ * for different instruments. The first repertoire is taken as default.
+ */
 @Injectable()
 export class RepertoireRepository {
+    /** Google Drive file identity of repertoire collection. */
     collectionFileId: string;
+
+    /** Loaded repertoire collection. */
     private repertoireCollection: RepertoireCollection;
 
     constructor(private googleDrive: GoogleDriveService) {
-
     }
 
+    /**
+     * Loads all repertoires.
+     * @return repertoire collection.
+     */
     async load(): Promise<RepertoireCollection> {
         if (this.googleDrive.isSignedOut()) {
             return {repertoires: []};
@@ -83,14 +97,22 @@ export class RepertoireRepository {
             collectionJson = await this.googleDrive.getTextFile(collectionRef.id);
         }
 
-        this.repertoireCollection = JSON.parse(collectionJson, reviveRepertoireItem);
+        this.repertoireCollection = JSON.parse(collectionJson, reviveRepertoire);
         return this.repertoireCollection;
     }
 
+    /**
+     * Saves given collection to predefined file.
+     * @param repertoireCollection repertoire collection
+     */
     async saveCollection(repertoireCollection: RepertoireCollection): Promise<string> {
         return this.googleDrive.updateTextFile(this.collectionFileId, JSON.stringify(repertoireCollection));
     }
 
+    /**
+     * Saves the loaded collection to the predefined file. This is a no-op if the collection has not yet been loaded.
+     * @param file identity
+     */
     async save(): Promise<string> {
         if (this.repertoireCollection) {
             return this.saveCollection(this.repertoireCollection);
@@ -98,6 +120,13 @@ export class RepertoireRepository {
         return "";
     }
 
+    /**
+     * Adds a tune to a repertoire.
+     * @param tuneRef tune reference
+     * @param added date added
+     * @param repertoireId repertoire identity
+     * @returns file identity
+     */
     async addRepertoireItem(tuneRef: TuneReference, added: Date, repertoireId?: string): Promise<string> {
         const collection = await this.load();
         const repertoire = await this.findRepertoire(repertoireId);
@@ -110,6 +139,10 @@ export class RepertoireRepository {
         return this.saveCollection(collection);
     }
 
+    /**
+     * Finds the repertoire with the given identity.
+     * @param repertoireId repertoire identity (if empty, the first collection item will be returned)
+     */
     async findRepertoire(repertoireId?: string): Promise<Repertoire> {
         const collection = await this.load();
         return (repertoireId)

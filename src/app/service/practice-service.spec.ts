@@ -6,7 +6,7 @@ import { titleQuery } from '../model/tune-query';
 import { TuneBookCollection, TuneBookDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
 import { PracticeService  } from './practice-service';
-import { reviveRepertoireItem, RepertoireItemImpl } from './repertoire-repository';
+import { reviveRepertoire, RepertoireItemImpl } from './repertoire-repository';
 import { TuneBookIndex } from './tunebook-index';
 
 function addTune(repertoire: Repertoire, name: string, added: string, practiced?: string) {
@@ -21,7 +21,7 @@ function addTune(repertoire: Repertoire, name: string, added: string, practiced?
 function showSessionForDate(repertoire: Repertoire, date: Date): void {
     let practiceService = new PracticeService();
     let output = date.toString() + '\n';
-    const session = practiceService.buildPracticeSession(repertoire, date);
+    const session = practiceService.buildPracticeAssignment(repertoire, date);
     session.forEach(item => output += item.tune.tuneId + '\n');
     practiceService.markAsPracticed(session, date);
     console.log(output);
@@ -30,7 +30,7 @@ function showSessionForDate(repertoire: Repertoire, date: Date): void {
 function resolveSessionForDate(repertoire: Repertoire, date: Date, index: TuneBookIndex): void {
     let practiceService = new PracticeService();
     let output = date.toString() + '\n';
-    const session = practiceService.buildPracticeSession(repertoire, date);
+    const session = practiceService.buildPracticeAssignment(repertoire, date);
     session.forEach(item => output += findTitle(item, index) + '\n');
     practiceService.markAsPracticed(session, date);
     console.log(output);
@@ -70,7 +70,7 @@ describe('PracticeService', () => {
         instrument: 'Flute',
         items: [],
         maxAge: 30,
-        numTunesPerSession: 10 
+        numTunesPerAssignment: 10 
     };
 
     let practiceService = new PracticeService();
@@ -97,7 +97,7 @@ describe('PracticeService', () => {
 
     test('should verify repertoire', () => {
         const json = fs.readFileSync('test/assets/repertoire.json', 'utf8');
-        const myRepertoire: Repertoire = JSON.parse(json, reviveRepertoireItem);
+        const myRepertoire: Repertoire = JSON.parse(json, reviveRepertoire);
         const index = buildIndex();
         let rep = []
         myRepertoire.items.forEach(item => {
@@ -115,7 +115,7 @@ describe('PracticeService', () => {
     test('should build sessions from repertoire', () => {
         const index = buildIndex();
         const json = fs.readFileSync('test/assets/repertoire.json', 'utf8');
-        const myRepertoire: Repertoire = JSON.parse(json, reviveRepertoireItem);
+        const myRepertoire: Repertoire = JSON.parse(json, reviveRepertoire);
         for (let days = 0; days < 21; days++) {
             let date = new Date("2019-12-27")
             date = addDays(date, days);

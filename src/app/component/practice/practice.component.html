@@ -1,12 +1,12 @@
 <div>
     <h2 class="mat-h2">Practice</h2>
 
-    <div id="initial" *ngIf="initial()">
+    <div id="initial" *ngIf="!hasAssignment()">
         <button mat-raised-button (click)="buildAssignment()" class="search-button" color="primary">Get
             assignment</button>
     </div>
 
-    <div id="assignment" *ngIf="! initial()">
+    <div id="assignment" *ngIf="hasAssignment()">
         <mat-list>
             <mat-list-item *ngFor="let entry of entries">
                 <div class="tune-link" routerLink="../tune/{{entry.book}}/{{entry.id}}">{{titleWithoutNumber(entry.title)}}</div>

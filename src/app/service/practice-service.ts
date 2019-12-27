@@ -9,20 +9,40 @@ function randomized(date: Date): Date {
     return addDays(date, numDays);
 }
 
+/**
+ * Builds a practice assignment from a repertoire.
+ * 
+ * For new tunes, there is a list of predefined intervals after which a tune is due for practice.
+ * A new tune is due to be practiced every day for a week, then every two days for three times etc.
+ * 
+ * A tune is no longer new when is has been practiced for the predefined number of times or more.
+ * 
+ * An older tune is due for practice when it has not been practiced for a given number of days defined
+ * as maximum age on the repertoire.
+ * 
+ * The due date is randomized by adding up to two day to avoid repeating similar assigments.
+ * 
+ * After computing due date for all repertoire items, the items are sorted by (randomized) due date,
+ * and the required number of items is taken from the list for the current assignment.
+ */
 @Injectable()
 export class PracticeService {
 
-    buildPracticeSession(repertoire: Repertoire, date?: Date): RepertoireItem[] {
+    /** 
+     * Builds a practice assignment for the given repertoire and the given day.
+     * @param repertoire repertoire
+     * @param day date for practice assignment
+     */
+    buildPracticeAssignment(repertoire: Repertoire, day: Date): RepertoireItem[] {
         const items = [...repertoire.items];
-        const day = date || new Date();
         items.forEach(item => this.computeDueDate(item, repertoire, day));
         items.sort((left, right) => differenceInDays(left.due, right.due));
         const assignment = items.filter(item => this.isDueOnDay(item, day));
-        if (assignment.length >= repertoire.numTunesPerSession) {
-            return assignment.slice(0, repertoire.numTunesPerSession);
+        if (assignment.length >= repertoire.numTunesPerAssignment) {
+            return assignment.slice(0, repertoire.numTunesPerAssignment);
         }
         const remaining = items.filter(item => !this.isDueOnDay(item, day) && !this.isRecentOnDay(item, day));
-        return assignment.concat(remaining.slice(0, repertoire.numTunesPerSession - assignment.length));
+        return assignment.concat(remaining.slice(0, repertoire.numTunesPerAssignment - assignment.length));
     }
 
     private isDueOnDay(item: RepertoireItem, day: Date): boolean {
@@ -46,8 +66,12 @@ export class PracticeService {
         }
     }
 
-    markAsPracticed(items: RepertoireItem[], date?: Date) {
-        const lastPracticed = date || new Date();
+    /**
+     * Marks the given repertoire items as last practiced on the given date.
+     * @param items repertoire items
+     * @param lastPracticed last practiced on this date
+     */
+    markAsPracticed(items: RepertoireItem[], lastPracticed: Date): void {
         items.forEach(item => item.practicedOn(lastPracticed));
     }
 }

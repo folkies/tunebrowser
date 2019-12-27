@@ -7,14 +7,20 @@ import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 
+/**
+ * Builds and displays today's practice assignment for the default repertoire.
+ */
 @Component({
     selector: 'practice',
     templateUrl: './practice.component.html'
 })
 export class PracticeComponent {
 
-    entries: IndexEntry[];
+    /** Today's practice assignment (intially undefined). */
     assignment: RepertoireItem[];
+
+    /** Index entries corresponding to the assignment (initially undefined). */
+    entries: IndexEntry[];
 
     titleWithoutNumber = titleWithoutNumber;
 
@@ -25,17 +31,28 @@ export class PracticeComponent {
         private index: TuneBookIndex) {
     }
 
-    initial(): boolean {
-        return this.entries === undefined;
+    /**
+     * Checks if assignment has already been computed.
+     * @returns true if assignment is present
+     */
+    hasAssignment(): boolean {
+        return this.entries !== undefined;
     }
 
+    /**
+     * Builds today's assignment from the default repertoire and finds the corresponding 
+     * index entries.
+     */
     async buildAssignment(): Promise<void> {
         const repertoire = await this.repertoireRepository.findRepertoire();
-        this.assignment = this.practiceService.buildPracticeSession(repertoire, new Date());
+        this.assignment = this.practiceService.buildPracticeAssignment(repertoire, new Date());
         this.entries = this.assignment.map(item => this.index.findEntryByTuneReference(item.tune))
     }
 
-   async markAsPracticed(): Promise<void> {
+    /**
+     * Marks all items from today's assignment as practiced.
+     */
+    async markAsPracticed(): Promise<void> {
        this.practiceService.markAsPracticed(this.assignment, new Date());
        await this.repertoireRepository.save();
        this.snackBar.open(`Updated repertoire on Google Drive`, 'Dismiss', { duration: 3000 });
