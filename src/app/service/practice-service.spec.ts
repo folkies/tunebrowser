@@ -5,14 +5,13 @@ import { Repertoire, RepertoireItem, TuneReference } from '../model/repertoire';
 import { titleQuery } from '../model/tune-query';
 import { TuneBookCollection, TuneBookDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
-import { PracticeService, RepertoireItemImpl } from './practice-service';
-import { reviveRepertoireItem } from './repertoire-repository';
+import { PracticeService  } from './practice-service';
+import { reviveRepertoireItem, RepertoireItemImpl } from './repertoire-repository';
 import { TuneBookIndex } from './tunebook-index';
-
 
 function addTune(repertoire: Repertoire, name: string, added: string, practiced?: string) {
     const ref: TuneReference = { bookId: 'unknown', tuneId: name };
-    const item = new RepertoireItemImpl(ref, new Date(added));
+    const item = new RepertoireItemImpl(ref, new Date(added), []);
     if (practiced) {
         item.practicedOn(new Date(practiced));
     }
