@@ -28,7 +28,7 @@ import { PracticeComponent } from './component/practice/practice.component';
 import { SearchComponent } from './component/search/search.component';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
 import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
-import { AddToRepertoireComponent } from './component/tune-page/add-to-repertoire.component';
+import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
 import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';

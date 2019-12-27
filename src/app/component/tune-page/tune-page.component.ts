@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
-import { TuneQuery } from '../../model/tune-query';
-import { TuneBookIndex } from '../../service/tunebook-index';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
-import { csvToArray } from 'src/app/service/tags';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
-import { MatDialog, throwMatDialogContentAlreadyAttachedError } from '@angular/material/dialog';
-import { AddToRepertoireComponent } from './add-to-repertoire.component';
+import { csvToArray } from 'src/app/service/tags';
+import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
+import { TuneBookIndex } from '../../service/tunebook-index';
+import { AddToRepertoireComponent } from '../add-to-repertoire/add-to-repertoire.component';
 
 
 @Component({
@@ -73,11 +72,10 @@ export class TunePageComponent implements OnInit {
 
     private displayTune(bookId: string, ref: string): void {
         if (ref !== undefined && this.index.isReady()) {
-            const tunes = this.index.findTunes(new TuneQuery(ref, undefined, undefined, [bookId]));
-            if (tunes.length > 0) {
-                const entry = tunes[0];
+            const entry = this.index.findEntryByTuneReference({ bookId, tuneId: ref });
+            if (entry) {
                 this.tune = this.index.getAbc(entry);
-                if (entry.tags) { 
+                if (entry.tags) {
                     this.allTags = entry.tags.join(', ');
                 }
             }
