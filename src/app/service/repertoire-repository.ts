@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Repertoire, RepertoireCollection, TuneReference, RepertoireItem } from '../model/repertoire';
 import { GoogleDriveService } from './google-drive.service';
+import { isThisMonth } from 'date-fns';
 
 const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
@@ -13,40 +14,30 @@ export const INTERVALS : number[] = [ 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 6, 6, 15 
  * @return revived object with correct class
  */
 export function reviveRepertoire(key: string, value: any): any {
-    if (key === "added" || key === "due") {
+    if (key === "added" || key === "due" || key === "lastPracticed") {
         return new Date(value);
     }
-    if (key === "practiceHistory") {
-        return (value as string[]).map(date => new Date(date));
-    }
     if (key === "items") {
-        return (value as any[]).map(item => new RepertoireItemImpl(item.tune, item.added, item.practiceHistory));
+        return (value as any[]).map(item => new RepertoireItemImpl(item.tune, item.added, item.timesPracticed, item.lastPracticed));
+    }
+    return value;
+}
+
+export function replaceRepertoire(key: string, value: any): any {
+    if (key === "due") {
+        return undefined;
     }
     return value;
 }
 
 export class RepertoireItemImpl implements RepertoireItem {
     due?: Date;
-
-    constructor(public tune: TuneReference, public added: Date, public practiceHistory: Date[]) {
-    }
-
-    numPracticed(): number {
-        return this.practiceHistory.length;
-    }
-
-    lastPracticed(): Date {
-        if (this.practiceHistory.length == 0) {
-            return undefined;
-        }
-        return this.practiceHistory[this.practiceHistory.length - 1];
+    constructor(public tune: TuneReference, public added: Date, public timesPracticed: number, public lastPracticed?: Date) {
     }
 
     practicedOn(date: Date): void {
-        this.practiceHistory.push(date);
-        if (this.practiceHistory.length > INTERVALS.length) {
-            this.practiceHistory.splice(0, this.practiceHistory.length - INTERVALS.length);
-        }
+        this.lastPracticed = date;
+        this.timesPracticed++;
     }
 
     referencedBy(ref: TuneReference): boolean {
@@ -65,6 +56,8 @@ export class RepertoireItemImpl implements RepertoireItem {
 export class RepertoireRepository {
     /** Google Drive file identity of repertoire collection. */
     collectionFileId: string;
+
+    currentAssignment: RepertoireItem[];
 
     /** Loaded repertoire collection. */
     private repertoireCollection: RepertoireCollection;
@@ -106,7 +99,7 @@ export class RepertoireRepository {
      * @param repertoireCollection repertoire collection
      */
     async saveCollection(repertoireCollection: RepertoireCollection): Promise<string> {
-        return this.googleDrive.updateTextFile(this.collectionFileId, JSON.stringify(repertoireCollection));
+        return this.googleDrive.updateTextFile(this.collectionFileId, JSON.stringify(repertoireCollection, replaceRepertoire));
     }
 
     /**
@@ -134,7 +127,7 @@ export class RepertoireRepository {
         if (item) {
             item.added = added;
         } else {
-            repertoire.items.push(new RepertoireItemImpl(tuneRef, added, []));
+            repertoire.items.push(new RepertoireItemImpl(tuneRef, added, 0));
         }
         return this.saveCollection(collection);
     }
@@ -149,4 +142,5 @@ export class RepertoireRepository {
             ? collection.repertoires.find(r => r.id === repertoireId)
             : collection.repertoires[0];
     }
+
 }

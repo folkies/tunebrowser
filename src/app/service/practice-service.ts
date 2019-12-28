@@ -4,6 +4,11 @@ import { Repertoire, RepertoireItem } from '../model/repertoire';
 import { INTERVALS } from './repertoire-repository';
 
 
+/**
+ * Adds 0, 1 or 2 days to the given date.
+ * @param date date to be randomized
+ * @returns randomized date
+ */
 function randomized(date: Date): Date {
     const numDays = Math.trunc(Math.random() * 3) - 1;
     return addDays(date, numDays);
@@ -20,9 +25,9 @@ function randomized(date: Date): Date {
  * An older tune is due for practice when it has not been practiced for a given number of days defined
  * as maximum age on the repertoire.
  * 
- * The due date is randomized by adding up to two day to avoid repeating similar assigments.
+ * The due date is randomized by adding up to two days to avoid repeating similar assignments.
  * 
- * After computing due date for all repertoire items, the items are sorted by (randomized) due date,
+ * After computing the due date for all repertoire items, the items are sorted by (randomized) due date,
  * and the required number of items is taken from the list for the current assignment.
  */
 @Injectable()
@@ -55,12 +60,12 @@ export class PracticeService {
 
     private computeDueDate(item: RepertoireItem, repertoire: Repertoire, day: Date): void {
         const age = differenceInDays(randomized(day || new Date()), item.added);
-        if (age > repertoire.maxAge || item.numPracticed() >= INTERVALS.length) {
-            const practiced = item.lastPracticed() || item.added;
+        if (age > repertoire.maxAge || item.timesPracticed >= INTERVALS.length) {
+            const practiced = item.lastPracticed || item.added;
             item.due = addDays(randomized(practiced), repertoire.maxAge);
-        } else if (item.numPracticed() > 0) {
-            const interval = INTERVALS[item.numPracticed()];
-            item.due = addDays(randomized(item.lastPracticed()), interval);
+        } else if (item.timesPracticed > 0) {
+            const interval = INTERVALS[item.timesPracticed];
+            item.due = addDays(randomized(item.lastPracticed), interval);
         } else {
             item.due = day;
         }

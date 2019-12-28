@@ -43,16 +43,13 @@ export interface RepertoireItem {
     /** Tune is due to be practiced on this date. */
     due?: Date;
 
-    /** Dates on which tune was practiced. List is truncated to a fixed number of most recent items. */
-    practiceHistory: Date[];
-
     /** Length of (truncated) practice history. */
-    numPracticed(): number;
+    timesPracticed: number;
 
     /**
      * Tune was last practiced on this date. (Last item of practice history.)
      */
-    lastPracticed(): Date;
+    lastPracticed?: Date;
 
     /**
      * Adds the given date to the practice history, optionally truncating the history to maximum length.

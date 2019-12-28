@@ -1,7 +1,7 @@
 import { TuneBook } from 'abcjs/midi';
 import { addDays } from 'date-fns';
 import fs from 'fs';
-import { Repertoire, RepertoireItem, TuneReference } from '../model/repertoire';
+import { Repertoire, RepertoireItem, TuneReference, RepertoireCollection } from '../model/repertoire';
 import { titleQuery } from '../model/tune-query';
 import { TuneBookCollection, TuneBookDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
@@ -11,7 +11,7 @@ import { TuneBookIndex } from './tunebook-index';
 
 function addTune(repertoire: Repertoire, name: string, added: string, practiced?: string) {
     const ref: TuneReference = { bookId: 'unknown', tuneId: name };
-    const item = new RepertoireItemImpl(ref, new Date(added), []);
+    const item = new RepertoireItemImpl(ref, new Date(added), 0);
     if (practiced) {
         item.practicedOn(new Date(practiced));
     }
@@ -64,6 +64,12 @@ function updateFromIndex(item: RepertoireItem, index: TuneBookIndex) {
     }
 }
 
+function readDefaultRepertoire(): Repertoire {
+    const json = fs.readFileSync('test/assets/repertoire.json', 'utf8');
+    const collection: RepertoireCollection = JSON.parse(json, reviveRepertoire);
+    return collection.repertoires[0];
+} 
+
 describe('PracticeService', () => {
     let repertoire: Repertoire = {
         id: '1',
@@ -96,28 +102,26 @@ describe('PracticeService', () => {
     });
 
     test('should verify repertoire', () => {
-        const json = fs.readFileSync('test/assets/repertoire.json', 'utf8');
-        const myRepertoire: Repertoire = JSON.parse(json, reviveRepertoire);
+        const myRepertoire = readDefaultRepertoire();
         const index = buildIndex();
         let rep = []
         myRepertoire.items.forEach(item => {
             if (item.tune.bookId !== 'rover2') {
                 const entry = index.findEntryByTuneReference(item.tune);
-                rep.push(entry.title);
                 expect(entry).toBeDefined();
                 expect(entry.book).toBe(item.tune.bookId);
                 expect(entry.id).toBe(item.tune.tuneId);
+                rep.push(entry.title);
             }
         });
         console.log(rep.sort().join('\n'));
     });
 
-    test('should build sessions from repertoire', () => {
+    fit('should build sessions from repertoire', () => {
         const index = buildIndex();
-        const json = fs.readFileSync('test/assets/repertoire.json', 'utf8');
-        const myRepertoire: Repertoire = JSON.parse(json, reviveRepertoire);
+        const myRepertoire = readDefaultRepertoire();
         for (let days = 0; days < 21; days++) {
-            let date = new Date("2019-12-27")
+            let date = new Date("2019-12-29")
             date = addDays(date, days);
             resolveSessionForDate(myRepertoire, date, index);
         }

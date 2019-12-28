@@ -1,628 +1,633 @@
 {
-    "id": "1",
-    "instrument": "Flute",
-    "items": [
+    "repertoires": [
         {
-            "tune": {
-                "bookId": "rover",
-                "tuneId": "1"
-            },
-            "added": "2019-09-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:06:19.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "oneill1001",
-                "tuneId": "755"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:06:19.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "201"
-            },
-            "added": "2019-10-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-15T11:42:36.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "32"
-            },
-            "added": "2019-06-10T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-11T11:48:48.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "56"
-            },
-            "added": "2019-12-17T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "4"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-17T14:40:29.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "oneill1001",
-                "tuneId": "920"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "279"
-            },
-            "added": "2019-06-01T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T10:57:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "30"
-            },
-            "added": "2019-08-15T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "oneill1001",
-                "tuneId": "138"
-            },
-            "added": "2019-10-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:06:19.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "275"
-            },
-            "added": "2019-04-14T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T10:57:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "6a"
-            },
-            "added": "2019-10-28T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-20T13:27:43.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "276"
-            },
-            "added": "2019-04-28T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T10:57:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "269b"
-            },
-            "added": "2019-11-10T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-21T15:51:51.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "36"
-            },
-            "added": "2019-08-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "262"
-            },
-            "added": "2019-08-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "280"
-            },
-            "added": "2019-06-24T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T18:09:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "66"
-            },
-            "added": "2019-11-20T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "rover",
-                "tuneId": "7"
-            },
-            "added": "2019-09-15T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T18:09:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "50"
-            },
-            "added": "2019-11-20T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T11:00:57.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "65"
-            },
-            "added": "2019-12-09T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "278"
-            },
-            "added": "2019-05-21T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T10:57:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "15"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-17T14:40:29.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "12"
-            },
-            "added": "2019-08-17T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "175"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "136"
-            },
-            "added": "2019-12-12T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "rover",
-                "tuneId": "6"
-            },
-            "added": "2019-12-01T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "277"
-            },
-            "added": "2019-05-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T10:57:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "258"
-            },
-            "added": "2019-09-27T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "281"
-            },
-            "added": "2019-07-04T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-20T13:27:43.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "218b"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:06:19.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "282"
-            },
-            "added": "2019-09-01T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-17T14:40:29.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "283"
-            },
-            "added": "2019-10-01T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "241a"
-            },
-            "added": "2019-10-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-16T12:17:03.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "71"
-            },
-            "added": "2019-10-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "121"
-            },
-            "added": "2019-09-27T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T11:00:57.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "54"
-            },
-            "added": "2019-11-15T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T11:28:49.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "10"
-            },
-            "added": "2019-09-27T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T18:09:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "225"
-            },
-            "added": "2019-12-05T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "40"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "271"
-            },
-            "added": "2019-10-15T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-20T13:27:43.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "154"
-            },
-            "added": "2019-11-12T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "25"
-            },
-            "added": "2019-12-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "163"
-            },
-            "added": "2019-09-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "285"
-            },
-            "added": "2019-10-29T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-21T15:51:51.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "267"
-            },
-            "added": "2019-11-17T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "63"
-            },
-            "added": "2019-09-13T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "18"
-            },
-            "added": "2019-11-23T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T11:00:57.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "244"
-            },
-            "added": "2019-06-10T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T11:28:49.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "160"
-            },
-            "added": "2019-12-02T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "274"
-            },
-            "added": "2019-04-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-13T11:28:49.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "rover2",
-                "tuneId": "82"
-            },
-            "added": "2019-12-19T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "rover",
-                "tuneId": "8"
-            },
-            "added": "2019-10-01T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T11:00:57.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "113"
-            },
-            "added": "2019-11-27T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "rover",
-                "tuneId": "15"
-            },
-            "added": "2019-10-21T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "226"
-            },
-            "added": "2019-08-20T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-26T12:12:45.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "rover",
-                "tuneId": "29"
-            },
-            "added": "2019-11-10T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-19T18:09:31.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "rover",
-                "tuneId": "33"
-            },
-            "added": "2019-12-19T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-25T15:14:32.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "284"
-            },
-            "added": "2019-10-15T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-21T15:51:51.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "20"
-            },
-            "added": "2019-10-15T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "190"
-            },
-            "added": "2019-11-07T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-24T11:53:04.000Z"
-            ]
-        },
-        {
-            "tune": {
-                "bookId": "learner",
-                "tuneId": "286"
-            },
-            "added": "2019-11-12T00:00:00.000Z",
-            "practiceHistory": [
-                "2019-12-21T15:51:51.000Z"
-            ]
+            "id": "1",
+            "instrument": "Flute",
+            "items": [
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "1"
+                    },
+                    "added": "2019-09-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:06:19.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "oneill1001",
+                        "tuneId": "755"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:06:19.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "201"
+                    },
+                    "added": "2019-10-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-15T11:42:36.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "32"
+                    },
+                    "added": "2019-06-10T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-11T11:48:48.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "56"
+                    },
+                    "added": "2019-12-17T00:00:00.000Z",
+                    "timesPracticed": 3,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "4"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-17T14:40:29.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "oneill1001",
+                        "tuneId": "920"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-25T15:14:32.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "279"
+                    },
+                    "added": "2019-06-01T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T10:57:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "30"
+                    },
+                    "added": "2019-08-15T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "oneill1001",
+                        "tuneId": "138"
+                    },
+                    "added": "2019-10-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:06:19.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "275"
+                    },
+                    "added": "2019-04-14T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T10:57:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "6a"
+                    },
+                    "added": "2019-10-28T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-20T13:27:43.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "276"
+                    },
+                    "added": "2019-04-28T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T10:57:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "269b"
+                    },
+                    "added": "2019-11-10T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-21T15:51:51.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "36"
+                    },
+                    "added": "2019-08-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-26T12:12:45.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "262"
+                    },
+                    "added": "2019-08-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "280"
+                    },
+                    "added": "2019-06-24T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T18:09:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "66"
+                    },
+                    "added": "2019-11-20T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "7"
+                    },
+                    "added": "2019-09-15T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T18:09:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "50"
+                    },
+                    "added": "2019-11-20T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T11:00:57.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "65"
+                    },
+                    "added": "2019-12-09T00:00:00.000Z",
+                    "timesPracticed": 3,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "278"
+                    },
+                    "added": "2019-05-21T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T10:57:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "15"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-17T14:40:29.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "12"
+                    },
+                    "added": "2019-08-17T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-26T12:12:45.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "175"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-26T12:12:45.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "136"
+                    },
+                    "added": "2019-12-12T00:00:00.000Z",
+                    "timesPracticed": 2,
+                    "lastPracticed": "2019-12-27T12:09:27.498Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "6"
+                    },
+                    "added": "2019-12-01T00:00:00.000Z",
+                    "timesPracticed": 3,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "277"
+                    },
+                    "added": "2019-05-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T10:57:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "258"
+                    },
+                    "added": "2019-09-27T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-25T15:14:32.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "281"
+                    },
+                    "added": "2019-07-04T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-20T13:27:43.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "218b"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:06:19.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "282"
+                    },
+                    "added": "2019-09-01T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-17T14:40:29.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "283"
+                    },
+                    "added": "2019-10-01T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-25T15:14:32.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "241a"
+                    },
+                    "added": "2019-10-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-16T12:17:03.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "71"
+                    },
+                    "added": "2019-10-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "121"
+                    },
+                    "added": "2019-09-27T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T11:00:57.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "54"
+                    },
+                    "added": "2019-11-15T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T11:28:49.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "10"
+                    },
+                    "added": "2019-09-27T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T18:09:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "225"
+                    },
+                    "added": "2019-12-05T00:00:00.000Z",
+                    "timesPracticed": 2,
+                    "lastPracticed": "2019-12-27T12:09:27.498Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "40"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-26T12:12:45.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "271"
+                    },
+                    "added": "2019-10-15T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-20T13:27:43.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "154"
+                    },
+                    "added": "2019-11-12T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-25T15:14:32.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "25"
+                    },
+                    "added": "2019-12-07T00:00:00.000Z",
+                    "timesPracticed": 3,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "163"
+                    },
+                    "added": "2019-09-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "285"
+                    },
+                    "added": "2019-10-29T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-21T15:51:51.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "267"
+                    },
+                    "added": "2019-11-17T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-25T15:14:32.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "63"
+                    },
+                    "added": "2019-09-13T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "18"
+                    },
+                    "added": "2019-11-23T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T11:00:57.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "224"
+                    },
+                    "added": "2019-06-10T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T11:28:49.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "160"
+                    },
+                    "added": "2019-12-02T00:00:00.000Z",
+                    "timesPracticed": 2,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "274"
+                    },
+                    "added": "2019-04-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-13T11:28:49.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover2",
+                        "tuneId": "82"
+                    },
+                    "added": "2019-12-19T00:00:00.000Z",
+                    "timesPracticed": 2,
+                    "lastPracticed": "2019-12-27T12:09:27.498Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "8"
+                    },
+                    "added": "2019-10-01T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T11:00:57.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "113"
+                    },
+                    "added": "2019-11-27T00:00:00.000Z",
+                    "timesPracticed": 2,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "15"
+                    },
+                    "added": "2019-10-21T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-26T12:12:45.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "226"
+                    },
+                    "added": "2019-08-20T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-26T12:12:45.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "29"
+                    },
+                    "added": "2019-11-10T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-19T18:09:31.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "33"
+                    },
+                    "added": "2019-12-19T00:00:00.000Z",
+                    "timesPracticed": 2,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "284"
+                    },
+                    "added": "2019-10-15T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-21T15:51:51.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "20"
+                    },
+                    "added": "2019-10-15T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "190"
+                    },
+                    "added": "2019-11-07T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-24T11:53:04.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "286"
+                    },
+                    "added": "2019-11-12T00:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-21T15:51:51.000Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "4"
+                    },
+                    "added": "2019-10-25T22:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-27T12:09:27.498Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "rover",
+                        "tuneId": "9"
+                    },
+                    "added": "2019-12-10T23:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "219"
+                    },
+                    "added": "2019-11-22T23:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-27T12:09:27.498Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "260"
+                    },
+                    "added": "2019-07-20T22:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-27T12:09:27.498Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "287"
+                    },
+                    "added": "2019-11-25T23:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "288"
+                    },
+                    "added": "2019-12-09T23:00:00.000Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                },
+                {
+                    "tune": {
+                        "bookId": "learner",
+                        "tuneId": "21"
+                    },
+                    "added": "2019-12-27T12:24:38.696Z",
+                    "timesPracticed": 1,
+                    "lastPracticed": "2019-12-28T12:05:24.949Z"
+                }
+            ],
+            "maxAge": 30,
+            "numTunesPerAssignment": 10
         }
-    ],
-    "maxAge": 30,
-    "numTunesPerSession": 10
+    ]
 }
