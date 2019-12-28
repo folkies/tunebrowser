@@ -15,20 +15,23 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';
+import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
 import { AuthenticationComponent } from './component/authentication/authentication.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
 import { PracticeComponent } from './component/practice/practice.component';
+import { RepertoireComponent } from './component/repertoire/repertoire.component';
 import { SearchComponent } from './component/search/search.component';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
 import { TuneEditorComponent } from './component/tune-editor/tune-editor.component';
-import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
 import { TunePageComponent } from './component/tune-page/tune-page.component';
 import { TunePlayerComponent } from './component/tune-player/tune-player.component';
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
@@ -51,6 +54,7 @@ const appRoutes: Routes = [
     { path: 'login', component: AuthenticationComponent },
     { path: 'logout', component: AuthenticationComponent },
     { path: 'practice', component: PracticeComponent },
+    { path: 'repertoire', component: RepertoireComponent },
     { path: 'search', component: SearchComponent },
     { path: 'tune/:bookId/:ref', component: TunePageComponent },
     {
@@ -70,6 +74,7 @@ const appRoutes: Routes = [
         CaretTrackerDirective,
         CreateBookComponent,
         PracticeComponent,
+        RepertoireComponent,
         SearchComponent,
         TuneEditorComponent,
         TunePageComponent,
@@ -100,6 +105,8 @@ const appRoutes: Routes = [
         MatSidenavModule,
         MatSliderModule,
         MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
         MatToolbarModule,
         ReactiveFormsModule,
         RouterModule.forRoot(appRoutes),
