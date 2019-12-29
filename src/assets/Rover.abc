@@ -621,16 +621,16 @@ A,E (3EEE DEFD | EDCE DCB,C | A,E (3EEE DEFD | EAAG (3AAA AB |
 C2 EC GCEC | D2 FD ADFD | E2 GE BEGE | F2 AF cFAF | (3eee ed cBAG |
 AE (3EEE FD (3DDD | EDEF EDCE |1 DCB,C A,2 BD :|2 DCB,C A,2 A,2 ||
 
-X:53
-T:Up Downey
-M:4/4
-L:1/8
-R:reel
-K:Edor
-e2f|:gfeg fegf|egfe a3f|gfeg fegf|egfe B3f|
-gfeg fegf|egfe a3a|bagf agfg|e2 ed e3f:|
-EFGA B2 dB|A2 FA GFEF| EFGA (3Bcd ef| gfed ea a2|
-EFGA B2 dB| A2 FA GFEF| EFGA (3Bcd ed| BAGF EB,B,B,:|
+X: 53
+T: Up Downey
+R: reel
+M: 4/4
+L: 1/8
+K: Edor
+B|EFGA B2dB|BAGB AGFB|EFGA Bdef|gfed eaz2|
+EFGA ~B3d|BAGB AGFB|EFGA Bded|BAGB E3:|
+|:e|gfeg fegf|egfe a3b|gfeg fegf|egfe B3e|
+gfeg fegf|egfe a3g|ba (3gab agfB|egfd e3:| 
 
 X:54
 T:My Fair Tara
