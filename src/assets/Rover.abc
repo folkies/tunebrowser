@@ -119,7 +119,6 @@ g3 fgf|efe d2B|1 dge dBA|G3 G3:|2 dge dge|dge dBA||!
 X:10
 T:The Glen Road to Carrick
 R:reel
-N:The 2nd part in the variations is optional.
 M:C|
 K:Dmix
 FD~D2 FDGD|FDFG ABAG|FD~D2 FDGF|1 EdcA GBAG:|2 EdcA G2FG||
@@ -134,7 +133,7 @@ T:Craig's Pipes
 M:C
 L:1/8
 R:reel
-K:Gmajor
+K:G
 B3A BAGA|B2GB AGED|B3A BAGB|AcBG AGED|!
 B3A BAGA|B2GB AGED|Bded BcdB|AcBG AGEG|]!
 DGG2 DGBG|DGBG AGEG|DGGF GABc|[1 dBAc BGGE:|[2 dBAc BGGB|]!
@@ -145,7 +144,7 @@ T: Pauline's Place
 M: C|
 L: 1/8
 R: reel
-K: Gmaj
+K: G
 |:A|BD~D2 B,DGB|AGBG AGEG|cE~E2 GAce|dBGB AGEG|
 BD~D2 B,DGB|AGBG AGEG|cege dB~B2|cAFA G3:|
 |:A|Bddc BG~G2|BGBd gdBd|ceed e3f|(3gfe fd edBA|
@@ -272,7 +271,6 @@ afdf e2 (3ABc :|2 defg ~a2ab | afdf edd2 ||
 
 X: 23
 T: Gatehouse Maid
-B: "Music from Ireland 3" (Bulmer & Sharpley) #35
 R: reel
 M: 4/4
 L: 1/8
@@ -394,7 +392,7 @@ GBde dBB2 | ABcd BGFG | E2cE D2BD | dBAB G4 :|
 d3e dBB2 | ABcd BGFG | E2cE D2BD | dBAB G4 :|
 
 X:33
-T:Humours Of Clonmult, The
+T:The Humours Of Clonmult
 M:12/8
 L:1/8
 R:slide
@@ -775,3 +773,282 @@ gedg edBA|GEEE EDB,D|GGGA (3Bcd eg|dBAc BG (3Bcd:|
 |:gBBA BBgB|BggB aged|cBcd e~eef|gdbg edBd|
 gBBA BBgB|BggB aged|cBcd edge|dBAc BG[BG][dG]:|
 
+X: 66
+T: The Wild Irishman
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+A|d2fd gefe|dfed cdec|d2fd gefd|fgfe dcBc|
+d2fd gefe|dfed cdeg|~f3d ~g3e|cAcA ~d3||
+|:f|edcB A3c|eA~A2 eAfA|edcB A2ce|fgfe d3:| 
+
+X:67
+T:Throw Away The Keys
+M: C|
+L:1/8
+R:reel
+K:Dmaj
+A3B defa|a2fd efdB|A3B defe|dBAF EFDB:|
+a3f defa|a2fd efdB|a3f defe|dBAF EFDB|
+a3f defa|a2fd efdB|A3B defe|dBAF EFDB|
+
+X:68
+T:Mountain Top
+M: C|
+L:1/8
+R:reel
+K:Gmaj
+B2AG EGDG|G2Bd edgd|BGAG EGDG|B2Ac BGG2:|
+Bd~d2 edBA|Bdef gfed|Bd~d2 Bdge|dBAc BGG2|
+Bd~d2 edBA|Bdef g3a|bgaf gfed|(3efg fa gedc||
+
+X:69
+T:Many a Wild Night
+R:polka
+M:2/4
+L:1/8
+K:D
+Ad dB | AF FD | GB BA | F/G/A D>F | Ad dB | AF FD | GB BA | D2 D>F :|
+|: Ad fa | ge e>c | Ac e/f/g | fd d/e/d/B/ | Ad fa | ge e>d | ce ba | d2 d>B :|
+
+X:70
+T:Walsh's Polka 1
+R:polka
+M:2/4
+L:1/8
+K:G
+|: g2 gf/g/ | ag ge | dB BA | GA Bd | g2 gf/g/ | ag ge | dB BA |1 G2 G2 :|2 G2 D2 ||
+|: G>A BA | GE ED | B,D ED | B,D ED | G>A BA | GE ED | B,D ED |1 G2 GD :|2 G2 G2 || 
+
+X:72
+T:Walsh's Polka 2
+R:polka
+M:2/4
+L:1/8
+K:A
+|: A>c ef | ec dB | Ac ef | e2 e2 |
+Ac ef | ec d>B | AF FE |1 A2 AB :|2 A2 Ac/e/ ||
+|: fe cB | AF FE | A>B Ac | e2 ec/e/ |
+fe cB | AF FE | A>B AE |1 A2 Ac/e/ :|2 A2 AB ||
+
+X:73
+T:The Longford Tinker
+M: C|
+L:1/8
+R:reel
+K:Dmaj
+dBBA B2 Bc|d~B3 fBeB|dBBA B2 dB|ABde ~f3e|
+d~B3 f~B3|d~B3 ~f3g|aAAF ABAF|ABde ~f3e|
+d2 fd efge|defa gefe|(3ddd fd efge|faaf gfef|
+d2 fd efge|defa ~g3a|bgaf gfed|faaf gfed|
+f~a3 f~a3|faaf gfed|gb (3bbb gb (3bbb|gbbf gfed|
+f~a3 f~a3|faaf g2 ga|bgaf gfed|faaf gfef|]
+
+X:74
+T:The Maid of Mount Kisco
+R:reel
+C:Paddy Killoran (1904-1965) (?)
+M:C|
+K:Ador
+EA~A2 BA~A2|EA~A2 BGAG|EG~G2 AG~G2|EG~G2 EGDG|
+EA~A2 BAAG|EA~A2 BA (3Bcd|efge afge|1 dBGB ~A3G:|2 dBGB A2dB||
+|:~A3B dBAB|G2BG DGBG|~A3B d2 (3Bcd|1 efge dBGB:|2 edge d2 (3Bcd||
+|:ea~a2 bgag|egdB GABd|ea~a2 bgaf|gede g2eg|
+~a3f ~g3e|dedB GABd|eA~A2 efge|1 dBGB A2 (3Bcd:|2 dBGB ~A3G||
+
+X:75
+T:Liz's
+M:6/8
+L:1/8
+R:jig
+K:Ador
+Bcd | e3 Tfed | eAA Bcd |eAA gfe | dBG Bcd |
+eAA Tfed |  eAA Bcd | Tg3 gfe | dBG Bcd | e3 Tfed |
+eAA Bcd |eAA gfe | dBG Bcd | eAA Tfed |  eAA Bcd |
+g3 Tgfe | dBG BdB | A2a aea | aea aea | A2a aef |
+gfe dBG | A2a aea |  aea aef | Tg3 gfe | dBG BdB |
+A2a aea | aea aea | A2a aef | gfe dBG | A2a aea |
+aea aef | A2a aef | Tg3 gfe | dBG BdB | G6 ||
+a3 g3 | A2e e3 |  A2e e3 |  A2e e3 | G2 d d3 |
+A2e e3 |  A2e e3 | BAG c2 A | G2G z3 | A2e e3 |
+A2e e3 | A2e e3 | G2 d d3 | A2e e3 | A2e e3 |
+BAG c2A | G2G z3 | Ace A2e | A2e A2e | Ace A2e |
+G3 G2G | Ace A2e | A2e A2e | BAG c2A | G2G z3 |
+Ace A2e | A2e A2e | Ace A2e | G3 G2G | Ace A2e |
+A2e A2e | Ace A2e | BAG c2A | G3 G3 | G6 ||
+
+X:76
+T:Hardiman The Fiddler
+M:9/8
+L:1/8
+R:slip jig
+K:Ador
+|:A2G FDE F2G|A2A AGA cAG|A2G FDE F2G|Add ded cAG:|
+Add d2e f2e|Add ded cAG|Add d2e f2g|aff ged cAG|
+Add d2e f2e|Add ded cAG|dcA cde f2g|aff ged cAG|
+
+X: 77
+T: Armagh Polka
+M: 2/4
+L: 1/16
+R: Polka
+K: D
+d2 d2 BcdB|A2F2 A2F2|d2 d2 BcdB|A2F2 E2D2|
+d2 d2 BcdB|A2F2 A2de|f2d2 e2c2|d4 d4 :|
+f2d2 d2ef|g2f2 e2de|f2d2 A2d2|f2df a3g|
+f2d2 d2ef|g2f2 e2de|f2d2 e2c2|d4 d4 :|
+
+X:78
+T:Crested Hens
+T:Les poules huppées
+M:3/4
+L:1/8
+R:waltz
+K:Edor
+E3G FE | B4 Bc | dc Be dc | dc BA GF |
+E3G FE | B4 Bc | dc BA GA |1 B3G   FD :|2 B4 ef ||
+gB Bg gB | =c4ef | gf ag fe | ^d2e2 f2 |
+gB Bg gB | =c4ef | gf ag fd |1  e3e  ef :|2 e3G  FA |]
+
+X:79
+T:Garrett Barry's Jig
+R:jig
+M:6/8
+K:Dmix
+DEF ~G3|AGE c2A|dcA d2e|fed cAG|~F3 GFG|AGA cde|dcA GEA|1~D3 D2A:|2~D3 D2d||
+|:dcA d2e|fed efe|dcA c2d|egc edc|dcA d2e|fed efe|dcA GEA|1~D3 D2d:|2~D3 D2A||
+
+X:80
+T:The Cuil Aodha
+M:6/8
+L:1/8
+R:jig
+K:Gmaj
+gfd cAd|GAG B2c|dcB cAG|FED cBA|
+~G3 GFG|~A3 fga|gfd cAd|1 GAG G2g:|2 GAG G2d||
+d2g gfg|ade fga|gfd cAd|cAG FGA|
+G2g gfg|ade fga|gfd cAd|1 GAG G2d:|2 GAG G2g||
+
+X:81
+T:The Humours of Ballyloughlin
+T:The Hurler's March
+R:jig
+M:6/8
+K:Dmix
+~A3 AGE|GED DED|cAA ded|cAG FED|~A3 AGE|~G3 cGE|~D3 DFA|1 ~D3 D3:|2 ~D3 D2B||
+|:cBc cBc|cAG AB^c|~d3 dfe|dAF DFA|c2A dcB|cAG FGE|~D3 DFA|1 ~D3 D2B:|2 ~D3 D2e||
+|:fdd gdd|fdd ged|cde ged|cde ged|fdd gdd|fdd ged|cde gag|1 ed^c d2e:|2 ed^c d2B||
+|:~A3 A2G|FGF FED|~E3 EFD|~E3 EFG|AFA dAG|~F3 GEA|~D3 DFA|~D3 D3:|
+
+X: 82
+T: The White Blanket
+T: An Suisin Ban
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+(3GAB|cEED EFGE|DE (3GAB c3A|BAGE D2EG|
+A2AB ADGA|BAGE DEDE|G2GA G2:|
+Bd|e2ed efge|dB (3GAB c3A|BAGE D2EG|
+A2AB ADGA|BAGE DEDE|G2GA G2:| 
+
+X: 83
+T: The Killavil
+R: jig
+M: 6/8
+L: 1/8
+K: Em
+BEE BEE|Bdf edB|BAF FEF|DFA BAF|
+BEE BEE|Bdf edB|BAB dAF|FED E3:|
+e2f gfe|faf edB|BAF FEF|DFA dBA|
+e2f gfe|faf edB|BAB dAF|FED E3:| 
+
+X: 84
+T: The Murroe
+R: polka
+M: 2/4
+L: 1/8
+K: Gmaj
+Bd G>A|Bd GB|A2 FA|GF ED|Bd G>A|Bd GB|A2 FA|AG G>A:|
+|:Bd ef|g2 ga|f/e/d ef|ed BA|Bd ef|g2 ga|f/e/d ef|e2 ed:| 
+
+X:85
+T:Siobhán O'Donnell's #2
+R:jig
+C:Siobhán O'Donnell
+M:6/8
+L:1/8
+K:Am
+cde AGE|GAB A3|eag edc|eAB AGE|
+cde dcA|~G3 Gcd|ega ged|cAG A3:|
+|:~a3 ged|edg edc|~A3 GAc|dec deg |
+aeg dec|~A3 GEG|cde ged|cAG A3:|
+
+X: 86
+T: Water Under The Keel
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+dAG FAD|DEG FAD|dAG FAD|EFG ABc|
+dAG FAD|DEG FAD|dAF BAG|AEA D3:|
+|:ecA dcd|ecA def|ecA ~d3|ecA GAE|
+ecA dcA|ecA def|[1ecA ~d3|dcA GAE:|[2gfe fed|ecA GAE|] 
+
+X: 87
+T: The Yellow Wattle
+R: jig
+M: 6/8
+L: 1/8
+K: Dmix
+|:dcA AGE|ABA ABc|dcA ABc|dcA AGE|
+dcA AGE|ABA AGE|EDD cde|dcA GED:|
+|:DED c3|ded c3|DED cde|dcA GED|
+DED c3|ded d2c|ABA ABc|dcA GED:| 
+
+X: 88
+T: Maigh Séola
+R: barndance
+M: 4/4
+L: 1/8
+K: Gmaj
+|:"G"B2c-c/2 "D"d/2 d2 BA|"Em"G4 "G"BcdG|"C"e3 d "Em"cB AG |"G"B2-B/A/G/B/ "D"A3 e |
+"Bm"d2 B2 "C"g2 fg |e3 d"Bm"B2 AB|"C"G2 A/ B-B/ "D"A2 FG|[1"C" G4-G3 G/D/:|[2"G" G4-G3 G/D/|
+|:"G"Bc/B/ AG "D"d4|"C"e-e/ d/ ce "D"d2 ga|"Em" be gb "D"ag fd|"C"dc Bc "D"A3 e|
+"Bm"d2 B2 "C"g2 fg |e3 d "Bm"B2 AB|"C" G2 A/ B-B/ "D"A2 FG|[1"C" G4-G3A/D/:|[2"G"G8|| 
+
+X:89
+T:The Gold Ring
+O:england
+R:jig
+M:6/8
+L:1/8
+K:G
+BAG ~A2d|cAG ~G2A|BAG A2d|cAG FGA|
+BAG A2d|cAG GBd|~g3 afd|cAG G2A:|
+|:~B3 Bdc|~A3 dcA|~G3 GFG|ADE FGA|
+~B3 Bdc|~A3 dAG|FDE F2d|1 cAG G2A:|2 cAG G2g||
+|:fdd edd|fdd edd|fdd edd|dcA GBd|
+fdd edd|fdd ed^c|dfa ged|1 cAG G2g:|2 cAG GBd||
+|:~g3 efd|cAG GBd|~g3 efd|cAG FED|
+~g3 efd|~g3 efd|gfg afd|1 cAG GBd:|2 cAG G2E||
+|:DBB DBB|DAA DAA|~G3 GBd|cAG FGA|
+DBB DBB|DAA DAA|~G3 GBd|1 cAF G2E:|2 cAF G2A||
+|:~B3 ~D3|~A3 ~D3|~G3 GBd|cAG FGA|
+~B3 ~D3|~A3 ~D3|~G3 GBd|cAF G2A:|
+|:B2G A2G|d2G G2A|B2G A2G|cAG FGA|
+BAG AGF|GFD FGA|fag fed|cAF G2A:|
+
+X:90
+T: Leitrim Fancy
+T: Leitrim Jig
+M: 6/8
+L: 1/8
+R: jig
+K: Edor
+GBG FAF|E2B BAB|GBG FAF|D2A AFD|
+G3 F3|E2B BAB|G2B dBG|ABG FED :|
+G2B dBd|edB dBA|G2B dBG|ABG FED|
+G2B d^cd|edB def|gfe dBG|ABG FED :|\
+"last" G3 F3|E6 ||
