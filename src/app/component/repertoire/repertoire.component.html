@@ -14,7 +14,7 @@
 
         <ng-container matColumnDef="lastPracticed">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Last practiced</th>
-            <td mat-cell *matCellDef="let tune"> {{tune.lastPracticed.toLocaleDateString()}} </td>
+            <td mat-cell *matCellDef="let tune"> {{tune.lastPracticed ? tune.lastPracticed.toLocaleDateString() : ''}} </td>
         </ng-container>
 
         <ng-container matColumnDef="added">
