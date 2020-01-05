@@ -20,7 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
+import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';
 import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
@@ -37,6 +37,7 @@ import { TunePlayerComponent } from './component/tune-player/tune-player.compone
 import { TuneViewComponent } from './component/tune-view/tune-view.component';
 import { TunesListComponent } from './component/tunes-list/tunes-list.component';
 import { CaretTrackerDirective } from './directive/caret-tracker.directive';
+import { CustomReuseStrategy } from './service/custom-reuse-strategy';
 import { GoogleDriveTunebookLoaderService } from './service/google-drive-tunebook-loader.service';
 import { GoogleDriveService } from './service/google-drive.service';
 import { PracticeService } from './service/practice-service';
@@ -117,9 +118,10 @@ const appRoutes: Routes = [
         GoogleDriveTunebookLoaderService,
         PracticeService,
         RepertoireRepository,
+        { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
         TuneBookCollectionService,
         TuneBookIndex,
-        TuneBookLoaderService
+        TuneBookLoaderService,
     ],
     bootstrap: [AppComponent]
 })
