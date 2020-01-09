@@ -1,6 +1,8 @@
 <div>
     <h2 class="mat-h2">Repertoire</h2>
 
+    <p class="mat-body">{{tunes.length}} tunes</p>
+
     <table mat-table matSort [dataSource]="dataSource" class="repertoire">        
         <ng-container matColumnDef="title">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>

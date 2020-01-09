@@ -25,7 +25,7 @@ export class RepertoireComponent implements OnInit {
 
     dataSource: MatTableDataSource<RepertoireTune>;
 
-    tunes: RepertoireTune[];
+    tunes: RepertoireTune[] = [];
     displayedColumns: string[] = ['title', 'timesPracticed', 'lastPracticed', 'added'];
 
     titleWithoutNumber = titleWithoutNumber;
