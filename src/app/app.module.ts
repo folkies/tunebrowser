@@ -45,6 +45,7 @@ import { RepertoireRepository } from './service/repertoire-repository';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { LayoutModule } from '@angular/cdk/layout';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -93,6 +94,7 @@ const appRoutes: Routes = [
         BrowserModule,
         HttpClientModule,
         FormsModule,
+        LayoutModule,
         MatButtonModule,
         MatDatepickerModule,
         MatDialogModule,
