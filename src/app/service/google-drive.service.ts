@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MultiPartBuilder } from './multipart-builder';
 import { Subject, Observable } from 'rxjs';
+import { Logger, getLogger } from '@log4js2/core';
 
 const API_KEY = 'AIzaSyA-PHzVrdedVDv7s1EwAGcfOq-JFHmldlc';
 const CLIENT_ID = '98237286064-bf0vbgpqqklhj434vifvfafvtckaja12.apps.googleusercontent.com';
@@ -16,6 +17,8 @@ export interface FileReference {
 
 @Injectable()
 export class GoogleDriveService {
+
+    private log: Logger = getLogger('GoogleDriveService');
 
     private googleAuth: gapi.auth2.GoogleAuth;
 
@@ -45,13 +48,13 @@ export class GoogleDriveService {
 
         this.googleAuth = gapi.auth2.getAuthInstance();
         const user = this.googleAuth.currentUser.get();
-        console.info('Google API client initialized');
+        this.log.info('Google API client initialized');
 
         if (user.getId() === null) {
             this.authenticationStatusSource.next(false);
         } else {
-            console.info("user id = " + user.getId());
-            console.info("isSignedIn = " + this.googleAuth.isSignedIn.get());
+            this.log.info("user id = " + user.getId());
+            this.log.info("isSignedIn = " + this.googleAuth.isSignedIn.get());
             this.authenticationStatusSource.next(true);
         }
     }
@@ -98,11 +101,11 @@ export class GoogleDriveService {
                 headers: { 'Content-Type': multipart.type },
                 body: multipart.body
             });
-            console.log(`Created file with id = ${response.result.id}`);
+            this.log.info('Created file with id = {}', response.result.id);
             return response.result.id;
         }
         catch (error) {
-            console.error('Error creating file', error);
+            this.log.error('Error creating file', error);
             return null;
         }
     }
@@ -118,11 +121,11 @@ export class GoogleDriveService {
                 headers: { 'Content-Type': 'text/plain' },
                 body: content
             });
-            console.log(`Updated file with id = ${response.result.id}`);
+            this.log.info('Updated file with id = {}', response.result.id);
             return response.result.id;
         }
         catch (error) {
-            console.error('Error updating file', error);
+            this.log.error('Error updating file', error);
             return null;
         }
     }
@@ -154,7 +157,7 @@ export class GoogleDriveService {
                 mimeType: 'application/vnd.google-apps.folder'
             }
         });
-        console.info(`Created folder ${folderName} with id = ${response.result.id}`);
+        this.log.info(`Created folder ${folderName} with id = ${response.result.id}`);
         return response.result.id;
     }
 

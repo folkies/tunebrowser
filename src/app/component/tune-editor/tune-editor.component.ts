@@ -58,7 +58,6 @@ export class TuneEditorComponent implements AfterViewInit {
     }
 
     async save() {
-        console.log(`saving ${this.bookRef.descriptor.uri}`);
         await this.googleDrive.updateTextFile(this.bookRef.descriptor.uri, this.tune);
         this.bookRef.abc = this.tune;
         this.bookRef.tuneBook = new TuneBook(this.tune);

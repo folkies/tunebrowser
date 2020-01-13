@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.2.14",
+    "@log4js2/core": "^2.0.9",
     "abcjs": "^5.10.3",
     "date-fns": "^2.8.1",
     "file-saver": "^2.0.2",
