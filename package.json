@@ -25,6 +25,7 @@
     "@angular/router": "^8.2.14",
     "@log4js2/core": "^2.0.9",
     "abcjs": "^5.10.3",
+    "comlink": "^4.2.0",
     "date-fns": "^2.8.1",
     "file-saver": "^2.0.2",
     "hammerjs": "^2.0.8",
@@ -33,7 +34,7 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.21",
+    "@angular-devkit/build-angular": "^0.803.23",
     "@angular/cli": "~8.2.2",
     "@angular/compiler-cli": "^8.2.14",
     "@angular/language-service": "^8.2.14",
