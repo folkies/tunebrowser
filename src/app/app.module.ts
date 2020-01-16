@@ -1,3 +1,4 @@
+import { LayoutModule } from '@angular/cdk/layout';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -28,6 +29,7 @@ import { AuthenticationComponent } from './component/authentication/authenticati
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
 import { PracticeComponent } from './component/practice/practice.component';
+import { RecordComponent } from './component/record/record.component';
 import { RepertoireComponent } from './component/repertoire/repertoire.component';
 import { SearchComponent } from './component/search/search.component';
 import { SnippetViewComponent } from './component/snippet-view/snippet-view.component';
@@ -42,10 +44,12 @@ import { GoogleDriveTunebookLoaderService } from './service/google-drive-tuneboo
 import { GoogleDriveService } from './service/google-drive.service';
 import { PracticeService } from './service/practice-service';
 import { RepertoireRepository } from './service/repertoire-repository';
+import { AudioContextProvider } from './service/transcription/audio-context-provider';
+import { TranscriberProvider } from './service/transcription/transcriber-provider';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { LayoutModule } from '@angular/cdk/layout';
+import { Recorder } from './service/transcription/recorder';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -56,6 +60,7 @@ const appRoutes: Routes = [
     { path: 'login', component: AuthenticationComponent },
     { path: 'logout', component: AuthenticationComponent },
     { path: 'practice', component: PracticeComponent },
+    { path: 'record', component: RecordComponent },
     { path: 'repertoire', component: RepertoireComponent },
     { path: 'search', component: SearchComponent },
     { path: 'tune/:bookId/:ref', component: TunePageComponent },
@@ -76,6 +81,7 @@ const appRoutes: Routes = [
         CaretTrackerDirective,
         CreateBookComponent,
         PracticeComponent,
+        RecordComponent,
         RepertoireComponent,
         SearchComponent,
         TuneEditorComponent,
@@ -116,11 +122,14 @@ const appRoutes: Routes = [
         ScrollingModule
     ],
     providers: [
+        AudioContextProvider,
         GoogleDriveService,
         GoogleDriveTunebookLoaderService,
         PracticeService,
+        Recorder,
         RepertoireRepository,
         { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
+        TranscriberProvider,
         TuneBookCollectionService,
         TuneBookIndex,
         TuneBookLoaderService,

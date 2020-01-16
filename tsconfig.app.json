@@ -19,6 +19,7 @@
   "exclude": [
     "src/app/service/tunebook-builder.ts",  
     "src/test.ts",
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/**/*.worker.ts"
   ]
 }

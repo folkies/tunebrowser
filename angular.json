@@ -37,7 +37,10 @@
                 "node_modules/abcjs/abcjs-midi.css",
                 "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/lib/dsp.js"
+            ],
+            "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -116,7 +119,8 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "e2e/tsconfig.json",
+              "tsconfig.worker.json"
             ],
             "exclude": [
               "**/node_modules/**"
