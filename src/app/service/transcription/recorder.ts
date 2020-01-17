@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { Remote } from 'comlink';
 import { TranscriberProvider } from './transcriber-provider';
 import { ITranscriber, PushResult, TranscriptionInitParams, TranscriptionResult } from './transcription';
 import { AudioContextProvider } from './audio-context-provider';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class Recorder {
@@ -19,6 +20,13 @@ export class Recorder {
 
     analysisProgress: number;
 
+    private progressSource = new BehaviorSubject<number>(0);
+    private transcriptionResultSource = new Subject<string>();
+
+    progress: Observable<number> = this.progressSource.asObservable();
+    transcriptionResult: Observable<string> = this.transcriptionResultSource.asObservable();
+
+
     get sampleTime() { return 12; }
 
     get blankTime() { return 0; }
@@ -34,18 +42,22 @@ export class Recorder {
     get amplitude() { return this._amplitude; }
     get timeRecorded() { return this._timeRecorded; }
     get transcription() { return this._transcription; }
-    get progress() { return this._timeRecorded / (this.blankTime + this.sampleTime); }
+    get progressPercentage() { return 100 * this._timeRecorded / (this.blankTime + this.sampleTime); }
     get numSamples() { return this._audioContext.sampleRate * this.sampleTime; }
     get status() { return this._status; }
     get signal() { return this._signal; }
 
-    constructor(private audioContextProvider: AudioContextProvider, private transcriberProvider: TranscriberProvider) {
+    constructor(
+        private audioContextProvider: AudioContextProvider, 
+        private transcriberProvider: TranscriberProvider,
+        private zone: NgZone) {
         this._transcriber = this.transcriberProvider.transcriber();
 
         this._status = Status.STOPPED;
     }
 
-    onTranscribed(result: TranscriptionResult): void {
+    private onTranscribed(result: TranscriptionResult): void {
+        this.transcriptionResultSource.next(result.transcription);
     }
 
     async initAudio(): Promise<void> {
@@ -115,6 +127,9 @@ export class Recorder {
         const msg = await this._transcriber.pushSignal(signalBuffer)
         this._amplitude = msg.amplitude;
         this._timeRecorded = msg.timeRecorded;
+
+        this.zone.run(() =>
+            this.progressSource.next(this.progressPercentage));
 
         if (msg.isBufferFull) {
             await this.analyzeSignal(msg);

@@ -20,16 +20,25 @@ import { Recorder } from 'src/app/service/transcription/recorder';
     templateUrl: './record.component.html'
 })
 export class RecordComponent implements OnInit {
-    
-    private transcriber: Remote<ITranscriber>;
+
+    progress: number;
     
     constructor(
-        private recorder: Recorder,
-        private transcriberProvider: TranscriberProvider) {
+        private recorder: Recorder) {
+            this.recorder.progress.subscribe(progress =>  
+                this.progress = progress 
+            );
+
+            this.recorder.transcriptionResult.subscribe(transcription => {
+                console.log(`Recording transcribed to ${transcription}`);
+            });
     }
 
     ngOnInit(): void {
-        this.transcriber = this.transcriberProvider.transcriber();
     }
 
+    async startRecording(): Promise<void> {
+        await this.recorder.initAudio();
+        this.recorder.start();
+    }
 }
