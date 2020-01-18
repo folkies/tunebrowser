@@ -1,22 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NormalizedTune } from 'src/app/model/normalized-tune';
-import { TuneMatcher } from './tune-matcher';
+import { Remote, wrap } from 'comlink';
+import { ITuneMatcher } from './tune-matcher';
 
 @Injectable()
 export class TuneMatcherProvider {
 
-    private instance: TuneMatcher;
+    private instance: Remote<ITuneMatcher>;
 
     constructor(private httpClient: HttpClient) {
     }
 
-    async tuneMatcher(): Promise<TuneMatcher> {
+    async tuneMatcher(): Promise<Remote<ITuneMatcher>> {
         if (!this.instance) {
-            const indexedTunes = await this.httpClient.get<NormalizedTune[]>('assets/normalized-tunes.json')
+            const normalizedTunes = await this.httpClient.get('assets/normalized-tunes.json', { responseType: 'text' })
                 .toPromise()
-            const matcher = new TuneMatcher(indexedTunes);
-            this.instance = matcher;
+            const matcher =  new Worker('./tune-matcher.worker', { name: 'matcher', type: 'module' });
+            this.instance = wrap<ITuneMatcher>(matcher);
+            this.instance.setCorpus(normalizedTunes);
         }
         return this.instance;
     }

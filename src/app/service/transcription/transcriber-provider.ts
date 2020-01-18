@@ -9,7 +9,7 @@ export class TranscriberProvider {
 
     transcriber(): Remote<ITranscriber> {
         if (! this.instance) {
-            const worker =  new Worker('./transcriber.worker', { type: 'module' });
+            const worker =  new Worker('./transcriber.worker', { name: 'transcriber', type: 'module' });
             this.instance = wrap<ITranscriber>(worker);
         }
         return this.instance;

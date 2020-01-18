@@ -1,5 +1,10 @@
 <h2 class="mat-h2">Matching tunes</h2>
 
+<div id="progress" >
+    <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+</div>
+
+
 <mat-list class="tune-list">
     <mat-list-item *ngFor="let tune of tunes">
         <div class="tune-item">

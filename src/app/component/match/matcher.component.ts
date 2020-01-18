@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { proxy } from 'comlink';
 import { NormalizedTune } from 'src/app/model/normalized-tune';
 import { TuneMatcherProvider } from 'src/app/service/matching/tune-matcher-provider';
 
@@ -11,6 +11,8 @@ import { TuneMatcherProvider } from 'src/app/service/matching/tune-matcher-provi
 export class MatcherComponent implements OnInit {
 
     tunes: NormalizedTune[];
+
+    progress: number;
 
     constructor(
         private route: ActivatedRoute,
@@ -24,7 +26,7 @@ export class MatcherComponent implements OnInit {
     private async matchTranscription(map: ParamMap): Promise<void> {
         const notes = map.get('transcription');
         const tuneMatcher = await this.tuneMatcherProvider.tuneMatcher();
-        this.tunes = tuneMatcher.findBestMatches(notes);
+        this.tunes = await tuneMatcher.findBestMatches(notes, proxy((percentage: number) => this.progress = percentage));
     }
 
     confidencePercentage(tune: NormalizedTune): number {

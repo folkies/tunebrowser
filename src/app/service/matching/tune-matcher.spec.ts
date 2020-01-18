@@ -1,7 +1,6 @@
+import { getLogger, Logger } from '@log4js2/core';
 import fs from 'fs';
-import { TuneMatcher } from "./tune-matcher";
-import { Logger, getLogger } from '@log4js2/core';
-import { NormalizedTune } from 'src/app/model/normalized-tune';
+import { TuneMatcher } from "./tune-matcher.worker";
 
 describe('TuneMatcher', () => {
     let log: Logger = getLogger('TuneMatcherSpec');
@@ -20,11 +19,10 @@ describe('TuneMatcher', () => {
         log.info('loading JSON');
         const json = fs.readFileSync('src/assets/normalized-tunes.json', 'utf8');
         log.info('loaded JSON');
-        const tunes: NormalizedTune[] = JSON.parse(json);
-        log.info('parsed JSON');
-        const matcher = new TuneMatcher(tunes);
+        const matcher = new TuneMatcher();
+        matcher.setCorpus(json);
 
-        const matches = matcher.findBestMatches('CEGFGEDDCDDDADDFAAFADFAAAFFGAGDGEDCDEGGFGAFDDFEDDCEBBCCEDCEFGEDCDDDEDFAAFADFAEAFGADGEDD');
+        const matches = matcher.findBestMatches('CEGFGEDDCDDDADDFAAFADFAAAFFGAGDGEDCDEGGFGAFDDFEDDCEBBCCEDCEFGEDCDDDEDFAAFADFAEAFGADGEDD', (x: number) => null);
         matches.forEach(match => log.info(`${match.ed} ${match.name}`));
     });
 });
