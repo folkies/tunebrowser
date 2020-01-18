@@ -8,7 +8,7 @@ import { TuneMatcherProvider } from 'src/app/service/matching/tune-matcher-provi
     selector: 'matcher',
     templateUrl: './matcher.component.html'
 })
-export class MatcherComponent implements OnInit {
+export class MatcherComponent {
 
     tunes: NormalizedTune[];
 
@@ -17,9 +17,6 @@ export class MatcherComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private tuneMatcherProvider: TuneMatcherProvider) {
-    }
-
-    ngOnInit(): void {
         this.route.paramMap.subscribe(map => this.matchTranscription(map));
     }
 
