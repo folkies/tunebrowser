@@ -2,10 +2,10 @@
     <h2 class="mat-h2">Recognize</h2>
 
     <div id="progress" >
-        <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
     </div>
 
-    <div id="initial" >
+    <div id="button-container">
         <button mat-raised-button (click)="startRecording()" class="search-button" color="primary">Start</button>
     </div>
 

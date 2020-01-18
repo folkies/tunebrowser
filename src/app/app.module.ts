@@ -12,7 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
@@ -29,6 +29,7 @@ import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-r
 import { AuthenticationComponent } from './component/authentication/authentication.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
+import { MatcherComponent } from './component/match/matcher.component';
 import { PracticeComponent } from './component/practice/practice.component';
 import { RecordComponent } from './component/record/record.component';
 import { RepertoireComponent } from './component/repertoire/repertoire.component';
@@ -43,16 +44,15 @@ import { CaretTrackerDirective } from './directive/caret-tracker.directive';
 import { CustomReuseStrategy } from './service/custom-reuse-strategy';
 import { GoogleDriveTunebookLoaderService } from './service/google-drive-tunebook-loader.service';
 import { GoogleDriveService } from './service/google-drive.service';
+import { TuneMatcherProvider } from './service/matching/tune-matcher-provider';
 import { PracticeService } from './service/practice-service';
 import { RepertoireRepository } from './service/repertoire-repository';
 import { AudioContextProvider } from './service/transcription/audio-context-provider';
+import { Recorder } from './service/transcription/recorder';
 import { TranscriberProvider } from './service/transcription/transcriber-provider';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { Recorder } from './service/transcription/recorder';
-import { MatcherComponent } from './component/match/matcher.component';
-import { TuneMatcherProvider } from './service/matching/tune-matcher-provider';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -115,7 +115,7 @@ const appRoutes: Routes = [
         MatInputModule,
         MatListModule,
         MatNativeDateModule,
-        MatProgressSpinnerModule,
+        MatProgressBarModule,
         MatSelectModule,
         MatSidenavModule,
         MatSliderModule,
