@@ -51,6 +51,8 @@ import { TuneBookCollectionService } from './service/tunebook-collection.service
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
 import { Recorder } from './service/transcription/recorder';
+import { MatcherComponent } from './component/match/matcher.component';
+import { TuneMatcherProvider } from './service/matching/tune-matcher-provider';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -60,6 +62,7 @@ const appRoutes: Routes = [
     { path: 'book/:id', component: TunesListComponent },
     { path: 'login', component: AuthenticationComponent },
     { path: 'logout', component: AuthenticationComponent },
+    { path: 'match/:transcription', component: MatcherComponent },
     { path: 'practice', component: PracticeComponent },
     { path: 'record', component: RecordComponent },
     { path: 'repertoire', component: RepertoireComponent },
@@ -81,6 +84,7 @@ const appRoutes: Routes = [
         BooksListComponent,
         CaretTrackerDirective,
         CreateBookComponent,
+        MatcherComponent,
         PracticeComponent,
         RecordComponent,
         RepertoireComponent,
@@ -135,6 +139,7 @@ const appRoutes: Routes = [
         TuneBookCollectionService,
         TuneBookIndex,
         TuneBookLoaderService,
+        TuneMatcherProvider
     ],
     bootstrap: [AppComponent]
 })

@@ -11,6 +11,7 @@ import Transcriber from 'src/app/service/transcription/transcriber';
 import { Remote } from 'comlink';
 import { ITranscriber } from 'src/app/service/transcription/transcription';
 import { Recorder } from 'src/app/service/transcription/recorder';
+import { Router } from '@angular/router';
 
 /**
  * Builds and displays today's practice assignment for the default repertoire.
@@ -22,16 +23,22 @@ import { Recorder } from 'src/app/service/transcription/recorder';
 export class RecordComponent implements OnInit {
 
     progress: number;
-    
-    constructor(
-        private recorder: Recorder) {
-            this.recorder.progress.subscribe(progress =>  
-                this.progress = progress 
-            );
 
-            this.recorder.transcriptionResult.subscribe(transcription => {
-                console.log(`Recording transcribed to ${transcription}`);
-            });
+    constructor(
+        private router: Router,
+        private recorder: Recorder) {
+        this.recorder.progress.subscribe(progress =>
+            this.progress = progress
+        );
+
+        this.recorder.transcriptionResult.subscribe(transcription => {
+            console.log(`Recording transcribed to ${transcription}`);
+            if (!transcription) {
+                return;
+            }
+
+            this.router.navigate([`/match/${transcription}`])
+        });
     }
 
     ngOnInit(): void {

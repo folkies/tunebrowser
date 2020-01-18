@@ -13,7 +13,7 @@ export class TuneMatcherProvider {
 
     async tuneMatcher(): Promise<TuneMatcher> {
         if (!this.instance) {
-            const indexedTunes = await this.httpClient.get<NormalizedTune[]>('assets/indexed-tunes.json')
+            const indexedTunes = await this.httpClient.get<NormalizedTune[]>('assets/normalized-tunes.json')
                 .toPromise()
             const matcher = new TuneMatcher(indexedTunes);
             this.instance = matcher;

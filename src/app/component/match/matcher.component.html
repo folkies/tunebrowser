@@ -1,0 +1,9 @@
+<h2 class="mat-h2">Matching tunes</h2>
+
+<mat-list class="tune-list">
+    <mat-list-item *ngFor="let tune of tunes">
+        <div class="tune-item">
+            <div class="tune-link" routerLink="../../tune/{{tune.tune}}">{{tune.name}} {{confidencePercentage(tune)}} %</div>
+        </div>
+    </mat-list-item>
+</mat-list>

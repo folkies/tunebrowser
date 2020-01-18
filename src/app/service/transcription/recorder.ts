@@ -57,7 +57,8 @@ export class Recorder {
     }
 
     private onTranscribed(result: TranscriptionResult): void {
-        this.transcriptionResultSource.next(result.transcription);
+        this.zone.run(() =>
+            this.transcriptionResultSource.next(result.transcription));
     }
 
     async initAudio(): Promise<void> {
