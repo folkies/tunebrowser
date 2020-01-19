@@ -21,8 +21,8 @@ describe('TuneMatcher', () => {
         log.info('loaded JSON');
         const matcher = new TuneMatcher();
         matcher.setCorpus(json);
-
-        const matches = matcher.findBestMatches('CEGFGEDDCDDDADDFAAFADFAAAFFGAGDGEDCDEGGFGAFDDFEDDCEBBCCEDCEFGEDCDDDEDFAAFADFAEAFGADGEDD', (x: number) => null);
+        matcher.setProgressCallback((x: number) => null);
+        const matches = matcher.findBestMatches('CEGFGEDDCDDDADDFAAFADFAAAFFGAGDGEDCDEGGFGAFDDFEDDCEBBCCEDCEFGEDCDDDEDFAAFADFAEAFGADGEDD');
         matches.forEach(match => log.info(`${match.ed} ${match.name}`));
     });
 });

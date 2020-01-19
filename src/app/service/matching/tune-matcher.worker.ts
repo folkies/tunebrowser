@@ -1,12 +1,14 @@
-import { getLogger, Logger } from '@log4js2/core';
 import { expose } from 'comlink';
 import { NormalizedTune } from '../../model/normalized-tune';
 import { minEditDistance } from './edit-distance';
 import { ITuneMatcher } from './tune-matcher';
+import { Logger, getLogger, configure, LogLevel } from '@log4js2/core';
 
 export class TuneMatcher implements ITuneMatcher {
     
     private readonly log: Logger = getLogger('TuneMatcher');
+    
+    private progress: (percentage: number) => void;
 
     private normalizedTunes: NormalizedTune[];
 
@@ -25,14 +27,14 @@ export class TuneMatcher implements ITuneMatcher {
     }
 
     setCorpus(json: string): void {
-        console.log("Typeof corpus : " + typeof json);
         this.normalizedTunes = JSON.parse(json);
     }
 
-    findBestMatches(query: string, progress: (percentage: number) => void): NormalizedTune[] {
-        console.log(query);
-        console.log(progress);
+    setProgressCallback(progress: (percentage: number) => void): void {
+        this.progress = progress;
+    }
 
+    findBestMatches(query: string): NormalizedTune[] {
         let numTunes = 0;
         let results: NormalizedTune[] = [];
         for (let tune of this.normalizedTunes) {
@@ -43,11 +45,11 @@ export class TuneMatcher implements ITuneMatcher {
             numTunes++;
             if (numTunes % 1000 === 0) {
                 const progressPercentage = 100 * numTunes / this.normalizedTunes.length;
-                progress(progressPercentage);
+                this.progress(progressPercentage);
                 this.log.debug('examined tunes: {} %', progressPercentage);
             }
         }
-        progress(100);
+        this.progress(100);
         
         results.sort((left, right) => left.ed - right.ed);
         const topHits = [];
@@ -65,6 +67,12 @@ export class TuneMatcher implements ITuneMatcher {
         return topHits;
     }
 }
+
+configure({
+    level: LogLevel.INFO,
+    virtualConsole: false
+  });
+  
 
 const matcher = new TuneMatcher();
 

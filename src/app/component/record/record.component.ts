@@ -19,6 +19,7 @@ export class RecordComponent {
         );
 
         this.recorder.transcriptionResult.subscribe(transcription => {
+            this.progress = 0;
             if (!transcription) {
                 return;
             }
