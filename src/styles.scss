@@ -155,3 +155,8 @@ table.repertoire td {
 div#button-container {
     margin-top: 2em;
 }
+
+a.tune-link:link, a.tune-link:visited, a.tune-link:hover, a.tune-link:active  {
+    text-decoration: none;
+    color: black;
+}

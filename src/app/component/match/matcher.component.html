@@ -1,6 +1,6 @@
 <h2 class="mat-h2">Matching tunes</h2>
 
-<div id="progress" >
+<div id="progress">
     <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
 </div>
 
@@ -8,7 +8,8 @@
 <mat-list class="tune-list">
     <mat-list-item *ngFor="let tune of tunes">
         <div class="tune-item">
-            <div class="tune-link" routerLink="../../tune/{{tune.tune}}">{{tune.name}} {{confidencePercentage(tune)}} %</div>
+            <a class="tune-link md-accent" href="https://thesession.org/tunes/{{tune.tune}}#setting{{tune.setting}}" target="_blank">{{tune.name}}
+                {{confidencePercentage(tune)}} %</a>
         </div>
     </mat-list-item>
 </mat-list>
