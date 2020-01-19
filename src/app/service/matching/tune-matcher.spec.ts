@@ -1,18 +1,16 @@
 import { getLogger, Logger } from '@log4js2/core';
 import fs from 'fs';
-import { TuneMatcher } from "./tune-matcher.worker";
+import { TuneMatcher } from "./tune-matcher-impl";
 
 describe('TuneMatcher', () => {
     let log: Logger = getLogger('TuneMatcherSpec');
-    let d : number[][] = [];
+    let d : number[][] = new Array(2);
 
     const MAX = 1000;
-    for (let i = 0; i < MAX; i++) {
-        const row: number[] = [];
-        for (let j= 0; j < MAX; j++) {
-            row.push(0);
-        }
-        d.push(row);
+    for (let i = 0; i < 2; i++) {
+        const row: number[] = new Array<number>(MAX);
+        row.fill(0);
+        d[i] = row;
     }
     
     test('should match tune', () => {
