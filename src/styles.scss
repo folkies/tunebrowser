@@ -142,7 +142,6 @@ div.player {
 
 table.repertoire {
     width: 100%;
-    margin-bottom: 80px;
 }
 
 table.repertoire td {
@@ -165,4 +164,8 @@ a.tune-link:link, a.tune-link:visited, a.tune-link:hover, a.tune-link:active  {
 div.tune-item {
     width: 290px;
     margin-right: 10px;
+}
+
+div.main-content {
+    margin-bottom: 80px;
 }
