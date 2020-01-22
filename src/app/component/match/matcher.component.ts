@@ -4,6 +4,7 @@ import { proxy } from 'comlink';
 import { NormalizedTune } from 'src/app/model/normalized-tune';
 import { TuneMatcherProvider } from 'src/app/service/matching/tune-matcher-provider';
 import { Subject } from 'rxjs';
+import { titleWithoutNumber } from 'src/app/service/abc-util';
 
 @Component({
     selector: 'matcher',
@@ -29,5 +30,9 @@ export class MatcherComponent {
 
     confidencePercentage(tune: NormalizedTune): number {
         return Math.round(tune.confidence * 100);
+    }
+
+    title(tune: NormalizedTune): string {
+        return titleWithoutNumber(tune.name);
     }
 }
