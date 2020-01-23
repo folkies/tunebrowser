@@ -1064,3 +1064,119 @@ G3 F3|E2B BAB|G2B dBG|ABG FED :|
 G2B dBd|edB dBA|G2B dBG|ABG FED|
 G2B d^cd|edB def|gfe dBG|ABG FED :|\
 "last" G3 F3|E6 ||
+
+X: 91
+T: The Morpeth Rant
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Dmaj
+|:A|d2AG FDFA|BGBd cAce|d2f2 gfed|c2e2 e2Ac|
+d2AG FDFA|BGBd cAce|d2f2 gfec|A2d2 d3:|
+|:A|dfaf dfaf|gfef g2ef|gfed cABc|defg f2A2|
+dfaf dfaf|gfef g2ef|gfed cABc|d2f2 d3:| 
+
+X: 92
+T: Inver Bank
+C: Patrick Davey 
+M: 6/8
+L: 1/8
+R: jig
+K: Bmin
+~f3 edc|~B3 cAG|~F3 cAG|F/G/AB cde|
+~f3 edc|~B3 cAG|~F3 cAG|FGA Bzz:|
+~F3 BFD|~F3 BFD|~F3 cFG|FcF dFc|
+~F3 BFD|~F3 BFG|~F3 cAG|1FGA BGE:|2FGA Bzz||
+
+X: 93
+T: The Mill House
+R: reel
+M: C|
+L: 1/8
+K: Amaj
+AB|:c2BA FEE2|A,B,CE FBAF|EFAB cfec|cBAc B2AB|
+c2BA FEE2|A,B,CE FBAF|EFAB cfec|1BAcB ~A3B:|2BAcB A2cd||
+eAce a2ga|fdaf ecAF|EFAB cfec|cBAc B2|
+[1cd|eAce a2ga|fdaf ecAF|EFAB cfec|BAcB A2cd:||
+[2AB|cBAc B2cd|c2BA FEE2|A,B,CE FDAF|EFAB cfec|BAcB ~A3B|| 
+
+X: 94
+T: Miss Susan Cooper
+M: C|
+L: 1/8
+R: reel
+K: Dmaj
+ABc|:dfed BedB|BAFA DAFA|ABde fa^ga|g2fg egfe|
+dfed B2dB|A2FA DAFA|ABde fagf|eAce d2dc:|
+|:Bcde fB(3BBB|def^g a2gf|e2ce Aece|g2fg egfe|
+dfed B2dB|BAFA DAFA|ABde fagf|1 eAce d2dc:|2 eAce dABc||
+
+X: 95
+T: Mac's Fancy
+T: The victor's return
+R: jig
+M: 6/8
+L: 1/8
+K: Amix
+|:eAA fed|eAA A2f|eAA gfe|dBG GBd|
+eAA fed|eAA A2f|gag gfe|1 dBG GBd:|2 dBG GAB||
+|:A2a aea|aea aec|Ace agf|gdB GAB|
+A2a aea|aea aef|gag gfe|1 dBG GAB:|2 dBG GBd|| 
+
+X: 96
+T: The Golden Eagle
+R: hornpipe
+M: C|
+L: 1/8
+K: Gmaj
+BA |GBDG BDGB | dG (3Bcd g2ag | fedB cAFA| GBAG FD (3DEF |
+GBDG BDGB | dG (3Bcd g^ga=g | fedB cAFA | (3GAG F>A G2 :|
+b^a |b2 ba bagf | e^de>f g2^g2 | a2 ab agfg | (3fed (3^cde d2 ab |
+c'afd (3Bcd ef | gdad b2 ag | fedB cAFA | (3GAG F>A G2 :| 
+
+X: 97
+T: Le Voyage
+R: reel
+M: C|
+L: 1/8
+K: Amix
+AB (3cBA e3 e|AB (3cBA g3 g|agea gedg|edBA GABG|
+AB (3cBA e2 ee|AB (3cBA g3 g|agea gedB|GABG A4:|
+|:A2 EA ABcA|BAGB AGEF|G2 DG GF G2 |DGGF G2 FG|
+A2 EA ABcA|BAGB AGEF|Gbag efge|dBGA BA A2:|
+|:AB (3cBA dcBc|AB (3cBA FAEA|AB (3cBA dcBf|edca gedc|
+AB (3cBA dcBc|AB (3cBA FAEA|AB (3cBA dcBf|[1edca gedc:|[2edca gecd|
+|:eaae a3a|abag e2f2|g2gf g2ba|gagf edcd|
+eaae a3a|abag e2f2|gbag efge|dBGA BA A2:| 
+
+X: 98
+T: Fraher's Jig
+R: jig
+M: 6/8
+K: Dmix
+~A3 GED|F2A GED|~A3 GEA|~D3 DEG|~A3 GED|FED GED|~A3 GEA|~D3 DEG:|
+ABA d2A|d2A AGE|GAB c2A|BGE EDD|Add def|dcA AGE|AcA GEA|~D3 DEG:|
+
+X: 99
+T: The New Copperplate
+M: C|
+L: 1/8
+R: reel
+K: Gmaj
+G2dG BGdG|~G2dc BGGB|A2eA cAeA|
+~A2ed cAFA|G2dG BGdG|~G2dc BGG2|
+ABcd efge|1 aged cAFA:|2 aged ^cdef||
+|:g2 gf g2ef|gedc BGGB|Aaag agea|
+aged ^cdef|g2 gf g2ef|gedc BGGB|
+ABcd efge|1 aged ^cdef:|2 aged cAFA||
+
+X: 100
+T: The Blackbird
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Dmaj
+|:AG|FEFA GFD2|defd dcAF|G2GF GFDE|FGAF GBAG|
+F2FA GFD2|defd dcAG|Ad (3cBA GBAG|F2D2 D2:|
+|:fg|agfa gfeg|fdec dcA2|agfa gfde|(3fed gf e2fg|
+(3agf ge f2fe|d2de fdec|dcAF GBAG|F2D2 D2:| 
