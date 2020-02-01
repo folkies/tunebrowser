@@ -2470,7 +2470,7 @@ FG|"D"Addc AGFG|Adde fded|Addc AGFG|"Am"ABcA "G"G2 FG|
 
 X: 189
 T:189 Kings Of Kerry
-C:Mike Scott, Sharon Shannon & Steve Wickham(Waterboys)
+C:Mike Scott, Sharon Shannon & Steve Wickham (Waterboys)
 R: slide
 M: 12/8
 L: 1/8
@@ -3543,9 +3543,22 @@ A|"G"B2G Bcd|"C"ecc efg|"G"dcB gdB|"D"ABA ABc|"G"B2G Bcd|"C"ecc efg|"G"dcB gdB|"
 f|"G"~g3 bag|"D"fed "A"^cde|"G"dcB gdB|"D"ABA ABd|"G"~g3 bag|"D"fed "A"^cde|"G"dcB gdB|"D"AGF "G"G2f|
 "G"~g3 bag|"D"fed "A"^cde|"G"dcB gdB|"D"ABA ABc|"G"BAG Bcd|"C"edc efg|"G"dcB gdB|"D"AGF "G"G2||
 
-
 X: 265
-T:265 Da Slockit Light zweite Stimme
+T: 265 Da Slockit Light
+R: reel
+M: 4/4
+C:Tom Anderson
+L: 1/8
+K:Dmaj
+FE|"D"D3F A2d2|fedc d2A2|"G"B2d2 "D"A2d2|"G"BAGF "Em"EGFE|
+"D"D3F A2d2|fedc d2A2|"G"B2G2 "A"AGFE|"D"D4- D2:|
+g2|"D"f2a2 "A"e3c|"D"d3e dcBA|"D"f2a2 "E"e2^g2|"A"a4- a2"A7"=g2|
+"D" f2a2 "A"e3c|"D"d3e dcBA|"G"B2G2 "A"AGFE|"D"D4- D3g|
+"D"f2a2 "A"e3c|"D"d3e dcBA|"G"B2d2 "D"A2d2|"G"BAGF "Em"EGFE|
+"D"D3F A2d2|fedc d2A2|"G"B2G2 "A"AGFE|"D"D4- D2|]
+
+X: 265a
+T:265a Da Slockit Light zweite Stimme
 R: reel
 M: 4/4
 C:Tom Anderson
@@ -3692,7 +3705,7 @@ A|"D"def d2 B|AFA AFA|def d2 f|"A"ede "Bm"fdB|
 
 
 X: 276
-T:276 Jerry Beaver's Hat
+T:276 Jerry's Beaver Hat
 M: 6/8
 L: 1/8
 R: jig
@@ -3748,7 +3761,8 @@ Bc|"G"d~g3 "C"efge|"G"dggB "C"c2Bc|"G"d~g3 "C"efge|"G"dBGB "D"A2Bc|
 
 X: 280
 T:280 Condon's Frolics
-M: 6/8L: 1/8
+M: 6/8
+L: 1/8
 R: Jig
 K:A Dorian
 "Am"eAB c2d|"(C)"edc "G"BAG|"Am"eAB c2d|"(C)"e2d eag|
@@ -3760,7 +3774,6 @@ K:A Dorian
 X: 281
 T:281  Fanny Power
 C:Turlough O'Carolan (1670-1738)
-C:GRAZIOSO
 R: Waltz
 L: 1/8
 K:Gmaj
