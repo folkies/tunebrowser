@@ -8,7 +8,8 @@
 <mat-list class="tune-list">
     <mat-list-item *ngFor="let tune of tunes">
         <div class="tune-item">
-            <a class="tune-link md-accent" href="https://thesession.org/tunes/{{tune.tune}}#setting{{tune.setting}}" target="_blank">{{title(tune)}}</a>
+            <a class="tune-link md-accent" href="https://thesession.org/tunes/{{tune.tune}}#setting{{tune.setting}}" target="thesession">{{title(tune)}}</a>
+            <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
         </div>
         <div class="confidence">
             {{confidencePercentage(tune)}} %

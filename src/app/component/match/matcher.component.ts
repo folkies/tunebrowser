@@ -35,4 +35,8 @@ export class MatcherComponent {
     title(tune: NormalizedTune): string {
         return titleWithoutNumber(tune.name);
     }
+
+    getRhythmAndKey(tune: NormalizedTune): string {
+        return `${tune.rhythm} in ${tune.key}`;
+    }
 }
