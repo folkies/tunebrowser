@@ -1180,3 +1180,173 @@ K: Dmaj
 F2FA GFD2|defd dcAG|Ad (3cBA GBAG|F2D2 D2:|
 |:fg|agfa gfeg|fdec dcA2|agfa gfde|(3fed gf e2fg|
 (3agf ge f2fe|d2de fdec|dcAF GBAG|F2D2 D2:| 
+
+X: 101
+T: The Scotsman over the Border
+R: jig
+M: 6/8
+K: D
+DED FDF | AFA d2A | ~B3 BAB | dgf edB |
+ADD FDF | AFA d2A | ~B3 AFA | dAF ~E3 :|
+|: dfa afa | bag fef | dfa afe | def edB |
+dfa afa | bag fed | B2B AFA | dAF ~E3 :|
+
+X: 102
+T: Father Quinn's
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+|:A|~B3 BAF|BdB BAF|AFE DB,A,|DFA BAF|
+~B3 BAF|BdB BAF|AFE DB,A,|B,EE E2:|
+|:B|efe BAB|ede gfe|dcd edB|AFE DEF|
+GBG FAF|EFE EDB,|DFA dcd|BAF E2:| 
+
+X: 103
+T: Langstrom's Pony
+M: 6/8
+L: 1/8
+R: jig
+K: Amix
+|:fed cAA|EAA cAA|fed cAA|BGB dcB|
+fed cAA|EAA cAA|faf gfe|dBG Bcd:|
+|:cee dff|cee ecA|cee g2e|dBG Bcd|
+cee dff|cee efg|faf gfe|dBG Bcd:|
+|:Ace a2f|ecA ecA|GBd g2e|dBG Bcd|
+eaf g2e|fed ecA|a2f gfe|dBG Bcd:|
+|:AEA A2d|cAc ecA|AEA AB=c|BGB dcB|
+AEA A2d|cAc efg|faf gfe|dBG Bcd:|
+
+X: 104
+T: Karen Tweed's
+M: 6/8
+L: 1/8
+R: jig
+K: Am
+ced AGE | GAB A2d | eag ecd | eAB AGE |
+ced AGE | ~G3 Gce | eaa ged | cAG A3 :|
+a2a ged | edg edc | A/B/cA GAc | dec deg |
+aeg dec | AcA GEE | cde ged | cAG A3 :|
+
+X: 105
+T: Autumn Child
+R: reel
+M: 4/4
+L: 1/8
+K: Edor
+B=c|:B2EF G2AG|F2EF D2BA|BEEF GABc|d2cB ABcd|
+B2EF G2AG|F2EF D2BA|BEEF GABA|FGFD EFGA:|
+|:B2 e2 d3e|c2BA BEFE|DEFG A2Bc|d2cB ABcd|
+B2EF G2AG|F2EF D2BA|BEEF GABA|1 FGFD EFGA:|2 FGFD E4||
+
+X: 105
+T: Return To Camden Town
+R: reel
+M: C|
+L: 1/8
+K: C
+AG |: E2DE cAag|edcA EGAB|cBcd edeg|aged cABG|
+E2DE cAag|edcA EGAB|cBcd edeg|1 aged cA~A2 :|[2 aged cAAB||
+|: c2gc acgc|c2ec dcAB|cBcd edeg|agea gedB|
+c2gc acga|gfge dcAG|~A3B cdeg|1 aged cAAB :|[2 aged cA~A2 ||  
+
+X: 106
+T: The Soup Dragon
+R: jig
+M: 6/8
+L: 1/8
+K: Em
+|:A|BEE EDE|ABB BAG|~A3 A2G|ABB AGA|
+BEE EDE|ABB BAG|~A3 B2A|GED E2:|
+A|Bdd dBG|ABB BAG|AAA A2 G|AAA AGA|
+Bdd dBG|ABB BAG|AAA B2A|GED Ez A|
+|Bdd dBG|ABB BAG|AAA A2 G|ABB BAG|
+BEE EDE|ABB BAG|AzA B2A|GED E2|| 
+
+X: 107
+T: Rory Gallagher's
+R: jig
+M: 6/8
+L: 1/8
+K: Amix
+|:c|eaa faa | eae fec | ecf ecA | cBA Bcd |
+|eaa faa | eae fec | ecf ecA |BAA A2 :|
+|: a|cAA cde | dAA ded | eAA eAe | dAA ded |
+|cAA cde | dAA ded | ecf ecA |BAA A2 :| 
+
+X: 108
+T: Barney Brannigan
+R: slip jig
+M: 9/8
+L: 1/8
+K: D
+F2A ABA ABA|F2A ABA Bcd|F2A ABA ABA|BGB e2d cBA:|
+|:f2a f2a fed|f2a f2a gfe|f2a f2a fed|g2f e2d cBA:|
+|:f3 a3 d2f|g2f e2d cBA|f2a e2f d2B|A2B A2G FED:| 
+
+X: 109
+T: Helvic Head
+T: Walk out of it Hogan
+R: jig
+M: 6/8
+L: 1/8
+K: G
+G3 AGE | A3 AGE | G3 AGE | GAB GED |
+G3 AGE | ABA ABc | BAG AGE | GAB GED :|
+BGG AGG | BGG AGE | BGG AGE | G2 A GED |
+BGG cAA | dBB eAA | BGG AGE | G2 A GED :|
+gfg dBG | ABA ABd | gfg dBG | dgf g2 a |
+bag agf | gfe dBG | BAG AGE | G2 A GED :|
+G2 c BGd | BGd AFD | G2 c BGd | AFD GED |
+G2 c BGd | BGd ABc | BAG AGE | G2 A GED :|
+DED DED | ABA AGE | DED DED | GAG GED |
+DED DED | A3 ABc | BAG AGE | GAB GED :|
+
+X: 110
+T: Sherlock's Fancy
+T: Jack Maguire's
+T: The Snake
+B: B.Flaherty collection
+M: C|
+L: 1/8
+R: reel
+K: D
+FE | DF F2 DGBG | DFAF GECE | DF F2 ABde | fdAG FAEF |
+DF F2 DGBG | DFAF GECE | DF F2 ABde | fdAG FD D2 |]
+fgaf g2 ag | fgaf gfeg | fgaf g2 eg | dfAG FD D2 |
+fgaf g2 ag | fgaf gfeg | fdAF G2 ag | fdAG FAEF |]
+
+X: 111 
+T: Christy Barry's #1
+R: jig
+M: 6/8
+L: 1/8
+K: G
+G3 BAG|A2B d2e|ged BAG|A3 BGE|
+G3 BAG |A2B d2e|ged BAG|A2G G3:|
+g3 efg|a3 d2e|ged BAG|A3 BGE|
+G3 BAG |A2B d2e|ged BAG|A2G G3:| 
+
+X: 112
+T: The Green Fields of America
+R: reel
+M: C|
+L: 1/8
+K: G
+|:c2ec B2dB | AGAB AGEF | G3E DEGA | BGAB AGEG |
+c2ec B2dB | AGAB AGEF | G3E DEGA|BGAB G4 :||
+|:GABc d2ef | gage dBGB | c2ec B2dB | AGAB AGED |
+|1 GABc d2ef | gage dBGB | c2ec B2dB | AGAB G4 :|
+|2 g3d efge | dBGB AGED | G3E DEGA | BGAB G4 || 
+
+X: 113
+T: The Rakes of Mallow
+T: Piping Tim of Galway
+M: 2/4
+L: 1/16
+K: G
+G2B2 G2B2 | G2B2   cBAG | F2A2 F2A2 | F2A2 BAGF |
+yG2B2 G2B2 | G2B2 d2d2 |  cBAG   FGAB  |  G4  G4 :|
+y g2fe  d2c2 | B2c2 d4  | g2fe y d2c2 | B2d2 A4 |
+y g2fe y d2c2 | B2c2 d4  | cBAG   FGAB  |  G4 y G4 y :|
+ 
