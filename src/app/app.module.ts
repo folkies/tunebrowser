@@ -53,6 +53,8 @@ import { TranscriberProvider } from './service/transcription/transcriber-provide
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -125,7 +127,8 @@ const appRoutes: Routes = [
         MatToolbarModule,
         ReactiveFormsModule,
         RouterModule.forRoot(appRoutes),
-        ScrollingModule
+        ScrollingModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [
         AudioContextProvider,

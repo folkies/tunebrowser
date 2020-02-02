@@ -31,7 +31,7 @@
                 "src/favicon-16x16.png",
                 "src/favicon-32x32.png",
                 "src/site.webmanifest",
-              "src/assets"
+                "src/assets"
             ],
             "styles": [
                 "node_modules/abcjs/abcjs-midi.css",
@@ -70,7 +70,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
