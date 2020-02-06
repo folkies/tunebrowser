@@ -5,6 +5,7 @@ R:polka
 M:2/4
 L:1/8
 K:A
+%%stretchlast
 "A"A>B cA|"E"BA "A"cA|"A"A>B cA|"D"BA FE|
 "A"A>B cA|"E"BA "A"ce|"D"A>B AF|"E"FE E2:|
 |:"A"e>f ec|"E"BA "A"Bc|e>f ec|"D"BA F2|
@@ -13,15 +14,17 @@ K:A
 
 X: 1b
 T:1b    Peg Ryan's
-T:Egan's Polka / The Kerry Polka
+T: Egan's Polka
+T: The Kerry Polka
 R:polka
 M:2/4
 L:1/8
-K:D Major
-"D"fA BA|fA BA|d2 e>f|"(Hm)"ed Bd|!
-"D"fA BA|fA BA|d2 e>f|ed d2:|!
-"D"fa e>f|ed Bd|fa e>f|ed d2|!
-"D"fa e>f|ed Bd|"A"A2 a>f|"D"ed d2:|!
+K:D
+%%stretchlast
+"D"fA BA|fA BA|d2 e>f|"(Hm)"ed Bd|
+"D"fA BA|fA BA|d2 e>f|ed d2:|
+"D"fa e>f|ed Bd|fa e>f|ed d2|
+"D"fa e>f|ed Bd|"A"A2 a>f|"D"ed d2:|
 
 
 X: 1c
@@ -30,6 +33,7 @@ R:polka
 M:2/4
 L:1/8
 K:A
+%%stretchlast
 "A"E>E Ec|"D"BA FA|"A"E>E Ec|"D"BA AF|
 "A"E>E Ec|"D"BA FA|"A"E2 e>c|1 BA AF:|2 BA A>B||
 "A"ce B>c|"D"BA FA|"A"ce B>c|"D"BA AB|
@@ -38,7 +42,7 @@ K:A
 
 X: 2
 T:2    The Lisnagun
-P:Lios na gCon or "Fort of the Hound"
+T:Lios na gCon or "Fort of the Hound"
 C: Brendan Ring
 M: 6/8
 L: 1/8
@@ -49,13 +53,13 @@ K:Cmaj
 "C"~g3 edc|"G"deg "C"~e3|"G"deg "C"edc|"F"dcA "C"cAG|
 "C"~g3 edc|"G"deg"C"e2c|"G"deg "C"edc|"F"dcA "C"cde|
 "C"~g3 "a"age|"G"deg "C"~e3|"G"deg "C"edc|"F"dcA "C"cAG|
-"C"cAG ~c3|"G"deg "C"~e3|"G"deg "C"edc|"F"dcA "C"c3||
+"C"cAG ~c3|"G"deg "C"~e3|"G"deg "C"edc|"F"dcA "C"c3|]
 
 
 X: 3a
-T:3a    Sliabh Russel (aDor)
+T:3a    Sliabh Russell 
 M:6/8
-R:Jig
+R:jig
 K:Ador
 "Am"eAA "G"Bcd|"Am"eaf "G"ged|"(Em)"edB "a"cBA|"G"BAG Bcd|
 "Am"eAA "G"Bcd|"Am"eaf "G"ged|"(Em)"edB "Am"cBA|"G"BAG "Am"A2d:|
@@ -70,13 +74,13 @@ M: 9/8
 L: 1/8
 R: slip jig
 K:Bmin
-|:"Hm"B3 BAB f3| B3 BAB "D"dBA|"Hm"B3 BAB f2g|"D"afd "G"edB "D"dBA:|
+|:"Bm"B3 BAB f3| B3 BAB "D"dBA|"Bm"B3 BAB f2g|"D"afd "G"edB "D"dBA:|
 |:"D"afd def "G"g2b|"D"afd def "G"edB|"D"afd def "e"g2e|"D"fed "G"edB "D"dBA:|
 
 
 X: 4
 T:4    The Rights of Man
-R:Hornpipe
+R:hornpipe
 C:James Hill, Northumberland (c.1811–1853)
 M:C|
 K:Em
@@ -95,7 +99,7 @@ K:Em
 B,2|"Em"E2 EF "G"G2 GA|"Em"BcBA G2E2|"D"D2DE FEFG|ABAG F2D2|
 "Em"EDEF "G"GFGA|"Em"BcBA "G"G2GA|B2 Bc BAFG|1 "Em"E2 E2 E2 :|2 "Em"E2E2 E4||
 "C"[e2c2] [e2c2] [e3c3]e|"G"dBGA B3c|"Em"BAFG "D"A2AB|AGED "Em"EFGA|!
-"C"e2e2 g2ge|"G"dBGA B3c|B2 Bc BAFG|1 "Em"E2E2E4:|2 "Em"E2E2E2||!
+"C"e2e2 g2ge|"G"dBGA B3c|B2 Bc BAFG|1 "Em"E2E2E4:|2 "Em"E2E2E2|]
 
 
 X: 6a
@@ -117,23 +121,23 @@ L:1/8
 K:D
 A | "D" FAA "G" GBB | "D" FAd fed | "A" cBc ABc | "D" dfe dAG |
 "D" FAA "G" GBB | "D" FAd fed | "A" cBc ABc | "D" dfe d2  :|
-c | "Hm" dBB    fBB | fgf     fed | "A" cAA eAA | efe edc |
-"Hm" dBB    fBB | fgf     fed | "A" cBc ABc | "D" dfe d2  :|
+c | "Bm" dBB    fBB | fgf     fed | "A" cAA eAA | efe edc |
+"Bm" dBB    fBB | fgf     fed | "A" cBc ABc | "D" dfe d2  :|
 
 
 X: 6c
 T:6c    My Darling Asleep
 M:6/8
-R:Jig
+R:jig
 K:D
-|"D" fdd "A"cAA|"G" BGB "D"A2G|FAA "(Hm)"def|"Em"gfg "A7"eag|
+|"D" fdd "A"cAA|"G" BGB "D"A2G|FAA "(Bm)"def|"Em"gfg "A7"eag|
 |"D"fdd "A"cAA |"G" BGB "D"A2G|FAA def|"A7"gec "D"d2 A :|
-|:  "D"FAA "G"BAG|"D"FAA "G"BAG |"D" FAA "(Hm)"def|"Em" gfg "A7"eag|
+|:  "D"FAA "G"BAG|"D"FAA "G"BAG |"D" FAA "(Bm)"def|"Em" gfg "A7"eag|
 |"D"fdd "A"cAA|"G"BGB "D"A2G|FAA def|"A7"gec "D"d2 e:|
 
 
 X: 7
-T:7    Donegal Reel  HH
+T:7    Donegal Reel
 T: Larry Redican's Bow
 C:Larry Redican
 M:4/4
@@ -142,7 +146,7 @@ K:D
 "D"D2FD A,DFD|"Em"E2GE B,EGE|"D"D2dA "G"BAGF|"Em"G2F E2 GFE|
 "D"D2FD A,DFD|"Em"E2GE B,EGE|"D"D2dA "G"BAGF|"A"EDCE "D"D3A:|
 "G"B2BA B2Bc| dBBA B2Bd|"A"c~A3 fAeA|"D" ABde f2"(A)"ec|
-"G"B2BA B2Bc| dBBA B2Bc|"D"dBcA BAFA |1"A"ABde "D"f2ec:|2"G"BdDE "D"FE2F|
+"G"B2BA B2Bc| dBBA B2Bc|"D"dBcA BAFA |1"A"ABde "D"f2ec:|2"G"BdDE "D"FE2F|]
 
 
 X: 8
@@ -150,10 +154,10 @@ T:8    Maid Behind the Bar
 M:C|
 R:reel
 K:D
-"D"FAAB AFED| FAAB ABde| "Hm"fBBA Bcde| "D"f2af "A"edBA|
-"D"FAAB AFED| FAAB ABde| "Hm"fBBA "G"BcdB| "A"AFEF "D"D4 :|
+"D"FAAB AFED| FAAB ABde| "Bm"fBBA Bcde| "D"f2af "A"edBA|
+"D"FAAB AFED| FAAB ABde| "Bm"fBBA "G"BcdB| "A"AFEF "D"D4 :|
 "D"faag fd ~d2|fdad fddf| "Em"efga beef|gebe geeg|
-"D"faaf bfaf| defd "A"e2 de| "Hm"fBBA "G"BcdB| "A"AFEF "D"D4 :|
+"D"faaf bfaf| defd "A"e2 de| "Bm"fBBA "G"BcdB| "A"AFEF "D"D4 :|
 
 
 X: 9
@@ -173,7 +177,6 @@ B:Francis O'Neill: "The Dance Music of Ireland" (1907) no. 643
 R:Reel
 M:C|
 L:1/8
-F:http://jc.tzo.net/~jc/music/abc/Contra/reel/JuliaDelaney_d.abc	 2006-05-16 17:06:47 UT
 K:Ddor
 "Dm"dcAG F2DF | "C"E2CE "Dm"F2D2 | dcAG F2DF | Add^c "(Bb)"defe |
 "Dm"dcAG F2DF | "C"E2CE "Dm"F2D2 | dcAG F2DF | Add^c d3e :|
@@ -186,23 +189,21 @@ T:12    The Butterfly
 C:Tommy Potts
 M:9/8
 L:1/8
-Z:kk
-R:Slip Jig
-K:G
+R:slip jig
+K:Em
 "Em"B2 E G2E "Dsus2" F3 |"Em(Cmaj7)"B2 E G2E "Dsus2" FED  |"Em"B2 E G2E "Dsus2" F2D|"Em(Cmaj7)"B2d d2B "Dsus2" AFD :||
 "Em(Am7)"B2c e2f g3|"Em(Cmaj7)"B2c g2e "Dsus2" dBA  |"Em(Am7)"B2c e2f  g2 a  |"Em(Cmaj7)"b2a g2e "Dsus2" dBA :||
-"Em" B3   B2A  G2 A  | "EmDis"B3   BAB dBA  |"G" B3   B2A  G2 A  |"A" Bcd g2e "Dsus2" dBA :||
+"Em" B3   B2A  G2 A  | "EmDis"B3   BAB dBA  |"G" B3   B2A  G2 A  |"A" Bcd g2e "Dsus2" dBA :|
 
 
 X: 13
 T:13    Cucanandy
-C:Slip Jig
 R:slip jig
 M:9/8
 K:Edor
 "G"~B3 B2A G2A|"G"B2d d2c d3|~B3 B2A G2A|"Em"B2e e2d e3:|
 "Em"e2f g2f g3|"G"B2d d2c d3|"Em" e2f g2f g3|B2e e2d e3|
-"Em"e2f g2f g3|"G"B2d d2c d3|"Em"e2B B2A G2A|B2e e2d e3||
+"Em"e2f g2f g3|"G"B2d d2c d3|"Em"e2B B2A G2A|B2e e2d e3|]
 
 
 X: 14
@@ -211,19 +212,18 @@ T: Humours of Tulla
 M: 4/4
 L: 1/8
 R: Reel
-F:http://www.qmcorp.net/webabc/bigfolder/cce-session.abc	 2006-12-04 17:20:01 UT
 K:D
 "D"d2 Ad "G"BdAB|"D"d2 fd "A"edBc|"D"d2 Ad "G"BdAd|"Bm"(3Bcd ef "G"g2 fe|
 "D"d2 Ad "G"BdAB|"D"d2 fd "A"edBc|"D"d2 Ad "G"BdAd|"Bm"(3Bcd ef "G"g2 fg ||
 "D"af ~f2 df ~f2|af ~f2 "A"ge e2|"D"af ~f2 dfed|"Bm"(3Bcd ef "G"g2 fg|
-"D"af ~f2 "h"bf ~f2|"D"af ~f2 "A"ge e2|"D"af ~f2 dfed|"Bm"(3Bcd ef "G"g2 fe||
+"D"af ~f2 "Bm"bf ~f2|"D"af ~f2 "A"ge e2|"D"af ~f2 dfed|"Bm"(3Bcd ef "G"g2 fe|]
 
 
 X: 15
 T:15   Fig for a kiss
 M:9/8
 R:slip jig
-K:Bm
+K:Edor
 "Em"G2B E2B BAG|"D"F2A D2A AGF|"Em"G2B E2B BAG|"G"BdB "D"AGF "Em"E3:|
 "Em"g2e g2e edB|"D"~f2d dcd fed|"Em"g2e g2e edB|"G"dBG GBd "Em"e2f|
 "Em"g2e g2e edB|"D"~f2d dcd fed|"Em"gfe "D"fed "Em"ege|"G"BdB "D"AGF "Em"E3||
@@ -233,8 +233,7 @@ X: 16
 T:16    Cliffs of Moher
 M: 6/8
 L: 1/8
-R: Jig
-F:http://www.tastysoftware.com/abc/CliffsOfMoherJ.abc	 2007-01-04 21:01:58 UT
+R: jig
 K:Ador
 |:d |"Am" ~a3 "(G)"bag|"Am" eaf "G"ged|"Am"c2A "G" BAG|"Em"EFG "D"Acd|
 "Am"eaa "(G)"bag|"Am"eaf "G"ged|"Am"c2A "G"BAG|"Em"EFG "Am"A2 :|
@@ -273,7 +272,6 @@ GA|"G"B2GB "C"AGEG|"G"DGGF GABd|"C"cBAB cBAG|"Am"EAAG "D"FDGA|
 
 X: 19
 T:19    Going to the Well for Water
-C:Slide
 R:slide
 M:6/8
 K:D
@@ -285,10 +283,8 @@ K:D
 
 X: 20
 T:20    Merrily Kiss the Quaker's Wife
-C:Slide @
 R:slide
 M:6/8
-Z:kk
 K:G
 "G" GAB D2B|"C" c2A "G" BGE| GAB DEG|"D" A3 AGE|
 "G" GAB D2B|"C" c2A "G" BGE| GAB "D" DEF|1 "G"G3 G2D:|2 "G"G3 G2A||
@@ -314,8 +310,7 @@ X: 23
 T:23    Red Haired Lass
 M: 4/4
 L: 1/8
-R: Reel
-F:http://www.qmcorp.net/webabc/bigfolder/cce-session.abc	 2007-05-24 20:37:34 UT
+R: reel
 K:G
 "G"DGGF ~G2 BG|~G2 BG "C"AGEG|"G"DGGF GABd|"C"egdB "Am"cBAB|
 "G"DGGF ~G2 BG|~G2 BG "C"AGEG|"G"DGGF GABd|"C"egdB c2 Bc||
@@ -327,25 +322,23 @@ X: 24
 T:24    Brosna Slide
 M: 12/8
 L: 1/8
-R: Slide
-F:http://www.qmcorp.net/webabc/bigfolder/cce-session.abc	 2007-05-24 20:47:13 UT
+R: slide
 K:G
 "G"D2G G2A BAB d2B|"D"A2D FED A2D FED|
-"G"G3 G2A BAB d2B|"D"A2D FED "G"G3 |1GFE :|2GBd|
-"G"g2f efg "D"f2e d2B|"D7"c2B A2B "C"c2d e2f|
-"G"g2f efg "D"f2e d2B|"D7"c2A FED "G"G3 |1GBD:|2 GFE||
+"G"G3 G2A BAB d2B|"D"A2D FED "G"G3 |1GFE :|2GBd||
+|:"G"g2f efg "D"f2e d2B|"D7"c2B A2B "C"c2d e2f|
+"G"g2f efg "D"f2e d2B|"D7"c2A FED "G"G3 |1GBd:|2 GFE||
 
 
 X: 25
 T:25    Cooley's
-C:Reel
 R:reel
 M:C|
-K:Em
+K:Edor
 "Em"EBBA B2EB|~B2AB "(G)"dBAG|"D"(3FED AD BDAD|FAdB AGFD|
 "Em"EBBA B2EB|~B2AB "D"defg|afge dBAF|1 DEFD "Em"E2ED:|2 DEFD "Em(A)"E2gf||
 |:"Em"eB~B2 eBgB|eB~B2 "(G)"gedB|"D"A2FA DAFA|~A2FA defg|
-"Em"eB~B2 eBgf|edB^c "D"defg|afef dBAF|1 "D"DEFD "Em"E2gf:|2 "D"DEFD "Em"E2ED||
+"Em"eB~B2 eBgf|edBc "D"defg|afef dBAF|1 "D"DEFD "Em"E2gf:|2 "D"DEFD "Em"E2ED||
 
 
 X: 26
