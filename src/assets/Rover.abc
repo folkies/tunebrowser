@@ -739,12 +739,12 @@ T:The Battering Ram
 M:6/8
 L:1/8
 R:jig
-K:Dmaj
+K:G
 |: dBG BAG | dBG G2B | dBG AGE | GFD D2B |
 dBG BAG | BdB BAG | AGA BAB | GED D2B :|
 |: deg aga | bge edB | deg aga | bge ega |
 bag age | ged ege | dAG AGE | GED D2B :|
-|: B2G A2G | BGE DdC | BAG AGE | GED DdC |
+|: B2G A2G | BGE D2A | BAG AGE | GED D2d |
 B2G A2G | BdB BAG | AGA BAB | GED D3 :|
 
 X:64
