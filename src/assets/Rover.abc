@@ -1270,9 +1270,9 @@ M: 6/8
 L: 1/8
 K: Amix
 |:c|eaa faa | eae fec | ecf ecA | cBA Bcd |
-|eaa faa | eae fec | ecf ecA |BAA A2 :|
+eaa faa | eae fec | ecf ecA |BAA A2 :|
 |: a|cAA cde | dAA ded | eAA eAe | dAA ded |
-|cAA cde | dAA ded | ecf ecA |BAA A2 :| 
+cAA cde | dAA ded | ecf ecA |BAA A2 :| 
 
 X: 108
 T: Barney Brannigan
@@ -1337,7 +1337,7 @@ K: G
 c2ec B2dB | AGAB AGEF | G3E DEGA|BGAB G4 :||
 |:GABc d2ef | gage dBGB | c2ec B2dB | AGAB AGED |
 |1 GABc d2ef | gage dBGB | c2ec B2dB | AGAB G4 :|
-|2 g3d efge | dBGB AGED | G3E DEGA | BGAB G4 || 
+|2 g3d efge | dBGB AGED | G3E DEGA | BGAB G4 |] 
 
 X: 113
 T: The Rakes of Mallow
@@ -1345,8 +1345,235 @@ T: Piping Tim of Galway
 M: 2/4
 L: 1/16
 K: G
-G2B2 G2B2 | G2B2   cBAG | F2A2 F2A2 | F2A2 BAGF |
-yG2B2 G2B2 | G2B2 d2d2 |  cBAG   FGAB  |  G4  G4 :|
-y g2fe  d2c2 | B2c2 d4  | g2fe y d2c2 | B2d2 A4 |
-y g2fe y d2c2 | B2c2 d4  | cBAG   FGAB  |  G4 y G4 y :|
+%%stretchlast
+G2B2 G2B2 | G2B2 cBAG | F2A2 F2A2 | F2A2 BAGF |
+G2B2 G2B2 | G2B2 d2d2 | cBAG FGAB | G4  G4 :|
+|: g2fe  d2c2 | B2c2 d4  | g2fe d2c2 | B2d2 A4 |
+g2fe d2c2 | B2c2 d4 | cBAG FGAB | G4 G4 :|
  
+X: 114
+T: Anthony Frawley's
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|:BA|GED GBA|GED G2A|GED GAB|dBA B/2c/2BA|
+GED GAB|def g2a|bag e/2f/2ge|dBG A:|
+|:Bc|~d3 edB|def gfe|~d3 edB|dBG ABc|
+~d3 edB|def g2a|bag e/2f/2ge|dBG A:| 
+
+X: 115
+T: Rory MacLeod
+R: jig
+M: 6/8
+L: 1/8
+K: A
+|:(c2 A) cee|fee faa|(c2 A) cee|fec cBB|
+(c2 A) cee|fee faa|fcc ecB|cAA A2 e:|
+|:cee fee|aee fee|cee fee|aee eff|
+cee fee|aee fee|fcc ecB|1cAA A2 e:|2 cAA A3||
+|:Acc cdd|dcc (c2 B)|Acc cdd|dcc cBB|
+Acc cdd|dcc (c2 e)|fcc ecB|1 cAA A3:|2 cAA A2 e||
+|:faa aff|fee (e2 c)|cBB Bce|fee eff|
+faa aff|fee (e2 c)|fec ecB|1 cAA A2 e:|2 cAA A3||
+
+X: 116
+T: The Limerick Lasses
+R: reel
+M: C|
+L: 1/8
+K: D
+dBAF DFAG|GFGA BE E2|dBAF DFAF|GBAG FD D2:|
+dcde f2 fe|dfed cAAB|cdef g2 ag|faeg fd d2:|
+
+X: 117
+T: My Kindly Sweetheart
+T: The Gentle Milkmaid
+R: reel
+M: C|
+L: 1/8
+K: Bmin
+|:B2d2 cBBc|B2d2 feef|B2d2 cB Bd|cAAc fe ef:|
+|:d2 fe dBAB|d2ad feef|d2 fe dBBd|cAAA feef:| 
+BdAd BdAd|Bdef gfed|BdAd BdA2|1faeg fd dd:|2faef d2 z2|]
+
+X: 118
+T: Garrett Barry's Reel
+T: Mr. McLeod’s
+R: reel
+M: C|
+L: 1/8
+K: G
+~G3B d2Bd|edBe dBAB|~G3B d3B|AEGE DGBA|
+~G3B d2Bd|edBA GABd|edcB cdef|gedB AGAB:|
+~g3b a2ge|dGBA GABd|~g3a gedg|eaag a2ga|
+b2gb abge|dGBA GABd|edcB cdef|gedB AGAB:|
+
+X: 119
+T: Margaret's
+R: waltz
+M: 3/4
+L: 1/8
+K: A
+%%stretchlast
+AF|:E3 FAB|c4 Ac|BA F2 Ac|B4 AF|
+E3 FAB|ce3 AB|c2c2B2|1 A4 AF:|2 A4 cd||
+e2 f2 g2|a2 g2 a2|fe d2 f2|e4 cB|
+A3 B cd|e2 c2 e2|fe d2 c2|B4 cd|
+e2 f2 g2|a2 g2 f2|e2 d2 c2|B4 AF|
+E3 FAB|ce3 AB|c2 c2 B2|A6|]
+
+X: 120
+T: Calum's Road
+R: strathspey
+M: 4/4
+L: 1/8
+K: D
+|:D2A>F A3A | B<d d>c B>A F>A |B2 d>E F2 E>D | B,<D (3DEF E4 |
+D2A>F A3A | B>d d>c B>A F>A |B2 d>E F2 E>D |1 B,<D D>E D4 :|2 B,<D D>E D2F>A ||
+|: B2d>c B4 | A>B A<E F2F>A |B2d>c B3A | d2d>e (3fed (3dBA |
+B2d>c B4 | A>B A<E F2F>A |B2 d>E F2 E>D | B,<D D>E D4 :|
+
+X: 121
+T: Are You Ready Yet?
+C: Tom Doorley
+R: reel
+M: 4/4
+L: 1/8
+K: Emin
+|:B2AF EGFE|FDFA dAFA|BAAF EGFE|FGFD ~B3A|
+|B2AF ~E3G|FDFA dAFA|BAAF EGFE|FGFD ~B3A:|
+|:Beed ~e4|gefa gfeg|fdBA ~B2fB|gBfB edBA|
+|Beed ~e3f|gefa ~g4|bage aged|Bgfd ~e4:|
+|:BAGF ~G3B|dBAG FEDF|E2BA (3B^cd eg|e~f3 e2fe|
+|edBe dBAF|BAGF EFGA|BedB AcBA|GAFA E4:|
+
+X: 122
+T: Love At The Endings
+C: Ed Reavy
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+FE|:DEFA BcdB|AF (3FDF AFEF|DEFA (3BcB AF|(3GFE (3FED B,DDF|
+DEFA BcdB|AF (3FEF ABde|fgfe dfec|1 dBAF D3 E:|2 dBAF D3 g||
+|:fgfe defg|afbf afed|fgfe dfbf|afdf e2 de|
+fgfe dcdB|AF (3FEF E2 DE|FABc dfec|1 dBAF d3 g:|2 dBAF D3 E||
+
+X: 123
+T: Casadh an tSúgáin
+T: Twisting The Hayrope
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+ GA | B2GE D3E | G2AB c3A | [M:6/4] BAG2   E4- E2D2 |
+G2G2 A2GA | [M:6/4] B2GE D3E  G2GA | G6 :|
+ Bd | e2ed d3g | e2-e/f/e d3B | c3A BAG2 | E4- E2DE |
+G2G2 A2GA | [M:6/4] B2GE D3E  G2GA | G4 G2 :| 
+
+X: 124
+T: The Tenpenny Piece
+R: slip jig
+M: 9/8
+L: 1/8
+K: G
+gag edB edB|~g3 edB d2f|gag edB edB|1 ~A3 ABd e2f:|2 ~A3 ABd edc||
+BAB GEF GEE|~B3 GEF Gdc|BAB GEF GFE|1 DED DEF G2A:|2 DED DEF GBd||
+
+X: 125
+T: Farewell To Whalley Range
+C: Michael McGoldrick
+R: slip jig
+M: 9/8
+L: 1/8
+K: F#min
+F2c BA~F- F2E|F2c BAc fec|B3 BAB c2A|1~B3 BAB cBA:|2~B3 BAB cef||
+a3 fec fec|B3 BAB cef|a3 baf afe|fec Bce fec|
+a2f fec fec|B3 BAB cef|a3 baf afe|fec fec BAB||  
+
+X: 126
+T: The Waterbed
+C: Diarmuid Moynihan
+R: reel
+M: C|
+L: 1/8
+K: Ador
+EAAE c2 AG | EGDG ED (3EFG | AEGA cA ~A2 | cdec dcAG |
+| EAAE c2 AG | EGDG ED (3Bcd | ecdc AEGA | dcAG EA A2 :|
+|: ~e2 de ge ~e2 | cdeg dcAc | ~e2 de ga ~e2 | gedc AEGA |
+| ~e2 de ge ~e2 | cdeg dega | gaeg deGA | cAGA EA ~A2 :| 
+
+X: 127
+T: The Wandering Minstrel
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+|:B|ADD BAF|Ade fdB|ADD BAG|F3 GFE|
+ADD BAF|Ade fdB|AdB AFE|FDD D2:|
+|:e|f3 ede|fdB AFA|B/c/dB AGF|GFG E2e|
+f3 ede|fdB AFA|B/c/dB AFE|FDD D2:|
+|:e|f3 afd|gbe gbe|f3 afd|ceA ceA|
+f3 afd|gbe gbe|f3 ede|fdc d2:| 
+
+X: 128
+T: Da Full Rigged Ship
+R: jig
+M: 6/8
+L: 1/8
+K: Ador
+"Am" e2 a aea|aea aba|"Em"e2 f "C"g2 g|gag "D"f2 d|
+"Am" e2 a aea|aea aba|"Em"g2 e edB|"Am"A3 A3:|
+"Am" efe edB|A2 B "C"c3|"G"B2 G B2 G|Bcd "Em"E3|
+"Am"efe edB|A2 B "C"c2 d|"Em"efe "G"dBG | "Am"A3 A3:|
+"Em"EGE EGE|EGE "C"c3|"Em"EGE E2 D|"C"E2 F GEC|
+"Em"EGE EGE|EGE "C"c2 d|"Em"efe "G"dBG|"Am"A3 A3 :|
+
+X: 129
+T: Da New Rigged Ship
+R: reel
+M: C|
+L: 1/8
+K: Ador
+eg|a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 eg|
+a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 ed||
+^cAcA B2 ed|^cAcA E2 ed|^cAcA B2 ed|^c2 A2 A2 ed|
+^cAcA B2 ed|^cAcA E2 ed|^cAcA B2 ed|^c2 A2 A2 AB||
+|:cdec BcdB|ABAF GF E2|cdec BcdB|1 c2 A2 A2 AB:|2 c2 A2A2||
+
+X: 130
+T: The Return To Miltown
+R: reel
+M: 4/4
+L: 1/8
+K: Dmix
+|:"Dm"D2 ADED AD | "C"CEED CEGE | "Dm"D2 ADEG AB | "Am"cAGF "C" EDCE |
+"Dm"D2 ADED AD | "C"CEED CEGE |"F" F2 FD "C"E2 ED |CDEG "A7"cG EC :|
+|"D" d2de^f2ed^ |"A " ^cde^f g2 ge | "D"^f2 fd "A "efed | "C"cAGE "C/E" ED D2|
+"D" d2de^f2ed^ | "A"^cde^f g2 ge | "D"^f2 fd "C" efed | "A5"cAGE "G"ED D2:| 
+
+X: 131
+T: The Providence
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+~E3F DEFA|d2fd gefd|edBd A2FA|(3Bcd AF GFED|
+~E3F DEFA|d2fd gefd|edBd A2FA|1 (3Bcd AG FDDF:|2 (3BcdAG FDDe||
+|:fd~d2 fdad|fd~d2 ecAc|fd~d2 fdad|fgag fdde|
+fgaf gfec|dBAF G2FG|(3ABA GB ABde|1 faeg fdde:|2 faeg fdAF|| 
+
+X: 132
+T: Spórt
+C: Peadar Ó Riada
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+|:"D"AdF A3|"Em/G"GBE GFG| "D"AdF A3|"Em/G"GBE "A"cde|
+"D"AdF A3|"Em/G"GBE GFG|"A"cde A2G|"A"EAA "D"[1D3||[2D2d :|
+|:"A"c3 d3|"A"cec A2g|"D"fed "G"ged|"A"cec A2e|
+"D"f3 g3|"D"age d2e|"D"fdF A2F|"Em/G"GEA D3:|
+|:"A5"AGG AGE|"A5"AGE EDD|"A"AGE cde|"D"dcA "G"G3|
+"A5"AGG AGE|"A5"AGE EDD|"A"cec A2G|EAA "D"D3:|| 
