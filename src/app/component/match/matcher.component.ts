@@ -1,10 +1,9 @@
-import { Component, OnInit, NgZone, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { proxy } from 'comlink';
 import { NormalizedTune } from 'src/app/model/normalized-tune';
-import { TuneMatcherProvider } from 'src/app/service/matching/tune-matcher-provider';
-import { Subject } from 'rxjs';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
+import { TuneMatcherProvider } from 'src/app/service/matching/tune-matcher-provider';
 
 @Component({
     selector: 'matcher',
