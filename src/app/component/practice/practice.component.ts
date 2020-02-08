@@ -24,7 +24,7 @@ export class PracticeComponent implements OnInit {
     titleWithoutNumber = titleWithoutNumber;
 
     constructor(
-        private snackBar: MatSnackBar, 
+        private snackBar: MatSnackBar,
         private repertoireRepository: RepertoireRepository,
         private practiceService: PracticeService,
         private index: TuneBookIndex) {
@@ -60,8 +60,12 @@ export class PracticeComponent implements OnInit {
      * Marks all items from today's assignment as practiced.
      */
     async markAsPracticed(): Promise<void> {
-       this.practiceService.markAsPracticed(this.assignment, new Date());
-       await this.repertoireRepository.save();
-       this.snackBar.open(`Updated repertoire on Google Drive`, 'Dismiss', { duration: 3000 });
+        this.practiceService.markAsPracticed(this.assignment, new Date());
+        const id = await this.repertoireRepository.save();
+        if (id) {
+            this.snackBar.open(`Updated repertoire on Google Drive`, 'Dismiss', { duration: 3000 });
+        } else {
+            this.snackBar.open(`ERROR SAVING REPERTOIRE`, 'Dismiss', { duration: 3000 });
+        }
     }
 }

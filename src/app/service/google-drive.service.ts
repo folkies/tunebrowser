@@ -121,13 +121,15 @@ export class GoogleDriveService {
                 headers: { 'Content-Type': 'text/plain' },
                 body: content
             });
-            this.log.info('Updated file with id = {}', response.result.id);
-            return response.result.id;
+            if (response.status === 200) {
+                this.log.info('Updated file with id = {}', response.result.id);
+                return response.result.id;
+            }
         }
         catch (error) {
             this.log.error('Error updating file', error);
-            return null;
         }
+        return null;
     }
 
     async getTextFile(fileId: string): Promise<string> {

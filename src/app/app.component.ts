@@ -31,7 +31,6 @@ export class AppComponent implements OnInit {
 
         this.googleDriveService.authenticationStatus.subscribe(authStatus => {
             this.signedIn = authStatus;
-            console.info("observed signedIn = " + this.signedIn);
             if (this.initialized) {
                 this.collectionService.loadCollections();
             }

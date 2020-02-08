@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Repertoire, RepertoireCollection, TuneReference, RepertoireItem } from '../model/repertoire';
+import { Repertoire, RepertoireCollection, RepertoireItem, TuneReference } from '../model/repertoire';
 import { GoogleDriveService } from './google-drive.service';
-import { isThisMonth } from 'date-fns';
 
 const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
@@ -83,7 +82,7 @@ export class RepertoireRepository {
         const collectionRef = fileRefs.find(ref => ref.name === REPERTOIRE_COLLECTION);
         let collectionJson: string;
         if (collectionRef === undefined) {
-            collectionJson = '{"repertoires": [{"id": "Default", "instrument": "Default", "items":[], "maxAge": 30, "numTunesPerSession": 10}]}';
+            collectionJson = '{"repertoires": [{"id": "Default", "instrument": "Default", "items":[], "maxAge": 30, "numTunesPerAssignment": 10}]}';
             this.collectionFileId = await this.googleDrive.createTextFile(REPERTOIRE_COLLECTION, collectionJson);
         } else {
             this.collectionFileId = collectionRef.id;
@@ -110,7 +109,7 @@ export class RepertoireRepository {
         if (this.repertoireCollection) {
             return this.saveCollection(this.repertoireCollection);
         }
-        return "";
+        return null;
     }
 
     /**

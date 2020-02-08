@@ -94,6 +94,10 @@ export class TuneBookIndex {
     setTagsForTune(tuneId: string, tuneBookId: string, tags: string[]): void {
         const bookRef = this.getBookById(tuneBookId);
         const entry = this.findEntryById(bookRef, tuneId);
+        if (!entry) {
+            console.error(`Inex entry not found for ${tuneBookId}/${tuneId}`);
+            return;
+        }
         entry.tags = tags;
     }
 
