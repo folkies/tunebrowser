@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { proxy } from 'comlink';
 import { NormalizedTune } from 'src/app/model/normalized-tune';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
-import { TuneMatcherProvider } from 'src/app/service/matching/tune-matcher-provider';
+import { RestTuneMatcher } from 'src/app/service/matching/rest-tune-matcher';
 
 @Component({
     selector: 'matcher',
@@ -16,15 +15,13 @@ export class MatcherComponent {
 
     constructor(
         private route: ActivatedRoute,
-        private tuneMatcherProvider: TuneMatcherProvider) {
+        private tuneMatcher: RestTuneMatcher) {
             this.route.paramMap.subscribe(map => this.matchTranscription(map));
         }
 
     private async matchTranscription(map: ParamMap): Promise<void> {
         const notes = map.get('transcription');
-        const tuneMatcher = await this.tuneMatcherProvider.tuneMatcher();
-        await tuneMatcher.setProgressCallback(proxy((p: number) => this.progress = p));
-        this.tunes = await tuneMatcher.findBestMatches(notes);
+        this.tunes = await this.tuneMatcher.findBestMatches(notes);
     }
 
     confidencePercentage(tune: NormalizedTune): number {

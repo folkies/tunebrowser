@@ -23,6 +23,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';
 import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
@@ -44,7 +46,7 @@ import { CaretTrackerDirective } from './directive/caret-tracker.directive';
 import { CustomReuseStrategy } from './service/custom-reuse-strategy';
 import { GoogleDriveTunebookLoaderService } from './service/google-drive-tunebook-loader.service';
 import { GoogleDriveService } from './service/google-drive.service';
-import { TuneMatcherProvider } from './service/matching/tune-matcher-provider';
+import { RestTuneMatcher } from './service/matching/rest-tune-matcher';
 import { PracticeService } from './service/practice-service';
 import { RepertoireRepository } from './service/repertoire-repository';
 import { AudioContextProvider } from './service/transcription/audio-context-provider';
@@ -53,8 +55,6 @@ import { TranscriberProvider } from './service/transcription/transcriber-provide
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -137,12 +137,12 @@ const appRoutes: Routes = [
         PracticeService,
         Recorder,
         RepertoireRepository,
+        RestTuneMatcher,
         { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
         TranscriberProvider,
         TuneBookCollectionService,
         TuneBookIndex,
-        TuneBookLoaderService,
-        TuneMatcherProvider
+        TuneBookLoaderService
     ],
     bootstrap: [AppComponent]
 })
