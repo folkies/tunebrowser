@@ -1,7 +1,7 @@
 <h2 class="mat-h2">Matching tunes</h2>
 
 <div id="progress">
-    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+    <mat-progress-bar mode="indeterminate" *ngIf="! tunes"></mat-progress-bar>
 </div>
 
 

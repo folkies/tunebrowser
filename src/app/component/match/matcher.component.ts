@@ -11,8 +11,6 @@ import { RestTuneMatcher } from 'src/app/service/matching/rest-tune-matcher';
 export class MatcherComponent {
     tunes: NormalizedTune[];
 
-    progress: number;
-
     constructor(
         private route: ActivatedRoute,
         private tuneMatcher: RestTuneMatcher) {
