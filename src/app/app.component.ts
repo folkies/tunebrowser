@@ -47,7 +47,6 @@ export class AppComponent implements OnInit {
         }
     }
     async ngOnInit(): Promise<void> {
-        await this.googleDriveService.initialize();
         this.collectionService.loadCollections();
         this.initialized = true;
     }

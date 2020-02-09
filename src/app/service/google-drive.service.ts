@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { getLogger, Logger } from '@log4js2/core';
+import { Observable, Subject } from 'rxjs';
+import Mutex from 'ts-mutex';
 import { MultiPartBuilder } from './multipart-builder';
-import { Subject, Observable } from 'rxjs';
-import { Logger, getLogger } from '@log4js2/core';
 
 const API_KEY = 'AIzaSyA-PHzVrdedVDv7s1EwAGcfOq-JFHmldlc';
 const CLIENT_ID = '98237286064-bf0vbgpqqklhj434vifvfafvtckaja12.apps.googleusercontent.com';
@@ -9,6 +10,8 @@ const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/r
 const SCOPES = 'https://www.googleapis.com/auth/drive.appfolder https://www.googleapis.com/auth/drive.file';
 
 const TUNE_FOLDER = 'Tune Browser';
+
+const lock = new Mutex();
 
 export interface FileReference {
     id: string;
@@ -24,19 +27,22 @@ export class GoogleDriveService {
 
     private authenticationStatusSource = new Subject<boolean>();
 
+    private initialized = false;
+
     authenticationStatus: Observable<boolean> = this.authenticationStatusSource.asObservable();
 
 
-    initialize(): Promise<void> {
+    initialize(): Promise<boolean> {
         return new Promise((resolve, reject) => {
-            gapi.load('client:auth2', async () => {
-                await this.initClient();
-                resolve();
+            gapi.load('client:auth2', () => {
+                this.initClient().then(() => {
+                    resolve(true);
+                });
             });
         });
     }
 
-    private async initClient() {
+    private async initClient(): Promise<void> {
         await gapi.client.init({
             apiKey: API_KEY,
             clientId: CLIENT_ID,
@@ -59,6 +65,17 @@ export class GoogleDriveService {
         }
     }
 
+    private async ensureInitializedExclusive(): Promise<boolean> {
+        if (!this.initialized) {
+            this.initialized = await this.initialize();
+        }
+        return this.initialized;
+    }
+
+    private ensureInitialized(): Promise<boolean> {
+        return lock.use(() => this.ensureInitializedExclusive() );
+    }
+
     async signIn() {
         await this.googleAuth.signIn();
         this.authenticationStatusSource.next(true);
@@ -78,6 +95,7 @@ export class GoogleDriveService {
     }
 
     async createTextFile(fileName: string, content: string): Promise<string> {
+        await this.ensureInitialized();
         try {
             const folderId = await this.findOrCreateFolder(TUNE_FOLDER);
 
@@ -111,6 +129,7 @@ export class GoogleDriveService {
     }
 
     async updateTextFile(fileId: string, content: string): Promise<string> {
+        await this.ensureInitialized();
         try {
             const response = await gapi.client.request<gapi.client.drive.File>({
                 path: '/upload/drive/v3/files/' + fileId,
@@ -133,6 +152,7 @@ export class GoogleDriveService {
     }
 
     async getTextFile(fileId: string): Promise<string> {
+        await this.ensureInitialized();
         const response = await gapi.client.drive.files.get({
             fileId: fileId,
             alt: 'media'
@@ -141,6 +161,7 @@ export class GoogleDriveService {
     }
 
     async listTextFiles(folderId: string): Promise<FileReference[]> {
+        await this.ensureInitialized();
         const response = await gapi.client.drive.files.list({
             q: `'${folderId}' in parents`,
             pageSize: 100
@@ -153,6 +174,7 @@ export class GoogleDriveService {
     }
 
     async createFolder(folderName: string): Promise<string> {
+        await this.ensureInitialized();
         const response = await gapi.client.drive.files.create({
             resource: {
                 name: folderName,
@@ -164,6 +186,7 @@ export class GoogleDriveService {
     }
 
     async findOrCreateFolder(folderName: string): Promise<string> {
+        await this.ensureInitialized();
         const response = await gapi.client.drive.files.list({
             q: `name = "${folderName}" and "root" in parents`
         });
