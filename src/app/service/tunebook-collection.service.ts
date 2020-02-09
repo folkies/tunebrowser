@@ -70,7 +70,7 @@ export class TuneBookCollectionService {
 
     loadAndMergeCollections(target: TuneBookCollection, mixin: TuneBookCollection): void {
         mixin.books.forEach(mixinBook => { 
-            const mergedBook = this.mergeBooks(target.books, mixinBook); 
+            const mergedBook = this.mergeBooks(target.books, mixinBook);
             this.loadBook(mergedBook);
         });
     }
@@ -90,8 +90,8 @@ export class TuneBookCollectionService {
             } else {
                 this.mergeTunes(targetBook.tunes, mixinBook.tunes);
             }
-            return targetBook;
         }
+        return targetBook;
     }
 
     private mergeTunes(targetTunes: TuneDescriptor[], mixinTunes: TuneDescriptor[]) {

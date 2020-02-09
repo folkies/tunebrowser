@@ -3,6 +3,7 @@ import { getLogger, Logger } from '@log4js2/core';
 import { Observable, Subject } from 'rxjs';
 import Mutex from 'ts-mutex';
 import { MultiPartBuilder } from './multipart-builder';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 const API_KEY = 'AIzaSyA-PHzVrdedVDv7s1EwAGcfOq-JFHmldlc';
 const CLIENT_ID = '98237286064-bf0vbgpqqklhj434vifvfafvtckaja12.apps.googleusercontent.com';
@@ -87,15 +88,30 @@ export class GoogleDriveService {
     }
 
     isSignedIn(): boolean {
-        return this.googleAuth && this.googleAuth.currentUser.get() != null;
+        if (!this.googleAuth) {
+            return false;
+        }
+        const user = this.googleAuth.currentUser.get();
+        if (!user) {
+            return false;
+        }
+        return user.isSignedIn();
     }
 
     isSignedOut(): boolean {
         return this.googleAuth && !this.googleAuth.isSignedIn.get();
     }
 
+    async isDefinitelySignedOut(): Promise<boolean> {
+        await this.ensureInitialized();
+        return this.googleAuth && !this.googleAuth.isSignedIn.get();
+    }
+
     async createTextFile(fileName: string, content: string): Promise<string> {
         await this.ensureInitialized();
+        if (!this.isSignedIn()) {
+            return undefined;
+        }
         try {
             const folderId = await this.findOrCreateFolder(TUNE_FOLDER);
 
@@ -130,6 +146,9 @@ export class GoogleDriveService {
 
     async updateTextFile(fileId: string, content: string): Promise<string> {
         await this.ensureInitialized();
+        if (!this.isSignedIn()) {
+            return undefined;
+        }
         try {
             const response = await gapi.client.request<gapi.client.drive.File>({
                 path: '/upload/drive/v3/files/' + fileId,
@@ -162,6 +181,9 @@ export class GoogleDriveService {
 
     async listTextFiles(folderId: string): Promise<FileReference[]> {
         await this.ensureInitialized();
+        if (!this.isSignedIn()) {
+            return [];
+        }
         const response = await gapi.client.drive.files.list({
             q: `'${folderId}' in parents`,
             pageSize: 100
@@ -187,6 +209,10 @@ export class GoogleDriveService {
 
     async findOrCreateFolder(folderName: string): Promise<string> {
         await this.ensureInitialized();
+        if (!this.isSignedIn()) {
+            return undefined;
+        }
+
         const response = await gapi.client.drive.files.list({
             q: `name = "${folderName}" and "root" in parents`
         });

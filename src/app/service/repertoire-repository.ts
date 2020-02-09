@@ -69,7 +69,7 @@ export class RepertoireRepository {
      * @return repertoire collection.
      */
     async load(): Promise<RepertoireCollection> {
-        if (this.googleDrive.isSignedOut()) {
+        if (await this.googleDrive.isDefinitelySignedOut()) {
             return {repertoires: []};
         }
 

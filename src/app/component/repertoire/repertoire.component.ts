@@ -41,6 +41,9 @@ export class RepertoireComponent implements OnInit {
 
     private async loadRepertoire() {
         const rep = await this.repertoireRepository.findRepertoire();
+        if (!rep) {
+            return;
+        }
         this.tunes = rep.items.map(item => this.toRepertoireTune(item));
         this.dataSource = new MatTableDataSource(this.tunes);
         this.dataSource.sort = this.sort;

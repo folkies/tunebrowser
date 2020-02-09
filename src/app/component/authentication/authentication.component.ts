@@ -16,7 +16,6 @@ export class AuthenticationComponent {
     constructor(private route: ActivatedRoute, private router: Router, private googleDrive: GoogleDriveService) {
         this.googleDrive.authenticationStatus.subscribe(authStatus => {
             this.signedIn = authStatus;
-            console.info("observed signedIn = " + this.signedIn);
         });
 
         this.route.url.subscribe(segments => this.onAction(segments.pop().path));

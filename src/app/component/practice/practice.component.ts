@@ -34,6 +34,9 @@ export class PracticeComponent implements OnInit {
 
     async ngOnInit(): Promise<void> {
         const repertoire = await this.repertoireRepository.findRepertoire();
+        if (! repertoire) {
+            return;
+        }
         this.numTunes = repertoire.numTunesPerAssignment;
         if (this.repertoireRepository.currentAssignment) {
             this.assignment = this.repertoireRepository.currentAssignment;
