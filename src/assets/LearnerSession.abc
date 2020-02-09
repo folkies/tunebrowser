@@ -344,12 +344,12 @@ K:Edor
 X: 26
 T:26    Toss the Feathers No. 1
 M:4/4
-R:Reel
+R:reel
 L:1/8
 K:Em
-"Em"EB B2 dB B2|EBBA "D"FDFA|"Em"BE E2 B2 AB|1 "D"defe dBAF :|2"D" defe dABA |
+"Em"EB B2 dB B2|EBBA "D"FDFA|"Em"BE E2 B2 AB|1 "D"defe dBAF :|2"D" defe dABA ||
 "Em"Beed e2 de|"D"fede feed|"Em"febe febe|"D"fede feed|
-"Em"Beed e2 de|"D"fede fgaf|"G"b3 g "D"a3 f|"Em"egfe "D"dBAF |>|
+"Em"Beed e2 de|"D"fede fgaf|"G"b3 g "D"a3 f|"Em"egfe "D"dBAF ||
 
 
 X: 27
@@ -409,9 +409,9 @@ M:6/8
 K:Bm
 A|:\
 "D"FAA dAA|"G"BAB dAG|"D"FAA dfe|"G"dBB BAG|
-"D"FAA dAA|"Hm"BAB def|"G(Em)"gfe "D"dfe|1 "Hm"dBB BAG:|2 "Hm"dBB B2 e||
-|:"Hm"fbb "D"faa|fef def|"Hm"fbb "D"faa|fed "A"e2 e|
-"Bm"fbb "D"faa|fef def|"G(Em)"gfe "D"dfe|1 "Hm"dBB ~B3:|2 "Hm"dBB BAG||
+"D"FAA dAA|"Bm"BAB def|"G(Em)"gfe "D"dfe|1 "Bm"dBB BAG:|2 "Bm"dBB B2 e||
+|:"Bm"fbb "D"faa|fef def|"Bm"fbb "D"faa|fed "A"e2 e|
+"Bm"fbb "D"faa|fef def|"G(Em)"gfe "D"dfe|1 "Bm"dBB ~B3:|2 "Bm"dBB BAG||
 
 
 X: 32
@@ -419,8 +419,7 @@ T:32    Chief O'Neill's
 R:hornpipe
 M:4/4
 L:1/8
-F:http://abcplus.sourceforge.net/tunebook-sample.tex	 2008-01-24 22:01:47 UT
-K:Amix
+K:D
 de | "D" fefg afge | fdec "(G)"dcAG |"D" FEFD (3EFG AB | "D7" =cAd^c "A" A2 de |
 "D" fefg afge | fdec "(G)"dcAG |"D" FEFD "G" GBAG | "D" F2  D2 D2 :|
 DE | "F" =F3G    FGAB |=cAdB cBAG | "D" Adde     fded | "A" cAdc    A2    de |
@@ -434,11 +433,11 @@ C:Hammy Hamilton
 M:6/8
 L:1/8
 R:jig
-K:G Major
+K:G
 B|"G"dBG "C"cGE|"G"DED GFG|BAB dcB|dcB "D7"ABc|!
 "G"dBG "C"cGE|"G"DED GFG|BAB dcB|"D"AGF "G"G2:|!
-B|"G"dBG "a"ecA|"D"fef "G"gfg|"C"ege "G"dBG|dcB "D7"ABc|!
-[1 "G"dBG "a"ecA|"D"fef "G"gfg|"C"ege "G"dBG|"D"AGF "G"G2:|!
+B|"G"dBG "Am"ecA|"D"fef "G"gfg|"C"ege "G"dBG|dcB "D7"ABc|!
+[1 "G"dBG "Am"ecA|"D"fef "G"gfg|"C"ege "G"dBG|"D"AGF "G"G2:|!
 [2 "G"dBG "C"cGE|"G"DED GFG|BAB dcB|"D"AGF "G"G2|]!
 
 
@@ -449,13 +448,13 @@ L: 1/8
 R: jig
 K:Dmaj
 |:"D"AFA AFA|"G"BGB BdB|"D"AFA ABd|"D"fed "G"BdB|
-"D"AFA AFA|"G"BGB BdB|"D"def afe|"Hm"fdB BdB:|
-|:"D"def a3|"Hm" baf "D"afe|def afe|"G"dBB B3A|
-"D"def a3|"Hm"baf "D"afe|"G"g3 "D"f3|"Hm"edB BdB:|
-|:"D"d2f fef|fef fef|"(Hm)"d2f fef|"G"edB BAB|
-"D"d2f fef|fef def|"G"gfe "D"fed|"Hm"edB BAB:|
+"D"AFA AFA|"G"BGB BdB|"D"def afe|"Bm"fdB BdB:|
+|:"D"def a3|"Bm" baf "D"afe|def afe|"G"dBB B2A|
+"D"def a3|"Bm"baf "D"afe|"G"g3 "D"f3|"Bm"edB BdB:|
+|:"D"d2f fef|fef fef|"(Bm)"d2f fef|"G"edB BAB|
+"D"d2f fef|fef def|"G"gfe "D"fed|"Bm"edB BAB:|
 |:"D"Add fdd|edd fdd|Add fdd|"G"edB BAB|
-"D"Add fdd|"Hm"edB def| "G"g2e "D"f2d|"Hm"edB BAB:|
+"D"Add fdd|"Bm"edB def| "G"g2e "D"f2d|"Bm"edB BAB:|
 
 
 X: 35a
@@ -464,6 +463,7 @@ M: 2/4
 L: 1/8
 R: polka
 K:Ador
+%%stretchlast
 |:"Am"E>A AB|cd eg|"G"G>F GA|GE ED|
 |"Am"E>A AB|cd ef|"G"ge dB|"Am"A2 A2:|
 |:"Am"a2 ab|ag ef|"G"g2 ga|ge ed|
@@ -476,6 +476,7 @@ M: 2/4
 L: 1/8
 R: polka
 K:Ador
+%%stretchlast
 |:"Am"AB|"C"c2 "G"B2|"Am"A2 G>A|"G"Bd ed|g2 ed|
 "Am"ea "(C)"g>e|"G"dB G>B|"C"ce "G"dB|"Am"A2:|
 |:cd|"Am"ea ag/e/|"G"dg gd|"Am"ea ab|"G"g2 ed|
@@ -488,11 +489,11 @@ M: 6/8
 L: 1/8
 R: jig
 K:Dmix
-e|"D"fed "C"cAG|"D" A2d "C"cAG|"D" F2D DED| FEF "C"GFG|
-"D"A3"C" cAG|"D" AGA "C"cde|"D"fed "C"cAG| "D"Ad^c d2:|
-"D"f2d d^cd| f2g agf| "C"e2c cBc|e2f gfe|
+e|:"D"fed "C"cAG|"D" A2d "C"cAG|"D" F2D DED| FEF "C"GFG|
+"D"A3"C" cAG|"D" AGA "C"cde|"D"fed "C"cAG| "D"Ad^c d2 e:|
+|:"D"f2d d^cd| f2g agf| "C"e2c cBc|e2f gfe|
 "D"f2g agf| "C"e2f gfe|"D"fed "C"cAG|"D"Ad^c d2e:|
-"D"f2g "C"e2f| "D"d2e "C"c2d|"D"A3 "G"BAG| "D"F3 FED|
+|:"D"f2g "C"e2f| "D"d2e "C"c2d|"D"A3 "G"BAG| "D"F3 FED|
 "C"c3 cAG| "D"AGA "C"cde| "D"fed "C"cAG|"D" Ad^c d2e:|
 
 
@@ -504,13 +505,13 @@ L: 1/8
 R: jig
 K:Gmaj
 A|:"G"~B3 GBd|"C"cBc "Am"ABc|"G"~B3 GBd|"C"cAG "D"FGA|
-|"G"~B3 GBd|"C"cBc "Am"ABc|"G"ded "D7"cAF |1 AGF "G"G2 A:|2 AGF "G"G2 e||
+"G"~B3 GBd|"C"cBc "Am"ABc|"G"ded "D7"cAF |1 AGF "G"G2 A:|2 AGF "G"G2 e||
 |:"D"~f3 fed|"D7"cAG FGA|"G"G2g gfg|"D"afd d2 e|
 fag fed|"D7"cAG FGA|"G"~B2d "D7"cAF|1 AGF "G"G2 e:|2 AGF "G"GBd||
-|"G"gdB gdB|"Am"ecA ecA|"G"~B3 GBd|"C"cAG "D"FGA|
-|"G"gdB gdB|"Am"ecA ecA|"G"~B3 GBd|"D7" cAF "G"GBd|
-|"G"gdB gdB|"Am"ecA ecA|"G"~B3 GBd|"C"cAG "D"FGA|
-|"G"~B3 GBd|"Am"cBc ABc|"G"ded "D7"cAF |AGF "G"G2 A||
+"G"gdB gdB|"Am"ecA ecA|"G"~B3 GBd|"C"cAG "D"FGA|
+"G"gdB gdB|"Am"ecA ecA|"G"~B3 GBd|"D7" cAF "G"GBd|
+"G"gdB gdB|"Am"ecA ecA|"G"~B3 GBd|"C"cAG "D"FGA|
+"G"~B3 GBd|"Am"cBc ABc|"G"ded "D7"cAF |AGF "G"G2 |]
 
 
 X: 38
@@ -518,12 +519,11 @@ T:38    Sailor's Bonnet
 M: 4/4
 L: 1/8
 R: reel
-F:http://www2.redhawk.org:8080/irish/zouki/CCE_session_tunes.abc	 2006-05-27 19:18:09 UT
 K:D
 "D"A2FA dfef|dfec "G"dBB2|"D"A2FA dfec|"G"dBAG "D"FDD2|
 "D"A2FA dff2|dfec "G"dBB2|"D"A2FA dfec|"G"dBAG "D"FDD2||
-"D"faab afdf|afef "G"dBB2|"Hm"fbb2 bafa|b2af "A"fee2|
-"Hm"bff2 "D"aff2|afef "G"dBB2|"D"A2FA dfec|"G"dBAG "D"FDD2 :|
+|:"D"faab afdf|afef "G"dBB2|"Bm"fbb2 bafa|b2af "A"fee2|
+"Bm"bff2 "D"aff2|afef "G"dBB2|"D"A2FA dfec|"G"dBAG "D"FDD2 :|
 
 
 X: 39
@@ -543,22 +543,18 @@ K:D
 
 X: 40
 T:40    Miss Monaghan
-R:Reel
-N:Collected by Ennis
-B:O'Neill's 1312
-Z:Transcribed by Trish O'Neil
+R:reel
 M:C|
 L:1/8
 K:D
 "D"D2(3FED FAA2|"G"BcBA "D"FABc|"G(D)"dedB "A"ABde|"D"fede "A"fee2|
 "D"D2(3FED FAA2|"G"BcBA "D"FABc|"G(D)"dedB "D"ABdB|"A7"AFEG "D"FDD2:||
-"D"(fa)ab (af)df|"G"gefd edBc|"D"dedB "A"ABde|"D"fede "A"fee2|
+|:"D"(fa)ab (af)df|"G"gefd edBc|"D"dedB "A"ABde|"D"fede "A"fee2|
 "D"(fa)ab (af)df|"G"gefd edBc|"D"dedB ABdB|"A"AFEG "D" FDD2:||
 
 
 X: 41
 T:41    The Concertina Reel
-C:Reel
 R:reel
 M:C|
 K:D
@@ -589,16 +585,15 @@ K:G
 "Am"A2 eA (3cBA eA|A2 eA "G"BAGB|"Am"A2 eA (3Bcd ef|"G"gedc BAGB:|
 "Am"A2 aA "Am7"gAfA|"Am"A2 eA "G"BAGB|"Am"A2 aA "Am7"gAfA|"G"gedc BAGB|
 "Am"A2 aA "Am7"gAfA|"Am"A2 eA "G"BAGB|"Am"ABcd efga|"G"gedc BAGB|
-"Am"(3cBA BG A2 AB|cAAd "G"BAGB|"Am"(3cBA BG ABcd|"C"efge "G"dBGB:|
-"C"c2 gc acgc|c2 gc "G"BAGB|"C"c2 gc "Am"acga|"G"gedc BAGB|
+|:"Am"(3cBA BG A2 AB|cAAd "G"BAGB|"Am"(3cBA BG ABcd|"C"efge "G"dBGB:|
+|:"C"c2 gc acgc|c2 gc "G"BAGB|"C"c2 gc "Am"acga|"G"gedc BAGB|
 "C"c2 gc acgc|c2 gc "G"BAGB|"Am"ABcd efga|"G"gedc BAGB:|"Am(Fine)"A4||
 
 
 X: 44
 T:44    The Trip to Durrow
-C: Dan Cleary(1918-2004)
+C: Dan Cleary
 R:reel
-P:letzte 8 Takte ürsprünglich Variation vom A-Teil
 M:C|
 L:1/8
 K:D
@@ -615,13 +610,13 @@ T:45    The Morning Dew
 M:C|
 L:1/8
 R:Reel
-K:Em
-"Em"~E3B "(D6)"BAFA|"Em"EBEB "D"AGFD|"Em"~E3B "(D6)"BAFA|"G"B^cdB "D"AGFD|
-"Em"~E3B "(D6)"BAFA|"Em"EBEB "D"AGFD|"Em"~E3B "(D6)"BAFA|"G"B^cdB "D"ADFA||
+K:Edor
+"Em"~E3B "(D6)"BAFA|"Em"EBEB "D"AGFD|"Em"~E3B "(D6)"BAFA|"G"BcdB "D"AGFD|
+"Em"~E3B "(D6)"BAFA|"Em"EBEB "D"AGFD|"Em"~E3B "(D6)"BAFA|"G"BcdB "D"ADFA||
 "Em"B2eB fBeB|B2dB "D"ADFA|"Em"B2eB fBeB|"G"dedB "D"ADFA|
-"Em"B2eB fBeB|B2dB "D"ADFA|"Em"(3B^cd ef gfge|"G"d^cdB "D"ADFA||
-"Em"BAGF EFGA|BEGB "D"ADFA|"Em"BAGF EFGA|"G"B^cdB "D"ADFA|
-"Em"BAGF EFGA|B2EB "D"ADFA|"Em"BAGF EFGA|"G"B^cdB "D"AGFD||
+"Em"B2eB fBeB|B2dB "D"ADFA|"Em"(3Bcd ef gfge|"G"dcdB "D"ADFA||
+"Em"BAGF EFGA|BEGB "D"ADFA|"Em"BAGF EFGA|"G"BcdB "D"ADFA|
+"Em"BAGF EFGA|B2EB "D"ADFA|"Em"BAGF EFGA|"G"BcdB "D"AGFD||
 
 
 X: 46
@@ -630,10 +625,10 @@ M: 4/4
 L: 1/8
 R: reel
 K:D
-"D"~d3c defd | "G"ed (3Bcd "A7"egfe |"D" ~d2dc defd | "A(Hm)"efdB "A"A3B :|
-"Hm"dB~B2 "G"g2fd |ed (3Bcd "A7"egfe | "Hm"dB~B2 "G"g2fd |"A(Hm)"efdB "A"A3B :|
-"D"faaf gefd | "G"ed (3Bcd "A7"egfe | "D"faaf gefd |"A(Hm)"efdB "A"~A3g |
-"D"faaf gefd | "G"ed (3Bcd "A7"egfe |"D"fa~a2 "Hm"b2bf | "A"~e3f g2fe ||
+"D"~d3c defd | "G"ed (3Bcd "A7"egfe |"D" ~d2dc defd | "A(Bm)"efdB "A"A3B :|
+|:"Bm"dB~B2 "G"g2fd |ed (3Bcd "A7"egfe | "Bm"dB~B2 "G"g2fd |"A(Bm)"efdB "A"A3B :|
+"D"faaf gefd | "G"ed (3Bcd "A7"egfe | "D"faaf gefd |"A(Bm)"efdB "A"~A3g |
+"D"faaf gefd | "G"ed (3Bcd "A7"egfe |"D"fa~a2 "Bm"b2bf | "A"~e3f g2fe |]
 
 
 X: 47
@@ -642,6 +637,7 @@ M: 2/4
 L: 1/8
 R: polka
 K:Dmaj
+%%stretchlast
 |:f/e/|"D"dA FA|d>d df|"A"ed cd|"A7"ef gf/g/|
 "D"(3agf "A7"ge|"D"dc AF|"G"GB "A"A/B/A/G/|"D"FD D:|
 |:e|"D"ff/f/ fd|"G"gg/g/ ge|"D"ff/f/ fa|"G"gf ef/g/|
@@ -654,10 +650,10 @@ C:Reel
 R:reel
 M:C|
 K:Edor
-"Em"BE~E2 "D"BAFA|"Em"BE~E2 "Hm"BAFB|"D"ABAF D2FD|FAAd BAFA|
-"Em"BE~E2 "D"BAFA|"Em"BE~E2 "Hm"BAFB|"D"A3B dfec|dBAF "Em"E2FA:|
-|:"Em"Beed e2de|"D"f2df "Hm"efdB|"D"ABAF D2FD|FAAd BAFA|
-"Em"Beed e2de|"D"f2df "Hm"efdB|"D"A3B dfec|dBAF "Em"E2AF:|
+"Em"BE~E2 "D"BAFA|"Em"BE~E2 "Bm"BAFB|"D"ABAF D2FD|FAAd BAFA|
+"Em"BE~E2 "D"BAFA|"Em"BE~E2 "Bm"BAFB|"D"A3B dfec|dBAF "Em"E2FA:|
+|:"Em"Beed e2de|"D"f2df "Bm"efdB|"D"ABAF D2FD|FAAd BAFA|
+"Em"Beed e2de|"D"f2df "Bm"efdB|"D"A3B dfec|dBAF "Em"E2AF:|
 
 
 X: 49
@@ -667,9 +663,9 @@ L: 1/8
 R: reel
 K:Dmaj
 |"D"A2AB AFED|"G"B2BA BcdB|"D"A2AB AFED|"G"gfed BcdB|
-"D"A2AB AFED|"G"B2BA BcdB|"D"A2AB AFED|"G"gfed Bcde|
-|"D"f2fd "G"g2ge|"D"f2fd "G"Bcde|"D"f2fd "G"g2fg|"D"afed Bcde|
-"D"f2fd "G"g2ge|"D"f2fd "G"Bcde|"G"defg "D"afbf|"G"gfed BcdB|
+"D"A2AB AFED|"G"B2BA BcdB|"D"A2AB AFED|"G"gfed Bcde||
+"D"f2fd "G"g2ge|"D"f2fd "G"Bcde|"D"f2fd "G"g2fg|"D"afed Bcde|
+"D"f2fd "G"g2ge|"D"f2fd "G"Bcde|"G"defg "D"afbf|"G"gfed BcdB||
 
 
 X: 50
@@ -677,11 +673,11 @@ T:50    Donnybrook Fair
 M:6/8
 R:jig
 K:G
-D|"G"GFG "D"AGA|"Em"Bee "D"dBA|"G"BAB GAB|"Am"AGE "G"GED|
+D|:"G"GFG "D"AGA|"Em"Bee "D"dBA|"G"BAB GAB|"Am"AGE "G"GED|
 "G"~G3 "D"AGA|"Em"Bee "D"dBA|"G"BAB GAB|1 "D"AGF "G"G2D:|2"D" AGF "G"G3f||
-"C"gfe "D"fed|"C(Em)"ege "D"dBA|"Em"Bee "D"dBA|"Em"Bee "C(Em)"e2f|
-|1 "C"gfe "D"fed|"C(Em)"ege "D"dBA|"G"BAB GAB|"D"AGF "G"G3:|2
-"G"gfg "D"aga|"Em"bge "D"dBA|"G"BAB GAB|"D"AGF "G"G2D||
+|:"C"gfe "D"fed|"C(Em)"ege "D"dBA|"Em"Bee "D"dBA|"Em"Bee "C(Em)"e2f|
+[1"C"gfe "D"fed|"C(Em)"ege "D"dBA|"G"BAB GAB|"D"AGF "G"G3:|
+[2"G"gfg "D"aga|"Em"bge "D"dBA|"G"BAB GAB|"D"AGF "G"G2|]
 
 
 X: 51
