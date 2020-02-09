@@ -33,10 +33,10 @@ export class RepertoireComponent implements OnInit {
     constructor(
         private repertoireRepository: RepertoireRepository,
         private index: TuneBookIndex) {
-            this.index.allReady.subscribe(() => this.loadRepertoire());
     }
 
     ngOnInit(): void {
+        this.index.allReady.subscribe(() => this.loadRepertoire());
     }
 
     private async loadRepertoire() {

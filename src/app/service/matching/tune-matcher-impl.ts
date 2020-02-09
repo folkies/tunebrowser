@@ -1,7 +1,7 @@
+import { getLogger, Logger } from '@log4js2/core';
 import { NormalizedTune } from '../../model/normalized-tune';
 import { minEditDistance } from './edit-distance';
 import { ITuneMatcher } from './tune-matcher';
-import { Logger, getLogger, configure, LogLevel } from '@log4js2/core';
 
 export class TuneMatcher implements ITuneMatcher {
     

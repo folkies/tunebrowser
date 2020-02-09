@@ -23,6 +23,8 @@ export class PracticeComponent implements OnInit {
 
     titleWithoutNumber = titleWithoutNumber;
 
+    numTunes: number;
+
     constructor(
         private snackBar: MatSnackBar,
         private repertoireRepository: RepertoireRepository,
@@ -30,7 +32,9 @@ export class PracticeComponent implements OnInit {
         private index: TuneBookIndex) {
     }
 
-    ngOnInit(): void {
+    async ngOnInit(): Promise<void> {
+        const repertoire = await this.repertoireRepository.findRepertoire();
+        this.numTunes = repertoire.numTunesPerAssignment;
         if (this.repertoireRepository.currentAssignment) {
             this.assignment = this.repertoireRepository.currentAssignment;
             this.entries = this.assignment.map(item => this.index.findEntryByTuneReference(item.tune))
@@ -51,6 +55,9 @@ export class PracticeComponent implements OnInit {
      */
     async buildAssignment(): Promise<void> {
         const repertoire = await this.repertoireRepository.findRepertoire();
+        if (this.numTunes > 0) {
+            repertoire.numTunesPerAssignment = this.numTunes;
+        }
         this.assignment = this.practiceService.buildPracticeAssignment(repertoire, new Date());
         this.repertoireRepository.currentAssignment = this.assignment;
         this.entries = this.assignment.map(item => this.index.findEntryByTuneReference(item.tune))

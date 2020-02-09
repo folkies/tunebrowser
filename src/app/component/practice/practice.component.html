@@ -2,6 +2,11 @@
     <h2 class="mat-h2">Practice</h2>
 
     <div id="initial" *ngIf="!hasAssignment()">
+        <div>
+            <mat-form-field class="num-tunes">
+                <input matInput name="numTunes" type="text" [(ngModel)]="numTunes" placeholder="Number of tunes">
+            </mat-form-field>
+        </div>
         <button mat-raised-button (click)="buildAssignment()" class="search-button" color="primary">Get
             assignment</button>
     </div>
@@ -9,7 +14,8 @@
     <div id="assignment" *ngIf="hasAssignment()">
         <mat-list>
             <mat-list-item *ngFor="let entry of entries">
-                <div class="tune-link" routerLink="../tune/{{entry.book}}/{{entry.id}}">{{titleWithoutNumber(entry.title)}}</div>
+                <div class="tune-link" routerLink="../tune/{{entry.book}}/{{entry.id}}">
+                    {{titleWithoutNumber(entry.title)}}</div>
             </mat-list-item>
         </mat-list>
 

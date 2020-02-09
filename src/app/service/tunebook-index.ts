@@ -1,3 +1,4 @@
+import { getLogger, Logger } from '@log4js2/core';
 import { Injectable } from '@angular/core';
 import { TuneBookEntry } from 'abcjs/midi';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
@@ -9,6 +10,8 @@ import { TuneReference } from '../model/repertoire';
 
 @Injectable()
 export class TuneBookIndex {
+    private logger: Logger = getLogger('TuneBookIndex');
+
     private idToBookMap: Map<string, TuneBookReference> = new Map();
     private entries: IndexEntry[] = [];
 
@@ -94,8 +97,8 @@ export class TuneBookIndex {
     setTagsForTune(tuneId: string, tuneBookId: string, tags: string[]): void {
         const bookRef = this.getBookById(tuneBookId);
         const entry = this.findEntryById(bookRef, tuneId);
-        if (!entry) {
-            console.error(`Inex entry not found for ${tuneBookId}/${tuneId}`);
+        if (!bookRef || !entry) {
+            this.logger.error(`Index entry not found for ${tuneBookId}/${tuneId}`);
             return;
         }
         entry.tags = tags;
