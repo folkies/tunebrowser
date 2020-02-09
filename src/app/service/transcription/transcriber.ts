@@ -91,8 +91,6 @@ export default class Transcriber {
 
         this.hopSize = this.frameSize * (1 - OVERLAP);
 
-        console.log('Frame size and hop size:', this.frameSize, this.hopSize);
-
         this.windowFunction = new WindowFunction(DSP.HANN);
         this.powerSpectrum = new FFT(this.frameSize, this.outputSampleRate);
     }
@@ -156,7 +154,6 @@ export default class Transcriber {
         let end = 0;
 
         for (let i = 0; i < outSignal.length; i++) {
-            //TODO: smooth interpolation
             let begin = end;
             end = Math.floor((i + 1) * this.inputSampleRate / this.outputSampleRate);
             let sum = 0;
@@ -213,5 +210,4 @@ export default class Transcriber {
     private prevPow2(v: number): number {
         return Math.pow(2, Math.floor(Math.log(v) / Math.log(2)));
     }
-
 }
