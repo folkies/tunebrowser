@@ -985,10 +985,12 @@ K: Gmaj
 Bd G>A|Bd GB|A2 FA|GF ED|Bd G>A|Bd GB|A2 FA|AG G>A:|
 |:Bd ef|g2 ga|f/e/d ef|ed BA|Bd ef|g2 ga|f/e/d ef|e2 ed:| 
 
-X:85
-T:Siobhán O'Donnell's #2
+X: 85
+T: McIntyre's Fancy
+T: Karen Tweed's
+T: Siobhan O'Donnell's
 R:jig
-C:Siobhán O'Donnell
+C:John Brady
 M:6/8
 L:1/8
 K:Am
@@ -1052,7 +1054,7 @@ DBB DBB|DAA DAA|~G3 GBd|1 cAF G2E:|2 cAF G2A||
 |:B2G A2G|d2G G2A|B2G A2G|cAG FGA|
 BAG AGF|GFD FGA|fag fed|cAF G2A:|
 
-X:90
+X: 90
 T: Leitrim Fancy
 T: Leitrim Jig
 M: 6/8
@@ -1218,15 +1220,15 @@ eaf g2e|fed ecA|a2f gfe|dBG Bcd:|
 AEA A2d|cAc efg|faf gfe|dBG Bcd:|
 
 X: 104
-T: Karen Tweed's
+T: Liam O'Connors
+R: jig
 M: 6/8
 L: 1/8
-R: jig
-K: Am
-ced AGE | GAB A2d | eag ecd | eAB AGE |
-ced AGE | ~G3 Gce | eaa ged | cAG A3 :|
-a2a ged | edg edc | A/B/cA GAc | dec deg |
-aeg dec | AcA GEE | cde ged | cAG A3 :|
+K: Cmaj
+|: cGE ~G3 | AGE GAB | cGE ~G3 | A2d dcB |
+cGE ~G3 | AGE GAB | cde ~g3 | eae ged :|
+|: cde ~g3 | ega ged | cde ged | cAG A2B |
+cde ~g3 | ega gab | ~a3 ged | eae ged :| 
 
 X: 105
 T: Autumn Child
@@ -1383,8 +1385,9 @@ R: reel
 M: C|
 L: 1/8
 K: D
-dBAF DFAG|GFGA BE E2|dBAF DFAF|GBAG FD D2:|
-dcde f2 fe|dfed cAAB|cdef g2 ag|faeg fd d2:|
+|:dBAF DEFD | G3A BE E2 | dBAF DEFD | GBAG FDD2 :|
+|:dcde f3e | dfed cA A2 | (3Bcd ef g2ag| faea fddA:|
+|:BdAd BdAd | (3Bcd ef gfed| BdAd (3Bcd eg| faea fd d2:| 
 
 X: 117
 T: My Kindly Sweetheart
