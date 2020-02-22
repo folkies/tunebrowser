@@ -1,14 +1,9 @@
 import { Injectable } from '@angular/core';
 import { getLogger, Logger } from '@log4js2/core';
+import { GoogleApiLoaderService } from 'ngx-gapi-auth2';
 import { Observable, Subject } from 'rxjs';
 import Mutex from 'ts-mutex';
 import { MultiPartBuilder } from './multipart-builder';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-
-const API_KEY = 'AIzaSyA-PHzVrdedVDv7s1EwAGcfOq-JFHmldlc';
-const CLIENT_ID = '98237286064-bf0vbgpqqklhj434vifvfafvtckaja12.apps.googleusercontent.com';
-const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
-const SCOPES = 'https://www.googleapis.com/auth/drive.appfolder https://www.googleapis.com/auth/drive.file';
 
 const TUNE_FOLDER = 'Tune Browser';
 
@@ -32,36 +27,37 @@ export class GoogleDriveService {
 
     authenticationStatus: Observable<boolean> = this.authenticationStatusSource.asObservable();
 
+    constructor(private googleApi: GoogleApiLoaderService) {
+    }
 
-    initialize(): Promise<boolean> {
+
+    private initialize(): Promise<boolean> {
         return new Promise((resolve, reject) => {
-            gapi.load('client:auth2', () => {
-                this.initClient().then(() => {
-                    resolve(true);
-                });
-            });
+            this.initClient()
+                .then(() => resolve(true))
+                .catch(reason => reject(reason));
+        });
+    }
+
+    private loadGoogleClient(): Promise<void> {
+        return new Promise((resolve) => {
+                gapi.load('client', () =>  resolve());
         });
     }
 
     private async initClient(): Promise<void> {
-        await gapi.client.init({
-            apiKey: API_KEY,
-            clientId: CLIENT_ID,
-            discoveryDocs: DISCOVERY_DOCS,
-            scope: SCOPES
-        });
-
+        await this.googleApi.onLoad().toPromise();
+        await this.loadGoogleClient();
         await gapi.client.load('drive', 'v3');
-
         this.googleAuth = gapi.auth2.getAuthInstance();
         const user = this.googleAuth.currentUser.get();
-        this.log.info('Google API client initialized');
+        this.log.debug('Google API client initialized');
 
         if (user.getId() === null) {
             this.authenticationStatusSource.next(false);
         } else {
-            this.log.info("user id = " + user.getId());
-            this.log.info("isSignedIn = " + this.googleAuth.isSignedIn.get());
+            this.log.debug("user id = " + user.getId());
+            this.log.debug("isSignedIn = " + this.googleAuth.isSignedIn.get());
             this.authenticationStatusSource.next(true);
         }
     }
@@ -78,6 +74,7 @@ export class GoogleDriveService {
     }
 
     async signIn() {
+        await this.ensureInitialized();
         await this.googleAuth.signIn();
         this.authenticationStatusSource.next(true);
     }

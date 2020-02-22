@@ -55,6 +55,7 @@ import { TranscriberProvider } from './service/transcription/transcriber-provide
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { GoogleOauthModule, NG_GAPI_CONFIG, NgGapiClientConfig } from 'ngx-gapi-auth2';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -76,6 +77,21 @@ const appRoutes: Routes = [
         pathMatch: 'full'
     }
 ];
+
+const CLIENT_ID = '98237286064-bf0vbgpqqklhj434vifvfafvtckaja12.apps.googleusercontent.com';
+const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
+const SCOPES = 'https://www.googleapis.com/auth/drive.appfolder https://www.googleapis.com/auth/drive.file';
+
+
+const gapiClientConfig: NgGapiClientConfig = {
+
+    client_id: CLIENT_ID,
+    discoveryDocs: DISCOVERY_DOCS,
+    e2e: false,
+    scope: SCOPES,
+    ux_mode: 'redirect'
+};
+  
 
 @NgModule({
     declarations: [
@@ -105,6 +121,10 @@ const appRoutes: Routes = [
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
+        GoogleOauthModule.forRoot({
+            provide: NG_GAPI_CONFIG,
+            useValue: gapiClientConfig
+          }),        
         HttpClientModule,
         FormsModule,
         LayoutModule,

@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { GoogleDriveService } from './service/google-drive.service';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { MatSidenav } from '@angular/material/sidenav';
+import { GoogleAuthService } from 'ngx-gapi-auth2';
 
 @Component({
     selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit {
     constructor(
         private breakpointObserver: BreakpointObserver,
         private collectionService: TuneBookCollectionService,
+        private googleAuth: GoogleAuthService,
         private googleDriveService: GoogleDriveService) {
 
         this.breakpointObserver.observe([
@@ -29,8 +31,8 @@ export class AppComponent implements OnInit {
             this.isHandset = result.matches;
         });
 
-        this.googleDriveService.authenticationStatus.subscribe(authStatus => {
-            this.signedIn = authStatus;
+        this.googleAuth.authState.subscribe(authStatus => {
+            this.signedIn = authStatus != null;
             if (this.initialized) {
                 this.collectionService.loadCollections();
             }

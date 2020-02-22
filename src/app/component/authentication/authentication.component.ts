@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
+import { GoogleAuthService, GoogleAuth2LoaderService } from 'ngx-gapi-auth2';
 
 /**
  * Handles sign-in and sign-out with Google.
@@ -13,21 +14,35 @@ export class AuthenticationComponent {
 
     signedIn: boolean;
 
-    constructor(private route: ActivatedRoute, private router: Router, private googleDrive: GoogleDriveService) {
-        this.googleDrive.authenticationStatus.subscribe(authStatus => {
-            this.signedIn = authStatus;
-        });
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router,
+        private googleAuth: GoogleAuthService,
+        private googleApiLoaderService: GoogleAuth2LoaderService) {
 
         this.route.url.subscribe(segments => this.onAction(segments.pop().path));
+        this.googleAuth.authState.subscribe(auth => {
+            if (auth == null) {
+                this.signedIn = false;
+            } else {
+                this.signedIn = true;
+                this.router.navigate(['/books']);
+            }
+        });
+
+        this.googleApiLoaderService.getAuth().subscribe(auth => {
+            if (!auth.isSignedIn.get()) {
+                console.log("signing in")
+                auth.signIn();
+            }
+        });
     }
 
     private onAction(action: string) {
-        if ('login' === action) {
-            this.googleDrive.signIn();
+        if ('logout' === action) {
+            this.googleAuth.signOut();
+            this.signedIn = false;
+            this.router.navigate(['/books']);
         }
-        else if ('logout' === action) {
-            this.googleDrive.signOut();
-        }
-        this.router.navigate(['/books']);
     }
 }
