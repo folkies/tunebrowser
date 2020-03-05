@@ -1756,3 +1756,149 @@ f (3abc' |: "D" d'afa "Em"bgeg | "D"fd"A"ec "D"ddef | "G"gbaf "A7"gecd | "D"(3fe
 "D"d'afa "Em"bgeg | "D"fd"A"ec "D"ddef | "G"gbaf "A7"gecd |1(3gfe dc "D"df (3abc' :|2(3gfe dc "D"d2AG ||
 |: "D"FAdA FAdf | "Em"gbef gbeA | "D"FAdA FAdf | "A7"(3gfe cA (3gfe cA |
 "D"(3FGA dA (3FGA df | "G"~g3a bc' (3d'c'b | "D"afdg "Em7"bgec |1 "D"d2dc dB"A"AG :|2 "D" d2dc df "A"(3abc' ||
+
+X: 148
+T: Tom Busby's
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+|:Bee B2A|Bee BAF|Bee Bee|BAF AFD|
+Bee B2A|Bee def|gfe dBG|ABG FED:|
+|:ABA d2d|BAB dBG|ABA dcd|BAF AFD|
+ABA d2d|BAB def|gfe dBG|ABG FED:|
+
+X: 149
+T: Paddy O'Rafferty
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+dff cee|def gfe|dff cee|dfe dBA|
+dff cee|def ~g3|afd gfe|dfe dBA:|
+|:AFA ~A2f|~g3fdB|~A3 AFA|dfe dBA|
+AFA BGB|efe efg|afd gfe|dfe dBA:|
+|:faa eaa|def gfe|fAA eAA|dfe dBA|
+faa eaa|def~g3|afd gfe|dfe dBA:|
+
+X: 150
+T: Superfly
+R: reel
+M: 4/4
+L: 1/8
+K: Bmin
+|:Bf ~f2 gfeg | f3 g fedf | e3 f edce | dBBA BAFA |
+Bf ~f2 gfeg | f3 g fedf | e3 f edce | dBBA B2 BA :|
+|: Bcde f2 Bc | defB g2 Bc | defd agfa | gfeg fedc |
+Bcde f2 Bc | defB g2 Bc | defd agfa | gfeg fedc :|
+
+X: 151
+T: The Lounge Bar
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+A, |: B,DF E2D- |DFA d2c | BGB AFD | EGF E2A, |
+B,DF E2D- | DFA d2c | BGB AFD |1 E>FE D2A, :|2 E>FE DFA ] |
+|: d3 dcA | F3FEF | GBd- dcA | E3 EDE |
+F3 FED | B,3 B,A,B, | D2E- EFE |1 D3 DFA :|2 D6 ] |
+|: dBd c2B- | Bdf e2c | dcB AFD | EGF E2D |
+dBd c2B- | Bdf e2c | dcB AFD | E>FE D3 :|
+
+X: 152
+T: Strike The Gay Harp
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+d2B cBA|dAF FED|DdB cBA|dAF ~E3|
+def Bcd|ABA F2 E|~D3 DEF|AFE EFA:|
+|: dcd fdf|aba afe|def ~a3|bge edB|
+Bdf ~a3|bgb a2g|fed dfe|dAF EFA:|
+|: def dfe|dAF DFA|def dfe|dAF ~E3|
+def Bcd|ABA F2 E|~D3 DEF|AFE EFA:|
+
+X: 153
+T: Patsy Geary's
+R: slide
+M: 12/8
+L: 1/8
+K: Dmaj
+B|:A3 AFA BdB A2G|F2A d2e f3 fef|
+g2a/g/ f2g/f/ efe d2B|1ABA AFD E3 EFG:|2ABA f2e (d3 d2)e:|
+|:f2e f2e f2e fga|A2A BAF A3 ABd|
+e3 ede fef dfa|1baf afe (d3 d2)e:|2baf afe (d3 d2)|] 
+
+X: 154
+T: The Rose In The Garden
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+ABAc B~G3|BGBd gBfB|eA A/A/A BGGA|e/f/g dc BdgB|
+AGAc B~G3|BGBd g2 ga|bgag e/f/g fa|1 gedc BG G/G/G:|2 gedc BGG2||
+|:b~g3 agef|gage dega|b~g3 bgag|e~a3 e~a3|
+b~g3 agef|gage dega|bgag e/f/g fa|1 gedc BGG2:|2 gedc BG G/G/G|] 
+
+X: 155
+T: Paddy Fahey's #10
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+DGA ~B3|cBc d2g|gfd Bcd|cAG AGF|
+DGA ~B3|cBc d2g|gfd Bcd|1cAF G2F :||2cAF GBd||
+~g2d fga|gfd Bcd|cAA ~f3|agf def|
+~g2a bag|fdg fdc|B2G AGF|1DGF GBd:||2DGF G2F|]
+
+X: 156
+T: The Castle
+R: jig
+M: 6/8
+L: 1/8
+K: Ador
+|:cBA BAG|AGE DBG|~A3 EDB|DEG AGE|
+c2A B/2c/2dB|AGE DBG|~A2 E EDE|DBG A2 B:|
+|:cBA ~a3|bag edB|GBd ~g3|GBd cBA|
+cBc dcd|ede gab|age dBG|EFG A2 B:| 
+
+X: 157
+T: Touch Me If You Dare
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+dc |BG ~G2 AGEG |BG ~G2 Bdgd |B3 G AGED |EAAG A2 GA |
+BG ~G2 AGEG |BG ~G2 Bdgd |B3 G AGED |EG GF G2 :|
+|:Bc |dega bgag |eg d2 eg d2 |dega bgag |eaag a2 ge |
+dega bgag |eg d2 eg d2 |B3 G AGED |EG GF G2 :|
+
+X: 158
+T: Franc A'Phoill
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+|:A2D B2D|A2G FED|A2D B2D|GAG FED|A2D B2D|A2G FED|
+=CEG =cBA|GAG FED:|dfa afd|ded cAG|FGA =cAF|GEF GFE|
+dfa afa|geg fdf|e=cA FGA|GEF GFE:|dfd dfd|dAG FED|
+dfd dAF|GEF GED|dfd cec|BdB AFD|=CEG =cBA|GAG FED:|
+|:dDD cDD|BDD ADD|dDD cDD|GAG FED|
+dDD cDD|BDD ADD|=CEG =cBA|GAG FED:|
+
+X: 159
+T: The Lark's March
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+B |: AFE F2 E | DED D2 B | AFE F2 E | DFA B2 d |
+AFE F2 E | DED D2 f | gfe fdB | AFA B3 :|
+|: ABd fdB | ABA AFG | A2 d fdB | AFA B2 d |
+ABd fdB | ABA Aef | gfe fdB | AFA B3 :|
+|: Add fdd | edd fdB | Add fdB | AFA B2 A |
+Add fdB | ABA Aef | gfe fdB | AFA B2 d :|
+|: DFA dAF | DFA BGE | DFA dAF | DFA B2 A |
+DFA d2 A | ded def | gfe fdB | AFA B3 :|
+|: d3 def | AFF FED | ded def | AFA B2 A |
+d3 def | ded def | gfe fdB |1 AFA B2 A :|2 AFA B3 |]
