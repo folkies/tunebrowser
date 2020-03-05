@@ -21,11 +21,7 @@ export class GoogleDriveService {
 
     private googleAuth: gapi.auth2.GoogleAuth;
 
-    private authenticationStatusSource = new Subject<boolean>();
-
     private initialized = false;
-
-    authenticationStatus: Observable<boolean> = this.authenticationStatusSource.asObservable();
 
     constructor(private googleApi: GoogleApiLoaderService) {
     }
@@ -54,11 +50,9 @@ export class GoogleDriveService {
         this.log.debug('Google API client initialized');
 
         if (user.getId() === null) {
-            this.authenticationStatusSource.next(false);
         } else {
             this.log.debug("user id = " + user.getId());
             this.log.debug("isSignedIn = " + this.googleAuth.isSignedIn.get());
-            this.authenticationStatusSource.next(true);
         }
     }
 
@@ -71,17 +65,6 @@ export class GoogleDriveService {
 
     private ensureInitialized(): Promise<boolean> {
         return lock.use(() => this.ensureInitializedExclusive() );
-    }
-
-    async signIn() {
-        await this.ensureInitialized();
-        await this.googleAuth.signIn();
-        this.authenticationStatusSource.next(true);
-    }
-
-    signOut() {
-        this.googleAuth.signOut();
-        this.authenticationStatusSource.next(false);
     }
 
     isSignedIn(): boolean {
