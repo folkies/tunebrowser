@@ -994,24 +994,24 @@ K:Edor
 
 X: 76
 T:76    Trip to Pakistan
-R:Reel
+R:reel
 C:Niall Kenny
 M:C|
 K:Em
 "Em"EGBE "G"~G3B|"D"~A3B AGFG|"Em"EGBE "G"~G3B|"D"AGFG "Em"E4:|
-"Em"EGBG "Am"c3A|"G"BAGB "D"AGFG|"Em"EGBG "Am"c3A|"G"BAGB "D"A4:|
-"Bm"FGBF GBFG|"Em"EFGE FGFE|"D"DFAD FADF|AGFG "Em"E4:|
+|: "Em"EGBG "Am"c3A|"G"BAGB "D"AGFG|"Em"EGBG "Am"c3A|"G"BAGB "D"A4:|
+|: "Bm"FGBF GBFG|"Em"EFGE FGFE|"D"DFAD FADF|AGFG "Em"E4:|
 
 
 X: 77
 T:77    Golden Stud
 R:reel
-C:Maurice Lennon(Stockton’s Wing)
+C:Maurice Lennon (Stockton’s Wing)
 M:C|
 K:Em
 "Em"~E2 EG "D"~F2 FA|"G"~G2 GB "D7"ABcA|"G"BAGB "D"AGFA|"G"GEFD "Em"EDB,D|
 "Em"~E2 EG "D"~F2 FA|"G"~G2 GB "D7"ABcA|"G"BAGB "D"AGFA|"G"GEFD "Em"E4:|
-"Am"c2 cB cBAc|"G"~B2 BA BAGB|"D"~A2 AB AGFA|"G"GEFD "Em"E2 AB|
+|: "Am"c2 cB cBAc|"G"~B2 BA BAGB|"D"~A2 AB AGFA|"G"GEFD "Em"E2 AB|
 "Am"~c2 cB cBAc|"G"~B2 BA BAGB|"D"~A2 AB AGFA|"G"GEFD "Em"E4:|
 
 
@@ -1024,7 +1024,7 @@ R: jig
 K:Ador
 G|"Am"EAA ABd|e2 A AGE|"G"~G3 GAB|dBA GED|"Am"EAA ABd|e2A AGE|"C"efg "G"dBG|BAG "Am"A2:|
 a|"Am"age a2b|"Em"age edB|"G"AGE G2A|BAB GED|"Am"age a2b|"Em"age edB|"G"AGE G2A|BAG "Am"A3|
-"Am"age a2b|"Em"age edB|"G"AGE G2A|BAB GED|"C"EDE G2A|"G"BAG Bcd|"C"efg "G"dBG|BAG "Am"A2||
+"Am"age a2b|"Em"age edB|"G"AGE G2A|BAB GED|"C"EDE G2A|"G"BAG Bcd|"C"efg "G"dBG|BAG "Am"A2|]
 
 
 X: 79
@@ -1035,9 +1035,9 @@ L: 1/8
 R: reel
 K:Amix
 "A"ceef a2 ae |"D" f2fe "A"a2 ae | ceef a2 ae | "D"faec "G"B2 "A"A2 :|
-"A"ceeg "D"fddf |"A" ecce "Bm"fBBf | "A"ceeg "D"fddf |"A" ea ec "G"B2 "A"A2 :|
-"A"{^g}a2 a2 ef a2 | efae "D"faef |"A" {^g}a2 a2 efae | "D"faec "G"B2 "A"A2 :|
-"A"cdec "D"defd | "A"cdec "G"BcdB |"A" cdec "D"def^g |"A" afec "G"B2 "A"A2 :|
+|: "A"ceeg "D"fddf |"A" ecce "Bm"fBBf | "A"ceeg "D"fddf |"A" ea ec "G"B2 "A"A2 :|
+|: "A"{^g}a2 a2 ef a2 | efae "D"faef |"A" {^g}a2 a2 efae | "D"faec "G"B2 "A"A2 :|
+|: "A"cdec "D"defd | "A"cdec "G"BcdB |"A" cdec "D"def^g |"A" afec "G"B2 "A"A2 :|
 
 
 X: 80
@@ -1045,7 +1045,7 @@ T:80     Spindle Shanks
 R:reel
 M:4/4
 K:D
-"D"F2EG FDDE|FGAG FDDE|F2EG FDDE|1(3FGA Bc "G"dBAG:|2(3FGA Bc"G" d2cd|]
+"D"F2EG FDDE|FGAG FDDE|F2EG FDDE|1(3FGA Bc "G"dBAG:|2(3FGA Bc"G" d2cd||
 "A"~e3d efed|cdef "G"g2fg|"A" ~e3d efed|cABc "G"d2cd|
 "A"~e3d efed|cdef "G"g2fg| "D"af~f2 "A"ge~e2|"D"dfec "G"dBAG|]
 
@@ -1068,38 +1068,37 @@ B |"Am"~A2a2 ~A2g2 | Aage ageg  | "G"G2BA BGGB | "C"c2BA "G"BGGB |
 
 X: 82
 T:82    The High Reel
-C:Reel
 R:reel
 M:C|
 K:Amix
 "D"a2fa "A"ecAB|cAeA fAeA|"D"a2fa "A"ecAc|"G"Bcdc BG~G2|
 "D"a2fa "A"ecAB|cd ef "G"g2fg|"D"afge fdec|"G"Bcdc BG~G2:|
-"A"(3cBA eA fAed|(3cBA af ec~A2|(3cBA eA fAec|"G"Bcdc BG~G2|
+|: "A"(3cBA eA fAed|(3cBA af ec~A2|(3cBA eA fAec|"G"Bcdc BG~G2|
 "A"(3cBA eA fAeA|(3Bcd ef "G"g2fg|"D"afge fdec|"G"Bcdc BG~G2:|
 
 
 X: 83
 T:83   Star of Munster
 R:Reel
-M:C
+M:C|
 L:1/8
-K:ADor
-ed|"Am"c2 Ac "G"BAGB|"Am"AGEF "G"GEDG|"Am"EAAB "(C)"cBcd|eaaf "G"gedB|
-"Am"cB Ac "G"BAGB|"Am"AGEF "G"GEDG|"Am"EAAB "(C)"cBcd|ecdB A2 :|
-cd || "Am"eaag ageg|ag bg agef|"G"g2 ga gd (3ddd|gaba gedg|
-"Am"eaag ageg|agbg agef|"G(C)"(3ggg e "Am(D)"a2 ga|"G"bgaf gedB :|
+K:Ador
+ed |:"Am"c2 Ac "G"BAGB|"Am"AGEF "G"GEDG|"Am"EAAB "(C)"cBcd|eaaf "G"gedB|
+"Am"cBAc "G"BAGB|"Am"AGEF "G"GEDG|"Am"EAAB "(C)"cBcd|1 ecdB A2 ed:|2 ecdB A2 cd ||
+"Am"eaag ageg|agbg agef|"G"g2 ga gd (3ddd|gaba gedg|
+"Am"eaag ageg|agbg agef|"G(C)"~g3e "Am(D)"a2 ga|"G"bgaf gedB :|
 
 
 X: 84
 T: 84    The Otter's Holt
-C:Martin 'Junior' Crehan
-M: 4/4
+C: Martin 'Junior' Crehan
+M: C|
 L: 1/8
 R: reel
 K:Bmin
-e|"Bm"fBBA FEFB|"D"(3ABA FB ABde|"Bm"fBBA FEFA|BdcA Bcde|
-"Bm"fBBA FEFB|"D"A2 FB ABde|faaf "A"egfe|"D" dBAF "Bm"~B3:|
-c|"D"d2 fd Adfa|"Bm"bfaf "A"egfe|"D"(3ddd fd Adfa|"Bm"bfaf "A"e3f|
+e |: "Bm"fBBA FEFB|"D"(3ABA FB ABde|"Bm"fBBA FEFA|BdcA Bcde|
+"Bm"fBBA FEFB|"D"A2 FB ABde|faaf "A"egfe|1 "D" dBAF "Bm"~B3 e:||1 "D" dBAF "Bm"~B3 c||
+|:"D"d2 fd Adfa|"Bm"bfaf "A"egfe|"D"(3ddd fd Adfa|"Bm"bfaf "A"e3f|
 "D"d2fd Adfa|"Bm"bfaf "A"efde|"Bm"fBBA FEFA| (3Bcd cA B3c:|
 
 
@@ -1111,7 +1110,7 @@ R: hornpipe
 K:Gmaj
 (3DEF|"G"GFGB "D"AGED|"G"GBdg "C"e2(3def|"G"gfgd "Em"edBG|"D"ABAG "C"E2(3DEF|
 "G"GFGB "D"AGED|"G"GBdg "C"e2(3def|"G"gfgd "Em"edBG|"D"AGEF "G"G3:|
-Bd|"G"gfeg "D"fedf|"C"edef "Em"edB2|"G"gfgd "Em"edBG|"D"ABAG "C"E2(3DEF|
+|:Bd|"G"gfeg "D"fedf|"C"edef "Em"edB2|"G"gfgd "Em"edBG|"D"ABAG "C"E2(3DEF|
 "G"GFGB "D"AGED|"G"GBdg "C"e2(3def|"G"gfgd "Em"edBG|"D"AGEF "G"G4:|
 
 
@@ -1123,7 +1122,7 @@ R: hornpipe
 K:Edor
 B,2|"Em"EDEF "G"GFGA|"Em"B=cBA G2E2|BEED EFGB|"D"AGFE "Bm"D2B,2|
 "Em"EDEF "G"GFGA|"Em"BAGB "G"d3=c|"Em"B2E2 "G"GFED|"Em"E2EDE2 :|
-d2|"Em"e2e2 "Bm"Bdef|"G"gagf "Em"edef|e2B2 B3c|"D"dedc "Em"BcdB|
+|: d2|"Em"e2e2 "Bm"Bdef|"G"gagf "Em"edef|e2B2 B3c|"D"dedc "Em"BcdB|
 "Em"e2e2 "Bm"Bdef|"G"gagf "Em"efed|Bdeg "D"fedf|"Em"e2ede3 f|
 "G"g4 "D"f4|"Em"edBc "D"d3e|dBAF "G"GABc|"D"dBAF "G"GFED|
 "Em"B,2E2 EFGA|B2e2 "A"edef|"Em"e2B2 "D"BAGF|"Em"E6:|
@@ -1131,7 +1130,7 @@ d2|"Em"e2e2 "Bm"Bdef|"G"gagf "Em"edef|e2B2 B3c|"D"dedc "Em"BcdB|
 
 X: 87
 T:87       Swinging On The Gate
-M: 4/4
+M: C|
 L: 1/8
 R: reel
 K:Gmaj
@@ -1143,24 +1142,24 @@ K:Gmaj
 
 X: 88
 T:88     My Love Is In America
-M: 4/4
+M: C|
 L: 1/8
 R: reel
 K:Dmaj
 "D"FEFG "Am(A5)"AB=cB|"D"Ad~d2 Ad~d2|FEFG "Am(A5)"AB=cB|ABAG "D"FDD2|
 "D"F3 G "Am(A5)"AB=cB|"D"Addc defg|afge fdec|"G"dBAG "D"FD D2:|
-"D"fdeg fd"(A)"ec|"D"Ad~d2 Ad~d2|fdeg fdec|ABAG FDD2|
+|: "D"fdeg fd"(A)"ec|"D"Ad~d2 Ad~d2|fdeg fdec|ABAG FDD2|
 "D"fdeg fd"(A)"ec|"D"Addc defg|afge fdec|"G"dBAG "D"FD D2:|
 
 
 X: 89
 T:89    The Monaghan Twig
-M: 4/4
+M: C|
 L: 1/8
 R: reel
 K:Amix
 ed|"A"cAAB cded|cAAG ~E2ed|cAAB cded|"G"BAGB d2:|
-A|"A"cdef "G"gfed|"A"cdef ~e3A|cdef "A7"gfge|"G"dBGB d2ed|
+ed|"A"cdef "G"gfed|"A"cdef ~e3A|cdef "A7"gfge|"G"dBGB d2ed|
 "A"cded cded|cAAB cdef|"A7"~g3e "G"dged|BAGB d2ed||
 
 
@@ -1168,12 +1167,12 @@ X: 90
 T:90    Eavesdropper
 M:6/8
 L:1/8
-C:Trad
+C:Trad.
 R:Jig
 K:G
 "G"D2B BAG | Bdd dBG | "C"cee "G"dBG |"D" BAA "C"AGE |
 "G"DBB BAG | Bdd dBG | "C"cee "G"dBG | "D"AGF "G"G2 :|
-d | "G"gfg "D"afd |"C" efg "G"d2 B |"C" cee "G"dBG |"D" BAA A2 d |
+|: d | "G"gfg "D"afd |"C" efg "G"d2 B |"C" cee "G"dBG |"D" BAA A2 d |
 "G"gab "D"afd |"C" efg "G"dBG | "C"cee "G"dBG |"D" AGF"G" G2  :|
 
 
@@ -1185,8 +1184,8 @@ R: jig
 K:Dmaj
 B|"D"AFD DFA|"G"BdB "D"BAF|ABA F2D|"A"FEE E2B|
 "D"AFD DFA|"G"BdB "D"BAF|ABA F2E|1 FDD D2:|2 FDD D2e||
-"D"f2d dcd|f2d d2e|~f3 def|"G"~g3 efg|
-"D"fed "G"B2d|"D"A2d F2G|ABA F2E|1 FDD D2e:|2 FDD D2||
+|: "D"f2d dcd|f2d d2e|~f3 def|"G"~g3 efg|
+"D"fed "G"B2d|"D"A2d F2G|ABA F2E|1 FDD D2e:|2 FDD D2|]
 
 
 X: 92
@@ -1198,22 +1197,22 @@ L:1/8
 K:G
 E| "G"DGG GAG |"D" FDE "Dm"=F2 E |"G" DGG GFG | "D"Add "C"cAG  |
 "G"DGG GAG |"D" FDE"d" =F2 d |"C" cAG "D"FGA |1"G"BGF G2:|2"G"BGF G2A||
-"G"~B3 BAG |"D" ~A3 AGF |"G" ~G3 GFG |"D" Add "C"cAG |
+|: "G"~B3 BAG |"D" ~A3 AGF |"G" ~G3 GFG |"D" Add "C"cAG |
 "G"BcB BAG | "D"ABA A2d |"C" cAG "D"FGA|1"G"BGF G2A:|2"G"BGF G2B ||
-"D"d2 e f2 g | a2 g fed |"C" cAG "D"FGA |"G" BGB "D"AFD |
-"D"d2 e f2 g | a2 g fed | "C"cAG "D"FGA |1"G"BGF G2B:|2"G"BGF G2BE|
+|: "D"d2 e f2 g | a2 g fed |"C" cAG "D"FGA |"G" BGB "D"AFD |
+"D"d2 e f2 g | a2 g fed | "C"cAG "D"FGA |1"G"BGF G2B:|2"G"BGF G2|]
 
 
 X: 93
 T:93     Master McDermott's
-C: Sean McGuire,Liam Donnelly
-M: 4/4
+C: Sean McGuire, Liam Donnelly
+M: C|
 L: 1/8
 R: reel
 K:Dmaj
 FE |"D" DF~F2 DEFA | dffe "G"dB~B2 |"D" AF~F2 dF~F2 | BFAF "A"EGFE |
 "D" DF~F2 DEFA | dffe "G"dB~B2 |"D" AF~F2 dBAF |"A" EGFE "D" D2 :||
-(3ABc | "D"dff2 dfaf |"G" ~g2bg "D"affe |"G" dBBA Bcde |"D" fdgf "A"e2 de |
+|: (3ABc | "D"dff2 dfaf |"G" ~g2bg "D"affe |"G" dBBA Bcde |"D" fdgf "A"e2 de |
 "D"faaf "G"~g2 bg |"D" affe "G"dB~B2 |"D" AF~F2 dBAF | "A"EGFE "D" D2 :||
 
 
@@ -1226,8 +1225,8 @@ K:G
 "G"BG (3GGG BGcG|BG (3GGG Bd gd|BG (3GGG BGcB|"D"AGFG ABcA:|
 "G"~g3d BGBd|"C"~g3e "D"fgaf|"G"~g3d BGBd|"D" AGFG ABcd|
 "G"~g3d BGBd|"C"~g3e "D"fga2|"G"bgaf gedB|"D" AGFG ABcA||
-"G"Bd gd Bdgd|Bdgd BGG2|"Dm7(F)"Ac=fc Acfc|Ac=fc A=FF2|
-"G"Bd gd Bdgd|Bdef ~g3a|bgaf gedB|"D"AGFG ABcA||
+"G"Bdgd Bdgd|Bdgd BGG2|"Dm7(F)"Ac=fc Acfc|Ac=fc A=FF2|
+"G"Bdgd Bdgd|Bdef ~g3a|bgaf gedB|"D"AGFG ABcA|]
 
 
 X: 95
@@ -1235,10 +1234,10 @@ T:95    Jenny Picking Cockles
 M:C|
 L:1/8
 R:Reel
-K:DMix
+K:Dmix
 "D"Addc "Am"AGEF|"C"GEcE dEcE|"D"Addc "Am"AGEF|"C"GEcE "D"EDD2|
 "D"Addc "Am"AGEF|"G"G2AB "C"~c3d|"Am"edcA AGEF|"C"GEcE "D"EDD2:|
-"D"f3d efed|"A"^cAAB cdeg|"D"f3d "A"ed^cd|eaag edde|
+|: "D"f3d efed|"A"^cAAB cdeg|"D"f3d "A"ed^cd|eaag edde|
 "D"f3d efed|"A"^cAAB "Am"~=c3d|edcA "D"AGEF|"C"GEcE "D"EDD2:|
 
 
@@ -1249,8 +1248,8 @@ M:C|
 K:D
 AB|"D"BAFA D2FA|"G"BA (3Bcd "A"e2de|"D"faaf "A7"egfe|"D"dfed "G"B2dB|
 "D"BAFA D2FA|"G"BA (3Bcd "A"e2de|"D"faaf "A7"egfe|"D"d2f2 d2:|
-fg|"D"afdf a2gf|"A"efga "G"b2ag|"D"faaf "A7"egfe|"D"dfed "G"B2dB|
-"D"BAFA D2FA|"G"BA (3Bcd "A"e2de|"D" faaf "A7"egfe|"D"d2f2 d2:|bo
+|:fg|"D"afdf a2gf|"A"efga "G"b2ag|"D"faaf "A7"egfe|"D"dfed "G"B2dB|
+"D"BAFA D2FA|"G"BA (3Bcd "A"e2de|"D" faaf "A7"egfe|"D"d2f2 d2:|
 
 
 X: 97
@@ -1275,19 +1274,19 @@ R: reel
 K:Em
 D|"Em"Eeed e2 BA|"G"GBAF GFEF|"D"Ddd^c d2 AF|"G"GBAG "D"FDDF|
 "Em"Eeed efge|"D"fedf "Em"edBA|"G"G2BG "D7"FGAc|"G"BGAF "Em"GE E :|
-"Em"gfef (3gfe be|gebe gfef|"D"d2 fd adfd|ABAG FDDF|
+|: z|"Em"gfef (3gfe be|gebe gfef|"D"d2 fd adfd|ABAG FDDF|
 "G"(3GGG BG "D"(3FFF AF|"Em"E2ef gfed|"G"B3A "D7"FGAc|"G"BGAF "Em"GE E:|
 
 
 X: 99
 T:99    The Longford Collector
-M: 4/4
+M: C|
 L: 1/8
 R: reel
 K:Gmaj
 "G"G3A Bcdg|"Em"e~B3 eBdB|"G"~G3A B2dB|"D7(Am7)"AcBA "G"GEDE|
 "G"~G3A Bcdg|"Em"e~B3 "D"d2ef|"G"~g3f gedB|"D7"AcBA "G"GEDE:|
-"G"~g3f gedg|"Em"e~B3 "D"d2ef|"G"~g2gf gedB|"D7(Am7)"AcBA "G"GEED|
+|:"G"~g3f gedg|"Em"e~B3 "D"d2ef|"G"~g2gf gedB|"D7(Am7)"AcBA "G"GEED|
 "G"~g3f gedg|"Em"e~B3 "D"d2ef|"G"gbaf gedB|"D7"AcBA "G"GEED:|
 
 
@@ -1310,6 +1309,7 @@ M:2/4
 L:1/8
 R:Polka
 K:G
+%%stretchlast
 "G"D>E DB,|DE G>A|Bd "D"AB/2A/2|"C"GE cE|
 "G"D>E DB,|DE G>A|Bd "D"AB/2A/2|1"G"G2 GE:|2"G"G2 G>A||
 "G"Bd d>B|"C"ce e>d|"G"Bd "D"AB/2A/2|"C"GE cE|
@@ -1328,7 +1328,7 @@ K:D
 "D"dd "G"B/c/d/B/|"D"AF AF|dd "G"B/c/d/B/|"D"AF ED|
 "D"dd "G"B/c/d/B/|"D"AF Ad/e/|"D"fd "A"ec|1 "D"d2 d2:|2"D" d2 d>e||
 |:"D"fd de/f/|"G"gf "A"ed/e/|"D"fd Ad|"D"fd/f/ a>g|
-"D"fd de/f/|"G"gf "A"ed/e/|"D"fd "A"ec|1 "D"d2 d>e:|2"D" d2 d2||
+"D"fd de/f/|"G"gf "A"ed/e/|"D"fd "A"ec|1 "D"d2 d>e:|2"D" d2 d2|]
 
 X: 101
 T:101    The Wise Maid
