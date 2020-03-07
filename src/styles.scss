@@ -3,6 +3,14 @@
 
 @include mat-core();
 
+@font-face {
+    font-family: 'Irish Uncialfabeta';
+    src: url('assets/font/irishuncialfabeta-bold-webfont.woff2') format('woff2'),
+         url('assets/font/irishuncialfabeta-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 div.search-panel {
     margin-bottom: 1em;
 }
@@ -168,4 +176,9 @@ div.tune-item {
 
 div.main-content {
     margin-bottom: 80px;
+}
+
+h1.irish {
+    font-family: 'Irish Uncialfabeta';
+    font-size: 24px;
 }
