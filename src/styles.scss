@@ -1,7 +1,13 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~@angular/material/theming';
 
 @include mat-core();
+
+$tune-browser-primary: mat-palette($mat-light-green, 700);
+$tune-browser-accent:  mat-palette($mat-orange);
+$tune-browser-warn:    mat-palette($mat-red);
+$tune-browser-theme: mat-light-theme($tune-browser-primary, $tune-browser-accent, $tune-browser-warn);
+
+@include angular-material-theme($tune-browser-theme);
 
 @font-face {
     font-family: 'Irish Uncialfabeta';
