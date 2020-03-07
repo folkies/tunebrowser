@@ -1332,9 +1332,8 @@ K:D
 
 X: 101
 T:101    The Wise Maid
-C:?John Doherty?
 M:C|
-R:Reel
+R:reel
 K:D
 "D"~F3G FEDE|FAAB AFED|"G"d2 (3efg "D"fdec|"G"dBAF "A"BE~E2|
 "D"~F3G FEDE|FAAB AFED|"G"d2 (3efg "D"fdec|1 "G"dBAG "D"FD ~D2:|2 "G"dBAG "D"FDFA||
@@ -1350,19 +1349,19 @@ M:C|
 K:D
 "D"AF~F2 "A7"GE~E2|"D"FBAF EFDB,|"D"A,B,DE ~F3B|"A"ABde "D"fedB|
 "D"AF~F2 "A7"GE~E2|"D"FBAF EFDB,|"D"A,B,DE ~F3B|1 "A"ABde "D"fddB:|2"A" ABde "D"fede||
-"D"faaf "G"gfeg|"D"fedf "A"edBc|"D"dBAF DEFB|"A"ABde "D"fede|
-"D"faaf "G"gfeg|"D"fedf "A"edBc|"D"dBAF DEFB|1"A" ABde"D" fdde:|2"A" ABde"D" fedB||
+|: "D"faaf "G"gfeg|"D"fedf "A"edBc|"D"dBAF DEFB|"A"ABde "D"fede|
+"D"faaf "G"gfeg|"D"fedf "A"edBc|"D"dBAF DEFB|1"A" ABde "D"fdde:|2"A" ABde "D"fedB||
 
 
 X: 103
 T:103    Martin Wynne's #2
-M:2/2
+M:C|
 C:Martin Wynne (1914-98)
 R:reel
-K:BMin
+K:Bmin
 "Bm(D)"FBAF "A"E2 FE|"G"DB, ~B,2 "D"DB,A,2|"Em"B,E ED "Bm"FEDE|"D"FABc dcBA|
 "Bm(D)"FBAF "A"EGFE|"G"DB, ~B,2 "D"DB,A,2|"Em"B,E ED "Bm"FEDE|"D"FABA "Bm"B2 BA:|
-"Bm(D)"FBAF "D"A2 FA|"G"(3Bcd eg "D"fede|f2 gf "A7"egfe|"D"dBAF "Bm"B2BA|
+|:"Bm(D)"FBAF "D"A2 FA|"G"(3Bcd eg "D"fede|f2 gf "A7"egfe|"D"dBAF "Bm"B2BA|
 "Bm(D)"FBAF "D"A2 FA|"G"(3Bcd eg "D"fedf|"Bm"bf "(D)"af "A7"egfe|"D"dBAF "Bm"B2 BA:|
 
 
@@ -1374,7 +1373,7 @@ R: polka
 K:Gmaj
 "G"de/d/ Bd|Gd Bd|"C"e/f/g/e/ "G"dB|"C"AG E2|
 "G"de/d/ Bd|Gd Bd|"C"e/f/g/e/ "G"dB|1 AG G2:|2 AG G>A||
-"G"Bd "C"e/f/g/e/|"G"dB "D"AG/A/|"G"Bd "C"e/f/g/e/|"G"dB "D"A2|
+|: "G"Bd "C"e/f/g/e/|"G"dB "D"AG/A/|"G"Bd "C"e/f/g/e/|"G"dB "D"A2|
 "G"Bd "C"e/f/g/e/|"G"dB "D"AG|"G"de/d/ "D"BA|1 AG "G"G>A:|2 "G"AG G2||
 
 
@@ -1384,9 +1383,10 @@ M: 2/4
 L: 1/8
 R: polka
 K:Gmaj
+%%stretchlast
 "G"G>A Bd|gf ed|"Am"eA AB|cd/2c/2 BA|
 "G"G>A Bd|gf ed|"Am"ea ef|"G"g2 g2 :||
-"Am"ae ae|ae e>f|"G"gd gd|gd d>g|
+|: "Am"ae ae|ae e>f|"G"gd gd|gd d>g|
 "Am"ae ae|ae e>f|"G"ge dB|"Am"A2 A2 :||
 
 
@@ -1395,12 +1395,13 @@ T:106    Maggie in the Woods
 M: 2/4
 L: 1/8
 R: polka
-K:G Major
-B/A/ |"G"GD G>A |"Em" Be eg/e/ |"G" dB B/A/G/A/ |"D" BA A B/A/ |
+K:Gmaj
+%%stretchlast
+B/A/ |"G"GD G>A |"Em" Be eg/e/ |"G" dB B/A/G/A/ |"D" BA AB/A/ |
 "G"GD G>A |"Em" Be eg/e/ |"G" dB "D"AB/A/ |"G" G2 G :|
-B/d/ |"G"gf ed |"C" ef ge |"G" dB B/A/G/A/ | "D"BA AB/d/|
-|1"G"gf ed |"C" ef ge |"G" dB "D"AB/A/ |"G" G2 G :|
-:|2"G"GD G>A |"Em" Be eg/e/ |"G" dB "D"AB/A/ |"G" G2 G ||
+|: B/d/ |"G"gf ed |"C" ef ge |"G" dB B/A/G/A/ | "D"BA AB/d/|
+[1"G"gf ed |"C" ef ge |"G" dB "D"AB/A/ |"G" G2 G :|
+[2"G"GD G>A |"Em" Be eg/e/ |"G" dB "D"AB/A/ |"G" G2 G |]
 
 
 X: 107
@@ -1411,8 +1412,8 @@ L:1/8
 K:Ador
 "Am"A2 cA ~A2 cA|"G" G2 EG ~G2 EG| "Am"A2 cA "G"GAcd |"Am" ecdB cAAG|
 "Am"A2 cA ~A2 cA|"G"G2 EG ~G2 EG|"Am"A2 cA "G"GAcd|"Am"ecdB cA A2:||
-"Am"agec "G(D)"d2 ed|"Am"cAGE "G"~G4|"Am"agec "G(D)"d2 cd|"Am"eaag ~a3 b|
-"Am"agec "G(D)"d2 ed|"Am"cAGE "G"G2 EG|"Am"A2 cA"G" GAcd|"Am"ecdB cAA2:|
+|:"Am"agec "G(D)"d2 ed|"Am"cAGE "G"~G4|"Am"agec "G(D)"d2 cd|"Am"eaag ~a3 b|
+"Am"agec "G(D)"d2 ed|"Am"cAGE "G"G2 EG|"Am"A2 cA "G"GAcd|"Am"ecdB cAA2:|
 
 
 X: 108
@@ -1434,9 +1435,9 @@ L: 1/8
 R: reel
 K:Gmaj
 "G"GEDE G2GA|B2BA Bcd2|GEDE ~G3B|"D"A2AB AGED|
-"G"GEDE G2GA|B2BA Bcd2|"C"edef gedc|1"G"BGAF G2 BA :|2"G" BGAF G2Bd|
-"G"~g3e "D"~f3d|"C"edef "G"edB2|gedB G2GB|"D"A2AB AGED|
-"G"GEDE G2GA|B2BA Bcd2|"C"edef gedc|"G"BGAF G4:||
+"G"GEDE G2GA|B2BA Bcd2|"C"edef gedc|1"G"BGAF G2 BA :|2"G" BGAF G2Bd||
+|: "G"~g3e "D"~f3d|"C"edef "G"edB2|gedB G2GB|"D"A2AB AGED|
+"G"GEDE G2GA|B2BA Bcd2|"C"edef gedc|"G"BGAF G4:|]
 
 
 X: 110
@@ -1445,9 +1446,9 @@ M: 6/8
 L: 1/8
 R: jig
 K:Dmix
-"D"~f3 ded |"Am(C)" cAB c2 e |"D" dcA"G" GFG|"D" Add "C"efg |
+"D"~f3 ded |"Am(C)" cAB c2 e |"D" dcA "G"GFG|"D" Add "C"efg |
 "D"fgf ded |"Am(C)" cAB c2 e |"D" dcA "G"GFG |"D" Ad^c d3 :|
-"D"dfa afd | dfa afd |"G" ~g3  ged |"C" cde g3 |
+|: "D"dfa afd | dfa afd |"G" ~g3  ged |"C" cde g3 |
 "D"afd fed |"Am(C)" cAB c2e |"D" dcA "G"GFG| "D"Ad^c d3 :|
 
 
@@ -1457,21 +1458,23 @@ M: 12/8
 L: 1/8
 R: slide
 K:Dmaj
+%%stretchlast
 "D"A2D FED F2A A2f|"G"g2e "D"f2d "A"e2d "G"Bcd|
 "D"A2D FED F2A A2f|a2f "A"efe "D"d3 dcB:|
-"D"d2e ~f3 "G"gfe "D"~f3|"G"gfe "D"fed "A"e2d "G"B2A|
+|: "D"d2e ~f3 "G"gfe "D"~f3|"G"gfe "D"fed "A"e2d "G"B2A|
 "D"d2e f3 "G"gfe "D"f2f|a2f "A"efe "D"d3 d3:|
 
 
 X: 111b
 T:111b    Dan O'Keefe's slide
-R: Slide
+R: slide
 M: 12/8
 L: 1/8
-K:Gmaj
+K:Ador
+%%stretchlast
 "Am"A2e e2d "G"BAB d2B|"Am"A2e e2d "G"B2G GFG|
 "Am"A2e e2d "G"BAB d3|BAB d2e "Am"B2A A3:|
-"Am"e2a a2b a2g e2d|e2a a2b a2g e2f|
+|: "Am"e2a a2b a2g e2d|e2a a2b a2g e2f|
 "G"g2a g2e dBA G3|BAB d2e "Am"B2A A3:|
 
 
@@ -1483,18 +1486,18 @@ R: jig
 K:Emin
 "Em"E2e BGE |"D" D2d AFD | "Em"E2e BGF | GFE e2f |
 "Em"gfe "G"dcB |"D" ABG FED |"Em" EFG "Am(6)"ABc |"G" BGF "Em"E3 :|
-"Em"eBe gfe |"D" dAd fed |"Em" eBe gfe |"D" faf "Em"gfe |
-"D"faf "Em"gfe |"G" dcB "D"AFD |"Em" EFG"Am(6)" ABc |"G" BGF"Em" E3 :|
+|: "Em"eBe gfe |"D" dAd fed |"Em" eBe gfe |"D" faf "Em"gfe |
+"D"faf "Em"gfe |"G" dcB "D"AFD |"Em" EFG "Am(6)" ABc |"G" BGF"Em" E3 :|
 
 
 X: 113
 T:113    Coleraine
-R:Jig
+R:jig
 M:6/8
 K:Am
 E|"Am"EAA ABc|"E"Bee e2d|"Am"cBA ABc|"E"B^GE E2D|
 "Am"EAA ABc|"E"Bee e2d|"Am"cBA "E"B^GE|"Am"A3 A2:|
-B|"C"c2c cdc|"G"Bgg g2^g|"Am"aed cBA|"E"^GBA E^FG|
+|: B|"C"c2c cdc|"G"Bgg g2^g|"Am"aed cBA|"E"^GBA E^FG|
 "Am"A^GA "E"BAB|"Am"cde "Dm"fed|"Am"cBA "E"B^GE|"Am"A3 A2:|
 
 
@@ -1506,33 +1509,32 @@ L: 1/8
 R: reel
 K:Gmaj
 "G"~B2BA BAGA | B2GB "C"AGEG |1"G" ~B3A BAGB |"C"AcBG AGEG :|2"G"Bd~d2 eBdB |"C" AcBG AGEG ||
-"G"DG~G2 DGBG | DGBG "C"AGEG |"G" DGGF GABc |1 dBAc BGGE :|2dBAc BGGB |
-"G"d2 Bd "C"efge |"G" d2BG "C"AGEG |"G"d2 Bd "C"ef~g2 |1 "G"agbg "C"ageg :|2 "D"agab aged||
+|: "G"DG~G2 DGBG | DGBG "C"AGEG |"G" DGGF GABc |1 dBAc BGGE :|2dBAc BGGB ||
+|: "G"d2 Bd "C"efge |"G" d2BG "C"AGEG |"G"d2 Bd "C"ef~g2 |1 "G"agbg "C"ageg :|2 "D"agab aged||
 
 
 X: 115
 T:115    Cameronian Reel
 T:Carey's Dream
-C:Reel
 R:reel
 M:C|
 K:D
 "D"A2 FA DAFA|"G"GFEF GBdB|"D"A2 FA DAFA|"G"GBAG "D"FDDB |
 "D"A2 FA DAFA|"G"G~E3 GBdB|"D"A2 FA DAFA|"G"GBAG "D"FDDB:|
-"D"Addc d2dA|"G"(3Bcd ef gfed|"A"(3cBA eA fAeA|cdef "G"gfeg|
+|: "D"Addc d2dA|"G"(3Bcd ef gfed|"A"(3cBA eA fAeA|cdef "G"gfeg|
 "D"fa"(A)"eg "D"fa"(A)"eg|"D"fedc defg|af"(A)"ge "D"fd"(A)"ec|"D"dBAG FDD2:|
 
 
 X: 116
 T:116    Terry 'Cuz' Teehan's
-M: 4/4
+M: C|
 L: 1/8
 R: slow reel
 K:Emin
-"Em"B2 BA B2 AB|"Bm"dB AF"D" DE FA|"Em"B2 BA B2 AB|"Bm"dB AF "Em"E4|
-"Em"B2 BA B2 BA|"Bm"dB AF"D" DE FA|"Em"B2 BA B2 BA|"Bm"dB AF"Em" E4||
-"Em"Be ef "(G)"g2 fe|"Bm"d2 Bd "D"AD FA|"Em"Be ef "(G)"g2 fe|"Bm"dB AF"Em" E4|
-"Em"Be ef "(G)"g2 fe|"Bm"d2 Bd "D"AD FA|"Em"Be ed "Bm"BA FE| "D"DE FD "Em"EF GA||
+"Em"B2 BA B2 AB|"Bm"dBAF "D" DEFA|"Em"B2 BA B2 AB|"Bm"dBAF "Em"E4|
+"Em"B2 BA B2 BA|"Bm"dBAF "D" DEFA|"Em"B2 BA B2 BA|"Bm"dBAF "Em" E4||
+"Em"Beef "(G)"g2 fe|"Bm"d2 Bd "D"ADFA|"Em"Beef "(G)"g2 fe|"Bm"dBAF "Em" E4|
+"Em"Beef "(G)"g2 fe|"Bm"d2 Bd "D"ADFA|"Em"Beed "Bm"BAFE| "D"DEFD "Em"EFGA||
 
 
 X: 117
@@ -1541,8 +1543,8 @@ T:Moll Ha’penny
 M: 4/4
 C:Junior Crehan's Arrangement of Moll Ha’penny
 L: 1/8
-R: Air
-K:Dmaj
+R: air
+K:Bmin
 |:de|"Bm"fedf "A"e2dB|"D"AF~F2 "A"ABde|"D(Bm)"fedf "A"e2de|"Bm"fbba "G"b2ag|
 "D(Bm)"fedf "A"e2dB|"D"AF~F2 "A"ABde|"D(Bm)"fedf "A"edBA|"Bm"B2BA B2:|
 |:de|"D"faab afef|"Bm"dBAB "D"d3e|"Bm"fbba "G"b2ag|"D"fedf "A"~e2de|
@@ -1569,7 +1571,7 @@ L: 1/8
 R: reel
 K:Gmaj
 "G"G2BG cGBG|"D"ADDE FGAF|"G"G2BG cGBG|1"D" Addc AGGF:|2"D" Addc AGGf||
-"G"g2dg egde|g2bg "C(Am)"agef|"G"g2dg egdB|1 "C(Am)"cAdc "G"BGGf:|2"C(Am)" cAdc "G"BGGF||
+|: "G"g2dg egde|g2bg "C(Am)"agef|"G"g2dg egdB|1 "C(Am)"cAdc "G"BGGf:|2"C(Am)" cAdc "G"BGGF||
 
 
 X: 120
@@ -1580,44 +1582,41 @@ M:C|
 K:G
 "G"G2BG DGBG|"D"ABcA "G"BG~G2|"D"AGAB "C"cBAG|"Am"EAAG "D"FDEF|
 "G"G2BG DGBd|"Am"cBAB "C"cdef|"G"gedB "C"c2Bc|"G"dB"C"cA "G"BG~G2:|
-"G"g2bg dgbg|gbag "D"fdde|f2af dfaf|"G"gbag "D"fdef|
+|: "G"g2bg dgbg|gbag "D"fdde|f2af dfaf|"G"gbag "D"fdef|
 "G"g2bg dgbg|gbag "D"fdef|"G"gedB "C"c2Bc|"G"dB"C"cA "G"BG~G2:|
 
 
 X: 121
 T:121    Old Copperplate
 R:reel
-Z:Barney
 M:4/4
 L:1/8
 K:Ador
-G|"Am"A2 EA cA ~A2|aged cAFA|"G"G2 DG BG ~G2|gedc BGGB|!
+"Am"A2 EA cA ~A2|aged cAFA|"G"G2 DG BG ~G2|gedc BGGB|!
 "Am"A2 EA cA ~A2|aged cAAG|ABcd efge| aged cAA2:|!
-"Am"ageg ~a3b|aged cA~A2|"Em"gfef g3a|"G"gedc BG ~G2|!
+|:"Am"ageg ~a3b|aged cA~A2|"Em"gfef g3a|"G"gedc BG ~G2|!
 "Am"ageg a3b|aged cAAG|ABcd efge| aged cA~A2:|
 
 
 X: 122a
 T:122a   The Geese in the Bog
-C:Jig
 R:jig
 M:6/8
 K:D
 "D"dFF AFF|dFF "A"ABc|"D"dFF "A"AFE|"Bm"FBB B2c|
 "D"dFF AFF|dFF "A"ABc|"D"dcB "A"AFE|"Bm"FBB B2c:|
-"D"def "A"afe|"Bm"f2b"A" afe|"D"def"A" afe|"Bm"fbb b2c|
+|:"D"def "A"afe|"Bm"f2b "A" afe|"D"def "A" afe|"Bm"fbb b2c|
 "D"def ~a3|"Bm"f2b "A"afe|"D"dcB "A"AFE|"Bm"FBB B2c:|
 
 
 X: 122b
 T:122b   The Geese in the Bog
-C:Jig
 R:jig
 M:6/8
 K:Cmaj
 "C"cEE GEE|cEE "G"GAB|"C"cEE "G"GED|"Am"EAA A2B|
 "C"cEE GEE|cEE "G"GAB|"C"cBA "G"GED|"Am"EAA A2B:|
-"C"cde "G"ged|"Am"e2a"G" ged|"C"cde"G" ged|"Am"eaa a2B|
+|:"C"cde "G"ged|"Am"e2a "G" ged|"C"cde "G" ged|"Am"eaa a2B|
 "C"cde ~g3|"Am"e2a "G"ged|"C"cBA "G"GED|"Am"EAA A2B:|
 
 
@@ -1629,8 +1628,8 @@ R: jig
 K:Ador
 "Am"cAB ~c3|"D"dcd "Am"ede|A2A c2e|"D"dcA AGA|
 "Am"EAB cBc|"D"dcd "Am"ede|a3 "G"ged|"C"cAG "Am"A3:|
-"Am"eaa aba|"C"gef "G"ged|"Am"eaa aba|"G"ged "Am"cAA|
-"Am"eaa eaa|"C"gef "G"~g3|"Am"~a3"G" ged|"C"cAG "Am"A3:||
+|: "Am"eaa aba|"C"gef "G"ged|"Am"eaa aba|"G"ged "Am"cAA|
+"Am"eaa eaa|"C"gef "G"~g3|"Am"~a3"G" ged|"C"cAG "Am"A3:|
 
 
 X: 124
@@ -1641,11 +1640,11 @@ R:jig
 K:D
 "D"A2d dcd| "G"Bdd "D"Add| "G"Bdd "D"Add| "A"Bee edB|
 "D"A2d dcd| "G"Bdd "D"Add| "G"Bdd "A"cde| "D"fdc d2B:|
-"D"A2f fef| aff fed| "A"Bee ede| "D"fed "Em"edB|
+|: "D"A2f fef| aff fed| "A"Bee ede| "D"fed "Em"edB|
 "D"A2f fef| aff fed| "G"Bdd "A"cde| "D"fdc d2B:|
-"G"G2g gfg| "D"agf "G"gdB| "G"G2g gfg| "D"agf "G"gab|
+|: "G"G2g gfg| "D"agf "G"gdB| "G"G2g gfg| "D"agf "G"gab|
 "G"G2g gfg| "D"agf "G"gdB| "Em(C)"eee "(C)"efg| "D"fed "Em"edB:|
-"G"GBB Bdd| "Em"dee edB| "G"GBB Bdd| "Em"dee efg|
+|: "G"GBB Bdd| "Em"dee edB| "G"GBB Bdd| "Em"dee efg|
 "G"GBB Bdd| "Em"dee edB| "(C)"eee "(C)"efg| "D"fed "Em"edB:|
 
 
@@ -1658,7 +1657,7 @@ K:Edor
 "Em"E2~E2 BE~E2 | "D"B2AF DEFD |"Em" E2~E2 BE~E2 | "D"B2Ad "Em"BEED |
 "Em"EE~E2 BE~E2 |"D" B2AF DEFD | "Em" EGFE BE~E2 | "D"dBAd "Em"BE~E2 ||
 "Em"e2 (3gfe bege | "D"dcdf a2fd | "Em"e2ge bege | "D"dBAd "Em"BE~E2 |
-"Em"e2 ge be (3gfe | "D"dcdf a2fd | "Em"effe "D"f2 ec | "D"dB Ad "Em"BE~E2 ||
+"Em"e2 ge be (3gfe | "D"dcdf a2fd | "Em"effe "D"f2 ec | "D"dB Ad "Em"BE~E2 |]
 
 
 X: 126
