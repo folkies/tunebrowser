@@ -1,6 +1,6 @@
 {
-    "name": "Folkies Tunebook Browser",
-    "short_name": "Folkies",
+    "name": "Tune Browser",
+    "short_name": "Tune Browser",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
