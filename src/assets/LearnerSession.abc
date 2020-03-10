@@ -37,7 +37,7 @@ K:A
 "A"E>E Ec|"D"BA FA|"A"E>E Ec|"D"BA AF|
 "A"E>E Ec|"D"BA FA|"A"E2 e>c|1 BA AF:|2 BA A>B||
 |:"A"ce B>c|"D"BA FA|"A"ce B>c|"D"BA AB|
-"A"ce B>c|"D"BA FA|"A"E>E Ec|BA AB:||
+"A"ce B>c|"D"BA FA|"A"E>E Ec|BA AB:|
 
 
 X: 2
@@ -174,7 +174,7 @@ e|"D"fef "G"gfg|"D"afd "A"cBA|"D"fef "G"gfg|"D"afd "G"dfg|
 X: 10
 T:10    Julia Delaney
 B:Francis O'Neill: "The Dance Music of Ireland" (1907) no. 643
-R:Reel
+R:reel
 M:C|
 L:1/8
 K:Ddor
@@ -211,7 +211,7 @@ T:14    Tulla Reel
 T: Humours of Tulla
 M: 4/4
 L: 1/8
-R: Reel
+R: reel
 K:D
 "D"d2 Ad "G"BdAB|"D"d2 fd "A"edBc|"D"d2 Ad "G"BdAd|"Bm"(3Bcd ef "G"g2 fe|
 "D"d2 Ad "G"BdAB|"D"d2 fd "A"edBc|"D"d2 Ad "G"BdAd|"Bm"(3Bcd ef "G"g2 fg ||
@@ -246,7 +246,7 @@ d |"Am"e2e "D"dBA|"Am"e2e "D"dBA|"G"GAB "D"dBA|"G"GAB dBd |
 X: 17
 T:17    The Mountain Road
 C:Michael Gorman (1895-1970)
-R:Reel
+R:reel
 M:C|
 L:1/8
 F:http://www.arcelts.com/bbot1/t483.abc	 2007-02-11 11:16:23 UT
@@ -368,7 +368,7 @@ K:G Major
 X: 28
 T:28    Sligo Maid
 M:C
-R:Reel
+R:reel
 L:1/8
 K:Ador
 "A5"A2 BA (3B^cd ef| "(G)"gedB "(D)"AGEF|"G" ~G2 BG dGBG|"D" DEGA BAdB|
@@ -609,7 +609,7 @@ X: 45
 T:45    The Morning Dew
 M:C|
 L:1/8
-R:Reel
+R:reel
 K:Edor
 "Em"~E3B "(D6)"BAFA|"Em"EBEB "D"AGFD|"Em"~E3B "(D6)"BAFA|"G"BcdB "D"AGFD|
 "Em"~E3B "(D6)"BAFA|"Em"EBEB "D"AGFD|"Em"~E3B "(D6)"BAFA|"G"BcdB "D"ADFA||
@@ -646,7 +646,6 @@ K:Dmaj
 
 X: 48
 T:48    The Drunken Landlady
-C:Reel
 R:reel
 M:C|
 K:Edor
@@ -933,7 +932,7 @@ K:Gmaj
 
 X: 71
 T:71    Chicago Reel
-R:Reel
+R:reel
 O:Ireland
 M:4/4
 K:Ador
@@ -945,7 +944,6 @@ B|"Am"cded cAGE|"C"G2GE GAcd|ecgc acgc|"Am"eaag "C"eged|
 
 X: 72
 T:72    Drowsy Maggie
-C:Reel
 R:reel
 M:C|
 K:Edor
@@ -1052,7 +1050,7 @@ K:D
 
 X: 81
 T:81      Brenda Stubbert's Reel
-C:(Jerry Holland)   Reel @
+C:Jerry Holland
 O:Cape Breton
 R:reel
 M:C|
@@ -1079,7 +1077,7 @@ K:Amix
 
 X: 83
 T:83   Star of Munster
-R:Reel
+R:reel
 M:C|
 L:1/8
 K:Ador
@@ -1218,7 +1216,7 @@ FE |"D" DF~F2 DEFA | dffe "G"dB~B2 |"D" AF~F2 dF~F2 | BFAF "A"EGFE |
 
 X: 94
 T:94    Flogging Reel
-R:Reel
+R:reel
 M:C|
 L:1/8
 K:G
@@ -1233,7 +1231,7 @@ X: 95
 T:95    Jenny Picking Cockles
 M:C|
 L:1/8
-R:Reel
+R:reel
 K:Dmix
 "D"Addc "Am"AGEF|"C"GEcE dEcE|"D"Addc "Am"AGEF|"C"GEcE "D"EDD2|
 "D"Addc "Am"AGEF|"G"G2AB "C"~c3d|"Am"edcA AGEF|"C"GEcE "D"EDD2:|
@@ -1725,7 +1723,7 @@ K:Gmaj
 X: 131
 T: 131 Anything for John-Joe?
 C: traditional Irish from the Sliabh Luachra area
-R: Reel
+R: reel
 M: 4/4
 L: 1/8
 K:D maj
@@ -1739,7 +1737,7 @@ X: 132
 T: 132 Old Bush
 T: The Long Hills of Mourne
 C: traditional Irish
-R: Reel
+R: reel
 K:Ador % 1 sharp
 "Am" A2GA cA~A2 | "D" d^cde fded | "Am" A2 GA  =cA~A2 | "D" dfed     cAdc |
 "Am" A2GA cA~A2 | "D" d^cde  f3g | afge fde^c | dfed "Am" =cAA2 :|
@@ -1825,7 +1823,7 @@ K:Ador
 
 X: 139
 T: 139 Sunny Banks
-R: Reel
+R: reel
 D: Waltons: Tinwhistle Tunes
 N: Chords: | D   | D G | D   | A D :|
 N:         | D A | D G | D A | A D :|
@@ -1855,7 +1853,7 @@ T:Macleod’s Farewell
 C:Donald Shaw
 P:Macleod’s Farewell ist der richtige Name, Lunasa hatten ihn falsch benannt
 M:4/4
-R:Reel
+R:reel
 L:1/8
 K:D
 DE|"D"F2BF AFEF| D2 DE FABd|"Em"e2 fd efdB|"D" ABde "G"dBAG|
@@ -1960,7 +1958,7 @@ d|"G"g>ag |"Em"g>fg|"Am"a>ba |"D"a>fd|"G"b2b |"Am"a>bg|"D"f>ge|"D" def|
 
 X: 149
 T:149 Merry Blacksmith
-R:Reel
+R:reel
 M:C
 L:1/8
 K:D
@@ -1972,7 +1970,7 @@ fg|"D"a3g ~f3 e|d3A BAFA|ABde f2 ed|"Em(A)"Beed efge|
 
 X: 150
 T:150 Dr.Gilberts
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:Edor
@@ -2070,7 +2068,6 @@ K:G
 
 X: 158
 T:158 Virginia
-C:Reel
 R:reel
 K:D
 "G"DBBA ~B3 B| BAdB "D"AFEF| DFFA A3 B| AFBF AFEF|
@@ -2098,7 +2095,7 @@ T:160  Miss McLeod's
 M:4/4
 C:Isle of Skye. First printed in Niel Gow's Fifth Collection of Strathspey Reels of 1809
 L:1/8
-R:Reel
+R:reel
 K:G
 "G"G2BG dGBG|B2 BA BcBA|G2 BG dGBG|"D"AGFG AcBA|
 "G"G2 BG dGBG|B2 BA Bc d2|"C"efed "D"Bdef|"G"gedB "D"AcBA:|
@@ -2158,7 +2155,7 @@ K:D
 
 X: 165
 T:165 Black Haired Lass
-R:Reel
+R:reel
 K:C
 M:C|
 L:1/8
@@ -2184,7 +2181,7 @@ ef |"Em(C)" g~e3 "(G)"gede |"Em(C)" g~e3 "D"a2ba |"Em(C)" gee2 "(G)"ged2 |"C(Em)
 X: 167
 T:167 Kerry Lasses
 M:4/4
-R:Reel
+R:reel
 L:1/8
 K:D
 "D"~F3G AF F2|"G"AGG2 dcAG|"D"~F3G AF F2|"G"B2 AG "D"FDDE|
@@ -2256,7 +2253,7 @@ K:Edor
 X: 173
 T:173 The Kerryman's Daughter
 T:The Lilting Fisherman
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:C
@@ -2434,7 +2431,7 @@ K:Amaj
 X: 187b
 T:187b Popcorn Behaviour
 C:Jay Ungar
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:C
@@ -2509,7 +2506,7 @@ K:Dmix
 X: 193
 T:193 The Holly Bush
 C: Finbarr Dwyer
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:DMix
@@ -2523,7 +2520,7 @@ X: 194
 T:194 The Maple Leaf
 C:Darach de Brun
 M:4/4
-R:Reel
+R:reel
 K:Em
 "Em"E3F GE~E2|"G"B2AB AGED|"Em"E3F G2GA|"G"B2dB "D"AGFD|
 "Em"E3F GE~E2|"G"B2AB AGED|"Em"Beed "D"BAGA|"G"B2GB "D" AGED:||
@@ -2553,7 +2550,6 @@ A |"D" d3 e fedA |"G" B/B/B gB BAGB |"D" A/A/A Ad fedf |"A" eA A/A/A afge |
 X: 196
 T:196 The Silver Spire
 T:John Brennan's
-C:Reel
 R:reel
 M:C|
 K:D
@@ -2566,7 +2562,6 @@ K:D
 X: 196b
 T:196b The Silver Spire Flute
 T:John Brennan's
-C:Reel
 R:reel
 M:C|
 K:D
@@ -2653,7 +2648,7 @@ X: 203
 T:  203 Richard Dwyer's
 M: 4/4
 L: 1/8
-R: Reel
+R: reel
 K:Dmaj
 c|"D"d2 fd "A"cdec|"D"defd AdBA|"G"GB (3BBB "D"Ad (3ddd|"G"gfed "A"cdec|
 "D"d2 fd "A"cdec|"D"defd AdBA|"G"GB (3BBB "D"Ad (3ddd|"A"cdec "D"d3:|
@@ -2665,7 +2660,7 @@ X: 204
 T:204 The House on the Hill
 T: Miss Thornton’s
 M:4/4
-R:Reel
+R:reel
 L:1/8
 K:G
 "G"G2Bd gdBd|"Am"cBAB cded|"G"~B3A GBdg|"Am"ecAF "G"GFED|
@@ -2742,7 +2737,7 @@ T:210 Lafferty's
 T:Rattigan's
 T:Glen of Aherlow
 C:Sean Ryan
-R:Reel
+R:reel
 M:4/4
 K:Edor
 "Bm"B2 AF "(D)"BFAF |"Em" ~E3 F EDB,D |"Bm" B2 AF "(D)"BFAF | "D"DFAF "Em"FE E2 |
@@ -2842,7 +2837,7 @@ D|"G"G2 G-G/F/|GA Bc|dg/f/ "C"ec|"D7(Am)"AB c/B/A|
 X: 217a
 T:217a The Crooked Road to Dublin
 M:4/4
-R:Reel
+R:reel
 L:1/8
 K:G
 "G"G3G "D"FGAF|"G"G2FG "D"AdcA|"G"GBAG "D"FGAg|fdcA dBcA|
@@ -2854,7 +2849,7 @@ K:G
 X: 217b
 T:217b The Crooked Road to Dublin
 T:Rover Version
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:G
@@ -2907,7 +2902,7 @@ K:D
 
 X: 220
 T:220 Drag her around the Road
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:G
@@ -2976,7 +2971,7 @@ X: 225
 T:225 Donald Blue
 M: 4/4
 L: 1/8
-R: Reel
+R: reel
 K:Dmaj
 "D"dBAF A2 FA|dBAF "A"E2"D"2 D2|"D"dBAF A2 FA|1"G" B2 BA B2 AB:|2"G" B2 BA B2 dB|
 "D"ABde ~f3 d|"G"~g3 e "D"fedB|ABde fedc|1"G" B2 BA B2 dB:|2"G" B2 BA B2 AB|
@@ -3000,7 +2995,7 @@ X: 227
 T:227 The Templehouse
 M:4/4
 L:1/8
-R:Reel
+R:reel
 K:G
 "Em"EFGA "(Bm)"BFAF|"D"D2FD ADFD|"Em"EFGA BE~E2|"Em(Cmaj7)"dBAc "Em"BEED:|
 "G(Em)"g2ef gfeg|"D"f2df afdf|"G(Em)"g2ef gfed|"Em(Cmaj7)"B2 Ac "Em"BEED|
@@ -3022,7 +3017,7 @@ K:Dmaj
 
 X: 229
 T:229 Jenny's Chicken
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:A
@@ -3069,7 +3064,7 @@ K:Emin
 
 X: 232
 T: 232 Kitty's gone a-milking
-R: Reel
+R: reel
 K:G maj
 Bc | "G"dG~G2 d2cA | dG~G2   "D"FGAB   |"G" dG~G2 d2 (3efg |"D" fdcA "G" G2Bc |
 "G"dG~G2 dBcA | dG~G2 "D"(3EFG AB |"G" dG~G2 d2 (3efg |"D" fdcA "G"G2 ||
@@ -3132,7 +3127,7 @@ W:Back to me is stealing.
 X: 236
 T:236 Stone of Destiny
 C:Maurice Lennon
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:G
@@ -3188,7 +3183,7 @@ X: 240
 T:240 Earls Chair
 T:Down between the Two Derryoobers
 C:Patrick(Patto)Moloney of Woodford, Co Galway
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:D
@@ -3262,7 +3257,7 @@ K:Gmaj
 
 X: 244
 T:244 Abbey Reel
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:Ador
@@ -3297,7 +3292,7 @@ K:Edor
 X: 247
 T:247 Sophie's Dancing Feet
 C:Aly Bain
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:D
@@ -3322,7 +3317,7 @@ a3e f2ec|dBcA BAFB|A3F EFAc|ecBc A4:|
 X: 249
 T:249 New Mown Meadow
 M:4/4
-R:Reel
+R:reel
 L:1/8
 K:Edor
 "Em"BEED E2FA|BdcA "D"BAFA|"Em"BEE2 "D"FDFA|A2BA FEFA|
@@ -3335,7 +3330,7 @@ X: 250
 T:250 The Golden Keyboard
 C:Martin Mulhaire
 M:4/4
-R:Reel
+R:reel
 L:1/8
 K:Edor
 "Em"BGEF GFGA|"G"B2gB fBeB|"Em"BGEF GBAG|"D"FDAD BDAF|
@@ -3586,7 +3581,7 @@ FA|"Em"Beed efed|(3Bcd ef "G"gedB|"D"Addc ~d3B|A2FE DEFA|
 
 X: 268
 T:268 The Ashplant
-R: Reel
+R: reel
 M: 4/4
 K:Edor
 GA | "Em" BE~E2 BAGA | BE~E2 "G"G2GA |"Em" BE~E2 BABd | "G"gedB "D"ABGA |
@@ -3622,7 +3617,7 @@ e|"G"d2e g2a|bc'b bag|"C(Am)"aba age|"G"gag "C"age|
 X: 270
 T:270 Maudabawn Chapel
 C:Ed Reavy
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:Edor
@@ -3635,7 +3630,7 @@ K:Edor
 X: 271
 T:271 Street Player
 C:Ed Reavy
-R:Reel
+R:reel
 M:4/4
 L:1/8
 K:D
