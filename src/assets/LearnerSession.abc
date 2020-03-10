@@ -23,7 +23,7 @@ K:D
 %%stretchlast
 "D"fA BA|fA BA|d2 e>f|"(Bm)"ed Bd|
 "D"fA BA|fA BA|d2 e>f|ed d2:|
-"D"fa e>f|ed Bd|fa e>f|ed d2|
+|:"D"fa e>f|ed Bd|fa e>f|ed d2|
 "D"fa e>f|ed Bd|"A"A2 a>f|"D"ed d2:|
 
 
@@ -36,7 +36,7 @@ K:A
 %%stretchlast
 "A"E>E Ec|"D"BA FA|"A"E>E Ec|"D"BA AF|
 "A"E>E Ec|"D"BA FA|"A"E2 e>c|1 BA AF:|2 BA A>B||
-"A"ce B>c|"D"BA FA|"A"ce B>c|"D"BA AB|
+|:"A"ce B>c|"D"BA FA|"A"ce B>c|"D"BA AB|
 "A"ce B>c|"D"BA FA|"A"E>E Ec|BA AB:||
 
 
@@ -63,7 +63,7 @@ R:jig
 K:Ador
 "Am"eAA "G"Bcd|"Am"eaf "G"ged|"(Em)"edB "a"cBA|"G"BAG Bcd|
 "Am"eAA "G"Bcd|"Am"eaf "G"ged|"(Em)"edB "Am"cBA|"G"BAG "Am"A2d:|
-"Am"eaa "C"efg|"D"agf "G"ged|"Am"eaa "C"efg|"D"fed "G"~g3|
+|:"Am"eaa "C"efg|"D"agf "G"ged|"Am"eaa "C"efg|"D"fed "G"~g3|
 "Am"eaa "C"efg|"D"agf "G"ged|"(Em)"edB "Am"cBA|"G"BAG "Am"ABd:|
 
 
@@ -98,7 +98,7 @@ L:1/8
 K:Em
 B,2|"Em"E2 EF "G"G2 GA|"Em"BcBA G2E2|"D"D2DE FEFG|ABAG F2D2|
 "Em"EDEF "G"GFGA|"Em"BcBA "G"G2GA|B2 Bc BAFG|1 "Em"E2 E2 E2 :|2 "Em"E2E2 E4||
-"C"[e2c2] [e2c2] [e3c3]e|"G"dBGA B3c|"Em"BAFG "D"A2AB|AGED "Em"EFGA|!
+|:"C"[e2c2] [e2c2] [e3c3]e|"G"dBGA B3c|"Em"BAFG "D"A2AB|AGED "Em"EFGA|!
 "C"e2e2 g2ge|"G"dBGA B3c|B2 Bc BAFG|1 "Em"E2E2E4:|2 "Em"E2E2E2|]
 
 
@@ -121,7 +121,7 @@ L:1/8
 K:D
 A | "D" FAA "G" GBB | "D" FAd fed | "A" cBc ABc | "D" dfe dAG |
 "D" FAA "G" GBB | "D" FAd fed | "A" cBc ABc | "D" dfe d2  :|
-c | "Bm" dBB    fBB | fgf     fed | "A" cAA eAA | efe edc |
+|: c | "Bm" dBB    fBB | fgf     fed | "A" cAA eAA | efe edc |
 "Bm" dBB    fBB | fgf     fed | "A" cBc ABc | "D" dfe d2  :|
 
 
@@ -145,7 +145,7 @@ R:reel
 K:D
 "D"D2FD A,DFD|"Em"E2GE B,EGE|"D"D2dA "G"BAGF|"Em"G2F E2 GFE|
 "D"D2FD A,DFD|"Em"E2GE B,EGE|"D"D2dA "G"BAGF|"A"EDCE "D"D3A:|
-"G"B2BA B2Bc| dBBA B2Bd|"A"c~A3 fAeA|"D" ABde f2"(A)"ec|
+|:"G"B2BA B2Bc| dBBA B2Bd|"A"c~A3 fAeA|"D" ABde f2"(A)"ec|
 "G"B2BA B2Bc| dBBA B2Bc|"D"dBcA BAFA |1"A"ABde "D"f2ec:|2"G"BdDE "D"FE2F|]
 
 
