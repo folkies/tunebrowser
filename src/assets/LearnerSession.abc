@@ -1728,7 +1728,7 @@ C: traditional Irish from the Sliabh Luachra area
 R: reel
 M: 4/4
 L: 1/8
-K:D maj
+K:Dmaj
 AG | "D"F2AF "G"G2BG | "D"FAAF EFDE | F2AF "G"G2BG  | "A"ABcA "D"d2AG |
 FAAF "G"GBBG | "D"F2AF EFDE | F2AF "G"GB~B2 |"A" cABc "D"d2  ||
 de | "D"f2df efde | faaf efde | f2af efdB  | "A"cABc "D"d2de |
@@ -1740,7 +1740,7 @@ T: 132 Old Bush
 T: The Long Hills of Mourne
 C: traditional Irish
 R: reel
-K:Ador % 1 sharp
+K:Ador
 "Am" A2GA cA~A2 | "D" d^cde fded | "Am" A2 GA  =cA~A2 | "D" dfed     cAdc |
 "Am" A2GA cA~A2 | "D" d^cde  f3g | afge fde^c | dfed "Am" =cAA2 :|
 |: "C" eg~g2  edcd | egge  c2cd | eg~g2 "D" afge | dfed "Am"cA~A2 |
@@ -1987,7 +1987,7 @@ L: 1/8
 K:Gmaj
 (3DEF|"G"G2 GF GABc|dBge "D"dBAc|"Em"BEED EFGA |"G"BGAF "Em"GFEF|
 "G"DG GF GABc|d2ge "D"dBAc|"Em"BEED EFGA |"G"BGAF G3:|
-A|"Em" Beed e2ef|geaf "G"gfed| "D"Bdd^c d2de|"D" fdaf "G"gfed|
+|: A|"Em" Beed e2ef|geaf "G"gfed| "D"Bdd^c d2de|"D" fdaf "G"gfed|
 "Em"Beed e2ef|geaf "G"gfed|"Em"BEED EFGA|"G"BGAF G3:|
 
 
@@ -1999,19 +1999,19 @@ L: 1/8
 K:Dmaj
 dB|"D"ADFD ADFD|Adcd fedc|"Em"BEGE BEGE|Beed "A"cdeg|
 "Bm"f~B3 f~B3|fdec "D"dfag|fdec "G"dBAG|"D"FGEF D2:|
-"D"fg|afdg "G"bgeg|"D"fdec dcBc|Addc defg|"A"~a3b a2fg|
+|: "D"fg|afdg "G"bgeg|"D"fdec dcBc|Addc defg|"A"~a3b a2fg|
 "D"~a3f "G"~g3e|"D"fdec dfag|fdec "G"dBAG|"D"FGEF D2:|
 
 
 X: 153
 T:153 Congress Reel
 R:reel
-M:8/8
+M:C|
 L:1/8
-K:ADor
+K:Ador
 "Am"eAAG A2 (3Bcd|eaaf "G"gedg|"Am"eA~A2 eAcA|"G"BGGF GABd|
 "Am"eAAG ABcd|eaaf "G"gedB|"C"cBcd (3efg ed|"Am"cABG A2 (3Bcd:|
-"Am"eaag ~a3g|eaag "G"egdg|(3efg dg egdg|"Am"eaab "G"gedg|
+|: "Am"eaag ~a3g|eaag "G"egdg|(3efg dg egdg|"Am"eaab "G"gedg|
 "Am"eaag ~a3g|eaag "G"(3efg dB|"C"cBcd (3efg ed|"Am"cABG A2 (3Bcd:|
 
 
@@ -2025,7 +2025,7 @@ L: 1/8
 K:Dmin
 "Dm"A,2DA, FA,DA,|"Bb"B,2DB, FB,DB,|"C"C2EC GCEC|"Dm"FEDF "C"EDCB,|
 "Dm"A,2DA, FA,DA,|"Bb"B,2DB, FB,DB,|"C"C2EC GCEC|"Dm"FEDC A,DD2:|
-"Dm"dA~A2 FADA|dA~A2 FADA|"C"cG~G2 EG~G2|cG~G2 cdec|
+|: "Dm"dA~A2 FADA|dA~A2 FADA|"C"cG~G2 EG~G2|cG~G2 cdec|
 "Dm"dA~A2 FADA|dA~A2 FEDC|"Bb"~B,3A, B,CDE|"Dm"FDEC A,DD2:|
 
 
@@ -2036,8 +2036,8 @@ M: 4/4
 L: 1/8
 K:Dmaj
 "D"defd "(Bm)"BAFB|"D"AD (3FED FAAB|defd "(Bm)"BAFB|1 "D"ABdf eddB:|2 ABdf edde||
-"D"faag fddf|"G"~g3a "e"bgeg|"D"faag fedB|ABdf edde|
-"D"faag fddf|"G"~g3a "(Em)"bgeg|"D"~f3e "(Bm)"~d3B|"D"ABdf eddA||
+"D"faag fddf|"G"~g3a "Em"bgeg|"D"faag fedB|ABdf edde|
+"D"faag fddf|"G"~g3a "(Em)"bgeg|"D"~f3e "(Bm)"~d3B|"D"ABdf eddA|]
 
 
 X: 156
@@ -2046,12 +2046,12 @@ M:6/8
 L:1/8
 C:John Harling
 R:jig
-K:ADor
+K:Ador
 E|"Am"A2 B cBA|eAB cBA|"G"~G3 EGG|DGG EFG|
 "Am"A2 B cBA|e2 d efg|age "G"dBG|"Am"ABA A2:|
-g|"Am"a3 age|"G"dBd ~g3|"Em"gag gfe|"G"dBA GFG|
+|: g|"Am"a3 age|"G"dBd ~g3|"Em"gag gfe|"G"dBA GFG|
 "C"EGG "G"DGG|"C(Am7)"EGG "Am"ABc|"G"Bed BAG|"Am"ABA A2:|
-G|"Am"ABA gAf|ABA geB|"G"GAG eGd|GAG edB|
+|: G|"Am"ABA gAf|ABA geB|"G"GAG eGd|GAG edB|
 "Am"ABA gAf|ABA "C(Am7)"efg|"Am"age "G"dBG|"Am"ABA A2:||
 
 
@@ -2060,9 +2060,9 @@ T:157 The Peeler's Jacket
 R:reel
 K:G
 "G"G2BG DGBG|"D"FGAB "C"c2Bc|"G"dggf d2eg|"D"fdcA BGAF|
-"G"G2BG DGBG|"D"FGAB "C"c2Bc|"G"dggf d2eg|1"D"fdcA "G"BG~G2:|2"D"fdcA "G"BGBd|
-"G"gagf d2ef|gfga bgaf|gagf d2eg|"D"fdcA "G"BGBd|
-"G"gagf d2ef|gfga bgaf|gbag "D"fdeg|1 fdcA "G"BG~G2:|2 "D"fdcA BGAF||
+"G"G2BG DGBG|"D"FGAB "C"c2Bc|"G"dggf d2eg|1"D"fdcA "G"BG~G2:|2"D"fdcA "G"BGBd||
+|: "G"gagf d2ef|gfga bgaf|gagf d2eg|"D"fdcA "G"BGBd|
+"G"gagf d2ef|gfga bgaf|gbag "D"fdeg|1 fdcA "G"BG~G2:|2 "D"fdcA BGAF|]
 
 
 X: 158
@@ -2071,7 +2071,7 @@ R:reel
 K:D
 "G"DBBA ~B3 B| BAdB "D"AFEF| DFFA A3 B| AFBF AFEF|
 "G"DBBA ~B3 B| BAdB "D"ABde| ~f3e defe| dBAF "Em"BE (3EEE :|
-"D"defe d3 A| "(Bm)"BAFA BAFA|"D" defe defg|afbf af eg|
+|: "D"defe d3 A| "(Bm)"BAFA BAFA|"D" defe defg|afbf af eg|
 "D"f2 df efdB| AF (3FFF ABde| ~f3e defe|dBAF "Em"BE (3EEE :|
 
 
@@ -2079,26 +2079,26 @@ X: 159
 T:159 Siobhan O'Donnell's
 T:The Reel Of Sceachóg
 M:C
-C:John Brady(Offaly)
+C:John Brady (Offaly)
 L:1/8
 R:reel
 K:A
 "A"ABce ~a3e|"D"~f3a "A"fece|"D"f2fe "A"cBAF|EFAB cBAF|
 "A"~E3A ~c3e|"D"~f3a "A"fece|"(D)"f2"A"ec dBcA|"E"BcAB "A"cAAB:|
-"A"ABce fece|"D"fA~A2 fAeA|fA~A2 fAeA|"A"aefa eAce|
+|: "A"ABce fece|"D"fA~A2 fAeA|fA~A2 fAeA|"A"aefa eAce|
 "D"~f3e "A"cBAF|~E3F ABce|"(D)"f2"A"ec dBcA|"E"BcAB "A" cAAB:|
 
 
 X: 160
 T:160  Miss McLeod's
 M:4/4
-C:Isle of Skye. First printed in Niel Gow's Fifth Collection of Strathspey Reels of 1809
+O:Isle of Skye. First printed in Niel Gow's Fifth Collection of Strathspey Reels of 1809
 L:1/8
 R:reel
 K:G
 "G"G2BG dGBG|B2 BA BcBA|G2 BG dGBG|"D"AGFG AcBA|
 "G"G2 BG dGBG|B2 BA Bc d2|"C"efed "D"Bdef|"G"gedB "D"AcBA:|
-"G"G2 gf edeg|B2 BA BcBA|G2 gf edeg|"D"a2 ab agef|
+|: "G"G2 gf edeg|B2 BA BcBA|G2 gf edeg|"D"a2 ab agef|
 "G"g2 gf edeg|B2 BA Bc d2|"C"efed "D"Bdef|"G"gedB "D"AcBA:|
 
 
@@ -2107,10 +2107,11 @@ T:161  Maids Of Ardagh
 R: polka
 M: 2/4
 L: 1/8
-K:Amix
+K:D
+%%stretchlast
 "D"F>A BA|de f2|fe/f/ "A"gc|ed BA|
 "D"F>A BA|de f2|fe/f/ "A"gc|ed "D"d2:|
-"A"ef/e/ ce|fe a2|ef/e/ ce|fe c/B/A|
+|: "A"ef/e/ ce|fe a2|ef/e/ ce|fe c/B/A|
 "A"ef/e/ ce|fe a2|"(Em)"ef/e/ dB|"A"BA A2:|
 
 
@@ -2122,7 +2123,7 @@ L: 1/8
 K:Gmaj
 d|"G"gfg "C"e2d|"Em"Bee "D"dBA|"G"BGG dGG|BAG "D"ABd|
 "G"gfg "C"e2d|"Em"Bee "D"dBA|"G"BGG "D"dBA|"G"BGF GB:|
-d|"G"gfg "D"afd|"G"gfg "D"a2f|"G"gfg "C"eag|"D"fdd d2a|
+|: d|"G"gfg "D"afd|"G"gfg "D"a2f|"G"gfg "C"eag|"D"fdd d2a|
 "G"bgb "D"afa|"G"gag "C"e2d|"Em"Bee "D"dBA|"G"BGF G2:|
 
 
@@ -2133,22 +2134,22 @@ M: 4/4
 L: 1/8
 K:Emin
 "Em"~E3F ~G3A|Be~e2 Be~e2|~E3F "G"G2BG|"D"~A2BA GEFD|
-"Em"~E3F ~G3A|Beed e2ef|"C"ge fd "Em"edBG|1"D"AcBA GEFD:|2"D"AcBA "Em"GEE2||
-"Em"gfeg "D"fedc|"Em"Be~e2 Be~e2|gfeg "D"fedB|AcBA "Em"GEE2|
-"Em"gfeg "D"fedc|"Em"Beed e2ef|"C"ge fd "Em"edBG|1"D"AcBA "Em"GEE2:|2"D"AcBA GEFD||
+"Em"~E3F ~G3A|Beed e2ef|"C"gefd "Em"edBG|1"D"AcBA GEFD:|2"D"AcBA "Em"GEE2||
+|: "Em"gfeg "D"fedc|"Em"Be~e2 Be~e2|gfeg "D"fedB|AcBA "Em"GEE2|
+"Em"gfeg "D"fedc|"Em"Beed e2ef|"C"gefd "Em"edBG|1"D"AcBA "Em"GEE2:|2"D"AcBA GEFD||
 
 
 X: 164
 T:164 Mooncoin Jig
 M:6/8
 L:1/8
-R:Jig
-K:D
+R:jig
+K:Amix
 "A"cBA AEA|AEA "G"Bcd|"A"cBA Ace|"G"dBG Bcd|
 "A"cBA AEA|AEA "G"Bcd|"A"Ace~g3|"G"dBG Bcd:|
-"A"cde efg|"D"f/2g/2af "G"ged|"A"cde efg|aAB cde|
+|: "A"cde efg|"D"f/2g/2af "G"ged|"A"cde efg|aAB cde|
 "A"cde efg|"D"afd "Em"bge|"D"afd "A"gec|"G"dBG Bcd:|
-"A"cBA "D"Aaf|"A"ecA "G"Bcd|"A"cBA ~g3|"G"dBG Bcd|
+|: "A"cBA "D"Aaf|"A"ecA "G"Bcd|"A"cBA ~g3|"G"dBG Bcd|
 "A"cBA Aaa|Agg "D"Aff|"A"Aee efg|"G"dBG Bcd:|
 
 
@@ -2174,7 +2175,7 @@ K:Gmaj
 "Am"EAAE "G"GABG |"Am" EAAB "G"G2ED |"Am" EAAE "G"GABd |"Am7(C)" edge "G"dBAG |
 "Am"EAAE "G"GABG |"Am" EAAB "G"G2ED |"Am" EAAE "G"GABd |"Am7(C)" edge "G"d2||
 ef |"Em(C)" g~e3 "(G)"gede |"Em(C)" g~e3 "D"a2ba |"Em(C)" gee2 "(G)"ged2 |"C(Em)" efge "D"d2ef |
-"Em(C)"geee "(G)"gede |"Em(C)" geee "D"a2ga |"G(Em)" bgaf gfed |"C(Em)" efge "G"dBAG ||
+"Em(C)"geee "(G)"gede |"Em(C)" geee "D"a2ga |"G(Em)" bgaf gfed |"C(Em)" efge "G"dBAG |]
 
 
 X: 167
@@ -2186,7 +2187,7 @@ K:D
 "D"~F3G AF F2|"G"AGG2 dcAG|"D"~F3G AF F2|"G"B2 AG "D"FDDE|
 "D"~F3G AF F2|"G"AGG2 dcAG|"D"~F3G AF F2|"Bm"BdAF "D"D2cd||
 "A"~e3d cBcd|eg~g2 ea~a2|efed cBcd|egec "D"d2cd|
-"A"~e3d cBcd|eg~g2 ea~a2|~a3g efed|cdec "G"dBAG||
+"A"~e3d cBcd|eg~g2 ea~a2|~a3g efed|cdec "G"dBAG|]
 
 
 X: 168
@@ -2196,7 +2197,7 @@ M:6/8
 R:slide
 K:D
 "D"d2e f2e|"G"dcd B3|"A7"g2A cBA|"A"e2A cBA|"D"d2e f2e|"G"dcd B3|"A7"g2A cBA|"D"d3 d2A:|
-"D"d2e f2a|baf a2f|"A"e2A cBA|e2A cBA|"D"d2e f2a|baf a2f|"A"e2A cBA|"D"d3 d2A:|
+|: "D"d2e f2a|baf a2f|"A"e2A cBA|e2A cBA|"D"d2e f2a|baf a2f|"A"e2A cBA|"D"d3 d2A:|
 
 
 X: 169
@@ -2207,7 +2208,7 @@ L: 1/8
 K:Gmaj
 "G"d2BG dGBG|~G2Bd "C"efge|"G"d2BG dGBG|1 "D"ABcd "G"edBc:|2 "D"ABcd "G"edBd||
 "G"g2bg egdg|egdg edBd|g2bg egdB|"D"ABcd "G"edBd|
-"G"g2bg egdg|egdg edBd|gabg "C"efge|"D"dega "G"bage||
+"G"g2bg egdg|egdg edBd|gabg "C"efge|"D"dega "G"bage|]
 
 
 X: 170
@@ -2218,34 +2219,30 @@ L: 1/8
 K:Edor
 "Em"E2 BE GABG | ~E2 BE "D"ADFD |"Em" ~E2BE GABe |1 "D"dBAd "Em"BEED :|2"D" dBAd "Em"BEE2 ||
 "Em"efge "D"fgaf |"G" gfed "Em"eB ~B2 |"Em" efge "D"fgaf |"G" gfed "Em"Be ~e2 |
-"Em"efge "D"fgaf |"G" gfed "Em"efga | bgaf gefd | eB=cA BGAF ||
-"variation:"
-E2 BE GABG | ~E2 BE ADFD | ~E2BE GABe |1 dBAd BEED :|2 dBAd BEE2 ||
-efge fgaf | gfed eB ~B2 | efge fgaf | gfed Be ~e2 |
-efge fgaf |gfed efga | bgaf gfed | eBBA GEFD ||
+"Em"efge "D"fgaf |"G" gfed "Em"efga | bgaf gefd | eB=cA BGAF |]
 
 
 X: 171
-T: 171 Milliner's Daughter, The
-M: 4/4
+T: 171 The Milliner's Daughter
+M: C|
 L: 1/8
 R: reel
 K:Gmaj
 "G"G2BG DGBG|"D"A2 (3efg fdcA|"G"G2BG DGBd|"D" cAFG AGGF|
 "G"G2BG DGBG|"D"A2 (3efg fdcA|"G"G~B3 d~B3|1 "D"cAFG AGGF:|2 "D"cAFG "G"AGG2||
-"G"dg~g2 dg~g2|"D"df~f2 df~f2|"G"dg~g2 dg~g2|"D"d^cde fd=cA|
+|: "G"dg~g2 dg~g2|"D"df~f2 df~f2|"G"dg~g2 dg~g2|"D"d^cde fd=cA|
 "G"dg~g2 bgag|"D"fdde ~f3g|afge fde^c|"G"d2 (3efg "D"fd=cA:||
 
 
 X: 172
 T:172 Road to Lisdoonvarna
 M:6/8
-R:Slide
+R:slide
 L:1/8
 K:Edor
 "Em"E2B B2A|B2c d3|"D"F2A ABA|D2E FED|
 "Em"E2B B2A|B2c d3|"D"cdc B2A|"Em"B2E E3:|
-"Em"e2f gfe|"G"d2B Bcd|"A"c2A ABc|"Bm"d2B B3|
+|: "Em"e2f gfe|"G"d2B Bcd|"A"c2A ABc|"Bm"d2B B3|
 "Em"e2f gfe|"G"d2B Bcd|"A"cdc B2A|"Em"B2E E3:|
 
 
@@ -2253,33 +2250,33 @@ X: 173
 T:173 The Kerryman's Daughter
 T:The Lilting Fisherman
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:C
 A|"C"G2GE GAcd|edcB "Am"cAA2|"C"GEE2 GAcd|"Am"edcB "C"c3:|
 d|"C"eg ~g2 "Am"agea|"G"gede "Am"cA~A2|"C"eg~g2 "Am"ea~a2|"G"gabg "Am"~a2ag|
-"C"eg ~g2 "Am"agea|"G"gede "Am"cA~A2|"C"GEE2 GAcd|"Am"edcB "C"c3||
+"C"eg ~g2 "Am"agea|"G"gede "Am"cA~A2|"C"GEE2 GAcd|"Am"edcB "C"c3|]
 
 
 X: 174
 T:174 The Dusty Miller
 M:9/8
-R: Slip Jig
+R:slip jig
 L:1/8
 K:D
 "D"~A3 A2G A2G|~A3 A2G B2d|~A3 A2G A2G|"G"B2G G2G B2d:|
-"D"A2D ~D3 B2d|A2D ~D3 B2d|A2D ~D3 G2A|"G"B2B B2A B2d:|
+|: "D"A2D ~D3 B2d|A2D ~D3 B2d|A2D ~D3 G2A|"G"B2B B2A B2d:|
 
 
 X: 175
 T:175 Na Ceannabhain Bhana
 M:9/8
-R: Slip Jig
+R: slip jig
 L:1/8
 K:G
-c|"G"BAG AGE GED|EGD DEG "D"A2c|"G"BAG AGE GED|EGD "D"DEF "G"G2A:|
-"G"Bdd edd BAG|Bdd edB "D"A2c|"G"Bdd edd BAG|GED "D"DEF "G"G2c|
-"G"Bdd edd BAG|Bdd gdB "D"A2c|"G"Bdd edd BAG|GED "D"DEF "G"G2c|]
+c|"G"BAG AGE GED|EGD DEG "D"A2c|"G"BAG AGE GED|EGD "D"DEF "G"G2:|
+A|"G"Bdd edd BAG|Bdd edB "D"A2c|"G"Bdd edd BAG|GED "D"DEF "G"G2c|
+"G"Bdd edd BAG|Bdd gdB "D"A2c|"G"Bdd edd BAG|GED "D"DEF "G"G2|]
 
 
 X: 176
