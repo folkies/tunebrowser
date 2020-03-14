@@ -585,8 +585,8 @@ fddc d2 cd | eaag efge | fddc d2 cd | eaag edde |
 fddc d2 cd | eaag efge | fddc dAcd | eaag efge |
 
 X: 50
-T: Boys of Ballinahinch (Strawberry Blossom)  (reel)
-B: "Music from Ireland 2" (Bulmer & Sharpley) #15
+T: Boys of Ballinahinch
+T: Strawberry Blossom
 R: reel
 M: C|
 L: 1/8
@@ -1553,8 +1553,8 @@ L: 1/8
 K: Dmix
 |:"Dm"D2 ADED AD | "C"CEED CEGE | "Dm"D2 ADEG AB | "Am"cAGF "C" EDCE |
 "Dm"D2 ADED AD | "C"CEED CEGE |"F" F2 FD "C"E2 ED |CDEG "A7"cG EC :|
-|"D" d2de^f2ed^ |"A " ^cde^f g2 ge | "D"^f2 fd "A "efed | "C"cAGE "C/E" ED D2|
-"D" d2de^f2ed^ | "A"^cde^f g2 ge | "D"^f2 fd "C" efed | "A5"cAGE "G"ED D2:| 
+|"D" d2def2ed |"A" ^cdef g2 ge | "D"f2 fd "A "efed | "C"cAGE "C/E" ED D2|
+"D" d2def2ed | "A" ^cdef g2 ge | "D"f2 fd "C" efed | "A5"cAGE "G"ED D2:| 
 
 X: 131
 T: The Providence
