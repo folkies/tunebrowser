@@ -61,7 +61,7 @@ T:3a    Sliabh Russell
 M:6/8
 R:jig
 K:Ador
-"Am"eAA "G"Bcd|"Am"eaf "G"ged|"(Em)"edB "a"cBA|"G"BAG Bcd|
+"Am"eAA "G"Bcd|"Am"eaf "G"ged|"(Em)"edB "Am"cBA|"G"BAG Bcd|
 "Am"eAA "G"Bcd|"Am"eaf "G"ged|"(Em)"edB "Am"cBA|"G"BAG "Am"A2d:|
 |:"Am"eaa "C"efg|"D"agf "G"ged|"Am"eaa "C"efg|"D"fed "G"~g3|
 "Am"eaa "C"efg|"D"agf "G"ged|"(Em)"edB "Am"cBA|"G"BAG "Am"ABd:|
@@ -2285,53 +2285,53 @@ R: slip jig
 M: 9/8
 L: 1/8
 K:Edor
-"em"BEE BEF "G"G2A|"Em"BEE "G"BAG "D"FGA|"Em"BEE BEF "G"G2A|"G"Bcd "D"ABG FED:|
-"D"ded "D7"=cAF "G"G2B|"D"ded def "G"gfe|"D"ded "D7"=cAF "G"G2A|"G"Bcd "D"ABG FED:|
+"Em"BEE BEF "G"G2A|"Em"BEE "G"BAG "D"FGA|"Em"BEE BEF "G"G2A|"G"Bcd "D"ABG FED:|
+|: "D"ded "D7"=cAF "G"G2B|"D"ded def "G"gfe|"D"ded "D7"=cAF "G"G2A|"G"Bcd "D"ABG FED:|
 
 
 X: 177
 T: 177 Glass Of Beer
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Bmin
 |:"Bm"fB (3BBB fBaB|fB (3BBB "A"edce|"Bm"fB (3BBB ~f3 e|1 "D"dfaf "A"e2 de:|2 "D"dfaf "A"e2fe||
-|:"D"dcde ~f3 e|defd "A"edBA|"D"dcde ~f3 e|1dfaf "A" e2fe:|2 dfaf "A"e2de||
+|:"D"dcde ~f3 e|defd "A"edBA|"D"dcde ~f3 e|1dfaf "A" e2fe:|2 dfaf "A"e2de|]
 
 
 X: 178
 T: 178 Lads Of Laois
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Edor
 "Em"E~B,3 EGFE|"D"QD~A,3 DEFD|"Em"E2ED EFGA|B2 eB "D"dBAF|
 "Em"E~B,3 EGFE|"D"D~A,3 DEFD|"Em"E2 BE dEBE|"D" DEFA "Em"BEE2:|
-"Em"e~B3 egfe|"D"defa "G"gfed|"Bm"(3Bcd ef "G"~g3e|"D"fgaf "G"gfed|
-"Em"e~B3 GBFB|EBBA "Bm"(3Bcd ef|"G"~g3e "D"~f3d|1"Em" efed BA Bd:|2 "Em"Qefed "D"BAFD||
+|: "Em"e~B3 egfe|"D"defa "G"gfed|"Bm"(3Bcd ef "G"~g3e|"D"fgaf "G"gfed|
+"Em"e~B3 GBFB|EBBA "Bm"(3Bcd ef|"G"~g3e "D"~f3d|1"Em" efed BA Bd:|2 "Em"Qefed "D"BAFD|]
 
 
 X: 179
 T: 179 Bank of Turf
-R:Jig
+R:jig
 M:6/8
 L:1/8
 K:D
-dcB||"D"ABA DFA|BAF DFA|dcd "A"ede|"D"~f3 def|
+dcB|:"D"ABA DFA|BAF DFA|dcd "A"ede|"D"~f3 def|
 "G"~g3 gab|"D"afd "G(Bm)"Bcd|1"A" efe e2d|cBA "D"dcB:|2"D"ABd "A"efe|"D"d3 dcd||
 |:"A"eAA efg|"D"fdd fga|"G"gfe "D"fed|"G"edB "D"ABd|
-"A"eAA efg|"D"fdd fga|"G"gfe dcB|1"D"A3 Bcd:|2"D"A3 dcB||
+"A"eAA efg|"D"fdd fga|"G"gfe dcB|1"D"A3 Bcd:|2"D"A3 dcB|]
 
 
 X: 180
 T: 180 Boys Of Ballisodare
-R: slide
+R: slip jig
 M: 9/8
 L: 1/8
 K:Gmaj
 "G" D2 E G2 A B2 d | "Em" ege d2 e g3 | "G" D2 E G2 B d2 B | "D"AGA "G"B2 G E2 G |
 "G" D2 E G2 A B2 d | "Em" ege d2 e g2 a | "Em"b2 a g2 e d2 B | "D"AGA "G"B2 G E2 G :||
-"G" B2 d d2 B d2 B | Bcd e2 f g3 |B2 d d2 B d2 B | "D"AGA "G"B2 G E2 G |
+|:"G" B2 d d2 B d2 B | Bcd e2 f g3 |B2 d d2 B d2 B | "D"AGA "G"B2 G E2 G |
 "G"B2 d d2 B d2 B | Bcd e2 f g2 a | "Em" b2 a g2 e d2 B | "D" AGA "G"B2 G E2 G :||
 
 
@@ -2341,6 +2341,7 @@ R: polka
 M: 2/4
 L: 1/8
 K:Emin
+%%stretchlast
 "Em"B,E EF|GA/2G/2 FE|"D"A,D DE|FG/2F/2 ED|
 "Em"B,E EF|GA/2G/2 FA|"G"GB "D"Ad|"Em"e2 e2 :|
 |:"Em"ge "D"fd|"Em"ed BA|"D"Fd de|f2 ef|
@@ -2354,21 +2355,22 @@ C:Mick Hanley
 M: 2/4
 L: 1/8
 K:Amaj
+%%stretchlast
 "A"ef/e/ ce|fe Bc|A>B cA|ec "E"B2|
-"A"ef/e/ ce|fe Bc|A>B cA|"D"FA "E"E2:||
-"D"F>B AF|"A"cB A2|ef/e/ ce|ag "D"f2|
-"A" ef/e/ ce|fe Bc|A>B cA|"D"FA "E"E2:||
+"A"ef/e/ ce|fe Bc|A>B cA|"D"FA "E"E2:|
+|:"D"F>B AF|"A"cB A2|ef/e/ ce|ag "D"f2|
+"A" ef/e/ ce|fe Bc|A>B cA|"D"FA "E"E2:|
 
 
 X: 183
 T:183 Ships Are Sailing
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Edor
 "Em"Beed "(G)"BcdB |"D" AD (3FED AD (3FED |"Em" ~E3F GFGA |"(G)" Bdef "G(D)"gfed |
 "Em"Beed "(G)"BcdB |"D" AD (3FED AD (3FED |"Em" ~E3F GFGA |1 Bded e3d :||2Bded e3f ||
-"Em"~g3a bgeg |"D" ~f3g afdf |"Em" gfga bgeg |"D" fedf "Em"e2 ef |
+|:"Em"~g3a bgeg |"D" ~f3g afdf |"Em" gfga bgeg |"D" fedf "Em"e2 ef |
 "Em"gfga bgeg |"D" fefg afdf |"G" g2bg "D"f2af |1 "Em"edef gfef :||2 edef gfed||
 
 
@@ -2378,10 +2380,10 @@ R: jig
 M: 6/8
 L: 1/8
 K:Amin
-"Am"ABA ~a3|{b}age "C"~g3|~c3 edc|"G"Bdg dBG|
-"Am"(ABA) ~a3|a(ge) "C"~g3|ege "G"deg|1edB "Am"AEG:|2edB A2 B||
-"C"~c3 edc|"G"~d3 ded|"C"~c3 edc|"G"Bdg dBG|
-"C"~c3 edc|"G"deg "Am"a2 (a|{b}a)ge "G"deg|1 edB "Am"A2 B:|2 edB AEG||
+"Am"ABA ~a3|age "C"~g3|~c3 edc|"G"Bdg dBG|
+"Am"ABA ~a3|age "C"~g3|ege "G"deg|1edB "Am"AEG:|2edB A2 B||
+|:"C"~c3 edc|"G"~d3 ded|"C"~c3 edc|"G"Bdg dBG|
+"C"~c3 edc|"G"deg "Am"a2 a|age "G"deg|1 edB "Am"A2 B:|2 edB AEG|]
 
 
 X: 185
@@ -2396,13 +2398,13 @@ K:Gmaj
 "G"g2b "D"agf |"Em" ege edB |"G" d2g edB | BAG "D"ABd |
 "G"gab "D"agf |"Em" ege edB |"G" deg edB |"D" AGF "G"GBd |
 "G"g2b "D"agf |"Em" ege edB |"G" d2g edB | BAG "D"ABA |
-"G"~G3 EGD | ~G3 Bdg |"C(Em)" ~e3 "G"dBG |"D" AGF "G"G3 ||
+"G"~G3 EGD | ~G3 Bdg |"C(Em)" ~e3 "G"dBG |"D" AGF "G"G3 |]
 
 
 X: 186
 T:186 Tom Ward's Downfall
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Gmaj
 "G"BGGA GEDG|EDEG "D"A2GE|DEGA "G"B3d|ed~d2 Bdgd|
@@ -2410,7 +2412,7 @@ K:Gmaj
 "G"dggf gedg|"D"eaag a2ga|"G"bg~g2 "D"agef|"G"gedc BGG2|
 "G"dggf gedg|"D"eaag a2ga|"G"bg~g2 "D"agef|"G"gedc BGG2|
 "G"dggf gedg|"D"eaag a2ga|"G"bg~g2 "D"agef|"G"gedc BGG2|
-"G"dggf gedg|"D"eaag a2ga|"G"bg~g2 "D"agef|"G"gaba gedc||
+"G"dggf gedg|"D"eaag a2ga|"G"bg~g2 "D"agef|"G"gaba gedc|]
 
 
 X: 187
@@ -2420,7 +2422,7 @@ R: jig
 K:Amaj
 "A"~c3 cde |"D" dcA ~F3 |"A" ~E3 EFA |"E" ~B3 BAB |
 "A"~c3 cde |"D" dcA F2a |"A" afe fec |1"E" BAG "A"A3 :|2BAG Adc||
-"E"~B3 BAB |"A" ~c3 "D(Bm)"BAF |"E" ~B3 BAB |"A" cea zec |
+|:"E"~B3 BAB |"A" ~c3 "D(Bm)"BAF |"E" ~B3 BAB |"A" cea zec |
 "E"~B3 BAB |"A"  c2c "D(Bm)"BAF |"A" afe fec |1 "E"BAG "A"Adc:|2 BAG A3||
 
 
@@ -2428,25 +2430,24 @@ X: 187b
 T:187b Popcorn Behaviour
 C:Jay Ungar
 R:reel
-M:4/4
+M:C|
 L:1/8
-K:C
+K:Am
 (3e^f^g |:"Am" a2 e=f ecAc |"G" B2Bc BAGB |"Am" AEAc AFAc |"G" BABc "E"Be^f^g |
-"Am"a2 ef ecAc |"G" B2Bc BAGE |"Dm" DFAc dcAF |1 "Am"ECDB, A,2 "E"(3e^f^g:|2"Am" ECDB, A,B,CD |
+"Am"a2 ef ecAc |"G" B2Bc BAGE |"Dm" DFAc dcAF |1 "Am"ECDB, A,2 "E"(3e^f^g:|2"Am" ECDB, A,B,CD ||
 |:"Am" EA,A,E "Fmaj7"FA,A,F |"Am" EA,A,E "G"DA,A,G, |"Am" A,B,CD E2EF |"C" GECD "E"EFED |
-"Am"EA,A,E "Fmaj7"FA,A,F |"Am6" ^FA,A,^F "Fmaj7"=FA,A,F |"Dm" DFAc dcAF |1"Am" ECDB, A,B,CD:|2 ECDB, A,2 ||
+"Am"EA,A,E "Fmaj7"FA,A,F |"Am6" ^FA,A,^F "Fmaj7"=FA,A,F |"Dm" DFAc dcAF |1"Am" ECDB, A,B,CD:|2 ECDB, A,2 |]
 
 
 X: 188
 T:188 Within A Mile Of Dublin
-C:O'Neill Music of Ireland
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Dmix
 FG|"D"ADDE FEFG|AD (3DDD "Am"c2 BG|"D"ADDE FEFG|AdcA "G"G2 :|
 FG|"D"Addc AGFG|Adde fded|Addc AGFG|"Am"ABcA "G"G2 FG|
-"D"Addc AGFG|Adde f2 fg|afge fde^c|d^cAF "G"G2 FG||
+"D"Addc AGFG|Adde f2 fg|afge fde^c|d^cAF "G"G2 FG|]
 
 
 X: 189
@@ -2459,7 +2460,7 @@ K:Gmaj
 A |"G" ~B3 BAG "C"E2G "G"D2G | "C"E2G "G"D2B "D" ~A3 AGA |
 "G"~B3 BAG "C"E2G "G"D2d |1 dBG "D" ABA "G"G3 G2 :|2dBG "D" ABA "G"G3 GBd||
 "G"~g3 ged "C"e2g "G"d2c |~B3 BAG "D" ~A3 ABd |"G"~g3 ged "C"e2g "G"d2c|BcB "D" ABA "G"~G3 GBd |
-"G"~g3 ged "C"e2g "G"d2c |~B3 BAG "D"~A3 AGA |"G"~B3 BAG "C"E2G "G"D2d | dBG "D" ABA "G"G3 G2||
+"G"~g3 ged "C"e2g "G"d2c |~B3 BAG "D"~A3 AGA |"G"~B3 BAG "C"E2G "G"D2d | dBG "D" ABA "G"G3 G2|]
 
 
 X: 190
@@ -2470,7 +2471,7 @@ L: 1/8
 K:Gmaj
 "G"d2B BAG "D"~A3 ABA|"G"G2E "C"c2B "G"BAG "D" ABc|
 "G"d2B BAG "D"~A3 ABA|"G"G2E "C"c2E "D" DED D3:|
-"D"d2e f2a "G"g2e d2B|"G"G2B "C"c2B "G"BAG "D"ABc|
+|:"D"d2e f2a "G"g2e d2B|"G"G2B "C"c2B "G"BAG "D"ABc|
 "D"d2e f2a "G"g2e d2B|"G"G2B "C"c2E "D" DED D3:|
 
 
@@ -2478,11 +2479,12 @@ X: 191
 T: 191 The Skylark
 C:James Morrison
 R: reel
+M:C|
 K:D
 L: 1/8
 "D"agfg "G"efdB |"D" AF ~F2 DFAd |"G" BG (3GFG "A"EFGE |"D" FAA2 FAdf  |
 "D"agfg "G"efdB |"D" AF ~F2 DFAd |"G" BGGF     G2ag |"A" faeg "D"fdd2 :|
-"D"a2fd Adfd |"A" efed     cAA2 |"D" a2fa "G" bged |"Em" Beed "(A)"efge  |
+|:"D"a2fd Adfd |"A" efed     cAA2 |"D" a2fa "G" bged |"Em" Beed "(A)"efge  |
 "D"f2df "G"g2eg |"D" f2df "Em" edBA |"D" FA ~A2 "G"GBag |"A" faeg "D"fdd2 :|
 
 
@@ -2490,7 +2492,7 @@ X: 192
 T: 192 The Rookery
 C: Vincent Broderick
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Dmix
 |:"G"BGAG "C"EGDG|EGDG EGDE|"G"G2 Bd"C" e2 dg|e2 dg "Em"edBA|
@@ -2503,32 +2505,32 @@ X: 193
 T:193 The Holly Bush
 C: Finbarr Dwyer
 R:reel
-M:4/4
+M:C|
 L:1/8
-K:DMix
+K:Dmix
 "D"A2FA DAAG|FAde fded|"C"cG~G2 EG~G2|cedc AGFG|
 "D"A2FA DAAG|FAde fded|"C"cG~G2cedc|"Am7"AcGE "D"D2FG:|
-"D"Add^c defg|adde dcAB|"C"c2cB cdeg|aged cAGc|
+|:"D"Add^c defg|adde dcAB|"C"c2cB cdeg|aged cAGc|
 "D"Add^c defg|adde dcAB|"C"c2cB cded|"Am7"cAGE "D"D2FG:|
 
 
 X: 194
 T:194 The Maple Leaf
 C:Darach de Brun
-M:4/4
+M:C|
 R:reel
 K:Em
 "Em"E3F GE~E2|"G"B2AB AGED|"Em"E3F G2GA|"G"B2dB "D"AGFD|
-"Em"E3F GE~E2|"G"B2AB AGED|"Em"Beed "D"BAGA|"G"B2GB "D" AGED:||
-"Em"Beed efg2|Beef edBA|Beed efg2|"A7"a2eg "D"fedc|
-"Em"Beed efg2|Beef edB2|"A7"a2eg "D"fedc|"G"B2GB "D"AGED:||
+"Em"E3F GE~E2|"G"B2AB AGED|"Em"Beed "D"BAGA|"G"B2GB "D" AGED:|
+|:"Em"Beed efg2|Beef edBA|Beed efg2|"A7"a2eg "D"fedc|
+"Em"Beed efg2|Beef edB2|"A7"a2eg "D"fedc|"G"B2GB "D"AGED:|
 
 
 X: 195
 T:195 High Drive
 C:Gordon Duncan
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Dmaj
 A |"D" d3 e fedA |"G" B/B/B gB BAGB |"D" A/A/A Ad fedf |"A" eA A/A/A afge |
@@ -2537,9 +2539,9 @@ A |"D" d3 e fedA |"G" B/B/B gB BAGB |"D" A/A/A Ad fedf |"A" eA A/A/A afge |
 "D"a2 ag afdA |"G" B2 gB BAGB |"D" AFAd fedf |"A" edce "D"defg|
 "D"a2 ag afdA |"G" B2 gB BAGB |"D" ~A3d fedf |"A" eA A/A/A afge |
 "D"dcde fedA |"G" B/B/B gB BAGB |"D" AFAd fedf |"A" edce "D"d2 dA ||
-"D"dA"A"eA "D"fA A/A/A |"G" gBBA Bgag |"D" fA A/A/A afdf |"A" eA A/A/A afge |
+|:"D"dA"A"eA "D"fA A/A/A |"G" gBBA Bgag |"D" fA A/A/A afdf |"A" eA A/A/A afge |
 "D"dA"A"eA "D"fA A/A/A |"G" gBBA Bgag |"D" fA A/A/A afdf |1 "A"edce "D"d2 dA :|2"A"edce "D"defg||
-"D"adda ddad |"G" gddg ddgd |"D" fddf ddfd | "A"edde "D"defg |
+|:"D"adda ddad |"G" gddg ddgd |"D" fddf ddfd | "A"edde "D"defg |
 "D"adda ddad |"G" gddg ddgd  |"D" A2 Ad fedf |"A" edce "D"d2 df :|
 
 
@@ -2563,44 +2565,43 @@ M:C|
 K:D
 DF~F2 DFAc|dcde fdAF|G2BG FADF|GFED EGFE|
 D2FE DFAc|dcde fdAF|GABG FADF|1 EAFE D3A:|2 EAFE D2FG||
-ABcd EFGE|FDEF GABc|dBBA Bcde|fdgf e2dc|
+|:ABcd EFGE|FDEF GABc|dBBA Bcde|fdgf e2dc|
 defd ceAc|dcdB ADFA|GABG FADF|1 EAFE D3A:|2 EAFE D2FG||
 
 
 X: 197
 T:197 The Pigtown Fling
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Gmaj
 |:"G"G2ge d2ed|Bdge dBAB|G2ge d2ed|1B2 Ac BGEF:|2B2Ac BGG2||
-|:"Em"Beed e2fe|"D"dfaf "G"gfed|"Em"Beed e2fe|1"D"dfaf "G"g4:|2"D"dgfa "G"gedB:|
+|:"Em"Beed e2fe|"D"dfaf "G"gfed|"Em"Beed e2fe|1"D"dfaf "G"g4:|2"D"dgfa "G"gedB|]
 
 
 X: 198
 T:198 The Phoenix
 C: Dave Hennessy
-P: Sharon Shannon Version
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Dmaj
 ag|:"D"f2df "A"edcA|"G"B2dB "A"ABde|"D"fd~d2 "A"edcA|"G"BcdB "A"ABde|
 "D"fedf "A"edcA|"G"BcdB "A" AGFE|"D"Dddc defd|1 "A" edBc "D"dfag:|2 "A"edce "D"dBcA||
 |:"Bm"FBBA Bcde|"D"~f3d "A"edcA|"Bm"FBBA Bcde|"D"f2df "A" edcA|
-"Bm"B2FB "G"~B2GB|"(Bm)"BcdB "A" cBAc|"G" BG~G2 Bcde|1"D" fdec dBcA:|2"D" faec dfag||
+"Bm"B2FB "G"~B2GB|"(Bm)"BcdB "A" cBAc|"G" BG~G2 Bcde|1"D" fdec dBcA:|2"D" faec dfag|]
 
 
 X: 199
 T:199 Tripping Down The Stairs
 T: Green Hills of Tyrol
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Gmaj
 GA|"G"BG~G2 BGAc | BGDC B,CDC | B,G,B,D "C"~E3G |"D" FDEF "G"G2GA|
 "G"BG~G2 BGAc | BGDC B,CDC | B,G,B,D "C"ECEG | "D"FDEF "G"G2 :|
-ga|"G"bg~g2 egde |"D7(Am)" cdBc ABGA |"D" FGEF DECD | "G"B,CA,B, G,A,B,D |
+|:ga|"G"bg~g2 egde |"D7(Am)" cdBc ABGA |"D" FGEF DECD | "G"B,CA,B, G,A,B,D |
 "G"G3B dBGB |"D7(Am)" ABcA "G"BGDC | B,G,B,D "C"~E3G | "D"FD EF "G"G2 :|
 
 
@@ -2612,8 +2613,8 @@ L: 1/8
 K:Ador
 "Am"EAAB cBcd|eaag e2dB|c2Ac "G"BAGA|Bdde dBAG|
 "Am"EAAB cBcd|eaag e2dB|c2Ac "G"BAGA|1"Am"BAAG A3 G:|2BAAG A2Bd||
-"Am"eaab aged|eaab aged|"Am7"egga "G"ged2|"Am7"(3efgfa "G"gedB|
-"Am"~A3B ~c3d|eaag e2dB|c2Ac "G"BAGA|1"Am"BAAG A2Bd:|2BAAG A3||
+|:"Am"eaab aged|eaab aged|"Am7"egga "G"ged2|"Am7"(3efg fa "G"gedB|
+"Am"~A3B ~c3d|eaag e2dB|c2Ac "G"BAGA|1"Am"BAAG A2Bd:|2BAAG A4|]
 
 X: 201
 T:201 Mickey Callaghan's
