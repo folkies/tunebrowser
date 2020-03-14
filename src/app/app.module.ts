@@ -56,6 +56,7 @@ import { TuneBookCollectionService } from './service/tunebook-collection.service
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
 import { GoogleOauthModule, NG_GAPI_CONFIG, NgGapiClientConfig } from 'ngx-gapi-auth2';
+import { PdfService } from './service/pdf-service';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -154,6 +155,7 @@ const gapiClientConfig: NgGapiClientConfig = {
         AudioContextProvider,
         GoogleDriveService,
         GoogleDriveTunebookLoaderService,
+        PdfService,
         PracticeService,
         Recorder,
         RepertoireRepository,

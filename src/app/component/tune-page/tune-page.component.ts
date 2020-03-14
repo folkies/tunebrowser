@@ -8,6 +8,7 @@ import { csvToArray } from 'src/app/service/tags';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { AddToRepertoireComponent } from '../add-to-repertoire/add-to-repertoire.component';
+import { PdfService } from 'src/app/service/pdf-service';
 
 
 @Component({
@@ -25,6 +26,7 @@ export class TunePageComponent implements OnInit {
     constructor(
         private index: TuneBookIndex,
         private googleDriveService: GoogleDriveService,
+        private pdfService: PdfService,
         private route: ActivatedRoute,
         private snackBar: MatSnackBar,
         private dialog: MatDialog,
@@ -53,6 +55,10 @@ export class TunePageComponent implements OnInit {
     async openDialog(): Promise<void> {
         const dialogRef = this.dialog.open(AddToRepertoireComponent);
         dialogRef.afterClosed().subscribe(added => this.addToRepertoire(added));
+    }
+
+    async exportAsPdf(): Promise<void> {
+        this.pdfService.saveAsPdf(this.tune);
     }
 
     private async addToRepertoire(added: Date): Promise<void> {
