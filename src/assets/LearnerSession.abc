@@ -5,7 +5,6 @@ R:polka
 M:2/4
 L:1/8
 K:A
-%%stretchlast
 "A"A>B cA|"E"BA "A"cA|"A"A>B cA|"D"BA FE|
 "A"A>B cA|"E"BA "A"ce|"D"A>B AF|"E"FE E2:|
 |:"A"e>f ec|"E"BA "A"Bc|e>f ec|"D"BA F2|
@@ -20,7 +19,6 @@ R:polka
 M:2/4
 L:1/8
 K:D
-%%stretchlast
 "D"fA BA|fA BA|d2 e>f|"(Bm)"ed Bd|
 "D"fA BA|fA BA|d2 e>f|ed d2:|
 |:"D"fa e>f|ed Bd|fa e>f|ed d2|
@@ -33,7 +31,6 @@ R:polka
 M:2/4
 L:1/8
 K:A
-%%stretchlast
 "A"E>E Ec|"D"BA FA|"A"E>E Ec|"D"BA AF|
 "A"E>E Ec|"D"BA FA|"A"E2 e>c|1 BA AF:|2 BA A>B||
 |:"A"ce B>c|"D"BA FA|"A"ce B>c|"D"BA AB|
@@ -463,7 +460,6 @@ M: 2/4
 L: 1/8
 R: polka
 K:Ador
-%%stretchlast
 |:"Am"E>A AB|cd eg|"G"G>F GA|GE ED|
 |"Am"E>A AB|cd ef|"G"ge dB|"Am"A2 A2:|
 |:"Am"a2 ab|ag ef|"G"g2 ga|ge ed|
@@ -476,7 +472,6 @@ M: 2/4
 L: 1/8
 R: polka
 K:Ador
-%%stretchlast
 |:"Am"AB|"C"c2 "G"B2|"Am"A2 G>A|"G"Bd ed|g2 ed|
 "Am"ea "(C)"g>e|"G"dB G>B|"C"ce "G"dB|"Am"A2:|
 |:cd|"Am"ea ag/e/|"G"dg gd|"Am"ea ab|"G"g2 ed|
@@ -637,7 +632,6 @@ M: 2/4
 L: 1/8
 R: polka
 K:Dmaj
-%%stretchlast
 |:f/e/|"D"dA FA|d>d df|"A"ed cd|"A7"ef gf/g/|
 "D"(3agf "A7"ge|"D"dc AF|"G"GB "A"A/B/A/G/|"D"FD D:|
 |:e|"D"ff/f/ fd|"G"gg/g/ ge|"D"ff/f/ fa|"G"gf ef/g/|
@@ -1307,7 +1301,6 @@ M:2/4
 L:1/8
 R:Polka
 K:G
-%%stretchlast
 "G"D>E DB,|DE G>A|Bd "D"AB/2A/2|"C"GE cE|
 "G"D>E DB,|DE G>A|Bd "D"AB/2A/2|1"G"G2 GE:|2"G"G2 G>A||
 "G"Bd d>B|"C"ce e>d|"G"Bd "D"AB/2A/2|"C"GE cE|
@@ -1381,7 +1374,6 @@ M: 2/4
 L: 1/8
 R: polka
 K:Gmaj
-%%stretchlast
 "G"G>A Bd|gf ed|"Am"eA AB|cd/2c/2 BA|
 "G"G>A Bd|gf ed|"Am"ea ef|"G"g2 g2 :||
 |: "Am"ae ae|ae e>f|"G"gd gd|gd d>g|
@@ -1394,7 +1386,6 @@ M: 2/4
 L: 1/8
 R: polka
 K:Gmaj
-%%stretchlast
 B/A/ |"G"GD G>A |"Em" Be eg/e/ |"G" dB B/A/G/A/ |"D" BA AB/A/ |
 "G"GD G>A |"Em" Be eg/e/ |"G" dB "D"AB/A/ |"G" G2 G :|
 |: B/d/ |"G"gf ed |"C" ef ge |"G" dB B/A/G/A/ | "D"BA AB/d/|
@@ -1456,7 +1447,6 @@ M: 12/8
 L: 1/8
 R: slide
 K:Dmaj
-%%stretchlast
 "D"A2D FED F2A A2f|"G"g2e "D"f2d "A"e2d "G"Bcd|
 "D"A2D FED F2A A2f|a2f "A"efe "D"d3 dcB:|
 |: "D"d2e ~f3 "G"gfe "D"~f3|"G"gfe "D"fed "A"e2d "G"B2A|
@@ -1469,7 +1459,6 @@ R: slide
 M: 12/8
 L: 1/8
 K:Ador
-%%stretchlast
 "Am"A2e e2d "G"BAB d2B|"Am"A2e e2d "G"B2G GFG|
 "Am"A2e e2d "G"BAB d3|BAB d2e "Am"B2A A3:|
 |: "Am"e2a a2b a2g e2d|e2a a2b a2g e2f|
@@ -1700,7 +1689,6 @@ R: polka
 M: 2/4
 L: 1/8
 K:Dmaj
-%%stretchlast
 "D"A>B AF|DF Ad|A>B AF|"G"GF EF/E/|
 "D"DE FG|AB cd|"A"e>d ce|1"D" d2 dB:|2"D" d2 de||
 "D"fd "G"ge|"D"fd "A"cB|"D"Ad cd|"A"fe ed/e/|
@@ -1715,7 +1703,6 @@ M: 2/4
 L: 1/8
 R: polka
 K:Gmaj
-%%stretchlast
 "G"dG Bc |"D" d2 d>e |"D7" fd cA |"Am"AB ce |
 "G"dG Bc | "D"d2 d>e |"D7" fd cA |"G" AG G2 :|
 "G"dg ga | b2 a>g |"D" fd de | fg af |
@@ -1920,7 +1907,6 @@ M: 2/4
 L: 1/8
 R: polka
 K:Bmin
-%%stretchlast
 "Bm"B>B Bc|dB Bd|"A"cA Ac|"Bm"d/c/B/A/ BF|
 "Bm"B>B Bc|dB Bd|"A"ef/e/ dc|"Bm"BA B2:|
 |:"D"f>d df|"A"ec cd|ef/e/ dc|"Bm"Bc de|
@@ -1935,7 +1921,6 @@ O:Ireland
 M:2/4
 L:1/8
 K:A
-%%stretchlast
 "A" a2  a>f |ec  a>f | ec a>f | ec BA |
 "A" a2  a>f |ec  a>f | "A" ce   "E" B>c | "A" BA A2 :|
 |: "A" ce ec | "D" df fe | "A" ce eA/B/ | "E" cB BA/B/ |
@@ -2108,7 +2093,6 @@ R: polka
 M: 2/4
 L: 1/8
 K:D
-%%stretchlast
 "D"F>A BA|de f2|fe/f/ "A"gc|ed BA|
 "D"F>A BA|de f2|fe/f/ "A"gc|ed "D"d2:|
 |: "A"ef/e/ ce|fe a2|ef/e/ ce|fe c/B/A|
@@ -2341,7 +2325,6 @@ R: polka
 M: 2/4
 L: 1/8
 K:Emin
-%%stretchlast
 "Em"B,E EF|GA/2G/2 FE|"D"A,D DE|FG/2F/2 ED|
 "Em"B,E EF|GA/2G/2 FA|"G"GB "D"Ad|"Em"e2 e2 :|
 |:"Em"ge "D"fd|"Em"ed BA|"D"Fd de|f2 ef|
@@ -2355,7 +2338,6 @@ C:Mick Hanley
 M: 2/4
 L: 1/8
 K:Amaj
-%%stretchlast
 "A"ef/e/ ce|fe Bc|A>B cA|ec "E"B2|
 "A"ef/e/ ce|fe Bc|A>B cA|"D"FA "E"E2:|
 |:"D"F>B AF|"A"cB A2|ef/e/ ce|ag "D"f2|

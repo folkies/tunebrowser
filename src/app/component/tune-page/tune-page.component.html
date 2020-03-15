@@ -7,7 +7,7 @@
         <mat-slider thumbLabel [(ngModel)]="player.tempo" [min]="50" [max]="200"></mat-slider>
     </div>
 </div>
-<app-tune-view [tune]="tune"></app-tune-view>
+<app-tune-view [tune]="tuneForDisplay()"></app-tune-view>
 
 <form class="tags-form">
     <mat-form-field class="tags">

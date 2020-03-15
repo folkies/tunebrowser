@@ -61,6 +61,10 @@ export class TunePageComponent implements OnInit {
         this.pdfService.saveAsPdf(this.tune);
     }
 
+    tuneForDisplay(): string {
+        return '%%stretchlast\n' + this.tune;
+    }
+
     private async addToRepertoire(added: Date): Promise<void> {
         if (!added) {
             return;
