@@ -98,7 +98,7 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
     test('should read large tunebook', () => {
         const text = fs.readFileSync('src/assets/LearnerSession.abc', 'utf8');
         const tunebook = new TuneBook(text);
-        const fanny = tunebook.getTuneByTitle('281  Fanny Power');
+        const fanny = tunebook.getTuneByTitle('Fanny Power');
         expect(fanny).toBeDefined();
         expect(fanny.id).toBe('281');
     });
