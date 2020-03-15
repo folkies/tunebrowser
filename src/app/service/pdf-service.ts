@@ -8,16 +8,16 @@ export class PdfService {
     }
 
     saveAsPdf(abc: string): void {
-        this.httpClient.post('https://abc2pdf-vkhoermztq-ew.a.run.app/print', abc, { responseType: 'arraybuffer'} )
+        this.httpClient.post('https://abc2pdf-vkhoermztq-ew.a.run.app/print', abc, { responseType: 'arraybuffer' })
             .subscribe(response => this.downloadFile(response, 'application/pdf'));
     }
 
     private downloadFile(data: ArrayBuffer, type: string) {
-        let downloadLink = document.createElement('a');
+        const downloadLink = document.createElement('a');
         downloadLink.href = window.URL.createObjectURL(new Blob([data], { type }));
         downloadLink.target = 'pdf';
         document.body.appendChild(downloadLink);
         downloadLink.click();
-        downloadLink.parentNode.removeChild(downloadLink);      
+        downloadLink.parentNode.removeChild(downloadLink);
     }
 }
