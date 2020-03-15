@@ -24,11 +24,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { GoogleOauthModule, NgGapiClientConfig, NG_GAPI_CONFIG } from 'ngx-gapi-auth2';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';
 import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
 import { AuthenticationComponent } from './component/authentication/authentication.component';
+import { BookPrintComponent } from './component/book-print/book-print.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
 import { MatcherComponent } from './component/match/matcher.component';
@@ -47,6 +49,7 @@ import { CustomReuseStrategy } from './service/custom-reuse-strategy';
 import { GoogleDriveTunebookLoaderService } from './service/google-drive-tunebook-loader.service';
 import { GoogleDriveService } from './service/google-drive.service';
 import { RestTuneMatcher } from './service/matching/rest-tune-matcher';
+import { PdfService } from './service/pdf-service';
 import { PracticeService } from './service/practice-service';
 import { RepertoireRepository } from './service/repertoire-repository';
 import { AudioContextProvider } from './service/transcription/audio-context-provider';
@@ -55,8 +58,6 @@ import { TranscriberProvider } from './service/transcription/transcriber-provide
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
-import { GoogleOauthModule, NG_GAPI_CONFIG, NgGapiClientConfig } from 'ngx-gapi-auth2';
-import { PdfService } from './service/pdf-service';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -64,6 +65,7 @@ const appRoutes: Routes = [
     { path: 'createBook', component: CreateBookComponent },
     { path: 'edit/:id', component: TuneEditorComponent },
     { path: 'book/:id', component: TunesListComponent },
+    { path: 'print/:id', component: BookPrintComponent },
     { path: 'login', component: AuthenticationComponent },
     { path: 'logout', component: AuthenticationComponent },
     { path: 'match/:transcription', component: MatcherComponent },
@@ -100,6 +102,7 @@ const gapiClientConfig: NgGapiClientConfig = {
         AddToRepertoireComponent,
         AppComponent,
         AuthenticationComponent,
+        BookPrintComponent,
         BooksListComponent,
         CaretTrackerDirective,
         CreateBookComponent,

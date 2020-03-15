@@ -8,6 +8,11 @@
                     <mat-icon  *ngIf="isEditable(book)">edit</mat-icon>
                 </button>
             </div>
+            <div class="tunebook-button">
+                <button mat-icon-button routerLink="../print/{{book.descriptor.id}}">
+                    <mat-icon>print</mat-icon>
+                </button>
+            </div>
             <div class="tunebook-item">
                 <div class="tunebook-link" routerLink="../book/{{book.descriptor.id}}">{{book.descriptor.name}}</div>
                 <div class="tunebook-description">{{book.descriptor.description}}</div>
