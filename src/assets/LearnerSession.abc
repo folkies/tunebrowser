@@ -1,5 +1,5 @@
 X: 1a
-T:1a    Britches Full of Stitches
+T: Britches Full of Stitches
 T:Breeches Full of Stitches
 R:polka
 M:2/4
@@ -13,7 +13,7 @@ K:A
 
 
 X: 1b
-T:1b    Peg Ryan's
+T: Peg Ryan's
 T: Egan's Polka
 T: The Kerry Polka
 R:polka
@@ -28,7 +28,7 @@ K:D
 
 
 X: 1c
-T:1c    The Newmarket Polka
+T: The Newmarket Polka
 R:polka
 M:2/4
 L:1/8
@@ -41,7 +41,7 @@ K:A
 
 
 X: 2
-T:2    The Lisnagun
+T: The Lisnagun
 T:Lios na gCon or "Fort of the Hound"
 C: Brendan Ring
 M: 6/8
@@ -57,7 +57,7 @@ K:Cmaj
 
 
 X: 3a
-T:3a    Sliabh Russell 
+T: Sliabh Russell 
 M:6/8
 R:jig
 K:Ador
@@ -68,7 +68,7 @@ K:Ador
 
 
 X: 3b
-T:3b    Cathal McConnell's
+T: Cathal McConnell's
 T: The Cock and the Hen
 M: 9/8
 L: 1/8
@@ -79,7 +79,7 @@ K:Bmin
 
 
 X: 4
-T:4    The Rights of Man
+T: The Rights of Man
 R:hornpipe
 C:James Hill, Northumberland (c.1811–1853)
 M:C|
@@ -91,7 +91,7 @@ GA|"G"BcAB GAFG|"Em"EFGA B2ef|"G"gfed edBd|"C"cBAG "D"A2GA|
 
 
 X: 5
-T:5    The Pride of Petravore
+T: The Pride of Petravore
 R:hornpipe
 M:C|
 L:1/8
@@ -103,7 +103,7 @@ B,2|"Em"E2 EF "G"G2 GA|"Em"BcBA G2E2|"D"D2DE FEFG|ABAG F2D2|
 
 
 X: 6a
-T:6a    I Buried My Wife and Danced on Top of Her Grave
+T: I Buried My Wife and Danced on Top of Her Grave
 R:jig
 M:6/8
 K:Dmix
@@ -114,7 +114,7 @@ DED F2G|AdB "D7"cAF|"G"~G3 BAG|"D"AFD D3:|
 
 
 X: 6b
-T:6b    Tripping up the Stairs
+T: Tripping up the Stairs
 R:jig
 M:6/8
 L:1/8
@@ -126,7 +126,7 @@ A | "D" FAA "G" GBB | "D" FAd fed | "A" cBc ABc | "D" dfe dAG |
 
 
 X: 6c
-T:6c    My Darling Asleep
+T: My Darling Asleep
 M:6/8
 R:jig
 K:D
@@ -137,7 +137,7 @@ K:D
 
 
 X: 7
-T:7    Donegal Reel
+T: Donegal Reel
 T: Larry Redican's Bow
 C:Larry Redican
 M:4/4
@@ -150,7 +150,7 @@ K:D
 
 
 X: 8
-T:8    Maid Behind the Bar
+T: Maid Behind the Bar
 M:C|
 R:reel
 K:D
@@ -161,7 +161,7 @@ K:D
 
 
 X: 9
-T:9    The Black Rogue
+T: The Black Rogue
 R:jig
 M:6/8
 K:D
@@ -172,7 +172,7 @@ d  |"A"cAA "G"BGB|"A"cAA A2d|"A"cAA "G"BGB|"D"AFD D2d|
 
 
 X: 10
-T:10    Julia Delaney
+T: Julia Delaney
 B:Francis O'Neill: "The Dance Music of Ireland" (1907) no. 643
 R:reel
 M:C|
@@ -185,7 +185,7 @@ K:Ddor
 
 
 X: 12
-T:12    The Butterfly
+T: The Butterfly
 C:Tommy Potts
 M:9/8
 L:1/8
@@ -197,7 +197,7 @@ K:Em
 
 
 X: 13
-T:13    Cucanandy
+T: Cucanandy
 R:slip jig
 M:9/8
 K:Edor
@@ -207,7 +207,7 @@ K:Edor
 
 
 X: 14
-T:14    Tulla Reel
+T: Tulla Reel
 T: Humours of Tulla
 M: 4/4
 L: 1/8
@@ -220,7 +220,7 @@ K:D
 
 
 X: 15
-T:15   Fig for a kiss
+T: Fig for a kiss
 M:9/8
 R:slip jig
 K:Edor
@@ -230,7 +230,7 @@ K:Edor
 
 
 X: 16
-T:16    Cliffs of Moher
+T: Cliffs of Moher
 M: 6/8
 L: 1/8
 R: jig
@@ -244,7 +244,7 @@ d |"Am"e2e "D"dBA|"Am"e2e "D"dBA|"G"GAB "D"dBA|"G"GAB dBd |
 
 
 X: 17
-T:17    The Mountain Road
+T: The Mountain Road
 C:Michael Gorman (1895-1970)
 R:reel
 M:C|
@@ -258,7 +258,7 @@ DE|"D"F2 AF BFAF|F2 AF "A"EFDE|"D"F2 AF BFAF|"G"GEFD EDB,D|
 
 
 X: 18
-T:18    Father Kelly's
+T: Father Kelly's
 T:The Rossmore Jetty
 R:reel
 C:Father P.J. Kelly
@@ -271,7 +271,7 @@ GA|"G"B2GB "C"AGEG|"G"DGGF GABd|"C"cBAB cBAG|"Am"EAAG "D"FDGA|
 
 
 X: 19
-T:19    Going to the Well for Water
+T: Going to the Well for Water
 R:slide
 M:6/8
 K:D
@@ -282,7 +282,7 @@ K:D
 
 
 X: 20
-T:20    Merrily Kiss the Quaker's Wife
+T: Merrily Kiss the Quaker's Wife
 R:slide
 M:6/8
 K:G
@@ -295,7 +295,7 @@ K:G
 
 
 X: 21
-T:21    The Silver Spear
+T: The Silver Spear
 R:reel
 N:Should not be confused with The Silver Spire
 M:C|
@@ -307,7 +307,7 @@ K:D
 
 
 X: 23
-T:23    Red Haired Lass
+T: Red Haired Lass
 M: 4/4
 L: 1/8
 R: reel
@@ -319,7 +319,7 @@ K:G
 
 
 X: 24
-T:24    Brosna Slide
+T: Brosna Slide
 M: 12/8
 L: 1/8
 R: slide
@@ -331,7 +331,7 @@ K:G
 
 
 X: 25
-T:25    Cooley's
+T: Cooley's
 R:reel
 M:C|
 K:Edor
@@ -342,7 +342,7 @@ K:Edor
 
 
 X: 26
-T:26    Toss the Feathers No. 1
+T: Toss the Feathers No. 1
 M:4/4
 R:reel
 L:1/8
@@ -353,7 +353,7 @@ K:Em
 
 
 X: 27
-T:27    Kerfunten
+T: Kerfunten
 C:Hammy Hamilton
 R:Jig
 M:6/8
@@ -366,7 +366,7 @@ K:G Major
 
 
 X: 28
-T:28    Sligo Maid
+T: Sligo Maid
 M:C
 R:reel
 L:1/8
@@ -378,7 +378,7 @@ K:Ador
 
 
 X: 29
-T:29    St. Anne's Reel
+T: St. Anne's Reel
 M:C|
 P: french-canadian
 L:1/8
@@ -391,7 +391,7 @@ de|"D"f2fg fedc|"G"Bggf~g2gf|"A"edcB Aceg|"E"baa^g "A"aba=g|
 
 
 X: 30
-T:30    Lilting Banshee
+T: Lilting Banshee
 R:jig
 M:6/8
 L:1/8
@@ -403,7 +403,7 @@ D|"Am(A5)"EAA EAA|"G"BAB G2A|"Em(Cmaj7)"Bee edB|"G"def gfg|
 
 
 X: 31
-T:31    The Connaughtman's Rambles
+T: The Connaughtman's Rambles
 R:jig
 M:6/8
 K:Bm
@@ -415,7 +415,7 @@ A|:\
 
 
 X: 32
-T:32    Chief O'Neill's
+T: Chief O'Neill's
 R:hornpipe
 M:4/4
 L:1/8
@@ -427,7 +427,7 @@ DE | "F" =F3G    FGAB |=cAdB cBAG | "D" Adde     fded | "A" cAdc    A2    de |
 
 
 X: 33
-T:33    Hammy Hamilton's
+T: Hammy Hamilton's
 T: The Woodcock
 C:Hammy Hamilton
 M:6/8
@@ -442,7 +442,7 @@ B|"G"dBG "Am"ecA|"D"fef "G"gfg|"C"ege "G"dBG|dcB "D7"ABc|!
 
 
 X: 34
-T:34    The Lark In The Morning
+T: The Lark In The Morning
 M: 6/8
 L: 1/8
 R: jig
@@ -458,7 +458,7 @@ K:Dmaj
 
 
 X: 35a
-T:35a    The Ballydesmond #1
+T: The Ballydesmond #1
 M: 2/4
 L: 1/8
 R: polka
@@ -471,7 +471,7 @@ K:Ador
 
 
 X: 35b
-T:35b    The Ballydesmond #2
+T: The Ballydesmond #2
 M: 2/4
 L: 1/8
 R: polka
@@ -484,7 +484,7 @@ K:Ador
 
 
 X: 36
-T:36    Banish Misfortune
+T: Banish Misfortune
 M: 6/8
 L: 1/8
 R: jig
@@ -498,7 +498,7 @@ e|:"D"fed "C"cAG|"D" A2d "C"cAG|"D" F2D DED| FEF "C"GFG|
 
 
 X: 37
-T:37    Humours of Ennistymon
+T: Humours of Ennistymon
 T:Coppers and Brass
 M: 6/8
 L: 1/8
@@ -515,7 +515,7 @@ fag fed|"D7"cAG FGA|"G"~B2d "D7"cAF|1 AGF "G"G2 e:|2 AGF "G"GBd||
 
 
 X: 38
-T:38    Sailor's Bonnet
+T: Sailor's Bonnet
 M: 4/4
 L: 1/8
 R: reel
@@ -527,7 +527,7 @@ K:D
 
 
 X: 39
-T:39    Fisherman's Island
+T: Fisherman's Island
 T:Reavy's
 T:Reavy's #9
 O:england
@@ -542,7 +542,7 @@ K:D
 
 
 X: 40
-T:40    Miss Monaghan
+T: Miss Monaghan
 R:reel
 M:C|
 L:1/8
@@ -554,7 +554,7 @@ K:D
 
 
 X: 41
-T:41    The Concertina Reel
+T: The Concertina Reel
 R:reel
 M:C|
 K:D
@@ -565,7 +565,7 @@ K:D
 
 
 X: 42
-T:42    Tobin's Favourite
+T: Tobin's Favourite
 M: 6/8
 L: 1/8
 R: jig
@@ -577,7 +577,7 @@ A|"D"dfa agf|"A"efg efg|"D"fef "G"gfg|"A"ecA "A7"GFE|
 
 
 X: 43
-T:43    The Gravel Walks
+T: The Gravel Walks
 M: 4/4
 L: 1/8
 R: reel
@@ -591,7 +591,7 @@ K: Ador
 
 
 X: 44
-T:44    The Trip to Durrow
+T: The Trip to Durrow
 C: Dan Cleary
 R:reel
 M:C|
@@ -606,7 +606,7 @@ K:D
 
 
 X: 45
-T:45    The Morning Dew
+T: The Morning Dew
 M:C|
 L:1/8
 R:reel
@@ -620,7 +620,7 @@ K:Edor
 
 
 X: 46
-T:46    Rip The Calico
+T: Rip The Calico
 M: 4/4
 L: 1/8
 R: reel
@@ -632,7 +632,7 @@ K:D
 
 
 X: 47
-T:47    Leather Away The Wattle-O
+T: Leather Away The Wattle-O
 M: 2/4
 L: 1/8
 R: polka
@@ -645,7 +645,7 @@ K:Dmaj
 
 
 X: 48
-T:48    The Drunken Landlady
+T: The Drunken Landlady
 R:reel
 M:C|
 K:Edor
@@ -656,7 +656,7 @@ K:Edor
 
 
 X: 49
-T:49    The Wind That Shakes The Barley
+T: The Wind That Shakes The Barley
 M: 4/4
 L: 1/8
 R: reel
@@ -668,7 +668,7 @@ K:Dmaj
 
 
 X: 50
-T:50    Donnybrook Fair
+T: Donnybrook Fair
 M:6/8
 R:jig
 K:G
@@ -680,7 +680,7 @@ D|:"G"GFG "D"AGA|"Em"Bee "D"dBA|"G"BAB GAB|"Am"AGE "G"GED|
 
 
 X: 51
-T:51    Rakish Paddy
+T: Rakish Paddy
 R:reel
 M:C|
 K:Dmix
@@ -691,7 +691,7 @@ K:Dmix
 
 
 X: 52
-T:52    The Blackthorn Stick
+T: The Blackthorn Stick
 M: 6/8
 L: 1/8
 R: jig
@@ -703,7 +703,7 @@ d|"G"gfg "C"ege|"G"dBG "C"AGE|"G"DGG "D"FGA|"G"BGB "D"A2 d|
 
 
 X: 53
-T:53    The Old Dudeen
+T: The Old Dudeen
 C:John McGrath
 M: 4/4
 L: 1/8
@@ -715,7 +715,7 @@ Bc|"Bm"d2 Bc dcde|fbbf "D"afef|"Bm"dBBc dcde|"D"fbaf "A"e2 de|
 
 
 X: 54
-T:54    The Musical Priest
+T: The Musical Priest
 R: reel
 M: C|
 L: 1/8
@@ -727,7 +727,7 @@ Bc | "Bm"dB~B2 bafb | "A"afec     ABce | "Bm(G)"dcBc defb | "A"afec "Bm"B2 |]
 
 
 X: 55
-T:55    Old French
+T: Old French
 T:The Rambler's Hornpipe
 R:Barndance
 S:Donna Hind's notebooks
@@ -742,7 +742,7 @@ cd    | "A"efed  c2 A2 | AEAc e2 dc |"G" BGBd gfed |"A" c2 A2 A2 :|]
 
 
 X: 56
-T:56    The Galway Hornpipe
+T: The Galway Hornpipe
 M:4/4
 L:1/8
 R:hornpipe
@@ -754,7 +754,7 @@ FE| "D"D2FA dAFD | "A"CDEF "G"G2FE |"D" D2FA dcdf |"A" ed cB AG FE |
 
 
 X: 57
-T:57    Sally Gardens
+T: Sally Gardens
 R:reel
 M:4/4
 K:G
@@ -765,7 +765,7 @@ K:G
 
 
 X: 58
-T:58    Rolling in the Rye Grass
+T: Rolling in the Rye Grass
 M:C|
 P: can be played as a fling
 L:1/8
@@ -776,7 +776,7 @@ K:D
 
 
 X: 59
-T:59    Christmas Eve
+T: Christmas Eve
 C:Tony Cohen, Galway,(1910-1974)
 R:reel
 M:C|
@@ -790,7 +790,7 @@ E|"G"D3E ~G3A|B2dB "D"ABGA|"G"BAGE D3E|G2BG ABGE|
 
 
 X: 60
-T:60    Jimmy Ward's Jig
+T: Jimmy Ward's Jig
 C: Jimmy Ward
 R:jig
 M:6/8
@@ -802,7 +802,7 @@ K:G
 
 
 X: 61
-T:61    Cup of Tea
+T: Cup of Tea
 R:reel
 M:C
 L:1/8
@@ -816,7 +816,7 @@ K:D
 
 
 X: 62
-T:62    Calliope House
+T: Calliope House
 M: 6/8
 L: 1/8
 C:Dave Richardson (Boys of the Lough)
@@ -829,7 +829,7 @@ K:Dmaj
 
 
 X: 63
-T:63    The Banshee
+T: The Banshee
 T:MacMahon's #3
 C:James MacMahon
 R:reel
@@ -842,7 +842,7 @@ K:G
 
 
 X: 64
-T:64    The Bucks Of Oranmore
+T: The Bucks Of Oranmore
 M: 4/4
 L: 1/8
 R: reel
@@ -860,7 +860,7 @@ K:Dmaj
 
 
 X: 65
-T:65    Kesh Jig
+T: Kesh Jig
 R:jig
 K:G
 D| "G"~G3 GAB| "D"ABA ABd| "Cadd9"edd "G"gdd| "Cmaj7"edB "D"dBA|
@@ -870,7 +870,7 @@ D| "G"~G3 GAB| "D"ABA ABd| "Cadd9"edd "G"gdd| "Cmaj7"edB "D"dBA|
 
 
 X: 66
-T:66    Morrison's
+T: Morrison's
 R:Jig
 M:6/8
 K:Edor
@@ -883,7 +883,7 @@ K:Edor
 
 
 X: 67
-T:67    The High Part Of The Road
+T: The High Part Of The Road
 M: 6/8
 L: 1/8
 R: jig
@@ -895,7 +895,7 @@ K:Gmaj
 
 
 X: 68
-T:68    Out on the Ocean
+T: Out on the Ocean
 R:Jig
 M:6/8
 L:1/8
@@ -907,7 +907,7 @@ K:G
 
 
 X: 69
-T:69    The Rambling Pitchfork
+T: The Rambling Pitchfork
 M: 6/8
 L: 1/8
 R: jig
@@ -919,7 +919,7 @@ K:Dmaj
 
 
 X: 70
-T:70    The Boys Of The Town
+T: The Boys Of The Town
 M: 6/8
 L: 1/8
 R: jig
@@ -931,7 +931,7 @@ K:Gmaj
 
 
 X: 71
-T:71    Chicago Reel
+T: Chicago Reel
 R:reel
 O:Ireland
 M:4/4
@@ -943,7 +943,7 @@ B|"Am"cded cAGE|"C"G2GE GAcd|ecgc acgc|"Am"eaag "C"eged|
 
 
 X: 72
-T:72    Drowsy Maggie
+T: Drowsy Maggie
 R:reel
 M:C|
 K:Edor
@@ -954,7 +954,7 @@ K:Edor
 
 
 X: 73
-T:73    The Convenience Reel
+T: The Convenience Reel
 T:Mark McLoughlin's
 C:Olcan Masterson
 R:reel
@@ -967,7 +967,7 @@ K:D
 
 
 X: 74
-T:74    The Rose In The Heather
+T: The Rose In The Heather
 M: 6/8
 L: 1/8
 R: jig
@@ -979,7 +979,7 @@ K:Dmaj
 
 
 X: 75
-T:75    The Monaghan Jig
+T: The Monaghan Jig
 C:Jig
 R:jig
 M:6/8
@@ -991,7 +991,7 @@ K:Edor
 
 
 X: 76
-T:76    Trip to Pakistan
+T: Trip to Pakistan
 R:reel
 C:Niall Kenny
 M:C|
@@ -1002,7 +1002,7 @@ K:Em
 
 
 X: 77
-T:77    Golden Stud
+T: Golden Stud
 R:reel
 C:Maurice Lennon (Stockton’s Wing)
 M:C|
@@ -1014,7 +1014,7 @@ K:Em
 
 
 X: 78
-T:78    The Mist Covered Mountain
+T: The Mist Covered Mountain
 M: 6/8
 C:Junior Crehan
 L: 1/8
@@ -1026,7 +1026,7 @@ a|"Am"age a2b|"Em"age edB|"G"AGE G2A|BAB GED|"Am"age a2b|"Em"age edB|"G"AGE G2A|
 
 
 X: 79
-T:79    The High Road To Linton
+T: The High Road To Linton
 M: 4/4
 C:C & D Part: Bobby MacLeod of Tobermory
 L: 1/8
@@ -1039,7 +1039,7 @@ K:Amix
 
 
 X: 80
-T:80     Spindle Shanks
+T: Spindle Shanks
 R:reel
 M:4/4
 K:D
@@ -1049,7 +1049,7 @@ K:D
 
 
 X: 81
-T:81      Brenda Stubbert's Reel
+T: Brenda Stubbert's Reel
 C:Jerry Holland
 O:Cape Breton
 R:reel
@@ -1065,7 +1065,7 @@ B |"Am"~A2a2 ~A2g2 | Aage ageg  | "G"G2BA BGGB | "C"c2BA "G"BGGB |
 
 
 X: 82
-T:82    The High Reel
+T: The High Reel
 R:reel
 M:C|
 K:Amix
@@ -1076,7 +1076,7 @@ K:Amix
 
 
 X: 83
-T:83   Star of Munster
+T: Star of Munster
 R:reel
 M:C|
 L:1/8
@@ -1088,7 +1088,7 @@ ed |:"Am"c2 Ac "G"BAGB|"Am"AGEF "G"GEDG|"Am"EAAB "(C)"cBcd|eaaf "G"gedB|
 
 
 X: 84
-T: 84    The Otter's Holt
+T: The Otter's Holt
 C: Martin 'Junior' Crehan
 M: C|
 L: 1/8
@@ -1101,7 +1101,7 @@ e |: "Bm"fBBA FEFB|"D"(3ABA FB ABde|"Bm"fBBA FEFA|BdcA Bcde|
 
 
 X: 85
-T:85      Off To California
+T: Off To California
 M: 4/4
 L: 1/8
 R: hornpipe
@@ -1113,7 +1113,7 @@ K:Gmaj
 
 
 X: 86
-T:86    King Of The Fairies
+T: King Of The Fairies
 M: 4/4
 L: 1/8
 R: hornpipe
@@ -1127,7 +1127,7 @@ B,2|"Em"EDEF "G"GFGA|"Em"B=cBA G2E2|BEED EFGB|"D"AGFE "Bm"D2B,2|
 
 
 X: 87
-T:87       Swinging On The Gate
+T: Swinging On The Gate
 M: C|
 L: 1/8
 R: reel
@@ -1139,7 +1139,7 @@ K:Gmaj
 
 
 X: 88
-T:88     My Love Is In America
+T: My Love Is In America
 M: C|
 L: 1/8
 R: reel
@@ -1151,7 +1151,7 @@ K:Dmaj
 
 
 X: 89
-T:89    The Monaghan Twig
+T: The Monaghan Twig
 M: C|
 L: 1/8
 R: reel
@@ -1162,7 +1162,7 @@ ed|"A"cdef "G"gfed|"A"cdef ~e3A|cdef "A7"gfge|"G"dBGB d2ed|
 
 
 X: 90
-T:90    Eavesdropper
+T: Eavesdropper
 M:6/8
 L:1/8
 C:Trad.
@@ -1175,7 +1175,7 @@ K:G
 
 
 X: 91
-T:91     Kilfenora Jig or Paddy's Return
+T: Kilfenora Jig or Paddy's Return
 M: 6/8
 L: 1/8
 R: jig
@@ -1187,7 +1187,7 @@ B|"D"AFD DFA|"G"BdB "D"BAF|ABA F2D|"A"FEE E2B|
 
 
 X: 92
-T:92   Cook in the Kitchen
+T: Cook in the Kitchen
 R:Jig
 C:Trad
 M:6/8
@@ -1202,7 +1202,7 @@ E| "G"DGG GAG |"D" FDE "Dm"=F2 E |"G" DGG GFG | "D"Add "C"cAG  |
 
 
 X: 93
-T:93     Master McDermott's
+T: Master McDermott's
 C: Sean McGuire, Liam Donnelly
 M: C|
 L: 1/8
@@ -1215,7 +1215,7 @@ FE |"D" DF~F2 DEFA | dffe "G"dB~B2 |"D" AF~F2 dF~F2 | BFAF "A"EGFE |
 
 
 X: 94
-T:94    Flogging Reel
+T: Flogging Reel
 R:reel
 M:C|
 L:1/8
@@ -1228,7 +1228,7 @@ K:G
 
 
 X: 95
-T:95    Jenny Picking Cockles
+T: Jenny Picking Cockles
 M:C|
 L:1/8
 R:reel
@@ -1240,7 +1240,7 @@ K:Dmix
 
 
 X: 96
-T:96    The Boys of Bluehill
+T: The Boys of Bluehill
 R:hornpipe
 M:C|
 K:D
@@ -1251,7 +1251,7 @@ AB|"D"BAFA D2FA|"G"BA (3Bcd "A"e2de|"D"faaf "A7"egfe|"D"dfed "G"B2dB|
 
 
 X: 97
-T:97    Frank's Reel
+T: Frank's Reel
 C: John McCusker
 R: reel
 M: C
@@ -1265,7 +1265,7 @@ K:A
 
 
 X: 98
-T:98    The Tarbolton
+T: The Tarbolton
 M: 4/4
 L: 1/8
 R: reel
@@ -1277,7 +1277,7 @@ D|"Em"Eeed e2 BA|"G"GBAF GFEF|"D"Ddd^c d2 AF|"G"GBAG "D"FDDF|
 
 
 X: 99
-T:99    The Longford Collector
+T: The Longford Collector
 M: C|
 L: 1/8
 R: reel
@@ -1289,7 +1289,7 @@ K:Gmaj
 
 
 X: 100a
-T:100a    Dennis Murphy's
+T: Dennis Murphy's
 R:polka
 D:Planxty
 M:2/4
@@ -1302,7 +1302,7 @@ K:D
 
 
 X: 100b
-T:100b    Andy Irvine's Polka
+T: Andy Irvine's Polka
 M:2/4
 L:1/8
 R:Polka
@@ -1317,7 +1317,7 @@ K:G
 
 
 X: 100c
-T:100c    John Ryan's
+T: John Ryan's
 R:polka
 D:Planxty
 M:2/4
@@ -1329,7 +1329,7 @@ K:D
 "D"fd de/f/|"G"gf "A"ed/e/|"D"fd "A"ec|1 "D"d2 d>e:|2"D" d2 d2|]
 
 X: 101
-T:101    The Wise Maid
+T: The Wise Maid
 M:C|
 R:reel
 K:D
@@ -1340,7 +1340,7 @@ K:D
 
 
 X: 102
-T:102    Martin Wynne's #1
+T: Martin Wynne's #1
 R:reel
 C:Martin Wynne (1914-98)
 M:C|
@@ -1352,7 +1352,7 @@ K:D
 
 
 X: 103
-T:103    Martin Wynne's #2
+T: Martin Wynne's #2
 M:C|
 C:Martin Wynne (1914-98)
 R:reel
@@ -1364,7 +1364,7 @@ K:Bmin
 
 
 X: 104
-T:104    Sweeney's Polka
+T: Sweeney's Polka
 M: 2/4
 L: 1/8
 R: polka
@@ -1376,7 +1376,7 @@ K:Gmaj
 
 
 X: 105
-T:105    Ballydesmond Polka #3
+T: Ballydesmond Polka #3
 M: 2/4
 L: 1/8
 R: polka
@@ -1389,7 +1389,7 @@ K:Gmaj
 
 
 X: 106
-T:106    Maggie in the Woods
+T: Maggie in the Woods
 M: 2/4
 L: 1/8
 R: polka
@@ -1403,7 +1403,7 @@ B/A/ |"G"GD G>A |"Em" Be eg/e/ |"G" dB B/A/G/A/ |"D" BA AB/A/ |
 
 
 X: 107
-T:107    Castle Kelly
+T: Castle Kelly
 R:reel
 M:C|
 L:1/8
@@ -1415,7 +1415,7 @@ K:Ador
 
 
 X: 108
-T:108    The Ten Penny Bit
+T: The Ten Penny Bit
 C:Jig
 R:jig
 M:6/8
@@ -1427,7 +1427,7 @@ K:Ador
 
 
 X: 109
-T:109    Far From Home
+T: Far From Home
 M: 4/4
 L: 1/8
 R: reel
@@ -1439,7 +1439,7 @@ K:Gmaj
 
 
 X: 110
-T:110    Tatter Jack Walsh
+T: Tatter Jack Walsh
 M: 6/8
 L: 1/8
 R: jig
@@ -1451,7 +1451,7 @@ K:Dmix
 
 
 X: 111a
-T:111a    Denis Murphy's slide
+T: Denis Murphy's slide
 M: 12/8
 L: 1/8
 R: slide
@@ -1464,7 +1464,7 @@ K:Dmaj
 
 
 X: 111b
-T:111b    Dan O'Keefe's slide
+T: Dan O'Keefe's slide
 R: slide
 M: 12/8
 L: 1/8
@@ -1477,7 +1477,7 @@ K:Ador
 
 
 X: 112
-T:112    The Trip To Sligo
+T: The Trip To Sligo
 M: 6/8
 L: 1/8
 R: jig
@@ -1489,7 +1489,7 @@ K:Emin
 
 
 X: 113
-T:113    Coleraine
+T: Coleraine
 R:jig
 M:6/8
 K:Am
@@ -1500,7 +1500,7 @@ E|"Am"EAA ABc|"E"Bee e2d|"Am"cBA ABc|"E"B^GE E2D|
 
 
 X: 114
-T:114    Greig's Pipes
+T: Greig's Pipes
 T: Craig's Pipes
 M: 4/4
 L: 1/8
@@ -1512,7 +1512,7 @@ K:Gmaj
 
 
 X: 115
-T:115    Cameronian Reel
+T: Cameronian Reel
 T:Carey's Dream
 R:reel
 M:C|
@@ -1524,7 +1524,7 @@ K:D
 
 
 X: 116
-T:116    Terry 'Cuz' Teehan's
+T: Terry 'Cuz' Teehan's
 M: C|
 L: 1/8
 R: slow reel
@@ -1536,7 +1536,7 @@ K:Emin
 
 
 X: 117
-T:117    Her Long Dark Hair Flowing Down Her Back
+T: Her Long Dark Hair Flowing Down Her Back
 T:Moll Ha’penny
 M: 4/4
 C:Junior Crehan's Arrangement of Moll Ha’penny
@@ -1550,7 +1550,7 @@ K:Bmin
 
 
 X: 118
-T:118    Cronin's
+T: Cronin's
 M: 4/4
 L: 1/8
 R: hornpipe
@@ -1562,7 +1562,7 @@ BA|"G"GA Bd dB de|"C"ga ge "G"de ga|"Em"ba ge "G"dB GA|"D"BA AG Ac BA|
 
 
 X: 119
-T:119    Tommy Peoples'
+T: Tommy Peoples'
 T:Milkmaid
 M: 4/4
 L: 1/8
@@ -1573,7 +1573,7 @@ K:Gmaj
 
 
 X: 120
-T:120    Sheehan's
+T: Sheehan's
 T:Black Eyed Sailor, The
 R:reel
 M:C|
@@ -1585,7 +1585,7 @@ K:G
 
 
 X: 121
-T:121    Old Copperplate
+T: Old Copperplate
 R:reel
 M:4/4
 L:1/8
@@ -1597,7 +1597,7 @@ K:Ador
 
 
 X: 122a
-T:122a   The Geese in the Bog
+T: The Geese in the Bog
 R:jig
 M:6/8
 K:D
@@ -1608,7 +1608,7 @@ K:D
 
 
 X: 122b
-T:122b   The Geese in the Bog
+T: The Geese in the Bog
 R:jig
 M:6/8
 K:Cmaj
@@ -1619,7 +1619,7 @@ K:Cmaj
 
 
 X: 123
-T:123    Sonny Brogan's
+T: Sonny Brogan's
 M: 6/8
 L: 1/8
 R: jig
@@ -1631,7 +1631,7 @@ K:Ador
 
 
 X: 124
-T:124    Jig of Slurs
+T: Jig of Slurs
 M:6/8
 C:Pipe Major G. S. MacLennan (1883-1927)
 R:jig
@@ -1647,7 +1647,7 @@ K:D
 
 
 X: 125
-T:125    Rolling In The Barrel
+T: Rolling In The Barrel
 M: 4/4
 L: 1/8
 R: reel
@@ -1659,7 +1659,7 @@ K:Edor
 
 
 X: 126
-T:126    The Fermoy Lasses
+T: The Fermoy Lasses
 M: 4/4
 L: 1/8
 R: reel
@@ -1671,7 +1671,7 @@ K:Emin
 
 
 X: 127
-T:127    Bird in the Bush
+T: Bird in the Bush
 R:reel
 M:C|
 K:G
@@ -1682,7 +1682,7 @@ K:G
 
 
 X: 128
-T:128 Ashokan's Farewell
+T: Ashokan's Farewell
 C:Jay Ungar
 M:3/4
 R: waltz
@@ -1695,7 +1695,7 @@ F3 E D2|"G"B,4 G,2|"A"A,6|A4 FE|"D"D2 F2 A2|"C"=c6|
 
 
 X: 129
-T: 129 Little Diamond Polka
+T: Little Diamond Polka
 R: polka
 M: 2/4
 L: 1/8
@@ -1710,7 +1710,7 @@ K:Dmaj
 
 
 X: 130
-T: 130 Sullivan's
+T: Sullivan's
 M: 2/4
 L: 1/8
 R: polka
@@ -1723,7 +1723,7 @@ K:Gmaj
 
 
 X: 131
-T: 131 Anything for John-Joe?
+T: Anything for John-Joe?
 C: traditional Irish from the Sliabh Luachra area
 R: reel
 M: 4/4
@@ -1736,7 +1736,7 @@ de | "D"f2df efde | faaf efde | f2af efdB  | "A"cABc "D"d2de |
 
 
 X: 132
-T: 132 Old Bush
+T: Old Bush
 T: The Long Hills of Mourne
 C: traditional Irish
 R: reel
@@ -1748,7 +1748,7 @@ K:Ador
 
 
 X: 133
-T:133 Over the Moor to Maggie
+T: Over the Moor to Maggie
 R:reel
 M:C|
 K:G
@@ -1761,7 +1761,7 @@ K:G
 
 
 X: 134
-T:134 Far away
+T: Far away
 T: Wild Asparagus
 T: Up Down And Around
 M: 3/4
@@ -1776,7 +1776,7 @@ FA |: "Bm"B2 BA Bd |"Fism"cA F2 FA |"Bm"B2 BA Be |"Fism"c4 dc |
 
 
 X: 135
-T:135 The Kid on the Mountain
+T: The Kid on the Mountain
 R:slip jig
 M:9/8
 K:Em
@@ -1788,7 +1788,7 @@ K:Em
 
 
 X: 136
-T:136 Maire Rua
+T: Maire Rua
 M: 9/8
 L: 1/8
 R: slip jig
@@ -1798,7 +1798,7 @@ E|"G"DGG GAG "D"FGA|"G"BdB GAB"D7" c2A|"G"DGG GAG "D"FGA|"G"BdB "D7"cAF "G"G2 :|
 
 
 X: 137
-T:137 The Hag at the Churn
+T: The Hag at the Churn
 C:Jig
 R:jig
 M:6/8
@@ -1808,7 +1808,7 @@ K:Dmix
 
 
 X: 138
-T:138 Farewell To Erin (Ireland)
+T: Farewell To Erin (Ireland)
 R: reel
 M: 4/4
 L: 1/8
@@ -1824,7 +1824,7 @@ K:Ador
 
 
 X: 139
-T: 139 Sunny Banks
+T: Sunny Banks
 R: reel
 L: 1/8
 M: 4/4
@@ -1834,7 +1834,7 @@ B | "D" AF~F2 d2cA | (3Bcd AF "G"~G2GB |"D" AF~F2  d2cA | (3Bcd AF D3 :||
 
 
 X: 140
-T:140 Hunter's House
+T: Hunter's House
 R: reel
 C:Ed Reavy
 M: 4/4
@@ -1847,7 +1847,7 @@ A|:"G"BddB "D7"cAFA |"G" G2BG DGBG | "G"BddB "D7"cAFA |"G"GBAG "D"FGEF |
 
 
 X: 141
-T:141 The Wedding Reel
+T: The Wedding Reel
 T:Macleod’s Farewell
 C:Donald Shaw
 M:4/4
@@ -1861,7 +1861,7 @@ DE|:"D"F2BF AFEF| D2 DE FABd|"Em"e2 fd efdB|"D" ABde "G"dBAG|
 
 
 X: 142
-T:142 The Atholl Highlanders
+T: The Atholl Highlanders
 R:jig
 M:6/8
 K:A
@@ -1876,7 +1876,7 @@ K:A
 
 
 X: 143
-T:143 Saddle the Pony
+T: Saddle the Pony
 R:jig
 M:6/8
 L:1/8
@@ -1888,7 +1888,7 @@ D|"G"GBA G2B|"D"def "G"gdB|GBAG2 B|"D7" AFD AFD|
 
 
 X: 144
-T: 144 Whelan's
+T: Whelan's
 R: jig
 M: 6/8
 L: 1/8
@@ -1900,7 +1900,7 @@ K:Edor
 
 
 X: 145
-T: 145 Willie Coleman's
+T: Willie Coleman's
 T:Mice in the Cupboard
 C:Willie Coleman
 R: jig
@@ -1914,7 +1914,7 @@ A|:"G"B2 G "C"AGE |"G" GED GBd |"Em" edB "G"dgb |"C" age "D"dBA |
 
 
 X: 146
-T:146 Finnish Polka
+T: Finnish Polka
 T:Ievan Polkka
 M: 2/4
 L: 1/8
@@ -1928,7 +1928,7 @@ K:Bmin
 
 
 X: 147
-T:147 Bill Sullivan's Polka
+T: Bill Sullivan's Polka
 R:polka
 C:Terry "Cuz" Teahan
 O:Ireland
@@ -1943,7 +1943,7 @@ K:A
 
 
 X: 148
-T:148 Planxty Irwin
+T: Planxty Irwin
 R: waltz
 M: 6/8
 C:O'Carolan
@@ -1956,7 +1956,7 @@ d|"G"g2 f|"C"  e>fg|"D"d2 c |"Em"B>AG|"Am"c2 A |"G"B>cd|"D"F2 G |A2 d|
 
 
 X: 149
-T:149 Merry Blacksmith
+T: Merry Blacksmith
 R:reel
 M:C
 L:1/8
@@ -1968,7 +1968,7 @@ AB|"D"d3A BAFA|ABdA BAFA|ABde f2ed|"Em(A)"Beed egfe|
 
 
 X: 150
-T:150 Dr. Gilbert's
+T: Dr. Gilbert's
 R:reel
 M:4/4
 L:1/8
@@ -1980,7 +1980,7 @@ gf|:"Em"eBBA "(G)"B3c|"D"dBA=c "G"BAGF|"Em"EDB,D "(G)"G2 FG|"Em"EDB,E "G"DB,A,G,
 
 
 X: 151
-T:151 Teetotaler's
+T: Teetotaler's
 R: reel
 M: 4/4
 L: 1/8
@@ -1992,7 +1992,7 @@ K:Gmaj
 
 
 X: 152
-T: 152 Salamanca
+T: Salamanca
 R: reel
 M: 4/4
 L: 1/8
@@ -2004,7 +2004,7 @@ dB|"D"ADFD ADFD|Adcd fedc|"Em"BEGE BEGE|Beed "A"cdeg|
 
 
 X: 153
-T:153 Congress Reel
+T: Congress Reel
 R:reel
 M:C|
 L:1/8
@@ -2016,7 +2016,7 @@ K:Ador
 
 
 X: 154
-T:154 Tam Lin
+T: Tam Lin
 T: The Glasgow
 C:Davey Arthur
 R: reel
@@ -2030,7 +2030,7 @@ K:Dmin
 
 
 X: 155
-T: 155 Sailor On The Rock
+T: Sailor On The Rock
 R: reel
 M: 4/4
 L: 1/8
@@ -2041,7 +2041,7 @@ K:Dmaj
 
 
 X: 156
-T:156 Dusty Windowsills
+T: Dusty Windowsills
 M:6/8
 L:1/8
 C:John Harling
@@ -2056,7 +2056,7 @@ E|"Am"A2 B cBA|eAB cBA|"G"~G3 EGG|DGG EFG|
 
 
 X: 157
-T:157 The Peeler's Jacket
+T: The Peeler's Jacket
 R:reel
 K:G
 "G"G2BG DGBG|"D"FGAB "C"c2Bc|"G"dggf d2eg|"D"fdcA BGAF|
@@ -2066,7 +2066,7 @@ K:G
 
 
 X: 158
-T:158 Virginia
+T: Virginia
 R:reel
 K:D
 "G"DBBA ~B3 B| BAdB "D"AFEF| DFFA A3 B| AFBF AFEF|
@@ -2076,7 +2076,7 @@ K:D
 
 
 X: 159
-T:159 Siobhan O'Donnell's
+T: Siobhan O'Donnell's
 T:The Reel Of Sceachóg
 M:C
 C:John Brady (Offaly)
@@ -2090,7 +2090,7 @@ K:A
 
 
 X: 160
-T:160  Miss McLeod's
+T: Miss McLeod's
 M:4/4
 O:Isle of Skye. First printed in Niel Gow's Fifth Collection of Strathspey Reels of 1809
 L:1/8
@@ -2103,7 +2103,7 @@ K:G
 
 
 X: 161
-T:161  Maids Of Ardagh
+T: Maids Of Ardagh
 R: polka
 M: 2/4
 L: 1/8
@@ -2116,7 +2116,7 @@ K:D
 
 
 X: 162
-T: 162 Maid On The Green
+T: Maid On The Green
 R: jig
 M: 6/8
 L: 1/8
@@ -2128,7 +2128,7 @@ d|"G"gfg "C"e2d|"Em"Bee "D"dBA|"G"BGG dGG|BAG "D"ABd|
 
 
 X: 163
-T:163 The Dunmore Lasses
+T: The Dunmore Lasses
 R: reel
 M: 4/4
 L: 1/8
@@ -2140,7 +2140,7 @@ K:Emin
 
 
 X: 164
-T:164 Mooncoin Jig
+T: Mooncoin Jig
 M:6/8
 L:1/8
 R:jig
@@ -2154,7 +2154,7 @@ K:Amix
 
 
 X: 165
-T:165 Black Haired Lass
+T: Black Haired Lass
 R:reel
 K:C
 M:C|
@@ -2167,7 +2167,7 @@ K:Amix
 
 
 X: 166
-T:166 Sporting Paddy
+T: Sporting Paddy
 R: reel
 M: 4/4
 L: 1/8
@@ -2179,7 +2179,7 @@ ef |"Em(C)" g~e3 "(G)"gede |"Em(C)" g~e3 "D"a2ba |"Em(C)" gee2 "(G)"ged2 |"C(Em)
 
 
 X: 167
-T:167 Kerry Lasses
+T: Kerry Lasses
 M:4/4
 R:reel
 L:1/8
@@ -2191,7 +2191,7 @@ K:D
 
 
 X: 168
-T:168 The Cat's Rambles to the Child's Saucepan
+T: The Cat's Rambles to the Child's Saucepan
 T:Mary Willie's
 M:6/8
 R:slide
@@ -2201,7 +2201,7 @@ K:D
 
 
 X: 169
-T:169 Come West Along The Road
+T: Come West Along The Road
 R: reel
 M: 4/4
 L: 1/8
@@ -2212,7 +2212,7 @@ K:Gmaj
 
 
 X: 170
-T:170 Man of the House
+T: Man of the House
 M: 4/4
 R:reel
 L: 1/8
@@ -2223,7 +2223,7 @@ K:Edor
 
 
 X: 171
-T: 171 The Milliner's Daughter
+T: The Milliner's Daughter
 M: C|
 L: 1/8
 R: reel
@@ -2235,7 +2235,7 @@ K:Gmaj
 
 
 X: 172
-T:172 Road to Lisdoonvarna
+T: Road to Lisdoonvarna
 M:6/8
 R:slide
 L:1/8
@@ -2247,7 +2247,7 @@ K:Edor
 
 
 X: 173
-T:173 The Kerryman's Daughter
+T: The Kerryman's Daughter
 T:The Lilting Fisherman
 R:reel
 M:C|
@@ -2259,7 +2259,7 @@ d|"C"eg ~g2 "Am"agea|"G"gede "Am"cA~A2|"C"eg~g2 "Am"ea~a2|"G"gabg "Am"~a2ag|
 
 
 X: 174
-T:174 The Dusty Miller
+T: The Dusty Miller
 M:9/8
 R:slip jig
 L:1/8
@@ -2269,7 +2269,7 @@ K:D
 
 
 X: 175
-T:175 Na Ceannabhain Bhana
+T: Na Ceannabhain Bhana
 M:9/8
 R: slip jig
 L:1/8
@@ -2280,7 +2280,7 @@ A|"G"Bdd edd BAG|Bdd edB "D"A2c|"G"Bdd edd BAG|GED "D"DEF "G"G2c|
 
 
 X: 176
-T: 176 Dever The Dancer
+T: Dever The Dancer
 R: slip jig
 M: 9/8
 L: 1/8
@@ -2290,7 +2290,7 @@ K:Edor
 
 
 X: 177
-T: 177 Glass Of Beer
+T: Glass Of Beer
 R: reel
 M: C|
 L: 1/8
@@ -2300,7 +2300,7 @@ K:Bmin
 
 
 X: 178
-T: 178 Lads Of Laois
+T: Lads Of Laois
 R: reel
 M: C|
 L: 1/8
@@ -2312,7 +2312,7 @@ K:Edor
 
 
 X: 179
-T: 179 Bank of Turf
+T: Bank of Turf
 R:jig
 M:6/8
 L:1/8
@@ -2324,7 +2324,7 @@ dcB|:"D"ABA DFA|BAF DFA|dcd "A"ede|"D"~f3 def|
 
 
 X: 180
-T: 180 Boys Of Ballisodare
+T: Boys Of Ballisodare
 R: slip jig
 M: 9/8
 L: 1/8
@@ -2336,7 +2336,7 @@ K:Gmaj
 
 
 X: 181
-T:181 The P&O
+T: The P&O
 R: polka
 M: 2/4
 L: 1/8
@@ -2349,7 +2349,7 @@ K:Emin
 
 
 X: 182
-T:182 Jessica's
+T: Jessica's
 R: polka
 C:Mick Hanley
 M: 2/4
@@ -2363,7 +2363,7 @@ K:Amaj
 
 
 X: 183
-T:183 Ships Are Sailing
+T: Ships Are Sailing
 R: reel
 M: C|
 L: 1/8
@@ -2375,7 +2375,7 @@ K:Edor
 
 
 X: 184
-T:184 Drummond Castle
+T: Drummond Castle
 R: jig
 M: 6/8
 L: 1/8
@@ -2387,7 +2387,7 @@ K:Amin
 
 
 X: 185
-T:185 The Mouse In The Mug
+T: The Mouse In The Mug
 M: 6/8
 C:Tom McElvogue
 L: 1/8
@@ -2402,7 +2402,7 @@ K:Gmaj
 
 
 X: 186
-T:186 Tom Ward's Downfall
+T: Tom Ward's Downfall
 R: reel
 M: C|
 L: 1/8
@@ -2416,7 +2416,7 @@ K:Gmaj
 
 
 X: 187
-T:187 Mouse In The Kitchen
+T: Mouse In The Kitchen
 C:Colin Farrell
 R: jig
 K:Amaj
@@ -2427,7 +2427,7 @@ K:Amaj
 
 
 X: 187b
-T:187b Popcorn Behaviour
+T: Popcorn Behaviour
 C:Jay Ungar
 R:reel
 M:C|
@@ -2440,7 +2440,7 @@ K:Am
 
 
 X: 188
-T:188 Within A Mile Of Dublin
+T: Within A Mile Of Dublin
 R: reel
 M: C|
 L: 1/8
@@ -2451,7 +2451,7 @@ FG|"D"Addc AGFG|Adde fded|Addc AGFG|"Am"ABcA "G"G2 FG|
 
 
 X: 189
-T:189 Kings Of Kerry
+T: Kings Of Kerry
 C:Mike Scott, Sharon Shannon & Steve Wickham (Waterboys)
 R: slide
 M: 12/8
@@ -2464,7 +2464,7 @@ A |"G" ~B3 BAG "C"E2G "G"D2G | "C"E2G "G"D2B "D" ~A3 AGA |
 
 
 X: 190
-T:190 Star Above The Garter
+T: Star Above The Garter
 R: slide
 M: 12/8
 L: 1/8
@@ -2476,7 +2476,7 @@ K:Gmaj
 
 
 X: 191
-T: 191 The Skylark
+T: The Skylark
 C:James Morrison
 R: reel
 M:C|
@@ -2489,7 +2489,7 @@ L: 1/8
 
 
 X: 192
-T: 192 The Rookery
+T: The Rookery
 C: Vincent Broderick
 R: reel
 M: C|
@@ -2502,7 +2502,7 @@ K:Dmix
 
 
 X: 193
-T:193 The Holly Bush
+T: The Holly Bush
 C: Finbarr Dwyer
 R:reel
 M:C|
@@ -2515,7 +2515,7 @@ K:Dmix
 
 
 X: 194
-T:194 The Maple Leaf
+T: The Maple Leaf
 C:Darach de Brun
 M:C|
 R:reel
@@ -2527,7 +2527,7 @@ K:Em
 
 
 X: 195
-T:195 High Drive
+T: High Drive
 C:Gordon Duncan
 R: reel
 M: C|
@@ -2546,7 +2546,7 @@ A |"D" d3 e fedA |"G" B/B/B gB BAGB |"D" A/A/A Ad fedf |"A" eA A/A/A afge |
 
 
 X: 196
-T:196 The Silver Spire
+T: The Silver Spire
 T:John Brennan's
 R:reel
 M:C|
@@ -2558,7 +2558,7 @@ K:D
 
 
 X: 196b
-T:196b The Silver Spire Flute
+T: The Silver Spire Flute
 T:John Brennan's
 R:reel
 M:C|
@@ -2570,7 +2570,7 @@ defd ceAc|dcdB ADFA|GABG FADF|1 EAFE D3A:|2 EAFE D2FG||
 
 
 X: 197
-T:197 The Pigtown Fling
+T: The Pigtown Fling
 R: reel
 M: C|
 L: 1/8
@@ -2580,7 +2580,7 @@ K:Gmaj
 
 
 X: 198
-T:198 The Phoenix
+T: The Phoenix
 C: Dave Hennessy
 R: reel
 M: C|
@@ -2593,7 +2593,7 @@ ag|:"D"f2df "A"edcA|"G"B2dB "A"ABde|"D"fd~d2 "A"edcA|"G"BcdB "A"ABde|
 
 
 X: 199
-T:199 Tripping Down The Stairs
+T: Tripping Down The Stairs
 T: Green Hills of Tyrol
 R: reel
 M: C|
@@ -2606,7 +2606,7 @@ GA|"G"BG~G2 BGAc | BGDC B,CDC | B,G,B,D "C"~E3G |"D" FDEF "G"G2GA|
 
 
 X: 200
-T: 200 The Humours Of Tullycrine
+T: The Humours Of Tullycrine
 R: hornpipe
 M: 4/4
 L: 1/8
@@ -2617,7 +2617,7 @@ K:Ador
 "Am"~A3B ~c3d|eaag e2dB|c2Ac "G"BAGA|1"Am"BAAG A2Bd:|2BAAG A4|]
 
 X: 201
-T:201 Mickey Callaghan's
+T: Mickey Callaghan's
 R:Hornpipe
 T:Michael Tubridy’s
 M:4/4
@@ -2630,7 +2630,7 @@ Bd|"C"e2eg edBc|"G"d2de dBGB|"C"c2ec "G"B2AG|"Am"EAAG "Am7"AcBA|
 
 
 X: 202
-T:202 Sporting Pitchfork
+T: Sporting Pitchfork
 R:Jig
 M:6/8
 L:1/8
@@ -2642,7 +2642,7 @@ K:G
 
 
 X: 203
-T:  203 Richard Dwyer's
+T: Richard Dwyer's
 M: 4/4
 L: 1/8
 R: reel
@@ -2654,7 +2654,7 @@ e|"Bm"fB (3BBB cdcB|"A"A a2 g agfe|"Bm"fB (3BBB cdcB|"A"Aaag agfe|
 
 
 X: 204
-T:204 The House on the Hill
+T: The House on the Hill
 T: Miss Thornton’s
 M:4/4
 R:reel
@@ -2667,7 +2667,7 @@ K:G
 
 
 X: 205
-T:205 The Cordal
+T: The Cordal
 R: jig
 M: 6/8
 L: 1/8
@@ -2679,7 +2679,7 @@ K:Dmaj
 
 
 X: 206
-T:206 The Banks of Lough Gowna
+T: The Banks of Lough Gowna
 R:Jig
 M:6/8
 L:1/8
@@ -2691,7 +2691,7 @@ K:Bm
 
 
 X: 207
-T:207 Christy Barry's #2
+T: Christy Barry's #2
 T:The Butlers Of Glen Avenue
 C:Anthony Sullivan
 M:6/8
@@ -2705,7 +2705,7 @@ K:G
 
 
 X: 208
-T:208 Rolling Waves
+T: Rolling Waves
 T:McGuires March
 R:Jig
 M:6/8
@@ -2718,7 +2718,7 @@ K:D
 
 
 X: 209
-T:209 Sheila Coyle's
+T: Sheila Coyle's
 M:4/4
 R:reel
 L:1/8
@@ -2730,7 +2730,7 @@ K:D
 
 
 X: 210
-T:210 Lafferty's
+T: Lafferty's
 T:Rattigan's
 T:Glen of Aherlow
 C:Sean Ryan
@@ -2744,7 +2744,7 @@ K:Edor
 
 
 X: 211
-T:211 b Handsome Young Maidens, The
+T: b Handsome Young Maidens, The
 M: 6/8
 R:Jig
 L: 1/8
@@ -2757,7 +2757,7 @@ c2 A EAc | dff fed |1 cde aec | dBe A2 B :|ede fef | gfg bag ||
 
 
 X: 212
-T:212 Tom Busby's
+T: Tom Busby's
 M:6/8
 R:Jig
 L:1/8
@@ -2769,7 +2769,7 @@ K:Em
 
 
 X: 213
-T:213 Farewell to Nigg
+T: Farewell to Nigg
 C:Duncan Johnstone
 R:Waltz
 M:3/4
@@ -2783,7 +2783,7 @@ GA |"G"B2B2 d>A| "Em"B2E2 GA|"G" B2 Bd B>A|"Bm" F4 GA|
 
 
 X: 214
-T:214 Off She Goes
+T: Off She Goes
 R: single jig
 P: single jig
 M: 6/8
@@ -2796,7 +2796,7 @@ K:Dmaj
 
 
 X: 215
-T:215 Arthur Darley's Swedish Jig
+T: Arthur Darley's Swedish Jig
 T: Bruckless Shore
 C:Arthur Darley
 R:jig
@@ -2817,7 +2817,7 @@ fgf "A"edc|"D"dAA "G"BAG|"D"FED "A"EDC|"D"DA,B, "A"CDE|!
 
 
 X: 216
-T:216 Final Round Polka
+T: Final Round Polka
 M:2/4
 L:1/8
 C:Carl Hession
@@ -2832,7 +2832,7 @@ D|"G"G2 G-G/F/|GA Bc|dg/f/ "C"ec|"D7(Am)"AB c/B/A|
 
 
 X: 217a
-T:217a The Crooked Road to Dublin
+T: The Crooked Road to Dublin
 M:4/4
 R:reel
 L:1/8
@@ -2844,7 +2844,7 @@ K:G
 
 
 X: 217b
-T:217b The Crooked Road to Dublin
+T: The Crooked Road to Dublin
 T:Rover Version
 R:reel
 M:4/4
@@ -2857,7 +2857,7 @@ d~g3 fgaf|d~g3 a2ga|bgaf gbag|fdcA d2cA||
 
 
 X: 218a
-T:218a Blackwater #1
+T: Blackwater #1
 S: "Where's the Crack v/1" (DJ Taylor)
 L: 1/8
 M: 2/4
@@ -2870,7 +2870,7 @@ K:G
 
 
 X: 218b
-T:218b Last Chance Polka
+T: Last Chance Polka
 R: polka
 M: 2/4
 L: 1/8
@@ -2885,7 +2885,7 @@ d|"Am"ea e>d | ea e>d | cA AB/c/ |"G" dB GB |
 
 
 X: 219
-T:219 Donegal Lass
+T: Donegal Lass
 C:Brian Finnegan
 M:6/8
 R:Jig
@@ -2898,7 +2898,7 @@ K:D
 
 
 X: 220
-T:220 Drag her around the Road
+T: Drag her around the Road
 R:reel
 M:4/4
 L:1/8
@@ -2909,7 +2909,7 @@ BA |"G" G2GF GBdB |"C(Am)" cBAB cded |"G" B3A GBdB | dBGB "D"A2BA |
 
 
 X: 221
-T:221 Road to Rio / The Reel Of Rio
+T: Road to Rio / The Reel Of Rio
 C:Sean Ryan
 R: reel
 M: 4/4
@@ -2922,7 +2922,7 @@ K:Gmaj
 
 
 X: 222
-T:222 Aaron's Key
+T: Aaron's Key
 R: jig
 C:Paul Roche / Stockton’s Wing
 M: 6/8
@@ -2937,7 +2937,7 @@ K:Bmin
 
 
 X: 223
-T:223 The Twelve Pins
+T: The Twelve Pins
 C:Charlie Lennon
 R: reel
 M: 4/4
@@ -2952,7 +2952,7 @@ K:Gmaj
 
 
 X: 224
-T:224 Foxhunter
+T: Foxhunter
 R: reel
 M: 4/4
 L: 1/8
@@ -2965,7 +2965,7 @@ K:Gmaj
 
 
 X: 225
-T:225 Donald Blue
+T: Donald Blue
 M: 4/4
 L: 1/8
 R: reel
@@ -2975,7 +2975,7 @@ K:Dmaj
 
 
 X: 226
-T:226 Hundred Pipers
+T: Hundred Pipers
 R:jig
 M:6/8
 L:1/8
@@ -2989,7 +2989,7 @@ K:Gmaj
 
 
 X: 227
-T:227 The Templehouse
+T: The Templehouse
 M:4/4
 L:1/8
 R:reel
@@ -3000,7 +3000,7 @@ K:G
 
 
 X: 228
-T: 228 Charlie Hunter
+T: Charlie Hunter
 C:Bobby MacLeod
 R: jig
 M: 6/8
@@ -3013,7 +3013,7 @@ K:Dmaj
 
 
 X: 229
-T:229 Jenny's Chicken
+T: Jenny's Chicken
 R:reel
 M:4/4
 L:1/8
@@ -3024,7 +3024,7 @@ K:A
 
 
 X: 230
-T:230 Upstairs In A Tent
+T: Upstairs In A Tent
 T:Tie the Bonnet
 C:O'Neill Dancemusic of Ireland
 R: reel
@@ -3036,7 +3036,7 @@ K:Amix
 
 
 X: 231a
-T:231a Maids Of Galway
+T: Maids Of Galway
 R:reel
 M:4/4
 L:1/8
@@ -3048,7 +3048,7 @@ K:Bmin
 
 
 X: 231b
-T:231b Maids Of Galway
+T: Maids Of Galway
 R: reel
 M: 4/4
 L: 1/8
@@ -3060,7 +3060,7 @@ K:Emin
 
 
 X: 232
-T: 232 Kitty's gone a-milking
+T: Kitty's gone a-milking
 R: reel
 K:G maj
 Bc | "G"dG~G2 d2cA | dG~G2   "D"FGAB   |"G" dG~G2 d2 (3efg |"D" fdcA "G" G2Bc |
@@ -3070,7 +3070,7 @@ Bc | "G"dg~g2 ag~g2 | dggf "D"d2Bc  |"G" dg~g2 aggf |"D" dcAB "C"c2Bc |
 
 
 X: 233
-T:233 Flatbush Waltz
+T: Flatbush Waltz
 C:Andy Statman
 M:3/4
 R:waltz
@@ -3085,7 +3085,7 @@ K:Em
 
 
 X: 234
-T:234 Humours of Ballycullen
+T: Humours of Ballycullen
 C:Aogán Lynch
 R:Polka
 M:2/4
@@ -3100,7 +3100,7 @@ K:D
 
 
 X: 235
-T: 235 Tha Mi Sgith
+T: Tha Mi Sgith
 R: Polka
 M: 2/4
 L: 1/8
@@ -3122,7 +3122,7 @@ W:Back to me is stealing.
 
 
 X: 236
-T:236 Stone of Destiny
+T: Stone of Destiny
 C:Maurice Lennon
 R:reel
 M:4/4
@@ -3135,7 +3135,7 @@ d|"G"edBA BGG2|BGAB "Cadd9"EGGd|"G"edBA BGGA|BddB "D"A3d|
 
 
 X: 237
-T:237 Art O'Keeffe's
+T: Art O'Keeffe's
 T:The Newmarket
 R:Polka
 M:4/4
@@ -3148,7 +3148,7 @@ K:A
 
 
 X: 238
-T:238 Bay Tree
+T: Bay Tree
 C:Andy Cutting
 M:3/4
 R:waltz
@@ -3160,7 +3160,7 @@ dc|:"G"B2BB AB|"D"d4 BA|"G"G2 "D"FG Ad|"G"B2 "D"A2 GA|
 
 
 X: 239
-T:239 Speed The Plough
+T: Speed The Plough
 R: reel
 M: 4/4
 L: 1/8
@@ -3177,7 +3177,7 @@ faab afdf|gefd edBA|F2AF G2BG|1ABde fdde:||2ABde fdef||
 
 
 X: 240
-T:240 Earls Chair
+T: Earls Chair
 T:Down between the Two Derryoobers
 C:Patrick(Patto)Moloney of Woodford, Co Galway
 R:reel
@@ -3191,7 +3191,7 @@ K:D
 
 
 X: 241a
-T:241a Mrs. Crowleys
+T: Mrs. Crowleys
 M:2/4
 L:1/8
 K:G
@@ -3202,7 +3202,7 @@ K:G
 
 
 X: 241b
-T:241b Where Lilies Bloom
+T: Where Lilies Bloom
 M:2/4
 L:1/8
 K:D
@@ -3215,7 +3215,7 @@ K:D
 
 
 X: 241c
-T:241c John O'Leary's
+T: John O'Leary's
 R: polka
 M: 2/4
 L: 1/8
@@ -3227,7 +3227,7 @@ K:Bm
 
 
 X: 242
-T:242 Jim Donoghue's
+T: Jim Donoghue's
 R: reel
 M: 4/4
 L: 1/8
@@ -3239,7 +3239,7 @@ K:Dmaj
 
 
 X: 243
-T: 243 The Mouth Of The Tobique
+T: The Mouth Of The Tobique
 R: reel
 M: 4/4
 L: 1/8
@@ -3253,7 +3253,7 @@ K:Gmaj
 
 
 X: 244
-T:244 Abbey Reel
+T: Abbey Reel
 R:reel
 M:4/4
 L:1/8
@@ -3264,7 +3264,7 @@ g|"Em"egg2 "D"a2ba|"G"gabg "D"aged|"Em"egg2 "D"a2ga|"G"bgaf gedg|
 
 
 X: 245
-T:245 Ormond Sound
+T: Ormond Sound
 C:Paddy O'Brien - Tipperary
 M:4/4
 L:1/8
@@ -3276,7 +3276,7 @@ K:G
 
 
 X: 246
-T:246 Brendan McMahon's
+T: Brendan McMahon's
 M:4/4
 L:1/8
 K:Edor
@@ -3287,7 +3287,7 @@ K:Edor
 
 
 X: 247
-T:247 Sophie's Dancing Feet
+T: Sophie's Dancing Feet
 C:Aly Bain
 R:reel
 M:4/4
@@ -3300,7 +3300,7 @@ K:D
 
 
 X: 248
-T:248 b The Reconciliation
+T: b The Reconciliation
 P:Flute friendly
 M:4/4
 L:1/8
@@ -3312,7 +3312,7 @@ a3e f2ec|dBcA BAFB|A3F EFAc|ecBc A4:|
 
 
 X: 249
-T:249 New Mown Meadow
+T: New Mown Meadow
 M:4/4
 R:reel
 L:1/8
@@ -3324,7 +3324,7 @@ K:Edor
 
 
 X: 250
-T:250 The Golden Keyboard
+T: The Golden Keyboard
 C:Martin Mulhaire
 M:4/4
 R:reel
@@ -3337,7 +3337,7 @@ K:Edor
 
 
 X: 251
-T:251 Dance of the Honeybees
+T: Dance of the Honeybees
 C:Charlie Lennon
 R:Hornpipe
 M:4/4
@@ -3350,7 +3350,7 @@ ABc|"D"dAaA fAdA|"G"GFEF "D"DEFA|"Em"Bee2 Bee2|(3Bcd ef "A7"gece|
 
 
 X: 252
-T:252 Munster Bacon
+T: Munster Bacon
 M:6/8
 R:Jig
 L:1/8
@@ -3362,7 +3362,7 @@ K:D
 
 
 X: 253
-T:253 Michael McGoldrick's
+T: Michael McGoldrick's
 M:6/8
 C:Michael McGoldrick
 R:Jig
@@ -3375,7 +3375,7 @@ K:D
 
 
 X: 253b
-T:253b Michael McGoldrick's
+T: Michael McGoldrick's
 T: Michaels Version wie auf BBC Online Session gespielt
 M:6/8
 C:Michael McGoldrick
@@ -3389,7 +3389,7 @@ K:D
 
 
 X: 254
-T:254 Timmy Clifford's
+T: Timmy Clifford's
 M:6/8
 R:Jig
 L:1/8
@@ -3401,7 +3401,7 @@ K:G
 
 
 X: 255
-T: 255 Man Of Aran
+T: Man Of Aran
 C:Darach de Brun
 M: 4/4
 L: 1/8
@@ -3414,7 +3414,7 @@ K:Bmin
 
 
 X: 256
-T:256 Harvest Home
+T: Harvest Home
 M:4/4
 R:Hornpipe
 L:1/8
@@ -3426,7 +3426,7 @@ cd|"A"eA~A2 "D"fA~A2|"A"gAfA eA~A2|eAfA gAfA|(3efe (3dcB (3ABA (3GFE|
 
 
 X: 257
-T:257 Humours of Whiskey
+T: Humours of Whiskey
 M:9/8
 R:Slipjig
 L:1/8
@@ -3436,7 +3436,7 @@ K:D
 
 
 X: 258
-T:258 Inisheer
+T: Inisheer
 C:Thomas Walsh
 R: waltz
 M: 3/4
@@ -3449,7 +3449,7 @@ D2|"G"B2 BA Bd | B2 BA Bd | G2 GB AB |"D" D2-D BAG |
 
 
 X: 259
-T:259 Palmer's Gate
+T: Palmer's Gate
 C:Joe Liddy
 R: reel
 M: 4/4
@@ -3462,7 +3462,7 @@ GA|:"Em"BE(3EEE G2 BG |"Am"AcBA "Em"GEDE|"G"~G3A BAGA|"Em"BedB"D" A2 GA|
 
 
 X: 260
-T:260 Dribbles Of Brandy
+T: Dribbles Of Brandy
 R: jig
 M: 6/8
 L: 1/8
@@ -3474,7 +3474,7 @@ K:Emin
 
 
 X: 261
-T:261  Jimmy's Return
+T: Jimmy's Return
 R: reel
 M: 4/4
 L: 1/8
@@ -3486,7 +3486,7 @@ K:Bmin
 
 
 X: 262
-T: 262 Blarney Pilgrim
+T: Blarney Pilgrim
 R: jig
 M: 6/8
 L: 1/8
@@ -3500,7 +3500,7 @@ K:Dmix
 
 
 X: 263
-T:263 Behind the Haystack
+T: Behind the Haystack
 M:6/8
 R:Jig
 L:1/8
@@ -3514,7 +3514,7 @@ K:D
 
 
 X: 264
-T:264 Jacksons
+T: Jacksons
 R:Jig
 M:6/8
 L:1/8
@@ -3524,7 +3524,7 @@ f|"G"~g3 bag|"D"fed "A"^cde|"G"dcB gdB|"D"ABA ABd|"G"~g3 bag|"D"fed "A"^cde|"G"d
 "G"~g3 bag|"D"fed "A"^cde|"G"dcB gdB|"D"ABA ABc|"G"BAG Bcd|"C"edc efg|"G"dcB gdB|"D"AGF "G"G2||
 
 X: 265
-T: 265 Da Slockit Light
+T: Da Slockit Light
 R: reel
 M: 4/4
 C:Tom Anderson
@@ -3538,7 +3538,7 @@ g2|"D"f2a2 "A"e3c|"D"d3e dcBA|"D"f2a2 "E"e2^g2|"A"a4- a2"A7"=g2|
 "D"D3F A2d2|fedc d2A2|"G"B2G2 "A"AGFE|"D"D4- D2|]
 
 X: 265a
-T:265a Da Slockit Light zweite Stimme
+T: Da Slockit Light zweite Stimme
 R: reel
 M: 4/4
 C:Tom Anderson
@@ -3553,7 +3553,7 @@ A,3D F2A2|^A4F2D2|G,4 A,3C|[D4A,4][D2A,2]|]
 
 
 X: 266
-T:266 Dowd's No. 9
+T: Dowd's No. 9
 R: reel
 M: 4/4
 L: 1/8
@@ -3565,7 +3565,7 @@ K:Dmaj
 
 
 X: 267
-T:267 Pigeon on the Gate
+T: Pigeon on the Gate
 R:reel
 M:4/4
 L:1/8
@@ -3577,7 +3577,7 @@ FA|"Em"Beed efed|(3Bcd ef "G"gedB|"D"Addc ~d3B|A2FE DEFA|
 
 
 X: 268
-T:268 The Ashplant
+T: The Ashplant
 R: reel
 M: 4/4
 K:Edor
@@ -3588,7 +3588,7 @@ GA | "Em"B2eB fBeB | ~B2ed "G"BAGA |"Em" B2  eB  "Bm"fBef | "G"gedB "D"ABGA |
 
 
 X: 269a
-T:269a Munster Buttermilk
+T: Munster Buttermilk
 R:Jig
 M:6/8
 L:1/8
@@ -3600,7 +3600,7 @@ B|"D"A2B d2e|fgf fed|"G(Em)"efe edB|"D"ded "G"edB|
 
 
 X: 269b
-T:269b Munster Buttermilk
+T: Munster Buttermilk
 R:Jig
 M:6/8
 L:1/8
@@ -3612,7 +3612,7 @@ e|"G"d2e g2a|bc'b bag|"C(Am)"aba age|"G"gag "C"age|
 
 
 X: 270
-T:270 Maudabawn Chapel
+T: Maudabawn Chapel
 C:Ed Reavy
 R:reel
 M:4/4
@@ -3625,7 +3625,7 @@ K:Edor
 
 
 X: 271
-T:271 Street Player
+T: Street Player
 C:Ed Reavy
 R:reel
 M:4/4
@@ -3638,7 +3638,7 @@ K:D
 
 
 X: 272
-T:272 Gallagher's Frolics
+T: Gallagher's Frolics
 M:6/8
 R:Jig
 L:1/8
@@ -3650,7 +3650,7 @@ K:Edor
 
 
 X: 273
-T:273 The Boys Of Malin
+T: The Boys Of Malin
 R: reel
 M: 4/4
 L: 1/8
@@ -3662,7 +3662,7 @@ K:Amaj
 
 
 X: 274
-T:274 Morning Star
+T: Morning Star
 R: reel
 M: 4/4
 L: 1/8
@@ -3673,7 +3673,7 @@ K:Em
 
 
 X: 275
-T:275 The Humours Of Glendart
+T: The Humours Of Glendart
 R: jig
 M: 6/8
 L: 1/8
@@ -3685,7 +3685,7 @@ A|"D"def d2 B|AFA AFA|def d2 f|"A"ede "Bm"fdB|
 
 
 X: 276
-T:276 Jerry's Beaver Hat
+T: Jerry's Beaver Hat
 M: 6/8
 L: 1/8
 R: jig
@@ -3697,7 +3697,7 @@ d|"D"dfa afd|"G"gbg "D"faf|dfa afd|"A"cee ecA|
 
 
 X: 277
-T:277 Give me Your Hand
+T: Give me Your Hand
 T:Tabhair dom do Lamh
 T:Da Mihi Manum
 C:Ruairi Dall O’Cathain, c. 1570-c.1650 Irish Harper
@@ -3715,7 +3715,7 @@ dB|"G"d2d2e2|g4ed|"C"e2e2g2|"D"a4ge|"G"g2g2de|g2g2de|g2g2a2|b6|
 
 
 X: 278
-T:278 The Foxhunter's
+T: The Foxhunter's
 R: slip jig
 M: 9/8
 L: 1/8
@@ -3727,7 +3727,7 @@ K:Dmaj
 
 
 X: 279
-T:279 Pretty Maggie Morrissey
+T: Pretty Maggie Morrissey
 T: The Wexford Hornpipe
 R: Hornpipe
 L: 1/8
@@ -3740,7 +3740,7 @@ Bc|"G"d~g3 "C"efge|"G"dggB "C"c2Bc|"G"d~g3 "C"efge|"G"dBGB "D"A2Bc|
 
 
 X: 280
-T:280 Condon's Frolics
+T: Condon's Frolics
 M: 6/8
 L: 1/8
 R: Jig
@@ -3752,7 +3752,7 @@ K:A Dorian
 
 
 X: 281
-T:281  Fanny Power
+T: Fanny Power
 C:Turlough O'Carolan (1670-1738)
 R: Waltz
 L: 1/8
@@ -3765,7 +3765,7 @@ M: 3/4
 
 
 X: 282
-T:282 Tolka Polka
+T: Tolka Polka
 C:Donal Lunny
 R:Polka
 M:2/4
@@ -3781,7 +3781,7 @@ M:2/4
 "Am"de cA|"G"B/c/B/A/ Gd|1"Am"BA A2:|2BA e/d/c/B/||
 
 X: 283
-T: 283  Dennis Doody's
+T: Dennis Doody's
 M:2/4
 L:1/16
 D:Donal Lunny - Donal Lunny
@@ -3793,7 +3793,7 @@ K:Edor
 "G"g4 "D"f2gf| "Em"e2B2 B2A2 | B2E2 E3F | "G" G2A2 B2A2 :|
 
 X: 284
-T: 284  The Dingle Regatta
+T: The Dingle Regatta
 M: 12/8
 L: 1/8
 R: slide
@@ -3803,7 +3803,7 @@ K: G
 |:"G"gag dgd BdB G3|"D"FGA DEF "G"GAB d2e|~g3 ~d3 ~B3 ~G3|"D"FGA DEF "G"G6:|
 
 X: 285
-T: 285  Lochaber Badger
+T: Lochaber Badger
 R: reel
 C: Fred Morrison
 M: 4/4
@@ -3813,7 +3813,7 @@ K: Emin
 |:"Em"~E2DE GE"Am7"A2- | ~A2AG Ad"Bm7"B2- | ~B2AG AG"Em"E2 | ED"Bm7"GD "Em"E4 :|
 
 X: 286
-T: 286  Josefin's
+T: Josefin's
 M: 3/4
 L: 1/8
 C: Roger Tallroth (Väsen)
@@ -3826,7 +3826,7 @@ K: Gmaj
 "Em"B2A2G2|"D"F4G2|"C"G6|C2D2C2|"G"B,2D2G2|"D"F2E2F2|"G"G6:|
 
 X: 287
-T: 287  Marino Waltz
+T: Marino Waltz
 R: waltz
 M: 3/4
 L: 1/8
@@ -3837,7 +3837,7 @@ d e>f|"G"g2d3B | "Bm"F4B2 | "C"E4c2 | "D"D6 | "C"C2D2E2 | "D"F2D3A | "G"G2D2B2 |
 "C"C2D2E2 | "D"F2D2A2 | "G"G2D2d2 | "C"e4d2 | "D7"c2A2F2 | "D"D4B2 | "G"G6 | G6 :|
 
 X: 288
-T: 288  Leaving Uist
+T: Leaving Uist
 R: waltz
 C: Fred Morrison
 M: 3/4
@@ -3853,7 +3853,7 @@ eed|: "Em" B3 A AG|AGE2GA|"Am" A3 cB2|"Em" e3 e de|
 "C" g3 a ag|"Em" edB2BA| "G" G3 B A<B|[1 "Am"A4ed:|[2 A6|| 
 
 X: 289
-T: 289  The Ivy Leaf
+T: The Ivy Leaf
 R: reel
 M: 4/4
 L: 1/8
@@ -3864,7 +3864,7 @@ K: Amix
 "Am"ea~a2 edBd|"G"~g3e "Em"dBGB|"F"~A3B ~=c3d|"C"(3efg "D"fa "Em"gedB||
 
 X: 290
-T: 290  Fraher's
+T: Fraher's
 R: jig
 M: 6/8
 L: 1/8
@@ -3875,7 +3875,7 @@ K: Dmix
 "D"dAA def | dcA "Am"AGE | "D"~A3 "C"GEA | "D"~D3 DEG :|
 
 X: 291
-T: 291  The Curlew
+T: The Curlew
 C: Josephine Keegan
 R: reel
 M: 4/4
