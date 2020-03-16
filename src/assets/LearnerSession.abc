@@ -2607,45 +2607,45 @@ L:1/8
 K:G
 BA|"G"GEDE GABA|GEDE GABc|dBeB dBGB|"D"AGAB "C"c2BA|
 "G"GEDE GABA|GEDE GABc|dBeB dBGB|"D"(3AAA "G"GFG2:|
-Bd|"C"e2eg edBc|"G"d2de dBGB|"C"c2ec "G"B2AG|"Am"EAAG "Am7"AcBA|
+|: Bd|"C"e2eg edBc|"G"d2de dBGB|"C"c2ec "G"B2AG|"Am"EAAG "Am7"AcBA|
 "G"GEDE GABA|GEDE GABc|dBeB dBGB|"D"(3AAA "G"GFG2:|
 
 
 X: 202
 T: Sporting Pitchfork
-R:Jig
+R:jig
 M:6/8
 L:1/8
-K:G
+K:Dmix
 "D"~F3 "C"~E3|"D"~F3 DEF|"G"~G3 "D"AGA|"D7" cAG FGA|
-"G"~B3 BAG|"D"ABA ABc|dcA AGF|1AGF "G"GAG:|2 AGF "G"G2B|]
-"D"d2e fed|~f3 def|"G"g2a bag|"D"fd^c d2=c|
+"G"~B3 BAG|"D"ABA ABc|dcA AGF|1AGF "G"GAG:|2 AGF "G"G2B||
+|: "D"d2e fed|~f3 def|"G"g2a bag|"D"fd^c d2=c|
 "G"~B3 BAG|"D"ABA ABc|dcA AGF|1 AGF "G"G2B:|2 AGF "G"GAG|]
 
 
 X: 203
 T: Richard Dwyer's
 M: 4/4
-L: 1/8
+L: C|
 R: reel
 K:Dmaj
 c|"D"d2 fd "A"cdec|"D"defd AdBA|"G"GB (3BBB "D"Ad (3ddd|"G"gfed "A"cdec|
 "D"d2 fd "A"cdec|"D"defd AdBA|"G"GB (3BBB "D"Ad (3ddd|"A"cdec "D"d3:|
-e|"Bm"fB (3BBB cdcB|"A"A a2 g agfe|"Bm"fB (3BBB cdcB|"A"Aaag agfe|
+|: e|"Bm"fB (3BBB cdcB|"A"A a2 g agfe|"Bm"fB (3BBB cdcB|"A"Aaag agfe|
 "D"d2 fd "A"cdec|"D"defd AdBA|"G"GB (3BBB "D"Ad (3ddd|"A"cdec "D"d3:|
 
 
 X: 204
 T: The House on the Hill
 T: Miss Thornton’s
-M:4/4
+M:C|
 R:reel
 L:1/8
 K:G
 "G"G2Bd gdBd|"Am"cBAB cded|"G"~B3A GBdg|"Am"ecAF "G"GFED|
-"G"G2Bd gdBd|"Am"cBAB cded|"G"~B3A GABd|1"Am7"egfa "G"gedB:|2"Am7"egfa "G"g3a|
-"G"bg g2 b2ag|"Cadd9"egdg egdg|"G"bg g2 b2ag|"Am7"egfa "G"~g3a|
-"G"bg g2 b2ag|"Cadd9"egdg egdg|"G"g2ga gfed|1"Am7"egfa "G"g3a:|2"Am7"egfa "G"gedB||
+"G"G2Bd gdBd|"Am"cBAB cded|"G"~B3A GABd|1"Am7"egfa "G"gedB:|2"Am7"egfa "G"g3a||
+|: "G"bg g2 b2ag|"Cadd9"egdg egdg|"G"bg g2 b2ag|"Am7"egfa "G"~g3a|
+"G"bg g2 b2ag|"Cadd9"egdg egdg|"G"g2ga gfed|1"Am7"egfa "G"g3a:|2"Am7"egfa "G"gedB|]
 
 
 X: 205
@@ -2655,21 +2655,21 @@ M: 6/8
 L: 1/8
 K:Dmaj
 |:"Bm(D)"BAF "A"~E3|"D"FEF DFA|"Bm(D)"BAF "A"EFA|"G"B2A Bcd|
-|"Bm(D)"BAF "A"~E3|"D"FEF DFA|d2f "A"edc|"G"B2A "(Bm)(D)"Bcd:|
+"Bm(D)"BAF "A"~E3|"D"FEF DFA|d2f "A"edc|"G"B2A "(Bm)(D)"Bcd:|
 |:"D"d3 fed|"A"cBc ecA|"D"d2d fed|f2e fga|
-|"D"~d3 fed|"A"cBc ecA|"D"dcB "A"cBA|"G"B2A "(Bm)(D)"Bcd:|
+"D"~d3 fed|"A"cBc ecA|"D"dcB "A"cBA|"G"B2A "(Bm)(D)"Bcd:|
 
 
 X: 206
 T: The Banks of Lough Gowna
-R:Jig
+R:jig
 M:6/8
 L:1/8
 K:Bm
 "Bm"BcB BAF|"(D)"FEF DFA|"Bm"BcB BAF|"D"d2e fed|
 "Bm"BcB BAF|"D"FEF DFA|def "G"geg|1"Bm" fdB Bdc:|2fdB ~B3||
-"D"def ~a3|afb afe|dFA def|"G"geg "Bm"fdB|
-"D"def ~a3|afb afe|def "G"geg|1 "Bm"fdB ~B3:|2fdB Bdc||
+|: "D"def ~a3|afb afe|dFA def|"G"geg "Bm"fdB|
+"D"def ~a3|afb afe|def "G"geg|1 "Bm"fdB ~B3:|2fdB Bdc|]
 
 
 X: 207
@@ -2677,37 +2677,37 @@ T: Christy Barry's #2
 T:The Butlers Of Glen Avenue
 C:Anthony Sullivan
 M:6/8
-R:Jig
+R:jig
 L:1/8
 K:G
 "G"DEG EDB,|DEG ~B3|DEG B2e|dBe "D"dBA|
 "G"DEG EDB,|DEG ~B3|dBd "C"gfe|"D"dBA "G"G3:|
-"G"gab "Am7"age|"G"deg ~B3| gab gab|dBd "C"e2d|
+|: "G"gab "Am7"age|"G"deg ~B3| gab gab|dBd "C"e2d|
 "G"gab "Am7"age|"G"deg ~B3|dBd "C"gfe|"D"dBA "G"G3:|
 
 
 X: 208
 T: Rolling Waves
 T:McGuires March
-R:Jig
+R:jig
 M:6/8
 L:1/8
 K:D
 "D(add9)"F2E "(A)"EDE|"D(add9)"F2D DED|F2E "(A)"EFA|"D(G)"d2e "D"fdA|
 "D(add9)"F2E "(A)"EDE|"D(add9)"F2D DED|"A"AFE EFA|"G"B3"(D)"d3:|
-"D(add9)"ABd "(A)"e2f|"D(add9)"d2c "G"B2A|"D(add9)"ABd "(A)"e2f|"D(add9)"d2A "G"B3|
+|:"D(add9)"ABd "(A)"e2f|"D(add9)"d2c "G"B2A|"D(add9)"ABd "(A)"e2f|"D(add9)"d2A "G"B3|
 "D(add9)"ABd "(A)"ede|"Bm"fdB BAF|"A"AFE EFA|"G"B3 "(D)"d3:|
 
 
 X: 209
 T: Sheila Coyle's
-M:4/4
+M:C|
 R:reel
 L:1/8
 K:D
 "D"FA ~A2 FADF|ADFA "G(Bm)"BAGF|"G"GBBA ~B3B|"D"ABdf "A"edBA|
 "D"FA ~A2 FADF|ADFA "G(Bm)"BAGF|"G"GB~B2 "D"AFDF|"A"EFGE "D"FDD2:|
-"D"dffe fgfe|"G"dcdB "D"AFDF|"A"A~c3 c2dc|"G"~B3A BAFA|
+|:"D"dffe fgfe|"G"dcdB "D"AFDF|"A"A~c3 c2dc|"G"~B3A BAFA|
 "D"dffe fgfe|"G"dcdB "D"AFDF|"G"GB~B2 "D"AFDF|"A"EFGE "D"FDD2:|
 
 
@@ -2717,57 +2717,66 @@ T:Rattigan's
 T:Glen of Aherlow
 C:Sean Ryan
 R:reel
-M:4/4
+M:C|
 K:Edor
 "Bm"B2 AF "(D)"BFAF |"Em" ~E3 F EDB,D |"Bm" B2 AF "(D)"BFAF | "D"DFAF "Em"FE E2 |
 "Bm"B2 AF "(D)"BFAF |"Em" ~E3 F EDB,A, | B, ~E3 "D"DEFA | dBAF "Em"FE E2 :|
-"Em"eB (3BBB egfe | "D"d2 fd Adfd |"Em" eB (3BBB egfe |"D" dBAF "Em"FE E2 |
+|: "Em"eB (3BBB egfe | "D"d2 fd Adfd |"Em" eB (3BBB egfe |"D" dBAF "Em"FE E2 |
 "Em"eB (3BBB egfe |"D" d2 fd Adfd |"Bm" ~B3 d "Em"egfe |"D" dBAF "Em"FE E2 :|
 
-
-X: 211
-T: b Handsome Young Maidens, The
+X: 211a
+T: Handsome Young Maidens, The
+C: Charlie Lennon
 M: 6/8
-R:Jig
+L: 1/8
+R: jig
+K:Gmaj
+f | "G" gdc BcA | GBd gfg | "D" add cdd | Add agf |
+"G" gdc BcA | GBd gfg | "D" add cAF | AGF "G"G2 :|
+|: A | "G"B2 G DGB | "C"cee edc | "G"Bcd gdB | "Am"Aee edc |
+"G"B2 G DGB | "C"cee edc |1 "G"Bcd gdB | "D7"cAd "G"G2 :|2 "G"dcd "C"ede | "D"fef ag |]
+
+X: 211b
+T: Handsome Young Maidens, The
+M: 6/8
+R: jig
 L: 1/8
 C: Charlie Lennon
 K:Amaj
-g | aed cdB | Ace aga | bee dee | Bee bag |
-aed cdB | Ace aga | bee dBG | BAG A2 :|
-B | c2 A EAc | dff fed | cde aec | Bff fed |
-c2 A EAc | dff fed |1 cde aec | dBe A2 B :|ede fef | gfg bag ||
+g | "A" aed cdB | Ace aga | "E" bee dee | Bee bag |
+"A" aed cdB | Ace aga | "E" bee dBG | BAG "A"A2 :|
+|: B | "A"c2 A EAc | "D"dff fed | "A"cde aec | "Am"Bff fed |
+"A"c2 A EAc | "D"dff fed |1 "A"cde aec | "E7"dBe "A"A2 :|2 "A"ede "D"fef | "E"gfg ba |]
 
 
 X: 212
 T: Tom Busby's
 M:6/8
-R:Jig
+R:jig
 L:1/8
 K:Em
 "Em"Bee B2A|"Bm"Bee BAF|"G"Bee Bee|"D(A)" BAF AFD|
 "Em"Bee B2A|"Bm"Bee def|"G"gfe dBG|"D"ABG AFD:|
-"D"~A3 ded|"G"BAB dBG|"D"~A3 ded|"(A)"dAF AFD|
+|: "D"~A3 ded|"G"BAB dBG|"D"~A3 ded|"(A)"dAF AFD|
 "D"~A3 ded|"G"BAB "D"def|"G"gfe dBG|"D"ABG AFD:|
 
 
 X: 213
 T: Farewell to Nigg
 C:Duncan Johnstone
-R:Waltz
+R:waltz
 M:3/4
-P: Highland Pipe March / Retreat
 L:1/8
 K:Em
 "Em"EF |G2 F>E "D"D<F| "Em"E4GA| "G"B2 G>A B<d| "Bm"B4 Bd|
 "Em"B2E2 GA| "D"F>E D2 FA| "Em(Cmaj7)"B2 "D"A<F D<F| "Em"E4:|
-GA |"G"B2B2 d>A| "Em"B2E2 GA|"G" B2 Bd B>A|"Bm" F4 GA|
+|: GA |"G"B2B2 d>A| "Em"B2E2 GA|"G" B2 Bd B>A|"Bm" F4 GA|
 "Em"B2 E2 GA| "D"F>E D2 FA| "Em(Cmaj7)"B2 "D"A<F D<F| "Em"E4:|
 
 
 X: 214
 T: Off She Goes
-R: single jig
-P: single jig
+R: jig
 M: 6/8
 L: 1/8
 K:Dmaj
@@ -2785,17 +2794,13 @@ R:jig
 M:6/8
 L:1/8
 K:D
-|:"D"A3 AGF|
-M:9/8
-"A"EDC "D"D3 d2e|
-M:6/8
-fgf "A"edc|"D"d3 d2e|!
-fgf "A"edc|"D"dAA "G"BAG|"D"FED "A"EDC|"D"DA,B, "A"CDE|!
-"D"Ddd "A"Aee|"D"Aff "A7(G)"Agg|"D"fed "A"edc|1"D"d2d dcB:|2"Dm"d2d d=c_B:|!
-|:"Dm"A=ff fef|A=ff fef|A=ff "Gm"Agg|"Dm"Aaa "Gm"A_bb|!
-"Dm"A=ff fef|A=ff f2g|=fed "A"ed^c|1"Dm"d2d d=c_B:|2 "D"d2d d2e|!
-|:"D"fgf "A"edc|"D"dAA BAG|FED "A"EDC|"D"DA,B, "A"CDE|!
-"D"Ddd "A"Aee|"D"Aff "A7(G)"Agg|"D"fed "A"edc|1"D"d3 d2e:|2d3 dcB|!
+|:"D"A3 AGF| [M:9/8] "A"EDC "D"D3 d2e|[M:6/8]fgf "A"edc|"D"d3 d2e|
+fgf "A"edc|"D"dAA "G"BAG|"D"FED "A"EDC|"D"DA,B, "A"CDE|
+"D"Ddd "A"Aee|"D"Aff "A7(G)"Agg|"D"fed "A"edc|1"D"d2d dcB:|2"Dm"d2d d=c_B||
+|:"Dm"A=ff fef|A=ff fef|A=ff "Gm"Agg|"Dm"Aaa "Gm"A_bb|
+"Dm"A=ff fef|A=ff f2g|=fed "A"ed^c|1"Dm"d2d d=c_B:|2 "D"d2d d2e||
+|:"D"fgf "A"edc|"D"dAA BAG|FED "A"EDC|"D"DA,B, "A"CDE|
+"D"Ddd "A"Aee|"D"Aff "A7(G)"Agg|"D"fed "A"edc|1"D"d3 d2e:|2d3 dcB|]
 
 
 X: 216
@@ -2807,15 +2812,15 @@ R:polka
 K:G
 G/A/|"G"BB "D7(Am)"cA| "G"GF "D"DG/A/ |"G" BB "D7(Am)"cA|"G(Bm)"d3 B/c/|
 "G"de/d/ "C"cd/c/|"G"Bc/B/ "D"AB/A/|"G"GF "D"DD|D3:|
-B/c/|"G"dd "C"ec |"G(Bm)"Bc dB/A/|"G"GG AG|"D"FG Ad/c/|
+|:B/c/|"G"dd "C"ec |"G(Bm)"Bc dB/A/|"G"GG AG|"D"FG Ad/c/|
 "G"Bc/B/ "D"AB/A/|"G"GA/G/ "D"FG/A/|"G(Bm)"Bc "D"AF|"G"G3:|
-D|"G"G2 G-G/F/|GA Bc|dg/f/ "C"ec|"D7(Am)"AB c/B/A|
+|:D|"G"G2 GG/F/|GA Bc|dg/f/ "C"ec|"D7(Am)"AB c/B/A|
 "G"ga/g/ "D"f2|"G"de/d/ "D7"cA|"G"de/d/ "D7"cA|"G"Bcd:|
 
 
 X: 217a
 T: The Crooked Road to Dublin
-M:4/4
+M:C|
 R:reel
 L:1/8
 K:G
@@ -2829,7 +2834,7 @@ X: 217b
 T: The Crooked Road to Dublin
 T:Rover Version
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:G
 G2G2 FGAF|G2FG AdcA|G2G2 FGAg|fdcA dBcA|
@@ -2840,14 +2845,13 @@ d~g3 fgaf|d~g3 a2ga|bgaf gbag|fdcA d2cA||
 
 X: 218a
 T: Blackwater #1
-S: "Where's the Crack v/1" (DJ Taylor)
 L: 1/8
 M: 2/4
 R: polka
 K:G
 "G"D>E GA | Bd B2 | "D"AG/A/ BA |"C" AG EG|
 "G"D>E GA | Bd B2 |"D" AG/A/ BA |1"G" G2 GE :|2 "G"GA Bd ||
-"C(G)"g2 e2 |"G" dB d2 | G>A BA |"C"AG EG |
+|:"C(G)"g2 e2 |"G" dB d2 | G>A BA |"C"AG EG |
 "G"D>E GA | Bd B2 | "D"AG/A/ BA |1"G" GA Bd :|2"G" G2 GE||
 
 
@@ -2856,33 +2860,32 @@ T: Last Chance Polka
 R: polka
 M: 2/4
 L: 1/8
-R:Polka
 K:Ador
 E |"Am"A>B cd | ea e>d | cA AB/c/ |"G" dB GB |
 "Am"A>B cd | ea e>d | cA "G"BG |"Am" A2 A :|
 d|"Am"ea e>d | ea e>d | cA AB/c/ |"G" dB GB |
 "Am"ea e>d | ea e>d | cA "G"BG |"Am" A2 A2 |
 "Am"ea e>d | ea e>d | cA AB/c/ | "G"dB GB |
-"Am"A>B cd | ea e>d | cA "G"BG |"Am" A2 A ||
+"Am"A>B cd | ea e>d | cA "G"BG |"Am" A2 A |]
 
 
 X: 219
 T: Donegal Lass
 C:Brian Finnegan
 M:6/8
-R:Jig
+R:jig
 L:1/8
 K:D
 "A"Ace aed|cdB A3|"G"GBd G3 |"D"FAd F3|
 "A"Ace aed|cdB A2a|aed cdB|ABG A3:|
-"G"GBd G3|"D"FAd f3|"A"e2e ecA|ecA dBA|
+|: "G"GBd G3|"D"FAd f3|"A"e2e ecA|ecA dBA|
 "G"GBd G3|"D"FAd f2a|"A"aed cdB|ABG A3:|
 
 
 X: 220
 T: Drag her around the Road
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:G
 GA|"Em"BEED E2GE|EDCE "D"DEGA|"Em"BEED E2DE|1"G"GABG "D"A2:|2"G"GABG "D"Ac:|
@@ -2894,7 +2897,7 @@ X: 221
 T: Road to Rio / The Reel Of Rio
 C:Sean Ryan
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Gmaj
 |:GE|"G" DEGA BABd|"C"egg2 "D"agef|"G(Em)"gede "G"gedB|"Am(D7)"AcBA "C"GEE2|
@@ -2915,14 +2918,14 @@ K:Bmin
 "Bm"F2B Bcd|"A"cAA ABc|"Bm"dBB Bcd|"A"ede efg|
 "Bm(D)"~f3 fed|"A" c2A ABc|"Bm"dcd "A"ede|"Bm"fdB B2c||
 "D"d3 def|"A"ecA a2g|"D"~f3 fed|"A"cec ABc|
-"Bm"BAB "A"cBc|"D"dcd "A"efg|"D"fed "A"cBA|1 "Bm"B3 B2c:|2 B2B B2A|
+"Bm"BAB "A"cBc|"D"dcd "A"efg|"D"fed "A"cBA|1 "Bm"B3 B2c:|2 B2B B2A|]
 
 
 X: 223
 T: The Twelve Pins
 C:Charlie Lennon
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Gmaj
 "G"dBB2 dBGB|"D"dAA2 dAFA|DEFG "C(Am)"ABcA|"D"defg af"C"ge|
@@ -2930,30 +2933,30 @@ K:Gmaj
 "D"f3e defg|a2ge "C(Am)"cAAB|c2AB cBAB|"C"cedB cAA2|
 "D"f3e defg|a2ge "C(Am)"cAAB|c2AB cBAB|"C"cedB "G"AGG2|
 "D"f3e defg|a2ge "C(Am)"cAAB|c2AB "C"cdeg|"D"abag "C"edde|
-"D"f3g a3g|f2ed "C(Am)"cAAB|c2AB cBAB|"C"cedB "G"AGG2||
+"D"f3g a3g|f2ed "C(Am)"cAAB|c2AB cBAB|"C"cedB "G"AGG2|]
 
 
 X: 224
 T: Foxhunter
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Gmaj
 "G" d2BG dGBG|dGBG "C" AGEG|"G"d2BG dGBG|"Am" AcBG "C" AGEG:|
-"G" ~D3 B BAGE|DGBG "C" AGEG|"G" ~D3 B BABG|"Am" AcBG "C" AGEG:|
-"G" gedB G2 Bd|gedB "Am" eA ~A2|"G" gedB GABG|"Am" ABcd eA ~A2:|
-"G" dggf ~g3e|dg ~g2 "C" egdB|"G" dggf ~g3d|"C" (3efg dB "G" AGAB:|
-"G" ~G2 BG dGBG|GB ~B2 "Am" AGAB|"G" ~G2 BG dGBG|"C" (3efg dB "G" AGAB:|
+|: "G" ~D3 B BAGE|DGBG "C" AGEG|"G" ~D3 B BABG|"Am" AcBG "C" AGEG:|
+|: "G" gedB G2 Bd|gedB "Am" eA ~A2|"G" gedB GABG|"Am" ABcd eA ~A2:|
+|: "G" dggf ~g3e|dg ~g2 "C" egdB|"G" dggf ~g3d|"C" (3efg dB "G" AGAB:|
+|: "G" ~G2 BG dGBG|GB ~B2 "Am" AGAB|"G" ~G2 BG dGBG|"C" (3efg dB "G" AGAB:|
 
 
 X: 225
 T: Donald Blue
-M: 4/4
+M: C|
 L: 1/8
 R: reel
 K:Dmaj
-"D"dBAF A2 FA|dBAF "A"E2"D"2 D2|"D"dBAF A2 FA|1"G" B2 BA B2 AB:|2"G" B2 BA B2 dB|
-"D"ABde ~f3 d|"G"~g3 e "D"fedB|ABde fedc|1"G" B2 BA B2 dB:|2"G" B2 BA B2 AB|
+"D"dBAF A2 FA|dBAF "A"E2"D"2 D2|"D"dBAF A2 FA|1"G" B2 BA B2 AB:|2"G" B2 BA B2 dB||
+"D"ABde ~f3 d|"G"~g3 e "D"fedB|ABde fedc|1"G" B2 BA B2 dB:|2"G" B2 BA B2 AB|]
 
 
 X: 226
