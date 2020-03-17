@@ -2975,10 +2975,10 @@ K:Gmaj
 
 X: 227
 T: The Templehouse
-M:4/4
+M:C|
 L:1/8
 R:reel
-K:G
+K:Em
 "Em"EFGA "(Bm)"BFAF|"D"D2FD ADFD|"Em"EFGA BE~E2|"Em(Cmaj7)"dBAc "Em"BEED:|
 "G(Em)"g2ef gfeg|"D"f2df afdf|"G(Em)"g2ef gfed|"Em(Cmaj7)"B2 Ac "Em"BEED|
 "G(Em)"g2ef gfeg|"D"f2df afdf|"C(Em)"edef gfed|"Em(Cmaj7)"B2Ac "Em"BEED|]
@@ -3000,36 +3000,35 @@ K:Dmaj
 X: 229
 T: Jenny's Chicken
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:A
 "Bm"~f3g "(Fism)"fece|"(bm)"fefa "A"eAce|"Bm"~f3g "(Fism)"fece|"D"fgaf "A"eAce:|
-"Bm"fBBA B2ce|fB~B2 "A"eAce|"Bm"fBBA B2ce|1"D"fgaf "A"eAce:|2"D"fgaf "A"eAcA|
-"Bm"~B2bB aBgB|B2af "A"eAcA|"Bm"~B2bB aBgB|1"D"fgaf "A"eAcA:|2"D"fgaf "A"eAce||
+|:"Bm"fBBA B2ce|fB~B2 "A"eAce|"Bm"fBBA B2ce|1"D"fgaf "A"eAce:|2"D"fgaf "A"eAcA||
+|:"Bm"~B2bB aBgB|B2af "A"eAcA|"Bm"~B2bB aBgB|1"D"fgaf "A"eAcA:|2"D"fgaf "A"eAce|]
 
 
 X: 230
 T: Upstairs In A Tent
 T:Tie the Bonnet
-C:O'Neill Dancemusic of Ireland
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Amix
-"A"A3g "D"fd"A"ec|"Am"A2 A=c "G"BGGB|"A"~A3g "D"fdef|1 "G"~g3d BGGB:|2 ~g3d BG(3GGG||
-|:"D"fgaf "G"gfed|"A"(3cBA eA fAeA|"D"faaf "G"gfef|1 ~g3d BG(3GGG:|2 ~g3d BGGB||
+"A"A3g "D"fd"A"ec|"Am"A2 A=c "G"BGGB|"A"~A3g "D"fdef|1 "G"~g3d BGGB:|2 ~g3d BG (3GGG||
+|:"D"fgaf "G"gfed|"A"(3cBA eA fAeA|"D"faaf "G"gfef|1 ~g3d BG (3GGG:|2 ~g3d BGGB|]
 
 
 X: 231a
 T: Maids Of Galway
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:Bmin
 |:"Bm"B~F3 BFAF|"A"E2DE "D"F~A3|"Bm"B~F3 BFAF|"A"E2DE "D"FDFA|
 "Bm"B~F3 BFAF|"A"E2DE "D"FDFA|"Bm"~B3c "D"dBAF|1"A" E2DE "D"FDFA:|2 "A"E2DE "D"FABc||
 |:"Bm"d2cd ~B3c|d2cd "Em"Bee2|"Bm"d2cd B2AF|"A"E2DE "D"FABc|
-"Bm"~d3c B2 AB|d2cd "Em"Bee2|"D"fd"A"ec "Bm"B2AF|1"A"EFDE "D"FABc:|2"A" E2DE "D"FDFA||
+"Bm"~d3c B2 AB|d2cd "Em"Bee2|"D"fd"A"ec "Bm"B2AF|1"A"EFDE "D"FABc:|2"A" E2DE "D"FDFA|]
 
 
 X: 231b
@@ -3047,7 +3046,8 @@ K:Emin
 X: 232
 T: Kitty's gone a-milking
 R: reel
-K:G maj
+M: C|
+K:Gmaj
 Bc | "G"dG~G2 d2cA | dG~G2   "D"FGAB   |"G" dG~G2 d2 (3efg |"D" fdcA "G" G2Bc |
 "G"dG~G2 dBcA | dG~G2 "D"(3EFG AB |"G" dG~G2 d2 (3efg |"D" fdcA "G"G2 ||
 Bc | "G"dg~g2 ag~g2 | dggf "D"d2Bc  |"G" dg~g2 aggf |"D" dcAB "C"c2Bc |
@@ -3062,20 +3062,20 @@ R:waltz
 L:1/8
 K:Em
 "Em"B3 e BA|G2 E2 E2|B3 e BG|"Am"A3 c BA|
-"Em"GA Bc dB|"Am"AE A2 BA|"Em"G3 A"F" =FG|1"Em" E4 GA:|2 E3 G Bd|
+"Em"GA Bc dB|"Am"AE A2 BA|"Em"G3 A"F" =FG|1"Em" E4 GA:|2 E3 G Bd||
 "Em"g4 fe|"B"f2 B2 B2|"C"e2 d3c|"G"B6|
 "Am"c2 B2 A2|"Em"B2 e2 f2|g3f ga|"B7"f6|
 "Em"g4 fe|"B"f2 B2 B2|"C"e2 d3c|"G"B6|
-"Am"c2 B2 A2|"Em"B2E2 F2|G3 A "F"=FG|"Em" E6||
+"Am"c2 B2 A2|"Em"B2E2 F2|G3 A "F"=FG|"Em" E6|]
 
 
 X: 234
 T: Humours of Ballycullen
 C:Aogán Lynch
-R:Polka
+R:polka
 M:2/4
 L:1/8
-K:D
+K:Edor
 "Em"B2 EG|"D"FF "Em"E2|"(Cmaj7)"B2 Ec|"D"d2 "(A)"cA|
 "Em"B2 EG|"D"FG "Em"EG|"D"FA DF/A/|d2 "(A)"cA:|
 "Em"Be ed/e/|fe ed|"(Cmaj7)"Be ef|"D"d2 BA|
@@ -3086,49 +3086,38 @@ K:D
 
 X: 235
 T: Tha Mi Sgith
-R: Polka
+R: polka
 M: 2/4
 L: 1/8
-P:Hebriden
 K:Amin
 "Am"AA a2 | "Em"ge g2 |"Am" e>d BA |"G" GA BG |
 "Am"AA a2 |"Em" ge g2 |"E" e>d Be |1"Am" A2 A2:|2A2 AB/d/||
-"Am"e>d BA |"G" G>A Bd |"Am" e>d BA |"G" B2 BB/d/ |
-"Am"e>d BA |"G" GA Bd |"E" ed Be |1"Am" A2 AB/d/ :|2 A2 A2 ||
-W:Why should I sit and sigh,
-W:Puin’ bracken, Puin’ bracken
-W:Why should I sit and sigh,
-W:On the hillside dreary?
-W:
-W:When I see the plover rising
-W:Or the curlew wheeling,
-W:Then I trow my mortal lover,
-W:Back to me is stealing.
-
+|: "Am"e>d BA |"G" G>A Bd |"Am" e>d BA |"G" B2 BB/d/ |
+"Am"e>d BA |"G" GA Bd |"E" ed Be |1"Am" A2 AB/d/ :|2 A2 A2 |]
 
 X: 236
 T: Stone of Destiny
 C:Maurice Lennon
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:G
 "G"BddB G2 Bd|d2Bd "Cadd9"edBA|"G"BddB GABd| gedB "D" A3d|
-"G"edBA BGGA|BGAG "C"EGG2|"G"DG~G2 DGBe|1"D"dBAB "G"G3A:|2"D"dBAB "G"G3|
-d|"G"edBA BGG2|BGAB "Cadd9"EGGd|"G"edBA BGGA|BddB "D"A3d|
-"G"edBA BGGA|BGAG "C"EGG2|"G"DG~G2 DGBe|1"D"dBAB "G"G3:|2"D"dBAB "G"G4:|
+"G"edBA BGGA|BGAG "C"EGG2|"G"DG~G2 DGBe|1"D"dBAB "G"G3A:|2"D"dBAB "G"G3||
+|: d|"G"edBA BGG2|BGAB "Cadd9"EGGd|"G"edBA BGGA|BddB "D"A3d|
+"G"edBA BGGA|BGAG "C"EGG2|"G"DG~G2 DGBe|1"D"dBAB "G"G3:|2"D"dBAB "G"G4|]
 
 
 X: 237
 T: Art O'Keeffe's
 T:The Newmarket
-R:Polka
+R:polka
 M:4/4
 L:1/8
 K:A
 "A"e2c2|"(E)"BE "A"A>c|"(E)"BE "A"AB|"E"cB Bc|
 "A"e2c2|"(E)"BE "A"A>c|"E"BE AB|"A"cA A2:|
-"A"ce a>a|"(Bm7)"gf f>e|"A"ce "E"fg|fe cB|
+|: "A"ce a>a|"(Bm7)"gf f>e|"A"ce "E"fg|fe cB|
 "A"ce a>a|"(Bm7)"gf f>e|"A"ce "E"fg|"A"ba a2:|
 
 
@@ -3147,52 +3136,49 @@ dc|:"G"B2BB AB|"D"d4 BA|"G"G2 "D"FG Ad|"G"B2 "D"A2 GA|
 X: 239
 T: Speed The Plough
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Dmaj
 "D"d3A "Bm"BAFB|"D"AF~F2 EFDE|F2AF "G"G2BG|"D"ABde fgfe|
 "D"d3A "Bm"BAFB|"D"AF~F2 EFDE|F2AF "G"G2BG|1"D"ABde fedc:|2ABde fdde||
 |:"D"fa~a2 afdf|"G"ge"D"fd "G"edBd|"D"faab afdB|ABde fdde|
-"D"faaf afdf|"G"ge"D"fd "G"edBA|"D"F2AF "G"G2BG|1"D"ABde fdde:|2ABde fgfe||
-P:Variation
-dedA BAFB|AF~F2 EFDE|F2AF ~G3B|ABde fgfe|
-dA~A2 BAFB|AF~F2 EFDE|F2AF GABG|1ABde fedc:|2ABde fdde||
-|:faaf afdf|g2fg edBd|faaf ~a3f|ABde fe~e2|
-faab afdf|gefd edBA|F2AF G2BG|1ABde fdde:||2ABde fdef||
+"D"faaf afdf|"G"ge"D"fd "G"edBA|"D"F2AF "G"G2BG|1"D"ABde fdde:|2ABde fgfe|]
 
 
 X: 240
 T: Earls Chair
 T:Down between the Two Derryoobers
-C:Patrick(Patto)Moloney of Woodford, Co Galway
+C:Patrick (Patto) Moloney of Woodford, Co Galway
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:D
 "Bm"B2dB BAFA|B2dB BAFB|"D"AF (3FFF DF (3FFF|AFdB ADFA|
-"Bm"B2dB BAFA|B2dB BAFB|"D"AFAB ~d3f|1"Em"edef "D"d3A:|2"Em"edef "D"d3f|
-"Em"e2ef "D"d2df|"Em"edef "D"dBA2|"Em"e2ef "D"d3e|"Bm"fedB "D"ADFA|
+"Bm"B2dB BAFA|B2dB BAFB|"D"AFAB ~d3f|1"Em"edef "D"d3A:|2"Em"edef "D"d3f||
+|: "Em"e2ef "D"d2df|"Em"edef "D"dBA2|"Em"e2ef "D"d3e|"Bm"fedB "D"ADFA|
 "Em"e2ef "Bm"dB (3BBB|"G"gB (3BBB "D"defg|afbf afeg|"Bm"fedB "D"ADFA:|
 
 
 X: 241a
 T: Mrs. Crowleys
+R:polka
 M:2/4
 L:1/8
 K:G
 "G"DG "C"EG/E/|"G"DG "C"EG/E/|"G"DG "D"AG/A/|"G"BA "D"A2|
 "G"DG "C"EG/E/|"G"DG "C"EG/E/|"G"DG "D"AG/A/|"G"BG G2:|
-"G"dB gB|dB gB|dB gB|"D7"cA AB/c/|
+|: "G"dB gB|dB gB|dB gB|"D7"cA AB/c/|
 "G"dB gB|dB gB|GB "D"A>B|"G"AG G2:|
 
 
 X: 241b
 T: Where Lilies Bloom
+R:polka
 M:2/4
 L:1/8
 K:D
 "D"DF/A/ BA|d2dc|"G"B>A Bc|"A"BA FE|
-"D"DF/A/ BA|d2dc|"G"BA B/c/d|1"D"ed d2:|2ed de|
+"D"DF/A/ BA|d2dc|"G"BA B/c/d|1"D"ed d2:|2ed de||
 "D"fg/f/ "A"ec|"D"de "A" cA|"G"B>A Bc|"A" BA FA|
 "D"fg/f/ "A" ec|"D"de "A" cA|"G"BA B/c/d|"D"ed de|
 "D"fg/f/ "A"ec|"D"de "A" cA|"G"B>A Bc|"G"B/c/B/A/ "D"FA|
@@ -3206,27 +3192,27 @@ M: 2/4
 L: 1/8
 K:Bm
 "Bm"dB fB | de f2 | dB fB |"A" c/B/A/c/ e2 |
-"Bm"dB fB | de f2 | "D"d>e f/e/d |"Bm" B2 {d}B2 :|
-"Bm"fe/f/ ba | fe f2 | dB fB |"A" c/B/A/c/ e2 |
-"Bm"f>e f/b/a | fe f2 |"D" d>e f/e/d |"Bm" B2{d} B2 :|
+"Bm"dB fB | de f2 | "D"d>e f/e/d |"Bm" B2 B2 :|
+|: "Bm"fe/f/ ba | fe f2 | dB fB |"A" c/B/A/c/ e2 |
+"Bm"f>e f/b/a | fe f2 |"D" d>e f/e/d |"Bm" B2 B2 :|
 
 
 X: 242
 T: Jim Donoghue's
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Dmaj
 "D"~A3F BFAF|BFAF "Em"ED[B,B]D|"D"~A3F BFAF|"Em"EDEF "D"DEFG|
 "D"A3F "Bm"BFAF|"D"DF~F2 "(A)"ABde|"D" ~f3e defe|1 dBAF DEFG:|2 dBAF D3e||
-"D"~f3e  fgfe|dfed "Bm"BAFA|"Em"Beed e2 de|"D"f2df "Em(D)"edBA|
+|: "D"~f3e  fgfe|dfed "Bm"BAFA|"Em"Beed e2 de|"D"f2df "Em(D)"edBA|
 "D"dffe f2fe|dfed "Bm"BAFA|"D(A)"ABde "D"fdAF|1 EDEF D3e:|2 EDEF DEFG|]
 
 
 X: 243
 T: The Mouth Of The Tobique
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K:Gmaj
 |:(3DEF|"G"GFGA Bded|BdBG DGBG|"D"ABAF DFAF|"G"GABc "D"d2(3DEF|
@@ -3240,7 +3226,7 @@ K:Gmaj
 X: 244
 T: Abbey Reel
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:Ador
 B|"Am"A3B A2GE|A2GA "G"BddB|"Am"A3B AGEF|"G" G2GA Bdd:|
@@ -3251,9 +3237,10 @@ g|"Em"egg2 "D"a2ba|"G"gabg "D"aged|"Em"egg2 "D"a2ga|"G"bgaf gedg|
 X: 245
 T: Ormond Sound
 C:Paddy O'Brien - Tipperary
-M:4/4
+R:reel
+M:C|
 L:1/8
-K:G
+K:Ador
 "Am"A2ed "G"BedB|AG~G2 "Em"AGEG|"Am"A2ed "D"(3B^cd ef|"G"gfga gedg|
 "Am"eA~A2 "G"BedB|"Am"AGEF "G"G2AG|"Am"EA~A2 "G"GABd|1gedB "Am"A3G:|2gedB "Am"ABcd||
 "Am"efge "D"agfg|"Am"e2ag "G"edBd|"Am"egfa "G"~g3e|"(Dsus2)"d2ge "G"dBGB|
@@ -3262,12 +3249,12 @@ K:G
 
 X: 246
 T: Brendan McMahon's
-M:4/4
+M:C|
 L:1/8
 K:Edor
 "Bm"~B3B BAFB|"D"A2FA DAFA|"Bm"~B3B BAFB|"A"ABde "D"fded|
 "Bm"~B3B BAFB|"D"A2FA DAFA|"G"~G3E "Bm"F2dB|"D"AFDE "Em"FE E2:|
-"G"~G3F GBdB|"D"A2FA DAFA|"G"~G3F GBdB|"D"AFDE "Em"FE EF|
+|:"G"~G3F GBdB|"D"A2FA DAFA|"G"~G3F GBdB|"D"AFDE "Em"FE EF|
 "G"~G3F GBdB|"D"A2FA DAFA|"G"~G3E "Bm"F2dB|"D"AFDE "Em"FE E2:|
 
 
@@ -3275,49 +3262,60 @@ X: 247
 T: Sophie's Dancing Feet
 C:Aly Bain
 R:reel
-M:4/4
+M:C|
 L:1/8
 K:D
 "D"FGAF "G"GABG|"D"FAdf afdf|"G"gabg "Em"efge|"A" cdec ABAG|
 "D"FGAF "G"GABG|"D"FAdf afdf|"G"gabg "Em"efge|1 "A"cABc "D"d2AG:|2 "A"cABc "D"d2cd||
-"A" eA~A2 eAgA|"D"fA~A2 fAaA|"G"gfeg "D"fedf|"A" efgf edcd|
-"A"eA~A2 eAgA|"D"fA~A2 fAaf|"G"bagf gfed|1 "A"cABc "D"d2cd:|2"A" cABc "D"d2AG||
+|:"A" eA~A2 eAgA|"D"fA~A2 fAaA|"G"gfeg "D"fedf|"A" efgf edcd|
+"A"eA~A2 eAgA|"D"fA~A2 fAaf|"G"bagf gfed|1 "A"cABc "D"d2cd:|2"A" cABc "D"d2AG|]
 
-
-X: 248
-T: b The Reconciliation
-P:Flute friendly
-M:4/4
+X:248
+T:The Reconciliation
+M:C|
+R:reel
 L:1/8
 K:Amaj
-A2cA eAfA|eAfA ecBc|A2cA eAfA|ecBc AFEF|
-A2cA eAfA|eAfA ecBc|A3F EFAc|ecBc A4:|
-ABce a3f|e3d cdBc|ABce a3e|fbba befe|
-a3e f2ec|dBcA BAFB|A3F EFAc|ecBc A4:|
+"A"A2cA eAfA|eAfA ecBc|A2cA eAfA|ecBc "(D)"AFEF|
+"A"A2cA eAfA|eAfA ecBc|A3F EFAc|ecBc A4:|
+|:"A"ABce "D"a3f|"A"e3d cdBc|ABce "D"a3g|"Bm"fbba "E"gefg|
+"A"a3e "D"f2ec|"Bm"dBcA "E"BAFG|"A"A3F EFAc|ecBc A4:|
+
+
+X: 248b
+T: The Reconciliation
+R:reel
+M:C|
+L:1/8
+K:Amaj
+"A"A2cA eAfA|eAfA ecBc|A2cA eAfA|ecBc "D"AFEF|
+"A"A2cA eAfA|eAfA ecBc|A3F EFAc|ecBc A4:|
+|: "A"ABce "D"a3f|"A"e3d cdBc|ABce "D"a3e|"Bm"fbba "E"befe|
+"A"a3e "D"f2ec|"Bm"dBcA "E"BAFB|"A"A3F EFAc|ecBc A4:|
 
 
 X: 249
 T: New Mown Meadow
-M:4/4
+M:C|
 R:reel
 L:1/8
 K:Edor
 "Em"BEED E2FA|BdcA "D"BAFA|"Em"BEE2 "D"FDFA|A2BA FEFA|
-"Em"BEED E2FA|BdcA "D"BAFA|"Bm"~d3B "A"~c2B|1 AcBA "D"FEFA:|2 "A" AcBA "D"FAcd||
-"A"e2ce fece|e2cA "D"BAFA|"A"e2ce fecB|"D"AcBA "A"FAE2|
-"A"e2ce fece|e2cA "D"BAFA|"Bm"~d3B "A"~c2B|1 AcBA "D"FAcd:|2 "A"AcBA "D"FEFA||
+"Em"BEED E2FA|BdcA "D"BAFA|"Bm"~d3B "A"~c3B|1 AcBA "D"FEFA:|2 "A" AcBA "D"FAcd||
+|: "A"e2ce fece|e2cA "D"BAFA|"A"e2ce fecB|"D"AcBA "A"FAE2|
+"A"e2ce fece|e2cA "D"BAFA|"Bm"~d3B "A"~c3B|1 AcBA "D"FAcd:|2 "A"AcBA "D"FEFA|]
 
 
 X: 250
 T: The Golden Keyboard
 C:Martin Mulhaire
-M:4/4
+M:C|
 R:reel
 L:1/8
 K:Edor
 "Em"BGEF GFGA|"G"B2gB fBeB|"Em"BGEF GBAG|"D"FDAD BDAF|
 "Em"EDEF GFGA|"G"B2gB fBec|"D"d2ce dBAF|DFAF "Em"GEE2:|
-"Em"Be~e2 Be~e2|Beef edBc|"D"dA~A2 "A"eAce|"D"d2ce dBAF|
+|:"Em"Be~e2 Be~e2|Beef edBc|"D"dA~A2 "A"eAce|"D"d2ce dBAF|
 "Em"EDEF GFGA|"G"B2gB fBec|"D"d2ce dBAF|DFAF "Em"GEE2:|
 
 
