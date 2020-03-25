@@ -127,10 +127,10 @@ T: My Darling Asleep
 M:6/8
 R:jig
 K:D
-|"D" fdd "A"cAA|"G" BGB "D"A2G|FAA "(Bm)"def|"Em"gfg "A7"eag|
-|"D"fdd "A"cAA |"G" BGB "D"A2G|FAA def|"A7"gec "D"d2 A :|
+"D" fdd "A"cAA|"G" BGB "D"A2G|FAA "(Bm)"def|"Em"gfg "A7"eag|
+"D"fdd "A"cAA |"G" BGB "D"A2G|FAA def|"A7"gec "D"d2 A :|
 |:  "D"FAA "G"BAG|"D"FAA "G"BAG |"D" FAA "(Bm)"def|"Em" gfg "A7"eag|
-|"D"fdd "A"cAA|"G"BGB "D"A2G|FAA def|"A7"gec "D"d2 e:|
+"D"fdd "A"cAA|"G"BGB "D"A2G|FAA def|"A7"gec "D"d2 e:|
 
 
 X: 7
@@ -179,7 +179,6 @@ K:Ddor
 "Dm"dcAG F2DF | "C"E2CE "Dm"F2D2 | dcAG F2DF | Add^c d3e :|
 |: "Dm"f2fe fagf | "C"ecgc acgc | "Dm"fede fagf | "C"edcB "Dm"Adde|
 "Dm"f2fe fagf | "C"ecgc acgc | "Dm"fedf "C"edcB | "Dm"Add^c d3e :|
-
 
 X: 12
 T: The Butterfly
