@@ -3674,7 +3674,7 @@ R: jig
 K:Dmaj
 D|"D"DFA d2 e|fdB BAF|ABA dAF|"A"EFE GFE|
 "D"DFA d2 e|fdB BAF|ABA dAF|DED D2 :||
-d|"D"dfa afd|"G"gbg "D"faf|dfa afd|"A"cee ecA|
+|: d|"D"dfa afd|"G"gbg "D"faf|dfa afd|"A"cee ecA|
 "D"dfa afd|"G"gbg "D"faf|"G"BdB "D"AFd|DED D2 :||
 
 
@@ -3683,17 +3683,17 @@ T: Give me Your Hand
 T:Tabhair dom do Lamh
 T:Da Mihi Manum
 C:Ruairi Dall O’Cathain, c. 1570-c.1650 Irish Harper
-R:Waltz
+R:waltz
 M:3/4
 L:1/8
 K:G
 D2|"G"E2G2G2|G4D2|E2G2G2|G4D2|E2G2G2|G2A2B2|"(Em)"B2e2d2|B4AG|
 "D"A2A2ed|"G"B2B2dB|"D"A2AB AG|"C"E4D2|
 "G"E2G2G2|G4D2|E2G2G2|G4D2|E2G2G2|G2A2B2|D3B AB|G4D2|
-"G"E2G2G2|G2A2B2|"Em"B2e2d2|B4AG|"D"A2A2ed|"G"B2B2dB|"D"A2ABcd|"C"e4||
-dB|"G"d2d2e2|g4ed|"C"e2e2g2|"D"a4ge|"G"g2g2de|g2g2de|g2g2a2|b6|
+"G"E2G2G2|G2A2B2|"Em"B2e2d2|B4AG|"D"A2A2ed|"G"B2B2dB|"D"A2ABcd|"C"e4 dB|
+"G"d2d2e2|g4ed|"C"e2e2g2|"D"a4ge|"G"g2g2de|g2g2de|g2g2a2|b6|
 "G"b2b2b2|b4ag|"D"a2ag ab|a4gf|"C"e2e2ge|"G"d2d2gd|B2Bd cB|"D"A4BA|
-"G"G2B2d2|"F"=f4ed|"C"e2e2g2|e4dB|"G"d2d2ed|B2B2dB|"D7"A2Ac BA|"G"G6|]
+"G"G2B2d2|"F"=f4ed|"C"e2e2g2|e4dB|"G"d2d2ed|B2B2dB|"D7"A2Ac BA|"G"G4|]
 
 
 X: 278
@@ -3711,13 +3711,13 @@ K:Dmaj
 X: 279
 T: Pretty Maggie Morrissey
 T: The Wexford Hornpipe
-R: Hornpipe
+R: hornpipe
 L: 1/8
 M: 4/4
 K:G
 Bc|"G"dBGB "D7"cAFA|"G"~G3F GABc|d~g3 "C"efge|"G"dBGB "D"A2Bc|
 "G"dBGB "D7"cAFA|"G"~G3F GABc|d~g3 "C"ecAF|"G"G2 GF G2:|
-Bc|"G"d~g3 "C"efge|"G"dggB "C"c2Bc|"G"d~g3 "C"efge|"G"dBGB "D"A2Bc|
+|: Bc|"G"d~g3 "C"efge|"G"dggB "C"c2Bc|"G"d~g3 "C"efge|"G"dBGB "D"A2Bc|
 "G"dBGB "D7"cAFA|"G"GBAF GABc|dgfg "C"ecAF|"G"G2 GF G2:|
 
 
@@ -3725,18 +3725,18 @@ X: 280
 T: Condon's Frolics
 M: 6/8
 L: 1/8
-R: Jig
-K:A Dorian
+R: jig
+K:Ador
 "Am"eAB c2d|"(C)"edc "G"BAG|"Am"eAB c2d|"(C)"e2d eag|
 "Am"eAB c2d|"(C)"edc "G"BAB|GBd gdB|"Am"ABA A3:|
-"Am" eaa "Em(C)"efg|"G"d2c BAB|"Am"cBc "G"dcd|"C"e2d efg|
+|: "Am" eaa "Em(C)"efg|"G"d2c BAB|"Am"cBc "G"dcd|"C"e2d efg|
 "Am"eaa "Em(C)"efg|"G"d2c BAB|GBd gdB|"Am"ABA A3:|
 
 
 X: 281
 T: Fanny Power
 C:Turlough O'Carolan (1670-1738)
-R: Waltz
+R: waltz
 L: 1/8
 K:Gmaj
 M: 3/4
@@ -3749,29 +3749,26 @@ M: 3/4
 X: 282
 T: Tolka Polka
 C:Donal Lunny
-R:Polka
+R:polka
 M:2/4
 L:1/8
 K:Ador
 "Am"A>B cg|de cA|"G"B/c/B/A/ Gd|AB "(Em)"GE|
-"Am"A>B cg|de cA|"G"B/c/B/A/ Gd|"Am"BA A2:|2BA e/d/c/B/||
-"D"d>e fa|ga fd|"G"(g/e/d/c/ B)"Am"(e/d/|c/B/A) (c/B/A/G/|
-"Am"A>)B cg|de cA|"G"B/c/B/A/ Gd|"Am"BA A2:|
-M:5/8
-"Em"e>fg "D"fd|"Em"e>fg "D"fd|f/g/f/e/d "Am"cB|"G"d>cB "Am"cg|
-M:2/4
-"Am"de cA|"G"B/c/B/A/ Gd|1"Am"BA A2:|2BA e/d/c/B/||
+"Am"A>B cg|de cA|"G"B/c/B/A/ Gd|"Am"BA A2:|
+|: "D"d>e fa|ga fd|"G"g/e/d/c/ B"Am"e/d/|c/B/A c/B/A/G/|
+"Am"A>B cg|de cA|"G"B/c/B/A/ Gd|"Am"BA A2:|
+|: "Em"e>f g"D"f |d"Em"e>fg |"D"fd f/g/f/e/ | d"Am"c B"G"(d|d/)c/B "Am"cg|
+"Am"de cA|"G"B/c/B/A/ Gd|"Am"BA A2:|
 
 X: 283
 T: Dennis Doody's
 M:2/4
 L:1/16
-D:Donal Lunny - Donal Lunny
 R:polka
 K:Edor
 "Em" G2E2 E2D2 |  B,2E2 E2G2 | "D" FGAF D3E | F2G2 A2BA |
 "Em" G2E2 E2D2 | B,2E2 E2F2 | "G" G2A2 B3A | "D" G2F2 d4 :|
-"Em" B2e2 efed | B2e2 e2d2 | "Bm" Bcd2 e2f2 | "G" g4 e2f2 |
+|: "Em" B2e2 efed | B2e2 e2d2 | "Bm" Bcd2 e2f2 | "G" g4 e2f2 |
 "G"g4 "D"f2gf| "Em"e2B2 B2A2 | B2E2 E3F | "G" G2A2 B2A2 :|
 
 X: 284
@@ -3788,7 +3785,7 @@ X: 285
 T: Lochaber Badger
 R: reel
 C: Fred Morrison
-M: 4/4
+M: C|
 L: 1/8
 K: Emin
 |:"Em"B2AG AG"C"E2- | ~E2DE GD"Bm7"EG | B2AG AG"Em"E2 | ED"Bm7"GD "Em"E4 :|
@@ -3809,13 +3806,14 @@ K: Gmaj
 
 X: 287
 T: Marino Waltz
+C: John Sheahan
 R: waltz
 M: 3/4
 L: 1/8
 K: Gmaj
 d e>f|"G"g2d3B | "Bm"F4B2 | "C"E4c2 | "D"D6 | "C"C2D2E2 | "D"F2D3A | "G"G2D2B2 | "D"A3 d e>f|
 "G"g2d3B | "D"F4f2 | "C"e2d3c | E4e2 | "D"d2c2A2 |F4B2 | "G"G6 |1 G6 :|2 G4D2 ||
-"D"D2E2F2 | "G"G2A2B2 | "Bm"B6 | "D"F6 | "C"E6 | c4E2 | G6 | "D"F6 |
+|: "D"D2E2F2 | "G"G2A2B2 | "Bm"B6 | "D"F6 | "C"E6 | c4E2 | G6 | "D"F6 |
 "C"C2D2E2 | "D"F2D2A2 | "G"G2D2d2 | "C"e4d2 | "D7"c2A2F2 | "D"D4B2 | "G"G6 | G6 :|
 
 X: 288
@@ -3828,7 +3826,7 @@ K: Emin
 eed|: "Em" B3 A AG|AGE2GA|"Am" A3 cB2|"Em" e3 e de|
 "C" g3 a ag|"Em" edB2BA|"G" G3 A AG|"Em" E3 e ed|
 "Em" B3 d AG|AGE2GA| "Am" A3 c B2|"Em" e3 e de|
-"C" g3 a ag|"Em" edB2BD| "G" G3 B de|"Am" A4 a/a/z||
+"C" g3 a ag|"Em" edB2BD| "G" G3 B de|"Am" A4 a2||
 "Am" a3 bb2|"Am "age2ec|"G" d3 eg2|g3 a ag|
 "G" de ga ed| "Am" AB de AG|"Em" EG2B AG |E3 e ed|
 "Em" B3 A AG|AGE2GA|"Am" A3 dB2|"Em" e3 e de|
