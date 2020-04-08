@@ -43,7 +43,7 @@
                 <tr class="tune-preview" *cdkVirtualFor="let tune of tunes; templateCacheSize: 0">
                     <td class="tune-link tune-title">
                         <div><span class="tune-link mat-body" (click)="navigateToTune(tune)">{{tune.title}}</span></div>
-                        <div class="mat-small">{{getBookName(tune)}}</div>
+                        <div class="mat-small">{{getBookName(tune)}} #{{tune.id}}</div>
                         <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
                         <div class="mat-small" *ngIf="hasTags(tune)">Tags: {{getTags(tune)}}</div>
                     </td>
