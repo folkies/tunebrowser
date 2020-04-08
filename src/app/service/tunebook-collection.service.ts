@@ -97,7 +97,7 @@ export class TuneBookCollectionService {
     private mergeTunes(targetTunes: TuneDescriptor[], mixinTunes: TuneDescriptor[]) {
         mixinTunes.forEach(mixinTune => {
             const targetTune = targetTunes.find(tune => tune.id === mixinTune.id);
-            if (targetTune === null) {
+            if (targetTune === undefined) {
                 targetTunes.push(mixinTune);
             } else {
                 this.mergeTune(targetTune, mixinTune);
