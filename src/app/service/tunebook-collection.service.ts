@@ -57,9 +57,33 @@ export class TuneBookCollectionService {
             tune.tags = tags;
         }
         this.index.setTagsForTune(tuneId, tuneBookId, tags);
-        const updated = await this.driveLoader.updateTuneBookCollection(this.collection);
+        const updated = await this.driveLoader.updateTuneBookCollection(this.extractUserCollection(this.collection));
         this.collectionLoadedSource.next('');
         return updated;
+    }
+
+    private extractUserCollection(collection: TuneBookCollection): TuneBookCollection {
+        const userCollection: TuneBookCollection = {books: []};
+        for (const book of collection.books) {
+            if (book.storage === 'googledrive') {
+                userCollection.books.push(book);
+            } else {
+                const userBook = this.extractTaggedTunes(book);
+                userCollection.books.push(userBook);
+            }
+        }
+        return userCollection;
+    }
+
+    private extractTaggedTunes(book: TuneBookDescriptor): TuneBookDescriptor {
+        const userBook = { id: book.id, storage: book.storage, uri: book.uri, name: book.name, description: book.description, tunes: []};
+        for (const tune of book.tunes) {
+            if (tune.tags) {
+                const userTune = {id: tune.id, tags: tune.tags};
+                userBook.tunes.push(userTune);
+            }
+        }
+        return userBook;
     }
 
     private async loadCollection(loader: Loader) {
