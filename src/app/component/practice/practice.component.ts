@@ -24,6 +24,7 @@ export class PracticeComponent implements OnInit {
     titleWithoutNumber = titleWithoutNumber;
 
     numTunes: number;
+    saved = false;
 
     constructor(
         private snackBar: MatSnackBar,
@@ -73,6 +74,7 @@ export class PracticeComponent implements OnInit {
         this.practiceService.markAsPracticed(this.assignment, new Date());
         const id = await this.repertoireRepository.save();
         if (id) {
+            this.saved = true;
             this.snackBar.open(`Updated repertoire on Google Drive`, 'Dismiss', { duration: 3000 });
         } else {
             this.snackBar.open(`ERROR SAVING REPERTOIRE`, 'Dismiss', { duration: 3000 });

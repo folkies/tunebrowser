@@ -19,7 +19,7 @@
             </mat-list-item>
         </mat-list>
 
-        <button mat-raised-button (click)="markAsPracticed()" label="All done" class="search-button" color="primary">All
+        <button mat-raised-button (click)="markAsPracticed()" [disabled]="saved" label="All done" class="search-button" color="primary">All
             done</button>
     </div>
 </div>
