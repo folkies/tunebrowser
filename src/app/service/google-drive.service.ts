@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { getLogger, Logger } from '@log4js2/core';
 import { GoogleApiLoaderService } from 'ngx-gapi-auth2';
-import { Observable, Subject } from 'rxjs';
 import Mutex from 'ts-mutex';
 import { MultiPartBuilder } from './multipart-builder';
 

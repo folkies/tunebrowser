@@ -48,7 +48,7 @@ export class RepertoireItemImpl implements RepertoireItem {
 }
 
 /**
- * Repository for repertoires. Used Google Drive as storage. The repository may contain multiple repertoires
+ * Repository for repertoires. Uses Google Drive as storage. The repository may contain multiple repertoires
  * for different instruments. The first repertoire is taken as default.
  */
 @Injectable()
