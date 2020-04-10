@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="toolbarVisible">
     <button mat-icon-button (click)="snav.toggle()" *ngIf="isHandset">
         <mat-icon>menu</mat-icon>
     </button>
@@ -33,7 +33,7 @@
             </a>
         </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content cdkScrollable>
         <div>
             <div class="main-content">
                 <router-outlet></router-outlet>

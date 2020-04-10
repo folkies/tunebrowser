@@ -1,9 +1,9 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { GoogleDriveService } from './service/google-drive.service';
-import { TuneBookCollectionService } from './service/tunebook-collection.service';
+import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/overlay';
+import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { GoogleAuthService } from 'ngx-gapi-auth2';
+import { TuneBookCollectionService } from './service/tunebook-collection.service';
 
 @Component({
     selector: 'app-root',
@@ -12,18 +12,22 @@ import { GoogleAuthService } from 'ngx-gapi-auth2';
 })
 export class AppComponent implements OnInit {
 
-    @ViewChild('snav', { static: false }) 
-    public sidenav: MatSidenav;    
-    
-    private initialized = false;
+    @ViewChild('snav', { static: false })
+    sidenav: MatSidenav;
+
     signedIn: boolean;
     isHandset = false;
+    toolbarVisible = true;
+
+    private initialized = false;
+    private lastOffset: number;
 
     constructor(
         private breakpointObserver: BreakpointObserver,
         private collectionService: TuneBookCollectionService,
         private googleAuth: GoogleAuthService,
-        private googleDriveService: GoogleDriveService) {
+        private zone: NgZone,
+        private scroll: ScrollDispatcher) {
 
         this.breakpointObserver.observe([
             Breakpoints.Handset
@@ -37,6 +41,12 @@ export class AppComponent implements OnInit {
                 this.collectionService.loadCollections();
             }
         });
+
+        this.scroll
+            .scrolled()
+            .subscribe((scrollable: CdkScrollable) => {
+                this.zone.run(() => this.onWindowScroll(scrollable));
+            });
     }
 
     sidenavMode(): string {
@@ -51,5 +61,19 @@ export class AppComponent implements OnInit {
     async ngOnInit(): Promise<void> {
         this.collectionService.loadCollections();
         this.initialized = true;
+    }
+
+    private onWindowScroll(scrollable: CdkScrollable) {
+        const scrollTop = scrollable.getElementRef().nativeElement.scrollTop || 0;
+        let shouldShowToolbar = this.toolbarVisible;
+        if (this.lastOffset > scrollTop + 10) {
+            shouldShowToolbar = true;
+        } else if (scrollTop < 10) {
+            shouldShowToolbar = true;
+        } else if (scrollTop > 50) {
+            shouldShowToolbar = false;
+        }
+        this.lastOffset = scrollTop;
+        this.toolbarVisible = !this.isHandset || shouldShowToolbar;
     }
 }
