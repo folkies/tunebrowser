@@ -116,7 +116,7 @@ describe('PracticeService', () => {
         console.log(rep.sort().join('\n'));
     });
 
-    fit('should build sessions from repertoire', () => {
+    test('should build sessions from repertoire', () => {
         const index = buildIndex();
         const myRepertoire = readDefaultRepertoire();
         for (let days = 0; days < 21; days++) {
