@@ -13,16 +13,13 @@ export interface TuneReference {
  * Repertoire for a given instrument.
  */
 export interface Repertoire {
-    /** Repertoire identity. */
-    id: string;
-
-    /** Instrument (display name). */
-    instrument: string;
+    /** Display name (e.g. instrument). Must be unique per user. */
+    name: string;
 
     /** Tunes in repertoire. */
     items: RepertoireItem[];
 
-    /** Maximum age for tunes. Older tunes are due for practice. */
+    /** Maximum age in days for tunes. Older tunes are due for practice. */
     maxAge: number;
 
     /** Number of tunes per practice assignment. */
@@ -69,5 +66,10 @@ export interface RepertoireItem {
  * Collection of repertoires for different instruments.
  */
 export interface RepertoireCollection {
+
+    /** List of repertoires. */
     repertoires: Repertoire[];
+    
+    /** Identity of current or default repertoire. */
+    current?: string;
 }

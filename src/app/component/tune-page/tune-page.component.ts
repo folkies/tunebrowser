@@ -7,7 +7,7 @@ import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { csvToArray } from 'src/app/service/tags';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookIndex } from '../../service/tunebook-index';
-import { AddToRepertoireComponent } from '../add-to-repertoire/add-to-repertoire.component';
+import { AddToRepertoireComponent, RepertoireSelection } from '../add-to-repertoire/add-to-repertoire.component';
 import { PdfService } from 'src/app/service/pdf-service';
 
 
@@ -65,12 +65,12 @@ export class TunePageComponent implements OnInit {
         return '%%stretchlast\n' + this.tune;
     }
 
-    private async addToRepertoire(added: Date): Promise<void> {
-        if (!added) {
+    private async addToRepertoire(selection: RepertoireSelection): Promise<void> {
+        if (!selection) {
             return;
         }
         const tuneRef = { bookId: this.bookId, tuneId: this.ref };
-        await this.repertoireRepository.addRepertoireItem(tuneRef, added);
+        await this.repertoireRepository.addRepertoireItem(tuneRef, selection);
         this.snackBar.open(`Added to repertoire on Google Drive`, 'Dismiss', { duration: 3000 });
     }
 

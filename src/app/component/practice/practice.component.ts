@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IndexEntry } from 'src/app/model/index-entry';
-import { RepertoireItem } from 'src/app/model/repertoire';
+import { Repertoire, RepertoireCollection, RepertoireItem } from 'src/app/model/repertoire';
+import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { PracticeService } from 'src/app/service/practice-service';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
-import { titleWithoutNumber } from 'src/app/service/abc-util';
 
 /**
  * Builds and displays today's practice assignment for the default repertoire.
@@ -21,10 +21,12 @@ export class PracticeComponent implements OnInit {
     /** Index entries corresponding to the assignment (initially undefined). */
     entries: IndexEntry[];
 
-    titleWithoutNumber = titleWithoutNumber;
-
+    repertoire: string;
     numTunes: number;
     saved = false;
+
+    titleWithoutNumber = titleWithoutNumber;
+    private repertoireCollection: RepertoireCollection;
 
     constructor(
         private snackBar: MatSnackBar,
@@ -34,6 +36,10 @@ export class PracticeComponent implements OnInit {
     }
 
     async ngOnInit(): Promise<void> {
+        this.repertoireCollection = await this.repertoireRepository.load();
+        if (this.repertoireCollection.current) {
+            this.repertoire = this.repertoireCollection.current;
+        }
         const repertoire = await this.repertoireRepository.findRepertoire();
         if (! repertoire) {
             return;
@@ -58,7 +64,7 @@ export class PracticeComponent implements OnInit {
      * index entries.
      */
     async buildAssignment(): Promise<void> {
-        const repertoire = await this.repertoireRepository.findRepertoire();
+        const repertoire = await this.repertoireRepository.findRepertoire(this.repertoire);
         if (this.numTunes > 0) {
             repertoire.numTunesPerAssignment = this.numTunes;
         }
@@ -79,5 +85,12 @@ export class PracticeComponent implements OnInit {
         } else {
             this.snackBar.open(`ERROR SAVING REPERTOIRE`, 'Dismiss', { duration: 3000 });
         }
+    }
+
+    repertoires(): Repertoire[] {
+        if (this.repertoireCollection === undefined) {
+            return [];
+        }
+        return this.repertoireCollection.repertoires;
     }
 }

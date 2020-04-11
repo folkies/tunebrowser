@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Repertoire, RepertoireCollection, RepertoireItem, TuneReference } from '../model/repertoire';
 import { GoogleDriveService } from './google-drive.service';
+import { RepertoireSelection } from '../component/add-to-repertoire/add-to-repertoire.component';
 
 const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
@@ -19,6 +20,11 @@ export function reviveRepertoire(key: string, value: any): any {
     if (key === "items") {
         return (value as any[]).map(item => new RepertoireItemImpl(item.tune, item.added, item.timesPracticed, item.lastPracticed));
     }
+    // legacy field
+    if (key == "instrument") {
+        this.name = value;
+        return undefined;
+    } 
     return value;
 }
 
@@ -119,27 +125,31 @@ export class RepertoireRepository {
      * @param repertoireId repertoire identity
      * @returns file identity
      */
-    async addRepertoireItem(tuneRef: TuneReference, added: Date, repertoireId?: string): Promise<string> {
+    async addRepertoireItem(tuneRef: TuneReference, selection: RepertoireSelection): Promise<string> {
         const collection = await this.load();
-        const repertoire = await this.findRepertoire(repertoireId);
+        let repertoire = await this.findRepertoire(selection.name);
+        if (repertoire === undefined) {
+            repertoire = { name: selection.name, maxAge: 30, numTunesPerAssignment: 10, items: []};
+            collection.repertoires.push(repertoire);
+            collection.current = selection.name;
+        }
         const item = repertoire.items.find(item => item.referencedBy(tuneRef));
         if (item) {
-            item.added = added;
+            item.added = selection.added;
         } else {
-            repertoire.items.push(new RepertoireItemImpl(tuneRef, added, 0));
+            repertoire.items.push(new RepertoireItemImpl(tuneRef, selection.added, 0));
         }
         return this.saveCollection(collection);
     }
 
     /**
      * Finds the repertoire with the given identity.
-     * @param repertoireId repertoire identity (if empty, the first collection item will be returned)
+     * @param name repertoire identity (if empty, the first collection item will be returned)
      */
-    async findRepertoire(repertoireId?: string): Promise<Repertoire> {
+    async findRepertoire(name?: string): Promise<Repertoire> {
         const collection = await this.load();
-        return (repertoireId)
-            ? collection.repertoires.find(r => r.id === repertoireId)
+        return (name)
+            ? collection.repertoires.find(r => r.name === name)
             : collection.repertoires[0];
     }
-
 }

@@ -1,5 +1,14 @@
 <div>
-    <h2 class="mat-h2">Repertoire</h2>
+    <div class="repertoire-header">
+        <h2 class="mat-h2">{{currentRepertoire ? currentRepertoire.name + ' ': ''}}Repertoire</h2>
+        <button mat-mini-fab color="accent" [matMenuTriggerFor]="repertoireMenu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #repertoireMenu="matMenu">
+            <button mat-menu-item *ngFor="let rep of repertoires()" (click)="selectRepertoire(rep)">{{rep.name}}</button>
+            <button mat-menu-item (click)="openDialog()">New repertoire</button>
+        </mat-menu>        
+    </div>
 
     <p class="mat-body">{{tunes.length}} tunes</p>
 

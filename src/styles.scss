@@ -192,3 +192,18 @@ h1.irish {
 button.pdf-button {
     margin-left: 0.5em;
 }
+
+div.repertoire-header {
+    display: flex;
+    flex-direction: space-between;
+}
+
+div.repertoire-header button {
+    margin-left: auto;
+}
+
+div.form-container {
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+}

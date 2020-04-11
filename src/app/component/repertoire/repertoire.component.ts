@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { RepertoireItem } from 'src/app/model/repertoire';
+import { RepertoireItem, RepertoireCollection, Repertoire } from 'src/app/model/repertoire';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { NewRepertoireComponent } from '../new-repertoire/new-repertoire.component';
 
 export interface RepertoireTune {
     title: string;
@@ -30,7 +32,12 @@ export class RepertoireComponent implements OnInit {
 
     titleWithoutNumber = titleWithoutNumber;
 
+    currentRepertoire: Repertoire;
+
+    private repertoireCollection: RepertoireCollection;
+
     constructor(
+        private dialog: MatDialog,
         private repertoireRepository: RepertoireRepository,
         private index: TuneBookIndex) {
     }
@@ -39,12 +46,40 @@ export class RepertoireComponent implements OnInit {
         this.index.allReady.subscribe(() => this.loadRepertoire());
     }
 
+    newRepertoire(rep: Repertoire) {
+        this.repertoireCollection.repertoires.push(rep);
+        this.selectRepertoire(rep);
+    }
+
+    openDialog(): void {
+        const dialogRef = this.dialog.open(NewRepertoireComponent);
+        dialogRef.afterClosed().subscribe(added => this.newRepertoire(added));
+    }
+
+    selectRepertoire(repertoire: Repertoire): void  {
+        this.currentRepertoire = repertoire;
+        this.prepareTunes();
+    }
+
+    repertoires(): Repertoire[] {
+        if (this.repertoireCollection === undefined) {
+            return [];
+        }
+        return this.repertoireCollection.repertoires;
+    }
+
     private async loadRepertoire() {
+        this.repertoireCollection = await this.repertoireRepository.load();
         const rep = await this.repertoireRepository.findRepertoire();
+        this.currentRepertoire = rep;
         if (!rep) {
             return;
         }
-        this.tunes = rep.items.map(item => this.toRepertoireTune(item));
+        this.prepareTunes();
+    }
+
+    private prepareTunes(): void {
+        this.tunes = this.currentRepertoire.items.map(item => this.toRepertoireTune(item));
         this.dataSource = new MatTableDataSource(this.tunes);
         this.dataSource.sort = this.sort;
     }

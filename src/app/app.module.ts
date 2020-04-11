@@ -3,6 +3,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -12,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -34,6 +36,7 @@ import { BookPrintComponent } from './component/book-print/book-print.component'
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
 import { MatcherComponent } from './component/match/matcher.component';
+import { NewRepertoireComponent } from './component/new-repertoire/new-repertoire.component';
 import { PracticeComponent } from './component/practice/practice.component';
 import { RecordComponent } from './component/record/record.component';
 import { RepertoireComponent } from './component/repertoire/repertoire.component';
@@ -99,6 +102,7 @@ const gapiClientConfig: NgGapiClientConfig = {
 @NgModule({
     declarations: [
         AboutComponent,
+        NewRepertoireComponent,
         AddToRepertoireComponent,
         AppComponent,
         AuthenticationComponent,
@@ -120,6 +124,7 @@ const gapiClientConfig: NgGapiClientConfig = {
         BooksListComponent
     ],
     entryComponents: [
+        NewRepertoireComponent,
         AddToRepertoireComponent
     ],
     imports: [
@@ -132,6 +137,7 @@ const gapiClientConfig: NgGapiClientConfig = {
         HttpClientModule,
         FormsModule,
         LayoutModule,
+        MatAutocompleteModule,
         MatButtonModule,
         MatDatepickerModule,
         MatDialogModule,
@@ -140,6 +146,7 @@ const gapiClientConfig: NgGapiClientConfig = {
         MatIconModule,
         MatInputModule,
         MatListModule,
+        MatMenuModule,
         MatNativeDateModule,
         MatProgressBarModule,
         MatSelectModule,

@@ -2,7 +2,15 @@
     <h2 class="mat-h2">Practice</h2>
 
     <div id="initial" *ngIf="!hasAssignment()">
-        <div>
+        <div class="form-container">
+            <mat-form-field>
+                <mat-label>Repertoire</mat-label>
+                <mat-select [(value)]="repertoire">
+                    <mat-option *ngFor="let rep of repertoires()" [value]="rep.name">
+                        {{rep.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
             <mat-form-field class="num-tunes">
                 <input matInput name="numTunes" type="text" [(ngModel)]="numTunes" placeholder="Number of tunes">
             </mat-form-field>
@@ -19,7 +27,8 @@
             </mat-list-item>
         </mat-list>
 
-        <button mat-raised-button (click)="markAsPracticed()" [disabled]="saved" label="All done" class="search-button" color="primary">All
+        <button mat-raised-button (click)="markAsPracticed()" [disabled]="saved" label="All done" class="search-button"
+            color="primary">All
             done</button>
     </div>
 </div>
