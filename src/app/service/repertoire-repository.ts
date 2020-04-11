@@ -88,7 +88,7 @@ export class RepertoireRepository {
         const collectionRef = fileRefs.find(ref => ref.name === REPERTOIRE_COLLECTION);
         let collectionJson: string;
         if (collectionRef === undefined) {
-            collectionJson = '{"repertoires": [{"id": "Default", "instrument": "Default", "items":[], "maxAge": 30, "numTunesPerAssignment": 10}]}';
+            collectionJson = '{"repertoires": []}';
             this.collectionFileId = await this.googleDrive.createTextFile(REPERTOIRE_COLLECTION, collectionJson);
         } else {
             this.collectionFileId = collectionRef.id;
@@ -144,10 +144,13 @@ export class RepertoireRepository {
 
     /**
      * Finds the repertoire with the given identity.
-     * @param name repertoire identity (if empty, the first collection item will be returned)
+     * @param name repertoire name (if empty, the current repertoire will be returned)
      */
     async findRepertoire(name?: string): Promise<Repertoire> {
         const collection = await this.load();
+        if (!name) {
+            name = collection.current;
+        }
         return (name)
             ? collection.repertoires.find(r => r.name === name)
             : collection.repertoires[0];
