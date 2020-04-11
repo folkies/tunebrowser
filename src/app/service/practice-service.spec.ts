@@ -72,8 +72,7 @@ function readDefaultRepertoire(): Repertoire {
 
 describe('PracticeService', () => {
     let repertoire: Repertoire = {
-        id: '1',
-        instrument: 'Flute',
+        name: 'Flute',
         items: [],
         maxAge: 30,
         numTunesPerAssignment: 10 
