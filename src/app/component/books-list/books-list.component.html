@@ -20,6 +20,6 @@
         </mat-list-item>
     </mat-list>
 
-    <button mat-raised-button routerLink="../createBook" class="create-book-button" color="primary" [disabled]="signedOut">New Book</button>
+    <button mat-raised-button routerLink="../createBook" class="create-book-button" color="primary" [disabled]="!signedIn">New Book</button>
 
 </div>

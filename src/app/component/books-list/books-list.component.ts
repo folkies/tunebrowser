@@ -11,7 +11,13 @@ export class BooksListComponent {
 
     books: TuneBookReference[] = [];
 
-    constructor(private collectionService: TuneBookCollectionService) {
+    signedIn = false;
+
+    constructor(private collectionService: TuneBookCollectionService,
+        private googleAuth: GoogleAuthService) {
+        this.googleAuth.authState.subscribe(auth => {
+            this.signedIn = !!auth;
+        });
         this.collectionService.collectionLoaded.subscribe(event => this.books = this.collectionService.getBooks());
     }
 
