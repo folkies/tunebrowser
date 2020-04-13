@@ -66,7 +66,7 @@ export class GoogleDriveService {
         return lock.use(() => this.ensureInitializedExclusive() );
     }
 
-    isSignedIn(): boolean {
+    private isSignedIn(): boolean {
         if (!this.googleAuth) {
             return false;
         }
@@ -75,10 +75,6 @@ export class GoogleDriveService {
             return false;
         }
         return user.isSignedIn();
-    }
-
-    isSignedOut(): boolean {
-        return this.googleAuth && !this.googleAuth.isSignedIn.get();
     }
 
     async isDefinitelySignedOut(): Promise<boolean> {

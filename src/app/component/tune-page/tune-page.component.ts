@@ -9,6 +9,7 @@ import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.s
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { AddToRepertoireComponent, RepertoireSelection } from '../add-to-repertoire/add-to-repertoire.component';
 import { PdfService } from 'src/app/service/pdf-service';
+import { GoogleAuthService } from 'ngx-gapi-auth2';
 
 
 @Component({
@@ -19,19 +20,24 @@ export class TunePageComponent implements OnInit {
 
     tune = '';
     allTags = '';
+    signedIn = false;
 
     private bookId: string;
     private ref: string;
 
     constructor(
         private index: TuneBookIndex,
-        private googleDriveService: GoogleDriveService,
+        private googleAuth: GoogleAuthService,
         private pdfService: PdfService,
         private route: ActivatedRoute,
         private snackBar: MatSnackBar,
         private dialog: MatDialog,
         private collectionService: TuneBookCollectionService,
         private repertoireRepository: RepertoireRepository) {
+
+        this.googleAuth.authState.subscribe(auth => {
+            this.signedIn = !!auth;
+        });
     }
 
     ngOnInit() {
@@ -39,10 +45,6 @@ export class TunePageComponent implements OnInit {
         this.index.tuneBookReady.subscribe(() => {
             this.displayTune(this.bookId, this.ref);
         });
-    }
-
-    get signedOut(): boolean {
-        return this.googleDriveService.isSignedOut();
     }
 
     async save(): Promise<string> {

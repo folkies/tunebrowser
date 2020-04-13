@@ -6,6 +6,7 @@ import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { PracticeService } from 'src/app/service/practice-service';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
+import { GoogleAuthService } from 'ngx-gapi-auth2';
 
 /**
  * Builds and displays today's practice assignment for the default repertoire.
@@ -31,17 +32,22 @@ export class PracticeComponent implements OnInit {
     constructor(
         private snackBar: MatSnackBar,
         private repertoireRepository: RepertoireRepository,
+        private googleAuth: GoogleAuthService,
         private practiceService: PracticeService,
         private index: TuneBookIndex) {
+        this.googleAuth.authState.subscribe(auth => this.loadRepertoires());
     }
 
     async ngOnInit(): Promise<void> {
+    }
+
+    private async loadRepertoires() {
         this.repertoireCollection = await this.repertoireRepository.load();
         if (this.repertoireCollection.current) {
             this.repertoire = this.repertoireCollection.current;
         }
         const repertoire = await this.repertoireRepository.findRepertoire();
-        if (! repertoire) {
+        if (!repertoire) {
             return;
         }
         this.numTunes = repertoire.numTunesPerAssignment;
@@ -49,6 +55,7 @@ export class PracticeComponent implements OnInit {
             this.assignment = this.repertoireRepository.currentAssignment;
             this.entries = this.assignment.map(item => this.index.findEntryByTuneReference(item.tune))
         }
+
     }
 
     /**

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GoogleDriveService } from 'src/app/service/google-drive.service';
-import { GoogleAuthService, GoogleAuth2LoaderService } from 'ngx-gapi-auth2';
+import { GoogleAuth2LoaderService, GoogleAuthService } from 'ngx-gapi-auth2';
 
 /**
  * Handles sign-in and sign-out with Google.
