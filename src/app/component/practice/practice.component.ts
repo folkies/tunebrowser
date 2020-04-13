@@ -24,6 +24,7 @@ export class PracticeComponent implements OnInit {
 
     repertoire: string;
     numTunes: number;
+    maxAge: number;
     saved = false;
 
     titleWithoutNumber = titleWithoutNumber;
@@ -51,11 +52,11 @@ export class PracticeComponent implements OnInit {
             return;
         }
         this.numTunes = repertoire.numTunesPerAssignment;
+        this.maxAge = repertoire.maxAge;
         if (this.repertoireRepository.currentAssignment) {
             this.assignment = this.repertoireRepository.currentAssignment;
             this.entries = this.assignment.map(item => this.index.findEntryByTuneReference(item.tune))
         }
-
     }
 
     /**
@@ -74,6 +75,7 @@ export class PracticeComponent implements OnInit {
         const repertoire = await this.repertoireRepository.findRepertoire(this.repertoire);
         if (this.numTunes > 0) {
             repertoire.numTunesPerAssignment = this.numTunes;
+            repertoire.maxAge = this.maxAge;
         }
         this.assignment = this.practiceService.buildPracticeAssignment(repertoire, new Date());
         this.repertoireRepository.currentAssignment = this.assignment;
