@@ -1035,22 +1035,23 @@ K: Ador
 %%graceslurs 1
 "_Slow"E2 |\
 AAA2 A3A | B4 E3B | {B}c4 (TB3A) | B2G2G2B2 |\
-AAA2 E3A | B4 E3B | {B}c4 (TB3A) | (T^G3F) E2 :: g2 |\
-e2g2e2c2 | d2g2d2B2 | c4 (dcBA) |
-B2G2G2g2 |\
-e2g2c2e2 | d2g2B2d2 | c4 (dcBA) | ^G2E2E2 :: e2 |\
+AAA2 E3A | B4 E3B | {B}c4 (TB3A) | (T^G3F) E2 :|
+|: g2 |\
+e2g2e2c2 | d2g2d2B2 | c4 (dcBA) | B2G2G2g2 |\
+e2g2c2e2 | d2g2B2d2 | c4 (dcBA) | ^G2E2E2 :|
+|: e2 |\
 (3(a2^g2a2) A2a2 | b4 G2b2 | (3(c'2b2c'2) A2c'2 | b2g2g2b2 |\
-(3(a2^g2a2) A2a2 | b4 e2b2 |
-c'4 (d'c'ba) | ^g2e2e2 :: g2 |\
+(3(a2^g2a2) A2a2 | b4 e2b2 | c'4 (d'c'ba) | ^g2e2e2 :|
+|: g2 |\
 (e=fg2) c2e2 | d2g2B2d2 | (cde2) A2d2 | B2G2G2g2 |\
 (e=fg2) c2e2 | d2(gd) B2(dB) | c2A2 (dcBA) | ^G2E2E2 :|
 |: E2 |\
 ABAE ABAE | BcBE BcBE | cdcE cdcE | BcBE BcBE |\
-ABAE ABAE | BcBE BcBE | cAdB ecBA |
-^G2E2E2 :: g2 |\
+ABAE ABAE | BcBE BcBE | cAdB ecBA | ^G2E2E2 :|
+|: g2 |\
 egcg egcg | dgBg dgBg | cABc dBcA | B2G2G2g2 |\
-ecac ecac | dBgB dBgB | cAdB ecBA |
-^G2E2E2 :: e2 |\
+ecac ecac | dBgB dBgB | cAdB ecBA | ^G2E2E2 :|
+|: e2 |\
 A2a2 (3(a2^g2a2) | B2b2 (3(b2a2b2) | c2c'2 (d'c'ba) | b2g2g2b2 |\
 A2a2B2b2 | c2c'2d2d'2 | c'2(bc') d'bc'a | ^g2e2e2 :|
 |: g2 |\
