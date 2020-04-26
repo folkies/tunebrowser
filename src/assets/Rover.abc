@@ -1857,10 +1857,10 @@ R: jig
 M: 6/8
 L: 1/8
 K: Ador
-|:cBA BAG|AGE DBG|~A3 EDB|DEG AGE|
-c2A B/2c/2dB|AGE DBG|~A2 E EDE|DBG A2 B:|
-|:cBA ~a3|bag edB|GBd ~g3|GBd cBA|
-cBc dcd|ede gab|age dBG|EFG A2 B:| 
+|: B |c2 A BAG | AGE DBG | A^GA E^DE | DEG AGE |
+c2 A B/c/dB | AGE DBE | A^GA E^DE | DBG A2 :|
+|: B |cBA a^ga | bag edB | GBd gfg | GB/c/d cBA |
+c2 c d^cd | e^de gab | age dBG | E>FG A2 :|
 
 X: 157
 T: Touch Me If You Dare
