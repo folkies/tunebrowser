@@ -76,6 +76,7 @@ export class PracticeComponent implements OnInit {
         if (this.numTunes > 0) {
             repertoire.numTunesPerAssignment = this.numTunes;
             repertoire.maxAge = this.maxAge;
+            this.repertoireCollection.current = this.repertoire;
         }
         this.assignment = this.practiceService.buildPracticeAssignment(repertoire, new Date());
         this.repertoireRepository.currentAssignment = this.assignment;
