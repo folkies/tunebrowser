@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TuneBook } from 'abcjs/midi';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { TuneBookCollection, TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
 import { GoogleDriveTunebookLoaderService } from './google-drive-tunebook-loader.service';
@@ -14,7 +14,7 @@ export class TuneBookCollectionService {
     private collection: TuneBookCollection = { books: [] };
     private loadedBookIds: string[] = [];
 
-    private collectionLoadedSource = new Subject<string>();
+    private collectionLoadedSource = new BehaviorSubject<string>("");
     collectionLoaded: Observable<string>;
 
     constructor(
