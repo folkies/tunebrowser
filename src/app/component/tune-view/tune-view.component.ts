@@ -45,6 +45,9 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
             return abc;
         }
         const idMatch = abc.match(/^X:(\s*)(\w+)/m);
+        if (!idMatch) {
+            return;
+        }
         const id = idMatch[2];
         const titleMatch = abc.match(/^T:(\s*)(.+?)(, The)?$/m);
         const title = titleMatch[2];
