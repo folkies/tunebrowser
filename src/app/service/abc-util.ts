@@ -20,6 +20,9 @@ const MODE_MAP = {
  * @returns normalized key
  */
 export function normalizeKey(root: string, mode: string): string {
+    if (!root) {
+        return '';
+    }
     return `${root}${MODE_MAP[mode.toLowerCase()]}`;
 }
 
