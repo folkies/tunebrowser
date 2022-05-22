@@ -157,7 +157,7 @@ const gapiClientConfig: NgGapiClientConfig = {
         MatTableModule,
         MatToolbarModule,
         ReactiveFormsModule,
-        RouterModule.forRoot(appRoutes),
+        RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
         ScrollingModule,
         ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
