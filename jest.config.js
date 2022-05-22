@@ -18,7 +18,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       ...tsJestPreset,
-      tsConfig: 'tsconfig.spec.json'
+      tsconfig: 'tsconfig.spec.json'
     }
   },
   transformIgnorePatterns: ['node_modules/(?!(jest-test))']
