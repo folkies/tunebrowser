@@ -26,7 +26,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { GoogleOauthModule, NgGapiClientConfig, NG_GAPI_CONFIG } from 'ngx-gapi-auth2';
+import { NgGapiClientConfig, GoogleOauthModule, NG_GAPI_CONFIG } from 'src/lib/ngx-gapi-auth2';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';

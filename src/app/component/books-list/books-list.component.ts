@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleAuthService } from 'ngx-gapi-auth2';
+import { GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookReference } from '../../model/tunebook-reference';
 

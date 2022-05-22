@@ -31,7 +31,6 @@
     "date-fns": "^2.11.0",
     "file-saver": "^2.0.2",
     "hammerjs": "^2.0.8",
-    "ngx-gapi-auth2": "^1.1.2",
     "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "ts-mutex": "^1.0.0",

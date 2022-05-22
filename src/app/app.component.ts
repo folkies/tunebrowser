@@ -2,7 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/overlay';
 import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { GoogleAuthService } from 'ngx-gapi-auth2';
+import { GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GoogleAuth2LoaderService, GoogleAuthService } from 'ngx-gapi-auth2';
+import { GoogleAuth2LoaderService, GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
 
 /**
  * Handles sign-in and sign-out with Google.
