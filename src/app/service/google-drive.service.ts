@@ -101,7 +101,7 @@ export class GoogleDriveService {
                 .append('text/plain', content)
                 .finish();
 
-            const response = await gapi.client.request<gapi.client.drive.File>({
+            const response = await gapi.client.request({
                 path: '/upload/drive/v3/files',
                 method: 'POST',
                 params: {
@@ -125,7 +125,7 @@ export class GoogleDriveService {
             return undefined;
         }
         try {
-            const response = await gapi.client.request<gapi.client.drive.File>({
+            const response = await gapi.client.request({
                 path: '/upload/drive/v3/files/' + fileId,
                 method: 'PATCH',
                 params: {
