@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { csvToArray } from 'src/app/service/tags';
@@ -9,6 +9,7 @@ import { FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angula
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
+@Injectable()
 export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
 
     private contentScrolledSource = new Subject<string>();

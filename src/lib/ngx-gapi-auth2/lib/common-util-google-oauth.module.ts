@@ -9,7 +9,7 @@ import { GoogleAuthService } from './services/google-auth.service';
   imports: [CommonModule]
 })
 export class GoogleOauthModule {
-  static forRoot(gapiConfigProvider: Provider): ModuleWithProviders {
+  static forRoot(gapiConfigProvider: Provider): ModuleWithProviders<GoogleOauthModule> {
     return {
       ngModule: GoogleOauthModule,
       providers: [
