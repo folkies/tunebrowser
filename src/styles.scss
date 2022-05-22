@@ -1,13 +1,13 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
-@include mat-core();
+@include mat.core();
 
-$tune-browser-primary: mat-palette($mat-light-green, 700);
-$tune-browser-accent:  mat-palette($mat-orange);
-$tune-browser-warn:    mat-palette($mat-red);
-$tune-browser-theme: mat-light-theme($tune-browser-primary, $tune-browser-accent, $tune-browser-warn);
+$tune-browser-primary: mat.define-palette(mat.$light-green-palette, 700);
+$tune-browser-accent:  mat.define-palette(mat.$orange-palette);
+$tune-browser-warn:    mat.define-palette(mat.$red-palette);
+$tune-browser-theme: mat.define-light-theme($tune-browser-primary, $tune-browser-accent, $tune-browser-warn);
 
-@include angular-material-theme($tune-browser-theme);
+@include mat.all-component-themes($tune-browser-theme);
 
 @font-face {
     font-family: 'Irish Uncialfabeta';
