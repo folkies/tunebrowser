@@ -123,17 +123,13 @@ const gapiClientConfig: NgGapiClientConfig = {
         SnippetViewComponent,
         BooksListComponent
     ],
-    entryComponents: [
-        NewRepertoireComponent,
-        AddToRepertoireComponent
-    ],
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
         GoogleOauthModule.forRoot({
             provide: NG_GAPI_CONFIG,
             useValue: gapiClientConfig
-          }),        
+        }),
         HttpClientModule,
         FormsModule,
         LayoutModule,
