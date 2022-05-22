@@ -1,7 +1,6 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { configure, LogLevel } from '@log4js2/core';
-import 'hammerjs';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
