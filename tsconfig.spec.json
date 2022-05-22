@@ -9,9 +9,8 @@
       "gapi.client.drive",
       "jest",
       "node"
-    ],
-    "module": "commonjs"
-  },
+    ]
+},
   "files": [
     "src/polyfills.ts"
   ],
