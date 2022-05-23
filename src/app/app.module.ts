@@ -31,7 +31,8 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';
 import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
-import { AuthenticationComponent } from './component/authentication/authentication.component';
+import { LoginComponent } from './component/login/login.component';
+import { LogoutComponent } from './component/logout/logout.component';
 import { BookPrintComponent } from './component/book-print/book-print.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
@@ -69,8 +70,8 @@ const appRoutes: Routes = [
     { path: 'edit/:id', component: TuneEditorComponent },
     { path: 'book/:id', component: TunesListComponent },
     { path: 'print/:id', component: BookPrintComponent },
-    { path: 'login', component: AuthenticationComponent },
-    { path: 'logout', component: AuthenticationComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'logout', component: LogoutComponent },
     { path: 'match/:transcription', component: MatcherComponent },
     { path: 'practice', component: PracticeComponent },
     { path: 'record', component: RecordComponent },
@@ -105,11 +106,12 @@ const gapiClientConfig: NgGapiClientConfig = {
         NewRepertoireComponent,
         AddToRepertoireComponent,
         AppComponent,
-        AuthenticationComponent,
         BookPrintComponent,
         BooksListComponent,
         CaretTrackerDirective,
         CreateBookComponent,
+        LoginComponent,
+        LogoutComponent,
         MatcherComponent,
         PracticeComponent,
         RecordComponent,
