@@ -33,7 +33,7 @@
                 "src/assets"
             ],
             "styles": [
-                "node_modules/abcjs/abcjs-audio.css",
+                "node_modules/abcjs/abcjs-midi.css",
                 "src/styles.scss"
             ],
             "scripts": [
