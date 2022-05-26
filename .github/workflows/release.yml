@@ -4,6 +4,8 @@ on:
   create:
     tags:
     - '**'
+    branches:
+    - none
 
 jobs:
   build:
