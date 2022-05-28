@@ -2,7 +2,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/overlay';
 import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
+import { Router } from '@angular/router';
+import { GoogleAccessTokenService } from 'src/lib/google-sign-in/lib/services/google-access-token.service';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 
 @Component({
@@ -25,8 +26,9 @@ export class AppComponent implements OnInit {
     constructor(
         private breakpointObserver: BreakpointObserver,
         private collectionService: TuneBookCollectionService,
-        private googleAuth: GoogleAuthService,
+        private accessTokenService: GoogleAccessTokenService,
         private zone: NgZone,
+        private router: Router,
         private scroll: ScrollDispatcher) {
 
         this.breakpointObserver.observe([
@@ -35,10 +37,11 @@ export class AppComponent implements OnInit {
             this.isHandset = result.matches;
         });
 
-        this.googleAuth.authState.subscribe(authStatus => {
-            this.signedIn = authStatus != null;
+        this.accessTokenService.accessTokenSource.subscribe(accessToken => {
+            this.signedIn = !!accessToken;
             if (this.initialized) {
                 this.collectionService.loadCollections();
+                this.zone.run(() => this.router.navigate(['/books']));
             }
         });
 

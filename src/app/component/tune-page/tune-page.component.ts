@@ -9,7 +9,7 @@ import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.s
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { AddToRepertoireComponent, RepertoireSelection } from '../add-to-repertoire/add-to-repertoire.component';
 import { PdfService } from 'src/app/service/pdf-service';
-import { GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
+import { GoogleAuthService } from 'src/lib/google-sign-in';
 
 
 @Component({

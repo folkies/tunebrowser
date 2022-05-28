@@ -1,5 +1,6 @@
 import { Component, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GoogleAccessTokenService, GoogleAuthService } from 'src/lib/google-sign-in';
 import { GoogleAuth2LoaderService } from 'src/lib/ngx-gapi-auth2';
 
 /**
@@ -11,29 +12,21 @@ import { GoogleAuth2LoaderService } from 'src/lib/ngx-gapi-auth2';
 })
 export class LoginComponent {
 
-    private auth: gapi.auth2.GoogleAuth;
-
     constructor(
         private route: ActivatedRoute,
         private router: Router,
         private zone: NgZone,
-        private googleApiLoaderService: GoogleAuth2LoaderService) {
+        private googleAuth: GoogleAuthService) {
 
         this.route.url.subscribe(_ => this.onAction());
 
-        this.googleApiLoaderService.getAuth().subscribe(auth => {
-            this.auth = auth;
-            this.onAction();
-        });
     }
 
     private onAction(): void {
-        if (this.auth) {
-            if (this.auth.isSignedIn.get()) {
-                this.zone.run(() => this.router.navigate(['/books']));
-            } else {
-                this.auth.signIn();
-            }
+        if (this.googleAuth.isSignedIn()) {
+            this.zone.run(() => this.router.navigate(['/books']));
+        } else {
+            this.googleAuth.signIn();
         }
     }
 }

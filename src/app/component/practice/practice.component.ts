@@ -6,7 +6,7 @@ import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { PracticeService } from 'src/app/service/practice-service';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
-import { GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
+import { GoogleAuthService } from 'src/lib/google-sign-in';
 
 /**
  * Builds and displays today's practice assignment for the default repertoire.

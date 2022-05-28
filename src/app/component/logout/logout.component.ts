@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
+import { ActivatedRoute, Router } from '@angular/router';
+import { GoogleAuthService } from 'src/lib/google-sign-in';
 
 /**
  * Handles sign-out with Google.
@@ -12,10 +12,18 @@ import { GoogleAuthService } from 'src/lib/ngx-gapi-auth2';
 export class LogoutComponent {
 
     constructor(
+        private route: ActivatedRoute,
         private router: Router,
         private googleAuth: GoogleAuthService) {
 
+        this.route.url.subscribe(_ => this.onAction());
+    }
+
+    private onAction(): void {
         this.googleAuth.signOut();
         this.router.navigate(['/books']);
     }
+    
 }
+
+

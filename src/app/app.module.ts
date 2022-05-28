@@ -26,16 +26,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { NgGapiClientConfig, GoogleOauthModule, NG_GAPI_CONFIG } from 'src/lib/ngx-gapi-auth2';
+import { GSI_CONFIG } from 'src/lib/google-sign-in';
+import { GoogleApiClientConfig } from 'src/lib/google-sign-in/lib/config/google-api.config';
+import { GoogleSignInModule } from 'src/lib/google-sign-in/lib/google-sign-in.module';
+import { GoogleOauthModule, NgGapiClientConfig, NG_GAPI_CONFIG } from 'src/lib/ngx-gapi-auth2';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';
 import { AddToRepertoireComponent } from './component/add-to-repertoire/add-to-repertoire.component';
-import { LoginComponent } from './component/login/login.component';
-import { LogoutComponent } from './component/logout/logout.component';
 import { BookPrintComponent } from './component/book-print/book-print.component';
 import { BooksListComponent } from './component/books-list/books-list.component';
 import { CreateBookComponent } from './component/create-book/create-book.component';
+import { LoginComponent } from './component/login/login.component';
+import { LogoutComponent } from './component/logout/logout.component';
 import { MatcherComponent } from './component/match/matcher.component';
 import { NewRepertoireComponent } from './component/new-repertoire/new-repertoire.component';
 import { PracticeComponent } from './component/practice/practice.component';
@@ -99,6 +102,14 @@ const gapiClientConfig: NgGapiClientConfig = {
     ux_mode: 'redirect'
 };
   
+const googleApiClientConfig: GoogleApiClientConfig = {
+
+    client_id: CLIENT_ID,
+    discoveryDocs: DISCOVERY_DOCS,
+    scope: SCOPES,
+    ux_mode: 'popup'
+};
+  
 
 @NgModule({
     declarations: [
@@ -131,6 +142,10 @@ const gapiClientConfig: NgGapiClientConfig = {
         GoogleOauthModule.forRoot({
             provide: NG_GAPI_CONFIG,
             useValue: gapiClientConfig
+        }),
+        GoogleSignInModule.forRoot({
+            provide: GSI_CONFIG,
+            useValue: googleApiClientConfig
         }),
         HttpClientModule,
         FormsModule,

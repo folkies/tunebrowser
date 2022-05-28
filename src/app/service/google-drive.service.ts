@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { getLogger, Logger } from '@log4js2/core';
-import { GoogleApiLoaderService } from '../../lib/ngx-gapi-auth2';
+import { GoogleApiLoaderService, GoogleAuthService } from 'src/lib/google-sign-in';
 import Mutex from 'ts-mutex';
 import { MultiPartBuilder } from './multipart-builder';
 
@@ -18,12 +18,15 @@ export class GoogleDriveService {
 
     private log: Logger = getLogger('GoogleDriveService');
 
-    private googleAuth: gapi.auth2.GoogleAuth;
-
     private initialized = false;
+    private signedIn: boolean;
 
-    constructor(private googleApi: GoogleApiLoaderService) {
-    }
+    constructor(private googleApiLoader: GoogleApiLoaderService,
+        private googleAuth: GoogleAuthService) {
+            this.googleAuth.authState.subscribe(auth => {
+                this.signedIn = !!auth;
+            });
+        }
 
 
     private initialize(): Promise<boolean> {
@@ -34,25 +37,11 @@ export class GoogleDriveService {
         });
     }
 
-    private loadGoogleClient(): Promise<void> {
-        return new Promise((resolve) => {
-                gapi.load('client', () =>  resolve());
-        });
-    }
 
     private async initClient(): Promise<void> {
-        await this.googleApi.onLoad().toPromise();
-        await this.loadGoogleClient();
+        await this.googleApiLoader.onClientLoaded().toPromise();
         await gapi.client.load('drive', 'v3');
-        this.googleAuth = gapi.auth2.getAuthInstance();
-        const user = this.googleAuth.currentUser.get();
-        this.log.debug('Google API client initialized');
-
-        if (user.getId() === null) {
-        } else {
-            this.log.debug("user id = " + user.getId());
-            this.log.debug("isSignedIn = " + this.googleAuth.isSignedIn.get());
-        }
+        this.log.info('Google Drive client initialized');
     }
 
     private async ensureInitializedExclusive(): Promise<boolean> {
@@ -67,19 +56,13 @@ export class GoogleDriveService {
     }
 
     private isSignedIn(): boolean {
-        if (!this.googleAuth) {
-            return false;
-        }
-        const user = this.googleAuth.currentUser.get();
-        if (!user) {
-            return false;
-        }
-        return user.isSignedIn();
+        return this.signedIn;
     }
+    
 
     async isDefinitelySignedOut(): Promise<boolean> {
         await this.ensureInitialized();
-        return this.googleAuth && !this.googleAuth.isSignedIn.get();
+        return !this.isSignedIn();
     }
 
     async createTextFile(fileName: string, content: string): Promise<string> {
