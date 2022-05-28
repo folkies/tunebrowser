@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { getLogger, Logger } from '@log4js2/core';
-import { GoogleApiLoaderService, GoogleAuthService } from 'src/lib/google-sign-in';
+import { GoogleApiLoaderService, GoogleAuthService } from '../../lib/google-sign-in';
 import Mutex from 'ts-mutex';
 import { MultiPartBuilder } from './multipart-builder';
 

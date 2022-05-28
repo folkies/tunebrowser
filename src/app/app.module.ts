@@ -29,7 +29,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { GSI_CONFIG } from 'src/lib/google-sign-in';
 import { GoogleApiClientConfig } from 'src/lib/google-sign-in/lib/config/google-api.config';
 import { GoogleSignInModule } from 'src/lib/google-sign-in/lib/google-sign-in.module';
-import { GoogleOauthModule, NgGapiClientConfig, NG_GAPI_CONFIG } from 'src/lib/ngx-gapi-auth2';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/about/about.component';
@@ -93,15 +92,6 @@ const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/r
 const SCOPES = 'https://www.googleapis.com/auth/drive.appfolder https://www.googleapis.com/auth/drive.file';
 
 
-const gapiClientConfig: NgGapiClientConfig = {
-
-    client_id: CLIENT_ID,
-    discoveryDocs: DISCOVERY_DOCS,
-    e2e: false,
-    scope: SCOPES,
-    ux_mode: 'redirect'
-};
-  
 const googleApiClientConfig: GoogleApiClientConfig = {
 
     client_id: CLIENT_ID,
@@ -139,10 +129,6 @@ const googleApiClientConfig: GoogleApiClientConfig = {
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
-        GoogleOauthModule.forRoot({
-            provide: NG_GAPI_CONFIG,
-            useValue: gapiClientConfig
-        }),
         GoogleSignInModule.forRoot({
             provide: GSI_CONFIG,
             useValue: googleApiClientConfig

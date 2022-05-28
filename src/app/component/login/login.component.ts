@@ -1,7 +1,6 @@
 import { Component, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GoogleAccessTokenService, GoogleAuthService } from 'src/lib/google-sign-in';
-import { GoogleAuth2LoaderService } from 'src/lib/ngx-gapi-auth2';
+import { GoogleAuthService } from 'src/lib/google-sign-in';
 
 /**
  * Handles sign-in with Google.
