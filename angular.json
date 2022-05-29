@@ -8,10 +8,10 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "schematics": { 
-          "@schematics/angular:component" : {
-              "style" : "scss"
-          }
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
       },
       "architect": {
         "build": {
@@ -23,18 +23,18 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-                "src/apple-touch-icon.png",
-                "src/android-chrome-192x192.png",
-                "src/android-chrome-512x512.png",
-                "src/favicon.ico",
-                "src/favicon-16x16.png",
-                "src/favicon-32x32.png",
-                "src/site.webmanifest",
-                "src/assets"
+              "src/apple-touch-icon.png",
+              "src/android-chrome-192x192.png",
+              "src/android-chrome-512x512.png",
+              "src/favicon.ico",
+              "src/favicon-16x16.png",
+              "src/favicon-32x32.png",
+              "src/site.webmanifest",
+              "src/assets"
             ],
             "styles": [
-                "node_modules/abcjs/abcjs-midi.css",
-                "src/styles.scss"
+              "node_modules/abcjs/abcjs-midi.css",
+              "src/styles.scss"
             ],
             "scripts": [
               "src/lib/dsp.js"
@@ -105,12 +105,12 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-                "src/favicon*",
-                "src/site.webmanifest",
-                "src/assets"
+              "src/favicon*",
+              "src/site.webmanifest",
+              "src/assets"
             ],
             "styles": [
-                "src/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -126,8 +126,21 @@
               "devServerTarget": "folkies:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
-    }},
-  "defaultProject": "folkies"
+    }
+  },
+  "defaultProject": "folkies",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
