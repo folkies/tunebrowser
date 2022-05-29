@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
 import { getLogger, Logger } from '@log4js2/core';
 import { GoogleApiLoaderService, GoogleAuthService } from '../../lib/google-sign-in';
-import Mutex from 'ts-mutex';
 import { MultiPartBuilder } from './multipart-builder';
 
 const TUNE_FOLDER = 'Tune Browser';
-
-const lock = new Mutex();
 
 export interface FileReference {
     id: string;
@@ -18,55 +15,34 @@ export class GoogleDriveService {
 
     private log: Logger = getLogger('GoogleDriveService');
 
-    private initialized = false;
     private signedIn: boolean;
 
     constructor(private googleApiLoader: GoogleApiLoaderService,
         private googleAuth: GoogleAuthService) {
-            this.googleAuth.authState.subscribe(auth => {
-                this.signedIn = !!auth;
-            });
-        }
-
-
-    private initialize(): Promise<boolean> {
-        return new Promise((resolve, reject) => {
-            this.initClient()
-                .then(() => resolve(true))
-                .catch(reason => reject(reason));
+        this.googleAuth.authState.subscribe(auth => {
+            this.signedIn = !!auth;
         });
+
+        this.googleApiLoader.onClientLoaded().subscribe(_ => {
+            gapi.client.load('drive', 'v3');
+            this.log.info('Google Drive client initialized');
+        });
+
     }
 
 
-    private async initClient(): Promise<void> {
-        await this.googleApiLoader.onClientLoaded().toPromise();
-        await gapi.client.load('drive', 'v3');
-        this.log.info('Google Drive client initialized');
-    }
 
-    private async ensureInitializedExclusive(): Promise<boolean> {
-        if (!this.initialized) {
-            this.initialized = await this.initialize();
-        }
-        return this.initialized;
-    }
-
-    private ensureInitialized(): Promise<boolean> {
-        return lock.use(() => this.ensureInitializedExclusive() );
-    }
 
     private isSignedIn(): boolean {
         return this.signedIn;
     }
-    
+
 
     async isDefinitelySignedOut(): Promise<boolean> {
-        await this.ensureInitialized();
         return !this.isSignedIn();
     }
 
     async createTextFile(fileName: string, content: string): Promise<string> {
-        await this.ensureInitialized();
         if (!this.isSignedIn()) {
             return undefined;
         }
@@ -103,7 +79,6 @@ export class GoogleDriveService {
     }
 
     async updateTextFile(fileId: string, content: string): Promise<string> {
-        await this.ensureInitialized();
         if (!this.isSignedIn()) {
             return undefined;
         }
@@ -129,7 +104,6 @@ export class GoogleDriveService {
     }
 
     async getTextFile(fileId: string): Promise<string> {
-        await this.ensureInitialized();
         const response = await gapi.client.drive.files.get({
             fileId: fileId,
             alt: 'media'
@@ -138,7 +112,6 @@ export class GoogleDriveService {
     }
 
     async listTextFiles(folderId: string): Promise<FileReference[]> {
-        await this.ensureInitialized();
         if (!this.isSignedIn()) {
             return [];
         }
@@ -154,7 +127,6 @@ export class GoogleDriveService {
     }
 
     async createFolder(folderName: string): Promise<string> {
-        await this.ensureInitialized();
         const response = await gapi.client.drive.files.create({
             resource: {
                 name: folderName,
@@ -166,7 +138,6 @@ export class GoogleDriveService {
     }
 
     async findOrCreateFolder(folderName: string): Promise<string> {
-        await this.ensureInitialized();
         if (!this.isSignedIn()) {
             return undefined;
         }

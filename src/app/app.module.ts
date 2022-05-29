@@ -97,7 +97,7 @@ const googleApiClientConfig: GoogleApiClientConfig = {
     client_id: CLIENT_ID,
     discoveryDocs: DISCOVERY_DOCS,
     scope: SCOPES,
-    ux_mode: 'popup'
+    prompt: ''
 };
   
 

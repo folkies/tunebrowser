@@ -3,13 +3,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 
 /**
- * Handles sign-in with Google.
+ * Initiates sign-in with Google.
  */
 @Component({
     selector: 'app-login',
     template: ''
 })
 export class LoginComponent {
+
+    private loginPending = false;
 
     constructor(
         private route: ActivatedRoute,
@@ -18,14 +20,17 @@ export class LoginComponent {
         private googleAuth: GoogleAuthService) {
 
         this.route.url.subscribe(_ => this.onAction());
+        this.googleAuth.authState.subscribe(_ => {
+            if (this.loginPending) {
+                this.loginPending = false;
+                this.zone.run(() => this.router.navigate(['/books']));
+            }
+        });
 
     }
 
     private onAction(): void {
-        if (this.googleAuth.isSignedIn()) {
-            this.zone.run(() => this.router.navigate(['/books']));
-        } else {
-            this.googleAuth.signIn();
-        }
+        this.loginPending = true;
+        this.googleAuth.signIn();
     }
 }

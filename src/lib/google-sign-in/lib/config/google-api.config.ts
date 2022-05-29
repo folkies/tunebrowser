@@ -17,11 +17,7 @@ export interface GoogleApiClientConfig {
   scope?: string;
 
 
-  /**
-   * The UX mode to use for the sign-in flow.
-   * By default, it will open the consent flow in a popup.
-   */
-  ux_mode?: 'popup' | 'redirect';
+  prompt?: string;
 
   /**
    * If using ux_mode='redirect', this parameter allows you to override the default redirect_uri that will be used at the end of the consent flow.

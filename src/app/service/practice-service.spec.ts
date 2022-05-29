@@ -78,8 +78,6 @@ describe('PracticeService', () => {
         numTunesPerAssignment: 10 
     };
 
-    let practiceService = new PracticeService();
-
     beforeEach(() => {
         const json = fs.readFileSync('test/assets/playlist.json', 'utf8');
         const playlist = JSON.parse(json);

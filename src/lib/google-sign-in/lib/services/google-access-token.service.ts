@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ReplaySubject } from 'rxjs';
+import { ReplaySubject, timer } from 'rxjs';
 import { GoogleApiLoaderService } from './google-api-loader.service';
 
 
@@ -10,7 +10,7 @@ export class GoogleAccessTokenService {
     private accessToken: string;
     private tokenClient: TokenClient;
 
-    accessTokenSource = new ReplaySubject<string>(1);
+    readonly accessTokenSource = new ReplaySubject<string>(1);
 
     constructor(private googleApiLoader: GoogleApiLoaderService) {
     }
@@ -23,14 +23,26 @@ export class GoogleAccessTokenService {
                 this.googleApiLoader.onClientLoaded().subscribe(client => {
                     this.tokenClient = client;
                     client.callback = (response) => {
-                        this.accessToken = response.access_token;
-                        this.accessTokenSource.next(this.accessToken);
-                        resolve(this.accessToken);
+                        resolve(this.handleAccessToken(response));
                     };
                     client.requestAccessToken();
                 });
             }
         });
+    }
+
+    private handleAccessToken(response: TokenResponse): string {
+        this.accessToken = response.access_token;
+        this.accessTokenSource.next(this.accessToken);
+        
+        // refresh token after 80 % of lifetime
+        const refreshDuration = response.expires_in * 800;
+        timer(refreshDuration).subscribe(() => {
+            console.log('refreshing access token');
+            this.tokenClient.requestAccessToken();
+        });
+        
+        return this.accessToken;
     }
 
     invalidate() {

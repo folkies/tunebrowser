@@ -26,8 +26,8 @@ export class GoogleApiLoaderService {
             this.client = google.accounts.oauth2.initTokenClient({
                 client_id: config.client_id,
                 scope: config.scope,
-                callback: '',
-                prompt: ''
+                callback: (_) => undefined,
+                prompt: config.prompt || ''
             });
 
             this.clientLoaded.next(this.client);

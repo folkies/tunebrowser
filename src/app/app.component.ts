@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
         private collectionService: TuneBookCollectionService,
         private accessTokenService: GoogleAccessTokenService,
         private zone: NgZone,
-        private router: Router,
         private scroll: ScrollDispatcher) {
 
         this.breakpointObserver.observe([
@@ -41,7 +40,6 @@ export class AppComponent implements OnInit {
             this.signedIn = !!accessToken;
             if (this.initialized) {
                 this.collectionService.loadCollections();
-                this.zone.run(() => this.router.navigate(['/books']));
             }
         });
 
