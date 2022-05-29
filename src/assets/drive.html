@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <div>
+    <button onclick="getToken()">get token</button>
+  </div>
+  <div>
+    <button onclick="listFiles()">list files</button>
+  </div>
+
+  <script>
+    gsiLoaded = false;
+    gapiLoaded = false;
+
+    const SCOPES = 'https://www.googleapis.com/auth/drive.appfolder https://www.googleapis.com/auth/drive.file';
+
+
+    function gsiLoadOk() {
+      console.log("gsi loaded");
+      gsiLoaded = true;
+      getToken();
+    }
+
+    function onAction() {
+      console.log("button clicked");
+    }
+
+    function getToken() {
+      console.log("getting token");
+      if (gsiLoaded && gapiLoaded) {
+        const client = google.accounts.oauth2.initTokenClient({
+          client_id: '98237286064-bf0vbgpqqklhj434vifvfafvtckaja12.apps.googleusercontent.com',
+          scope: SCOPES,
+          callback: handleCredentialResponse,
+          prompt: ''
+        });
+        client.requestAccessToken();
+      }
+    }
+
+    function handleCredentialResponse(response) {
+      console.log(JSON.stringify(response));
+    }
+
+    function listFiles() {
+      gapi.client.drive.files.list({
+        q: `"root" in parents`
+      }).then(resp => resp.result.files.forEach(file => console.log(file.name)));
+    }
+
+    function gapiInit() {
+      gapi.client.init({
+        // NOTE: OAuth2 'scope' and 'client_id' parameters have moved to initTokenClient().
+      })
+        .then(function () {  // Load the Calendar API discovery document.
+          gapi.client.load('https://www.googleapis.com/discovery/v1/apis/drive/v3/rest');
+        });
+      gapiLoaded = true;
+      getToken();
+    }
+
+
+    function gapiLoadOkay() {
+      console.log("gapi loaded");
+      gapi.load('client', gapiInit)
+    }
+
+  </script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoadOkay()"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer onload="gsiLoadOk()"></script>
+
+</body>
+
+</html>

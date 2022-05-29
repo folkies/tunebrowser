@@ -12,10 +12,10 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
  * Builds and displays today's practice assignment for the default repertoire.
  */
 @Component({
-    selector: 'practice',
+    selector: 'app-practice',
     templateUrl: './practice.component.html'
 })
-export class PracticeComponent implements OnInit {
+export class PracticeComponent {
     /** Today's practice assignment (intially undefined). */
     assignment: RepertoireItem[];
 
@@ -37,9 +37,6 @@ export class PracticeComponent implements OnInit {
         private practiceService: PracticeService,
         private index: TuneBookIndex) {
         this.googleAuth.authState.subscribe(auth => this.loadRepertoires());
-    }
-
-    async ngOnInit(): Promise<void> {
     }
 
     private async loadRepertoires() {

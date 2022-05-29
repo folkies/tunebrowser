@@ -1,0 +1,29 @@
+<html>
+
+<body>
+  <div id="button_container"></div>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: '98237286064-bf0vbgpqqklhj434vifvfafvtckaja12.apps.googleusercontent.com',
+        callback: handleCredentialResponse
+      });
+
+      google.accounts.id.renderButton(
+        document.getElementById("button_container"),
+        { theme: 'outline', size: 'large' }        
+      );
+
+    }
+
+    function handleCredentialResponse(response) {
+      console.log(JSON.stringify(response));
+    }
+
+
+  </script>
+
+</body>
+
+</html>

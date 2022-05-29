@@ -5,7 +5,7 @@ import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { RestTuneMatcher } from 'src/app/service/matching/rest-tune-matcher';
 
 @Component({
-    selector: 'matcher',
+    selector: 'app-matcher',
     templateUrl: './matcher.component.html'
 })
 export class MatcherComponent {

@@ -16,7 +16,7 @@ export interface ICaret {
  * via the `caret` output property.
  */
 @Directive({
-    selector: '[caretTracker]'
+    selector: '[appCaretTracker]'
 })
 export class CaretTrackerDirective implements AfterViewInit {
     private $element: HTMLElement;
@@ -32,7 +32,7 @@ export class CaretTrackerDirective implements AfterViewInit {
     ngAfterViewInit() {
         this.$element = this.element.nativeElement;
         if (!(this.contentEditable() || this.isTextarea())) {
-            throw new Error(`caretTracker directive can be used either on textarea or contenteditable element only`);
+            throw new Error(`appCaretTracker directive can be used either on textarea or contenteditable element only`);
         }
     }
 

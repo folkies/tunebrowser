@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Recorder } from 'src/app/service/transcription/recorder';
 
 @Component({
-    selector: 'record',
+    selector: 'app-record',
     templateUrl: './record.component.html'
 })
 export class RecordComponent {
