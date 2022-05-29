@@ -30,20 +30,3 @@ export interface GoogleApiClientConfig {
    */
   discoveryDocs: string[];
 }
-
-export class GoogleApiConfig2 {
-  protected clientConfig: GoogleApiClientConfig;
-  protected mocked: boolean;
-
-  constructor(config: GoogleApiClientConfig) {
-    this.clientConfig = config;
-  }
-
-  public getMocked(): boolean {
-    return this.mocked;
-  }
-
-  public getClientConfig(): GoogleApiClientConfig {
-    return this.clientConfig;
-  }
-}

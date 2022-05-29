@@ -2,8 +2,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/overlay';
 import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
 import { GoogleAccessTokenService } from 'src/lib/google-sign-in/lib/services/google-access-token.service';
+import { GoogleDriveService } from './service/google-drive.service';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 
 @Component({
@@ -20,13 +20,13 @@ export class AppComponent implements OnInit {
     isHandset = false;
     toolbarVisible = true;
 
-    private initialized = false;
     private lastOffset: number;
 
     constructor(
         private breakpointObserver: BreakpointObserver,
         private collectionService: TuneBookCollectionService,
         private accessTokenService: GoogleAccessTokenService,
+        private googleDriveService: GoogleDriveService,
         private zone: NgZone,
         private scroll: ScrollDispatcher) {
 
@@ -36,18 +36,21 @@ export class AppComponent implements OnInit {
             this.isHandset = result.matches;
         });
 
-        this.accessTokenService.accessTokenSource.subscribe(accessToken => {
-            this.signedIn = !!accessToken;
-            if (this.initialized) {
-                this.collectionService.loadCollections();
-            }
-        });
 
         this.scroll
             .scrolled()
             .subscribe((scrollable: CdkScrollable) => {
                 this.zone.run(() => this.onWindowScroll(scrollable));
             });
+
+        this.googleDriveService.driveApiLoaded.subscribe(_ => {
+            this.accessTokenService.accessTokenSource.subscribe(accessToken => {
+                this.zone.run(() => {
+                    this.signedIn = !!accessToken
+                    this.collectionService.loadCollections();
+                });
+            });
+        });
     }
 
     sidenavMode(): string {
@@ -61,7 +64,6 @@ export class AppComponent implements OnInit {
     }
     async ngOnInit(): Promise<void> {
         this.collectionService.loadCollections();
-        this.initialized = true;
     }
 
     private onWindowScroll(scrollable: CdkScrollable) {

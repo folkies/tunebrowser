@@ -1,26 +1,28 @@
 import { Inject, Injectable, InjectionToken } from '@angular/core';
-import { forkJoin, Observable, Observer, ReplaySubject } from 'rxjs';
-import { GoogleApiClientConfig, GoogleApiConfig2 } from '../config/google-api.config';
+import { forkJoin, Observable, ReplaySubject } from 'rxjs';
+import { GoogleApiClientConfig } from '../config/google-api.config';
 import { GoogleSignInLoaderService } from './google-sign-in-loader.service';
 
 export let GSI_CONFIG: InjectionToken<GoogleApiClientConfig> =
     new InjectionToken<GoogleApiClientConfig>('gsi.config');
 
+const GAPI_URL: string = 'https://apis.google.com/js/api.js';
 
 
 @Injectable()
 export class GoogleApiLoaderService {
-    private readonly gapiUrl: string = 'https://apis.google.com/js/api.js';
-    private readonly config: GoogleApiConfig2;
 
-    private client: any;
+    private client: TokenClient;
 
     private clientLoaded = new ReplaySubject<TokenClient>(1);
+    private gapiLoaded = new ReplaySubject<boolean>(1);
 
 
     constructor(@Inject(GSI_CONFIG) config: GoogleApiClientConfig,
         private gsiLoader: GoogleSignInLoaderService) {
-        this.config = new GoogleApiConfig2(config);
+
+        this.loadGapi();
+
         forkJoin([this.onLoad(), this.gsiLoader.onLoad()]).subscribe(() => {
 
             this.client = google.accounts.oauth2.initTokenClient({
@@ -39,33 +41,22 @@ export class GoogleApiLoaderService {
         return this.clientLoaded;
     }
 
-
     public onLoad(): Observable<boolean> {
-        return this.loadGapi();
+        return this.gapiLoaded;
     }
 
-    public getConfig(): GoogleApiConfig2 {
-        return this.config;
-    }
-
-
-
-    private loadGapi(): Observable<boolean> {
-        return new Observable((observer: Observer<boolean>) => {
-            let node = document.createElement('script');
-            node.src = this.gapiUrl;
-            node.type = 'text/javascript';
-            node.charset = 'utf-8';
-            document.getElementsByTagName('head')[0].appendChild(node);
-            node.onload = () => {
-                gapi.load('client', function () {
-                    gapi.client.init({}).then(() => {
-
-                        observer.next(true);
-                        observer.complete();
-                    })
+    private loadGapi(): void {
+        let node = document.createElement('script');
+        node.src = GAPI_URL;
+        node.type = 'text/javascript';
+        node.onload = () => {
+            gapi.load('client', () => {
+                gapi.client.init({}).then(() => {
+                    this.gapiLoaded.next(true);
+                    this.gapiLoaded.complete();
                 })
-            };
-        });
+            })
+        };
+        document.getElementsByTagName('head')[0].appendChild(node);
     }
 }

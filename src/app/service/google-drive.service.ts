@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { getLogger, Logger } from '@log4js2/core';
+import { ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService, GoogleAuthService } from '../../lib/google-sign-in';
 import { MultiPartBuilder } from './multipart-builder';
 
@@ -13,6 +14,8 @@ export interface FileReference {
 @Injectable()
 export class GoogleDriveService {
 
+    readonly driveApiLoaded = new ReplaySubject<boolean>(1);
+
     private log: Logger = getLogger('GoogleDriveService');
 
     private signedIn: boolean;
@@ -24,14 +27,13 @@ export class GoogleDriveService {
         });
 
         this.googleApiLoader.onClientLoaded().subscribe(_ => {
-            gapi.client.load('drive', 'v3');
-            this.log.info('Google Drive client initialized');
+            gapi.client.load('drive', 'v3').then(() => {
+                this.log.info('Google Drive client initialized');
+                this.driveApiLoaded.next(true);
+                this.driveApiLoaded.complete();
+            });
         });
-
     }
-
-
-
 
     private isSignedIn(): boolean {
         return this.signedIn;
