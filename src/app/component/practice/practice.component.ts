@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IndexEntry } from 'src/app/model/index-entry';
 import { Repertoire, RepertoireCollection, RepertoireItem } from 'src/app/model/repertoire';
@@ -36,7 +36,7 @@ export class PracticeComponent {
         private googleAuth: GoogleAuthService,
         private practiceService: PracticeService,
         private index: TuneBookIndex) {
-        this.googleAuth.authState.subscribe(auth => this.loadRepertoires());
+        this.googleAuth.authState.subscribe(() => this.loadRepertoires());
     }
 
     private async loadRepertoires() {

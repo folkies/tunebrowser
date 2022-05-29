@@ -13,9 +13,9 @@ export class GoogleAccessTokenService {
     readonly accessTokenSource = new ReplaySubject<string>(1);
 
     constructor(private googleApiLoader: GoogleApiLoaderService) {
-        this.googleApiLoader.onClientLoaded().subscribe(client => this.checkStoredAccessToken(client));
+        this.googleApiLoader.onClientLoaded().subscribe(() => this.checkStoredAccessToken());
     }
-    checkStoredAccessToken(client: TokenClient): void {
+    checkStoredAccessToken(): void {
         const accessToken = localStorage.getItem("accessToken");
         const refresh = parseInt(localStorage.getItem("accessTokenRefresh"))
         const now = new Date().getTime();
@@ -37,7 +37,7 @@ export class GoogleAccessTokenService {
     }
 
     async fetchAccessToken(): Promise<string> {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             if (this.accessToken) {
                 resolve(this.accessToken);
             } else {
