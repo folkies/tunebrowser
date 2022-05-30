@@ -1,9 +1,9 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Remote } from 'comlink';
-import { TranscriberProvider } from './transcriber-provider';
-import { ITranscriber, PushResult, TranscriptionInitParams, TranscriptionResult } from './transcription';
-import { AudioContextProvider } from './audio-context-provider';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { AudioContextProvider } from './audio-context-provider';
+import { TranscriberProvider } from './transcriber-provider';
+import { ITranscriber, TranscriptionInitParams, TranscriptionResult } from './transcription';
 
 @Injectable()
 export class Recorder {
@@ -48,7 +48,7 @@ export class Recorder {
     get signal() { return this._signal; }
 
     constructor(
-        private audioContextProvider: AudioContextProvider, 
+        private audioContextProvider: AudioContextProvider,
         private transcriberProvider: TranscriberProvider,
         private zone: NgZone) {
         this._transcriber = this.transcriberProvider.transcriber();
@@ -72,11 +72,11 @@ export class Recorder {
 
                 this._input = this._audioContext.createMediaStreamSource(this._stream);
                 this._processor = this._audioContext.createScriptProcessor(bufferSize, 1, 1);
-            
+
                 this._processor.onaudioprocess = e => this.update(e);
-            
+
                 this._input.connect(this._processor);
-                this._processor.connect(this._audioContext.destination);        
+                this._processor.connect(this._audioContext.destination);
             }
         }
         catch (err) {
@@ -91,7 +91,7 @@ export class Recorder {
     start() {
         if (!this._stream) return;
 
-        let initParams: TranscriptionInitParams = {
+        const initParams: TranscriptionInitParams = {
             inputSampleRate: this._audioContext.sampleRate,
             sampleTime: this.sampleTime,
             blankTime: this.blankTime,
@@ -107,10 +107,14 @@ export class Recorder {
         this._status = Status.STOPPED;
         this._amplitude = 0;
         this._timeRecorded = 0;
-        this._stream && this._stream.getTracks().forEach(t => t.stop());
-        this._processor.disconnect(this._audioContext.destination);        
+        if (this._stream) { 
+            this._stream.getTracks().forEach(t => t.stop());
+            // This is needed to turn of the recording symbol in the browser
+            this._stream = null;
+        }
+        this._processor.disconnect(this._audioContext.destination);
         this._input.disconnect(this._processor);
-}
+    }
 
     destroy() {
         this.stop();
@@ -120,10 +124,10 @@ export class Recorder {
     private async update(e: AudioProcessingEvent): Promise<void> {
         if (this._status != Status.RECORDING) {
             return;
-        };
+        }
 
-        let audio = e.inputBuffer;
-        let signalBuffer = audio.getChannelData(0);
+        const audio = e.inputBuffer;
+        const signalBuffer = audio.getChannelData(0);
 
         const msg = await this._transcriber.pushSignal(signalBuffer)
         this._amplitude = msg.amplitude;
@@ -133,11 +137,11 @@ export class Recorder {
             this.progressSource.next(this.progressPercentage));
 
         if (msg.isBufferFull) {
-            await this.analyzeSignal(msg);
+            await this.analyzeSignal();
         }
     }
 
-    private async analyzeSignal(msg: PushResult): Promise<void> {
+    private async analyzeSignal(): Promise<void> {
         this.stop();
         this._status = Status.ANALYZING;
 
@@ -156,4 +160,4 @@ export enum Status {
     ANALYZING = 'ANALYZING',
     ANALYSIS_SUCCEEDED = 'ANALYSIS_SUCCEEDED',
     API_MISSING = 'API_MISSING',
-};
+}
