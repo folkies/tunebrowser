@@ -20,7 +20,7 @@ export class GoogleAccessTokenService {
         const refresh = parseInt(localStorage.getItem("accessTokenRefresh"))
         const now = new Date().getTime();
 
-        if (!!accessToken) {
+        if (accessToken) {
             if (now < refresh) {
                 console.log('reusing stored access token');
                 this.accessToken = accessToken;

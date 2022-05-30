@@ -8,7 +8,6 @@ const DEFAULT_SAMPLE_RATE = 22050;
 const DEFAULT_SAMPLE_TIME = 12;
 const DEFAULT_BLANK_TIME = 2;
 const DEFAULT_FUNDAMENTAL = 'D';
-const DEFAULT_FRAME_SIZE = 'auto';
 const OVERLAP = 0.75;
 
 export interface Note {
@@ -39,7 +38,7 @@ export default class Transcriber {
     private interrupted: boolean;
     private signal: Float32Array;
 
-    private frameSize: any;
+    private frameSize: number;
     private hopSize: number;
     private windowFunction: WindowFunction;
     private powerSpectrum: FFT;
@@ -67,13 +66,9 @@ export default class Transcriber {
             ? params.enableSampleRateConversion
             : false;
 
-        this.frameSize = typeof params.frameSize !== 'undefined'
-            ? params.frameSize
-            : DEFAULT_FRAME_SIZE;
-
         this.onProgress = typeof params.onProgress !== 'undefined'
             ? params.onProgress
-            : (x: number) => { };
+            : () => undefined;
 
         if (this.enableSampleRateConversion) {
             this.outputSampleRate = DEFAULT_SAMPLE_RATE;
@@ -85,9 +80,9 @@ export default class Transcriber {
         this.numInputSamples = this.inputSampleRate * (this.blankTime + this.sampleTime);
         this.numOutputSamples = this.outputSampleRate * (this.blankTime + this.sampleTime);
 
-        if (this.frameSize === 'auto') {
-            this.frameSize = this.calcFrameSize(this.outputSampleRate);
-        }
+        this.frameSize = typeof params.frameSize !== 'undefined'
+            ? params.frameSize
+            : this.calcFrameSize(this.outputSampleRate);
 
         this.hopSize = this.frameSize * (1 - OVERLAP);
 
@@ -103,9 +98,9 @@ export default class Transcriber {
             this.signal = signal;
         }
 
-        let speller = new PitchSpeller(this.fundamental);
-        let numHops = Math.floor((this.outputSampleRate * this.sampleTime - this.frameSize) / this.hopSize) + 1;
-        let notes: Note[] = [];
+        const speller = new PitchSpeller(this.fundamental);
+        const numHops = Math.floor((this.outputSampleRate * this.sampleTime - this.frameSize) / this.hopSize) + 1;
+        const notes: Note[] = [];
         let lastNote = '';
         const numBlankSamples = this.blankTime * this.outputSampleRate;
 
@@ -114,11 +109,11 @@ export default class Transcriber {
                 return '';
             }
 
-            let startAt = numBlankSamples + this.hopSize * i;
+            const startAt = numBlankSamples + this.hopSize * i;
             this.progress = i / numHops;
             this.onProgress(this.progress);
 
-            let frame = this.signal.slice(startAt, startAt + this.frameSize);
+            const frame = this.signal.slice(startAt, startAt + this.frameSize);
             
             // skip last frame if it is too short
             if (frame.length != this.frameSize) {
@@ -126,17 +121,17 @@ export default class Transcriber {
             }
 
             this.windowFunction.process(frame);
-            let spectrum = this.powerSpectrum.forward(frame);
+            const spectrum = this.powerSpectrum.forward(frame);
 
-            let frequency = PitchDetector.mikelsFrequency(spectrum, this.outputSampleRate, this.frameSize);
+            const frequency = PitchDetector.mikelsFrequency(spectrum, this.outputSampleRate, this.frameSize);
 
-            let currentNote = midi
+            const currentNote = midi
                 ? speller.spellFrequencyAsMidi(frequency)
                 : speller.spellFrequency(frequency);
 
             if (currentNote != lastNote) {
                 lastNote = currentNote;
-                let note = {
+                const note = {
                     spelling: currentNote,
                     frequency: frequency,
                     onset: startAt / this.outputSampleRate,
@@ -145,16 +140,16 @@ export default class Transcriber {
             }
         }
 
-        let transcription = this.postProcess(notes, midi);
+        const transcription = this.postProcess(notes, midi);
         return transcription;
     }
 
     private convertSampleRate(inSignal: Float32Array): Float32Array {
-        let outSignal = new Float32Array(this.numOutputSamples);
+        const outSignal = new Float32Array(this.numOutputSamples);
         let end = 0;
 
         for (let i = 0; i < outSignal.length; i++) {
-            let begin = end;
+            const begin = end;
             end = Math.floor((i + 1) * this.inputSampleRate / this.outputSampleRate);
             let sum = 0;
 
@@ -178,14 +173,14 @@ export default class Transcriber {
 
         notes.slice(-1)[0].duration = this.blankTime + this.sampleTime - notes.slice(-1)[0].onset;
 
-        let durations = new Array(notes.length);
+        const durations = new Array(notes.length);
         for (let i = 0; i < notes.length; i++) {
             durations[i] = notes[i].duration;
         }
 
-        let quaverLength = FuzzyHistogram.calculatePeak(durations, 0.33, 0.1);
+        const quaverLength = FuzzyHistogram.calculatePeak(durations, 0.33, 0.1);
 
-        for (let note of notes) {
+        for (const note of notes) {
             if (note.spelling == 'Z') continue;
 
             note.qq = Math.round(note.duration / quaverLength);

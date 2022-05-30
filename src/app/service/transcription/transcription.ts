@@ -2,7 +2,7 @@ export interface TranscriptionResult {
     transcription: string;
     sampleRate: number;
     numSamples: number;
-};
+}
 
 export interface PushResult {
     amplitude: number;
@@ -18,7 +18,7 @@ export interface TranscriptionInitParams {
     blankTime?: number;
     frameSize?: number;
     onProgress?: (x: number) => void;
-};
+}
 
 
 export interface ITranscriber {

@@ -2,9 +2,9 @@ export class PitchDetector {
     
     static mikelsFrequency(fftMag: number[], sampleRate: number, frameSize: number): number {
         let frequency = 0;
-        let pitchPeek = 2;
+        const pitchPeek = 2;
 
-        let peaks = PitchDetector.calculatePeaks(fftMag, pitchPeek, fftMag.length, 0);
+        const peaks = PitchDetector.calculatePeaks(fftMag, pitchPeek, fftMag.length, 0);
 
         peaks.sort((a, b) => fftMag[b] - fftMag[a]);
 
@@ -12,16 +12,16 @@ export class PitchDetector {
         const NUM_HARMONICS = 10;
         let maxEnergy = 0;
         let maxCandidate = 0;
-        let binWidth = sampleRate / frameSize;
+        const binWidth = sampleRate / frameSize;
 
         for (let i = 0; i < NUM_CANDIDATES; i++) {
-            let candidate = peaks[i];
+            const candidate = peaks[i];
             let energy = 0;
 
             for (let j = 0; j < NUM_HARMONICS; j++) {
-                let harmonic = candidate + (j * candidate);
-                let hLow = harmonic - 2;
-                let hHigh = harmonic + 2;
+                const harmonic = candidate + (j * candidate);
+                const hLow = harmonic - 2;
+                const hHigh = harmonic + 2;
                 let maxLittleBit = -1;
 
                 for (let k = hLow; k <= hHigh; k++) {
@@ -57,7 +57,7 @@ export class PitchDetector {
         }
 
         thresholdValue *= thresholdNormal;
-        let peaks = [];
+        const peaks = [];
 
         if (howFar >= border) {
             for (let i = border; i < howFar - border; i++) {

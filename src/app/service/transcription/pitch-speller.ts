@@ -24,7 +24,7 @@ const FUNDAMENTAL_FREQUENCIES = {
 enum PitchModel {
     FLUTE,
     WHISTLE
-};
+}
 
 export class PitchSpeller {
     private fundamentalFrequency: number;
@@ -45,7 +45,7 @@ export class PitchSpeller {
 
     private makeScale(mode: string) {
         // W - W - H - W - W - H - H - H
-        let majorKeyIntervals = [1, 2, 4, 5];
+        const majorKeyIntervals = [1, 2, 4, 5];
 
         if (mode == 'major') {
             if (this.pitchModel == PitchModel.FLUTE) {
@@ -90,7 +90,7 @@ export class PitchSpeller {
         }
 
         for (let i = 0; i < this.knownFrequencies.length; i++) {
-            let difference = Math.abs(frequency - this.knownFrequencies[i]);
+            const difference = Math.abs(frequency - this.knownFrequencies[i]);
             if (difference < minDiff) {
                 minIndex = i;
                 minDiff = difference;
@@ -109,7 +109,7 @@ export class PitchSpeller {
         }
 
         for (let i = 0; i < this.midiNotes.length; i++) {
-            let difference = Math.abs(frequency - this.midiNotes[i]);
+            const difference = Math.abs(frequency - this.midiNotes[i]);
             if (difference < minDiff) {
                 minIndex = i;
                 minDiff = difference;

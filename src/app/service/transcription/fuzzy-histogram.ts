@@ -1,15 +1,15 @@
 export class FuzzyHistogram {
     
     static calculatePeak(data: number[], fuzz: number, atLeast: number): number {
-        let candidateLengths = [];
+        const candidateLengths = [];
 
-        for (let item of data) {
+        for (const item of data) {
             let found = false;
 
             for (let j = 0; j < candidateLengths.length; j++) {
-                let current = candidateLengths[j];
-                let upper = current.value * (1.0 + fuzz);
-                let lower = current.value * (1.0 - fuzz);
+                const current = candidateLengths[j];
+                const upper = current.value * (1.0 + fuzz);
+                const lower = current.value * (1.0 - fuzz);
 
                 if (item >= lower && item <= upper) {
                     found = true;
@@ -30,8 +30,8 @@ export class FuzzyHistogram {
 
         candidateLengths.sort((a, b) => b.count - a.count);
 
-        for (let candidate of candidateLengths) {
-            let duration = candidate.value;
+        for (const candidate of candidateLengths) {
+            const duration = candidate.value;
             if (duration >= atLeast) {
                 return duration;
             }
