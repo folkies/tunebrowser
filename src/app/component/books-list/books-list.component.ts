@@ -18,7 +18,7 @@ export class BooksListComponent {
         this.googleAuth.authState.subscribe(auth => {
             this.signedIn = !!auth;
         });
-        this.collectionService.collectionLoaded.subscribe(event => this.books = this.collectionService.getBooks());
+        this.collectionService.collectionLoaded.subscribe(() => this.books = this.collectionService.getBooks());
     }
 
     isEditable(bookRef: TuneBookReference) {

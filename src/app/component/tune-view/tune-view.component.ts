@@ -13,8 +13,6 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
     @ViewChild('notation', { static: false })
     div: ElementRef;
 
-    constructor() { }
-
     ngAfterViewInit() {
         this.renderNotation();
     }

@@ -47,7 +47,7 @@ export function minEditDistance(pattern: string, text: string, d: number[][]): n
     let min = Number.MAX_SAFE_INTEGER;
     const tLength = text.length;
     for (let i = 0; i < tLength + 1; i++) {
-        let c = lastRow[i];
+        const c = lastRow[i];
         if (c < min) {
             min = c;
         }

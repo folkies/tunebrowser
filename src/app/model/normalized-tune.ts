@@ -7,4 +7,4 @@ export interface NormalizedTune {
     key: string;
     ed?: number;
     confidence?: number;
-};
+}

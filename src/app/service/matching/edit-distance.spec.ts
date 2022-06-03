@@ -1,7 +1,7 @@
 import { minEditDistance } from "./edit-distance";
 
 describe('Edit distance', () => {
-    let d: number[][] = [];
+    const d: number[][] = [];
 
     const MAX = 1000;
     for (let i = 0; i < 2; i++) {

@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import abcjs, { TuneBook } from 'abcjs/midi';
 import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-tune-editor',

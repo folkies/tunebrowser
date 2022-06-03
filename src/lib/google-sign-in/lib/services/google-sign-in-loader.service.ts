@@ -9,7 +9,7 @@ export class GoogleSignInLoaderService {
     private gsiLoadedSource = new ReplaySubject<boolean>(1);
 
     constructor() {
-        let node = document.createElement('script');
+        const node = document.createElement('script');
         node.src = GSI_URL;
         node.type = 'text/javascript';
         node.onload = () => {

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { TuneBookEntry } from 'abcjs/midi';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TuneBookIndex } from 'src/app/service/tunebook-index';
+import { TuneBookEntry } from 'abcjs/midi';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
+import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-tunes-list',
@@ -28,6 +28,6 @@ export class TunesListComponent {
     }
 
     private onReady(event?: string) {
-        this.entries = this.index.findAllTunesInBook(this.bookId);
+        this.entries = this.index.findAllTunesInBook(event);
     }
 }

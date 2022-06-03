@@ -33,8 +33,8 @@ export class TuneMatcher implements ITuneMatcher {
 
     findBestMatches(query: string): NormalizedTune[] {
         let numTunes = 0;
-        let results: NormalizedTune[] = [];
-        for (let tune of this.normalizedTunes) {
+        const results: NormalizedTune[] = [];
+        for (const tune of this.normalizedTunes) {
             tune.ed = minEditDistance(query, tune.normalized, this.d);
             tune.confidence = 1.0 - (tune.ed / query.length);
 
@@ -51,7 +51,7 @@ export class TuneMatcher implements ITuneMatcher {
         results.sort((left, right) => left.ed - right.ed);
         const topHits = [];
         let tuneId = '';
-        for (let tune of results) {
+        for (const tune of results) {
             if (tune.tune !== tuneId) {
                 tuneId = tune.tune;
                 topHits.push(tune);

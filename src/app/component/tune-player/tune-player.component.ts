@@ -42,8 +42,6 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
         return this.bpm;
     }
 
-    constructor() { }
-
     ngAfterViewInit() {
         this.renderMidiPlayer();
     }
