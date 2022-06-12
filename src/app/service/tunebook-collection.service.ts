@@ -50,7 +50,7 @@ export class TuneBookCollectionService {
         if (book.tunes === undefined) {
             book.tunes = [];
         }
-        let tune = book.tunes.find(tune => tune.id === tuneId);
+        const tune = book.tunes.find(tune => tune.id === tuneId);
         if (tune === undefined) {
             book.tunes.push({ id: tuneId, tags });
         } else {
@@ -104,7 +104,7 @@ export class TuneBookCollectionService {
     }
 
     private mergeBooks(targetBooks: TuneBookDescriptor[], mixinBook: TuneBookDescriptor): TuneBookDescriptor {
-        let targetBook = targetBooks.find(book => book.id === mixinBook.id);
+        const targetBook = targetBooks.find(book => book.id === mixinBook.id);
         if (targetBook === undefined) {
             targetBooks.push(mixinBook);
             return mixinBook;
@@ -152,11 +152,11 @@ export class TuneBookCollectionService {
     }
 
     private addTagsToIndex(): void {
-        for (let book of this.collection.books) {
+        for (const book of this.collection.books) {
             if (!book.tunes) {
                 continue;
             }
-            for (let tune of book.tunes) {
+            for (const tune of book.tunes) {
                 if (tune.tags) {
                     this.index.setTagsForTune(tune.id, book.id, tune.tags);
                 }

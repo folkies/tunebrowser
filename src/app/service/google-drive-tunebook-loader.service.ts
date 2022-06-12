@@ -32,10 +32,10 @@ export class GoogleDriveTunebookLoaderService implements Loader {
      * @returns tunebook collection manifest
      */
     async loadTuneBookCollection(): Promise<TuneBookCollection> {
-        if (await this.googleDrive.isDefinitelySignedOut()) {
+        const folderId = await this.googleDrive.findOrCreateFolder(TUNE_FOLDER);
+        if (! folderId) {
             return {books: []};
         }
-        const folderId = await this.googleDrive.findOrCreateFolder(TUNE_FOLDER);
         const fileRefs = await this.googleDrive.listTextFiles(folderId);
         const collectionRef = fileRefs.find(ref => ref.name === TUNEBOOK_COLLECTION);
         let collectionJson: string;

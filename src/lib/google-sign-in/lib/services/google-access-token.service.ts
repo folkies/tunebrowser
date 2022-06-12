@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { ReplaySubject, timer } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService } from './google-api-loader.service';
 
-
+const ACCESS_TOKEN = 'accessToken';
+const ACCESS_TOKEN_REFRESH = 'accessTokenRefresh';
 
 @Injectable()
 export class GoogleAccessTokenService {
@@ -13,32 +14,36 @@ export class GoogleAccessTokenService {
     readonly accessTokenSource = new ReplaySubject<string>(1);
 
     constructor(private googleApiLoader: GoogleApiLoaderService) {
-        this.googleApiLoader.onClientLoaded().subscribe(() => this.checkStoredAccessToken());
+        this.googleApiLoader.onClientLoaded().subscribe(client => this.checkStoredAccessToken(client));
     }
-    checkStoredAccessToken(): void {
-        const accessToken = localStorage.getItem("accessToken");
-        const refresh = parseInt(localStorage.getItem("accessTokenRefresh"))
-        const now = new Date().getTime();
+    private checkStoredAccessToken(client: TokenClient): void {
+        this.tokenClient = client;
+        const accessToken = localStorage.getItem(ACCESS_TOKEN);
 
         if (accessToken) {
-            if (now < refresh) {
+            if (this.isTokenValid()) {
                 console.log('reusing stored access token');
-                this.accessToken = accessToken;
-                gapi.client.setToken({access_token: this.accessToken});
-                this.accessTokenSource.next(this.accessToken);
-                timer(refresh - now).subscribe(() => {
-                    console.log('refreshing access token');
-                    this.fetchAccessToken();
-                });
+                if (!this.accessToken) {
+                    this.accessToken = accessToken;
+                    gapi.client.setToken({ access_token: this.accessToken });
+                    this.accessTokenSource.next(this.accessToken);
+                }
             } else {
                 this.fetchAccessToken();
             }
         }
     }
 
+    private isTokenValid(): boolean {
+        const accessToken = localStorage.getItem(ACCESS_TOKEN);
+        const refresh = parseInt(localStorage.getItem(ACCESS_TOKEN_REFRESH))
+        const now = new Date().getTime();
+        return accessToken && (now < refresh);
+    }
+
     async fetchAccessToken(): Promise<string> {
         return new Promise((resolve) => {
-            if (this.accessToken) {
+            if (this.isTokenValid()) {
                 resolve(this.accessToken);
             } else {
                 this.googleApiLoader.onClientLoaded().subscribe(client => {
@@ -54,23 +59,21 @@ export class GoogleAccessTokenService {
 
     private handleAccessToken(response: TokenResponse): string {
         this.accessToken = response.access_token;
-        this.accessTokenSource.next(this.accessToken);
 
         // refresh token after 80 % of lifetime
-        const refreshDuration = response.expires_in * 800;
-        timer(refreshDuration).subscribe(() => {
-            console.log('refreshing access token');
-            this.tokenClient.requestAccessToken();
-        });
+        const refreshDuration = response.expires_in * 80;
 
-        localStorage.setItem("accessToken", this.accessToken);
-        localStorage.setItem("accessTokenRefresh", (new Date().getTime() + refreshDuration).toString());
+        localStorage.setItem(ACCESS_TOKEN, this.accessToken);
+        localStorage.setItem(ACCESS_TOKEN_REFRESH, (new Date().getTime() + refreshDuration).toString());
 
+        this.accessTokenSource.next(this.accessToken);
         return this.accessToken;
     }
 
     invalidate() {
         if (this.accessToken && this.tokenClient) {
+            localStorage.removeItem(ACCESS_TOKEN);
+            localStorage.removeItem(ACCESS_TOKEN_REFRESH);    
             this.accessToken = '';
             this.accessTokenSource.next(this.accessToken);
         }

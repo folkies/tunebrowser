@@ -75,7 +75,7 @@ export class RepertoireRepository {
      * @return repertoire collection.
      */
     async load(): Promise<RepertoireCollection> {
-        if (await this.googleDrive.isDefinitelySignedOut()) {
+        if (! await this.googleDrive.isSignedIn()) {
             return {repertoires: []};
         }
 

@@ -35,17 +35,16 @@ export class GoogleDriveService {
         });
     }
 
-    private isSignedIn(): boolean {
-        return this.signedIn;
+    async isSignedIn(): Promise<boolean> {
+        if (!this.signedIn && !this.googleAuth.isSignInPending()) {
+            return false;
+        }
+        return this.googleAuth.refresh().then(() => true);
     }
 
-
-    async isDefinitelySignedOut(): Promise<boolean> {
-        return !this.isSignedIn();
-    }
 
     async createTextFile(fileName: string, content: string): Promise<string> {
-        if (!this.isSignedIn()) {
+        if (!await this.isSignedIn()) {
             return undefined;
         }
         try {
@@ -81,7 +80,7 @@ export class GoogleDriveService {
     }
 
     async updateTextFile(fileId: string, content: string): Promise<string> {
-        if (!this.isSignedIn()) {
+        if (! await this.isSignedIn()) {
             return undefined;
         }
         try {
@@ -114,7 +113,7 @@ export class GoogleDriveService {
     }
 
     async listTextFiles(folderId: string): Promise<FileReference[]> {
-        if (!this.isSignedIn()) {
+        if (! await this.isSignedIn()) {
             return [];
         }
         const response = await gapi.client.drive.files.list({
@@ -140,7 +139,7 @@ export class GoogleDriveService {
     }
 
     async findOrCreateFolder(folderName: string): Promise<string> {
-        if (!this.isSignedIn()) {
+        if (! await this.isSignedIn()) {
             return undefined;
         }
 

@@ -16,7 +16,7 @@ export class LogoutComponent {
         private router: Router,
         private googleAuth: GoogleAuthService) {
 
-        this.route.url.subscribe(_ => this.onAction());
+        this.route.url.subscribe(() => this.onAction());
     }
 
     private onAction(): void {
