@@ -61,7 +61,7 @@ export class GoogleAccessTokenService {
         this.accessToken = response.access_token;
 
         // refresh token after 80 % of lifetime
-        const refreshDuration = response.expires_in * 80;
+        const refreshDuration = response.expires_in * 800;
 
         localStorage.setItem(ACCESS_TOKEN, this.accessToken);
         localStorage.setItem(ACCESS_TOKEN_REFRESH, (new Date().getTime() + refreshDuration).toString());
