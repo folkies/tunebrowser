@@ -12,6 +12,9 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "importHelpers": true,
+    "paths": {
+      "abcjs6": ["src/@types/abcjs6"]
+    },
     "target": "es2015",
     "typeRoots": [
       "node_modules/@types"

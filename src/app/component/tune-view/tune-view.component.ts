@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
-import abcjs from 'abcjs/midi';
+import abcjs from 'abcjs6';
 
 @Component({
     selector: 'app-tune-view',

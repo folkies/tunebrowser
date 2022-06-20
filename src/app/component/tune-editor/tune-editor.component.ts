@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
-import abcjs, { TuneBook } from 'abcjs/midi';
+import abcjs, { TuneBook } from 'abcjs';
 import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';

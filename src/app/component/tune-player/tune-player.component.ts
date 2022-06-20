@@ -1,5 +1,8 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
-import abcjs from 'abcjs/midi';
+
+import abcjs from 'abcjs6';
+import { AudioContextProvider } from 'src/app/service/transcription/audio-context-provider';
+
 
 @Component({
     selector: 'app-tune-player',
@@ -15,15 +18,17 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
     private abc = '';
 
-    private parsedTune: abcjs.Tune;
+    private parsedTune: abcjs.TuneObject;
 
     @ViewChild('midiplayer', { static: false })
     div: ElementRef;
+    synth: abcjs.MidiBuffer;
+    synthControl: abcjs.SynthObjectController;
 
     @Input()
     set tune(tune: string) {
         this.abc = tune;
-        this.parsedTune = abcjs.parseOnly(this.tune)[0];
+        this.parsedTune = abcjs.renderAbc("*", this.abc)[0]
         this.computeQpm();
     }
 
@@ -42,6 +47,13 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
         return this.bpm;
     }
 
+    constructor(private audioContextProvider: AudioContextProvider) {
+        this.synth = new abcjs.synth.CreateSynth();
+        this.synthControl = new abcjs.synth.SynthController();
+    }
+
+
+
     ngAfterViewInit() {
         this.renderMidiPlayer();
     }
@@ -50,13 +62,35 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
         this.renderMidiPlayer();
     }
 
-    private renderMidiPlayer(): void {
+    private async renderMidiPlayer(): Promise<void> {
         if (this.div !== undefined && this.tune.length > 0) {
-            abcjs.renderMidi(this.div.nativeElement, this.tune, {
-                chordsOff: true,
-                program: this.instrumentByName('flute'),
-                qpm: this.qpm
+            const myContext = await this.audioContextProvider.audioContext();
+
+            const midiBuffer = await this.synth.init({
+                audioContext: myContext,
+                visualObj: this.parsedTune,
+                millisecondsPerMeasure: 500,
             });
+
+            this.synthControl.load(this.div.nativeElement, 
+            null, 
+            {
+                displayLoop: true, 
+                displayRestart: true, 
+                displayPlay: true, 
+                displayProgress: true,
+                displayWarp: true 
+            }
+        );
+        const response = await this.synthControl.setTune(this.parsedTune, false, {
+            chordsOff: true,
+            program: this.instrumentByName('flute'),
+            qpm: this.qpm 
+
+        });
+
+
+
         }
     }
 
