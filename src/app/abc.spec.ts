@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { numberOfTunes, TuneBook, parseOnly, signature, MultiStaff } from 'abcjs';
+import { numberOfTunes, TuneBook, parseOnly, signature } from 'abcjs';
 
 function includeNumberInTitle(abc: string): string {
     const match = abc.match(/^T:(\s*)(\d+[a-z]?\s*)/m);
@@ -85,7 +85,7 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         expect(tune.version).toBe('1.0.1');
         expect(tune.metaText.url).toBe('http://example.com/tunes/20a');
         expect(tune.metaText.rhythm).toBe('polka');
-        const multiStaff = tune.lines[0] as MultiStaff;
+        const multiStaff = tune.lines[0];
         const key = multiStaff.staff[0].key;
         expect(key.root).toBe('A');
         expect(key.mode).toBe('Dor');

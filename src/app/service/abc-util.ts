@@ -38,7 +38,7 @@ export function extractAllMetadata(tuneBookAbc: string): TuneDescriptor[] {
 
 /**
  * Extracts metadata from the given tune.
- * @param tuneBookAbc tune as ABC string
+ * @param tuneBookEntry tune as ABC string
  * @returns metadata (id, rhythm and normalized key)
  */
 export function extractMetadata(tuneBookEntry: AnalyzedTune): TuneDescriptor {

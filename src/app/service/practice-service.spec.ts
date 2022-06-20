@@ -19,7 +19,7 @@ function addTune(repertoire: Repertoire, name: string, added: string, practiced?
 }
 
 function showSessionForDate(repertoire: Repertoire, date: Date): void {
-    let practiceService = new PracticeService();
+    const practiceService = new PracticeService();
     let output = date.toString() + '\n';
     const session = practiceService.buildPracticeAssignment(repertoire, date);
     session.forEach(item => output += item.tune.tuneId + '\n');
@@ -28,7 +28,7 @@ function showSessionForDate(repertoire: Repertoire, date: Date): void {
 }
 
 function resolveSessionForDate(repertoire: Repertoire, date: Date, index: TuneBookIndex): void {
-    let practiceService = new PracticeService();
+    const practiceService = new PracticeService();
     let output = date.toString() + '\n';
     const session = practiceService.buildPracticeAssignment(repertoire, date);
     session.forEach(item => output += findTitle(item, index) + '\n');
@@ -71,7 +71,7 @@ function readDefaultRepertoire(): Repertoire {
 } 
 
 describe('PracticeService', () => {
-    let repertoire: Repertoire = {
+    const repertoire: Repertoire = {
         name: 'Flute',
         items: [],
         maxAge: 30,
@@ -101,7 +101,7 @@ describe('PracticeService', () => {
     test('should verify repertoire', () => {
         const myRepertoire = readDefaultRepertoire();
         const index = buildIndex();
-        let rep = []
+        const rep = []
         myRepertoire.items.forEach(item => {
             if (item.tune.bookId !== 'rover2') {
                 const entry = index.findEntryByTuneReference(item.tune);
