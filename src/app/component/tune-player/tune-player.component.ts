@@ -19,17 +19,15 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     private abc = '';
 
     private parsedTune: abcjs.TuneObject;
+    private synthControl: abcjs.SynthObjectController;
 
     @ViewChild('midiplayer', { static: false })
     div: ElementRef;
-    synth: abcjs.MidiBuffer;
-    synthControl: abcjs.SynthObjectController;
 
     @Input()
     set tune(tune: string) {
         this.abc = tune;
         this.parsedTune = abcjs.renderAbc("*", this.abc)[0]
-        this.computeQpm();
     }
 
     get tune(): string {
@@ -39,19 +37,16 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     @Input()
     set tempo(tempo: number) {
         this.bpm = tempo;
-        this.computeQpm();
-        this.renderMidiPlayer();
+        this.synthControl.setWarp(tempo);
     }
 
     get tempo(): number {
         return this.bpm;
     }
 
-    constructor(private audioContextProvider: AudioContextProvider) {
-        this.synth = new abcjs.synth.CreateSynth();
+    constructor() {
         this.synthControl = new abcjs.synth.SynthController();
     }
-
 
 
     ngAfterViewInit() {
@@ -62,15 +57,8 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
         this.renderMidiPlayer();
     }
 
-    private async renderMidiPlayer(): Promise<void> {
+    private async renderMidiPlayer(): Promise<abcjs.SynthInitResponse> {
         if (this.div !== undefined && this.tune.length > 0) {
-            const myContext = await this.audioContextProvider.audioContext();
-
-            const midiBuffer = await this.synth.init({
-                audioContext: myContext,
-                visualObj: this.parsedTune,
-                millisecondsPerMeasure: 500,
-            });
 
             this.synthControl.load(this.div.nativeElement,
                 null,
@@ -82,33 +70,16 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
                     displayWarp: true
                 }
             );
-            const response = await this.synthControl.setTune(this.parsedTune, false, {
+            // ugly hack for setting the tempo, since the audioParams seem to have no effect
+            this.parsedTune.metaText.tempo = {bpm: this.bpm, startChar: 0, endChar: 0};
+            return this.synthControl.setTune(this.parsedTune, true, {
                 chordsOff: true,
-                program: this.instrumentByName('flute'),
-                qpm: this.qpm
-
+                program: this.instrumentByName('flute')
             });
         }
     }
 
     private instrumentByName(name: string): number {
         return abcjs.synth.instrumentIndexToName.indexOf(name.toLowerCase());
-    }
-
-    private computeQpm(): void {
-        const fraction = this.parsedTune.getMeterFraction();
-        if (fraction.den === 2) {
-            // the beat is a half note
-            this.qpm = 2 * this.bpm;
-        }
-        else if (fraction.den === 8) {
-            if (fraction.num === 3 || fraction.num === 6 || fraction.num === 9 || fraction.num === 12) {
-                // the beat is a dotted quarter note
-                this.qpm = 3 * this.bpm / 2;
-            }
-        } else {
-            // we assume the beat is a quarter note
-            this.qpm = this.bpm;
-        }
     }
 }

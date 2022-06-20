@@ -92,10 +92,14 @@ app-snippet-view div {
     max-height:80px;
 }
 
-.abcjs-inline-midi {
+.abcjs-inline-audio {
     max-width: 780px;
     margin-bottom: 1em;
     margin-right: 2em;
+}
+
+.abcjs-inline-audio .abcjs-tempo-wrapper {
+    display: none;
 }
 
 div.tunebook-item {

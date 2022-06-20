@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { Repertoire, RepertoireCollection, RepertoireItem, TuneReference } from '../model/repertoire';
 import { GoogleDriveService } from './google-drive.service';
