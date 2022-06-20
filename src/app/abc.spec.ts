@@ -82,7 +82,7 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         expect(tune.getBpm()).toBe(180);
         expect(tune.getMeter()).toEqual({ type: 'specified', value: [{ num: '2', den: '4' }] });
         expect(tune.getMeterFraction()).toEqual({ num: 2, den: 4 });
-        expect(tune.version).toBe('1.0.1');
+        expect(tune.version).toBe('1.1.0');
         expect(tune.metaText.url).toBe('http://example.com/tunes/20a');
         expect(tune.metaText.rhythm).toBe('polka');
         const multiStaff = tune.lines[0];
@@ -92,7 +92,7 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
     });
 
     test('should get signature', () => {
-        expect(signature).toMatch('abcjs-midi v5');
+        expect(signature).toMatch('abcjs-basic v6.0.2');
     });
 
     test('should read large tunebook', () => {
