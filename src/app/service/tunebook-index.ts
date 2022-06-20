@@ -1,6 +1,6 @@
 import { getLogger, Logger } from '@log4js2/core';
 import { Injectable } from '@angular/core';
-import { TuneBookEntry } from 'abcjs/midi';
+import { AnalyzedTune } from 'abcjs';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { IndexEntry } from '../model/index-entry';
 import { TuneQuery } from '../model/tune-query';
@@ -49,7 +49,7 @@ export class TuneBookIndex {
         this.entries = this.entries.filter(entry => entry.book !== tuneBookRef.descriptor.id);
     }
 
-    private createEntry(tune: TuneBookEntry, tuneBookRef: TuneBookReference): IndexEntry {
+    private createEntry(tune: AnalyzedTune, tuneBookRef: TuneBookReference): IndexEntry {
         const tuneDescriptor = this.findTuneDescriptor(tune.id, tuneBookRef.descriptor);
         const tags = tuneDescriptor && tuneDescriptor.tags;
         const rhythm = tuneDescriptor && tuneDescriptor.rhythm;
@@ -129,7 +129,7 @@ export class TuneBookIndex {
         return tuneBookRef.tuneBook.getTuneById(entry.id).abc;
     }
 
-    findAllTunesInBook(bookId: string): TuneBookEntry[] {
+    findAllTunesInBook(bookId: string): AnalyzedTune[] {
         return this.idToBookMap.get(bookId).tuneBook.tunes;
     }
 

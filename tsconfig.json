@@ -13,7 +13,7 @@
     "esModuleInterop": true,
     "importHelpers": true,
     "paths": {
-      "abcjs6": ["src/@types/abcjs6"]
+      "abcjs": ["src/@types/abcjs"]
     },
     "target": "es2015",
     "typeRoots": [

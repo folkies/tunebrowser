@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, NgZone } from '@angular/core';
-import abcjs from 'abcjs/midi';
+import abcjs from 'abcjs';
 import { extractSnippet } from 'src/app/service/abc-util';
 
 @Component({

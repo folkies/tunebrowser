@@ -1,4 +1,4 @@
-import { TuneBook, TuneBookEntry } from 'abcjs/midi';
+import { TuneBook, AnalyzedTune } from 'abcjs';
 import fs from 'fs';
 
 import iconv from 'iconv-lite';
@@ -55,10 +55,10 @@ export class TuneBookBuilder {
         const text = iconv.decode(bytes, 'windows1252');
         const abc = text.replace(/^%%abc-.*$/mg, '');
         const tuneBook = new TuneBook(abc);
-        tuneBook.tunes.forEach(entry => this.processTuneBookEntry(entry));
+        tuneBook.tunes.forEach(entry => this.processAnalyzedTune(entry));
     }
 
-    processTuneBookEntry(entry: TuneBookEntry): void {
+    processAnalyzedTune(entry: AnalyzedTune): void {
         const id = this.extractIdFromTitle(entry.title);
         const abc = entry.abc.replace(/^X:.*/m, `X: ${id}`);
         this.tuneMap.set(id, abc);

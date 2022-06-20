@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TuneBookEntry } from 'abcjs/midi';
+import { AnalyzedTune } from 'abcjs';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
@@ -10,7 +10,7 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 })
 export class TunesListComponent {
 
-    entries: TuneBookEntry[] = [];
+    entries: AnalyzedTune[] = [];
     bookId: string;
 
     titleWithoutNumber = titleWithoutNumber;

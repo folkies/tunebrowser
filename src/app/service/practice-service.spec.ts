@@ -1,4 +1,4 @@
-import { TuneBook } from 'abcjs/midi';
+import { TuneBook } from 'abcjs';
 import { addDays } from 'date-fns';
 import fs from 'fs';
 import { Repertoire, RepertoireItem, TuneReference, RepertoireCollection } from '../model/repertoire';

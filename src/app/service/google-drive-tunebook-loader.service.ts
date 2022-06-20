@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TuneBook } from 'abcjs/midi';
+import { TuneBook } from 'abcjs';
 import { TuneBookCollection, TuneBookDescriptor } from "../model/tunebook-collection";
 import { TuneBookReference } from '../model/tunebook-reference';
 import { GoogleDriveService } from './google-drive.service';

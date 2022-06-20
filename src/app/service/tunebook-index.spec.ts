@@ -1,4 +1,4 @@
-import { TuneBook } from 'abcjs/midi';
+import { TuneBook } from 'abcjs';
 import fs from 'fs';
 import { TuneBookIndex } from './tunebook-index';
 import { TuneBookDescriptor } from '../model/tunebook-collection';

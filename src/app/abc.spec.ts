@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { numberOfTunes, TuneBook, parseOnly, signature, MultiStaff } from 'abcjs/midi';
+import { numberOfTunes, TuneBook, parseOnly, signature, MultiStaff } from 'abcjs';
 
 function includeNumberInTitle(abc: string): string {
     const match = abc.match(/^T:(\s*)(\d+[a-z]?\s*)/m);

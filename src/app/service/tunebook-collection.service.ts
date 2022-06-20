@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TuneBook } from 'abcjs/midi';
+import { TuneBook } from 'abcjs';
 import { Observable, ReplaySubject } from 'rxjs';
 import { TuneBookCollection, TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';

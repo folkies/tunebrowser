@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { TuneBook } from 'abcjs/midi';
+import { TuneBook } from 'abcjs';
 import { TuneBookCollection, TuneBookDescriptor } from "../model/tunebook-collection";
 import { Loader } from './loader';
 import { TuneBookReference } from '../model/tunebook-reference';

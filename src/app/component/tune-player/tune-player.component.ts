@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 
-import abcjs from 'abcjs6';
+import abcjs from 'abcjs';
 import { AudioContextProvider } from 'src/app/service/transcription/audio-context-provider';
 
 
@@ -72,25 +72,22 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
                 millisecondsPerMeasure: 500,
             });
 
-            this.synthControl.load(this.div.nativeElement, 
-            null, 
-            {
-                displayLoop: true, 
-                displayRestart: true, 
-                displayPlay: true, 
-                displayProgress: true,
-                displayWarp: true 
-            }
-        );
-        const response = await this.synthControl.setTune(this.parsedTune, false, {
-            chordsOff: true,
-            program: this.instrumentByName('flute'),
-            qpm: this.qpm 
+            this.synthControl.load(this.div.nativeElement,
+                null,
+                {
+                    displayLoop: true,
+                    displayRestart: true,
+                    displayPlay: true,
+                    displayProgress: true,
+                    displayWarp: true
+                }
+            );
+            const response = await this.synthControl.setTune(this.parsedTune, false, {
+                chordsOff: true,
+                program: this.instrumentByName('flute'),
+                qpm: this.qpm
 
-        });
-
-
-
+            });
         }
     }
 

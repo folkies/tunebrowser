@@ -1,4 +1,4 @@
-import { parseOnly, TuneBook, TuneBookEntry } from 'abcjs/midi';
+import { parseOnly, TuneBook, AnalyzedTune } from 'abcjs';
 import { TuneDescriptor } from '../model/tunebook-collection';
 
 const MODE_MAP = {
@@ -41,7 +41,7 @@ export function extractAllMetadata(tuneBookAbc: string): TuneDescriptor[] {
  * @param tuneBookAbc tune as ABC string
  * @returns metadata (id, rhythm and normalized key)
  */
-export function extractMetadata(tuneBookEntry: TuneBookEntry): TuneDescriptor {
+export function extractMetadata(tuneBookEntry: AnalyzedTune): TuneDescriptor {
     const tune = parseOnly(tuneBookEntry.abc)[0];
     const key = tune.getKeySignature();
     const rhythm = tune.metaText.rhythm && tune.metaText.rhythm.toLowerCase();
