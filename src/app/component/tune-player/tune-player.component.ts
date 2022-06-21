@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 
 import abcjs from 'abcjs';
-import { AudioContextProvider } from 'src/app/service/transcription/audio-context-provider';
 
 
 @Component({
@@ -12,9 +11,6 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
     /** Beats per minute.  */
     private bpm = 100;
-
-    /** Quarters per minute, computed from bpm based on the time signature of the tune. */
-    private qpm = 100;
 
     private abc = '';
 
@@ -67,6 +63,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
                     displayRestart: true,
                     displayPlay: true,
                     displayProgress: true,
+                    // hidden via CSS, but we need it here to make setWarp() work
                     displayWarp: true
                 }
             );

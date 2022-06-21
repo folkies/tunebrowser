@@ -51,9 +51,3 @@ import 'zone.js';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
-
- /* 
-  * MIDI lib required by abcjs uses a global variable, and without this definition, "typeof MIDI" used by lib
-  * causes a ReferenceError.
-  */
-(window as any).MIDI = { adaptors: { }};

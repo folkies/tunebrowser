@@ -39,6 +39,10 @@
             "scripts": [
               "src/lib/dsp.js"
             ],
+            "allowedCommonJsDependencies": [
+              "abcjs",
+              "@log4js2/core"
+            ],            
             "webWorkerTsConfig": "tsconfig.worker.json",
             "vendorChunk": true,
             "extractLicenses": false,

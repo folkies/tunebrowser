@@ -17,11 +17,5 @@
     "src/**/*.d.ts"
   ],
   "exclude": [
-    "src/app/service/metadata-extractor.ts",  
-    "src/app/service/title-fixer.ts",  
-    "src/app/service/tunebook-builder.ts",  
-    "src/test.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.worker.ts"
   ]
 }

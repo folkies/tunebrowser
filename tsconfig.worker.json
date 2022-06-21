@@ -9,6 +9,6 @@
     "types": []
   },
   "include": [
-    "src/**/*.worker.ts"
+    "src/**/transcriber.worker.ts"
   ]
 }
