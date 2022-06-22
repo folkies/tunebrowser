@@ -17,13 +17,13 @@ export class TranscriberImpl implements ITranscriber {
         this.currNumSamples = 0;
     }
     
-    private mergeSignal() {
-        let length = this.transcriber.numInputSamples;
-        let signal = new Float32Array(length);
+    private mergeSignal(): Float32Array {
+        const length = this.transcriber.numInputSamples;
+        const signal = new Float32Array(length);
         let currNumSamples = 0;
 
-        for (let buffer of this.signal) {
-            let newNumSamples = currNumSamples + buffer.length;
+        for (const buffer of this.signal) {
+            const newNumSamples = currNumSamples + buffer.length;
 
             if (newNumSamples <= length) {
                 signal.set(buffer, currNumSamples);
@@ -38,10 +38,10 @@ export class TranscriberImpl implements ITranscriber {
         return signal;
     }
 
-    transcribe(signal?: Float32Array, midi: boolean = false): TranscriptionResult {
-        let theSignal = signal ? signal : this.mergeSignal();
+    transcribe(signal?: Float32Array, midi = false): TranscriptionResult {
+        const theSignal = signal ? signal : this.mergeSignal();
 
-        let transcription = this.transcriber.transcribe(theSignal, midi);
+        const transcription = this.transcriber.transcribe(theSignal, midi);
         console.log(`Worker: transcription: ${transcription}`);
 
         const resultMsg = {
@@ -60,7 +60,7 @@ export class TranscriberImpl implements ITranscriber {
 
         let largest = Number.MIN_VALUE;
 
-        for (let sample of signal) {
+        for (const sample of signal) {
             if (sample > largest) largest = sample;
         }
 
