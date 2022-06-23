@@ -3,7 +3,8 @@ import { PitchDetector } from './pitch-detector';
 import { PitchSpeller } from './pitch-speller';
 import { TranscriptionInitParams } from './transcription';
 
-const DEFAULT_SAMPLE_RATE = 22050;
+const DEFAULT_SAMPLE_RATE = 44100;
+const DEFAULT_FRAME_SIZE = 4096;
 const DEFAULT_SAMPLE_TIME = 12;
 const DEFAULT_BLANK_TIME = 2;
 const DEFAULT_FUNDAMENTAL = 'D';
@@ -17,16 +18,11 @@ export interface Note {
 }
 
 export default class Transcriber {
-    readonly inputSampleRate: number;
-    readonly outputSampleRate: number;
-    readonly numInputSamples: number;
-    readonly numOutputSamples: number;
+    private inputSampleRate: number;
 
     private sampleTime: number;
     private blankTime: number;
     private fundamental: string;
-    private enableSampleRateConversion: boolean;
-
     private frameSize: number;
 
     constructor(params: TranscriptionInitParams) {
@@ -46,23 +42,10 @@ export default class Transcriber {
             ? params.fundamental
             : DEFAULT_FUNDAMENTAL;
 
-        this.enableSampleRateConversion = typeof params.enableSampleRateConversion !== 'undefined'
-            ? params.enableSampleRateConversion
-            : false;
-
-        if (this.enableSampleRateConversion) {
-            this.outputSampleRate = DEFAULT_SAMPLE_RATE;
-        }
-        else {
-            this.outputSampleRate = this.inputSampleRate;
-        }
-
-        this.numInputSamples = this.inputSampleRate * (this.blankTime + this.sampleTime);
-        this.numOutputSamples = this.outputSampleRate * (this.blankTime + this.sampleTime);
 
         this.frameSize = typeof params.frameSize !== 'undefined'
             ? params.frameSize
-            : this.calcFrameSize(this.outputSampleRate);
+            : DEFAULT_FRAME_SIZE;
     }
 
     transcribe(spectra: Float32Array[]): string {
@@ -74,7 +57,7 @@ export default class Transcriber {
         let onset = 0;
         for (const spectrum of spectra) {
             const linear = spectrum.map(db => this.decibelToLinear(db));
-            const frequency = PitchDetector.mikelsFrequency(Array.from(linear), this.outputSampleRate, this.frameSize);
+            const frequency = PitchDetector.mikelsFrequency(Array.from(linear), this.inputSampleRate, this.frameSize);
 
             const currentNote = speller.spellFrequency(frequency);
 
@@ -124,17 +107,6 @@ export default class Transcriber {
         }
 
         return transcription;
-    }
-
-    private calcFrameSize(sampleRate: number): number {
-        const idealFrameSize = sampleRate / 10;
-        const prev = this.prevPow2(idealFrameSize);
-        const next = prev * 2;
-        return next - idealFrameSize < prev - idealFrameSize ? next : prev;
-    }
-
-    private prevPow2(v: number): number {
-        return Math.pow(2, Math.floor(Math.log(v) / Math.log(2)));
     }
 
     private decibelToLinear(db: number): number {

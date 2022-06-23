@@ -36,8 +36,6 @@ export class Recorder {
 
     get fundamental() { return 'D'; }
 
-    get enableSampleRateConversion() { return false; }
-
     get transcriberFrameSize() { return 'auto'; }
 
     get audioContext() { return this._audioContext; }
@@ -95,8 +93,7 @@ export class Recorder {
             inputSampleRate: this._audioContext.sampleRate,
             sampleTime: this.sampleTime,
             blankTime: this.blankTime,
-            fundamental: this.fundamental,
-            enableSampleRateConversion: this.enableSampleRateConversion,
+            fundamental: this.fundamental
         };
 
         this._transcriber.initialize(initParams)
