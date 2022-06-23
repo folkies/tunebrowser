@@ -16,13 +16,7 @@ export interface Note {
     qq?: number;
 }
 
-export interface TranscriptionResult {
-    transcription: string;
-    sampleRate?: number;
-    numSamples?: number;
-}
-
-export default class FftTranscriber {
+export default class Transcriber {
     readonly inputSampleRate: number;
     readonly outputSampleRate: number;
     readonly numInputSamples: number;

@@ -1,13 +1,13 @@
 import { expose } from 'comlink';
-import FftTranscriber, { TranscriptionResult } from './fft-transcriber';
-import { ITranscriber, PushResult, TranscriptionInitParams } from './transcription';
+import Transcriber from './transcriber';
+import { ITranscriber, PushResult, TranscriptionInitParams, TranscriptionResult } from './transcription';
 
 export class TranscriberImpl implements ITranscriber {
-    private fftTranscriber: FftTranscriber;
+    private transcriber: Transcriber;
     private signal: Float32Array[];
 
     initialize(initParams: TranscriptionInitParams): void {
-        this.fftTranscriber = new FftTranscriber(initParams);
+        this.transcriber = new Transcriber(initParams);
         this.resetSignal();
     }    
     
@@ -15,8 +15,8 @@ export class TranscriberImpl implements ITranscriber {
         this.signal = [];
     }
     
-    transcribe(signal?: Float32Array, midi = false): TranscriptionResult {
-        const transcription = this.fftTranscriber.transcribe(this.signal);
+    transcribe(): TranscriptionResult {
+        const transcription = this.transcriber.transcribe(this.signal);
         console.log(`Worker: transcription: ${transcription}`);
 
         const resultMsg = {

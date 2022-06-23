@@ -23,6 +23,6 @@ export interface TranscriptionInitParams {
 
 export interface ITranscriber {
     initialize(initParams: TranscriptionInitParams): void;
-    transcribe(signal?: Float32Array, midi?: boolean): TranscriptionResult; 
+    transcribe(): TranscriptionResult; 
     pushSignal(signal: Float32Array): PushResult;
 }
