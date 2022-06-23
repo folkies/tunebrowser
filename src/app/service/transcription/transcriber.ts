@@ -75,7 +75,6 @@ export default class Transcriber {
         for (const spectrum of spectra) {
             const linear = spectrum.map(db => this.decibelToLinear(db));
             const frequency = PitchDetector.mikelsFrequency(Array.from(linear), this.outputSampleRate, this.frameSize);
-            console.log(frequency)
 
             const currentNote = speller.spellFrequency(frequency);
 

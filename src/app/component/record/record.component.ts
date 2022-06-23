@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AudioRecorder } from 'src/app/service/transcription/audio-recorder';
+import { Recorder } from 'src/app/service/transcription/recorder';
 
 @Component({
     selector: 'app-record',
@@ -12,7 +12,7 @@ export class RecordComponent {
 
     constructor(
         private router: Router,
-        private recorder: AudioRecorder) {
+        private recorder: Recorder) {
 
         this.recorder.progress.subscribe(progress =>
             this.progress = progress

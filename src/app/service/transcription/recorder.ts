@@ -6,7 +6,7 @@ import { TranscriberProvider } from './transcriber-provider';
 import { ITranscriber, TranscriptionInitParams, TranscriptionResult } from './transcription';
 
 @Injectable()
-export class AudioRecorder {
+export class Recorder {
     private _status: Status;
     private _audioContext: AudioContext;
     private _amplitude: number;
@@ -113,7 +113,6 @@ export class AudioRecorder {
         if (this._status != Status.RECORDING) {
             return;
         }
-        console.log("push " + this.progressPercentage + " " + this.timeRecorded);
 
         this.analyser.getFloatFrequencyData(this.fftBuffer);
         const msg = await this._transcriber.pushSignal(this.fftBuffer)
