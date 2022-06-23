@@ -60,6 +60,7 @@ export class TunePageComponent implements OnInit {
 
     async exportAsPdf(): Promise<void> {
         this.pdfService.saveAsPdf(this.tune);
+        this.snackBar.open(`PDF will be displayed in separate window`, 'Dismiss', { duration: 3000 });
     }
 
     tuneForDisplay(): string {

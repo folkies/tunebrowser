@@ -5,6 +5,7 @@ import abcjs, { TuneBook } from 'abcjs';
 import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
+import { PdfService } from 'src/app/service/pdf-service';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
@@ -31,6 +32,7 @@ export class TuneEditorComponent implements AfterViewInit {
     constructor(
         private index: TuneBookIndex,
         private googleDrive: GoogleDriveService,
+        private pdfService: PdfService,
         private route: ActivatedRoute,
         private snackBar: MatSnackBar) {
 
@@ -57,12 +59,17 @@ export class TuneEditorComponent implements AfterViewInit {
         this.renderNotation(this.extractTuneAtCaret(caret.textPos));
     }
 
-    async save() {
+    async save(): Promise<void> {
         await this.googleDrive.updateTextFile(this.bookRef.descriptor.uri, this.tune);
         this.bookRef.abc = this.tune;
         this.bookRef.tuneBook = new TuneBook(this.tune);
         this.index.updateTuneBook(this.bookRef);
         this.snackBar.open(`Updated ${this.bookRef.descriptor.name} on Google Drive`, 'Dismiss', { duration: 3000 });
+    }
+
+    async exportAsPdf(): Promise<void> {
+        this.pdfService.saveAsPdf(this.tune);
+        this.snackBar.open(`PDF will be displayed in separate window`, 'Dismiss', { duration: 3000 });
     }
 
     private renderNotation(abc: string): void {
