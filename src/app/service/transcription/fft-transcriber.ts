@@ -18,8 +18,8 @@ export interface Note {
 
 export interface TranscriptionResult {
     transcription: string;
-    sampleRate: number;
-    numSamples: number;
+    sampleRate?: number;
+    numSamples?: number;
 }
 
 export default class FftTranscriber {

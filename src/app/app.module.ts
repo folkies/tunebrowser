@@ -60,7 +60,6 @@ import { PracticeService } from './service/practice-service';
 import { RepertoireRepository } from './service/repertoire-repository';
 import { AudioContextProvider } from './service/transcription/audio-context-provider';
 import { AudioRecorder } from './service/transcription/audio-recorder';
-import { Recorder } from './service/transcription/recorder';
 import { TranscriberProvider } from './service/transcription/transcriber-provider';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
@@ -168,7 +167,6 @@ const googleApiClientConfig: GoogleApiClientConfig = {
         GoogleDriveTunebookLoaderService,
         PdfService,
         PracticeService,        
-        Recorder,
         RepertoireRepository,
         RestTuneMatcher,
         { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
