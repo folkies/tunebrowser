@@ -1,14 +1,17 @@
 import { expose } from 'comlink';
+import FftTranscriber from './fft-transcriber';
 import Transcriber, { TranscriptionResult } from './transcriber';
 import { ITranscriber, PushResult, TranscriptionInitParams } from './transcription';
 
 export class TranscriberImpl implements ITranscriber {
     private transcriber: Transcriber;
+    private fftTranscriber: FftTranscriber;
     private signal: Float32Array[];
     private currNumSamples: number;
 
     initialize(initParams: TranscriptionInitParams): void {
         this.transcriber = new Transcriber(initParams);
+        this.fftTranscriber = new FftTranscriber(initParams);
         this.resetSignal();
     }    
     
@@ -38,7 +41,7 @@ export class TranscriberImpl implements ITranscriber {
         return signal;
     }
 
-    transcribe(signal?: Float32Array, midi = false): TranscriptionResult {
+    signalTranscribe(signal?: Float32Array, midi = false): TranscriptionResult {
         const theSignal = signal ? signal : this.mergeSignal();
 
         const transcription = this.transcriber.transcribe(theSignal, midi);
@@ -53,6 +56,27 @@ export class TranscriberImpl implements ITranscriber {
 
         return resultMsg;
     }
+
+    transcribe(signal?: Float32Array, midi = false): TranscriptionResult {
+        return this.fftTranscribe();
+    }
+
+
+    fftTranscribe(): TranscriptionResult {
+
+        const transcription = this.fftTranscriber.transcribe(this.signal);
+        console.log(`Worker: transcription: ${transcription}`);
+
+        const resultMsg = {
+            transcription: transcription,
+            sampleRate: this.transcriber.outputSampleRate,
+            numSamples: this.transcriber.numOutputSamples,
+        };
+
+
+        return resultMsg;
+    }
+
 
     pushSignal(signal: Float32Array): PushResult {
         this.signal.push(signal);
