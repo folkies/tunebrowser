@@ -9,7 +9,6 @@ import { ITranscriber, TranscriptionInitParams, TranscriptionResult } from './tr
 export class Recorder {
     private _status: Status;
     private _audioContext: AudioContext;
-    private _amplitude: number;
     private _timeRecorded = 0;
     private _transcriber: Remote<ITranscriber>;
     private _stream: MediaStream;
@@ -43,7 +42,6 @@ export class Recorder {
 
     get audioContext() { return this._audioContext; }
     get sampleRate() { return this._audioContext.sampleRate; }
-    get amplitude() { return this._amplitude; }
     get timeRecorded() { return this._timeRecorded; }
     get transcription() { return this._transcription; }
     get progressPercentage() { return 100 * this._timeRecorded / (this.blankTime + this.sampleTime); }
@@ -115,8 +113,7 @@ export class Recorder {
         }
 
         this.analyser.getFloatFrequencyData(this.fftBuffer);
-        const msg = await this._transcriber.pushSignal(this.fftBuffer)
-        this._amplitude = msg.amplitude;
+        this._transcriber.pushSignal(this.fftBuffer)
         this._timeRecorded += (this.tickTime / 1000);
 
         this.zone.run(() =>
@@ -134,7 +131,6 @@ export class Recorder {
 
     stop() {
         this._status = Status.STOPPED;
-        this._amplitude = 0;
         this._timeRecorded = 0;
         if (this._stream) { 
             this._stream.getTracks().forEach(t => t.stop());
