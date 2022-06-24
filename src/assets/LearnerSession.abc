@@ -95,7 +95,7 @@ L:1/8
 K:Em
 B,2|"Em"E2 EF "G"G2 GA|"Em"BcBA G2E2|"D"D2DE FEFG|ABAG F2D2|
 "Em"EDEF "G"GFGA|"Em"BcBA "G"G2GA|B2 Bc BAFG|1 "Em"E2 E2 E2 :|2 "Em"E2E2 E4||
-|:"C"[e2c2] [e2c2] [e3c3]e|"G"dBGA B3c|"Em"BAFG "D"A2AB|AGED "Em"EFGA|!
+|:"C"[e2c2] [e2c2] [e3c3]e|"G"dBGA B3c|"Em"BAFG "D"A2AB|AGED "Em"EFGA|
 "C"e2e2 g2ge|"G"dBGA B3c|B2 Bc BAFG|1 "Em"E2E2E4:|2 "Em"E2E2E2|]
 
 
@@ -430,11 +430,11 @@ M:6/8
 L:1/8
 R:jig
 K:G
-B|"G"dBG "C"cGE|"G"DED GFG|BAB dcB|dcB "D7"ABc|!
-"G"dBG "C"cGE|"G"DED GFG|BAB dcB|"D"AGF "G"G2:|!
-B|"G"dBG "Am"ecA|"D"fef "G"gfg|"C"ege "G"dBG|dcB "D7"ABc|!
-[1 "G"dBG "Am"ecA|"D"fef "G"gfg|"C"ege "G"dBG|"D"AGF "G"G2:|!
-[2 "G"dBG "C"cGE|"G"DED GFG|BAB dcB|"D"AGF "G"G2|]!
+B|"G"dBG "C"cGE|"G"DED GFG|BAB dcB|dcB "D7"ABc|
+"G"dBG "C"cGE|"G"DED GFG|BAB dcB|"D"AGF "G"G2:|
+B|"G"dBG "Am"ecA|"D"fef "G"gfg|"C"ege "G"dBG|dcB "D7"ABc|
+[1 "G"dBG "Am"ecA|"D"fef "G"gfg|"C"ege "G"dBG|"D"AGF "G"G2:|
+[2 "G"dBG "C"cGE|"G"DED GFG|BAB dcB|"D"AGF "G"G2|]
 
 
 X: 34
@@ -1578,9 +1578,9 @@ R:reel
 M:4/4
 L:1/8
 K:Ador
-"Am"A2 EA cA ~A2|aged cAFA|"G"G2 DG BG ~G2|gedc BGGB|!
-"Am"A2 EA cA ~A2|aged cAAG|ABcd efge| aged cAA2:|!
-|:"Am"ageg ~a3b|aged cA~A2|"Em"gfef g3a|"G"gedc BG ~G2|!
+"Am"A2 EA cA ~A2|aged cAFA|"G"G2 DG BG ~G2|gedc BGGB|
+"Am"A2 EA cA ~A2|aged cAAG|ABcd efge| aged cAA2:|
+|:"Am"ageg ~a3b|aged cA~A2|"Em"gfef g3a|"G"gedc BG ~G2|
 "Am"ageg a3b|aged cAAG|ABcd efge| aged cA~A2:|
 
 
@@ -2288,10 +2288,10 @@ R: reel
 M: C|
 L: 1/8
 K:Edor
-"Em"E~B,3 EGFE|"D"QD~A,3 DEFD|"Em"E2ED EFGA|B2 eB "D"dBAF|
+"Em"E~B,3 EGFE|"D"D~A,3 DEFD|"Em"E2ED EFGA|B2 eB "D"dBAF|
 "Em"E~B,3 EGFE|"D"D~A,3 DEFD|"Em"E2 BE dEBE|"D" DEFA "Em"BEE2:|
 |: "Em"e~B3 egfe|"D"defa "G"gfed|"Bm"(3Bcd ef "G"~g3e|"D"fgaf "G"gfed|
-"Em"e~B3 GBFB|EBBA "Bm"(3Bcd ef|"G"~g3e "D"~f3d|1"Em" efed BA Bd:|2 "Em"Qefed "D"BAFD|]
+"Em"e~B3 GBFB|EBBA "Bm"(3Bcd ef|"G"~g3e "D"~f3d|1"Em" efed BA Bd:|2 "Em"efed "D"BAFD|]
 
 
 X: 179
@@ -2624,9 +2624,9 @@ K:Dmix
 
 X: 203
 T: Richard Dwyer's
-M: 4/4
-L: C|
+M: C|
 R: reel
+L: 1/8
 K:Dmaj
 c|"D"d2 fd "A"cdec|"D"defd AdBA|"G"GB (3BBB "D"Ad (3ddd|"G"gfed "A"cdec|
 "D"d2 fd "A"cdec|"D"defd AdBA|"G"GB (3BBB "D"Ad (3ddd|"A"cdec "D"d3:|
@@ -2954,7 +2954,7 @@ M: C|
 L: 1/8
 R: reel
 K:Dmaj
-"D"dBAF A2 FA|dBAF "A"E2"D"2 D2|"D"dBAF A2 FA|1"G" B2 BA B2 AB:|2"G" B2 BA B2 dB||
+"D"dBAF A2 FA|dBAF "A"E2 "D"D2|"D"dBAF A2 FA|1"G" B2 BA B2 AB:|2"G" B2 BA B2 dB||
 "D"ABde ~f3 d|"G"~g3 e "D"fedB|ABde fedc|1"G" B2 BA B2 dB:|2"G" B2 BA B2 AB|]
 
 
@@ -3885,3 +3885,132 @@ K: A
 "A"~c3B ABcA|"E"~B2cA BAFG|1 "A"ABce (3fga ec|"E"BccB "A"A3B:|2 "A"ABce fece|"F#m"fAgA "A"a3g||
 "F#m"~f2af cfaf|"E"geBe "A"afge|"F#m"~f2af cfaf|"E"gfeg "F#m"~f3g|
 "A"aecB ABcA|"E"~B2cA BAFG|1 "A"ABce fece|"F#m"fAgA "A"a3g:|2 "A"ABce (3fga ec|"E"BccB "A"A3B||
+
+X: 294
+T:Up Downey
+M:C|
+L:1/8
+C:Tola Custy
+R:reel
+K:Edor
+"Em" EFGA ~B2 ed | "G"BAGB "D"AGFG | "Em"EFGA ~B2 ef| "G" gfed "A"ea z D|
+"Em"EFGA ~B2 ed | "G"BAGB "D"AGFG | "Em"EFGA "G"~B2 ed |1 BAGF "Em"E4 :|2 BAGF E2 ef||
+"Em"gfeg fegf | egfe "A"a2 a2 | "Em"gfeg fegf | egfe "G"B2 B2 |
+"Em"gfeg fegf | egfe "A"a2 a2 | "G"bagf "D"agfg |1 "Em"e2ed e3f :|2 "Em"e2ed e4||
+
+X: 295
+T: Noisy Curlew, The
+M: C|
+L: 1/8
+R: reel
+K: D
+"D"DFAF "G"DGBG | "D"DFAF "A"EDCE | "D"DF~F2 "A"ABde| "D"fdAG "A"FGEF |
+"D"DFAF "G"DGBG | "D"DFAF "A"EDCE | "D"DF~F2 "A"ABde| "D"fdAG FDD2:|
+"D"fgaf "G"g2ag| "D"fgaf "G"gfeg | "D"fgaf "G"g2ag| "D"fdAG FDD2 |
+"D"fgaf "G"g2ag| "D"fgaf "G"gfeg | "D"fdAF "G"G2ag|1 "D"(3faf ea fddg :|2 "D"(3faf ea fdAF ||
+
+X: 296
+T: Scholar, The
+R: reel
+M: C|
+L: 1/8
+K: D
+(3ABc|"D"dfaf "G"gfeg|"D"fdAG "D7"FGA=c|"G"BGGF G2 "A"ag|fgec "D"dcBA|
+"D"dfaf "G"gfeg|"D"fdAG "D7"FGA=c|"G"BGGF G2"A"ag|1fgec "D"d2:|2 "A"fgec "D"defg||
+"D"~a3f dfaf|dfaf "G"bagf|"C"~g3e =cege|=cege "D"agfg|
+"D"~a3f dfaf|dfaf "G"bagf|"C"~g3f "G"gbag|1 "A"fgec "D"defg:|2 "A"fgec "D"d2|]
+
+X: 297
+T: An Droichead
+T: The Bridge
+R: march
+C: Liam O'Flynn
+M: 4/4
+L: 1/8
+K: G
+"G" B2d2-d4|"D" A6B2|"C"G6F2|"G"G2A2B2d2|"C"e2g6|"G"d6e2|"Am"c6B2|"C"c4 "G"B2G2|
+"D" A4d4|"D7"d4def2|"G" g4G4|"C" e6d2|"Am"c6A2|"D"d4B2A2|1 "G"G4GAB2|"D"A8-|A8:|2 "G"G6F2|G8-|G8||
+"D"A4d4|d4e2d2|"Am"c4B2G2|"D"A6G2|A4d4|d4def2|"G"g6f2|g8|
+"D"A4d4|d4fga2|"G"b4a2f2|"C"g4 "G"B2d2|"Am"c4 "Em7"B2G2|"D"A4B2d2|"Am"c4 "Em7"B2G2|"D"A8-|A8||
+
+X: 298
+T: The Ships In Full Sail
+R: jig
+M: 6/8
+L: 1/8
+K: G
+E|"G"DGG BAG|dBG GBd|"Em"edg "G"dBG|"D"AGA "Em"BGE|
+"G"D2G BAG|dBG GBd|"Em"edg "G"dBG|"D"AGE "G"G2:|
+"G"dgg bgg |"D"aga "G"bge |dgg bgg |"D"aba "C"age |
+"G"d2g bgg |"D"aga "G"bgd | "Em"edg "G"dBG | "D"AGE "G"G3 :||
+
+X: 299
+T: Three Sea Captains
+R: set dance
+M: 6/8
+L: 1/8
+K: G
+D|"G"GDG BGB|"D7"c2A F2D|"G"GDG BGB|d2B G2B|
+"Am"cec A2c|"G"BdB G2B|1 "D"A2B c2B|ABG FED:|2 "G"EcB "D"AGF| "G"G3 G2||
+d|"G"gfg dcB|"D"ABc def|"G"gfg dBd|"Am"e2c A2d|
+"G"g2a bge|"D"f2g afd|"C"e2f g2f| "D"ed^c d2B|
+"Am"c2d ecA|"G"B2c dBG|"Am"A2B c2B|"D"ABG FED|
+"G"GDG BGB|"D7"c2A F2D|"G"~G3 BGB|d2B G2B|
+"Am"cec A2c|"G"BdB G2F|"C"EcB "D"AGF|"G"G3 G2:|
+
+X: 300
+T: Swallowtail
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+"Em"GEE BEE|GEE "G"BAG|"D"FDD ADD|dcd AGF|
+"Em"GEE BEE|GEG B2c|"G"dcd "D"AGF|"Em"GEE E3:|
+|:"Em"Bcd e2f|e2f edB|Bcd e2f|edB "D"d3|
+"Em"Bcd e2f|e2f edB|"G"dcd "D"AGF|"Em"GEE E3:||
+
+X:301
+T:Apples in Winter
+R:jig
+M:6/8
+K:Edor
+G/A/|"Em"BEE dEE|BAG FGE|"D"DED FDF|ABc ded|
+"Em"BEE BAB|"D"def "Em"g2e|"Bm"fdB "D"AGF|"Em"GEE E2:|
+d|:"Em"efe edB|ege "Bm"fdB|"D"ded dAF|DFA def|
+[1 "Em"efe edB|"D"def "Em"g2a|"G"bgb "D"afa| "Em"ged e2d:|
+[2 "E"edB "D"def|"G"gba g2e|"Bm"fdB "D"AGF|"Em"GEE E2|]
+
+X: 302
+T: Around The Fairy Fort
+R: barndance
+M: C|
+L: 1/8
+K: D
+DE |:"D"F2 F2 FEDF |"A"A2 A2 A2 FA |"G"B2 B2 "D"AFDE |"A"F2 E2 E2 DE |
+"D"F2 F2 FEDF |"A"A2 A2 A2 FA |"G"dcBA "Bm"BAFE |1 "D"F2 D2 D2 DE :|2 "D"F2 D2 D2 A2 ||
+|:"D"d2 d2 d2 cd |"A"e2 e2 e2 fe |"D"defg agfe |"Bm"f2 B2 B2 AB |
+"D"d2 d2 d2 cd |"A"e2 e2 e2 fe |"G"dcBA "Bm"BAFE |1 "D"F2 D2 D2 A2 :|2 "D"F2 D2 D2 DE||
+|:"D"F2 DF A2 FA |"Bm"B2 FB "D"A2 DE |F2 DF A2 FA |"Em"B2 E2 E2 DE |
+"D"F2 DF A2 FA |"Bm"B2 FB "D"A2 FA |"G"dcBA "Bm"BAFE |1"D"F2 D2 D2 DE :|2"D"F2 D2 D2 |] 
+
+X: 303
+T: Calum's Road
+R: strathspey
+M: 4/4
+L: 1/8  
+K: D
+|:"D"D2A>F "F#m"A3A | "G"B<d d>c "Bm"B>A F<A |"G"B2 d>E "D"F2 E<D | "Em"B,<D (3DEF "A"E4 |
+"D"D2A>F "F#m"A3A | "G"B<d d>c "Bm"B>A F<A |"G"B2 d>E "D"F2 E<D |1 "A"B,<D D>E "D"D4 :|2 "A"B,<D D>E "D"D2F>A ||
+|: "G"B2d>c "Em"B4 | "A"A>B A<E "D"F2F>A |"G"B2d>c "Bm"B3A | "Em"d2d>e "F#m"(3fed (3dBA |
+"G"B2d>c "Em"B4 | "F#m"A>B A<E "D"F2F>A |"G"B2 d>E "Bm"F2 E<D | "A"B,<D D>E "D"D4 :|
+
+X: 304
+T: Gypsy Princess
+R: barndance
+M: C|
+L: 1/8
+K: G
+"G"B3 BB2B2|"D"ABAG "C"E2 DE|"G"G3Bd2Bd|"C"e2dB "D"A2 GA|
+"G"B3 BB2B2|"D"ABAG "C"E2 DE|"G"G3B dedB|[1 A2G2G2A2:|[2 A2G2GABc||
+"G"d3d d2 d2 |"D"ABBA "G"GABd|"C"e3 e e2 e2|"D"ABBA "G"GABc|
+"G"d3d d2 d2 |"D"ABBA "G"GABd|"C"g2e2 "D"dBAc |[1 "G"B2 G2 GABc:|[2 B2 G2 G4|| 

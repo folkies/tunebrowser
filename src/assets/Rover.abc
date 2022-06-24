@@ -2064,4 +2064,84 @@ K: Ador
 EAA ABd|edB dgf|Te2d BAG|AAA A2:|
 |:e|aaa abc'|bag ec'b|Ta2g ege|dBA GED|
 EAA ABd|edB dba|Tg2e dBG|AAA A2:|]
- 
+
+X: 174
+T: The Roscommon
+R: reel
+M: 4/4
+L: 1/8
+K: Edor
+EFGA BAGB|AF F2 dFAF|EFGA BAGB|AFdF FE E2|
+EFGA BAGB|AF F2 dFAF|EFGA BAGB|AFdF FE E2||
+eB B2 efge|fa a2 bfaf|eB B2 efge|fagf efgf|
+eB B2 efge|fa a2 bgaf|g3e f3e|dBAF EFGA||
+B3A B2 dB|AF F2 DF F2|EBBA B2 dB|AFDE FEED|
+EBBA B2 dB|AF F2 DF F2|dBBA B2 dB|AFdF FE E2|| 
+
+X: 175
+T: Old Hag, You Have Killed Me
+R: jig
+M: 6/8
+L: 1/8
+K: Dmix
+FDD cAA|ded cAG|A3 ABG|ABA A2G|
+FDD cAA|ded cAF|G3 GcA|1 GAG G2E:|2 GAG G2e||
+|:f3 gfg|afd cAG|A3 ABG|ABA A2e|
+f3 gfg|afd cAF|G3 GcA|1 GAG G2e:|2 GAG G2E||
+
+X: 176
+T: The Mug Of Brown Ale
+R: jig
+M: 6/8
+L: 1/8
+K: Ador
+|:eAA fAA|g3 age|dBG GAG|BGB dBd|
+eAA fAA|g3 age|dBd gdB|ABG A3:|
+|:efg a3|aba age|dBd g3|gag gfe|
+efg a3|aba age|dBd gdB|ABG A3:|
+
+X: 177
+T: Herbert The Sherbet
+C: Martin Ellison
+R: jig
+M: 6/8
+L: 1/8
+K: Emin
+|:E2 E e3|cBA B3|GBA GFE|FAG FED|
+E2 E e3|cBA B3|GBA GFE|AGF E3:|
+|:EFG F3|EFG F3|Bef gfe|ded B3|
+ded A3|ded G3|Bde dBG|AGF E3:|   
+
+X: 178
+T: Tralee Gaol
+R: march
+M: 2/4
+L: 1/8
+K: Ador
+|:eA AB/d/|~e>d B/A/B/d/|eA AB/A/|G>A Bd|
+eA AB/d/|~e>d B/A/B/d/|e/d/e/f/ gB|BA A2:|
+|:ea ag/a/|b>a g/f/g/e/|d/c/B/d/ gB|d/c/B/A/ G/A/B/d/|
+ea ag/a/|b>a g/f/g/e/|d/c/B/d/ gB|BA A2:| 
+
+X: 179
+T: The Hut On Staffin Island
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Dmaj
+|:"A7"A,B,DE "D"D3E|"D"FDFA "Bm"d2 cA|"G"B3d "F#m"BAFD|"Em"E2 "F#m"FE "G"DB,B,D|
+"A7"A,B,DE "D"D3E|FE (3FGA "Bm"dDcD|"G"B3d "F#m"BAFD|1 "Em"E2 "F#m"FE "G"D3B,:|2 "A7"E2 "D/F#"FE "D"D2 FA||
+"Bm":d4 d2 ed|"F#m"cBcd c2 BA|"G"B2 GA BcdB|"A"AFEF "D"D4|
+"Bm"d4 d2 ed|"F#m"cBcd c2 BA|"G"B2 GA B2 dB|"Em"AFEF "G"DB,B,D|
+"A7"A,B,DE "D"D3E|"D"FD "A"(3FGA "Bm"d2 "F#m"cA|"G"B3d "F#m"BAFD|"Em"E2 "F#m"FE "D"D4|| 
+
+X: 180
+T: The Old Hag Of Galway
+R: reel
+M: 4/4
+L: 1/8
+K: Bmin
+dc||BE ~E2 B2AF|EFDE FA A2|BE ~E2 B2AF|EFDE FD D2|
+BE ~E2 B2AF|EFDE FA A2|BAFA dBAF|EFDE FD D2:|
+dfed BAFA|dfed Be e2|dfed B2 AF|EFDE FD D2|
+dfed BAFA|dfed Be e2|fdef dBAF|EFDE FD D2:| 
