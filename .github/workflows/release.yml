@@ -23,6 +23,7 @@ jobs:
       run: |
         echo ${GITHUB_REF}
         npm ci
+        npm run metadata 
         npm run build:prod
     - name: Release to Github Pages
       uses: igolopolosov/github-action-release-github-pages@v1

@@ -44,7 +44,6 @@ export interface TuneBookDescriptor {
 
 export interface TuneDescriptor {
     id: string;
-    displayId?: string;
     rhythm?: string;
     key?: string;
     tags?: string[];

@@ -130,10 +130,6 @@ export class TuneBookCollectionService {
     }
 
     private mergeTune(targetTune: TuneDescriptor, mixinTune: TuneDescriptor) {
-        if (targetTune.displayId === undefined) {
-            targetTune.displayId = mixinTune.displayId;
-        }
-
         if (targetTune.key === undefined) {
             targetTune.key = mixinTune.key;
         }

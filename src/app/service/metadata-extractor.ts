@@ -19,12 +19,18 @@ function mergeMetadata(targetCollection: TuneBookCollection, book: TuneBookDescr
         service.mergeCollections(targetCollection, mixinCollection);
 }
 
+/**
+ * Reads all tunebooks defined in `src/assets/tunebooks.json` and extracts metadata to be included in the
+ * tunebook index at runtime.
+ * 
+ * The extracted data are written to `src/assets/tunebook-collection.json`.
+ */
 describe('MetadataExtractor', () => {
     test('should get key and rhythm', () => {
         const json = fs.readFileSync('src/assets/tunebooks.json', 'utf8');
         const targetCollection = JSON.parse(json) as TuneBookCollection;
         targetCollection.books.forEach(book => mergeMetadata(targetCollection, book));
 
-        fs.writeFileSync('merged-collection.json', JSON.stringify(targetCollection));
+        fs.writeFileSync('src/assets/tunebook-collection.json', JSON.stringify(targetCollection));
     });
 });

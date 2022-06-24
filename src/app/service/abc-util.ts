@@ -33,7 +33,7 @@ export function normalizeKey(root: string, mode: string): string {
  */
 export function extractAllMetadata(tuneBookAbc: string): TuneDescriptor[] {
     const tuneBook = new TuneBook(tuneBookAbc);
-    return tuneBook.tunes.map(tune => this.extractMetadata(tune));
+    return tuneBook.tunes.map(tune => extractMetadata(tune));
 }
 
 /**
