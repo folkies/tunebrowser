@@ -14,10 +14,9 @@ export interface TranscriptionInitParams {
     inputSampleRate?: number;
     sampleTime?: number;
     fundamental?: string;
-    enableSampleRateConversion?: boolean;
     blankTime?: number;
     frameSize?: number;
-    onProgress?: (x: number) => void;
+    tickTime?: number;
 }
 
 

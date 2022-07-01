@@ -7,15 +7,13 @@ import { ITranscriber, TranscriptionInitParams, TranscriptionResult } from './tr
 
 @Injectable()
 export class Recorder {
-    private _status: Status;
-    private _audioContext: AudioContext;
-    private _timeRecorded = 0;
-    private _transcriber: Remote<ITranscriber>;
-    private _stream: MediaStream;
-    private _input: MediaStreamAudioSourceNode;
-    private _transcription: string;
-    private _signal: Float32Array;
-    private tickTime = 20; // ms
+    private status: Status;
+    private audioContext: AudioContext;
+    private timeRecorded = 0;
+    private transcriber: Remote<ITranscriber>;
+    private stream: MediaStream;
+    private input: MediaStreamAudioSourceNode;
+    private tickTime = 0.01; // seconds
     private analyser: AnalyserNode;
     private timer: Observable<number>;
     private subscription: Subscription;
@@ -38,22 +36,16 @@ export class Recorder {
 
     get transcriberFrameSize() { return 'auto'; }
 
-    get audioContext() { return this._audioContext; }
-    get sampleRate() { return this._audioContext.sampleRate; }
-    get timeRecorded() { return this._timeRecorded; }
-    get transcription() { return this._transcription; }
-    get progressPercentage() { return 100 * this._timeRecorded / (this.blankTime + this.sampleTime); }
-    get numSamples() { return this._audioContext.sampleRate * this.sampleTime; }
-    get status() { return this._status; }
-    get signal() { return this._signal; }
+    get sampleRate() { return this.audioContext.sampleRate; }
+    get progressPercentage() { return 100 * this.timeRecorded / (this.blankTime + this.sampleTime); }
 
     constructor(
         private audioContextProvider: AudioContextProvider,
         private transcriberProvider: TranscriberProvider,
         private zone: NgZone) {
-        this._transcriber = this.transcriberProvider.transcriber();
+        this.transcriber = this.transcriberProvider.transcriber();
 
-        this._status = Status.STOPPED;
+        this.status = Status.STOPPED;
     }
 
     private onTranscribed(result: TranscriptionResult): void {
@@ -62,56 +54,54 @@ export class Recorder {
     }
 
     async initAudio(): Promise<void> {
-        this._audioContext = await this.audioContextProvider.audioContext();
+        this.audioContext = await this.audioContextProvider.audioContext();
 
         try {
-            this._stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-            if (this._stream) {
-                this._status = Status.INIT_SUCCEEDED;
+            this.stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            if (this.stream) {
+                this.status = Status.INIT_SUCCEEDED;
                 const bufferSize = 4096;
 
-                this._input = this._audioContext.createMediaStreamSource(this._stream);
-                this.analyser = this._audioContext.createAnalyser();
+                this.input = this.audioContext.createMediaStreamSource(this.stream);
+                this.analyser = this.audioContext.createAnalyser();
                 this.analyser.fftSize = bufferSize;
-                this._input.connect(this.analyser);
-
+                this.input.connect(this.analyser);
             }
         }
         catch (err) {
-            this._status = Status.INIT_FAILED;
+            this.status = Status.INIT_FAILED;
         }
     }
 
-    close() {
-        //this.stop();
-    }
-
     start() {
-        if (!this._stream) return;
+        if (!this.stream) {
+            return;
+        }
 
         const initParams: TranscriptionInitParams = {
-            inputSampleRate: this._audioContext.sampleRate,
+            inputSampleRate: this.audioContext.sampleRate,
             sampleTime: this.sampleTime,
             blankTime: this.blankTime,
+            tickTime: this.tickTime,
             fundamental: this.fundamental
         };
 
-        this._transcriber.initialize(initParams)
-            .then(() => this._status = Status.RECORDING);
+        this.transcriber.initialize(initParams)
+            .then(() => this.status = Status.RECORDING);
 
         this.fftBuffer = new Float32Array(this.analyser.frequencyBinCount);
-        this.timer = timer(0, this.tickTime);
+        this.timer = timer(0, this.tickTime * 1000);
         this.subscription = this.timer.subscribe(() => this.pushSpectrum());
     }
 
     private async pushSpectrum(): Promise<void> {
-        if (this._status != Status.RECORDING) {
+        if (this.status != Status.RECORDING) {
             return;
         }
 
         this.analyser.getFloatFrequencyData(this.fftBuffer);
-        this._transcriber.pushSignal(this.fftBuffer)
-        this._timeRecorded += (this.tickTime / 1000);
+        this.transcriber.pushSignal(this.fftBuffer)
+        this.timeRecorded += this.tickTime;
 
         this.zone.run(() =>
             this.progressSource.next(this.progressPercentage));
@@ -123,31 +113,30 @@ export class Recorder {
     }
 
     private recordingComplete(): boolean {
-        return this._timeRecorded >= this.sampleTime;
+        return this.timeRecorded >= this.sampleTime;
     }
 
     stop() {
-        this._status = Status.STOPPED;
-        this._timeRecorded = 0;
-        if (this._stream) { 
-            this._stream.getTracks().forEach(t => t.stop());
+        this.status = Status.STOPPED;
+        this.timeRecorded = 0;
+        if (this.stream) { 
+            this.stream.getTracks().forEach(t => t.stop());
             // This is needed to turn off the recording symbol in the browser
-            this._stream = null;
+            this.stream = null;
         }
-        this._input.disconnect(this.analyser);
+        this.input.disconnect(this.analyser);
     }
 
     destroy() {
         this.stop();
-        this._stream = null;
     }
 
     private async analyzeSignal(): Promise<void> {
         this.stop();
-        this._status = Status.ANALYZING;
+        this.status = Status.ANALYZING;
 
-        const result = await this._transcriber.transcribe();
-        this._status = Status.ANALYSIS_SUCCEEDED;
+        const result = await this.transcriber.transcribe();
+        this.status = Status.ANALYSIS_SUCCEEDED;
         this.onTranscribed(result);
     }
 }

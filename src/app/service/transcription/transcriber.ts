@@ -7,6 +7,7 @@ const DEFAULT_SAMPLE_RATE = 44100;
 const DEFAULT_FRAME_SIZE = 4096;
 const DEFAULT_SAMPLE_TIME = 12;
 const DEFAULT_BLANK_TIME = 2;
+const DEFAULT_TICK_TIME = 20/1000;
 const DEFAULT_FUNDAMENTAL = 'D';
 
 export interface Note {
@@ -22,6 +23,7 @@ export default class Transcriber {
 
     private sampleTime: number;
     private blankTime: number;
+    private tickTime: number;
     private fundamental: string;
     private frameSize: number;
 
@@ -37,6 +39,10 @@ export default class Transcriber {
         this.blankTime = typeof params.blankTime !== 'undefined'
             ? params.blankTime
             : DEFAULT_BLANK_TIME;
+
+        this.tickTime = typeof params.blankTime !== 'undefined'
+            ? params.tickTime
+            : DEFAULT_TICK_TIME;
 
         this.fundamental = typeof params.fundamental !== 'undefined'
             ? params.fundamental
@@ -70,7 +76,7 @@ export default class Transcriber {
                 };
                 notes.push(note);
             }
-            onset += (20/1000);
+            onset += this.tickTime;
         }
 
         const transcription = this.postProcess(notes, false);
