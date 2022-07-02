@@ -40,7 +40,7 @@ export default class Transcriber {
             ? params.blankTime
             : DEFAULT_BLANK_TIME;
 
-        this.tickTime = typeof params.blankTime !== 'undefined'
+        this.tickTime = typeof params.tickTime !== 'undefined'
             ? params.tickTime
             : DEFAULT_TICK_TIME;
 
