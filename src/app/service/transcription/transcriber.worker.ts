@@ -17,7 +17,7 @@ export class TranscriberImpl implements ITranscriber {
     
     transcribe(): TranscriptionResult {
         const transcription = this.transcriber.transcribe(this.signal);
-        console.log(`Worker: transcription: ${transcription}`);
+        console.log(`transcription: ${transcription}`);
 
         const resultMsg = {
             transcription: transcription,
@@ -38,9 +38,7 @@ export class TranscriberImpl implements ITranscriber {
         }
 
         return {
-            amplitude: largest,
-            timeRecorded:0,
-            isBufferFull: false
+            numSamples: signal.length
         };
     }
 }

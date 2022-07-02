@@ -5,6 +5,12 @@ import { AudioContextProvider } from './audio-context-provider';
 import { TranscriberProvider } from './transcriber-provider';
 import { ITranscriber, TranscriptionInitParams, TranscriptionResult } from './transcription';
 
+/* Ticks in seconds for taking spectrum samples. */
+const DEFAULT_TICK_TIME = 0.01;
+
+/* Size of FFT buffer. */
+const DEFAULT_BUFFER_SIZE = 4096;
+
 @Injectable()
 export class Recorder {
     private status: Status;
@@ -13,7 +19,7 @@ export class Recorder {
     private transcriber: Remote<ITranscriber>;
     private stream: MediaStream;
     private input: MediaStreamAudioSourceNode;
-    private tickTime = 0.01; // seconds
+    private tickTime = DEFAULT_TICK_TIME;
     private analyser: AnalyserNode;
     private timer: Observable<number>;
     private subscription: Subscription;
@@ -33,8 +39,6 @@ export class Recorder {
     get blankTime() { return 0; }
 
     get fundamental() { return 'D'; }
-
-    get transcriberFrameSize() { return 'auto'; }
 
     get sampleRate() { return this.audioContext.sampleRate; }
     get progressPercentage() { return 100 * this.timeRecorded / (this.blankTime + this.sampleTime); }
@@ -60,7 +64,7 @@ export class Recorder {
             this.stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             if (this.stream) {
                 this.status = Status.INIT_SUCCEEDED;
-                const bufferSize = 4096;
+                const bufferSize = DEFAULT_BUFFER_SIZE;
 
                 this.input = this.audioContext.createMediaStreamSource(this.stream);
                 this.analyser = this.audioContext.createAnalyser();

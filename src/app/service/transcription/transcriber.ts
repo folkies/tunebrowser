@@ -15,7 +15,7 @@ export interface Note {
     onset: number;
     duration?: number;
     frequency: number;
-    qq?: number;
+    quavers?: number;
 }
 
 export default class Transcriber {
@@ -28,30 +28,12 @@ export default class Transcriber {
     private frameSize: number;
 
     constructor(params: TranscriptionInitParams) {
-        this.inputSampleRate = typeof params.inputSampleRate !== 'undefined'
-            ? params.inputSampleRate
-            : DEFAULT_SAMPLE_RATE;
-
-        this.sampleTime = typeof params.sampleTime !== 'undefined'
-            ? params.sampleTime
-            : DEFAULT_SAMPLE_TIME;
-
-        this.blankTime = typeof params.blankTime !== 'undefined'
-            ? params.blankTime
-            : DEFAULT_BLANK_TIME;
-
-        this.tickTime = typeof params.tickTime !== 'undefined'
-            ? params.tickTime
-            : DEFAULT_TICK_TIME;
-
-        this.fundamental = typeof params.fundamental !== 'undefined'
-            ? params.fundamental
-            : DEFAULT_FUNDAMENTAL;
-
-
-        this.frameSize = typeof params.frameSize !== 'undefined'
-            ? params.frameSize
-            : DEFAULT_FRAME_SIZE;
+        this.inputSampleRate = params.inputSampleRate || DEFAULT_SAMPLE_RATE;
+        this.sampleTime = params.sampleTime || DEFAULT_SAMPLE_TIME;
+        this.blankTime = params.blankTime || DEFAULT_BLANK_TIME;
+        this.tickTime = params.tickTime || DEFAULT_TICK_TIME;
+        this.fundamental = params.fundamental || DEFAULT_FUNDAMENTAL;
+        this.frameSize = params.frameSize || DEFAULT_FRAME_SIZE;
     }
 
     transcribe(spectra: Float32Array[]): string {
@@ -103,11 +85,11 @@ export default class Transcriber {
         for (const note of notes) {
             if (note.spelling == 'Z') continue;
 
-            note.qq = Math.round(note.duration / quaverLength);
+            note.quavers = Math.round(note.duration / quaverLength);
 
             let spelling = note.spelling;
             if (midi) spelling += ',';
-            spelling = spelling.repeat(note.qq);
+            spelling = spelling.repeat(note.quavers);
 
             transcription += spelling;
         }

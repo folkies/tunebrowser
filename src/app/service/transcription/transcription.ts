@@ -1,13 +1,9 @@
 export interface TranscriptionResult {
     transcription: string;
-    sampleRate?: number;
-    numSamples?: number;
 }
 
 export interface PushResult {
-    amplitude: number;
-    timeRecorded: number;
-    isBufferFull: boolean;
+    numSamples: number;
 }
 
 export interface TranscriptionInitParams {
