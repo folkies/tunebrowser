@@ -112,4 +112,14 @@ T:Secondary Title
         const replaced = includeNumberInTitle(abc);
         expect(replaced).toContain('33 The Humours Of Clonmult');
     });
+
+    test('should prepare audio', () => {
+        const tunes = parseOnly(abcTunebook);
+        expect(tunes.length).toBe(2);
+        const tune = tunes[0];
+
+        const tracks = tune.setUpAudio({});
+        expect(tracks.tracks).toHaveLength(1);
+    });
+
 });
