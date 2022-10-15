@@ -16,24 +16,24 @@ function randomized(date: Date): Date {
 
 /**
  * Builds a practice assignment from a repertoire.
- * 
+ *
  * For new tunes, there is a list of predefined intervals after which a tune is due for practice.
  * A new tune is due to be practiced every day for a week, then every two days for three times etc.
- * 
+ *
  * A tune is no longer new when is has been practiced for the predefined number of times or more.
- * 
+ *
  * An older tune is due for practice when it has not been practiced for a given number of days defined
  * as maximum age on the repertoire.
- * 
+ *
  * The due date is randomized by adding up to two days to avoid repeating similar assignments.
- * 
+ *
  * After computing the due date for all repertoire items, the items are sorted by (randomized) due date,
  * and the required number of items is taken from the list for the current assignment.
  */
 @Injectable()
 export class PracticeService {
 
-    /** 
+    /**
      * Builds a practice assignment for the given repertoire and the given day.
      * @param repertoire repertoire
      * @param day date for practice assignment
@@ -53,7 +53,7 @@ export class PracticeService {
     private isDueOnDay(item: RepertoireItem, day: Date): boolean {
         return differenceInDays(item.due, day) <= 0;
     }
- 
+
     private isRecentOnDay(item: RepertoireItem, day: Date): boolean {
         return differenceInDays(day, item.added) <= 30;
     }
@@ -67,7 +67,7 @@ export class PracticeService {
             const interval = INTERVALS[item.timesPracticed];
             item.due = addDays(randomized(item.lastPracticed), interval);
         } else {
-            item.due = day;
+            item.due = item.added;
         }
     }
 

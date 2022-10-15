@@ -15,22 +15,22 @@ export const INTERVALS : number[] = [ 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 6, 6, 15 
  * @return revived object with correct class
  */
 export function reviveRepertoire(key: string, value: any): any {
-    if (key === "added" || key === "due" || key === "lastPracticed") {
+    if (key === 'added' || key === 'due' || key === 'lastPracticed') {
         return new Date(value);
     }
-    if (key === "items") {
+    if (key === 'items') {
         return (value as any[]).map(item => new RepertoireItemImpl(item.tune, item.added, item.timesPracticed, item.lastPracticed));
     }
     // legacy field
-    if (key == "instrument") {
+    if (key === 'instrument') {
         this.name = value;
         return undefined;
-    } 
+    }
     return value;
 }
 
 export function replaceRepertoire(key: string, value: any): any {
-    if (key === "due") {
+    if (key === 'due') {
         return undefined;
     }
     return value;
@@ -50,7 +50,7 @@ export class RepertoireItemImpl implements RepertoireItem {
         if (!ref) {
             return false;
         }
-        return this.tune.bookId == ref.bookId && this.tune.tuneId === ref.tuneId;
+        return this.tune.bookId === ref.bookId && this.tune.tuneId === ref.tuneId;
     }
 }
 
@@ -134,7 +134,7 @@ export class RepertoireRepository {
             collection.repertoires.push(repertoire);
             collection.current = selection.name;
         }
-        const item = repertoire.items.find(item => item.referencedBy(tuneRef));
+        const item = repertoire.items.find(it => it.referencedBy(tuneRef));
         if (item) {
             item.added = selection.added;
         } else {
