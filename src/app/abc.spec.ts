@@ -92,7 +92,7 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
     });
 
     test('should get signature', () => {
-        expect(signature).toMatch('abcjs-basic v6.0.3');
+        expect(signature).toMatch('abcjs-basic v6.1.8');
     });
 
     test('should read large tunebook', () => {
