@@ -2141,7 +2141,51 @@ R: reel
 M: 4/4
 L: 1/8
 K: Bmin
-dc||BE ~E2 B2AF|EFDE FA A2|BE ~E2 B2AF|EFDE FD D2|
+dc|:BE ~E2 B2AF|EFDE FA A2|BE ~E2 B2AF|EFDE FD D2|
 BE ~E2 B2AF|EFDE FA A2|BAFA dBAF|EFDE FD D2:|
-dfed BAFA|dfed Be e2|dfed B2 AF|EFDE FD D2|
+|: dfed BAFA|dfed Be e2|dfed B2 AF|EFDE FD D2|
 dfed BAFA|dfed Be e2|fdef dBAF|EFDE FD D2:| 
+
+X: 181
+T: Liam Childs
+R: slip jig
+M: 9/8
+L: 1/8
+K: Gmaj
+G2A|:"G"B2B BAG Bdd|"D"A2A AGA BGd|"C"G2G GAG GED|"D"BAA ABd "C"edg|
+"G"B2B BAG Bdd|"D"A2A AGA BGd|"C"G2G GAG GED|1 "D"BAA ABA "C"G2A:|2 "D"BAA ABA "G"GB/c/d||
+|:"G"ged B2B BAG|ged BAG "C"E2G|"G"ged B2A Bdg|"C"e2d egb "D"a2b|
+"b"ged B2B BAG|"e"ged BAG "C"E2G|"D"A2A ABA "a"AGE|1 "C"edB "D"ABA "G"GB/c/d:|2 "C"edB "D"ABA "G"G2A|| 
+
+X: 182
+T: Paddy Clancy's
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+f|afd edc|dcB AFA|~d3 efg|fdf efg|
+afd edc|dcB AFA|~d3 efg|fdc d2:|
+|:e|~f3 ~g3|faf fed|~f3 ~g3|afd ede|
+~f3 ~g3|faf fed|~f3 ede|fdc d2:| 
+
+X: 183
+T: Ivory Lady
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+|:Gdeg d2 BA|BG G2 edBA|G2 cB cG G2|cBAG ABGD|
+Gdeg d2 BA|BG G2 edBg|edcB cdde|1 cBAB AGED:|2 cBAB AGGG||
+|:Bdde g2 ed|Bged egg2|eaab a3g|eaab abge|
+Bdde g2 ed|Bged egg2|G2 cB cdde|1 cBAB AGGG:|2 cBAG ABGD|| 
+
+X: 184
+T: The Lost And Found
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|:~G3 dGG|edB dBA|~G3 deg|edB dBA|
+~G3 dGG|edB def|gfe dBA|Bee dBA:|
+|:~g3 bge|~f3 afd|~g3 bge|edB GBd|
+~g3 bge|~f3 aga|bag agf|efg edB:| 

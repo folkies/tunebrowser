@@ -4069,3 +4069,34 @@ K: Dmix
 "D"A2G FDE F2G|"D"A2A AGA "C"cAG|"D"A2G FDE F2G|"D"Add ded "C"cAG:|
 "D"Add d2e f2e|"D"Add ded "C"cAG|"D"Add d2e f2g|"D"aff "C"ged cAG|
 "D"Add d2e f2e|"D"Add ded "C"cAG|"D"dcA d2e f2g|"D"aff "C"ged cAG|]
+
+X: 310
+T: Up with Aily Aily
+R: slip jig
+M: 9/8
+L: 1/8
+K: Dmix
+"D"D2d A2F A2F | "D"D2d A2F "C"G2E | "D"D2d A2G FAB | "C"cdc E2F "G"GFE :|
+|: "D"D2f fef fef |"D"D2f fga "A"e^cA | "D"def fef fed | "C"e3 E2F "G"GFE :|
+
+X:311
+T: Eileen O'Riordan's
+R: slide
+M: 12/8
+L: 1/8
+K: Amix
+|:"A"E2A ABA E2A ABA|"A"e2A ABA "G"G2E "D"F2D|
+"A"E2A ABA E2A A2c|"A"e2c "G"dcB "A"A3 A3:|
+|:"A"e3 efe "D"d3 c2d|"A"e2A ABA "G"G2E "D"F2D|
+"A"E2A ABA E2A A2c|"A"e2c "G"dcB "A"A3 A3:| 
+ 
+X:312
+T:Sí bheag, sí mhor
+C:Turlough O'Carolan
+M:3/4
+K:D
+(de) |:\
+"D"f2 (fe) d2 |"D" d2 (de) d2 |"G" B4 A2 |"D" F4 A2 |"G" (BA) (Bc) d2 |"A" e4 (de) |
+"D"f4 "A"e2 |"D" d4 f2 |"G" B4 e2 |"A" A4 d2 |"F#m"F4 E2 |"Bm" D4 f2 |"G"B4 e2 |"A" A4 (dc) |"D" (d6 | d4) de  :|
+|:"D" f2 (fe) d2 |"D" (ed) (ef) a2 |"G"b4 "A"a2 |"D" f4 (ed) |"A" e4 ag |"F#m"f4 (ed) |"D" d4 B2 |"Bm" B4 (BA) |
+"D" F4 "A"E2 |"D"D4 f2 |"G" B4 e2 |"A" A4 a2 |"G" (bagfed) |"A" e4 dc |"D" (d6 | d4) (de) :|
