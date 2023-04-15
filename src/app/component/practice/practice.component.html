@@ -11,11 +11,11 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-form-field class="num-tunes">
-                <input matInput name="maxAge" type="text" [(ngModel)]="maxAge" placeholder="Maximum age in days">
+            <mat-form-field class="max-age">
+                <input matInput name="maxAge" type="number" [(ngModel)]="maxAge" placeholder="Maximum age in days">
             </mat-form-field>
             <mat-form-field class="num-tunes">
-                <input matInput name="numTunes" type="text" [(ngModel)]="numTunes" placeholder="Number of tunes">
+                <input matInput name="numTunes" type="number" [(ngModel)]="numTunes" placeholder="Number of tunes">
             </mat-form-field>
         </div>
         <button mat-raised-button (click)="buildAssignment()" class="search-button" color="primary">Get
