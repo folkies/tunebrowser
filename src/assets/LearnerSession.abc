@@ -4090,24 +4090,36 @@ K: Amix
 |:"A"e3 efe "D"d3 c2d|"A"e2A ABA "G"G2E "D"F2D|
 "A"E2A ABA E2A A2c|"A"e2c "G"dcB "A"A3 A3:| 
  
-X:312
-T:Sí bheag, sí mhor
-C:Turlough O'Carolan
-M:3/4
-K:D
+X: 312
+T: Sí bheag, sí mhor
+C: Turlough O'Carolan
+M: 3/4
+K: D
 (de) |:\
 "D"f2 (fe) d2 |"D" d2 (de) d2 |"G" B4 A2 |"D" F4 A2 |"G" (BA) (Bc) d2 |"A" e4 (de) |
 "D"f4 "A"e2 |"D" d4 f2 |"G" B4 e2 |"D" A4 d2 |"F#m"F4 E2 |"Bm" D4 f2 |"G"B4 e2 |"A" A4 (dc) |"D" (d6 | d4) de  :|
 |:"D" f2 (fe) d2 |"A" (ed) (ef) a2 |"Em"b4 a2 |"Bm" f4 (ed) |"A" e4 ag |"F#m"f4 (ed) |"G" d4 B2 |"Em" B4 (BA) |
 "D" F4 "A"E2 |"D"D4 f2 |"G" B4 e2 |"D" A4 a2 |"G" (bagfed) |"A" e4 dc |"D" (d6 | d4) (de) :|
  
-X:313
-T:The quarrelsome piper
-R:hornpipe
-M:4/4
-L:1/8
-K:G
+X: 313
+T: The quarrelsome piper
+R: hornpipe
+M: 4/4
+L: 1/8
+K: G
 (EF) | "G"(3GAG "D"(3FGF "C"(3EFE "D"(3DED | "G"B>DG>B "D"A>GE>F | "G"G>Bd>f "C"e>dc>A | "G"G>gf>e "D"(3ded (3cBA |
 "G"(3GAG "D"(3FGF "C"(3EFE "D"(3DED | "G"B>DG>B "D"A>GE>F | "G"G>Bd>f "C"e>d (3cAF | "G"G>B "D7"A>F "G"G2 :|
 |:B2 | "Em"e>B (3BcB g>B (3BcB | "Em"e>Bg>B e>B (3BcB | "D"d>A (3ABA f>A (3ABA | "D7"d>gf>e (3ded (3cBA |
 "G"(3GAG "D"(3FGF "C"(3EFE "D"(3DED |"G"B>DG>B "D"A>GE>F | "G"G>Bd>f "C"e>d (3cAF | "G"G>B "D7"A>F "G"G2:|
+
+X: 314
+T: Maggie's Pancakes
+R: reel
+C: Stuart Morison
+M: 4/4
+L: 1/8
+K: Bmin
+"Bm"fB~B2 fgfe|"G"dBAB GBdB|"A"cAAd AAeA|"Bm7"afdB "A"ecAe|
+"Bm"fB~B2 fgfe|"G"dBAB GBdB|"A"cAdA ecA2|"F#m"afec "Bm"B4:|
+|:"Bm"f2dB "G"GBdB|"A"caec "Bm"dB~B2|"Bm"f2dB "G"GBdB|"A"caec "Bm"Bcde|
+"D"fd~d2 fgfe|"G"dBAB GBdB|"A"cAdA ecA2|"F#m"afec "Bm"B4:| 
