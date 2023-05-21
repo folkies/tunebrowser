@@ -3867,11 +3867,11 @@ K: Bmin
 "Bm"Bdcd BF~F2 | DF~F2 Bcdf | "A"ecBA fcec | "Bm"dcBA FB~B2 :| 
 
 X:292
-T:Charlie O'Neill's
-T:Donegal Highland
-R:reel
-M:C|
-K:G
+T: Charlie O'Neill's
+T: Donegal Highland
+R: reel
+M: C|
+K: G
 A|"Em"BEBE "Am"cBcA| "Em"BEBE "D"cAFA|"Em"BEBE "Am"cBcB|1 "D"Addc "G"BGG:|2 "D"Addc "G"BGBd||
 "G"g2fg "Em"~B3A|G2 "D"ag fdef|"G"g2fg "Em"~B3A|"G"GBdc BGBd|
 "G"g2fg "Em"~B3A|G2 "D"ag fdcA|"G"GBdB "D"cdef|"G"gbaf ~g3|]
@@ -3887,12 +3887,12 @@ K: A
 "A"aecB ABcA|"E"~B2cA BAFG|1 "A"ABce fece|"F#m"fAgA "A"a3g:|2 "A"ABce (3fga ec|"E"BccB "A"A3B||
 
 X: 294
-T:Up Downey
-M:C|
-L:1/8
-C:Tola Custy
-R:reel
-K:Edor
+T: Up Downey
+M: C|
+L: 1/8
+C: Tola Custy
+R: reel
+K: Edor
 "Em" EFGA ~B2 ed | "G"BAGB "D"AGFG | "Em"EFGA ~B2 ef| "G" gfed "A"ea z D|
 "Em"EFGA ~B2 ed | "G"BAGB "D"AGFG | "Em"EFGA "G"~B2 ed |1 BAGF "Em"E4 :|2 BAGF E2 ef||
 "Em"gfeg fegf | egfe "A"a2 a2 | "Em"gfeg fegf | egfe "G"B2 B2 |
@@ -3969,11 +3969,11 @@ K: Edor
 |:"Em"Bcd e2f|e2f edB|Bcd e2f|edB "D"d3|
 "Em"Bcd e2f|e2f edB|"G"dcd "D"AGF|"Em"GEE E3:||
 
-X:301
-T:Apples in Winter
-R:jig
-M:6/8
-K:Edor
+X: 301
+T: Apples in Winter
+R: jig
+M: 6/8
+K: Edor
 G/A/|"Em"BEE dEE|BAG FGE|"D"DED FDF|ABc ded|
 "Em"BEE BAB|"D"def "Em"g2e|"Bm"fdB "D"AGF|"Em"GEE E2:|
 d|:"Em"efe edB|ege "Bm"fdB|"D"ded dAF|DFA def|
@@ -4116,7 +4116,7 @@ X: 314
 T: Maggie's Pancakes
 R: reel
 C: Stuart Morison
-M: 4/4
+M: C|
 L: 1/8
 K: Bmin
 "Bm"fB~B2 fgfe|"G"dBAB GBdB|"A"cAAd AAeA|"Bm7"afdB "A"ecAe|
@@ -4137,3 +4137,15 @@ K: G
 "G" Bd d>B|"C" ce e>f|"Em" ge "D" f/e/d|"Em" e2 ee/f/|
 "Em"ge "D"fd|"Em"e/f/e/d/ B>A|"G" Bd "D" AB/A/|"Em" GE E/G/F/E/|
 "G" D>E DB,|"G"DE G>A|"G" Bd "D" AB/A/|"G" G2 G2|]
+
+X: 316
+T: Old Man Dillon
+R: jig
+M: 6/8
+L: 1/8
+K: Ador
+"Am"EAA ABd|edB c2A|"G"BGG DGG|Bdc BAG|
+"Am"EAA ABd|ede a2e|"Em"edc Bcd|1 "Am"ecA A2G:|2 "Am"ecA A2g||
+|:"Em"gef g2a|gef g2d|"G"BGG DGG|Bdc BAG|
+[1 "Em"gef g2a|gef g2d|"G"edc Bcd|"Am"ecA A2g:|
+[2 "Am"EAA ABd|ede a2e|"G"edc Bcd|"Am"ecA A3|] 
