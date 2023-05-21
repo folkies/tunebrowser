@@ -6,7 +6,7 @@ import { TranscriptionInitParams } from './transcription';
 const DEFAULT_SAMPLE_RATE = 44100;
 const DEFAULT_FRAME_SIZE = 4096;
 const DEFAULT_SAMPLE_TIME = 12;
-const DEFAULT_BLANK_TIME = 2;
+const DEFAULT_BLANK_TIME = 0;
 const DEFAULT_TICK_TIME = 20/1000;
 const DEFAULT_FUNDAMENTAL = 'D';
 
@@ -61,11 +61,11 @@ export default class Transcriber {
             onset += this.tickTime;
         }
 
-        const transcription = this.postProcess(notes, false);
+        const transcription = this.postProcess(notes);
         return transcription;
     }
 
-    private postProcess(notes: Note[], midi: boolean): string {
+    private postProcess(notes: Note[]): string {
         let transcription = '';
 
         for (let i = 0; i < notes.length - 1; i++) {
@@ -88,7 +88,6 @@ export default class Transcriber {
             note.quavers = Math.round(note.duration / quaverLength);
 
             let spelling = note.spelling;
-            if (midi) spelling += ',';
             spelling = spelling.repeat(note.quavers);
 
             transcription += spelling;
