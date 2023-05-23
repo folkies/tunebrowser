@@ -21,6 +21,9 @@ export class TunePageComponent implements OnInit {
     allTags = '';
     signedIn = false;
 
+    prevRef: string;
+    nextRef: string;
+
     private bookId: string;
     private ref: string;
 
@@ -89,6 +92,17 @@ export class TunePageComponent implements OnInit {
                 this.tune = this.index.getAbc(entry);
                 if (entry.tags) {
                     this.allTags = entry.tags.join(', ');
+                }
+                const book = this.index.getBookById(bookId);
+                this.prevRef = undefined;
+                this.nextRef = undefined;
+                const prevPos = entry.pos - 1;
+                if (prevPos >= 0) {
+                    this.prevRef = book.tuneBook.tunes[prevPos].id
+                }
+                const nextPos = entry.pos + 1;
+                if (nextPos < book.tuneBook.tunes.length) {
+                    this.nextRef = book.tuneBook.tunes[nextPos].id;
                 }
             }
         }

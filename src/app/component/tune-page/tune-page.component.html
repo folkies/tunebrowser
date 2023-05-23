@@ -23,3 +23,9 @@
 [disabled]="!signedIn">Add to repertoire</button>
 
 <button mat-raised-button (click)="exportAsPdf()" class="pdf-button" color="primary"><mat-icon>print</mat-icon></button>
+
+<button mat-raised-button routerLink="../{{prevRef}}" class="pdf-button" color="primary"
+[disabled]="!prevRef">Previous tune</button>
+
+<button mat-raised-button routerLink="../{{nextRef}}" class="pdf-button" color="primary"
+[disabled]="!nextRef">Next tune</button>

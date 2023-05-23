@@ -33,8 +33,8 @@ export class TuneBookIndex {
 
     addTuneBook(tuneBookRef: TuneBookReference) {
         this.idToBookMap.set(tuneBookRef.descriptor.id, tuneBookRef);
-        tuneBookRef.tuneBook.tunes.forEach(tune => {
-            this.entries.push(this.createEntry(tune, tuneBookRef));
+        tuneBookRef.tuneBook.tunes.forEach((tune, pos) => {
+            this.entries.push(this.createEntry(tune, pos, tuneBookRef));
         });
         this.tuneBookReadySource.next(tuneBookRef.descriptor.id);
     }
@@ -49,12 +49,13 @@ export class TuneBookIndex {
         this.entries = this.entries.filter(entry => entry.book !== tuneBookRef.descriptor.id);
     }
 
-    private createEntry(tune: AnalyzedTune, tuneBookRef: TuneBookReference): IndexEntry {
+    private createEntry(tune: AnalyzedTune, pos: number, tuneBookRef: TuneBookReference): IndexEntry {
         const tuneDescriptor = this.findTuneDescriptor(tune.id, tuneBookRef.descriptor);
         const tags = tuneDescriptor && tuneDescriptor.tags;
         const rhythm = tuneDescriptor && tuneDescriptor.rhythm;
         const key = tuneDescriptor && tuneDescriptor.key;
         return new IndexEntry(tune.id,
+            pos,
             tuneBookRef.descriptor.id,
             tune.title,
             this.normalize(tune.title),

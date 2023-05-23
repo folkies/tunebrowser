@@ -1,6 +1,10 @@
 export class IndexEntry {
     constructor(
+        /** Identity from X header */
         public id: string, 
+        /** Position in tune array */
+        public pos: number,
+        /** Tune book reference */
         public book: string, 
         public title: string, 
         public titleNormalized: string, 
