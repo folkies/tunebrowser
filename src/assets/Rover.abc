@@ -1808,6 +1808,7 @@ dBd c2B- | Bdf e2c | dcB AFD | E>FE D3 :|
 X: 152
 T: Strike The Gay Harp
 R: jig
+C: Walker Jackson
 M: 6/8
 L: 1/8
 K: Dmaj
@@ -2324,8 +2325,65 @@ T: Miss Brown's
 R: reel
 M: C|
 L: 1/8
-K: Dmaj
+K: D
 (3A,B,C|D2DE FDFA|dFAF BFAF|E2EF GFGA|Bd AF EGFE|
 D2DE FDFA|dABF ABde|(3fgf (3efe dBAG|1 FGEF D2:|2 FGEF D3A||
 |:defg afdf|afdf a2gf|edef gfed|cdef g2fe|
-defg afdf|afdf abag|(3fgf (3efe dBAG|1 FGEF D3A:|2 FGEF D2|| 
+defg afdf|afdf abag|(3fgf (3efe dBAG|1 FGEF D3A:|2 FGEF D2|]
+
+X: 197
+T: Seamus Cooley's
+R: jig
+M: 6/8
+L: 1/8
+K: G
+BAB G2E|DB,D DEG|GAB AGE|A3 AGA|
+BAB G2E|DB,D DEG|GAB AGE|G3 G2A:|
+|:BAB d2B|BAB d2B|A3 AGE|ABA AGA|
+[1 BAB d2B|BAB d2B|G2B AGE|G3 G2A:|
+[2 BAB G2E|DB,D DEG|GAB AGE|G3 G2A|]
+
+X: 198
+T: The Lark On The Strand
+R: jig
+M: 6/8
+L: 1/8
+K: G
+A3 AGA|BGE G3|ABA GBd|edg edB|
+GAA AGA|BGE G3|ABA GAB|dBG BdB:|
+|:GBd g2 g|gba gdB|GBd e2d|edg edB|
+GBd g2 g|gba gab|a2a age|edg edB:| 
+
+X: 199
+T: The Malbay Shuffle
+C: Diarmuid Moynihan
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+d3G AG G2|EG G2 AGGB|d2 cB AG G2|DEGB AGAB|
+d3G AG G2|EG G2 AGGB|d2 cB AG G2|DEGB AGGA||
+B3d eg g2|egdg eg g2|B3d eggd|(3efg dB AGEG|
+B3d eg g2|egdg eggd|(3efg dB cABG|DEGB AGAB|| 
+
+X: 200
+T: Music In The Glen
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+|:"G"G2BG EGDC'|B',DGB AGAB|"C"cdec "G"B2 (3dcB|"Am"BAAG "D"AGEF|
+"G"GABG EGDC'|B',DGB AGAB|"C"cdef ~g3e|1 "D"dcBA "G"G2EF:|2 "D"dcBA "G"~G3A||
+|:"G"BGdG eGdG|(3BAG dB "D"cAFA|"G"BGdG eGdf|gdBG "D"AGEG|
+"G"(3BAG dG eGdf|g2 fg "D"afdf|"Em"g2fg egdB|"C"cABG "D"AGEG:| 
+
+X: 201
+T: The Legacy
+R: jig
+M: 6/8
+L: 1/8
+K: G
+~G3 ~B3|~g3 gab|~G3 ~B3|dBA AFD|
+~G3 ~B3|~g3 gab|age edB|1 dBA AFD:|2 dBA ABd||
+~e3 edB|ded dBd|~e3 edB|gdB ABd|
+~e3 edB|ded def|~g3 ~e3|1 dBA ABd:|2 dBA AFD|]
