@@ -4186,3 +4186,30 @@ K: Gmaj
 "G"D2E G2A B2d dBG|1"G"B2B "D"ABA "G"G3 G3:|2 "G"B2B "D"ABA "G"G3 GBd||
 |:"G"g2d "C"e2d "G"g2d "C"e2d|"G"B2B "D"ABA "G"G2A BGE|
 "G"D2E G2A B2 d dBG|1 "G"B2B "D"ABA"G"G3 GBd:|2"G"B2B "D"ABA"G"G3 G3|]
+
+X: 320
+T: Old Man Quinn
+R: Hornpipe
+M: 4/4
+L: 1/8
+K: D
+A>G|"D"F>DF>A d>fe>d|"A"c>de>c A>BA>G| "D"F>DF>A d>fe>d| "A"c2A2A2A>G|
+"D" F>DF>A d>fe>d| "A"c>de>c A>BA>G|"G"(3Bcd "A"A>B "G"G>F "A" (3EFG|"D"F2D2D2:|
+|:"A7"g2|"D"f>df>g a>fd>f|"A"e>de>f g>ec>e|"G"d>cB>A "D"d>fe>d|"A"c2A2A2d>c|
+"G"(3BcB "D"(3ABA "G"G>AG>A|(3Bcd "A"(3ABA "D"F>GF>A|"G"(3Bcd "A"A>B "G"G>F "A"(3EFG|"D"F2D2D2:|
+|:AG|"D"(3FGF (3EFE D>FA>d|"A"(3cBA B>c A>ce>g|"D"(3fff d>f "G"g>fe>d|"A"c2A2A2 d>c|
+"G"(3BcB (3ABA G>AG>A|"G"(3Bcd "A"(3ABA "D"F>GF>A|"G"(3Bcd "A"A>B "G"G>F "A"(3EFG|"D"F2D2D2:|
+
+X: 321
+T: Spootiskerry
+R: reel
+C: Ian Burns
+M: C|
+L: 1/8
+K: G
+DE|"G"G2DE GDEG|DEGA "D"B2AB|"G"G2DE "Em"GABd|"C"eged "D"B2AB|
+"G"G2DE GDEG|DEGA B2AB|"C"g2ed "Am"edBA|"D7"dBAB "G"G2:|
+ef|"Em"g2ed edB2|BABG "C"E2DE|"G"GABd "Em"eged|"A7"B2A2 "D7"A2ef|
+"Em"g2ed edB2|BABG "C"E2DE|"G"GABd "C"eged|"D"B2G2 "G"G2ef|
+"Em"g2ed edB2|BABG "C"E2DE|"G"GABd "Em"eged|"A7"B2A2 "D7"A2DE|
+"G"G2DE GDEG|DEGA B2AB|"C"g2ed "Am"edBA|"D7"dBAB "G"G2|]
