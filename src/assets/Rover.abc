@@ -2387,3 +2387,73 @@ K: G
 ~G3 ~B3|~g3 gab|age edB|1 dBA AFD:|2 dBA ABd||
 ~e3 edB|ded dBd|~e3 edB|gdB ABd|
 ~e3 edB|ded def|~g3 ~e3|1 dBA ABd:|2 dBA AFD|]
+
+X: 202
+T: The Mossy Banks
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+|:gedB ~G3A|BAGB AGEG|DEGA Bd~d2|edgd e/f/g fa|
+gedB ~G3A|BAGB AGEG|DEGA Bdge|1 dBAc BGGB:|2 dBAc BGGF||
+|:~G3B ABGE|DGBG AGEG|Bd~d2 edge|dBGA BAAB|
+~G3B ABGE|DGBG AGEG|Bd~d2 edge|1 dBAc BGGF:|2 dBAc BG B/c/d||
+|:g2dg egde|gabg agef|g2dg egdB|ABGA BG B/c/d|
+g2dg egde|gabg agef|~g3a gfed|e/f/g fa gdef:| 
+
+X: 203
+T: Paddy Fahey's #1
+R: jig
+M: 6/8
+L: 1/8
+K: Dmix
+|:A|DFA d2e|dcA ~G3|AFD c2B|edc B/c/dA|
+DFA d2e|dcA ~G3|Adc AGE|EDD D2:|
+|:A|DFA fed|cAG AAB|c2B edc|B/c/dA ~G3|
+Add fed|cAG EFG|Adc AGE|EDD D2:| 
+
+X: 204
+T: Kilglass Lakes
+R: jig
+C: John McEvoy
+M: 6/8
+L: 1/8
+K: Dmaj
+DED DFA|BAF d2e|faf ede|fdB AFE|
+DED DFA|BAF d2e|faf ede|1 fdd d2 D:|2 fdd d2 e||
+faa fbb|afe ~f3|~f3 dBA|(3Bcd B AFE|
+DED DFA|BAF d2e|faf ede|1 fdd d2 e:|2 fdd d2 D|] 
+
+X: 205
+T: The Hag With The Money
+R: jig
+M: 6/8
+L: 1/8
+K: Dmix
+|:Adc A3|AGE G3|Adc A3|GEA GED|
+Adc A3|AGE G3|AGE cde|dcA GED:|
+K:DMaj
+|:ABc dcd|fed efe|ABc dcd|eag edc|
+ABc dcd|fed efg|age cde|dcA GED:| 
+
+X: 206
+T: The Arra Mountains
+R: slip jig
+M: 9/8
+L: 1/8
+K: Ador
+|:EAA EAB cBc|EAA EAG GFG|EAA EAB c2 d|ege ege dBG:|
+A2 a gef g3|e2 a ged Bcd|e2 a gef g2 e|dBd ege dBG|
+A2 a gfe g3|e2 a ged Bcd|efg fga g2 e|dBd ege dBG|| 
+
+X:207
+T:Waiting for the Federals
+T:Seneca Square Dance
+R: barndance
+L:1/8
+M:C|
+K:G
+B4 B2AB|d2B2 BAG2|B4 d3B|ABAG E2D2|
+B4 B2AB|d2B2 BAG2|ABAG E2F2|1 G3A G2DG:|2 G3A G2Bd||
+|:g4 gage|d2B2 BAG2|g4 gfga|b(ee)f e3f|
+gaba g2 ge|dged BAG2|ABAG E2F2|1 G3A G2Bd:|2 G4G4||
