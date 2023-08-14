@@ -131,7 +131,7 @@ export class TuneBookIndex {
     }
 
     findAllTunesInBook(bookId: string): AnalyzedTune[] {
-        return this.idToBookMap.get(bookId).tuneBook.tunes;
+        return this.idToBookMap.get(bookId)?.tuneBook.tunes;
     }
 
     getBooks(): TuneBookReference[] {

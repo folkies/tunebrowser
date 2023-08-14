@@ -24,10 +24,12 @@ export class TunesListComponent {
     }
 
     bookName(): string {
-        return this.index.getBookById(this.bookId).descriptor.name;
+        return this.index.getBookById(this.bookId)?.descriptor.name;
     }
 
     private onReady(event?: string) {
-        this.entries = this.index.findAllTunesInBook(event);
+        if (event == this.bookId) {
+            this.entries = this.index.findAllTunesInBook(event);
+        }
     }
 }
