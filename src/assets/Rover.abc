@@ -2446,14 +2446,119 @@ K: Ador
 A2 a gef g3|e2 a ged Bcd|e2 a gef g2 e|dBd ege dBG|
 A2 a gfe g3|e2 a ged Bcd|efg fga g2 e|dBd ege dBG|| 
 
-X:207
-T:Waiting for the Federals
-T:Seneca Square Dance
+X: 207
+T: Waiting for the Federals
+T: Seneca Square Dance
 R: barndance
-L:1/8
-M:C|
-K:G
+L: 1/8
+M: C|
+K: G
 B4 B2AB|d2B2 BAG2|B4 d3B|ABAG E2D2|
 B4 B2AB|d2B2 BAG2|ABAG E2F2|1 G3A G2DG:|2 G3A G2Bd||
 |:g4 gage|d2B2 BAG2|g4 gfga|b(ee)f e3f|
 gaba g2 ge|dged BAG2|ABAG E2F2|1 G3A G2Bd:|2 G4G4||
+
+X: 208
+T: Mulqueeney's
+R: reel
+M: C|
+L: 1/8
+K: D
+F2 EG FDDE|FDAG FDDE|F2 EG FDDE|FABc dBAG|
+F2 EG FDDE|FDAG FD (3FFF|F2 EG FDDE|FABc d2 cd||
+e2 ef efed|cdef g2 fg|e2 ef efed|cABc d2 cd|
+e2 ef efed|cdef gefg|a~f3 g~e3|dfec dBAG|]
+
+X: 209
+T: The Corner House
+R: reel
+C: Paddy Kelly
+M: 4/4
+L: 1/8
+K: Ador
+|:EAAG ABcd|e2dB cAAG|EGGF G2AB|cABG AGED|
+EAAG ABcd|e2af gedB|d2Bd efge|1 dBGB A2AG:|2 dBGB A2Bd||
+|:eaag a2ga|bgab gedB|d2Bd edBd|(3efg fa gdBd|
+eaag a2ga|bgab gedB|d2Bd efge|1 dBGB A2Bd:|2 dBGB A2AG||
+
+X: 210
+T: The Tempest
+R: reel
+M: 4/4
+L: 1/8
+K: C
+|:d2 cA GE E2|DEcE dEcE|d2 cA GE E2|DEAE GEDE|
+d2 cA GE E2|DEcE dEcE|DEFA GEcE|EDcG ED D2:|
+|:d2 ed cAGA|Addc AGEG|d2 ed cdef|edce d3 z|
+efdf edcA|dcAG AGEG|DEFA GEcE|EDcG ED D2:|
+
+X: 211
+T: Francie Campbell's
+R: polka
+M: 2/4
+L: 1/8
+K: G
+|:Bd AB/A/|GE ED|EG G/A/G/E/|DG A2|
+Bd AB/A/|GE ED|EG G/A/G/E/|DG G2:|
+|:Bd g>d|ed g2|Bd e/f/g/e/|dB AG/A/|
+Bd ~g>d|ed ~g>e|dB AG/A/|BG G2:| 
+
+X: 212
+T: Out of the Ashes
+R: polka
+M: 2/4
+L: 1/8
+K: Gmaj
+|:DG G>A|Bd dB|eg/e/ dB|AG E/F/G/E/|
+DG G>A|Bd dg|e4|d3 B|1 .AG G2:|2 . AG G>A||
+|:Bd Bd|g>f eg/e/|d2 BA/G/|EA A>A|
+Bd Bd|g>f e/f/g/e/|de/d/ BA|G3 A:| 
+
+X: 213
+T: Farrel O'Gara's
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+~A,3B, DEFA|BFAF EFGA|dBBA BAGF|(3GFE ED EDB,D|
+~A3,B, DEFA|BFAF EFGA|dBcA (3Bcd AF|G2EG FDD2:|
+fdde fdgd|fdgf edBc|dBBA Bcde|fdgf e2ge|
+fdde fdgd|fdgf edBc|dBBA BAGF|G2EG FDD2|
+fdde fdgd|fdgf edBc|dBBA Bcde|fdgf ~e3g|
+faaf edBc|d2ed BAFD|EDB,D A,DFA|(3Bcd AF EFD2|| 
+
+X: 214
+T: Lad O'Beirne's
+R: reel
+M: C|
+L: 1/8
+K: 
+|:DG~G2 DG~G2|AcBG AE~E2|DG~G2 DGBd|e2dg edge|
+dB~B2 AE~E2|cE~E2 GEDB,|DEGA B2Bc|1 dBAc BGGE:|2 dBAc BGG2||
+|:d2Be d2Bd|e2dg edge|dB~B2 dBGB|cE~E2 GED2|
+Bd~d2 Bdef|g2fa gedB|DEGA B2Bc|dBAc BGG2:|
+
+X: 215
+T: Goldy's
+R: slip jig
+C: Brian Finnegan
+M: 9/8
+L: 1/8
+K: Amin
+|:A2e ecd c2A|edc deg e2g|dcA DEG G2B|DEG GAc d2e|
+A2e ecd c2A|edc deg e2g|dcA DEG G2B|DEG GAc A3:|
+|:A2c z2A AGE|G2E zGE G2E|DED DEG GEG|A2A ABc dBG|
+[1 A2c z2A AGE|G2E zGE G2E|DED DEG GEG|A2A Ade dcG:|
+[2 A2c z2A AGE|G2E zGE G2E|ded dcA cAG|~A3 A B/c/d e z2||
+
+X: 216
+T: The Striking Clock
+R: slip jig
+C: Alan Doherty
+M: 9/8
+L: 1/8
+K: Bmin
+|:"Bm"B3 dBf edB|"G"G3 Bdg fdB|"Em"E3 Bdg fed|"F#m"fAf efe dBA|
+"Bm"B2B dBf edB|"G"G3 Bdg fdB|"Em"E3 Bdg fed|1 "A"f3 e2c dBA:|2 "A"f3 g3 a3||
+|:"G"b2f abf- faf|"F#m"a2f ef"Bm"d- dBA|"Em"B2E EDE- EBA|"F#m"ABd cdf efa|
+"G"b2f abf- faf|"F#m"a2f ef"Bm"d- daf|"Em"a3 f3 dBA|1 "A"a3 f3 efa:|2 "A"a3 f3 dBA|| 
