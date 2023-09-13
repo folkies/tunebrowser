@@ -2532,7 +2532,7 @@ T: Lad O'Beirne's
 R: reel
 M: C|
 L: 1/8
-K: 
+K: G
 |:DG~G2 DG~G2|AcBG AE~E2|DG~G2 DGBd|e2dg edge|
 dB~B2 AE~E2|cE~E2 GEDB,|DEGA B2Bc|1 dBAc BGGE:|2 dBAc BGG2||
 |:d2Be d2Bd|e2dg edge|dB~B2 dBGB|cE~E2 GED2|
@@ -2562,3 +2562,17 @@ K: Bmin
 "Bm"B2B dBf edB|"G"G3 Bdg fdB|"Em"E3 Bdg fed|1 "A"f3 e2c dBA:|2 "A"f3 g3 a3||
 |:"G"b2f abf- faf|"F#m"a2f ef"Bm"d- dBA|"Em"B2E EDE- EBA|"F#m"ABd cdf efa|
 "G"b2f abf- faf|"F#m"a2f ef"Bm"d- daf|"Em"a3 f3 dBA|1 "A"a3 f3 efa:|2 "A"a3 f3 dBA|| 
+
+X: 217
+T: Flat Water Fran
+R: waltz
+C: Phil Cunningham
+M: 3/4
+L: 1/8
+K: Gmaj
+DE|:"G"G2G2DE|G2G2Bd|"C"e2d2G2|"G"B4DE|G2G2DE|"Am"A2A2GA|
+"Em"B2AG ED|"C"E4DE|"G"G2G2DE|G2G2Bd|"C"e2d2g2|"G"B4dB|
+"Am"A2AG AB|"Em"AGE2GE|"C"DEG2"D7"G2|1 "G"G4DE:|2 "G"G4Bd||
+|:"C"e2d2G2|"G"B4Bd|"C"e2d2G2|"G"B4Bd|"C"e2d2g2|"Em"B2dB AG|
+"Am"EA AG AB|"D"A4Bd|"C"e2d2g2|"G"B2dB AG|"D7"A2d3c|"Em"B3B AG|
+"Am"EA AG AB|"Em"AG E2GE|1 "C"DEG2"D7"G2|"G"G4Bd:|2 "C"DEG2"D7"A2|"G"G4|| 
