@@ -2285,17 +2285,14 @@ D2|"G"(3GGG G2 (3GGG Gd|BG Bd gd BG|"D"(3DDD D2 (3DDD DA|FD FA dA FD|
 "G"(3GGG G2 "G7"(3=FFF F2|"C"(3EEE E2"Cm"(3_EEE E2|"D"D2 fe dc BA|"G"G2B2 G2:|
 
 X: 193
-T: Paddy O'Rafferty
-R: jig
-M: 6/8
+T: Last Night's Fun
+R: reel
+M: 4/4
 L: 1/8
-K: D
-dff cee|def gfe|dff cee|dfe dBA|
-dff cee|def ~g3|afd gfe|dfe dBA:|
-|:AFA ~A2f|~g3fdB|~A3 AFA|dfe dBA|
-AFA BGB|efe efg|afd gfe|dfe dBA:|
-|:faa eaa|def gfe|fAA eAA|dfe dBA|
-faa eaa|def~g3|afd gfe|dfe dBA:| 
+K: Dmaj
+|:"D"ADFD A2AB|"D"ADFD "A"EFGB|"D"ADFD A2 Bd|"G"e2fe "A"dBAB:|
+"D"dfff afff|"D"defd "A"egfe|"D"dfff afff|"A"egfe "G"dBAB|
+"D"dfff afff|"D"defd "A"e3f|"D"a2bf afeg|"A"fedc "G"BcdB| 
 
 X: 194
 T: Sean Reid's
