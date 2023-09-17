@@ -1,0 +1,604 @@
+X: 1
+T: Amazone
+T: Ronde du Quercy
+R: jig
+C: Cyril Brotto
+M: 6/8
+L: 1/8
+K: Amin
+|: "Am"e2e edc|"F"c3 cde|"Dm"fed edc|"Em"d2c Bcd|
+"Am"e2e edc|"F"c3 cde|"Dm"fed edc|"E7"B6:|
+|:"A"A2 "G"B2 "F"c2|"Dm"d6|"Em"ege dcB|"Am"c2B- BAE|
+"A"A2 "G"B2 "F"c2|"Dm"d6|"Em"ege dcB|"Am"A6:|
+
+X: 2
+T: The Ash Grove
+R: waltz
+M: 3/4
+L: 1/8
+K: Gmaj
+|:D2|G2 B2 dc|B2 G2 G2|A2 cBAG|F2 D2 D2|
+G2 BA GF|E2 C2 E2|D2 G2 F2|G4:|
+Bc|d2 Bcde|d2 c2 B2|c2 AB cd|c2 B2 A2|B2 GABc|
+B2 A2 G2|F2 d2 ^c2|d4 D2|G2 B2 dc|B2 G2 G2|
+A2 cBAG|F2 D2 D2|G2 BAGF|E2 C2 E2|D2 G2 F2|G4|| 
+
+X: 3
+T: Astridin valssi
+R: waltz
+M: 3/4
+L: 1/8
+K: Amin
+|:E2|"Am" A4 B2|c4 d2|"Am" cB cd cB|A2 c2 e2|
+"Dm" a3 gfe|d2 f2 a2|1 "Am" e4 c2|B4:|2 "Am" e6-|e4||
+|:e2|"Dm" a3 gfe|d2 f2 a2|"Am" e3 fec|A4 B2|
+"G" c2 f2 e2|d2 c2 B2|1 "Am" A3 Bcd|e4:|2 "Am" A6-|A4|| 
+
+X: 4
+T: Emma's
+R: waltz
+M: 3/4
+L: 1/8
+K: Amin
+Ac|: "Am"e4 e2 |c2 A2 Ac | e4 e2 |c2 A2 Ac |
+"E7"B4 Bc | d2 c2 B2|1 "Am"A3 Bcd | e4 Ac:|2 "Am"A3 BcB | A2 c2 e2||
+|: "F"a4 a2 | a2 g2 f2 | "C"e4 e2 | e2 d2 c2 |
+"G"B4 Bc | d2 c2 B2 |1 "Am"A3 Bcd |e2 c2 e2 :|2 "Am"A2 ABcB| A4 ||
+
+X: 5
+T: Valse Draque
+R: waltz
+C: Wouter Kuyper
+M: 3/4
+L: 1/8
+K: Amin
+"Am"E2 A2 B2 |c3 B A2 | "F"F4 A2 | "Am"E4 de| "Dm"f3 e d2 | "F"c4 A2 |1 c6 | "E"B6 :|2 "F"c4 "E"B2 | "Am"A6 | z2 AB cB||
+|: "Dm"f6– |f2 AB cB| "Am"e6-| e2 AB cA| "E"B3 A^GA | B2 c2 d2 | "F"f4 "E"e2 -|e2 AB cB|
+"Dm" f6–|f2 AB cB|"Am" e6-| e2 AB cA| "E"B3 A^GA | B2 c2 B2 | "Am" Az zA A2 |1Az AB cB:|2 A2  z2 z2|]
+
+X: 6
+T: Boîte de jazz
+C: Christian Josué
+M: 9/8
+L: 1/8
+R: mazurka
+K: Am
+E A2 B|: "Am"c3 B2A B2A | "G"G2B E2E A2B | "F"c3 B2c "G"d2G | "C"e3-e2d c2B|
+"Am"c3 B2A B2A | "G"G2B E2E A2B | "F"c3 B2A "G"G2B |1 "Am"A2-A2E A2B :|2 "Am"A2-A2E A2c||
+|: "E"e3 ^d3 B2 =d | "Am"c3 B3 A2G | "F"c3 B2c "G"d2G | "C"e2d c2B c2d |
+"E"e3 ^d3 B2 =d | "Am"c3 B3 A2B | "F"c3 B3 "G"G2B |1 "Am"A3-A2E A2c :|2 "Am"A3 z2 |]
+
+
+X: 7
+T: Bourrée dite d'Aurore Sand
+M: 2/4
+L: 1/8
+R: bourree
+K: Gm
+d |: "Gm"G>A Bc | d3d | "Cm"dg ^fg | "Gm"d3c/d/ |
+ "Cm"e>d cA | "Gm"B>A GB | "Am"A>G "F"AB | "Gm"G3d :|
+|: "Gm"d>c Bc | d>c Bc | d>c de | d>c Bc | 
+"Gm"d>c de | d>c Bc | "Am"d>c "F"BA | "Gm"G3d :|
+
+X: 8
+T: De Montford
+R: bourrée
+C: Jo Freya
+M: 2/4
+L: 1/8
+K: Gmin
+|:"Gm"G d2G|"Eb"e2 Gd|-"Gm"dB cd|"F"cB AB|
+"Gm"G d2G|"Eb"e2 Gd|-"Gm"dB cd|"F"c2 z2:|
+|:"F"A>B cA|-Ac BA|"Eb"B>A GB|-B/A/G AB|"F"A>B cA|
+-Ac BA|1 "Eb"B2 "F"c2|"Bb"d/e/d/c/ BA:|2 "Eb"B2 "F"A2|"Gm"G4|| 
+
+X: 9
+T: Both Sides The Tweed
+R: waltz
+M: 3/4
+L: 1/8
+K: Amin
+AB|"Am"c3 BA2|"C"c2 d2 e2|"F"a4 a2|"C"g3 ed2|"C"c2 d2 e2| "G"G4 AB|
+"Am"c3 BA2|"C"c2 d2 e2|"F"a4 a2|"C"g2 e2 c2|"G"d3 cB2|"Am"A4 eg|
+"F"a3 aa2|"F"a2 g2 e2|"G"g4 ag|"C"e2 d2 c2|"Am"c3 de2|"G"G4 AB|
+"Am"c2 B2 A2|"C" c2 d2 e2 |"F"a4 ba|"C"g2 e2 c2|"G"d3 cB2|"Am"A6|] 
+
+X: 10
+T: Erev shel shoshanim
+M: 4/4
+L: 1/8
+K: Dm
+|: "Dm"D2 DC D2 F2 | "G"G6 D2 | "Gm"G2 GF "C"G2 A2 | "Dm"F6 z2 \
+| "B"F2 FE F2 G2 | "C"E3 D C4 | "Am"E2 ED E2 F2 | "Dm"D6 z2 :|
+|: "Dm"A2 AG A2 F2 | "G"G6 D2 | "Gm"G2 GF G2 A2 | "Dm"F6 z2 \
+| "Gm"G2 GF G2 A2 | "Dm"F3 E D4 | "C"E2 ED E2 F2 | "Dm"D6 z2 :|
+
+
+X: 11
+T: Branle double & Branle simple
+R: branle
+S: Toinot Arbeau, Orchesographie (1589)
+M: 2/4
+L: 1/8
+K: Amin
+"Am"A>B cc| "G"BA G2| "C"cdec| "G"ddcB| "Am"A>B cc| "G"BA G2| "Am"ccBA| "Em"AG "Am"A2 :|
+|: "Am"A>B cc | "Em"BA Gc | "G"cB "C"c2 |"Am"A>B cc | "G"BA Gc | "Em"AG "Am"A2:|
+
+X: 12
+T: Branle 2
+R: branle
+M: 2/4
+L: 1/8
+K: Amin
+"Am"AcAc| "Em"BA G2 | "Am"AAGA | "G"BcB2| "Am"AcAc| "Em"BA G2 | "Am"AAGA | "Em"Bc "Am"A2|
+"Am" c2 d2 | "Em"Bc "Am"A2 | ccdd| "Em"Bc "Am"A2 | c2 d2 |"Em"Bc A2 |"F"ccdd| "Em"Bc "Am"A2 :|  
+
+X: 13
+T: Le Maître de Maison
+M: 2/4
+L: 1/8
+R: branle
+K: Am
+E|"Am"Ae ed | e2c2 | "C"ee dc | "Em"B3 A|"Am"Ae ed | e2 c2 | "C"e2 dc | "Em"B3 c/B/ |
+"Am"Ac "Em"Bc/B/ | "Am"Ac "Em"Bc/B/ | "Am"Ac "Em"Bc/B/ | "Em"Ac "G"B2 |"Am"A2 e2 | "G"d2 cB | "Am"A3 :|
+|: A |"Am"AG AB | c3 A | "C"c2 "G"d2 | "C"e3 e | "Dm"fe ed | "Am"e2 ce | "Dm"dc BA | "Em"B4 | "Am"A2 "Em"G2 | "Am"A3  :|
+
+
+X: 14
+T: Carolan's Welcome
+R: waltz
+M: 3/4
+L: 1/8
+K: Amin
+cB|:"Am" A2 cd e2|A2 cd e2|"G" de dc BA|"Em" G/A/B G2 E2|
+[1 "Am"c3 B A2|"Dm" d3 c B2|"Em" c/d/e E2 G2|"Am" A4 cB:|
+[2 "C" g3 f e2|"Dm" a3 g ed|"Em" ce dc Bc|"Am" A4 ed||
+|:"Am" e2 ab c'2|"Am" e2 ab c'2|"F" c'b ag ab|"C" c'2 e2 e2|
+"Dm" f2 afed|"C" e2 ge dc|"Dm" d2 e2 g2|"Am" a6|
+"F" ag eg a2|"C" ge de g2|ed cd ec|"G" d2 B2 G2|
+"Am" c3 B A2|"Dm" d3 c B2|"Em" c/d/e E2 G2|1 "Am" A4 A2:|2 "Am" A4 cB|| 
+
+X: 15
+T: Mazurka des Écoliers de Saint Genest
+R: mazurka
+M: 3/4
+L: 1/8
+K: Dmin
+|:D ED|"Dm"A2 AB cd|"Fmaj7"A2AA BA|"Gm7"G2 AG FE|"F6"F2 DD ED|
+"Dm"A2 AB cd|"Fmaj7"A2AA BA|"Gm7"G2 AG FG|1 "Am7"E2E:|2 "A7sus4"E2E||
+|:A dc|"Bbmaj7"B2 BA Bc|"Gm7"d2dd cB|"Fmaj7"A2 AG AB|"Am7"A2AB dc|
+"Bbmaj7"B2 BA Bc|"Gm7"d2dd cB|1 "Am7"A2 GF EF|E2E:|2 "Am7"A2 GF EF|"Dm"D2D|| 
+
+X: 16
+T: Det måste hända något
+R: waltz
+M: 3/4
+L: 1/8
+K: Bmin
+"Bm"(dc B)(d cB)|(dc B)(d cB)|"G"(G6|G2)B2G2|"D"F3GF2|"A"E2D3E"F#"|(F6|F6)|
+"Bm"(dc B)(d cB)|(dc B)(d cB)|"G"(G6|G2)B2G2|"D"F2A3F|"G"G2B2G2|"D"F2A3F|
+"G"G2B2G2|"D"Fd "G" Ge "D" Fd|"Em"Ed "Bm"d2 "F#"c2|"Bm"(B6|B6):|
+"Bm"f3ed2|f2e2d2|"A"e2c3d|e4f2|e3d(c2|"G"c2)d2"F#"c2|"Bm"(B6|B2)a2g2|
+"Bm"f3e de|f2e2d2|"A"e2c3d|e4f2|e3d(c2|"G"c2)d2"F#"c2|"Bm"(B6|1 B2)d2e2:|2 B6|| 
+
+X: 17
+T: Blanche
+R: waltz
+M: 8/4
+L: 1/4
+K: G
+|: "G"B2A G2A Bc | B2A G2A Bc | "D"d3 A3-A2| de2 f2f ef |
+"Em"g2f e2d cB| g2f e2d cB | "C"c2d e2d cB | "D"AB2 c2c BA :|
+|: "Am"c2B A2B cd | c2B A2B cd | "Em"e2B G2F GA | B2G FGA B2 |
+"Am"c2B A2B cd | c2B A2B cd | "Em"e2g f2e e2 | B3-B3-B2 :|
+
+X: 18
+T: En avant blonde
+R: waltz
+M: 3/4
+L: 1/8
+K: Emin
+E2G2A2|B3 c B2|D2F2G2|A4B2|
+AGF2G2|E4 G2|F2D2D2|1 E6:|2 E4c2||
+B2 GABc|B2A2G2|A2 FGAB|A2G2A2|
+B2 GABc|B2A2G2|AFD2D2|1 E4 c2:|2 E6|| 
+
+
+X: 19
+T: Falco
+R: polka
+M: 2/4
+L: 1/8
+K: Gdor
+GG d>e|fd c>B|AB cd|ec dB/A/|
+GG d>e|fd c>B|cd c/d/c/B/|A3 G/F/|
+GG d>e|fd c>A|cd ec|BG Bc|
+GG d>e|fd c>d|ec BA|B2 BG||
+|:f/d/g/e/ cf|d/e/d/g/ e/f/d/c/|d/g/e/f/ dg|e/f/e/d/ c2|
+d/g/e/f/ dg|f/e/d/c/ d/e/f/g/|a/g/f/e/ d/e/f/e/|1 f/e/d/c/ d>e:|2 f/e/d/c/ d2||
+
+X: 20
+T: Fågelvalsen
+R: waltz
+C: Carmen Rodrigues
+M: 3/4
+L: 1/8
+K: Ador
+cB|: "Am"A3 cea | "D"f2 fe d2 | "Am"e2 cB AG| "Em"E4 cB |
+"Am"A3 cea | "D"f2 fe d2 | "Am"e2 cB "G"GB |1 "Am"A4 cB:|2 "Am"A3 Bcd||
+|: "C"c2 cB AG | "Em"E3 Bcd | "Am"c2 ag ec| "G"d3 Bcd |
+"C"c2 cB AG | "Em"E4 D2 | "Am"C2 CB, "G"G,2 |1 "Am"A,3 Bcd:|2 "Am"A,4|]
+
+X: 21
+T: Flatworld
+R: waltz
+M: 3/4
+L: 1/8
+K: Amin
+e de|:"Am"ce Be Ac|"F"F2 AB cA|"Dm"f2 fe dc|"G"B3e de|
+"Am"ce Be Ac|"F"F2 fe dc|"G"B2 Bd cB|1 "Am"A3e de:|2 "Am"A6||
+|:"Am"AB cA ag|"Dm"f2 fe dc|"G"Bc dB gf|"C"e2 ed cB|"F"AB cA fe|
+"Dm"d2 dc BA|1 "Em7"B2 Bd ^cd|B3B cB:|2 "Em"B2 Bd cB|"Am"A3|| 
+
+X: 22
+T: Flitter Dance
+R: polka
+M: 2/4
+L: 1/8
+K: Ddor
+|:FD DA|FD DE/F/|GF ED|CE A,2|
+FD DA|FD DE/F/|GE DC|D2D2:|
+|:FA AB/c/|dA AB/c/|dA AG|FG E2|
+FA AB/c/|dA AB/c/|dc AG|F2D2:| 
+
+
+X: 23
+T: Fubu's
+R: mazurka
+M: 3/4
+L: 1/8
+K: Gmin
+D2|"Gm"G2 GA Bd|"Cm"c3 d cA|"Gm"BG DG BG|"D"A^F DF AF|"Gm"G2 GA Bd|"Cm"c3 d cA|"Gm"BG DG "D"A^F|"Gm"G4:|
+K:G
+|:GA|"G"B2 BA GF|"C"E4 AB|"Am"cA FA cA|"G"B2 GD GA|"G"B2 BA GF|"C"E4 AB|"Am"c2 cA "D"FA|"G"G4:| 
+
+
+
+X: 24
+T: Gånglåt från Äppelbo
+C: efter Ärtbergs Kalle
+O: Dalarna
+R: gånglåt
+M: 2/4
+L: 1/16
+K:G
+P:A
+uD2 | "G"G2(GD) G2B2 | d6(Bc) | d2(dB) d2(de) | "Am"c2(cB) A2(AB) |
+ "D7"c2(cd) e2(dc) | "G"(Bc)(BA) G2(FG) | "D7"(AB)(AF) D2(EF) | "G"G6 :|
+P:B
+(uBd) | "G"g2g2 g2(fe) | "D7"f2f2 f2(gf) | "C"e2e2 (eg)(fe) | "G"e2(d^c) d2(=cB) |
+ "D7"c2(cB) A2(GA) | "G"(Bc)(BA) G2(FG) | "D7"(AB)(AF) D2(EF) | "G"G6 :|
+
+X: 25
+T: Gärdebylåten
+R: gånglåt
+O: Sweden, Dalarna
+M: C|
+K: D
+FG|ABAF ABAF|A2fe d2c2|BcBG BcBG|B2gf e2d2|
+c3d c2B2|A2g2 f2e2|1 dcde fefg|a6:|2 d2fd Acec|d6||
+|:fg|a4 a2^ga|b2a2 g2f2|g4 B3d|g2f2 e2d2|
+c3d c2B2|A2g2 f2e2|1 dcde fefg|a6:|2 d2fd Acec|d6||
+
+X: 26
+T: Haapavesi Waltz
+C: Keith Murphy
+R: waltz
+M: 3/4
+L: 1/8
+K: D
+A cA|"D"cd dA cA|cd dA cd|"Em7"e2 eg fd|"A"e2 A2 Bc|
+"D"cd dA cA|cd dA cd|"Em7"e2 ef "A"e/d/c|"D"d3 :|]
+|: e fg |"D"a2 ag fd|"G"g3 f2 g| "A"eA Ag fg|
+ e2 A2 fg|"D"a2 ag fd|"G"g3 f2 g|"A"e2 ef e/d/c|1 "D"d3:|]
+
+X: 27
+T: Johsefins Dopvals
+M: 3/4
+L: 1/8
+C: Roger Tallroth
+R: waltz
+K: Gmaj
+"G"D2G2A2|B2 d2 c2|B2A2G2|D4 E2|"C" C3C C2|E2G2F2|E6|"D"D6|
+"G"D2G2A2|B2 d2 c2|B2A2G2|D4 E2|"C"C3C C2| D2F2G2|1 "D"A6-|A6:|2 "D"A6-|A2 B2c2||
+|:"G"d2B2d2|g4f2|"C"e6|"G"d6|"C"c2e2d2|c2B2A2|"G"B3c B2|"D"A2B2c2|
+"G"d2B2d2|g4f2|"C"e6|"G"d6|"C"c2e2d2|c2B2A2|"G"B3c B2|"D"A2B2c2|
+"Em"B2A2G2|"D"F4G2|"C"G6|C2D2C2|"G"B,2D2G2|"D"F2E2F2|1 "G"G6-| G2 B2 c2:|2 "G" G6-|G6|]
+
+X: 28
+T: Den lille hamborger
+M: 2/4
+L: 1/8
+R: polka
+K: G
+B|:"G"dd d>c |"G"BB B>A| "G"BB e>d | "D7"dc A>B| 
+"D7"cc c>B| "D7"AA A>G| "D7"FD EF |1 "G"GG GG:|2 "G"GG Gz ||
+|: "D7"F/G/A/B/ cB/A/|"G"GB d| "C"ee/f/ gf/e/ |"G"ed d>B|
+"C"cc Ed/c/ | "G"BB dc/B/ | "D7"AA cB/A/ | "G"AG Gz :|
+|: "G"d/B/G/B/ d/B/G/B/| "C"ce e2 | "D7"c/A/F/A/ c/A/F/A/| "G"Bd d2| 
+"G"d/B/G/B/ d/B/G/B/| "C"ce e2 | "D7"c/A/F/A/ c/A/F/A/| "G"GG Gz:| 
+
+
+X: 29
+T: L'inconnu de Limoise
+M: 3/4
+L: 1/8
+C: J F Heintzen
+R: mazurka
+K: C
+|: G c>d | e2- e>efd | e2- e>ef>g | f2- f>e d>c | d3 G c>d | e2- e>efd | e2- e>ef>g | f2- f>e d>c|d3:|
+|:e f>g|a2 c'>b a>b|g3 f e>d|c>B c>d e>c|G4 c>B|A2A>B c>d|c2B2A2|1B2 B>c d>e|d3:|2B2B>c d>B|c3||
+
+X: 30
+T: La mal-aimable
+R: waltz
+C: Jean-Christophe Lequerré
+M: 3/4
+L: 1/8
+K: Am
+|:"Am"e2 c2 B2|"F"A2 FA Bc|"G"B2 GB cd|"Cmaj7"e2 Be Be|
+"Am"e2 c2 B2|"F" A2 FA Bc|"G"B2 GB cd|"Em/E"B6:|
+"Fmaj7"c2 Ac Ac|"F"f2 cf cf|"Cmaj7"B2 GB GB|"Em"e2 Be Be|
+"Fmaj7"A2 FA FA|"Dm"d2 Ad Ad|"Em7"B2 EB cd|"Emaj7"B4 AB|
+"Fmaj7"c2 Ac Ac|"F"f2 cf cf|"Cmaj7"B2 GB GB|"Em"e2 Be Be|
+"Fmaj7"A2 FA FA|"Dm"d2 Ad Ad|"Em7"B2 EB cB|"Am"A6:| 
+
+X: 31
+T: Marga's Moment
+C: Brian Finnegan
+L: 1/8
+K: Dmaj
+M:7/8
+d2BA dcA|G2D2 GDG|A2D2 ADA|AEcE AA/B/c|
+d2BA dcA|G2D2 GDG|1 A2D2 ABc|e2c2 c2e:|2 A2D2 AGF|G2GF E2D||
+B2d2 fed|G2Bd a2a|aggf efa|g2f2 edc|
+~B3d fed|G2Bd a2b|aggf efa|gAfA edc:| 
+
+X: 32
+T: Mazurca di Ivano
+C: Valla/Guiglelimetti
+M: 3/4
+L: 1/8
+K: C
+AB|"Am"c2B2A2|ef e4|c2B2A2|a6|\
+"F"a2g2f2|"G"ef/e/d4|"Dm"f2e2d2|"Am"de/d/ c4|
+c2B2A2|ef e4|c2B2A2|a6|\
+a2g2f2|ef/e/d4|ef ed cB|AB A2:|
+|:AB|"Am"cB cB cd|"C"c4 BA|ed ed ef|e6|\
+"Am"e2 fe dc|"E"ed B4|d2 ed cB|"Am"dc A2AB|
+"Am"cB cB cd|"C"c4 BA|ed ed ef|e6|\
+"Am"e2 fe dc|"E"ed B4|ef ed cB|"Am"ABA2:|
+
+X: 33
+T: Miz Kerzu
+R: waltz
+C: Florence Pinvidic
+M: 3/4
+L: 1/8
+K: Amin
+"Am"A4 B2| c3 B A2 |"Dm" e2 d4- | d2 e2 d2 | "F"c3 B A2 | "G"B2 c2 d2 | "Em"B6-| B6|
+"Am"A4 B2| "F"c3 B A2 | "Dm"F6- | F2 A2 F2 | "E"E2 B3 E | B4 c2  |1 "E7"B6-| B6:|2 "Am"A6-|A6 ||
+|: "Am"c2 dc Bc | A2 Bc de | "F"f4 f2 | a4 f2 | "C"e4 e2 | g4 e2 | "G"d6 |"Em"B6 |
+"Am"A4 B2| "F"c3 B A2 | "Dm"F6- | F2 A2 F2 | "E"E2 B3 E | B4 c2  |1 "E7"B6-| B6:|2 "Am"A6-|A6 ||
+
+X: 34
+T: Polska från Hälleforsnäs
+R: polska
+M: 3/4
+L: 1/8
+K: Amin
+V:1
+|:"C"g3/2f/ ed ec|"Am"cB/c/ dc "G"BA/G/|"Am"E3/2A/ AB cd|"C"ef/e/ "G"de/f/ "Am"e2|
+"C"g3/2f/ ed ec|"Am"cB/c/ dc "G"BA/G/|"Am"E3/2A/ AB cB|"G"GA "Am"A4:|
+|:"Am"E2 A2 "G"B2|"C"cB/c/ dc "G"BA/G/|"Am"E3/2A/ AB cd|"C"ef/e/ "G"de/f/ "C"e2|
+"Am"E2 A2 "G"B2|"C"cB/c/ "G"dc BA/G/|"Am"E3/2A/ AB cB|"G"GA "Am"A4:|
+V:2
+|:e3/2d/ cB cE|AG/A/ BA GD|C3/2E/ EG AB|cd/c/ Bc/d/ cA|
+E3/2G/ cB cE|AG/A/ BA GD|C3/2E/ ED ED|B,C [E4A,4]:|
+|:C2 E2 GF|ED/E/ FE DC/B,/|A,3/2C/ CD EF|GA/c/ Bc/d/ c2|
+A,C EC G,D|ED/E/ FE DC/B,/|A,3/2C/ CE AG|FE [A,4E4]:| 
+
+X: 35
+T: Scheldewals
+C: Ward Dhoore
+M: 4/4
+L: 1/8
+K: G
+"G"B4 B2| B2 A2 G2 | "C"DE c2 BA | "G"D6- | D2 zDEF| "Em"FG3 G2| 
+"D"F2-F3 D |1 "G"B2 BA GD | "C"DE-E4- | E6 :||2 "G"B2 BA Bd | "C"de-e4- | e4 ef ||
+"C"f g4 g | .g2 .e2 .d2 | "G"B2 BA Bc | B6 |"Bm"d3 d3 |d3 c BA | "D"A6 | DF GA ef |
+"C"f g4 g | .g2 .e2 .d2 | "G"B2 BA Bc | B6 | "Bm"d3 d3 |d3 f3 | "C"e6- | e4 AB | "Am"c4 c2 | c2 B2 G2 | "Dsus4"G6 | "D"F6 |] 
+
+X: 36
+T: Rose of Raby, The
+M: 3/4
+L: 1/8
+R: mazurka
+K: Amin
+AB|: "Am"c2 cA ce| "G"B4 Bc|"Em7" (3dcB cdef| "Dm7"ed cB AB|
+"F"c2 cA ce|"G"B4 Bc|"Em7"(3dcB ed cB|"Am" A4 AB:|
+|: "Am"c2Ac Ac|"Dm"d4 ed|"Am"c2 Ac ec|"Dm"d4 cd|
+"C"ed ce dc|"G"dc Bd cB|"F"c2 AB cd|"E7"B2 BG AB|
+"Am"c2 cA ce|"G"B4 GB|"F"d2 de (3fed|"C"e2 ec AB|
+"Am"c2 Ac ed|"E7"B2 GB dc|"Am/F"A2 A2 (3BAG|1 "Am"A4 AB:|2 "Am"A6||
+
+X: 37
+T: St. Patrick's An Dro
+M: 2/4
+L: 1/8
+K: Amin
+"Am"A/B/c/B/ Ae|"Am"cA Be|"Dm"d/e/d/c/ "G"BA/B/|1 "F"cA/c/ B2:|2 "G"c/A/B/G/"Am"A2||
+|:"Am"A/B/c/d/ ee|"G"dg "C"ec|1 "F"A/B/c/e/"G" d>e |"Dm"d/e/d/c/ "Em"B2:|2 "F"A/B/c/e/"G" d>B|"Em"c/A/B/G/ "Am"A2|] 
+
+X: 38
+T: Sir Lawrence
+C: Régis Dupuis (Tapage)
+R: schottisch
+M: 4/4
+L: 1/8
+K: Cmin
+|: G2 =Bc d2 d2 | efec d2 d2| fedc edc=B | dc=BA dcBA |
+ G2 =Bc d2 d2 | efec d2 d2| fedc edc=B | A=BAG G4 :|
+|: G2 =Bc d2 f2  | A4 =B4 | c=BAB c2 cB | dc=BA dcBA |
+ G2 =Bc d2 f2  | A4 =B4 | c=BAB c2 | A=BAG G4 :|
+
+X: 39
+T: Slängpolska efter Byss-Kalle
+M: 3/4
+L: 1/16
+K: G
+|: "G"d3B  G2G2 BABd | "D7"A2AB "G"G2G2 BABd | "C"cBce "G"d2Bd "Am"cBAG \
+|1,3 "D7"FGAB AGFE D4 :|2,4 "D7"FGAB A2BA "G"G4 :|
+|: "G"d2d2 "D7"d2ef "G"g2g2   | "G"g2fe "D7"d2ef "G"g2B2 | "C"cBce "G"d2Bd "Am"cBAG \
+|1,3 "D7"FGAB AGFE D4 :|2,4 "D7"FGAB A2BA "G"G4 :|
+
+X: 40
+T: Slängpolska efter Juringius
+R: waltz
+M: 3/4
+L: 1/8
+K: Amin
+"Am" e>e Ae Ae|"Dm"f>e de fg|"G"d>d Gd Gd|"C"e>d cd ef|"Am"e2 dc B>A|"G"G/A/B/G/ "Am"A4:|
+|:"G"B>B DB DB|"F"c>B AB cd|"G"B>B DB DB|"Am"c>B AB "D"cd|
+"G"d>d Gd Gd|"C"e>d cd ef|"Am"e2 dc B>A|"G"G/A/B/G/ "Am"A4:| 
+
+X: 41
+T: Sommarvals
+C: Ale Möller
+R: waltz
+M: 3/4
+L: 1/4
+K: G
+dc | "G"B>AG | "D7"A2F | "C"G3 | E>FE | "G"DGA | "Am"c2B | "(D7)"B{cB}AG | "D7"Adc || "G"B>AG | "D7"A2F |
+| "Em"G3 | "C"E>FE | "G"DEG | "D7"G>AF | "G"G3- | G :: FG | "D7"A>BA | AFD | "(C)"c3 | "G"B>AG | "Am"EA/B/c |
+| "Bm"d>cB/A/ | "Em"GFG | "D7"ABA || "Em"G>AG | "Bm"F>GF | "C"E>FE | "D7"DGA | "G"B>AG | "D7"A{Bc}dF | "C"G3- | "G"G :|
+
+X: 42
+T: Sunshine
+R: schottisch
+C: Grégory Jolivet
+M: 4/4
+L: 1/8
+K: Dmaj
+|:"D"A2dc d3A-|"A/D"ABAG "D"F2D2|"Em7"E2dc d3G-|"G/A"GAGF E2FG|"D"A2dc d3A-|
+"A/D"ABAG F2D2|1 "Em7"E2dc d3G-|"G/A"GAGF "A"E2FG:|2 "Em7"E2dc de2c-|"A"c6 de||
+|:"D"f2ed "D/F#"A3B-|"G"BAGF "D/F#"EDEF|"Em"GBAG "D/F#"A2FA|"G"GFEG "G/A"F2D2|
+"D"f2ed "D/F#"A3B-|"G"BAGF "D/F#"EDEF|"Em"GBAG "D/F#"A2FA|"G"GF "A"EF "D"D4:| 
+
+X: 43
+T: Tourdion
+T: Quand je bois du vin clairet
+M: 3/4
+L: 1/8
+K: Edor
+EFGAGF | E3FGA | BAGGAF | G2FED2 | EFGAGF | E2G2F2 | E4D2 | E6 :|
+|: B3ABc | B4B2 | dcBAGF | G3FE2 | B3ABc | B2AGF2 | E4D2 | E6 :|
+
+X: 44
+T: Trip To Skye
+C: John Whelan
+R: waltz
+M: 3/4
+L: 1/8
+K: Am
+"Am"e2 dc BA|"G/E"Bd GA Bd|"F" c2 Bd cB|c2 A2 A2|
+"C"e2 dc BA|"G"Bd GA Bd|"F"c2 Bd cB|"G"AG ED EG:|
+|: "Am"E2 AB c2|E2 AB cA|"G/E"Bd GA Bd|cB AG ED|
+"F"E2 AB c2|"F/D"E2 AB cA|"G"Bd GA Bd|1 "F"c2 ~B2~A2:|2 "F"cA Bc BA|| 
+
+X: 45
+T: Troika
+L: 1/8
+M: 4/8
+K: Am
+"Am" z/ed/ "E"cB|"Am" A^G AE| z/ed/ "E7"cB|"Am" A^G AA|
+"G" G/gf/ "C" fe|"E" G/ed/ "Am"dc|"Dm" c/B/c/d/ "Am" eE|"E7" cB "Am" A2||
+"Am"cc cA| "E" BB B^G|"Am" AA A/c/B/A/| "E" ^GG E2|
+"Am" cc c/B/c|"Dm" dd dc/B/| "Am" ce "E"Be| "Dm" AA "Am" A2|]
+
+X: 46
+T: Tzadik Katamar
+O: Israel
+M: 4/4
+L: 1/8
+K: Am
+|:"E7"E2 \
+| "Am"A2 AB c2 A2 | "E7"^G2 GA B2 E2 | "Am"A2 AB c2 A2 |1 "E7"e6 :|2 "A7"e8 ||
+|: "Dm"f2 f2 f2 e2 | "G"d2 cd B2 cd | "C"e2 e2 e2 d2 | "F"c2 B2 A2 c2 |
+| "E7"B2 A2 ^G2 ^F2 | ^G2 E2 G2 B2 |1 "Am"e8- | "A7"e8 :|2 "Am"A2z2 E2z2 | A2z2 z4 |]
+
+X: 47
+T: Vem kan segla förutan vind
+M: 6/8
+L: 1/8
+K: Em
+"E"E2F "Am7"G>FE|"Em"B2"B7"B"Em"B2 z|"Am"c2d "D9"e>dc|"Gmaj7"B3"Em"B2 z|
+"Am"A2A "B9"c>BA|"Em7"G2G"Am"E2 z|"Am"F>FF "B7"B,2^D|"Em"E3E2 z|]
+
+X: 48
+T: Le village d'en bas
+C: Grégory Jolivet
+M: 4/4
+L: 1/8
+K: C
+|: "C"c3 d e2 dc| "Em"eg e4 dc | "Dm"f3 e c2 de| "G"d3 c B2 a2 |
+"C"c3 d e2 dc| "Em"eg e4 dc | "Dm"f3 e c2 de| "G" d8 :|
+|: "Am"A2 cA e3 c| "F"fe c4 g2 | "G" d3 c Bc d2-|dedc dcBc |
+"Am"A2 cA e3 c| "F"fe c4 g2 | "G"d3 c Bc d2|d8 :|
+
+X: 49
+T: Valvotun yön valssi
+R: waltz
+C: Arto Järvelä
+M: 3/4
+L: 1/8
+K: Am
+AB|: "Am"c2 {d}cB cd |"C" e2 g2 dc | "G"B2 {Bc}BA Bc | "Am"A4 E^G | AB c2 Ac| "D"de ^f2 {g}a2 |
+"Em"e4 dc| "G"B4 ed | "Am"c2 B2 A2 | "Em"Ge e2 G2 | "Am"A3 B AG |1 A4  AB :|2 A4 e2||
+"Am"ea a2 ab | "Em"g4 {Bc}BA | "G"GA BA Bc |"D" d3 e cB| 
+"F"AB cB A2 | "Em"Ge eB G2 | "Am"A2 A"E"B AG |1 "Am"A4 "E"e2 :|2 "Am"A4 "E"AB ||
+
+
+X: 50
+T: Vivement vendredi
+R: reel
+C: Jean Banwarth
+M: 2/2
+L: 1/8
+K: C
+|:"Am"A,CEG ABcd | "F"dedc "G"BdcB | "Am"AcBA "Em"G3A | "G"B/c/dcA "G"BGEG | 
+"Am"A,CEG "Am"ABcd | "F"dedc "G"BdcB | "Am"AcBA "G"GABG |1 "Am"A2GB A4:|2 "Am"A2GB  ABcd||
+|: "C"deed   "C"edBc | "G"d2de "G"dBAG | "Am"EAA/A/A "F"FAcd |"C"dedc "G"BcdG|
+"C"e2ed "C"edBc |"G"d2de "G"dBAG|"Am"EAA/A/A "F"FAfe |1 "G"dgBG "Am"ABcd:|2 "G"dgBG "Am"A4|]
+
+X: 51
+T: Zelda
+R: chapelloise
+C: Philippe Plard
+M: 6/8
+L: 1/8
+K: Amin
+"Am"e2 A e2 A|"Dm"fed "Am"e2 A|"C"edc "Em"B2 d|"G"dcB "Am"c2 A|
+"Am"e2 A e2 A|"Dm"fed "Am"e2 A|"C"edc "Em"B2 d|"G"dcB "Am"A2 z:|
+|:"Dm"ABc "Am"E2 E|"Am/C"ABc "F"F2 F|"Dm"ABc "Em"B2 B|"G"dcB "Am"c2 A|
+"Dm"ABc "Am"E2 E|"Am/C"ABc "F"F2 F|"Dm"ABc "Em"B2 B|"G"dcB "A"A3:| 
+
+X: 52
+T: Schottisch à Virmoux
+R: schottisch
+M: 4/4
+L: 1/8
+K: Dmaj
+"D"FAGF A3F|"G"GFGA "D"B2A2|"D"AdAF "G"G2FE|1 "D"FAFD "A"E4:|2 "A"DAGE "D"D4:|
+"D"d2A2 d3c|"G"BABc dedB|"D"A2D2 A2GF|1 "G"EFGA "A"BABc|2 "A"EFGA "D"D4:| 
+

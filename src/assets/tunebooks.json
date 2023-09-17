@@ -34,6 +34,13 @@
             "name": "Oswald Vol. 2",
             "description": "James Oswald: The Caledonian Pocket Companion, Volume 2 (1771)",
             "storage": "assets"
+        },
+        { 
+            "id": "wandsbek",
+            "uri": "Wandsbek.abc",
+            "name": "Balfolk Wandsbek",
+            "description": "Tunes from the monthly Balfolk Session at Kulturschloss Wandsbek",
+            "storage": "assets"
         }
     ]
 }
