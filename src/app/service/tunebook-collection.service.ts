@@ -36,11 +36,21 @@ export class TuneBookCollectionService {
 
     async addBook(descriptor: TuneBookDescriptor): Promise<string> {
         this.collection.books.push(descriptor);
-        const driveBooks = this.collection.books.filter(book => book.storage === 'googledrive');
         const ref = new TuneBookReference(new TuneBook(''), descriptor, '');
         this.index.addTuneBook(ref);
 
-        const updated = await this.driveLoader.updateTuneBookCollection({ books: driveBooks });
+        const updated = await this.driveLoader.updateTuneBookCollection(this.extractUserCollection(this.collection));
+        this.collectionLoadedSource.next('');
+        return updated;
+    }
+
+    async removeBook(tuneBookId: string): Promise<string> {
+        this.collection.books.forEach((item, index) => {
+            if (item.id === tuneBookId) {
+                this.collection.books.splice(index, 1);
+            }
+        });
+        const updated = await this.driveLoader.updateTuneBookCollection(this.extractUserCollection(this.collection));
         this.collectionLoadedSource.next('');
         return updated;
     }

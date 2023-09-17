@@ -6,6 +6,7 @@ import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { PdfService } from 'src/app/service/pdf-service';
+import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
@@ -31,6 +32,7 @@ export class TuneEditorComponent implements AfterViewInit {
 
     constructor(
         private index: TuneBookIndex,
+        private collectionService: TuneBookCollectionService,
         private googleDrive: GoogleDriveService,
         private pdfService: PdfService,
         private route: ActivatedRoute,
@@ -65,6 +67,11 @@ export class TuneEditorComponent implements AfterViewInit {
         this.bookRef.tuneBook = new TuneBook(this.tune);
         this.index.updateTuneBook(this.bookRef);
         this.snackBar.open(`Updated ${this.bookRef.descriptor.name} on Google Drive`, 'Dismiss', { duration: 3000 });
+    }
+
+    async delete(): Promise<void> {
+        await this.collectionService.removeBook(this.bookId);
+        this.snackBar.open(`Removed ${this.bookRef.descriptor.name} from collection`, 'Dismiss', { duration: 3000 });
     }
 
     async exportAsPdf(): Promise<void> {
