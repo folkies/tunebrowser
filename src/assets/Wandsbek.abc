@@ -6,9 +6,9 @@ C: Cyril Brotto
 M: 6/8
 L: 1/8
 K: Amin
-|: "Am"e2e edc|"F"c3 cde|"Dm"fed edc|"Em"d2c Bcd|
+|: "Am"e2e edc|"F"c3 cde|"Dm"fed edc|"Em"d2 d4|
 "Am"e2e edc|"F"c3 cde|"Dm"fed edc|"E7"B6:|
-|:"A"A2 "G"B2 "F"c2|"Dm"d6|"Em"ege dcB|"Am"c2B- BAE|
+|:"A"A2 "G"B2 "F"c2|"Dm"d6|"Em"ege dcB|"Am"c2 A4|
 "A"A2 "G"B2 "F"c2|"Dm"d6|"Em"ege dcB|"Am"A6:|
 
 X: 2
@@ -52,9 +52,9 @@ C: Wouter Kuyper
 M: 3/4
 L: 1/8
 K: Amin
-"Am"E2 A2 B2 |c3 B A2 | "F"F4 A2 | "Am"E4 de| "Dm"f3 e d2 | "F"c4 A2 |1 c6 | "E"B6 :|2 "F"c4 "E"B2 | "Am"A6 | z2 AB cB||
-|: "Dm"f6– |f2 AB cB| "Am"e6-| e2 AB cA| "E"B3 A^GA | B2 c2 d2 | "F"f4 "E"e2 -|e2 AB cB|
-"Dm" f6–|f2 AB cB|"Am" e6-| e2 AB cA| "E"B3 A^GA | B2 c2 B2 | "Am" Az zA A2 |1Az AB cB:|2 A2  z2 z2|]
+"Am"E2 A2 B2 |c3 B A2 | "F"F4 A2 | "Am"E4 de| "Dm"f3 e d2 | "F"c4 A2 |1 c6 | "E"B6 :|2 "F"c4 "E"B2 | "Am"A6 | z2 AB cA||
+|: "Dm"f6-|f2 AB cA| "Am"e6-| e2 AB cA| "E"B3 A^GA | B2 c2 d2 | "F"f4 "E"e2 -|e2 AB cA|
+"Dm" f6-|f2 AB cA|"Am" e6-| e2 AB cA| "E"B3 A^GA | B2 c2 B2 | "Am" Az zA A2 |1Az AB cA:|2 A2  z2 z2|]
 
 X: 6
 T: Boîte de jazz
@@ -67,7 +67,6 @@ E A2 B|: "Am"c3 B2A B2A | "G"G2B E2E A2B | "F"c3 B2c "G"d2G | "C"e3-e2d c2B|
 "Am"c3 B2A B2A | "G"G2B E2E A2B | "F"c3 B2A "G"G2B |1 "Am"A2-A2E A2B :|2 "Am"A2-A2E A2c||
 |: "E"e3 ^d3 B2 =d | "Am"c3 B3 A2G | "F"c3 B2c "G"d2G | "C"e2d c2B c2d |
 "E"e3 ^d3 B2 =d | "Am"c3 B3 A2B | "F"c3 B3 "G"G2B |1 "Am"A3-A2E A2c :|2 "Am"A3 z2 |]
-
 
 X: 7
 T: Bourrée dite d'Aurore Sand
@@ -113,7 +112,6 @@ K: Dm
 |: "Dm"A2 AG A2 F2 | "G"G6 D2 | "Gm"G2 GF G2 A2 | "Dm"F6 z2 \
 | "Gm"G2 GF G2 A2 | "Dm"F3 E D4 | "C"E2 ED E2 F2 | "Dm"D6 z2 :|
 
-
 X: 11
 T: Branle double & Branle simple
 R: branle
@@ -142,7 +140,6 @@ K: Am
 E|"Am"Ae ed | e2c2 | "C"ee dc | "Em"B3 A|"Am"Ae ed | e2 c2 | "C"e2 dc | "Em"B3 c/B/ |
 "Am"Ac "Em"Bc/B/ | "Am"Ac "Em"Bc/B/ | "Am"Ac "Em"Bc/B/ | "Em"Ac "G"B2 |"Am"A2 e2 | "G"d2 cB | "Am"A3 :|
 |: A |"Am"AG AB | c3 A | "C"c2 "G"d2 | "C"e3 e | "Dm"fe ed | "Am"e2 ce | "Dm"dc BA | "Em"B4 | "Am"A2 "Em"G2 | "Am"A3  :|
-
 
 X: 14
 T: Carolan's Welcome
@@ -203,7 +200,6 @@ AGF2G2|E4 G2|F2D2D2|1 E6:|2 E4c2||
 B2 GABc|B2A2G2|A2 FGAB|A2G2A2|
 B2 GABc|B2A2G2|AFD2D2|1 E4 c2:|2 E6|| 
 
-
 X: 19
 T: Falco
 R: polka
@@ -251,7 +247,6 @@ FD DA|FD DE/F/|GE DC|D2D2:|
 |:FA AB/c/|dA AB/c/|dA AG|FG E2|
 FA AB/c/|dA AB/c/|dc AG|F2D2:| 
 
-
 X: 23
 T: Fubu's
 R: mazurka
@@ -261,8 +256,6 @@ K: Gmin
 D2|"Gm"G2 GA Bd|"Cm"c3 d cA|"Gm"BG DG BG|"D"A^F DF AF|"Gm"G2 GA Bd|"Cm"c3 d cA|"Gm"BG DG "D"A^F|"Gm"G4:|
 K:G
 |:GA|"G"B2 BA GF|"C"E4 AB|"Am"cA FA cA|"G"B2 GD GA|"G"B2 BA GF|"C"E4 AB|"Am"c2 cA "D"FA|"G"G4:| 
-
-
 
 X: 24
 T: Gånglåt från Äppelbo
@@ -327,7 +320,6 @@ B|:"G"dd d>c |"G"BB B>A| "G"BB e>d | "D7"dc A>B|
 "C"cc Ed/c/ | "G"BB dc/B/ | "D7"AA cB/A/ | "G"AG Gz :|
 |: "G"d/B/G/B/ d/B/G/B/| "C"ce e2 | "D7"c/A/F/A/ c/A/F/A/| "G"Bd d2| 
 "G"d/B/G/B/ d/B/G/B/| "C"ce e2 | "D7"c/A/F/A/ c/A/F/A/| "G"GG Gz:| 
-
 
 X: 29
 T: L'inconnu de Limoise
@@ -567,7 +559,6 @@ AB|: "Am"c2 {d}cB cd |"C" e2 g2 dc | "G"B2 {Bc}BA Bc | "Am"A4 E^G | AB c2 Ac| "D
 "Em"e4 dc| "G"B4 ed | "Am"c2 B2 A2 | "Em"Ge e2 G2 | "Am"A3 B AG |1 A4  AB :|2 A4 e2||
 "Am"ea a2 ab | "Em"g4 {Bc}BA | "G"GA BA Bc |"D" d3 e cB| 
 "F"AB cB A2 | "Em"Ge eB G2 | "Am"A2 A"E"B AG |1 "Am"A4 "E"e2 :|2 "Am"A4 "E"AB ||
-
 
 X: 50
 T: Vivement vendredi
