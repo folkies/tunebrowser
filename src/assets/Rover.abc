@@ -1617,11 +1617,11 @@ R: jig
 M: 6/8
 L: 1/8
 K: Dmix
-ded A2G|EFD DEF|EDE cBc|E2D DFA|
-dcB cBA|BAG A2G|EDE cBc|1E2D Dfe:|2E2D D2e||
+ded A2G|F2D DED|EDE cBc|E2D DFA|
+dcB cBA|BAG A2G|EDE cBc|E2D D3:|
 |:f2d d^cd|f2d d^cd|edB c2d|ede age|
-[1 f2d d^cd|f2d d^cd|ede age|ed^c dge:|
-[2 ~f3 ~g3|afa gfe|fed eag|ed^c d2A||
+[1 f2d d^cd|f2d d^cd|ede age|ed^c d2e:|
+[2 ~f3 gfg|agf gfe|fed eag|ed^c d2A||
 
 X: 137
 T: The Price Of My Pig
@@ -2573,3 +2573,133 @@ DE|:"G"G2G2DE|G2G2Bd|"C"e2d2G2|"G"B4DE|G2G2DE|"Am"A2A2GA|
 |:"C"e2d2G2|"G"B4Bd|"C"e2d2G2|"G"B4Bd|"C"e2d2g2|"Em"B2dB AG|
 "Am"EA AG AB|"D"A4Bd|"C"e2d2g2|"G"B2dB AG|"D7"A2d3c|"Em"B3B AG|
 "Am"EA AG AB|"Em"AG E2GE|1 "C"DEG2"D7"G2|"G"G4Bd:|2 "C"DEG2"D7"A2|"G"G4|| 
+
+X: 218
+T: Scattery Island
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|:d2 B BAB|dBB Bge|d2B BAB|GEE Ege|
+d2 B BAB|dBB BAB|efg fed|1 e3 ege:|2 e3 e2f||
+|:ggd gab|aag f2d|deg fed|eed ABd|
+ggd gab|aag f2d|efg fed|1 e3 e2f:|2 e3 Bge|| 
+
+X: 219
+T: The Moon And The Seven Stars
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+|:"D"d2A AGF|"G"GAB "D"A2A|"G"Bcd efg|"A"fed cBA|
+"D"d2A AGF|"G"GAB "D"A2A|"G"Bcd efg|"A"Adc "D"d3:|
+|:"A"e2A ABA|efg "D"~f2f|"A"efg "D"fed|"E"cde "A"A2A|
+"G"BGB "D"AFA|"G"BGB "D"AFA|"G"Bcd efg|"A"Adc "D"d3:| 
+
+X: 220
+T: Mrs. Galvin's
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+d2c|:~B2A BGG|dGG BAG|~A3 ABA|GB/c/d gdc|
+~B2A BGG|dGG BAG|~A3 ABA|1 AGF G2A:|2 AGF GBd||
+|:~g2f fed|B2d def|~g2e fed|Bee e2g|gag fed|
+Bdd def|~g3 gdB|1 AGG GBd:|2 AGG c2d||
+
+X: 221
+T: The Maid In The Meadow
+T: The Green Fields Of America
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|:GAB|c3 B/c/dB|AGA BGE|DGB AGA|BGB AGE|
+c2 c B/c/dB|AGA BGE|DGB AGA|1 BGG:|2 BGE||
+|:G2 D|GBd g2 g|ede gdB|GBd gdB|ABA AGE|
+GBd g2 g|ege gdB|GAB AGA|BGF:|
+
+X: 222
+T: The Boys Of The Lough
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+dB|:AF (3FFF A2 AB|defd efdB|AF (3FFF ABAF|EDEF E2 FG|
+AF (3FFF A2 AB|defd efdB|AF (3FFF ABAF|1 EDEF D2 dB:|2 EDEF D2 de||
+|:faag fgfe|dBBA GBdB|AF (3FFF ABde|fdgf e2 fg|
+abag fgfe|dBBA GBdB|AF (3FFF ABAF|1 EDEF D2 de:|2 EDEF D2 dB||
+
+X: 223
+T: The New Found Out
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+|:A2AB AF~F2|dFcF BGGB|A2FA dcdf|eB~B2 BcdB|
+ADBD ADFG|AdcA G2GB|A2FA dcdf|1 edcB cAdB:|2 edcB cAde||
+|:fd~d2 geag|f2df edcA|defa gfgb|
+[1afdf efde|fd~d2 geag|fedf edcB|A2FA dcdf|edcB cAde:|
+[2afdf efga|bf~f2 afef|defd BAFB|A2FA dcdf|eB~B2 BcdB|]
+
+X: 224
+T: Roaring Mary
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+D~F3 ADFA|d~f3 g2 fe|dcdB ABde|fede feef|
+D~F3 ADFA|d~f3 g2 fe|dcdB ABdf|afeg fd d2:|
+abag fgfe|dcdA BAFA|d~g3 b~g3|a~f3 ge ~e2|
+D~F3 ADFA|d~f3 g2 fe|dcdB ABdf|afeg fd d2:|
+
+X: 225
+T: Health To The Ladies
+R: jig
+M: 6/8
+L: 1/8
+K: Amaj
+f|ecA BAF|AFE EFA|Bdc BAB|cBB B2f|
+ecA BAF|AFE EFA|Bdc BAB|cAA A2:|
+A|cee dff|cee ecA|cee dff|ecA B2A|
+cee dff|cee ecA|Bdc BAB|cAA A2:|
+
+X: 226
+T: John Brosnan's
+R: polka
+M: 2/4
+L: 1/8
+K: Gmaj
+|:G2 g>e|dB Be|dB GA|BA AB|
+G2 g>e|dB Be|dB AB|1 GDEF:|2 G2 Bd||
+|:ga/g/ fg|ed Bd|ga/g/ fg|e3f|
+g2 fg|ed Be|dB AB|G2 Bd:|
+|:g2 a2|b3a|gf ef|g3d|
+ef/e/ dB|ef/e/ dB|dB AB|1 G2 Bd:|2 G2GF||
+
+X: 227
+T: Under The Willows She Is Sleeping
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+~B3 cBc|d2g d2c|~B3 BAG|FAD FAD|
+~B3 cBc|d2g d2c|~B3 AdF|1 AGF G2A:|2 AGF G3||
+~g3 gfe|d2g d2c|~B3 BAG|FAD FAD|
+~g3 gfe|d2g d2c|~B3 AdF|AGF GBd|
+~g3 gfe|d2g d2c|~B3 BAG|FAD FAD|
+~B3 cBc|d2g d2c|~B3 AdF|AGF G3||
+
+X: 228
+T: The Castleblaney Piper
+C: Ed Reavy
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+AG|FDF ABc|dfd AGF|GBG EFG|FDF GFE|
+FDF ABc|dfd cde|faf ged|edc d3:|
+e|fed gfe|fed cAF|GBG FGA|BGE E3|
+f2d g2e|fed cde|faf gec|edc d2e|
+fed gfe|fed cAF|GBG FGA|BGE EFG|
+FDF ABc|dfd cde|faf gec|edc d3||

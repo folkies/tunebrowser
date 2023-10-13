@@ -543,7 +543,7 @@ C: Grégory Jolivet
 M: 4/4
 L: 1/8
 K: C
-|: "C"c3 d e2 dc| "Em"eg e4 dc | "Dm"f3 e c2 de| "G"d3 c B2 a2 |
+|: "C"c3 d e2 dc| "Em"eg e4 dc | "Dm"f3 e c2 de| "G"d3 c B2 G2 |
 "C"c3 d e2 dc| "Em"eg e4 dc | "Dm"f3 e c2 de| "G" d8 :|
 |: "Am"A2 cA e3 c| "F"fe c4 g2 | "G" d3 c Bc d2-|dedc dcBc |
 "Am"A2 cA e3 c| "F"fe c4 g2 | "G"d3 c Bc d2|d8 :|
@@ -592,4 +592,27 @@ L: 1/8
 K: Dmaj
 "D"FAGF A3F|"G"GFGA "D"B2A2|"D"AdAF "G"G2FE|1 "D"FAFD "A"E4:|2 "A"DAGE "D"D4:|
 "D"d2A2 d3c|"G"BABc dedB|"D"A2D2 A2GF|1 "G"EFGA "A"BABc|2 "A"EFGA "D"D4:| 
+
+X: 53
+T: Misirlou
+C: Nikos Roubanis 
+M: 4/4
+L: 1/8
+K: Am
+%%stretchlast
+"E"E3F ^G2A2 | B3c ^d2cB | B8- | B8 | E3F ^G2A2 | B3c ^d2cB | B8- | B8 |
+ "Am"cB2c B2A2 | BA2B A2^G2 | "E"^G8- | ^G8 | "Dm"BA2B A2^G2 | ^GF2G F2EE | "E"E8- | E8 |
+|: "Am"A8- | A6 ^GA | "G"B8- | B6 AB | "F"c6 Bc | "F7"^d6 cd | "E"e8- | e8 |
+ "Dm"f e2 f e2 d2 | e d2 e d2 c2 | "E"B8- | B8 | "Dm"d c2 d c2 B2 | B A2 B ^G2 F2 | "E"E8- | E8 :| 
+"Am" "^Coda"  c6 Bc | "B"^d6 cd | "E"e8- | e8  |]
+
+X: 54
+T: Tête à tête
+C: Ulli Alles
+R: waltz
+M: 3/4
+L: 1/8
+K: C
+"C" e3 d c2| "Em" g4 e2 | [M:2/4] "F"A2 A2 | [M:3/4] "G"B2 c2 d2 | "C"e3 d c2| "Em"g4 e2 | [M:2/4] "F"A2 A2 | [M:3/4] "G" B6 :|
+|: "Am" c3 B A2 | "F" c2 B2 A2| [M:2/4] "Em" E2 E2 | [M:3/4] E2 B2 d2 |"Am" c3 B A2 | "F" c2 B2 A2| [M:2/4] "Em" E2 E2 | [M:3/4] E6 :|
 
