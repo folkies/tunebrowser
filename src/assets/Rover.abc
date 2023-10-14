@@ -25,11 +25,11 @@ K:D
 "D"df/2d/2 "A7"c/2d/2e/2c/2|"D"d/2e/2f/2d/2 A/2d/2B/2A/2|\
 "G"G/2B/2B/2B/2 "D"A/2d/2d/2d/2|"A7"c/2d/2e/2c/2 "D"d:|
 
-X:3
+X: 3
 T: High Road to Glin
 C: Martin Mulvihill
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: D
 D/E/ | F2 AF EFDE | F2 AF EA, A,2 | F2 FE DEFA |\
@@ -130,7 +130,7 @@ Addc AGFG|Addc A2AB|defd AGFG|EdcA G2eg||
 
 X:11
 T:Craig's Pipes
-M:C
+M:C|
 L:1/8
 R:reel
 K:G
@@ -185,7 +185,7 @@ e2f g2e|d2B BAG|A2B cBA|1 Bde dBd:|2 Bde dBA||!
 
 X: 16
 T: John Nee's
-M: 4/4
+M: C|
 L: 1/8
 R: reel
 K: Ador
@@ -247,7 +247,7 @@ ecA fdB|aga ecA|dfg aed|cdB A2=G||
 
 X:21
 T:Lost In The Loop
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Cmaj
@@ -260,7 +260,7 @@ d2d2 gadc|d2dc AGAc|dDcD GABc|dDcD A,D D/D/D:|
 
 X:22
 T:The Lady On The Island
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Dmaj
@@ -271,7 +271,7 @@ afdf e2 (3ABc :|2 defg ~a2ab | afdf edd2 ||
 
 X: 23
 T: Gatehouse Maid
-R: reel
+R: C|
 M: 4/4
 L: 1/8
 K: Am
@@ -305,7 +305,7 @@ E2AE GAB2 |1 ~B3d cAAF :|2 ~B3d cA|AB ABce||
 
 X:26
 T:Spoot O' Skerry
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Gmaj
@@ -379,12 +379,10 @@ fdB Bcd|ecA BAG|FGA Aag|fdc d2:|
 
 X:32
 T:Maurice Lennon's
-O:england
-M:4/4
+M:C|
 L:1/8
 C:Maurice Lennon, Leitrim (fiddle)
-R:Reel
-D:From a radio broadcast
+R:reel
 K:G
 GBde dBB2 | ABcd BGFG | E2cE D2BD | dBB2 AFEF |
 GBde dBB2 | ABcd BGFG | E2cE D2BD | dBAB G4 :|
@@ -414,7 +412,7 @@ fed B2d|A2d F2G|ABA F2E|1 FDD D2e:|2 FDD D3||
 
 X: 35
 T: The Green Mountain
-M: 4/4
+M: C|
 L: 1/8
 R: Reel
 K: D
@@ -450,7 +448,7 @@ FADA FADA|FAdA BABc|dBAF E2FE|1 DB,A,B, D2DA:|2 DB,A,B, D3e||
 X: 38
 T: Teampall An Ghleanntáin
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 |:dcAG EF F2|AG G2 EF F2| dcAG EF F2|A2GE EDD2|
@@ -460,7 +458,7 @@ dcAG EF F2|AG G2 EF F2| AG G2 EF F2|A2GE EDAD||
 
 X:39
 T:The Queen Of Rangoon
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Bmin
@@ -495,7 +493,7 @@ Aff Agg | bag fde | fef gfg | agf d2c :|
 
 X:42
 T:Sheepskins and Beeswax
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Ador
@@ -529,7 +527,7 @@ Ace ~a3|gfg ~a3|gba gef|gdB GAB:|
 
 X:45
 T:The Bag Of Spuds
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Ador
@@ -551,7 +549,7 @@ cBA a^ga|Ace a{b}ag|.f/.g/af gfe|dBG Bcd:|]
 
 X:47
 T:Paddy's Trip To Scotland
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Dmaj
@@ -575,7 +573,7 @@ e2 (3gfe begf|efga bfaf|~d3f abaf|1 gfed Beed:|2 gfed Be~e2||
 
 X:49
 T:The Maids In The Meadow
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Dmaj
@@ -610,7 +608,7 @@ AAGA AGAA|GAAG AAdA|GAde d2dA|dcde d2dc:|
 
 X:52
 T:A Lovely Madness
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Amin
@@ -622,7 +620,7 @@ AE (3EEE FD (3DDD | EDEF EDCE |1 DCB,C A,2 BD :|2 DCB,C A,2 A,2 ||
 X: 53
 T: Up Downey
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Edor
 B|EFGA B2dB|BAGB AGFB|EFGA Bdef|gfed eaz2|
@@ -714,7 +712,7 @@ GEDE GABd|gabg aged|Bd~d2 eBdB|1 AGAB G2 (3def:|2 AGAB G2 BA||
 
 X:61
 T:Reel Beatrice
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Amin
@@ -764,7 +762,7 @@ BA|"G"G4 EF|"Em"G4 GA|"G"B2 g3 f|"C"e4 ge|"G"d3 B A2|"Em"G3 A B2|"C"c3 BAG|"Em"E
 
 X:65
 T:The Long Drop
-M:4/4
+M:C|
 L:1/8
 R:reel
 K:Gmaj
@@ -1441,7 +1439,7 @@ X: 121
 T: Are You Ready Yet?
 C: Tom Doorley
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Emin
 |:B2AF EGFE|FDFA dAFA|BAAF EGFE|FGFD ~B3A|
@@ -1455,7 +1453,7 @@ X: 122
 T: Love At The Endings
 C: Ed Reavy
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 FE|:DEFA BcdB|AF (3FDF AFEF|DEFA (3BcB AF|(3GFE (3FED B,DDF|
@@ -1548,7 +1546,7 @@ a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 ed||
 X: 130
 T: The Return To Miltown
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmix
 |:"Dm"D2 ADED AD | "C"CEED CEGE | "Dm"D2 ADEG AB | "Am"cAGF "C" EDCE |
@@ -1675,7 +1673,7 @@ X: 141
 T: The Trip To Herve's
 C: Micheal McGoldrick
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 |:FAAF ABde|faaf dafd|B2dB AFDE|FEED E2DE|
@@ -1784,7 +1782,7 @@ faa eaa|def~g3|afd gfe|dfe dBA:|
 X: 150
 T: Superfly
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Bmin
 |:Bf ~f2 gfeg | f3 g fedf | e3 f edce | dBBA BAFA |
@@ -1833,7 +1831,7 @@ e3 ede fef dfa|1baf afe (d3 d2)e:|2baf afe (d3 d2)|]
 X: 154
 T: The Rose In The Garden
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Gmaj
 ABAc B~G3|BGBd gBfB|eA A/A/A BGGA|e/f/g dc BdgB|
@@ -1866,7 +1864,7 @@ c2 c d^cd | e^de gab | age dBG | E>FG A2 :|
 X: 157
 T: Touch Me If You Dare
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Gmaj
 dc |BG ~G2 AGEG |BG ~G2 Bdgd |B3 G AGED |EAAG A2 GA |
@@ -1908,7 +1906,7 @@ d3 def | ded def | gfe fdB |1 AFA B2 A :|2 AFA B3 |]
 X: 160
 T: Branohm
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Ador
 c2Bc AGED|CDEF GABd|BcBc AGEF|GEDB, A,2AB|
@@ -1920,7 +1918,7 @@ c2Bc ABcd|eAce g2ga|bagb agea|gedB BAAB:|
 X: 161
 T: The Trip To Nenagh
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmix
 d2AG FDDF | A,DFA d^cAG | Ad~d2 d=fed | c2Gc EcGc |
@@ -1931,7 +1929,7 @@ Ad~d2 Adfd | (3B^cd ef g2fg |a2ea ^caec |1 d^cAB FDFA :|2 d^cAB FDD2 |]
 X: 162
 T: The Limestone Rock
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Gmaj
 dc|:BGG2 AGFA|DGG2 A2dc|BGG2 AGAB|cAAG A2dc|
@@ -1942,7 +1940,7 @@ e2ed eaa2|gedB AcBA|GABd ~g3b|agef gedc:||
 X:163
 T: Jenny's Wedding
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 D2 (3FED AD (3FED|Adde fded|cAAB =c3d|eaag edcA|
@@ -1953,7 +1951,7 @@ d2fd adfd|(3Bcd ef g2fg|afge d2cA|(3Bcd AG FDD2:|
 X: 164
 T: The London Lasses
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Gmaj
 G3 B d2 Bd | eaag eg g2 | G3 B dGBd | egdB AGEF |
@@ -1964,7 +1962,7 @@ g2 fg efge | dB B2 dega | bgag egfa |1 gedB AGED :|2 gedB AGEF ||
 X: 165
 T: Molly Will You Do It?
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Amix
 cAAB cdec|degd BGGB|cAAB ceag|fdec A2ed|
@@ -1995,11 +1993,11 @@ K: Emin
 |FBB GBB|FBA GFE|B,EG cBA|1 GEE E2 g:|2 GEE E2 A||
 
 X: 168
-T:The High Road To Galway
+T: The High Road To Galway
 T: The New Found Out
-T:The Satin Slipper
+T: The Satin Slipper
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 A3B AFFA|(3Bcd cA G3B|A~F3 ABdf|1eBBA BcdB:|2eBBA Bcde||
@@ -2069,7 +2067,7 @@ EAA ABd|edB dba|Tg2e dBG|AAA A2:|]
 X: 174
 T: The Roscommon
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Edor
 EFGA BAGB|AF F2 dFAF|EFGA BAGB|AFdF FE E2|
@@ -2139,7 +2137,7 @@ K: Dmaj
 X: 180
 T: The Old Hag Of Galway
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Bmin
 dc|:BE ~E2 B2AF|EFDE FA A2|BE ~E2 B2AF|EFDE FD D2|
@@ -2287,7 +2285,7 @@ D2|"G"(3GGG G2 (3GGG Gd|BG Bd gd BG|"D"(3DDD D2 (3DDD DA|FD FA dA FD|
 X: 193
 T: Last Night's Fun
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 |:"D"ADFD A2AB|"D"ADFD "A"EFGB|"D"ADFD A2 Bd|"G"e2fe "A"dBAB:|
@@ -2470,7 +2468,7 @@ X: 209
 T: The Corner House
 R: reel
 C: Paddy Kelly
-M: 4/4
+M: C|
 L: 1/8
 K: Ador
 |:EAAG ABcd|e2dB cAAG|EGGF G2AB|cABG AGED|
@@ -2481,7 +2479,7 @@ eaag a2ga|bgab gedB|d2Bd efge|1 dBGB A2Bd:|2 dBGB A2AG||
 X: 210
 T: The Tempest
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: C
 |:d2 cA GE E2|DEcE dEcE|d2 cA GE E2|DEAE GEDE|
@@ -2622,7 +2620,7 @@ GBd g2 g|ege gdB|GAB AGA|BGF:|
 X: 222
 T: The Boys Of The Lough
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 dB|:AF (3FFF A2 AB|defd efdB|AF (3FFF ABAF|EDEF E2 FG|
@@ -2633,7 +2631,7 @@ abag fgfe|dBBA GBdB|AF (3FFF ABAF|1 EDEF D2 de:|2 EDEF D2 dB||
 X: 223
 T: The New Found Out
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 |:A2AB AF~F2|dFcF BGGB|A2FA dcdf|eB~B2 BcdB|
@@ -2645,7 +2643,7 @@ ADBD ADFG|AdcA G2GB|A2FA dcdf|1 edcB cAdB:|2 edcB cAde||
 X: 224
 T: Roaring Mary
 R: reel
-M: 4/4
+M: C|
 L: 1/8
 K: Dmaj
 D~F3 ADFA|d~f3 g2 fe|dcdB ABde|fede feef|
