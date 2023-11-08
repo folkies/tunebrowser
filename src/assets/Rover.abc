@@ -2723,3 +2723,36 @@ K: Dmaj
 ABAG FGAB|=c2 dc BGGB|ABAG FGAg|fdec dcdB:|
 f2 df efge|fAdf ecAg|f2 df efge|afge d3 e|
 f2 df efge|fAdf ecAG|ABcd efge|afge fd d2||
+
+X: 231
+T: The Liverpool
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Dmaj
+FEFA dfaf|gefd dcBA|GBGB FAFA|EFGA GFED|
+FEFA efaf|gefd dcBA|fafd egec|d2d2d4:|
+|:dffd ceec|BddB BAGF|GBGB FAFA|EFGA GFED|
+FEFA dfaf|gefd dcBA|fafd egec|d2d2d4:| 
+
+X: 232
+T: Mother's Delight
+R: reel
+M: 4/4
+L: 1/8
+K: Ddor
+DE|:~F2 FD ~G2 GE|~F2 FD GECE|Ddd^c defe|~d2 dc ABcA|
+d^cd=c ~A2 AB|cBcG ECCE|Dddc dcAB|~c2 GE ~D2DE:|
+|:FAdA FD ~D2|EGcG EC ~C2|FAdA FD ~D2||EDCE ~D2 DE|
+FAdA FD ~D2|EGcG ECCE|~F2 EF DCA,C|1 DFEC ~D2 DE:|2 DFEC ~D3|| 
+
+X: 233
+T: The Rollicking Boys of Tandragee
+R: jig
+M: 6/8
+L: 1/8
+K: Emin
+d|:~B3 ~E3|BAB d2B|ABA DED|AFD FGA|
+BAB ~E3|BAB def|edB AFA|BEE E2A:|
+|:B2e efe|def afd|e2d dcd|Bcd dBA|
+B2e efe|def afd|edB AFA|BEE E2A:| 
