@@ -4289,6 +4289,7 @@ K: Dmix
 X: 328
 T: Hector the Hero
 R: waltz (slow air)
+C: John Scott Skinner
 M: 6/8
 L: 1/8
 K: Dmaj
@@ -4297,3 +4298,24 @@ K: Dmaj
 |:F/A/|"G"B>GB "Em"d>cB|"D"A3-A2F/A/|"G"B>AF "D"A>DF|"A"E3-E2F/A/|
 "G"B>GB "Em"d>cB|"D"A>DE "Bm"F<dB|"D"A>DF "A"E2D|"D"D3-D2:|
 
+X: 329
+T: Sorry Too Late
+M: 4/4
+L: 1/8
+R: hornpipe
+K: Gmaj
+|: d>c | "G"(3Bcd "D"A>B "G"G>DB,>D | "G"G>B (3def g2 b>f | "G"(3gfe d>B "C"c>de>a |"G"(3gfe (3dcB "D"A>dc>d |
+"G"B>d "D"A>B  "G"G>DB,>D  | "G"G>B (3def g2 b>f | "G"(3gfe (3dcB "C"c>ed>c | "G"B>G "D"A>F "G"G2:|
+|: B>d | "Em"(3gag e>g "D"(3faf d>f | "C"g>fe>g "D"f2 d2 | "G"g>b "D"a>f "G"(3gab "D"(3agf |"G"(3gfe (3dcB "D"A>d c>d |
+"G"(3Bcd "D"A>B "G"G>DB,>D | "G"G>B (3def g2 b>f | "G"(3gfe (3dcB "C"c>ed>c | "G"B>G "D"A>F "G"G2:|
+
+X: 330
+T: The Christmas Polka
+R: polka
+M: 2/4
+L: 1/8
+K: Dmaj
+|:"D"fd AF|"G"GB B/A/G|"D"FA de/f/|"A"gf ed/e/|
+"D"fd AF|"G"GB A>G|"D"FA de/f/|"A"ed "D"d>e:|
+|:"D"fa af|"G"ga ba|"D"fa d>e|"A"fe ed/e/|
+"D"f/e/f/g/ ad|"G"gaba|1 "D"fa "A"e/f/g/e/|"D"fd d>e:|2 "D"fa "A"e/f/g/e/|"D"fd d2|| 
