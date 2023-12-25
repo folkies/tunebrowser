@@ -2066,6 +2066,7 @@ EAA ABd|edB dba|Tg2e dBG|AAA A2:|]
 
 X: 174
 T: The Roscommon
+T: Master Crowley's
 R: reel
 M: C|
 L: 1/8
@@ -2294,6 +2295,7 @@ K: Dmaj
 
 X: 194
 T: Sean Reid's
+T: Gilbert Clancy's
 R: reel
 M: C|
 L: 1/8
@@ -2756,3 +2758,158 @@ d|:~B3 ~E3|BAB d2B|ABA DED|AFD FGA|
 BAB ~E3|BAB def|edB AFA|BEE E2A:|
 |:B2e efe|def afd|e2d dcd|Bcd dBA|
 B2e efe|def afd|edB AFA|BEE E2A:| 
+
+X: 234
+T: John Brosnan's
+R: reel
+M: C
+L: 1/8
+K: Bmin
+FBBA Bcde|f2 ef dcBA|FA A2 FA EA|FA A2 fAeA|
+FBBA Bcde|f2ef dcBA|f2 ef dfcf|1 FBBA B2 BA:|2 FBBA Bcde||
+fB B2 fBde|f2 bf afea|fB B2 fBdf|eA A2 eAce|
+fB B2 fBde|f2 bf afef|f2 ef dfcf|1 FBBA Bcde:|2 FBBA B3 A|| 
+
+X: 235
+T: The Silver Strand
+C: Nollaig Casey
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+|:G2Bd BGAG|EGDE GABd|e3 e{f} ed(3Bcd|egdB ~A2ab|
+~g3f eage|a2ba gedg|~e3 g dB~B2|1 AB(3cBA BGAB:|2 ABcA BG ((3ABc)||
+|:d2 {e}dB ABGD|EA{B}AG EGDB|d2 de dGBd|gedB ABcA|
+dGBG ABGD|EA{B}AG EGDC|B,DGA BedB|1 ABcA BG ((3ABc):|2 AB(3cBA BGAB||
+
+X: 236
+T: Nina's
+C: Niall Vallely
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+E|EGA B2A|AGB AGE|EGA B2A|ABd e2E|
+EGA B2A|AGB AGA|AGB AGE|GED E2:|
+e|e2e dBA|AGB AGE|e2d dBA|ABd e2e|
+edg edg|edB AGA|AGB AGB|AGD E2:| 
+
+X: 237
+T: Brendan Tonra's
+C: Brendan Tonra
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+E|~F3 AFE|EDB, A,B,D|FEF GFG|ABF AFE|
+~F3 AFE|EDB, A,B,D|FEF GFG|AFD D2:|
+e|f2 d dcd|edc Bcd|f2d dcd|ABF Ade|
+f2d dcd|edc Bcd|faf gec|dAF D2:| 
+
+X: 238
+T: Humours of Rahey
+T: The Cliffs Of Moher
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+|:A|Bee e2d|Bde dBA|FDD ADD|FDF AFA|
+Bee e2d|Bde dBA|FDD ADD|FED E2:|
+A|~B3 AFA|BdB AFE|FDD ADD|FDF AFA|
+~B3 AFA|BdB AFE|FDD A,DD|FED E2A|
+~B3 AFA|BdB AFE|FDD ADD|FDF AFA|
+~B3 AFA|dcB AFE|FDD A,DD|FED E2|| 
+
+X: 239
+T: The Snowy Path
+C: Mark Kelly
+R: slip jig
+M: 9/8
+L: 1/8
+K: Dmaj
+|"D"F2A B2F A2F|"G"G2B d2e dBA|"D"F2A B2F A2F|"Em"E2D E2F GFE|
+"D"F2A B2F A2F|"G"G2B d2e dBA|"D"F2A B2F A2F|"Em"E2D E2F GAB||
+"A"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"D"A2G F2G A2B|
+"A"c3 c2e d2c|"G"B2G B2c d2e|"D"d2A B2F A2F|"Em"E2D E2F GFE|| 
+
+X: 240
+T: The Destitution
+C: Ian Stevenson
+R: reel
+M: C|
+L: 1/8
+K: Emin
+|:E2BE dEBE|dcBc AcBG|E2BE dEBE|AGFG AcBG|
+E2BE dEBE|dcBc AcBG|EGFA GBAc|BAFG E3D:|
+|:Be e2 Bege|Be e2 fg a2|Be e2 Bege|BcBA BEE2|
+Be e2 Bege|Be e2 fg a2|bgaf gefd|BcBA BEED:| 
+
+X: 241
+T: Joe Derrane's
+C: Martin Hardiman
+R: jig
+M: 6/8
+L: 1/8
+K: Bmin
+|:~B3 BAF|AFE E2 F|DFA def|afe dBA|
+BdB BAF|AFE E2 F|DFA def|1 edB B2 A:|2 edB B2 d||
+|:~e3 edB|AFA d2 A|d2 f ~a3|baf afa|
+baf afa|baf edB|d2 f afe|1 dBA B2 d:|2 dBA B2 A||
+
+X: 242
+T: Dick Gossip's
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+|:F2 AF GFED|DFAF GFED|EDEF GFED|~E3 F GFED|
+F2 AF GFED|DFAF GFED|cdef gece|1 eddc d2 AG:|2 eddc d2 ef||
+|:gB (3BBB gBaB|gB (3BBB gfed|(3cBA eA fAeA|(3Bcd ef gfef|
+gB (3BBB gBaB|gB (3BBB gfed|cdef gece|1 eddc d2 ef:|2 eddc d2 AG|| 
+
+X: 243
+T: Paddy Fahey's #14
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+|:G,2 B,D GBdB|c2 ag fgdc|B~G3 BcdB|cBAG FDCA,|
+(3G,G,G, B,D GBdB|c2 ag fgdc|B~G3 BcdB|1 cAFA G2 DB,:|2 cAFA G2 Bc||
+|:dgfa gdBG|FGAB c2 Bc|Aaag a3g|fdad bdad|
+(3ggg fa gdBG|FGAB c2 Bc|d~g3 defd|1 cAFA G2 Bc:|2 cAFA G2 DB,|| 
+
+X: 244
+T: Splendid Isolation
+C: Brendan McGlinchey
+R: reel
+M: C|
+L: 1/8
+K: Gdor
+|:FGGF GdcA|G2AG FGAc|dAcA GABc|dggf ~g3a|
+bgag fd~d2|f2eg fdcA|G2AG FGAc|dAcA ~G3z:|
+|:g2ag fd~d2|gfdc Acdc|AG~G2 Acdc|AG~G2 F4|
+FGGF GdcA|G2AG FGAc|dg~g2 fgag|fdcA G4:| 
+
+X: 245
+T: The Scartaglen
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+DFEF D2dB|cAAG EFFE|DFEF D2dB|cAGE EDD2|
+DFEF D2dB|cAAG EFGE|Addc dfed|cAGE EDD2:|
+|:f3e fage|f2ge afde|effe fage|
+fdec Add2|f2fe fage|fdge afge|
+fage dfed|1 dcAG EDD2:|2 dcAG EFFE|| 
+
+X: 246
+T: O'Dea's
+C: Paul Roche, Maurice Lennon
+R: jig
+M: 6/8
+L: 1/8
+K: Emin
+|:~G3 G2 A|BGD ~E3|DGB dD/G/d|edB def|
+~g3 ged|edg edB|~e3 edB|1 gdB AdB:|2 gdB ABd||
+~e3 edc|ded d2 e|dBG GBd|edB AFD|GBd ~g3|ged edB|~e3 edB|gdB ABd|
+~c3 cBA|Bde d2 e|dBG GBd|edB AFD|GBd ~g3|ged edB|~e3 edB|gdB AdB|| 
