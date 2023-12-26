@@ -92,6 +92,8 @@ export class TunePageComponent implements OnInit {
                 this.tune = this.index.getAbc(entry);
                 if (entry.tags) {
                     this.allTags = entry.tags.join(', ');
+                } else {
+                    this.allTags = '';
                 }
                 const book = this.index.getBookById(bookId);
                 this.prevRef = undefined;
