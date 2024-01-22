@@ -97,10 +97,10 @@ R: waltz
 M: 3/4
 L: 1/8
 K: Amin
-AB|"Am"c3 BA2|"C"c2 d2 e2|"F"a4 a2|"C"g3 ed2|"C"c2 d2 e2| "G"G4 AB|
-"Am"c3 BA2|"C"c2 d2 e2|"F"a4 a2|"C"g2 e2 c2|"G"d3 cB2|"Am"A4 eg|
-"F"a3 aa2|"F"a2 g2 e2|"G"g4 ag|"C"e2 d2 c2|"Am"c3 de2|"G"G4 AB|
-"Am"c2 B2 A2|"C" c2 d2 e2 |"F"a4 ba|"C"g2 e2 c2|"G"d3 cB2|"Am"A6|] 
+AB|"Am"c3 BA2|"C"c2 d2 e2|"F"a6|-a4 a2|"C"g3 ed2|"C"c2 d2 e2| "G"G6|-G4 AB|
+"Am"c3 BA2|"C"c2 d2 e2|"F"a6|-a4 a2|"C"g2 e2 c2|"G"d3 cB2|"Am"A6|-A4 eg|
+"F"a3 aa2|"F"a2 g2 e2|"G"g6|-g4 ag|"C"e2 d2 c2|"Am"c3 de2|"G"G6|-G4 AB|
+"Am"c2 B2 A2|"C" c2 d2 e2 |"F"a6|-a4 ba|"C"g2 e2 c2|"G"d3 cB2|"Am"A6|-A4|] 
 
 X: 10
 T: Erev shel shoshanim
@@ -615,4 +615,50 @@ L: 1/8
 K: C
 "C" e3 d c2| "Em" g4 e2 | [M:2/4] "F"A2 A2 | [M:3/4] "G"B2 c2 d2 | "C"e3 d c2| "Em"g4 e2 | [M:2/4] "F"A2 A2 | [M:3/4] "G" B6 :|
 |: "Am" c3 B A2 | "F" c2 B2 A2| [M:2/4] "Em" E2 E2 | [M:3/4] E2 B2 d2 |"Am" c3 B A2 | "F" c2 B2 A2| [M:2/4] "Em" E2 E2 | [M:3/4] E6 :|
+
+X: 55
+T: Esperanza
+C: Marc Perrone
+M: 4/4
+L: 1/8
+R: schottisch
+K: Amin
+|: "Am"A2 Ac e2 ec | AEAc e4 | AAAc e2 fe | dcBA "E7/B"^G4 |
+"E7"BBBc d2 dc | BA^GA B4 |1 BBBc d2 ed | cBAB "Am" c4 :|2 BBBc d2 ef | edcB "A7"A4 ||
+|: "Dm"ffff e2 df | -f4 z4 | "Am"eeee d2 ce|-e4 z3 A | "E7"dddd c2 Bd|-d B2 ^G E4 |
+[1 edcB A2 Bc|"Am"-cABc "A7"d2 e2 :|2 edcB A2 ^GA | "Am" -A4 z4 |]
+
+X: 56
+T: Vintervals
+C: Michael Sommer
+M: 3/4
+L: 1/4
+R: waltz
+K: F
+|: "F"Ffe | "Bb"d>ef | "C"c2B | "F"A>FG/A/ | "Gm"B>cd | "F"(cAF) | "G7"(FEF) | "C7"G3 | 
+"F"Ffe | "Bb"d>ef | "C"c2B | "Dm"A>FG/A/ | "Gm"B>cd | "C"(efg) | "F"f>f"Bb"f | "F"f2 z :| 
+|: "Dm"agf | "Am"e>fg | "Bb"d>ef | "F"c2A | "Gm"B>cd| "F"(Acf) | "G7"(fef) | "C7"g3 |
+"F"agf | "Fmaj7"e>fg | "Bb"d>ef | "F"c2A | "Gm"B>cd| "C7"(efg) | "F"f>ff | "F"f2 z :|
+
+X: 57
+T: Wouters Hanter dro
+C: Wouter Kuyper
+M: 3/2
+L: 1/8
+R: hanter dro
+K: Am
+|: "Am"c2 AB "C"c3e "G"dcBA | "Am"c2 AB "F"c2 d2 "G"B2 G2 | "Am"c2 AB "C"c3e "G"dcBA | "Am"c2 AB "F"c2 e2 "G"B4 :|
+|: "C"e2 cd e3g "Dm"fedc | "F"A2 Bc "G"d2 cd "C"e2 c2 | "C"e2 cd e3g "Dm"fedc | "F"A2 Bc "G"d2 e2 B4 :|
+
+X: 58
+T: Edwards glada
+R: slängpolska
+O: Småland, Bredvassa, Loftahammar
+L: 1/8
+M: 3/4
+K: G
+(D |: G)B Ac Bd | ef g2 B2 | c>d ed cB | A>G (F/G/)F/E/ DE/F/ |
+GB Ac Bd | ef g2 B2 | c>d ed cB |1 (A/G/)F/A/ G3 D :|2 (A/G/)F/A/ G3 (B |]
+d2) Bd/B/ Ge- | ed- dc- cB | d2  Bd/B/ Ge- | ed- dc- cB |
+GB Ac Bd | ef g2 B2 | c>d ed cB |1 (A/G/)F/A/ G3B :|2 (A/G/)F/A/ G4 |]
 
