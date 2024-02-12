@@ -2955,3 +2955,47 @@ K: Dmix
 "G"FDFG A3B|"C"cAdB cAGB|"D"Add^c ABAG|1 "D"EFGE FDD2:|2 "D"EFGE FDD2||
 |:"D"f2eg fde^c|Add^c Adde|f2eg fde^c|"C"AGAB c3d|
 "G"eaag efge|dfed cAGB|"D"Add^c ABAG|1 "D"EFGE FDD2:|2 "D"EFGE FDD2|| 
+
+X: 251
+T: Return From Fingal
+R: march
+M: 4/4
+L: 1/8
+K: Edor
+|:B2GF EFGA|B2GF E4|AGFA d2A2|B2A2 Bcd2|
+B2GF EFGA|B2GF E4|AGFA d2AG|F2E2 E4:|
+|:f2e2 e2dc|B2A2 d2A2|B2A2 d2A2|B2A2 Bcde|
+f2e2 e2dc|B2A2 d2A2|AGFA d2AG|F2E2 E4:| 
+
+X: 252
+T: The Bluemont
+C: Rodney Miller
+R: waltz
+M: 3/4
+L: 1/8
+K: A
+E A>B|:"A" c4 (3cBA|"E" B3 d c>B|"F#m" A F3 A2|F4 (3EFE|"D" D4 (3FED|"E" E2 A3 c|B6|B3 E A>B
+"A" c4 (3cBA|"E" B3 d c>B|"F#m"A F3 A2|F4 E2|"D"D4 (3FED|"E"E2 c3B|1 "A"A6|A3 E A>B:|2 "A"A6|c2d2e2]|
+|:"D" f4 f2|"E"e3 f e>d|"A"d c3c2|c4 B2|"F#m"A4 A2|"E"B2 A3 e|"A"c6|c2>B2A2|
+"Bm"B3 A B>c|"E"B4 A>F|"A"E A4 E|"F#m"F A3 F2|"D"D4 (3FED|"E"E2 c3 B|1 "A"A6|c2d2e2:|2 "A"A6|A3 E A>B|| 
+
+X: 253
+T: The Cottage In The Glen
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+B2AF DEFA|BdAd Bdef|dBAF DEFA|BdAF FE~E2:|
+Beed BddA|Beef gfed|Beed BddA|BdAF FE~E2|
+Beed BddA|Bdef ~g3a|b2af gefd|BdAF FE~E2|| 
+
+X: 254
+T: The Bog Carrot
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+|:E|FAdA BdAd|BdAF E3G|FAdA BdAd|BdAF E2D:|
+A|:f3e defg|afdf e2de|fgfe defe|dBAF E2D2:|
+afdf afdf|ge=ce ge^ce|afdf afdf|gece d3f|
+afdf afdf|ge=ce ge^ce|afge fdec|dBAF E2D| 
