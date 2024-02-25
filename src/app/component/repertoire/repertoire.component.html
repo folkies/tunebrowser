@@ -5,36 +5,51 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #repertoireMenu="matMenu">
-            <button mat-menu-item *ngFor="let rep of repertoires()" (click)="selectRepertoire(rep)">{{rep.name}}</button>
-            <button mat-menu-item (click)="openDialog()">New repertoire</button>
-        </mat-menu>        
+            <button mat-menu-item *ngFor="let rep of repertoires()"
+                (click)="selectRepertoire(rep)">{{rep.name}}</button>
+            <button mat-menu-item (click)="openNewRepertoireDialog()">New repertoire</button>
+        </mat-menu>
     </div>
 
     <p class="mat-body">{{tunes.length}} tunes</p>
 
-    <table mat-table matSort [dataSource]="dataSource" class="repertoire">        
+    <table mat-table matSort [dataSource]="dataSource" class="repertoire">
         <ng-container matColumnDef="title">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
-            <td mat-cell *matCellDef="let tune"><div class="tune-link" routerLink="{{tune.uri}}">{{tune.title}}</div></td>
+            <td mat-cell *matCellDef="let tune">
+                <div class="tune-link" routerLink="{{tune.uri}}">{{tune.title}}</div>
+            </td>
         </ng-container>
 
         <ng-container matColumnDef="timesPracticed">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Times practiced</th>
-            <td mat-cell *matCellDef="let tune"> {{tune.timesPracticed}} </td>
+            <td mat-cell *matCellDef="let tune"> {{tune.item.timesPracticed}} </td>
         </ng-container>
 
         <ng-container matColumnDef="lastPracticed">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Last practiced</th>
-            <td mat-cell *matCellDef="let tune"> {{tune.lastPracticed ? tune.lastPracticed.toLocaleDateString() : ''}} </td>
+            <td mat-cell *matCellDef="let tune"> {{tune.item.lastPracticed ? tune.item.lastPracticed.toLocaleDateString() : ''}}
+            </td>
         </ng-container>
 
         <ng-container matColumnDef="added">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>Added</th>
-            <td mat-cell *matCellDef="let tune"> {{tune.added.toLocaleDateString()}} </td>
+            <td mat-cell *matCellDef="let tune"> {{tune.item.added.toLocaleDateString()}} </td>
+        </ng-container>
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+            <td mat-cell *matCellDef="let tune">
+                <button mat-icon-button color="none" [matMenuTriggerFor]="tuneMenu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #tuneMenu="matMenu">
+                    <button mat-menu-item (click)="deleteTune(tune)">Delete</button>
+                </mat-menu>
+            </td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      
+
     </table>
 
 </div>

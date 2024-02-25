@@ -6,7 +6,7 @@ import { RepertoireSelection } from '../component/add-to-repertoire/add-to-reper
 
 const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
-export const INTERVALS : number[] = [ 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 6, 6, 15 ];
+export const INTERVALS: number[] = [1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 6, 6, 15];
 
 /**
  * Repertoire reviver function for `JSON.parse()`.
@@ -77,7 +77,7 @@ export class RepertoireRepository {
      */
     async load(): Promise<RepertoireCollection> {
         if (! await this.googleDrive.isSignedIn()) {
-            return {repertoires: []};
+            return { repertoires: [] };
         }
 
         if (this.repertoireCollection) {
@@ -130,7 +130,7 @@ export class RepertoireRepository {
         const collection = await this.load();
         let repertoire = await this.findRepertoire(selection.name);
         if (repertoire === undefined) {
-            repertoire = { name: selection.name, maxAge: 30, numTunesPerAssignment: 10, items: []};
+            repertoire = { name: selection.name, maxAge: 30, numTunesPerAssignment: 10, items: [] };
             collection.repertoires.push(repertoire);
             collection.current = selection.name;
         }
@@ -142,6 +142,20 @@ export class RepertoireRepository {
         }
         return this.saveCollection(collection);
     }
+
+    async deleteRepertoireItem(tuneRef: TuneReference, repertoireName: string): Promise<string> {
+        const collection = await this.load();
+        let repertoire = await this.findRepertoire(repertoireName);
+        if (repertoire !== undefined) {
+            const index = repertoire.items.findIndex(it => it.referencedBy(tuneRef));
+            if (index >= 0) {
+                repertoire.items.splice(index, 1);
+                return this.saveCollection(collection);
+            }
+        }
+        return "";
+    }
+
 
     /**
      * Finds the repertoire with the given identity.

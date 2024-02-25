@@ -6,14 +6,14 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
+
 import { NewRepertoireComponent } from '../new-repertoire/new-repertoire.component';
+import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-repertoire-item.component';
 
 export interface RepertoireTune {
+    item: RepertoireItem;
     title: string;
     uri: string;
-    added: Date;
-    lastPracticed: Date;
-    timesPracticed: number;
 }
 
 @Component({
@@ -22,13 +22,13 @@ export interface RepertoireTune {
 })
 export class RepertoireComponent implements OnInit {
 
-    @ViewChild(MatSort, {static: true}) 
+    @ViewChild(MatSort, { static: true })
     sort: MatSort;
 
     dataSource: MatTableDataSource<RepertoireTune>;
 
     tunes: RepertoireTune[] = [];
-    displayedColumns: string[] = ['title', 'timesPracticed', 'lastPracticed', 'added'];
+    displayedColumns: string[] = ['title', 'timesPracticed', 'lastPracticed', 'added', 'action'];
 
     titleWithoutNumber = titleWithoutNumber;
 
@@ -47,16 +47,18 @@ export class RepertoireComponent implements OnInit {
     }
 
     newRepertoire(rep: Repertoire) {
-        this.repertoireCollection.repertoires.push(rep);
-        this.selectRepertoire(rep);
+        if (rep) {
+            this.repertoireCollection.repertoires.push(rep);
+            this.selectRepertoire(rep);
+        }
     }
 
-    openDialog(): void {
+    openNewRepertoireDialog(): void {
         const dialogRef = this.dialog.open(NewRepertoireComponent);
         dialogRef.afterClosed().subscribe(added => this.newRepertoire(added));
     }
 
-    selectRepertoire(repertoire: Repertoire): void  {
+    selectRepertoire(repertoire: Repertoire): void {
         this.currentRepertoire = repertoire;
         this.prepareTunes();
     }
@@ -66,6 +68,20 @@ export class RepertoireComponent implements OnInit {
             return [];
         }
         return this.repertoireCollection.repertoires;
+    }
+
+    async deleteTune(tune: RepertoireTune): Promise<void> {
+        const dialogRef = this.dialog.open(DeleteRepertoireItemComponent, { data: `Delete "${tune.title}" from repertoire?` });
+        dialogRef.afterClosed().subscribe(confirmed => {
+            if (confirmed) {
+                this.doDeleteTune(tune);
+            }
+        });
+    }
+
+    private async doDeleteTune(tune: RepertoireTune): Promise<void> {
+        await this.repertoireRepository.deleteRepertoireItem(tune.item.tune, this.currentRepertoire.name);
+        this.prepareTunes();
     }
 
     private async loadRepertoire() {
@@ -87,9 +103,7 @@ export class RepertoireComponent implements OnInit {
     private toRepertoireTune(item: RepertoireItem): RepertoireTune {
         const entry = this.index.findEntryByTuneReference(item.tune);
         return {
-            added: item.added,
-            lastPracticed: item.lastPracticed,
-            timesPracticed: item.timesPracticed,
+            item,
             title: titleWithoutNumber(entry.title),
             uri: `../tune/${item.tune.bookId}/${item.tune.tuneId}`
         };

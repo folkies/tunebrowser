@@ -64,6 +64,7 @@ import { TranscriberProvider } from './service/transcription/transcriber-provide
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
 import { TuneBookIndex } from './service/tunebook-index';
 import { TuneBookLoaderService } from './service/tunebook-loader.service';
+import { DeleteRepertoireItemComponent } from './component/delete-repertoire-item/delete-repertoire-item.component';
 
 const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
@@ -105,6 +106,7 @@ const googleApiClientConfig: GoogleApiClientConfig = {
     declarations: [
         AboutComponent,
         NewRepertoireComponent,
+        DeleteRepertoireItemComponent,
         AddToRepertoireComponent,
         AppComponent,
         BookPrintComponent,
