@@ -8,6 +8,7 @@
             <button mat-menu-item *ngFor="let rep of repertoires()"
                 (click)="selectRepertoire(rep)">{{rep.name}}</button>
             <button mat-menu-item (click)="openNewRepertoireDialog()">New repertoire</button>
+            <button mat-menu-item (click)="openDeleteRepertoireDialog()">Delete current repertoire</button>
         </mat-menu>
     </div>
 

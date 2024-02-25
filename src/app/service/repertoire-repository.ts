@@ -170,4 +170,19 @@ export class RepertoireRepository {
             ? collection.repertoires.find(r => r.name === name)
             : collection.repertoires[0];
     }
+
+    /**
+     * Finds the repertoire with the given identity.
+     * @param name repertoire name 
+     * @return file ID of updated repertoire file, or empty string
+     */
+    async deleteRepertoire(name: string): Promise<String> {
+        const collection = await this.load();
+        const index = collection.repertoires.findIndex(r => r.name === name);
+        if (index == -1) {
+            return "";
+        }
+        collection.repertoires.splice(index, 1);
+        return this.saveCollection(collection);
+    }
 }

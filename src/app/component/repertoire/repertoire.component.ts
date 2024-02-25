@@ -58,6 +58,14 @@ export class RepertoireComponent implements OnInit {
         dialogRef.afterClosed().subscribe(added => this.newRepertoire(added));
     }
 
+    openDeleteRepertoireDialog(): void {
+        const dialogRef = this.dialog.open(DeleteRepertoireItemComponent, { data: `Delete "${this.currentRepertoire.name}" repertoire?` });
+        dialogRef.afterClosed().subscribe(confirmed => {
+            if (confirmed) {
+                this.deleteCurrentRepertoire();
+            }
+        });
+    }
     selectRepertoire(repertoire: Repertoire): void {
         this.currentRepertoire = repertoire;
         this.prepareTunes();
@@ -82,6 +90,11 @@ export class RepertoireComponent implements OnInit {
     private async doDeleteTune(tune: RepertoireTune): Promise<void> {
         await this.repertoireRepository.deleteRepertoireItem(tune.item.tune, this.currentRepertoire.name);
         this.prepareTunes();
+    }
+
+    private async deleteCurrentRepertoire(): Promise<void> {
+        await this.repertoireRepository.deleteRepertoire(this.currentRepertoire.name);
+        await this.loadRepertoire();
     }
 
     private async loadRepertoire() {
