@@ -4387,4 +4387,26 @@ K: Gmaj
 E2|"Am"A3 E A2|"Em"G3 A G2|"C"E3 D C2|"G"D4 GA|"G"B3 A G2|B d3 D2|"Em" B3 d B2|"D"A4 E2|
 "Am"A3 E A2|"Em"G3 A G2|"C"E3 D C2|"G"D4 GA|"G" B3 D dB|"D" A3 D BA|"C" G6|"G"G4 Bc|
 "G" d3 D D2|"G7"B3 A G2|"C"E C3 E2|"G" D4 GA|"G"B3 A G2|B d3 D2|"Em" B3 d B2|"D"A4 E2|
-"Am"A3 E A2|"Em"G3 A G2|"C"E3 D C2|"G"D4 GA|"G" B3 D dB|"D" A3 D BA|"C" G6|"G"G4 |] 
+"Am"A3 E A2|"Em"G3 A G2|"C"E3 D C2|"G"D4 GA|"G" B3 D dB|"D" A3 D BA|"C" G6|"G"G4 |]
+
+X: 337
+T: The Toormore
+R: slide
+M: 12/8
+L: 1/8
+K: Bmin
+B2 A|:"Bm" F2 B BAB d2 e f3|"Em"efe efe "A"c2 e a3|
+"Bm"F2 B BAB d2 e f3|1 "Em"e2 d B2 A "Bm"B3 B2 A:|2 "A"e2 d B2 A "Bm"B3 d2 e||
+|: "Bm"fgf "C#m"efe "D"ded "A/E"cdc|"Bm/F#"B3 "G"dcB "A"A2 F F2 E|
+"Bm"F2 B BAB d2 e f3|1 "A"e2 d B2 A "Bm"B3 d2 e:|2 "A"e2 d B2 A "Bm"B3|]
+
+X: 338
+T: Bantry Bay
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Gmaj
+GA|:"G"BGAG "C"EGDE|"G"G2GF GBAG|"Am"EAAB "D7"cBAG|"Am"EGA2 "D"A2AB|
+"C"ceec "G"BddB|"D"ABAG "C"EGDG|"G"BGAG "C"EGDE|1 "G"G2GF G2GA:|2 "G"G2GF GABc||
+|:"G"d2ec dBGA|"Em"B2e2 e2ef|"C"gfed "G"BGBd|"C"g2 "D"(3fga "G"g2 "C"ef|
+"G"gbgf "C"efed|"G"BGAG "C"EGDG|"G"BGAG "C"EGDE|1 "G"G2"C"GF "G"GABc:|2 "G"G2 "C"GF "G"G4|| 
