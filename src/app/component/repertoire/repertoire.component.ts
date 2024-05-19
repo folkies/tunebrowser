@@ -14,6 +14,9 @@ export interface RepertoireTune {
     item: RepertoireItem;
     title: string;
     uri: string;
+    added: Date;
+    lastPracticed: Date;
+    timesPracticed: number;
 }
 
 @Component({
@@ -117,6 +120,9 @@ export class RepertoireComponent implements OnInit {
         const entry = this.index.findEntryByTuneReference(item.tune);
         return {
             item,
+            added: item.added,
+            lastPracticed: item.lastPracticed,
+            timesPracticed: item.timesPracticed,
             title: titleWithoutNumber(entry.title),
             uri: `../tune/${item.tune.bookId}/${item.tune.tuneId}`
         };
