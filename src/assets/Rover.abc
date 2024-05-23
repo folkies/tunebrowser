@@ -1020,15 +1020,16 @@ dcA AGE|ABA AGE|EDD cde|dcA GED:|
 DED c3|ded d2c|ABA ABc|dcA GED:| 
 
 X: 88
-T: Maigh Séola
+T: Magh Seóla
+T: The Level Plain
 R: barndance
 M: 4/4
 L: 1/8
 K: Gmaj
-|:"G"B2c-c/2 "D"d/2 d2 BA|"Em"G4 "G"BcdG|"C"e3 d "Em"cB AG |"G"B2-B/A/G/B/ "D"A3 e |
-"Bm"d2 B2 "C"g2 fg |e3 d"Bm"B2 AB|"C"G2 A/ B-B/ "D"A2 FG|[1"C" G4-G3 G/D/:|[2"G" G4-G3 G/D/|
-|:"G"Bc/B/ AG "D"d4|"C"e-e/ d/ ce "D"d2 ga|"Em" be gb "D"ag fd|"C"dc Bc "D"A3 e|
-"Bm"d2 B2 "C"g2 fg |e3 d "Bm"B2 AB|"C" G2 A/ B-B/ "D"A2 FG|[1"C" G4-G3A/D/:|[2"G"G8|| 
+|:"G"B2cd "D/F#" d2 BA|"Em"G4 "G/D"BcdG|"C"e3 d "G/B"cB AG|"Am"B3c/B/ "D"A3 e|
+"Bm"d2 B2 "Em"g2 fg|"C"e3 d"G"B2 AB|"C"G3 B "D7"A3 G|1 "G" G8:|2 "G" G8||
+|:"G"Bc/B/ AG "D/F#"d3g/f/|"C/E"ed ce "G/D"d2 ga|"Em" be gb "G/D"ag fd|"C"dc Bc "D"A3 e|
+"Bm"d2 B2 "Em"g2 fg|"C"e3 d "G/D"B2 AB|"C" G3 B "D7"A3 G|1 "G" G8:|2 "G"G8|| 
 
 X:89
 T:The Gold Ring
