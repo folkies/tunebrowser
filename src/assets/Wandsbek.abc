@@ -647,8 +647,12 @@ M: 3/2
 L: 1/8
 R: hanter dro
 K: Am
+V: 1
 |: "Am"c2 AB "C"c3e "G"dcBA | "Am"c2 AB "F"c2 d2 "G"B2 G2 | "Am"c2 AB "C"c3e "G"dcBA | "Am"c2 AB "F"c2 e2 "G"B4 :|
 |: "C"e2 cd e3g "Dm"fedc | "F"A2 Bc "G"d2 cd "C"e2 c2 | "C"e2 cd e3g "Dm"fedc | "F"A2 Bc "G"d2 e2 B4 :|
+V: 2
+|: AG E2-E3c BA d2| AG F4 GA G2 E2 | AG E2-E3c BA d2| AG F4 GA G4 :|
+|: c2 AB c2 Ge dcBA | F2 GA G2 AB c2 A2 | G2 AB c2 Ge dcBA | F2 GA G2 A2 G4 :|
 
 X: 58
 T: Edwards glada
@@ -687,7 +691,7 @@ R: marsch
 
 X: 61
 T: Polska från Södermanland
-T: 1814
+T: "1814"
 R: slängpolska
 M: 3/4
 K: G
@@ -752,3 +756,26 @@ z2|: f6 | g6 | f2 e2 d2 | c4 A2 |
  Bc d4 | A6| B4 d2 |1 ^cdeAfe :|2 ^c4 de||
 |: d4 fd| c4 Ac | d2 f2 zd| c4 Ac|
 d2 f2 d2| c2 e2 f2 |1 d6-|d4 Ac:|2 e6-|e4|]
+
+X: 66
+T: Konvulsionslåten
+T: Vargtimmen
+C: Anders Norudde
+M: 2/4
+L: 1/16
+K: Gdor
+|: "Gm"GABG "Dm"A2A2|"Gm"GABG "Dm"A2A2| "Gm"GABc d2cB | "Dm"ABA2 "Gm"G4 :|
+|: "Bb"fdfd f2de-|"C"ecec e2c2| "Dm"fdfg- "C"gfe2|  "Gm"defg- gggg |
+"Gm"gfed- d2Bf-|"F"fedc- c2A2| "Gm"GABc d2cB | "Dm"ABA2 "Gm"G4 :|
+
+X: 67
+T: Wals voor Polle
+C: Wim Poesen
+R: waltz
+M: 3/4
+L: 1/4
+K: C
+G |: "C"e3| "G"deg| "Em"G3- | GAB | "C"c>Bc | "F"ABc | "G"e3 | "G"d2 G|
+"C"e3 | "G"deg | "Em"G3- | GAB | "C"c>de| "G"dcB |1 "C"c3-|c2 G:|2 "C"c3-|cde||
+|: "Dm"f2e | d2 c| "G"B3- | B ef | "Em"g2 f| e2 d| "Am"c3- |cde |
+"Dm"f2e| d2c | "G"B2A | GAB | "C"c>de | "G"dcB |1 "C"c3-|cde:|2 "C"c3-|c2|]
