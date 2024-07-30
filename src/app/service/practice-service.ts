@@ -31,7 +31,8 @@ function randomized(date: Date): Date {
  * and the required number of items is taken from the list for the current assignment.
  * 
  * If the remaining sorted list contains any recent items (practiced not more than N times),
- * the assignment starts with up to N/2 items from these recent ones and is filled up with
+ * this recent items list is sorted again by number of times practiced.
+ * The assignment starts with up to N/2 items from these recent ones and is filled up with
  * items from the sorted due list.
  */
 @Injectable()
@@ -52,6 +53,7 @@ export class PracticeService {
             const remaining = assignment.slice(repertoire.numTunesPerAssignment + 1);
             const remainingRecent = remaining.filter(item => item.timesPracticed <= INTERVALS.length);
             if (remainingRecent.length > 0) {
+                remainingRecent.sort((left, right) => left.timesPracticed - right.timesPracticed);
                 const part1 = remainingRecent.slice(0, repertoire.numTunesPerAssignment/ 2);
                 const part2 = due.slice(0, repertoire.numTunesPerAssignment - part1.length);
                 return part1.concat(part2);
