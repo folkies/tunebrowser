@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { RepertoireCollection, Repertoire } from 'src/app/model/repertoire';
@@ -15,9 +15,9 @@ export interface RepertoireSelection {
 })
 export class AddToRepertoireComponent implements OnInit {
 
-    added: FormControl = new FormControl(new Date());
+    added: UntypedFormControl = new UntypedFormControl(new Date());
 
-    repertoire: FormControl = new FormControl();
+    repertoire: UntypedFormControl = new UntypedFormControl();
 
     private repertoireCollection: RepertoireCollection;
 
