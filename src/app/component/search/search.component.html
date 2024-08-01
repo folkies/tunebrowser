@@ -5,13 +5,16 @@
         </mat-expansion-panel-header>
         <form>
             <mat-form-field class="query">
-                <input matInput name="query" type="text" [(ngModel)]="query" placeholder="Tune number or part of title">
+                <mat-label>Tune number or part of title</mat-label>
+                <input matInput name="query" type="text" [(ngModel)]="query">
             </mat-form-field>
             <mat-form-field class="rhythm">
-                <input matInput name="rhythm" type="text" [(ngModel)]="rhythm" placeholder="Rhythm">
+                <mat-label>Rhythm</mat-label>
+                <input matInput name="rhythm" type="text" [(ngModel)]="rhythm">
             </mat-form-field>
             <mat-form-field class="key">
-                <input matInput name="key" type="text" [(ngModel)]="key" placeholder="Key">
+                <mat-label>Key</mat-label>
+                <input matInput name="key" type="text" [(ngModel)]="key">
             </mat-form-field>
             <mat-form-field class="tunebooks">
                 <mat-label>Tune books</mat-label>
@@ -21,7 +24,8 @@
                 </mat-select>
             </mat-form-field>
             <mat-form-field class="tags">
-                <input matInput name="tags" type="text" [(ngModel)]="tags" placeholder="Tags">
+                <mat-label>Tags</mat-label>
+                <input matInput name="tags" type="text" [(ngModel)]="tags">
             </mat-form-field>
             <mat-action-row>
                 <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
