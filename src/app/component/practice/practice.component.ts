@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { IndexEntry } from 'src/app/model/index-entry';
 import { Repertoire, RepertoireCollection, RepertoireItem } from 'src/app/model/repertoire';
 import { titleWithoutNumber } from 'src/app/service/abc-util';

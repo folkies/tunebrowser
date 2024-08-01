@@ -4,8 +4,8 @@ import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { MatSort } from '@angular/material/sort';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 
 import { NewRepertoireComponent } from '../new-repertoire/new-repertoire.component';
 import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-repertoire-item.component';

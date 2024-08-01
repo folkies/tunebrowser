@@ -4,7 +4,7 @@
     </div>
     <div class="tempo-slider">
         <mat-label class="mat-body">Tempo</mat-label>
-        <mat-slider thumbLabel [(ngModel)]="player.tempo" [min]="50" [max]="200"></mat-slider>
+        <mat-slider thumbLabel [(ngModel)]="player.tempo" [min]="50" [max]="200"><input matSliderThumb /></mat-slider>
     </div>
 </div>
 <app-tune-view [tune]="tuneForDisplay()"></app-tune-view>

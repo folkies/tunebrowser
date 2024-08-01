@@ -7,16 +7,16 @@
 //  If you specify typography styles for the components you use elsewhere, you should delete this line.
 //  If you don't need the default component typographies but still want the hierarchy styles,
 //  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
-@include mat.all-legacy-component-typographies();
-@include mat.legacy-core();
+//    `@include mat.legacy-typography-hierarchy(mat.define-typography-config());`
+@include mat.all-component-typographies();
+@include mat.core();
 
 $tune-browser-primary: mat.define-palette(mat.$light-green-palette, 700);
 $tune-browser-accent:  mat.define-palette(mat.$orange-palette);
 $tune-browser-warn:    mat.define-palette(mat.$red-palette);
 $tune-browser-theme: mat.define-light-theme($tune-browser-primary, $tune-browser-accent, $tune-browser-warn);
 
-@include mat.all-legacy-component-themes($tune-browser-theme);
+@include mat.all-component-themes($tune-browser-theme);
 
 @font-face {
     font-family: 'Irish Uncialfabeta';
@@ -129,7 +129,7 @@ button.create-book-button {
 }
 
 /* overrides hard-wired height from Angular Material by more specific selector */
-app-books-list .mat-list-base .mat-list-item {
+app-books-list .mat-mdc-list-base .mat-mdc-list-item {
     height: auto;
 }
 
@@ -143,6 +143,7 @@ div.player-controls {
     align-items: baseline;
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of slider that may no longer apply for the MDC version.*/
 .player-controls .mat-slider-horizontal {
     width: 140px;
 }
