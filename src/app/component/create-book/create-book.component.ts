@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookDescriptor } from 'src/app/model/tunebook-collection';

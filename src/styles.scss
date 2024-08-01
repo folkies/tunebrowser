@@ -1,13 +1,22 @@
 @use '@angular/material' as mat;
 
-@include mat.core();
+// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
+//  The following line adds:
+//    1. Default typography styles for all components
+//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
+//  If you specify typography styles for the components you use elsewhere, you should delete this line.
+//  If you don't need the default component typographies but still want the hierarchy styles,
+//  you can delete this line and instead use:
+//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
+@include mat.all-legacy-component-typographies();
+@include mat.legacy-core();
 
 $tune-browser-primary: mat.define-palette(mat.$light-green-palette, 700);
 $tune-browser-accent:  mat.define-palette(mat.$orange-palette);
 $tune-browser-warn:    mat.define-palette(mat.$red-palette);
 $tune-browser-theme: mat.define-light-theme($tune-browser-primary, $tune-browser-accent, $tune-browser-warn);
 
-@include mat.all-component-themes($tune-browser-theme);
+@include mat.all-legacy-component-themes($tune-browser-theme);
 
 @font-face {
     font-family: 'Irish Uncialfabeta';
