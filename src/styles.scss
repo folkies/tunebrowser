@@ -83,6 +83,16 @@ mat-sidenav mat-icon {
     display: inline-block;
 }
 
+div.tune-item {
+    display: inline-block;
+    width: 400px;
+}
+
+div.confidence {
+    display: inline-block;
+    vertical-align: top;
+}
+
 
 .tunebook-link {
     font-size: 120%;
@@ -197,18 +207,20 @@ a.tune-link:link, a.tune-link:visited, a.tune-link:hover, a.tune-link:active  {
     color: black;
 }
 
+/*
 div.tune-item {
     width: 290px;
     margin-right: 10px;
 }
+    */
 
 div.main-content {
     margin-bottom: 80px;
 }
 
 h1.irish {
-    font-family: 'Irish Uncialfabeta';
-    font-size: 24px;
+    font-family: 'Irish Uncialfabeta' !important;
+    font-size: 24px !important;
 }
 
 button.pdf-button {
