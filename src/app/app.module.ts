@@ -158,7 +158,7 @@ const googleApiClientConfig: GoogleApiClientConfig = {
         MatTableModule,
         MatToolbarModule,
         ReactiveFormsModule,
-        RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
+        RouterModule.forRoot(appRoutes),
         ScrollingModule,
         ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
