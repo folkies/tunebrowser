@@ -14,7 +14,11 @@
 $tune-browser-primary: mat.define-palette(mat.$light-green-palette, 700);
 $tune-browser-accent:  mat.define-palette(mat.$orange-palette);
 $tune-browser-warn:    mat.define-palette(mat.$red-palette);
-$tune-browser-theme: mat.define-light-theme($tune-browser-primary, $tune-browser-accent, $tune-browser-warn);
+$tune-browser-theme: mat.define-light-theme((color: (
+        primary: $tune-browser-primary, 
+        accent: $tune-browser-accent, 
+        warn: $tune-browser-warn),
+        density: 0));
 
 @include mat.all-component-themes($tune-browser-theme);
 
@@ -228,4 +232,16 @@ div.form-container {
 
 .mat-icon {
     vertical-align: middle;
+}
+
+.mat-mdc-list .mdc-list-item__primary-text {
+    letter-spacing: 0;
+}
+
+.mdc-button__label {
+    letter-spacing: 0;
+}
+
+app-root .mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
+    letter-spacing: 0;
 }
