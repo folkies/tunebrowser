@@ -1,6 +1,6 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -102,8 +102,7 @@ const googleApiClientConfig: GoogleApiClientConfig = {
 };
   
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AboutComponent,
         NewRepertoireComponent,
         DeleteRepertoireItemComponent,
@@ -128,14 +127,12 @@ const googleApiClientConfig: GoogleApiClientConfig = {
         SnippetViewComponent,
         BooksListComponent
     ],
-    imports: [
-        BrowserAnimationsModule,
+    bootstrap: [AppComponent], imports: [BrowserAnimationsModule,
         BrowserModule,
         GoogleSignInModule.forRoot({
             provide: GSI_CONFIG,
             useValue: googleApiClientConfig
         }),
-        HttpClientModule,
         FormsModule,
         LayoutModule,
         MatAutocompleteModule,
@@ -160,23 +157,20 @@ const googleApiClientConfig: GoogleApiClientConfig = {
         ReactiveFormsModule,
         RouterModule.forRoot(appRoutes),
         ScrollingModule,
-        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
-    ],
-    providers: [
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })], providers: [
         AudioContextProvider,
         Recorder,
         GoogleDriveService,
         GoogleDriveTunebookLoaderService,
         PdfService,
-        PracticeService,        
+        PracticeService,
         RepertoireRepository,
         RestTuneMatcher,
         { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
         TranscriberProvider,
         TuneBookCollectionService,
         TuneBookIndex,
-        TuneBookLoaderService
-    ],
-    bootstrap: [AppComponent]
-})
+        TuneBookLoaderService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
