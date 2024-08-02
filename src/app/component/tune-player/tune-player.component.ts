@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 
 import abcjs from 'abcjs';
+import { asyncScheduler, BehaviorSubject } from 'rxjs';
+import { throttleTime } from 'rxjs/operators';
 
 
 @Component({
@@ -17,7 +19,10 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     private parsedTune: abcjs.TuneObject;
     private synthControl: abcjs.SynthObjectController;
 
-    @ViewChild('midiplayer', { static: false })
+    private tempoSource = new BehaviorSubject<number>(100);
+
+
+    @ViewChild('midiplayer', { static: true })
     div: ElementRef;
 
     @Input()
@@ -33,7 +38,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     @Input()
     set tempo(tempo: number) {
         this.bpm = tempo;
-        this.synthControl.setWarp(tempo);
+        this.tempoSource.next(tempo);
     }
 
     get tempo(): number {
@@ -42,6 +47,9 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
     constructor() {
         this.synthControl = new abcjs.synth.SynthController();
+        this.tempoSource.pipe(throttleTime(500, asyncScheduler, {trailing: true})).subscribe( tempo => {
+            this.synthControl.setWarp(tempo);
+        })
     }
 
 
@@ -50,12 +58,13 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     }
 
     ngOnChanges() {
-        this.renderMidiPlayer();
+       this.renderMidiPlayer();
     }
 
     private async renderMidiPlayer(): Promise<abcjs.SynthInitResponse> {
         if (this.div !== undefined && this.tune.length > 0) {
 
+            console.log("reload player");
             this.synthControl.load(this.div.nativeElement,
                 null,
                 {
@@ -70,7 +79,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
             // ugly hack for setting the tempo, since the audioParams seem to have no effect
             this.parsedTune.metaText.tempo = {bpm: this.bpm, startChar: 0, endChar: 0};
             return this.synthControl.setTune(this.parsedTune, true, {
-                chordsOff: true,
+                chordsOff: true, 
                 program: this.instrumentByName('flute')
             });
         }

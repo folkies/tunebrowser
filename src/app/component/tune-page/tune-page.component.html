@@ -3,8 +3,8 @@
         <app-tune-player #player [tune]="tune"></app-tune-player>
     </div>
     <div class="tempo-slider">
-        <mat-label class="mat-body">Tempo</mat-label>
-        <mat-slider thumbLabel  [min]="50" [max]="200">
+        <mat-label class="mat-body tempo-label">Tempo {{player.tempo}}</mat-label>
+        <mat-slider thumbLabel [min]="50" [max]="200" color="accent">
             <input matSliderThumb [(ngModel)]="player.tempo"/>
         </mat-slider>
     </div>
@@ -24,10 +24,10 @@
 <button mat-raised-button (click)="openDialog()" class="repertoire-button" color="primary"
 [disabled]="!signedIn">Add to repertoire</button>
 
-<button mat-raised-button (click)="exportAsPdf()" class="pdf-button" color="primary"><mat-icon>print</mat-icon></button>
+<button mat-raised-button (click)="exportAsPdf()" class="tune-button" color="primary"><mat-icon>print</mat-icon></button>
 
-<button mat-raised-button routerLink="../{{prevRef}}" class="pdf-button" color="primary"
+<button mat-raised-button routerLink="../{{prevRef}}" class="tune-button" color="primary"
 [disabled]="!prevRef">Previous tune</button>
 
-<button mat-raised-button routerLink="../{{nextRef}}" class="pdf-button" color="primary"
+<button mat-raised-button routerLink="../{{nextRef}}" class="tune-button" color="primary"
 [disabled]="!nextRef">Next tune</button>

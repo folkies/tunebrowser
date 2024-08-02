@@ -223,8 +223,12 @@ h1.irish {
     font-size: 24px !important;
 }
 
-button.pdf-button {
+button.tune-button {
     margin-left: 0.5em;
+    .mat-icon {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 div.repertoire-header {
@@ -264,4 +268,9 @@ app-root .nav-caption {
 
 app-root .mat-body {
     letter-spacing: 0;
+}
+
+app-root .tempo-label {
+    display: inline-block;
+    min-width: 5em;
 }
