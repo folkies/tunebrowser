@@ -72,7 +72,7 @@ export class Recorder {
                 this.input.connect(this.analyser);
             }
         }
-        catch (err) {
+        catch (_) {
             this.status = Status.INIT_FAILED;
         }
     }

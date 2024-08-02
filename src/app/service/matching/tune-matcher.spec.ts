@@ -3,8 +3,8 @@ import fs from 'fs';
 import { TuneMatcher } from "./tune-matcher-impl";
 
 describe('TuneMatcher', () => {
-    let log: Logger = getLogger('TuneMatcherSpec');
-    let d : number[][] = new Array(2);
+    const log: Logger = getLogger('TuneMatcherSpec');
+    const d : number[][] = new Array(2);
 
     const MAX = 1000;
     for (let i = 0; i < 2; i++) {
@@ -19,7 +19,7 @@ describe('TuneMatcher', () => {
         log.info('loaded JSON');
         const matcher = new TuneMatcher();
         matcher.setCorpus(json);
-        matcher.setProgressCallback((x: number) => null);
+        matcher.setProgressCallback((_: number) => null);
         const matches = matcher.findBestMatches('CEGFGEDDCDDDADDFAAFADFAAAFFGAGDGEDCDEGGFGAFDDFEDDCEBBCCEDCEFGEDCDDDEDFAAFADFAEAFGADGEDD');
         matches.forEach(match => log.info(`${match.ed} ${match.name}`));
     });

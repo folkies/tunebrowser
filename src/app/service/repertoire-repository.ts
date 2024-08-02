@@ -145,7 +145,7 @@ export class RepertoireRepository {
 
     async deleteRepertoireItem(tuneRef: TuneReference, repertoireName: string): Promise<string> {
         const collection = await this.load();
-        let repertoire = await this.findRepertoire(repertoireName);
+        const repertoire = await this.findRepertoire(repertoireName);
         if (repertoire !== undefined) {
             const index = repertoire.items.findIndex(it => it.referencedBy(tuneRef));
             if (index >= 0) {
@@ -176,7 +176,7 @@ export class RepertoireRepository {
      * @param name repertoire name 
      * @return file ID of updated repertoire file, or empty string
      */
-    async deleteRepertoire(name: string): Promise<String> {
+    async deleteRepertoire(name: string): Promise<string> {
         const collection = await this.load();
         const index = collection.repertoires.findIndex(r => r.name === name);
         if (index == -1) {

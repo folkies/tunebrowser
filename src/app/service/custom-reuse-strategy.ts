@@ -6,7 +6,7 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
 
     private handlers: { [key: string]: DetachedRouteHandle } = {};
 
-    shouldDetach(route: ActivatedRouteSnapshot): boolean {
+    shouldDetach(_: ActivatedRouteSnapshot): boolean {
         return true;
     }
 

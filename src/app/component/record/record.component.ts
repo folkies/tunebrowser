@@ -34,7 +34,7 @@ export class RecordComponent {
     async startRecording() {
         const timer = interval(100);
 
-        const sub = timer.subscribe((sec) => {
+        const sub = timer.subscribe((_) => {
             this.progressbarValue = this.progress;
 
             if (this.progressbarValue >= 100) {
