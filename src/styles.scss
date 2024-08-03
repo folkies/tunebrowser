@@ -38,7 +38,8 @@ html, body {
     margin: 0;
     height: 100%;
     overflow: hidden;
-}
+    --mat-option-label-text-tracking: normal;
+ }
 
 .search-panel mat-form-field, .tags-form mat-form-field {
     width: 15em;
@@ -239,26 +240,6 @@ div.form-container {
     vertical-align: middle;
 }
 
-.mat-mdc-list .mdc-list-item__primary-text {
-    letter-spacing: 0;
-}
-
-.mdc-button__label {
-    letter-spacing: 0;
-}
-
-app-root .mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
-    letter-spacing: 0;
-}
-
-app-root .nav-caption {
-    letter-spacing: 0;
-}
-
-app-root .mat-body {
-    letter-spacing: 0;
-}
-
 app-root .tempo-label {
     display: inline-block;
     min-width: 5em;
@@ -275,4 +256,8 @@ app-tune-editor .mat-mdc-form-field-input-control.mat-mdc-form-field-input-contr
 
     min-height: 10em;
     max-height: 20em;
+}
+
+.mat-body, .mat-mdc-option, .mdc-list-item__primary-text, * {
+    letter-spacing: normal;
 }
