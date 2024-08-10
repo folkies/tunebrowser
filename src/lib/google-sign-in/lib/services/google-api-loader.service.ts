@@ -25,11 +25,11 @@ export class GoogleApiLoaderService {
 
         this.loadGapi();
 
-        forkJoin([this.onLoad(), this.gsiLoader.onLoad(), this.signIn.onSignedIn()]).subscribe(([_1, _2, cr]) => {
+        forkJoin([this.onLoad(), this.gsiLoader.onLoad(), this.signIn.onSignedIn()]).subscribe(([_1, _2, credential]) => {
 
             this.client = google.accounts.oauth2.initTokenClient({
                 client_id: config.client_id,
-                login_hint: this.extractEmail(cr.credential),
+                login_hint: this.extractEmail(credential),
                 scope: config.scope,
                 callback: () => undefined,
                 prompt: config.prompt || ''
