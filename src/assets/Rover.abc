@@ -3000,3 +3000,50 @@ K: Dmaj
 A|:f3e defg|afdf e2de|fgfe defe|dBAF E2D2:|
 afdf afdf|ge=ce ge^ce|afdf afdf|gece d3f|
 afdf afdf|ge=ce ge^ce|afge fdec|dBAF E2D| 
+
+X: 255
+T: The Spotted Dog
+C: John McEvoy
+R: jig
+M: 6/8
+L: 1/8
+K: Amaj
+|:EAA ABc|B{c}AF AFE|FBB Bce|(3fga f ecA|
+EAA ABc|B{c}AF Ace|f2a e2a|1 ABc B{c}AF:|2 ABc B2{c}A||
+|:cee ece|fec ecA|cee ecA|EFA B2{c}A|
+cee ece|fec e2a|f2a e2a|ABc B2{c}A:| 
+
+X: 256
+T: The Trip To Athlone
+R: jig
+M: 6/8
+L: 1/8
+K: Dmix
+|:AcA D2A|dcA AGE|AcG ABc|dAB cde|
+AcA D2A|dcA AGE|GFG Ade|1 fd^c d2d:|2 fd^c d2e||
+|:fed edc|Ad^c d2d|fed efg|AB^c d2f|
+gfg age|dcA AGE|GFG Ade|fd^c d2d:| 
+
+X: 257
+T: Moran's Return
+R: barndance
+M: 4/4
+L: 1/8
+K: Edor
+|:(3FGA|B>E E2 E2 A>G|F>D D2 D2 d>e|f>ed>c dBAF|E2 E>F G2 (3FGA|
+B2 E2 E2 AG|F>D D2 D2 d>e|f>ed>c dBAF|1 E2 D2 D2:|2 E2 D2 D2 FE||
+|:D2 d>c d3 e|f>edc B2 AF|B2 e2 e3f|gfed e2 d>e|
+f2 g>f e2 f>e|d>edB A2 d>e|f>ed>c dBAF|1 E2 D2 D2 FE:|2 E2 D2 D2 (3FGA|| 
+
+X: 258
+T: Dornoch Links
+T: Joe Bane's
+T: Bill Malley's
+R: march
+M: 4/4
+L: 1/8
+K: Gmaj
+ge|dG GA B2AG|d2G2G2ge|dG GA B2AG|B2A2A2Bc
+dG GA B2 AG|B2d2 g3e|d2de dB (3ABc|B2G2G2:|
+Bd|g2 ga ge dg|e2 ed e2 ge|d2 de dB GA|B2A2A2Bd|
+g2 ga ge dg|e2 ed e2 ge|d2 de dB (3ABc|B2G2G2:| 
