@@ -261,3 +261,9 @@ app-tune-editor .mat-mdc-form-field-input-control.mat-mdc-form-field-input-contr
 .mat-body, .mat-mdc-option, .mdc-list-item__primary-text, * {
     letter-spacing: normal;
 }
+
+/* Don't replace list items by "..." */
+html *.mdc-list-item__content {
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+}
