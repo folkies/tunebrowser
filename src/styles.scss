@@ -39,6 +39,8 @@ html, body {
     height: 100%;
     overflow: hidden;
     --mat-option-label-text-tracking: normal;
+    --mdc-list-list-item-label-text-tracking: normal;
+    --mdc-protected-button-label-text-tracking: normal;
  }
 
 .search-panel mat-form-field, .tags-form mat-form-field {
@@ -69,7 +71,6 @@ mat-sidenav mat-icon {
 .tune-id {
     padding-right: 0.5em;
     width: 3em;
-    display: inline-block;
 }
 
 div.tune-item {
@@ -89,9 +90,8 @@ div.confidence {
     cursor: pointer;
 }
 
-.tunebook-item {
-    display: inline-block;
-    vertical-align: middle;
+.tunebook-description {
+    white-space: wrap;
 }
 
 cdk-virtual-scroll-viewport { 
@@ -118,9 +118,11 @@ app-snippet-view div {
     display: none;
 }
 
-div.tunebook-item {
+div.tunebook-row, div.tune-row {
     display: flex;
-    flex-flow: column;
+}
+
+div.tunebook-item {
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -258,12 +260,3 @@ app-tune-editor .mat-mdc-form-field-input-control.mat-mdc-form-field-input-contr
     max-height: 20em;
 }
 
-.mat-body, .mat-mdc-option, .mdc-list-item__primary-text, * {
-    letter-spacing: normal;
-}
-
-/* Don't replace list items by "..." */
-html *.mdc-list-item__content {
-    text-overflow: clip;
-    overflow-wrap: anywhere;
-}

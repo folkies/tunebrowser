@@ -3,9 +3,11 @@
 
     <mat-list>
         <mat-list-item *ngFor="let entry of entries">
-            <span class="tune-id" routerLink="../../tune/{{bookId}}/{{entry.id}}">{{entry.id}}</span>
-            <span class="tune-link" routerLink="../../tune/{{bookId}}/{{entry.id}}">{{titleWithoutNumber(entry.title)}}</span>
+            <div class="tune-row">
+                <div class="tune-id" routerLink="../../tune/{{bookId}}/{{entry.id}}">{{entry.id}}</div>
+                <div class="tune-link" routerLink="../../tune/{{bookId}}/{{entry.id}}">
+                    {{titleWithoutNumber(entry.title)}}</div>
+            </div>
         </mat-list-item>
     </mat-list>
 </div>
-
