@@ -779,3 +779,50 @@ G |: "C"e3| "G"deg| "Em"G3- | GAB | "C"c>Bc | "F"ABc | "G"e3 | "G"d2 G|
 "C"e3 | "G"deg | "Em"G3- | GAB | "C"c>de| "G"dcB |1 "C"c3-|c2 G:|2 "C"c3-|cde||
 |: "Dm"f2e | d2 c| "G"B3- | B ef | "Em"g2 f| e2 d| "Am"c3- |cde |
 "Dm"f2e| d2c | "G"B2A | GAB | "C"c>de | "G"dcB |1 "C"c3-|cde:|2 "C"c3-|c2|]
+
+X: 68
+T: Feder Mikkel
+O: Danmark
+R: fynbo
+M: 2/4
+L: 1/16
+K: G
+V:1
+GA | "G"B2G2 G2AB | "D"c2A2 A2dc | "G"B2G2 "D"A2F2 | "G"G2D2 D2 GA | 
+"G"B2G2 G2AB| "D7"c2A2 A2dc | "G"B2G2 "D"A2F2 |"G"G6 Bc||
+|:  "G"d2d2 d2g2 | "C"e2c2 c4 | "A"e2e2 e2ag | "D"f2d2 d2ed |
+ "G"B2G2 G2AB | "D"c2A2 A2dc | "G"B2G2 "D"A2F2 |1 "G"G6 Bc :|2 "G" G6 z2|]
+V:2
+GA | G2D2 D2FG | A2F2 F2AG | G2D2 F2D2 | D2B,2 B,2DF|
+G2D2 D2FG | A2F2 F2AG | G2D2 F2D2 | D6 GA ||
+|:B2B2 B2d2 | c2G2 G4| ^c2c2 cdcB | A2G2 F2EF|
+G2D2 D2FG | A2F2 F2AG | G2D2 F2D2 |1 D6 GA :|2 B,6 z2 |]
+
+X: 69
+T: Vigers polska
+R: hambopolska
+M: 3/4
+L: 1/8
+K: G
+"G"g2 B2 "D"c>A | "G"G>F G<B d2 | "C"c>B c>g "D"e>c | "G"cB B4 |
+"D"A>B c<d e2 | d>A F<A d2 | d>c B<c A>F | "G"G2 G4 :|
+|: "G"B2 "D7"c2 "G"d>d | "C"e2 e4 | g>g f2 e2 | "G"d>g B4 |
+"D"A>B c<d e2 |d>A F<A d2 | d>c B<c A>F| "G"G2 G4 :|
+
+X: 70
+T: Lepatriinu Valss
+R: waltz
+C: Hartwin Dhoore
+M: 8/8
+L: 1/8
+K: Em
+V:1
+"Em"BAB E2B AG | "D/F#"ADd c2B AB | "C"BAB E2B AG | "Bm"FD/E/F/G/ AA/G/A/c/ BA/B/ |
+"Em"BAB E2B AG | "D/F#"ADd c2B AB | "C"BAB E2B AG | "Bm"AGF "Em"E3-E2 ||
+"C"EDE "D"FDF "Em7"GD | "D/F#"ADd "G"c2B AB | "C"efg d2c Bc | "Bm"dfg c2B AG/F/ |
+"C"EDE "D"FDF "Em7"GD | "D/F#"ADd "G"c2B AG | "C"GAB G2B AG | "Bm"FG/F/G/A/ F3-F2 |]
+V:2
+GFG E2G FE | FDF F3 DF | GFG E2G FE | F>DF F>DF G/F/E |
+GFG E2G FE | FDF F3 DF | GFG E2G FE | FDF G3-G2 ||
+GFG AGA BG | cGd c2B AG | GAB G2B AG| FG/F/G/A/ F2z GF |
+GFG AGA BG | cGd c2B AG | EFG E2G FE| D>EF D3-D2 |]
