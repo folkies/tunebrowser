@@ -22,6 +22,7 @@ export class GoogleSignInService {
             google.accounts.id.initialize({
                 client_id: config.client_id,
                 auto_select: true,
+                use_fedcm_for_prompt: true,
                 callback: (response: CredentialResponse) => {
                     localStorage.setItem(CREDENTIAL, response.credential);
                     this.authenticated.next(response.credential);

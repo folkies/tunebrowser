@@ -46,6 +46,7 @@ interface IdConfiguration {
     auto_select?: boolean;
     login_hint?: string;
     hd?: string;
+    use_fedcm_for_prompt?: boolean;
 }
 
 interface CredentialResponse {
