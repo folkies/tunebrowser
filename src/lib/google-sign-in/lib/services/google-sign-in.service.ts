@@ -17,27 +17,27 @@ export class GoogleSignInService {
         private gsiLoader: GoogleSignInLoaderService) {
 
 
-        this.gsiLoader.onLoad().subscribe(() => {
+        // this.gsiLoader.onLoad().subscribe(() => {
 
-            google.accounts.id.initialize({
-                client_id: config.client_id,
-                auto_select: true,
-                use_fedcm_for_prompt: true,
-                callback: (response: CredentialResponse) => {
-                    localStorage.setItem(CREDENTIAL, response.credential);
-                    this.authenticated.next(response.credential);
-                    this.authenticated.complete();
-                },
-            });
-            const credential = localStorage.getItem(CREDENTIAL);
-            if (this.isValid(credential)) {
-                console.log("using stored credential");
-                this.authenticated.next(credential);
-                this.authenticated.complete();
-        } else {
-                google.accounts.id.prompt((notification) => { });
-            }
-        });
+        //     google.accounts.id.initialize({
+        //         client_id: config.client_id,
+        //         auto_select: true,
+        //         use_fedcm_for_prompt: true,
+        //         callback: (response: CredentialResponse) => {
+        //             localStorage.setItem(CREDENTIAL, response.credential);
+        //             this.authenticated.next(response.credential);
+        //             this.authenticated.complete();
+        //         },
+        //     });
+        //     const credential = localStorage.getItem(CREDENTIAL);
+        //     if (this.isValid(credential)) {
+        //         console.log("using stored credential");
+        //         this.authenticated.next(credential);
+        //         this.authenticated.complete();
+        // } else {
+        //         google.accounts.id.prompt((notification) => { });
+        //     }
+        // });
     }
 
     private isValid(credential: string): boolean {

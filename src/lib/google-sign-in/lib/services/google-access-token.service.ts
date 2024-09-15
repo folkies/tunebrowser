@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ReplaySubject } from 'rxjs';
+import { forkJoin, ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService } from './google-api-loader.service';
+import { GoogleSignInService } from './google-sign-in.service';
 
 const ACCESS_TOKEN = 'accessToken';
 const ACCESS_TOKEN_REFRESH = 'accessTokenRefresh';
@@ -13,8 +14,10 @@ export class GoogleAccessTokenService {
 
     readonly accessTokenSource = new ReplaySubject<string>(1);
 
-    constructor(private googleApiLoader: GoogleApiLoaderService) {
-        this.googleApiLoader.onClientLoaded().subscribe(client => this.checkStoredAccessToken(client));
+    constructor(private googleApiLoader: GoogleApiLoaderService,
+        private googleSignInService: GoogleSignInService
+    ) {
+        forkJoin([this.googleApiLoader.onClientLoaded()]).subscribe(([client]) => this.checkStoredAccessToken(client));
     }
     private checkStoredAccessToken(client: TokenClient): void {
         this.tokenClient = client;
