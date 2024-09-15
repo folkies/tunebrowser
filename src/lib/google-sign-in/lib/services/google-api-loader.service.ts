@@ -2,7 +2,6 @@ import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { forkJoin, Observable, ReplaySubject } from 'rxjs';
 import { GoogleApiClientConfig } from '../config/google-api.config';
 import { GoogleSignInLoaderService } from './google-sign-in-loader.service';
-import { GoogleSignInService } from './google-sign-in.service';
 
 export const GSI_CONFIG: InjectionToken<GoogleApiClientConfig> =
     new InjectionToken<GoogleApiClientConfig>('gsi.config');
@@ -20,8 +19,7 @@ export class GoogleApiLoaderService {
 
 
     constructor(@Inject(GSI_CONFIG) config: GoogleApiClientConfig,
-        private gsiLoader: GoogleSignInLoaderService,
-    private signIn: GoogleSignInService) {
+        private gsiLoader: GoogleSignInLoaderService) {
 
         this.loadGapi();
 
@@ -29,7 +27,6 @@ export class GoogleApiLoaderService {
 
             this.client = google.accounts.oauth2.initTokenClient({
                 client_id: config.client_id,
-                //login_hint: this.extractEmail(credential),
                 scope: config.scope,
                 callback: () => undefined,
                 prompt: config.prompt || ''
@@ -61,10 +58,5 @@ export class GoogleApiLoaderService {
             })
         };
         document.getElementsByTagName('head')[0].appendChild(node);
-    }
-
-    private extractEmail(credential:string): string {
-        const {email, sub} = JSON.parse(atob(credential.split('.')[1]));
-        return email;
     }
 }

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { forkJoin, ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService } from './google-api-loader.service';
-import { GoogleSignInService } from './google-sign-in.service';
 
 const ACCESS_TOKEN = 'accessToken';
 const ACCESS_TOKEN_REFRESH = 'accessTokenRefresh';
+const PREFERRED_ACCOUNT = 'preferredAccount';
 
 @Injectable()
 export class GoogleAccessTokenService {
@@ -14,10 +14,8 @@ export class GoogleAccessTokenService {
 
     readonly accessTokenSource = new ReplaySubject<string>(1);
 
-    constructor(private googleApiLoader: GoogleApiLoaderService,
-        private googleSignInService: GoogleSignInService
-    ) {
-        forkJoin([this.googleApiLoader.onClientLoaded()]).subscribe(([client]) => this.checkStoredAccessToken(client));
+    constructor(private googleApiLoader: GoogleApiLoaderService) {
+        this.googleApiLoader.onClientLoaded().subscribe((client) => this.checkStoredAccessToken(client));
     }
     private checkStoredAccessToken(client: TokenClient): void {
         this.tokenClient = client;
@@ -54,7 +52,7 @@ export class GoogleAccessTokenService {
                     client.callback = (response) => {
                         resolve(this.handleAccessToken(response));
                     };
-                    client.requestAccessToken();
+                    client.requestAccessToken({login_hint: localStorage.getItem(PREFERRED_ACCOUNT)});
                 });
             }
         });
@@ -68,6 +66,17 @@ export class GoogleAccessTokenService {
 
         localStorage.setItem(ACCESS_TOKEN, this.accessToken);
         localStorage.setItem(ACCESS_TOKEN_REFRESH, (new Date().getTime() + refreshDuration).toString());
+
+        const preferredAccount = localStorage.getItem(PREFERRED_ACCOUNT);
+        if (!preferredAccount) {
+            fetch('https://oauth2.googleapis.com/tokeninfo?access_token=' + this.accessToken)
+            .then(resp => resp.json())
+            .then(json => {
+                if (json.email) {
+                    localStorage.setItem(PREFERRED_ACCOUNT, json.email);
+                }
+            })
+        }
 
         this.accessTokenSource.next(this.accessToken);
         return this.accessToken;

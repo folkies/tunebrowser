@@ -10,10 +10,13 @@ declare namespace google.accounts.oauth2 {
     export function revoke(token: string): void;
 
 }
+interface OverridableTokenClientConfig {
+    login_hint?: string
+}
 
 interface TokenClient {
     callback: (response: TokenResponse) => void;
-    requestAccessToken(): void;
+    requestAccessToken(config?: OverridableTokenClientConfig): void;
 }
 
 interface TokenResponse {
