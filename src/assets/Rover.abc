@@ -3117,3 +3117,180 @@ L: 1/8
 K: Emin
 |:BcA BEE BEE|BcA BEE FED|BcA BEE BEE|FAA A2G FED:|
 |:G2A BcA BcA|G2A Bcd eAA|G2A BcA Bcd|eAA A2G FED:|
+
+X: 265
+T: The Plains Of Boyle
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Dmaj
+|:FG|"D"AFDE FEDF|"D"(3ABA "C"GB "D"AFD2|"D"fedf "A"edce|"D"dBAB "C"=cAGB|
+"D"AFDE FEDF|"D"(3ABA "C"GB "D"AFD2|"D"fedB "A"ABAG|"D"F2D2 D2:|
+|:fg|"D"afdf "A"g2fe|"D"dfed "G"BAFG|"D"(3ABA FA BAFA|"D"(3ABA FA BAFg|
+"D"afdf "A"g2fe|"D"dfed "G"BAFG|"D"(3ABA AF "A"GBAG|"D"F2D2 D2:| 
+
+X: 266
+T: Paddy Cronin's
+R: slide
+M: 12/8
+L: 1/8
+K: Dmaj
+|:EFG F2D E2F G2A|B2E GFE B2E GFE|
+D2F FED E2F G2A|1 B2E GFE F2E D3:|2 B2E GFE F2E D2d||
+|:ded c2d e2d cBA|B2E GFE B2E GFE|
+ded c2d e2d cBA|1 B2E GFE F2E D2d:|2 B2E GFE F2E D3|| 
+
+X: 267
+T: Bedford Cross
+T: Mary O'Riordan's
+R: slide
+M: 12/8
+L: 1/8
+K: Dmaj
+|:A3 AGA B2A G2B|AGE G2E D2E G2B
+A3 AGA B2A G2B|AGE G2E D3 D2z:|
+|:d3 AGA B2A G2B|AGE G2E D2E G2B
+d3 AGA B2A G2B|AGE G2E D3 D2z:| 
+
+X: 268
+T: Seven Years
+R: waltz
+C: Andy Cutting
+M: 3/4
+L: 1/8
+K: Gmaj
+D GA|:"A"B2 B3 A|Bd d2 GA|B2 B2 BA|Bd ed gf|
+d2 B2 BA|B2 GA Bd|ed dB BG|1 A3 A GA:|2 A3 G AB||
+|:"B"c3 B cd|B2 AG AB|c3B cd|BG gf dB|
+c2 cB cd|B2 AG AB|ed dB BG|1 A3 G AB:|2 "To A" A3 A GA||3 "To C" A4 ef||
+|:"C"gf ed (3Bcd|e2 ed GA|B2 BG cA|dB ec ef|
+gf ed (3Bcd|e2 ed GA|B3A Bd|1 A3 e ef:|2 A4 GA|| 
+
+X: 269
+T: Queen Of The Fair
+R: jig
+C: John McFadden
+M: 6/8
+L: 1/8
+K: Dmaj
+~F3 DA,A,|DFA dAF|~G3 FGA|BAG FGE|
+~F3 DA,A,|DFA dAF|~G3 EAG|1 FDD D2E:|2 FDD D2g||
+|:fdf ece|dAG FEF|~D3 dAF|GFG E2g|
+fdf ece|dAG FED|EFG BAG|1 FDD D2g:|2 FDD D3||
+|:Add fdd|add fdd|Ace ~g3|~f3 ecA|
+[1 Add fdd|add fdd|EFG BAG|FDD D3:|
+[2 ~a3 geg|fdf ecA|EFG BAG|FGE D2E|| 
+
+X: 270
+T: The Tongs By The Fire
+R: jig
+C: James Hand
+M: 6/8
+L: 1/8
+K: Gmaj
+|:GBd cAF|Gge dBG|cec BdB|ABG FED|
+GBd cAF|Gge dBG|cec Bag|1 fef gdB:|2 fef g2d||
+|:gdB gdB|gfa gdB|gfg eag|fef def|
+gag fgf|efe def|gdB AGA|1 BGF GBd:|2 BGF G2D|| 
+
+X: 271
+T: Johnny O'Leary's
+T: An Seanchaí Muimhneach
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+B2 E EFA|B2 A Bcd|B2 E EFA|BAG FED|
+B2 E EFA|B2 A Bcd|AFD DEF|FAG FED:|
+g2 e fed|e2 B BAF|B2 E EFA|BAG FED|
+gfe fed|edB (B/c/d)B|AFD DEF|FAG FED:|
+E3 EFE|EFE E2 D|EFE EFA|BAG FED|
+E3 EFE|EFE (B/c/d)B|AFD DEF|FAG FED:| 
+
+X: 272
+T: Jackson's
+R: reel
+M: C|
+L: 1/8
+K: Edor
+|:e3d B2dB|A3B A2GF|E2FA BAFB|ABdf eBB2|
+e3d B2dB|A2GB AFGF|EFGA B2ef|gefd Beed:|
+e3d Bdeg|fddc dfaf|gfed Bdd2|BdAd BEEE|
+e3d Bdeg|fdad bdad|bgaf gfed|BdAd BEEE|
+efed Bdeg|fdad bdad|gfed Bdef|gfga bgef|
+g2ef gfeg|fddc defa|bgaf gfef|~g3f efgf|| 
+
+X: 273
+T: An Siocán Sneachta
+T: The Fieldfare
+C: Joe Carey
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+|:B,CD E3|FEE FEE|B,CD EFG|FEE E2F|
+GBG FAF|EFE DB,A,|B,2E EDE|1 FEE E2D:|2 FEE E3||
+|:efe dBA|BdB AFD|efe dBA|Bcd e2f|
+gee fed|edB AFd|DFA dAF|1 FEE E3:|2 FEE E2=c||
+|:BGG AFF|GAG FED|BGG AFF|GAF E2=c|
+BGG AFF|GAG FED|B,2E EDE|1 FEE E2=c:|2 FEE E2D|| 
+
+X: 274
+T: Grandpa Tommy's Ceili Band
+C: Martin Mulhaire
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+GB~B2 dB~B2|GABG ABGE|DEGA BABd|eaaf gedB|
+GB~B2 dB~B2|GABG ABGE|DEGA Bdge|dBAF G4:|
+|:~g3a gfed|Bd~d2 edBd|g2af gfed|eaab agef|
+~g3a gfed|Bd~d2 edBd|~c3B cBAG|FDEF G4:| 
+
+X: 275
+T: Alice's
+R: reel
+M: 4/4
+L: 1/8
+K: Emin
+EGBG AGED|~E2GE DEB,D|EGBG A2 (3Bcd|e2dB AGED|
+EGBG AGED|~E2GE DEB,D|DB,A,B, DEFA|1 ~B2AF GEED:|2 BGAF GEEF||
+|:G2DB, DGBG|A2EC EcBA|G2DB, DGBG|1 AcBA GEEF:|2 AcBA GEFD||
+
+X: 276
+T: The View Across The Valley
+C: John Brady
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+fded ABFB|AF~F2 DFAd|f2ed BAFA|Beed e2de|
+fded ABFB|AF~F2 DFAd|fa~a2 b2af|dBAG FDD2:|
+|:fa~a2 bfaf|dB~B2 AF~F2|A2AB defd|e2df edBd|
+fa~a2 bfaf|dB~B2 AF~F2|A2AB defe|dBAG FDD2:| 
+
+X: 277
+T: The Coachman's Whip
+C: Vincent Broderick
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+D3E ~G3B|d2BG dGBG|E2BE dEBE|dBAG FAGE|
+DEDE ~G3B|d2BG dGBG|FGAB cdef|gedc BGGB:|
+d2BG dGBG|E2BE dEBE|d2BG dGBG|FGAc BGGB|
+d2BG dGBG|E2BE dEBE|FGAB cdef|gedc BGGB:| 
+
+X: 278
+T: The Bluebells Are Blooming
+C: Michael Dwyer
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|:e/f/ge dBG|DFA GBd|e/f/ge def|gab agf|
+fge fed|edB c3|~B2B GAB|1 AGF GBd:|2 AGF G2D||
+|:~B2B BAG|AGF G2D|GBd efg|dBG AFD|
+~B2B BAG|AGF GBd|e/f/ge dBA|AGF G3:|
+|:GBd GBd|gge dBA|GBd GBd|AFD AFD|
+GBd GBd|gge dBA|B2B dcA|AGF G2D:| 
