@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { forkJoin, ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService } from './google-api-loader.service';
 
 const ACCESS_TOKEN = 'accessToken';
