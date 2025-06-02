@@ -737,13 +737,12 @@ T:The Battering Ram
 M:6/8
 L:1/8
 R:jig
-K:G
-|: dBG BAG | dBG G2B | dBG AGE | GFD D2B |
-dBG BAG | BdB BAG | AGA BAB | GED D2B :|
-|: deg aga | bge edB | deg aga | bge ega |
-bag age | ged ege | dAG AGE | GED D2B :|
-|: B2G A2G | BGE D2A | BAG AGE | GED D2d |
-B2G A2G | BdB BAG | AGA BAB | GED D3 :|
+K:G|:B|"G"dBG "D"BAG|"G"dBG G2B|"G"dBG "Am7"AGE|"D"GED D2B|
+"G"dBG "D"BAG|"G"BdB BAG|"Am7"AGA "C"BAB|"D"GED D2:|
+|:B|"G"deg "D"aga|"Em"bge edB|"G"deg "D"aga|"Em"bge "C"e2a|
+"G"bag "D"age|"Em"ged "C"ege|"G"dBG "Am7"AGE|"D"GED D2:|
+|:A|"G"B2G "D"A2G|"G"B2 DD2A|"G"BAG "Am7"AGE|"D"GED D2A|
+"G"B2G "D"A2G|"Em"BdB BAG|"Am7"AGA "C"BAB|"D"GED D2:| 
 
 X:64
 T:Ned Of The Hill
@@ -3323,9 +3322,9 @@ M: 3/4
 L: 1/8
 K: Dmaj
 |:A,2|D3 CDE|F2 E2 D2|A3FA2|B4 AB|A2 F3 E| D3 E F2|B,6|A,4 A,2|
-D3 CDE|F2 E2 D2|A3FA2|B4 AB|A2 F3 E| F2 E3 C|D6:|
+D3 CDE|F2 E2 D2|A3FA2|B4 AB|A2 F3 D| E2 D3 C|D4:|
 |:A2|A3 F A2|A2 F2 A2|d3 edA|B4 dB|A2 F3 E|D2 E2 F2|B,6|A,4 A,2|
-D3 CDE|F2 E2 D2|A3FA2|B4 AB|A2 F3 E| F2 E3 C|D6:|
+D3 CDE|F2 E2 D2|A3FA2|B4 AB|A2 F3 D| E2 D3 C|D4:|
 
 X: 282
 T: The Strayaway Child
@@ -3387,3 +3386,178 @@ K: Dmix
 gfd c2A|cAd cAF|~G3 BAG|1 AFD D3:|2 AFD D AG||
 |:F2D DED|dB cA BF|A2G GFG|dB cA BG|
 F2D DED|dB cA BF|A2G GFG|1 AFD DAG:|2 AFD D3|| 
+
+X: 286
+T: Beare Island
+C: Finbarr Dwyer
+R: reel
+M: 4/4
+L: 1/8
+K: Edor
+|:EB^GB AGEc|dBcA Beec|d2 fd AFDF|GEFD EDB,A,|
+B,EEF GFGA|(3BBB A=c Bdef|g2 fg ef{a}fe|1 dBAF E3 D:|2 dBAF E3 A||
+|:Beef gefd|B2 AG FDDA|Beef gefd|Be^df e2 ef|
+edBc ~d3c|BcdB AFDF|G~B3 AFDF|1 GE{G}ED E3 A:|2 GE{G}ED E3 D|| 
+
+X: 287
+T: The Killavil Fancy
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+|:"G"DGBG A2BA|"C"GE~E2 cEGE|"G"DEGB A2BA|"C"GE{G}ED EFGA|
+"G"~B3d "D"A2BA|"C"GE~E2 cEGE|"G"DEGB "D"A2BA|"C"GE{G}ED EFGE :|
+|:"G"GABd efge|dB~B2 dBAB|GABd "C"eage|"G"dBAG EG G2|
+"G"GABd efge|dB~B2 dega|"C"bgag eage|"G"dBAG "C"EFGA:|
+
+X: 288
+T: The Stack of Wheat
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Gmaj
+|:B>A|G>ED>E G>AB>G|(3ABA G>A B>de>f|g>ed>B G>AB>G|d>BA>G E2B>A|
+G>ED>E G>AB>G|(3ABA G>A B>de>f|g>ed>B G>AB>G|A>GE>F G2:|
+|:B>d|e>dB>d e>dg>d|e>dB>d e2 (3def|g>ed>B G>AB>G|d>BA>G E2 B>A|
+G>ED>E G>AB>G|(3ABA G>A B>de>f|g>ed>B G>AB>G|A>GE>F G2:| 
+
+X: 289
+T: The Fox in the Thatch
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+g2|:dBG AGE|D3 GED|GAB dBA|Bee ege|
+dBG AGE|D3 GED|GAB dBA|BGF G2 e:|
+|:ded dB/c/d|efe e2d|e3 b2g|aba aef|
+g2e dBA|B3 GED|GAB dBA|BGF G2:| 
+
+X: 290
+T: Peter Byrne's
+T: Peter O'Byrne's Fancy
+R: jig
+M: 6/8
+L: 1/8
+K: Dmix
+|:"D"AFD c2A|"Am"BAG ~A3|"D"AFD c2A|"Am"BGE "D"EGD|
+AFD c2A|"Am"BAG .A.A.A|"D"cde dcA|"Am"GEA "D"D3:|
+|:"D"cde dcA|"Am"AGE c2A|"D"cde dcA|"Am"GEA "D"D3|
+"D"cde dcA|"Am"AGE c2e|"D"fed "Am"c2A|BGE "D"EGD:| 
+
+X: 291
+T: Elizabeth Kelly's Delight
+R: slip jig
+M: 9/8
+L: 1/8
+K: Ador
+|:A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|~G3 G2 E DEG:|
+|:c2 A BAG AGE|cBA BGE DEG|c2 A BAG AGE|~G3 G2 E DEG:|
+
+X: 292
+T: Sean Bui
+R: jig
+M: 6/8
+L: 1/8
+K: Dmaj
+A|:DAD AFA|BGB AFA|DAD AFA|B2c d2A|
+DAD AFA|BGB AFA|dfd ecA|B2c d2A:|
+dfd ecA|dcB AFA|dfd ecA|B2c d2A|
+dfd ecA|dcB AFA|DAD AFA|B2c d2A|
+dfd ecA|dcB AFA|dfd ecA|B2c dfg|
+afd gec|dcB AFA|DAD AFA|B2c d3|| 
+
+X: 293
+T: When The Cock Crows, It Is Day
+T: An Coileach Ag Fogairt An Lae
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+D|GAB BAG|d3 d2B|GAB BAG|A3 ABA|
+GAB BAG|c2d ege|dBG AGE|G3 G2:|
+d|gdd gdd|c3 c2d|gdd gdB|A3 ABd|
+gdd gdB|c2d ege|dBG AGE|G3 G2:| 
+
+X: 294
+T: The Edinburgh Rock
+C: Dave Lim
+R: reel
+M: C|
+L: 1/8
+K: F#min
+|:AF F2 EFBF|AF F2 cecB|AF F2 EFAF|cB B2 BAAF|
+AF F2 EFBF|AF F2 cecB|AFAB cBAB|ceae f3 e:|
+|:affe cBAF|ef f2 afbf|affe cBAF|EF F2 AFce|
+affe cecB|AFAB cBAB|ce e2 cBAB|ceae f3 e:| 
+
+X: 295
+T: George White's Favourite
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+|:Bd|eB ~B2 eBdB|AGAB GE D2|GB (3BBB GABd|eBdB A2 Bd|
+eB ~B2 eBdB|AGAB GE D2|GABd gedB|1 AGAB G2:|2 AGAB G4||
+|:gede gaba|g2ga gedB|dega bgag|eaa g a2 ga|
+bgeg d2 de|gede gaba|g3 d egdB|AGAB G4:|
+
+X: 296
+T: Good Morning To Your Nightcap
+R: reel
+M: 4/4
+L: 1/8
+K: Ador
+|:e4 d4|cBcd edd2|e=fec dedB|cABG EGD2|
+e4 d4|cBcd edd2|egfa gedB|cABG EGD2:|
+|:EAAc BGGB|cBcd ed d2|EAAc BGGB|cABG EGD2|
+EAAc BGGB|cBcd ed d2|egfa gedB|cABG EGD2:| 
+
+X: 297
+T: Brian O'Lynn
+R: jig
+M: 6/8
+L: 1/8
+K: Ador
+B|:cAA cAA|GEF GAB|cAA ~A2G|AAA ~A2B|
+cAA cAA|GEF GAB|cde g/f/ed|1 cAA ~A2B:|2 cAA ~A2f||
+|:~g3 ged|cAB c2d|e2a age|ed^c def|
+~g3 ged|cAB cde|g/2f/2ed cAG|1 EAA ~A2f:|2 EAA ~A3||
+
+X: 298
+T: Jackson's
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|:G2e dBG|{c}BAB dBG|G2e dBG|{B}AGA BGD|
+G2e dBG|{c}BAB deg|age dBG|{B}AGA BGD:|
+|:gag f2f|ede def|{a}gfg efg|aga bge|
+gbg a2 g|edB deg|age dBG|AGA BGD:| 
+
+X: 299
+T: Under The Willows She Is Sleeping
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+~B3 cBc|d2g d2c|~B3 BAG|FAD FAD|
+~B3 cBc|d2g d2c|~B3 AdF|1 AGF G2A:|2 AGF G3||
+~g3 gfe|d2g d2c|~B3 BAG|FAD FAD|
+~g3 gfe|d2g d2c|~B3 AdF|AGF GBd|
+~g3 gfe|d2g d2c|~B3 BAG|FAD FAD|
+~B3 cBc|d2g d2c|~B3 AdF|AGF G3|| 
+
+X: 300
+T: The Coming Of Spring
+R: jig
+M: 6/8
+L: 1/8
+K: Edor
+|:A|"Em"BEE B2A|"G"BdB BAG|"D"FEF DFA|dfe dBA|
+"Em"BEE B2A|Bef "G"gfe|"D"dBG FGA|"Em"BGE E2:|
+|:F|"Em"GEF G2A|"G"~(B2B) Bec|"D"d2A BAG|FAF DEF|
+"Em"G2E FGA|Bef "G"gfe|"D"dBG FGA|"Em"BGE E2:|
+f|"Em"g2e ege|Beg bag|"D"f2d dcd|AFA def|
+"Em"g2e ege|Beg bag|"D"fed faf|"Em"ged e2f|
+"Em"g2e ege|Beg bag|"D"f2d dcd|AFA def|
+"Em"g2e fed|"G"Bec dfe|"D"dBG FGA|"Em"BGE E2A|| 
