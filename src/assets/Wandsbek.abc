@@ -195,23 +195,24 @@ R: waltz
 M: 3/4
 L: 1/8
 K: Emin
-E2G2A2|B3 c B2|D2F2G2|A4B2|
-AGF2G2|E4 G2|F2D2D2|1 E6:|2 E4c2||
-B2 GABc|B2A2G2|A2 FGAB|A2G2A2|
-B2 GABc|B2A2G2|AFD2D2|1 E4 c2:|2 E6|| 
+"Em"E2G2A2|B3 c B2|"D"D2F2G2|A4B2|
+AGF2G2|"Em"E4 G2|"D"F2D2D2|1 "Em"E6:|2 "Em"E4c2||
+"Em"B2 GABc|B2A2G2|"D"A2 FGAB|A2G2A2|
+"Em"B2 GABc|B2A2G2|"D"AFD2D2|1 "Em"E4 c2:|2 "Em"E6|| 
 
 X: 19
 T: Falco
-R: polka
+R: andro
+C: Paul James
 M: 2/4
 L: 1/8
 K: Gdor
-GG d>e|fd c>B|AB cd|ec dB/A/|
-GG d>e|fd c>B|cd c/d/c/B/|A3 G/F/|
-GG d>e|fd c>A|cd ec|BG Bc|
-GG d>e|fd c>d|ec BA|B2 BG||
-|:f/d/g/e/ cf|d/e/d/g/ e/f/d/c/|d/g/e/f/ dg|e/f/e/d/ c2|
-d/g/e/f/ dg|f/e/d/c/ d/e/f/g/|a/g/f/e/ d/e/f/e/|1 f/e/d/c/ d>e:|2 f/e/d/c/ d2||
+"Gm"GG d>e|fd c>B|"Dm"AB cd|ec dB/A/|
+"Gm"GG d>e|fd c>B|"Dm"cd c/d/c/B/|A3 G/F/|
+"Gm"GG d>e|fd c>A|"Dm"cd ec|BG Bc|
+"Gm"GG d>e|fd c>d|"Dm"ec BA|B2 BG||
+|:"Gm"f/d/g/e/ c"Dm"f|"Dm"d/e/d/g/ e/f/d/c/|"Gm"d/g/e/f/ d"Dm"g|"Dm"e/f/e/d/ c2|
+"Gm"d/g/e/f/ d"Dm"g|"Dm"f/e/d/c/ d/e/f/g/|"Dm"a/g/f/e/ d/e/f/e/|1 "Dm"f/e/d/c/ d>e:|2 "Dm"f/e/d/c/ d2||
 
 X: 20
 T: Fågelvalsen
@@ -242,10 +243,10 @@ R: polka
 M: 2/4
 L: 1/8
 K: Ddor
-|:FD DA|FD DE/F/|GF ED|CE A,2|
-FD DA|FD DE/F/|GE DC|D2D2:|
-|:FA AB/c/|dA AB/c/|dA AG|FG E2|
-FA AB/c/|dA AB/c/|dc AG|F2D2:| 
+|:"Dm"FD DA|FD DE/F/|"G"GF ED|"Am"CE A,2|
+"Dm"FD DA|FD DE/F/|"G"GE "Am"DC|"Dm"D2D2:|
+|:"F"FA A"G"B/c/|"Dm"dA A"G"B/c/|"Dm"dA AG|FG "A"E2|
+"F"FA A"G"B/c/|"Dm"dA A"G"B/c/|"Dm"dc "A7"AG|"Dm"F2D2:| 
 
 X: 23
 T: Fubu's
@@ -278,10 +279,10 @@ R: gånglåt
 O: Sweden, Dalarna
 M: C|
 K: D
-FG|ABAF ABAF|A2fe d2c2|BcBG BcBG|B2gf e2d2|
-c3d c2B2|A2g2 f2e2|1 dcde fefg|a6:|2 d2fd Acec|d6||
-|:fg|a4 a2^ga|b2a2 g2f2|g4 B3d|g2f2 e2d2|
-c3d c2B2|A2g2 f2e2|1 dcde fefg|a6:|2 d2fd Acec|d6||
+FG|"D"ABAF ABAF|A2fe d2c2|"G"BcBG BcBG|B2gf e2d2|
+"A"c3d c2B2|A2g2 f2e2|1 "D"dcde fefg|a6:|2 "D"d2fd "A"Acec|"D"d6||
+|:fg|"D"a4 a2^ga|"D"b2 a2 g2 f2|"G"g4 B3d|"G"g2 f2 e2 d2|
+"A"c3d c2B2|A2g2 f2e2|1 "D"dcde fefg|"D"a6:|2 "D"d2fd "A"Acec|"D"d6||
 
 X: 26
 T: Haapavesi Waltz
@@ -328,8 +329,8 @@ L: 1/8
 C: J F Heintzen
 R: mazurka
 K: C
-|: G c>d | e2- e>efd | e2- e>ef>g | f2- f>e d>c | d3 G c>d | e2- e>efd | e2- e>ef>g | f2- f>e d>c|d3:|
-|:e f>g|a2 c'>b a>b|g3 f e>d|c>B c>d e>c|G4 c>B|A2A>B c>d|c2B2A2|1B2 B>c d>e|d3:|2B2B>c d>B|c3||
+|: G c>d | "C"e2- e>e"G7"fd | "C"e2- e>ef>g | "F"f2- f>e d>c | "G"d3 G c>d | "C"e2- e>e"G7"fd | "C"e2- e>ef>g | "F"f2- f>e d>c|"G"d3:|
+|:e f>g|"F"a2 c'>b a>b|"Em"g3 f e>d|"C"c>B c>d e>c|"G"G4 c>B|"F"A2A>B "C"c>d|"F"c2B2A2|1"G"B2 B>c d>e|d3:|2"G"B2B>c d>B|"C"c3||
 
 X: 30
 T: La mal-aimable
@@ -351,10 +352,10 @@ C: Brian Finnegan
 L: 1/8
 K: Dmaj
 M:7/8
-d2BA dcA|G2D2 GDG|A2D2 ADA|AEcE AA/B/c|
-d2BA dcA|G2D2 GDG|1 A2D2 ABc|e2c2 c2e:|2 A2D2 AGF|G2GF E2D||
-B2d2 fed|G2Bd a2a|aggf efa|g2f2 edc|
-~B3d fed|G2Bd a2b|aggf efa|gAfA edc:| 
+"D"d2BA dcA|"G"G2D2 GDG|"D"A2D2 ADA|"A"AEcE AA/B/c|
+"D"d2BA dcA|"G"G2D2 GDG|1 "D"A2D2 ABc|"A"e2c2 c2e:|2 "D"A2D2 AGF|"G"G2GF "Em"E2D||
+"G"B2d2 "D"fed|"Em7"G2Bd "A"a2a|aggf efa|"G"g2"D"f2 "A"edc|
+"G"~B3d "D"fed|"Em7"G2Bd "A"a2b|aggf efa|"G"gA"D"fA "A"edc:| 
 
 X: 32
 T: Mazurca di Ivano
@@ -403,7 +404,7 @@ A,C EC G,D|ED/E/ FE DC/B,/|A,3/2C/ CE AG|FE [A,4E4]:|
 X: 35
 T: Scheldewals
 C: Ward Dhoore
-M: 4/4
+M: 3/4
 L: 1/8
 K: G
 "G"B4 B2| B2 A2 G2 | "C"DE c2 BA | "G"D6- | D2 zDEF| "Em"FG3 G2| 
@@ -439,10 +440,10 @@ R: schottisch
 M: 4/4
 L: 1/8
 K: Cmin
-|: G2 =Bc d2 d2 | efec d2 d2| fedc edc=B | dc=BA dcBA |
- G2 =Bc d2 d2 | efec d2 d2| fedc edc=B | A=BAG G4 :|
-|: G2 =Bc d2 f2  | A4 =B4 | c=BAB c2 cB | dc=BA dcBA |
- G2 =Bc d2 f2  | A4 =B4 | c=BAB c2 | A=BAG G4 :|
+|: "G"G2 =Bc d2 d2 | "Fm"efec "G"d2 d2| "Fm"fedc "Cm"edc=B | "Fm"dc=BA "G"dcBA |
+ "G"G2 =Bc d2 d2 | "Fm"efec "G"d2 d2| "Fm"fedc "Cm"edc=B | "Fm"A=BAG "G"G4 :|
+|: "G7"G2 =Bc d2 f2  | "Fm"A4 "G"=B4 | "Cm"c=BAB c2 cB | "Fm"dc=BA "G"dcBA |
+ "G"G2 =Bc d2 f2  | "Fm"A4 "G"=B4 | "Cm"c=BAB c2 cB| "Fm"A=BAG "G"G4 :|
 
 X: 39
 T: Slängpolska efter Byss-Kalle
@@ -493,8 +494,8 @@ T: Quand je bois du vin clairet
 M: 3/4
 L: 1/8
 K: Edor
-EFGAGF | E3FGA | BAGGAF | G2FED2 | EFGAGF | E2G2F2 | E4D2 | E6 :|
-|: B3ABc | B4B2 | dcBAGF | G3FE2 | B3ABc | B2AGF2 | E4D2 | E6 :|
+"Em"EFGA"B7"GF | "Em"E3FGA | "G"BAGG"D"AF | "G"G2FE"Bm"D2 | "Em"EFGA"B7"GF | "Em"E2"G"G2"D"F2 | "Em"E4"Bm"D2 | "Em"E6 :|
+|: "G"B3A"D"Bc | "G"B4B2 | "G"dc"Em"BAGF | "G"G3F"Em"E2 | B3ABc | "G"B2AG"D"F2 | "Em"E4"Bm"D2 | E6 :|
 
 X: 44
 T: Trip To Skye
@@ -661,10 +662,10 @@ O: Småland, Bredvassa, Loftahammar
 L: 1/8
 M: 3/4
 K: G
-(D |: G)B Ac Bd | ef g2 B2 | c>d ed cB | A>G (F/G/)F/E/ DE/F/ |
-GB Ac Bd | ef g2 B2 | c>d ed cB |1 (A/G/)F/A/ G3 D :|2 (A/G/)F/A/ G3 (B |]
-d2) Bd/B/ Ge- | ed- dc- cB | d2  Bd/B/ Ge- | ed- dc- cB |
-GB Ac Bd | ef g2 B2 | c>d ed cB |1 (A/G/)F/A/ G3B :|2 (A/G/)F/A/ G4 |]
+(D |: "G"G)B "D"Ac "G"Bd | "C"ef "G"g2 B2 | "C"c>d ed cB | "Am"A>G "D"(F/G/)F/E/ DE/F/ |
+"G"GB "D"Ac "G"Bd | "C"ef "G"g2 B2 | "C"c>d ed cB |1 "D7"(A/G/)F/A/ "G"G3 D :|2 "D7"(A/G/)F/A/ "G"G3 (B |]
+"G"d2) Bd/B/ G"C"e- | e"G"d- d"Am"c- cB | "G"d2  Bd/B/ G"C"e- | e"G"d- d"Am"c- cB |
+"G"GB "D"Ac "G"Bd | "C"ef "G"g2 B2 | "C"c>d ed cB |1 "D7"(A/G/)F/A/ "G"G3B :|2 "D7"(A/G/)F/A/ "G"G4 |]
 
 X: 59
 T: Polonaise nach Blitz
@@ -673,8 +674,8 @@ L: 1/16
 K: G
 R: polonaise 
 V: 1
-G4D4G4 | A2A2 ABcAB4 | A2A2 ABcAB4 | c2e2 e2dc d2B2 | A2c2 c2BA B2G2 | FGAFG4G,4 :|
-|:A4D4c4 | B2B2 BdcBA4 | A4D4c4 | B2B2 BdcBA4 | c2e2 e2dc d2B2 | A2c2 c2BA B2G2 | FGAFG4G,4 :|
+"G"G4D4G4 | "Am"A2A2 "D7"ABcA"G"B4 | "Am"A2A2 "D7"ABcA"G"B4 | "C"c2e2 e2dc "G"d2B2 | "Am"A2c2 c2BA "G"B2G2 | "D7"FGAF"G"G4G,4 :|
+|:"D7"A4D4c4 | "G"B2B2 BdcB"D7"A4 | A4D4c4 | "G"B2B2 BdcB"D7"A4 | "C"c2e2 e2dc "G"d2B2 | "Am"A2c2 c2BA "G"B2G2 | "D7"FGAF"G"G4G,4 :|
 V: 2
 B,4B,4B,4 | F2F2 FGAFG4 | F2F2 FGAFG4 | A2c2 c2BA B2G2 | F2A2 A2GF G2D2 | A,B,CA,B,4B,4 :|
 |:F4F4A4 | G2G2 GBAGF4 | F4F4A4 | G2G2 GBAGF4 | A2c2 c2BA B2G2 | F2A2 A2GF G2D2 | A,B,CA,B,4B,4 :|
