@@ -31,7 +31,8 @@ export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy 
 @Component({
     selector: 'app-search',
     templateUrl: './search.component.html',
-    providers: [{provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy}]
+    providers: [{ provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }],
+    standalone: false
 })
 export class SearchComponent implements OnInit {
 

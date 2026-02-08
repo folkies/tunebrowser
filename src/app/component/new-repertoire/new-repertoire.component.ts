@@ -5,7 +5,8 @@ import { Repertoire } from 'src/app/model/repertoire';
 
 @Component({
     selector: 'app-new-repertoire',
-    templateUrl: './new-repertoire.component.html'
+    templateUrl: './new-repertoire.component.html',
+    standalone: false
 })
 export class NewRepertoireComponent {
 

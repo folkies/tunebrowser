@@ -6,7 +6,8 @@ import { RestTuneMatcher } from 'src/app/service/matching/rest-tune-matcher';
 
 @Component({
     selector: 'app-matcher',
-    templateUrl: './matcher.component.html'
+    templateUrl: './matcher.component.html',
+    standalone: false
 })
 export class MatcherComponent {
     tunes: NormalizedTune[];

@@ -5,7 +5,8 @@ import { TuneBookReference } from '../../model/tunebook-reference';
 
 @Component({
     selector: 'app-books-list',
-    templateUrl: './books-list.component.html'
+    templateUrl: './books-list.component.html',
+    standalone: false
 })
 export class BooksListComponent {
 

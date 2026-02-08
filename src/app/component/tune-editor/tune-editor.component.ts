@@ -11,7 +11,8 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-tune-editor',
-    templateUrl: './tune-editor.component.html'
+    templateUrl: './tune-editor.component.html',
+    standalone: false
 })
 export class TuneEditorComponent implements AfterViewInit {
     private abc = '';

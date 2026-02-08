@@ -3,7 +3,8 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
     selector: 'app-delete-repertoire-item',
-    templateUrl: './delete-repertoire-item.component.html'
+    templateUrl: './delete-repertoire-item.component.html',
+    standalone: false
 })
 export class DeleteRepertoireItemComponent {
 

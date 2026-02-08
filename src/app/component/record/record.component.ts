@@ -5,7 +5,8 @@ import { Recorder } from 'src/app/service/transcription/recorder';
 
 @Component({
     selector: 'app-record',
-    templateUrl: './record.component.html'
+    templateUrl: './record.component.html',
+    standalone: false
 })
 export class RecordComponent {
 

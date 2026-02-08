@@ -13,7 +13,8 @@ import { AddToRepertoireComponent, RepertoireSelection } from '../add-to-reperto
 
 @Component({
     selector: 'app-tune-page',
-    templateUrl: './tune-page.component.html'
+    templateUrl: './tune-page.component.html',
+    standalone: false
 })
 export class TunePageComponent implements OnInit {
 

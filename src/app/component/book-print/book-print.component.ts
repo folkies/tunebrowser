@@ -5,7 +5,8 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-book-print',
-    templateUrl: './book-print.component.html'
+    templateUrl: './book-print.component.html',
+    standalone: false
 })
 export class BookPrintComponent {
 

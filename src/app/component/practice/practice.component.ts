@@ -13,7 +13,8 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
  */
 @Component({
     selector: 'app-practice',
-    templateUrl: './practice.component.html'
+    templateUrl: './practice.component.html',
+    standalone: false
 })
 export class PracticeComponent {
     /** Today's practice assignment (intially undefined). */

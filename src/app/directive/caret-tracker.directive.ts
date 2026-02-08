@@ -16,7 +16,8 @@ export interface ICaret {
  * via the `caret` output property.
  */
 @Directive({
-    selector: '[appCaretTracker]'
+    selector: '[appCaretTracker]',
+    standalone: false
 })
 export class CaretTrackerDirective implements AfterViewInit {
     private $element: HTMLElement;

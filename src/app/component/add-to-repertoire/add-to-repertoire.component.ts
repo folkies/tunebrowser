@@ -11,7 +11,8 @@ export interface RepertoireSelection {
 
 @Component({
     selector: 'app-add-to-repertoire',
-    templateUrl: './add-to-repertoire.component.html'
+    templateUrl: './add-to-repertoire.component.html',
+    standalone: false
 })
 export class AddToRepertoireComponent implements OnInit {
 

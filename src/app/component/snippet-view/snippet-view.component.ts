@@ -4,7 +4,8 @@ import { extractSnippet } from 'src/app/service/abc-util';
 
 @Component({
     selector: 'app-snippet-view',
-    templateUrl: './snippet-view.component.html'
+    templateUrl: './snippet-view.component.html',
+    standalone: false
 })
 export class SnippetViewComponent implements AfterViewInit, OnChanges {
 

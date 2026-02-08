@@ -7,7 +7,8 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
  */
 @Component({
     selector: 'app-login',
-    template: ''
+    template: '',
+    standalone: false
 })
 export class LoginComponent {
 

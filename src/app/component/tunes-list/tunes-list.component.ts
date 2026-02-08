@@ -6,7 +6,8 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-tunes-list',
-    templateUrl: './tunes-list.component.html'
+    templateUrl: './tunes-list.component.html',
+    standalone: false
 })
 export class TunesListComponent {
 

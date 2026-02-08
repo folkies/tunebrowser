@@ -6,7 +6,8 @@ import { TuneBookDescriptor } from 'src/app/model/tunebook-collection';
 
 @Component({
     selector: 'app-create-book',
-    templateUrl: './create-book.component.html'
+    templateUrl: './create-book.component.html',
+    standalone: false
 })
 export class CreateBookComponent {
     title: string;

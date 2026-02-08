@@ -3,7 +3,8 @@ import abcjs from 'abcjs';
 
 @Component({
     selector: 'app-tune-view',
-    templateUrl: './tune-view.component.html'
+    templateUrl: './tune-view.component.html',
+    standalone: false
 })
 export class TuneViewComponent implements AfterViewInit, OnChanges {
 

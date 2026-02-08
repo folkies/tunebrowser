@@ -21,7 +21,8 @@ export interface RepertoireTune {
 
 @Component({
     selector: 'app-repertoire',
-    templateUrl: './repertoire.component.html'
+    templateUrl: './repertoire.component.html',
+    standalone: false
 })
 export class RepertoireComponent implements OnInit {
 
