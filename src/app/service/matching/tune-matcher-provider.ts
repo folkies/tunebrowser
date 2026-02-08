@@ -1,15 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Remote, wrap } from 'comlink';
 import { ITuneMatcher } from './tune-matcher';
 
 @Injectable()
 export class TuneMatcherProvider {
+    private httpClient: HttpClient = inject(HttpClient)
 
     private instance: Remote<ITuneMatcher>;
-
-    constructor(private httpClient: HttpClient) {
-    }
 
     async tuneMatcher(): Promise<Remote<ITuneMatcher>> {
         if (!this.instance) {

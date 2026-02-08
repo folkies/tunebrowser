@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { PdfService } from 'src/app/service/pdf-service';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { csvToArray } from 'src/app/service/tags';
@@ -9,12 +9,20 @@ import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.s
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { AddToRepertoireComponent, RepertoireSelection } from '../add-to-repertoire/add-to-repertoire.component';
+import { TunePlayerComponent } from '../tune-player/tune-player.component';
+import { MatLabel, MatFormField } from '@angular/material/form-field';
+import { MatSlider, MatSliderThumb } from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
+import { TuneViewComponent } from '../tune-view/tune-view.component';
+import { MatInput } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
 
 
 @Component({
     selector: 'app-tune-page',
     templateUrl: './tune-page.component.html',
-    standalone: false
+    imports: [TunePlayerComponent, MatLabel, MatSlider, MatSliderThumb, FormsModule, TuneViewComponent, MatFormField, MatInput, MatButton, MatIcon, RouterLink]
 })
 export class TunePageComponent implements OnInit {
     private index = inject(TuneBookIndex);

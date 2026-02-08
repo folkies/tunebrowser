@@ -7,8 +7,7 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
  */
 @Component({
     selector: 'app-login',
-    template: '',
-    standalone: false
+    template: ''
 })
 export class LoginComponent {
     private route = inject(ActivatedRoute);

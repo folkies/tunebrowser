@@ -5,9 +5,17 @@ import { csvToArray } from 'src/app/service/tags';
 import { IndexEntry } from '../../model/index-entry';
 import { TuneQuery } from '../../model/tune-query';
 import { TuneBookIndex } from '../../service/tunebook-index';
-import { FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
+import { FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY, CdkVirtualScrollViewport, CdkVirtualForOf } from '@angular/cdk/scrolling';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelActionRow } from '@angular/material/expansion';
+import { FormsModule } from '@angular/forms';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { MatSelect } from '@angular/material/select';
+import { MatOption } from '@angular/material/autocomplete';
+import { MatButton } from '@angular/material/button';
+import { SnippetViewComponent } from '../snippet-view/snippet-view.component';
 
 @Injectable()
 export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
@@ -32,7 +40,7 @@ export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy 
     selector: 'app-search',
     templateUrl: './search.component.html',
     providers: [{ provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }],
-    standalone: false
+    imports: [MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, FormsModule, MatFormField, MatLabel, MatInput, MatSelect, MatOption, MatExpansionPanelActionRow, MatButton, CdkVirtualScrollViewport, CdkVirtualForOf, SnippetViewComponent]
 })
 export class SearchComponent implements OnInit {
     private tuneBookIndex = inject(TuneBookIndex);

@@ -4,8 +4,7 @@ import { extractSnippet } from 'src/app/service/abc-util';
 
 @Component({
     selector: 'app-snippet-view',
-    templateUrl: './snippet-view.component.html',
-    standalone: false
+    templateUrl: './snippet-view.component.html'
 })
 export class SnippetViewComponent implements AfterViewInit, OnChanges {
     private zone = inject(NgZone);

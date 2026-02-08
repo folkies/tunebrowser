@@ -3,11 +3,13 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { NormalizedTune } from 'src/app/model/normalized-tune';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { RestTuneMatcher } from 'src/app/service/matching/rest-tune-matcher';
+import { MatProgressBar } from '@angular/material/progress-bar';
+import { MatList, MatListItem } from '@angular/material/list';
 
 @Component({
     selector: 'app-matcher',
     templateUrl: './matcher.component.html',
-    standalone: false
+    imports: [MatProgressBar, MatList, MatListItem]
 })
 export class MatcherComponent {
     private route = inject(ActivatedRoute);

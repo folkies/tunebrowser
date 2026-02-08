@@ -7,8 +7,7 @@ import { throttleTime } from 'rxjs/operators';
 
 @Component({
     selector: 'app-tune-player',
-    templateUrl: './tune-player.component.html',
-    standalone: false
+    templateUrl: './tune-player.component.html'
 })
 export class TunePlayerComponent implements AfterViewInit, OnChanges {
 

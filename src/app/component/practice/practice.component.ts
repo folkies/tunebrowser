@@ -7,6 +7,14 @@ import { PracticeService } from 'src/app/service/practice-service';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatSelect } from '@angular/material/select';
+import { MatOption } from '@angular/material/autocomplete';
+import { MatInput } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatButton } from '@angular/material/button';
+import { MatList, MatListItem } from '@angular/material/list';
+import { RouterLink } from '@angular/router';
 
 /**
  * Builds and displays today's practice assignment for the default repertoire.
@@ -14,7 +22,7 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
 @Component({
     selector: 'app-practice',
     templateUrl: './practice.component.html',
-    standalone: false
+    imports: [MatFormField, MatLabel, MatSelect, MatOption, MatInput, FormsModule, MatButton, MatList, MatListItem, RouterLink]
 })
 export class PracticeComponent {
     private snackBar = inject(MatSnackBar);

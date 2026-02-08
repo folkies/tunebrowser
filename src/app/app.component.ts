@@ -1,16 +1,22 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/overlay';
 import { Component, NgZone, OnInit, ViewChild, inject } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
 import { GoogleAccessTokenService } from 'src/lib/google-sign-in/lib/services/google-access-token.service';
 import { GoogleDriveService } from './service/google-drive.service';
 import { TuneBookCollectionService } from './service/tunebook-collection.service';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIconButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatNavList, MatListItem } from '@angular/material/list';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { CdkScrollable as CdkScrollable_1 } from '@angular/cdk/scrolling';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
+    imports: [MatToolbar, MatIconButton, MatIcon, MatSidenavContainer, MatSidenav, MatNavList, MatListItem, RouterLink, MatSidenavContent, CdkScrollable_1, RouterOutlet]
 })
 export class AppComponent implements OnInit {
     private breakpointObserver = inject(BreakpointObserver);

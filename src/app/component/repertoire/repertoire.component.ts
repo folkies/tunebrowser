@@ -3,12 +3,16 @@ import { RepertoireItem, RepertoireCollection, Repertoire } from 'src/app/model/
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatSort, MatSortHeader } from '@angular/material/sort';
+import { MatTableDataSource, MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, MatCell, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 
 import { NewRepertoireComponent } from '../new-repertoire/new-repertoire.component';
 import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-repertoire-item.component';
+import { MatMiniFabButton, MatIconButton } from '@angular/material/button';
+import { MatMenuTrigger, MatMenu, MatMenuItem } from '@angular/material/menu';
+import { MatIcon } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 export interface RepertoireTune {
     item: RepertoireItem;
@@ -22,7 +26,7 @@ export interface RepertoireTune {
 @Component({
     selector: 'app-repertoire',
     templateUrl: './repertoire.component.html',
-    standalone: false
+    imports: [MatMiniFabButton, MatMenuTrigger, MatIcon, MatMenu, MatMenuItem, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatSortHeader, MatCellDef, MatCell, RouterLink, MatIconButton, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow]
 })
 export class RepertoireComponent implements OnInit {
     private dialog = inject(MatDialog);

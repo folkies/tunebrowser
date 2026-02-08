@@ -2,11 +2,13 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { Recorder } from 'src/app/service/transcription/recorder';
+import { MatProgressBar } from '@angular/material/progress-bar';
+import { MatButton } from '@angular/material/button';
 
 @Component({
     selector: 'app-record',
     templateUrl: './record.component.html',
-    standalone: false
+    imports: [MatProgressBar, MatButton]
 })
 export class RecordComponent {
     private router = inject(Router);

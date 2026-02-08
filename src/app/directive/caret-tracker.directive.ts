@@ -15,10 +15,7 @@ export interface ICaret {
  * Directive that can be added to text areas or text input fields to track the caret position
  * via the `caret` output property.
  */
-@Directive({
-    selector: '[appCaretTracker]',
-    standalone: false
-})
+@Directive({ selector: '[appCaretTracker]' })
 export class CaretTrackerDirective implements AfterViewInit {
     private element = inject(ElementRef);
 

@@ -7,8 +7,7 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
  */
 @Component({
     selector: 'app-logout',
-    template: '',
-    standalone: false
+    template: ''
 })
 export class LogoutComponent {
     private route = inject(ActivatedRoute);

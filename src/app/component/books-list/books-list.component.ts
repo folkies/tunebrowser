@@ -2,11 +2,15 @@ import { Component, inject } from '@angular/core';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 import { TuneBookReference } from '../../model/tunebook-reference';
+import { MatList, MatListItem } from '@angular/material/list';
+import { MatIconButton, MatButton } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
     selector: 'app-books-list',
     templateUrl: './books-list.component.html',
-    standalone: false
+    imports: [MatList, MatListItem, MatIconButton, RouterLink, MatIcon, MatButton]
 })
 export class BooksListComponent {
     private collectionService = inject(TuneBookCollectionService);

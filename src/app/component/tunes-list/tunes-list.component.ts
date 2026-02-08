@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AnalyzedTune } from 'abcjs';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
+import { MatList, MatListItem } from '@angular/material/list';
 
 @Component({
     selector: 'app-tunes-list',
     templateUrl: './tunes-list.component.html',
-    standalone: false
+    imports: [MatList, MatListItem, RouterLink]
 })
 export class TunesListComponent {
     private index = inject(TuneBookIndex);

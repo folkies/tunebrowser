@@ -3,11 +3,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { TuneBookDescriptor } from 'src/app/model/tunebook-collection';
+import { FormsModule } from '@angular/forms';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
 
 @Component({
     selector: 'app-create-book',
     templateUrl: './create-book.component.html',
-    standalone: false
+    imports: [FormsModule, MatFormField, MatInput, MatButton]
 })
 export class CreateBookComponent {
     private snackBar = inject(MatSnackBar);
