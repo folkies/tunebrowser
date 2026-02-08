@@ -23,7 +23,7 @@ export class Recorder {
     private analyser: AnalyserNode;
     private timer: Observable<number>;
     private subscription: Subscription;
-    private fftBuffer: Float32Array;
+    private fftBuffer: Float32Array<ArrayBuffer>;
 
     private progressSource = new BehaviorSubject<number>(0);
     private transcriptionResultSource = new Subject<string>();
