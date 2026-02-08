@@ -1,4 +1,4 @@
 module.exports = {
   preset: 'jest-preset-angular',
-  setupFilesAfterEnv: ['jest-preset-angular/setup-jest',"./console.js"],
+  setupFilesAfterEnv: ['./setup-jest.ts',"./console.js"],
 };
