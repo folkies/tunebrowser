@@ -54,6 +54,7 @@
     "eslint": "^8.12.0",
     "iconv-lite": "^0.5.1",
     "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "jest-preset-angular": "^16.0.0",
     "path": "^0.12.7",
     "ts-jest": "^29.4.6",
