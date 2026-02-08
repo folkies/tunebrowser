@@ -7,11 +7,13 @@
     "declaration": false,
     "experimentalDecorators": true,
     "module": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "importHelpers": true,
     "paths": {
-      "abcjs": ["src/@types/abcjs"]
+      "abcjs": [
+        "src/@types/abcjs"
+      ]
     },
     "target": "es2022",
     "typeRoots": [

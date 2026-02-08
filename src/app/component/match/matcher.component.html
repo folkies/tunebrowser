@@ -1,20 +1,24 @@
 <h2 class="mat-h2">Matching tunes</h2>
 
 <div id="progress">
-    <mat-progress-bar mode="indeterminate" *ngIf="! tunes"></mat-progress-bar>
+  @if (! tunes) {
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  }
 </div>
 
 
 <mat-list class="tune-list">
-    <mat-list-item *ngFor="let tune of tunes">
-        <div matLine>
+  @for (tune of tunes; track tune) {
+    <mat-list-item>
+      <div matLine>
         <div class="tune-item">
-            <a class="tune-link md-accent" href="https://thesession.org/tunes/{{tune.tune}}#setting{{tune.setting}}" target="thesession">{{title(tune)}}</a>
-            <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
+          <a class="tune-link md-accent" href="https://thesession.org/tunes/{{tune.tune}}#setting{{tune.setting}}" target="thesession">{{title(tune)}}</a>
+          <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
         </div>
         <div class="confidence">
-            {{confidencePercentage(tune)}} %
+          {{confidencePercentage(tune)}} %
         </div>
-    </div>
+      </div>
     </mat-list-item>
+  }
 </mat-list>

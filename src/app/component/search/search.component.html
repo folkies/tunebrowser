@@ -1,61 +1,69 @@
 <div class="search-panel">
-    <mat-expansion-panel [expanded]="!searchCompleted">
-        <mat-expansion-panel-header>
-            <mat-panel-title>Find tunes</mat-panel-title>
-        </mat-expansion-panel-header>
-        <form>
-            <mat-form-field class="query">
-                <mat-label>Tune number or part of title</mat-label>
-                <input matInput name="query" type="text" [(ngModel)]="query">
-            </mat-form-field>
-            <mat-form-field class="rhythm">
-                <mat-label>Rhythm</mat-label>
-                <input matInput name="rhythm" type="text" [(ngModel)]="rhythm">
-            </mat-form-field>
-            <mat-form-field class="key">
-                <mat-label>Key</mat-label>
-                <input matInput name="key" type="text" [(ngModel)]="key">
-            </mat-form-field>
-            <mat-form-field class="tunebooks">
-                <mat-label>Tune books</mat-label>
-                <mat-select multiple [(value)]="selectedBooks">
-                    <mat-option *ngFor="let book of books()" [value]="book.descriptor.id">{{book.descriptor.name}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field class="tags">
-                <mat-label>Tags</mat-label>
-                <input matInput name="tags" type="text" [(ngModel)]="tags">
-            </mat-form-field>
-            <mat-action-row>
-                <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
-                    color="primary">Search</button>
-            </mat-action-row>
-        </form>
-    </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="!searchCompleted">
+    <mat-expansion-panel-header>
+      <mat-panel-title>Find tunes</mat-panel-title>
+    </mat-expansion-panel-header>
+    <form>
+      <mat-form-field class="query">
+        <mat-label>Tune number or part of title</mat-label>
+        <input matInput name="query" type="text" [(ngModel)]="query">
+      </mat-form-field>
+      <mat-form-field class="rhythm">
+        <mat-label>Rhythm</mat-label>
+        <input matInput name="rhythm" type="text" [(ngModel)]="rhythm">
+      </mat-form-field>
+      <mat-form-field class="key">
+        <mat-label>Key</mat-label>
+        <input matInput name="key" type="text" [(ngModel)]="key">
+      </mat-form-field>
+      <mat-form-field class="tunebooks">
+        <mat-label>Tune books</mat-label>
+        <mat-select multiple [(value)]="selectedBooks">
+          @for (book of books(); track book) {
+            <mat-option [value]="book.descriptor.id">{{book.descriptor.name}}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="tags">
+        <mat-label>Tags</mat-label>
+        <input matInput name="tags" type="text" [(ngModel)]="tags">
+      </mat-form-field>
+      <mat-action-row>
+        <button mat-raised-button (click)="findTunes()" label="Search" class="search-button"
+        color="primary">Search</button>
+      </mat-action-row>
+    </form>
+  </mat-expansion-panel>
 </div>
 
-<div id="noMatches" *ngIf="noResults()">
+@if (noResults()) {
+  <div id="noMatches">
     <p class="mat-body">No matching tunes</p>
-</div>
+  </div>
+}
 
-<div id="overview" *ngIf="multipleResults()">
+@if (multipleResults()) {
+  <div id="overview">
     <p class="mat-body">{{tunes.length}} tunes</p>
     <cdk-virtual-scroll-viewport class="search-result-viewport">
-        <table>
-            <tbody>
-                <tr class="tune-preview" *cdkVirtualFor="let tune of tunes; templateCacheSize: 0">
-                    <td class="tune-link tune-title">
-                        <div><span class="tune-link mat-body" (click)="navigateToTune(tune)">{{tune.title}}</span></div>
-                        <div class="mat-small">{{getBookName(tune)}} #{{tune.id}}</div>
-                        <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
-                        <div class="mat-small" *ngIf="hasTags(tune)">Tags: {{getTags(tune)}}</div>
-                    </td>
-                    <td class="tune-link" (click)="navigateToTune(tune)">
-                        <app-snippet-view [tune]="getAbc(tune)"></app-snippet-view>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+      <table>
+        <tbody>
+          <tr class="tune-preview" *cdkVirtualFor="let tune of tunes; templateCacheSize: 0">
+            <td class="tune-link tune-title">
+              <div><span class="tune-link mat-body" (click)="navigateToTune(tune)">{{tune.title}}</span></div>
+              <div class="mat-small">{{getBookName(tune)}} #{{tune.id}}</div>
+              <div class="mat-small">{{getRhythmAndKey(tune)}}</div>
+              @if (hasTags(tune)) {
+                <div class="mat-small">Tags: {{getTags(tune)}}</div>
+              }
+            </td>
+            <td class="tune-link" (click)="navigateToTune(tune)">
+              <app-snippet-view [tune]="getAbc(tune)"></app-snippet-view>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </cdk-virtual-scroll-viewport>
-</div>
+  </div>
+}

@@ -1,22 +1,24 @@
 <h1 mat-dialog-title>Add to repertoire</h1>
 <div mat-dialog-content class="form-container">
-    <mat-form-field>
-        <mat-label>Repertoire</mat-label>
-        <input type="text" matInput [formControl]="repertoire" [matAutocomplete]="auto" >
-    </mat-form-field>
+  <mat-form-field>
+    <mat-label>Repertoire</mat-label>
+    <input type="text" matInput [formControl]="repertoire" [matAutocomplete]="auto" >
+  </mat-form-field>
 
-    <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let rep of repertoires()" [value]="rep.name">
-            {{rep.name}}
-        </mat-option>
-    </mat-autocomplete>
-    <mat-form-field>
-        <input matInput name="added" [matDatepicker]="myDatepicker" [formControl]="added" placeholder="Added on">
-        <mat-datepicker #myDatepicker></mat-datepicker>
-        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
-    </mat-form-field>
+  <mat-autocomplete #auto="matAutocomplete">
+    @for (rep of repertoires(); track rep) {
+      <mat-option [value]="rep.name">
+        {{rep.name}}
+      </mat-option>
+    }
+  </mat-autocomplete>
+  <mat-form-field>
+    <input matInput name="added" [matDatepicker]="myDatepicker" [formControl]="added" placeholder="Added on">
+    <mat-datepicker #myDatepicker></mat-datepicker>
+    <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+  </mat-form-field>
 </div>
 <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Cancel</button>
-    <button mat-button [mat-dialog-close]="selection()" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="selection()" cdkFocusInitial>Ok</button>
 </div>

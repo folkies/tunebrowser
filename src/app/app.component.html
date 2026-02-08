@@ -1,43 +1,55 @@
-<mat-toolbar color="primary" *ngIf="toolbarVisible">
-    <button mat-icon-button (click)="snav.toggle()" *ngIf="isHandset">
+@if (toolbarVisible) {
+  <mat-toolbar color="primary">
+    @if (isHandset) {
+      <button mat-icon-button (click)="snav.toggle()">
         <mat-icon>menu</mat-icon>
-    </button>
+      </button>
+    }
     <h1 class="irish">Tune Browser</h1>
-</mat-toolbar>
+  </mat-toolbar>
+}
 <mat-sidenav-container class="full-height" >
-    <mat-sidenav #snav  [mode]="sidenavMode()" [opened]="!isHandset">
-        <mat-nav-list>
-            <a mat-list-item routerLink="/search" (click)="onClick()">
-                <mat-icon>search</mat-icon> <span class="nav-caption">Search</span>
-            </a>
-            <a mat-list-item routerLink="/record" (click)="onClick()">
-                <mat-icon>mic</mat-icon> <span class="nav-caption">Recognize</span>
-            </a>
-            <a mat-list-item routerLink="/books" (click)="onClick()">
-                <mat-icon>list</mat-icon> <span class="nav-caption">Browse</span>
-            </a>
-            <a mat-list-item routerLink="/practice" (click)="onClick()" *ngIf="signedIn">
-                <mat-icon>music_note</mat-icon> <span class="nav-caption">Practice</span>
-            </a>
-            <a mat-list-item routerLink="/repertoire" (click)="onClick()" *ngIf="signedIn">
-                <mat-icon>work</mat-icon> <span class="nav-caption">Repertoire</span>
-            </a>
-            <a mat-list-item routerLink="/login" (click)="onClick()" *ngIf="!signedIn">
-                <mat-icon>exit_to_app</mat-icon> <span class="nav-caption">Log in</span>
-            </a>
-            <a mat-list-item routerLink="/logout" (click)="onClick()" *ngIf="signedIn">
-                <mat-icon>cancel</mat-icon> <span class="nav-caption">Log out</span>
-            </a>
-            <a mat-list-item routerLink="/about" (click)="onClick()">
-                <mat-icon>info</mat-icon> <span class="nav-caption">About</span>
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content cdkScrollable>
-        <div>
-            <div class="main-content">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-    </mat-sidenav-content>
+  <mat-sidenav #snav  [mode]="sidenavMode()" [opened]="!isHandset">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/search" (click)="onClick()">
+        <mat-icon>search</mat-icon> <span class="nav-caption">Search</span>
+      </a>
+      <a mat-list-item routerLink="/record" (click)="onClick()">
+        <mat-icon>mic</mat-icon> <span class="nav-caption">Recognize</span>
+      </a>
+      <a mat-list-item routerLink="/books" (click)="onClick()">
+        <mat-icon>list</mat-icon> <span class="nav-caption">Browse</span>
+      </a>
+      @if (signedIn) {
+        <a mat-list-item routerLink="/practice" (click)="onClick()">
+          <mat-icon>music_note</mat-icon> <span class="nav-caption">Practice</span>
+        </a>
+      }
+      @if (signedIn) {
+        <a mat-list-item routerLink="/repertoire" (click)="onClick()">
+          <mat-icon>work</mat-icon> <span class="nav-caption">Repertoire</span>
+        </a>
+      }
+      @if (!signedIn) {
+        <a mat-list-item routerLink="/login" (click)="onClick()">
+          <mat-icon>exit_to_app</mat-icon> <span class="nav-caption">Log in</span>
+        </a>
+      }
+      @if (signedIn) {
+        <a mat-list-item routerLink="/logout" (click)="onClick()">
+          <mat-icon>cancel</mat-icon> <span class="nav-caption">Log out</span>
+        </a>
+      }
+      <a mat-list-item routerLink="/about" (click)="onClick()">
+        <mat-icon>info</mat-icon> <span class="nav-caption">About</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content cdkScrollable>
+    <div>
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
