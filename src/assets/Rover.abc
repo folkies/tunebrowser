@@ -1357,10 +1357,10 @@ R: jig
 M: 6/8
 L: 1/8
 K: Gmaj
-|:BA|GED GBA|GED G2A|GED GAB|dBA B/2c/2BA|
-GED GAB|def g2a|bag e/2f/2ge|dBG A:|
-|:Bc|~d3 edB|def gfe|~d3 edB|dBG ABc|
-~d3 edB|def g2a|bag e/2f/2ge|dBG A:| 
+|:"G"GED GBA|GED G2A|GED GAB|"D"dBA B2A|
+"G"GED GAB|"Em"def g2a|"D"bag e/f/ge|1 "G"dBG "D"ABA:|2 "G"dBG "D"ABc||
+|:"G"~d3 edB|"D"def gfe|"G"~d3 edB|"D"dBA ABc|
+"G"~d3 edB|"D"def "Em"g2a|"G"bag "Em"e/f/ge|1 "G"dBG "D"ABc:|2 "G"dBG "D"ABA||
 
 X: 115
 T: Rory MacLeod
@@ -1830,6 +1830,7 @@ e3 ede fef dfa|1baf afe (d3 d2)e:|2baf afe (d3 d2)|]
 
 X: 154
 T: The Rose In The Garden
+T: Ah, surely!
 R: reel
 M: C|
 L: 1/8
@@ -2909,7 +2910,7 @@ R: jig
 M: 6/8
 L: 1/8
 K: Emin
-|:~G3 G2 A|BGD ~E3|DGB dD/G/d|edB def|
+|:~G3 G2 d|BGD ~E3|DGB dBd|edB def|
 ~g3 ged|edg edB|~e3 edB|1 gdB AdB:|2 gdB ABd||
 ~e3 edc|ded d2 e|dBG GBd|edB AFD|GBd ~g3|ged edB|~e3 edB|gdB ABd|
 ~c3 cBA|Bde d2 e|dBG GBd|edB AFD|GBd ~g3|ged edB|~e3 edB|gdB AdB|| 
@@ -2954,7 +2955,7 @@ K: Dmix
 |:"G"FDFG A3B|"C"cAdB cAGB|"D"Add^c d2de|fde^c dcAG|
 "G"FDFG A3B|"C"cAdB cAGB|"D"Add^c ABAG|1 "D"EFGE FDD2:|2 "D"EFGE FDD2||
 |:"D"f2eg fde^c|Add^c Adde|f2eg fde^c|"C"AGAB c3d|
-"G"eaag efge|dfed cAGB|"D"Add^c ABAG|1 "D"EFGE FDD2:|2 "D"EFGE FDD2|| 
+"G"eaag efge|dfed cAGB|"D"Add^c ABAG|1 "D"EFGE FDD2:|2 "D"EFGE FDDE|| 
 
 X: 251
 T: Return From Fingal
@@ -3125,7 +3126,7 @@ L: 1/8
 K: Dmaj
 |:FG|"D"AFDE FEDF|"D"(3ABA "C"GB "D"AFD2|"D"fedf "A"edce|"D"dBAB "C"=cAGB|
 "D"AFDE FEDF|"D"(3ABA "C"GB "D"AFD2|"D"fedB "A"ABAG|"D"F2D2 D2:|
-|:fg|"D"afdf "A"g2fe|"D"dfed "G"BAFG|"D"(3ABA FA BAFA|"D"(3ABA FA BAFg|
+|:fg|"D"afdf "A"g2fe|"D"dfed "G"BAFG|"D"(3ABA FA BAFA|"D"(3ABA FA BAfg|
 "D"afdf "A"g2fe|"D"dfed "G"BAFG|"D"(3ABA AF "A"GBAG|"D"F2D2 D2:| 
 
 X: 266
@@ -3561,3 +3562,62 @@ f|"Em"g2e ege|Beg bag|"D"f2d dcd|AFA def|
 "Em"g2e ege|Beg bag|"D"fed faf|"Em"ged e2f|
 "Em"g2e ege|Beg bag|"D"f2d dcd|AFA def|
 "Em"g2e fed|"G"Bec dfe|"D"dBG FGA|"Em"BGE E2A|| 
+
+X: 301
+T: The Broken Pledge
+R: reel
+M: C|
+L: 1/8
+K: Ddor
+|:"Dm"dcAG ADDB|"C"cAGF ECCE|"Dm"DEFG Addc|"Am"AcGc Adfe|
+"Dm"dcAG A2dB|"C"cAGF ECCE|"Dm"DEFG Addc|"Am"AcGc "Dm"ADD2:|
+|:"Dm" dcAG Acde|"F"fAdf "Am"ecAB|"C"cAGE GAcd|"C"ecc2 "Am"eage|
+"Dm"dcAG Acde|"F"fAdf "Am"ecAG|"F"F2FE FGAB|"Am"cAGE "Dm"FDD2:| 
+
+X: 302
+T: The Humours Of Glynn
+R: waltz
+M: 3/4
+L: 1/8
+K: Dmaj
+(3ABc|:"D"d2 dc BA|Bd F2 A2|f2 fg fe|d3FA2|
+d2 dc BA|Bd F2 AF|"A"E2 F2 A2|"G"B4 (3ABc|
+"D"d2 dc BA|Bd F2 A2|f2 fg fe|d3 F A2|
+"G"G2 BG BG|"D"F2 A2 F2|"A"E2 F2 A2|1 "G"B4 (3ABc:|2 "G"B4 A2||
+|:"D"d2 d2 d2|~f2 d2 d2|"A"~e2 d2 d2|"D"~f2 d2 d2|
+"G"gf ef ge|"D"fd Bc dB|A2 F2 A2|"G"B4 (3ABc|
+"D"d2 f2 a2|"G"b4 b2|"D"ag fg ab|a4 f2|
+"G"gf ef ge|"D"fd Bc dB|A2 F2 A2|1 "G"B4 A2:|2 "G"B4 (3ABc|| 
+
+X: 303
+T: The Flowing Bowl
+R: reel
+M: C|
+L: 1/8
+K: Dmaj
+gfed cA A2|cAdA cA A2|gfed cA A2|fage d2ef|
+gfed cA A2|cAdA cA A2|gfed cA A2|fage dABc||
+df f2 af f2|dfaf gece|df f2 af f2|g3e cABc|
+df f2 af f2|dfaf gece|f3d g3e|fage d2 ef|| 
+
+X: 304
+T: The Woman Of The House
+R: reel
+M: C|
+L: 1/8
+K: Gmaj
+|:DBBA B2BA|GABd eBdB|(3AAA GB A2Bd|eB B2 gedB|
+DBBA B2BA|GABd eBdB|GABG (3AAA GA|BGAG EGGE:|
+|:f2fd edBd|egfd edBd|f2fd edBd|eaag a2 ag|
+f2fd edBd|g2ge dcBA|GABG (3AAA GA|BGAG EGG2:| 
+
+X: 305
+T: Kevin McHugh's
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+|:A|"G"B2 d ded|"G"BAB G2B|"D"AGE DEG|"C"AGE DGA|
+"G"B2 d ded|"G"BAB G2B|"D"AGE "C"DEG|"D"ABA "G"G2:|
+|:A|"G"B2 G GAB|"C"c2c ABc|"G"B2G GAB|"D"ABc "C"d2 c|
+"G"B2G GAB|"C"cdc "G"BcB|"D"AGE "C"DEG|"D"ABA "G"G2:| 
