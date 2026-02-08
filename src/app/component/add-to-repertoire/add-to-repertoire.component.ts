@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
@@ -15,17 +15,15 @@ export interface RepertoireSelection {
     standalone: false
 })
 export class AddToRepertoireComponent implements OnInit {
+    private dialogRef = inject<MatDialogRef<AddToRepertoireComponent>>(MatDialogRef);
+    private repertoireRepository = inject(RepertoireRepository);
+
 
     added: UntypedFormControl = new UntypedFormControl(new Date());
 
     repertoire: UntypedFormControl = new UntypedFormControl();
 
     private repertoireCollection: RepertoireCollection;
-
-    constructor(
-        private dialogRef: MatDialogRef<AddToRepertoireComponent>,
-        private repertoireRepository: RepertoireRepository) {
-    }
 
     async ngOnInit() {
         this.repertoireCollection = await this.repertoireRepository.load();        

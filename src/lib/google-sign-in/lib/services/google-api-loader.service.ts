@@ -1,4 +1,4 @@
-import { Inject, Injectable, InjectionToken } from '@angular/core';
+import { Injectable, InjectionToken, inject } from '@angular/core';
 import { forkJoin, Observable, ReplaySubject } from 'rxjs';
 import { GoogleApiClientConfig } from '../config/google-api.config';
 import { GoogleSignInLoaderService } from './google-sign-in-loader.service';
@@ -11,6 +11,8 @@ const GAPI_URL = 'https://apis.google.com/js/api.js';
 
 @Injectable()
 export class GoogleApiLoaderService {
+    private gsiLoader = inject(GoogleSignInLoaderService);
+
 
     private client: TokenClient;
 
@@ -18,8 +20,9 @@ export class GoogleApiLoaderService {
     private gapiLoaded = new ReplaySubject<boolean>(1);
 
 
-    constructor(@Inject(GSI_CONFIG) config: GoogleApiClientConfig,
-        private gsiLoader: GoogleSignInLoaderService) {
+    constructor() {
+        const config = inject<GoogleApiClientConfig>(GSI_CONFIG);
+
 
         this.loadGapi();
 

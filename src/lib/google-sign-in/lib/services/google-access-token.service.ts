@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService } from './google-api-loader.service';
 
@@ -8,13 +8,15 @@ const PREFERRED_ACCOUNT = 'preferredAccount';
 
 @Injectable()
 export class GoogleAccessTokenService {
+    private googleApiLoader = inject(GoogleApiLoaderService);
+
 
     private accessToken: string;
     private tokenClient: TokenClient;
 
     readonly accessTokenSource = new ReplaySubject<string>(1);
 
-    constructor(private googleApiLoader: GoogleApiLoaderService) {
+    constructor() {
         this.googleApiLoader.onClientLoaded().subscribe((client) => this.checkStoredAccessToken(client));
     }
     private checkStoredAccessToken(client: TokenClient): void {

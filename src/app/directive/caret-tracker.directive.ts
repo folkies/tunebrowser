@@ -1,4 +1,4 @@
-import { AfterViewInit, Directive, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, EventEmitter, HostListener, Output, inject } from '@angular/core';
 
 /**
  * Event emitted when the caret position changes in a text area or text input field.
@@ -20,15 +20,14 @@ export interface ICaret {
     standalone: false
 })
 export class CaretTrackerDirective implements AfterViewInit {
+    private element = inject(ElementRef);
+
     private $element: HTMLElement;
 
     /**
      * Emitted when the caret position is updated after a mouse or keyboard event.
      */
     @Output() caret = new EventEmitter<ICaret>();
-
-    constructor(private element: ElementRef) {
-    }
 
     ngAfterViewInit() {
         this.$element = this.element.nativeElement;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IndexEntry } from 'src/app/model/index-entry';
 import { Repertoire, RepertoireCollection, RepertoireItem } from 'src/app/model/repertoire';
@@ -17,6 +17,12 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
     standalone: false
 })
 export class PracticeComponent {
+    private snackBar = inject(MatSnackBar);
+    private repertoireRepository = inject(RepertoireRepository);
+    private googleAuth = inject(GoogleAuthService);
+    private practiceService = inject(PracticeService);
+    private index = inject(TuneBookIndex);
+
     /** Today's practice assignment (intially undefined). */
     assignment: RepertoireItem[];
 
@@ -31,12 +37,7 @@ export class PracticeComponent {
     titleWithoutNumber = titleWithoutNumber;
     private repertoireCollection: RepertoireCollection;
 
-    constructor(
-        private snackBar: MatSnackBar,
-        private repertoireRepository: RepertoireRepository,
-        private googleAuth: GoogleAuthService,
-        private practiceService: PracticeService,
-        private index: TuneBookIndex) {
+    constructor() {
         this.googleAuth.authState.subscribe(() => this.loadRepertoires());
     }
 

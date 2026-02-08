@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Repertoire, RepertoireCollection, RepertoireItem, TuneReference } from '../model/repertoire';
 import { GoogleDriveService } from './google-drive.service';
 import { RepertoireSelection } from '../component/add-to-repertoire/add-to-repertoire.component';
@@ -60,6 +60,8 @@ export class RepertoireItemImpl implements RepertoireItem {
  */
 @Injectable()
 export class RepertoireRepository {
+    private googleDrive = inject(GoogleDriveService);
+
     /** Google Drive file identity of repertoire collection. */
     collectionFileId: string;
 
@@ -67,9 +69,6 @@ export class RepertoireRepository {
 
     /** Loaded repertoire collection. */
     private repertoireCollection: RepertoireCollection;
-
-    constructor(private googleDrive: GoogleDriveService) {
-    }
 
     /**
      * Loads all repertoires.

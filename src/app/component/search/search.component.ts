@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, inject } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { csvToArray } from 'src/app/service/tags';
@@ -35,6 +35,10 @@ export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy 
     standalone: false
 })
 export class SearchComponent implements OnInit {
+    private tuneBookIndex = inject(TuneBookIndex);
+    private route = inject(ActivatedRoute);
+    private router = inject(Router);
+
 
     query: string;
     rhythm: string;
@@ -47,12 +51,6 @@ export class SearchComponent implements OnInit {
 
     private indexReady = false;
     private queryParams: ParamMap;
-
-    constructor(
-        private tuneBookIndex: TuneBookIndex,
-        private route: ActivatedRoute,
-        private router: Router) {
-    }
 
     ngOnInit() {
         this.selectedBooks = [this.tuneBookIndex.defaultBook];

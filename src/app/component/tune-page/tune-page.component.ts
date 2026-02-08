@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -17,6 +17,15 @@ import { AddToRepertoireComponent, RepertoireSelection } from '../add-to-reperto
     standalone: false
 })
 export class TunePageComponent implements OnInit {
+    private index = inject(TuneBookIndex);
+    private googleAuth = inject(GoogleAuthService);
+    private pdfService = inject(PdfService);
+    private route = inject(ActivatedRoute);
+    private snackBar = inject(MatSnackBar);
+    private dialog = inject(MatDialog);
+    private collectionService = inject(TuneBookCollectionService);
+    private repertoireRepository = inject(RepertoireRepository);
+
 
     tune = '';
     allTags = '';
@@ -28,15 +37,7 @@ export class TunePageComponent implements OnInit {
     private bookId: string;
     private ref: string;
 
-    constructor(
-        private index: TuneBookIndex,
-        private googleAuth: GoogleAuthService,
-        private pdfService: PdfService,
-        private route: ActivatedRoute,
-        private snackBar: MatSnackBar,
-        private dialog: MatDialog,
-        private collectionService: TuneBookCollectionService,
-        private repertoireRepository: RepertoireRepository) {
+    constructor() {
 
         this.googleAuth.authState.subscribe(auth => {
             this.signedIn = !!auth;

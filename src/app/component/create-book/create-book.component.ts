@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
@@ -10,15 +10,13 @@ import { TuneBookDescriptor } from 'src/app/model/tunebook-collection';
     standalone: false
 })
 export class CreateBookComponent {
+    private snackBar = inject(MatSnackBar);
+    private googleDrive = inject(GoogleDriveService);
+    private tuneBookCollectionService = inject(TuneBookCollectionService);
+
     title: string;
     description: string;
     id: string;
-
-    constructor(
-        private snackBar: MatSnackBar, 
-        private googleDrive: GoogleDriveService, 
-        private tuneBookCollectionService: TuneBookCollectionService) {
-    }
 
     async createBook(): Promise<void> {
         const fileName = `${this.id}.abc`;

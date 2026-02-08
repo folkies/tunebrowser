@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { getLogger, Logger } from '@log4js2/core';
 import { ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService, GoogleAuthService } from '../../lib/google-sign-in';
@@ -13,6 +13,9 @@ export interface FileReference {
 
 @Injectable()
 export class GoogleDriveService {
+    private googleApiLoader = inject(GoogleApiLoaderService);
+    private googleAuth = inject(GoogleAuthService);
+
 
     readonly driveApiLoaded = new ReplaySubject<boolean>(1);
 
@@ -20,8 +23,7 @@ export class GoogleDriveService {
 
     private signedIn: boolean;
 
-    constructor(private googleApiLoader: GoogleApiLoaderService,
-        private googleAuth: GoogleAuthService) {
+    constructor() {
         this.googleAuth.authState.subscribe(auth => {
             this.signedIn = !!auth;
         });

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { RepertoireItem, RepertoireCollection, Repertoire } from 'src/app/model/repertoire';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
@@ -25,6 +25,10 @@ export interface RepertoireTune {
     standalone: false
 })
 export class RepertoireComponent implements OnInit {
+    private dialog = inject(MatDialog);
+    private repertoireRepository = inject(RepertoireRepository);
+    private index = inject(TuneBookIndex);
+
 
     @ViewChild(MatSort, { static: true })
     sort: MatSort;
@@ -39,12 +43,6 @@ export class RepertoireComponent implements OnInit {
     currentRepertoire: Repertoire;
 
     private repertoireCollection: RepertoireCollection;
-
-    constructor(
-        private dialog: MatDialog,
-        private repertoireRepository: RepertoireRepository,
-        private index: TuneBookIndex) {
-    }
 
     ngOnInit(): void {
         this.index.allReady.subscribe(() => this.loadRepertoire());

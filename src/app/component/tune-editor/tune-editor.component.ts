@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import abcjs, { TuneBook } from 'abcjs';
@@ -15,6 +15,13 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
     standalone: false
 })
 export class TuneEditorComponent implements AfterViewInit {
+    private index = inject(TuneBookIndex);
+    private collectionService = inject(TuneBookCollectionService);
+    private googleDrive = inject(GoogleDriveService);
+    private pdfService = inject(PdfService);
+    private route = inject(ActivatedRoute);
+    private snackBar = inject(MatSnackBar);
+
     private abc = '';
     private bookId: string;
     private bookRef: TuneBookReference;
@@ -31,13 +38,7 @@ export class TuneEditorComponent implements AfterViewInit {
     @ViewChild('notation', { static: false })
     div: ElementRef;
 
-    constructor(
-        private index: TuneBookIndex,
-        private collectionService: TuneBookCollectionService,
-        private googleDrive: GoogleDriveService,
-        private pdfService: PdfService,
-        private route: ActivatedRoute,
-        private snackBar: MatSnackBar) {
+    constructor() {
 
         this.route.paramMap.subscribe(paramMap => {
             this.bookId = paramMap.get('id');

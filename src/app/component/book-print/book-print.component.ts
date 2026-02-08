@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PdfService } from 'src/app/service/pdf-service';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
@@ -9,14 +9,15 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
     standalone: false
 })
 export class BookPrintComponent {
+    private route = inject(ActivatedRoute);
+    private router = inject(Router);
+    private index = inject(TuneBookIndex);
+    private pdfService = inject(PdfService);
+
 
     bookId: string;
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router,
-        private index: TuneBookIndex,
-        private pdfService: PdfService) {
+    constructor() {
 
             this.index.tuneBookReady.subscribe(event => this.onReady(event));
             this.route.paramMap.subscribe(paramMap => {

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, NgZone } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, NgZone, inject } from '@angular/core';
 import abcjs from 'abcjs';
 import { extractSnippet } from 'src/app/service/abc-util';
 
@@ -8,6 +8,8 @@ import { extractSnippet } from 'src/app/service/abc-util';
     standalone: false
 })
 export class SnippetViewComponent implements AfterViewInit, OnChanges {
+    private zone = inject(NgZone);
+
 
     @Input()
     tune = '';
@@ -16,9 +18,6 @@ export class SnippetViewComponent implements AfterViewInit, OnChanges {
     div: ElementRef;
 
     private rendered = false;
-
-    constructor(private zone: NgZone) {        
-    }
 
     ngAfterViewInit() {
         this.renderSnippet();

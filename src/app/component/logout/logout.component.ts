@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 
@@ -11,11 +11,12 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
     standalone: false
 })
 export class LogoutComponent {
+    private route = inject(ActivatedRoute);
+    private router = inject(Router);
+    private googleAuth = inject(GoogleAuthService);
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router,
-        private googleAuth: GoogleAuthService) {
+
+    constructor() {
 
         this.route.url.subscribe(() => this.onAction());
     }

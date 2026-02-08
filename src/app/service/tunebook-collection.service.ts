@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { TuneBook } from 'abcjs';
 import { Observable, ReplaySubject } from 'rxjs';
 import { TuneBookCollection, TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
@@ -10,6 +10,10 @@ import { TuneBookLoaderService } from './tunebook-loader.service';
 
 @Injectable()
 export class TuneBookCollectionService {
+    private websiteLoader = inject(TuneBookLoaderService);
+    private driveLoader = inject(GoogleDriveTunebookLoaderService);
+    private index = inject(TuneBookIndex);
+
     private loaders: Loader[];
     private collection: TuneBookCollection = { books: [] };
     private loadedBookIds: string[] = [];
@@ -17,10 +21,7 @@ export class TuneBookCollectionService {
     private collectionLoadedSource = new ReplaySubject<string>(1);
     collectionLoaded: Observable<string>;
 
-    constructor(
-        private websiteLoader: TuneBookLoaderService,
-        private driveLoader: GoogleDriveTunebookLoaderService,
-        private index: TuneBookIndex) {
+    constructor() {
         this.loaders = [this.websiteLoader, this.driveLoader];
         this.collectionLoaded = this.collectionLoadedSource.asObservable();
     }

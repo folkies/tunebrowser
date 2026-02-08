@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { Recorder } from 'src/app/service/transcription/recorder';
@@ -9,13 +9,14 @@ import { Recorder } from 'src/app/service/transcription/recorder';
     standalone: false
 })
 export class RecordComponent {
+    private router = inject(Router);
+    private recorder = inject(Recorder);
+
 
     progress: number;
     progressbarValue: number;
 
-    constructor(
-        private router: Router,
-        private recorder: Recorder) {
+    constructor() {
 
         // using this.progress directly in mat-progress-bar does not work in Firefox
         this.recorder.progress.subscribe(progress => this.progress = progress);

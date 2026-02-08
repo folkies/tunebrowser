@@ -1,9 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GoogleAccessTokenService } from './google-access-token.service';
 
 @Injectable()
 export class GoogleAuthService {
+    private accessTokenService = inject(GoogleAccessTokenService);
+
     private signedIn: boolean;
     private signInPending: boolean;
 
@@ -11,8 +13,7 @@ export class GoogleAuthService {
         return this.accessTokenService.accessTokenSource;
     }
 
-    constructor(
-        private accessTokenService: GoogleAccessTokenService) {
+    constructor() {
 
         this.authState.subscribe(auth => {
             this.signedIn = !!auth;

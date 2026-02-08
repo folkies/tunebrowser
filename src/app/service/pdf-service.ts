@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 const printDirectives = `
@@ -16,9 +16,8 @@ const printDirectives = `
 
 @Injectable()
 export class PdfService {
+    private httpClient = inject(HttpClient);
 
-    constructor(private httpClient: HttpClient) {
-    }
 
     saveAsPdf(abc: string): void {
         this.httpClient.post('https://abc2pdf-vkhoermztq-ew.a.run.app/print', printDirectives + abc, { responseType: 'arraybuffer' })

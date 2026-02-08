@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { TuneBook } from 'abcjs';
 import { TuneBookCollection, TuneBookDescriptor } from "../model/tunebook-collection";
 import { TuneBookReference } from '../model/tunebook-reference';
@@ -10,11 +10,10 @@ const TUNEBOOK_COLLECTION = 'tunebook-collection.json';
 
 @Injectable()
 export class GoogleDriveTunebookLoaderService implements Loader {
+    private googleDrive = inject(GoogleDriveService);
+
 
     private collectionFileId: string;
-
-    constructor(private googleDrive: GoogleDriveService) {
-    }
 
     /**
      * Loads the tunebook from the given path.

@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/overlay';
-import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
+import { Component, NgZone, OnInit, ViewChild, inject } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { GoogleAccessTokenService } from 'src/lib/google-sign-in/lib/services/google-access-token.service';
 import { GoogleDriveService } from './service/google-drive.service';
@@ -13,6 +13,13 @@ import { TuneBookCollectionService } from './service/tunebook-collection.service
     standalone: false
 })
 export class AppComponent implements OnInit {
+    private breakpointObserver = inject(BreakpointObserver);
+    private collectionService = inject(TuneBookCollectionService);
+    private accessTokenService = inject(GoogleAccessTokenService);
+    private googleDriveService = inject(GoogleDriveService);
+    private zone = inject(NgZone);
+    private scroll = inject(ScrollDispatcher);
+
 
     @ViewChild('snav', { static: false })
     sidenav: MatSidenav;
@@ -23,13 +30,7 @@ export class AppComponent implements OnInit {
 
     private lastOffset: number;
 
-    constructor(
-        private breakpointObserver: BreakpointObserver,
-        private collectionService: TuneBookCollectionService,
-        private accessTokenService: GoogleAccessTokenService,
-        private googleDriveService: GoogleDriveService,
-        private zone: NgZone,
-        private scroll: ScrollDispatcher) {
+    constructor() {
 
         this.breakpointObserver.observe([
             Breakpoints.Handset

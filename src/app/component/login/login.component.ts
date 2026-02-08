@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, NgZone, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 
@@ -11,14 +11,15 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
     standalone: false
 })
 export class LoginComponent {
+    private route = inject(ActivatedRoute);
+    private router = inject(Router);
+    private zone = inject(NgZone);
+    private googleAuth = inject(GoogleAuthService);
+
 
     private loginPending = false;
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router,
-        private zone: NgZone,
-        private googleAuth: GoogleAuthService) {
+    constructor() {
 
         this.route.url.subscribe(_ => this.onAction());
         this.googleAuth.authState.subscribe(_ => {

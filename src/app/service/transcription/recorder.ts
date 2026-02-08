@@ -1,4 +1,4 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable, NgZone, inject } from '@angular/core';
 import { Remote } from 'comlink';
 import { BehaviorSubject, Observable, Subject, Subscription, timer } from 'rxjs';
 import { AudioContextProvider } from './audio-context-provider';
@@ -13,6 +13,10 @@ const DEFAULT_BUFFER_SIZE = 4096;
 
 @Injectable()
 export class Recorder {
+    private audioContextProvider = inject(AudioContextProvider);
+    private transcriberProvider = inject(TranscriberProvider);
+    private zone = inject(NgZone);
+
     private status: Status;
     private audioContext: AudioContext;
     private timeRecorded = 0;
@@ -43,10 +47,7 @@ export class Recorder {
     get sampleRate() { return this.audioContext.sampleRate; }
     get progressPercentage() { return 100 * this.timeRecorded / (this.blankTime + this.sampleTime); }
 
-    constructor(
-        private audioContextProvider: AudioContextProvider,
-        private transcriberProvider: TranscriberProvider,
-        private zone: NgZone) {
+    constructor() {
         this.transcriber = this.transcriberProvider.transcriber();
 
         this.status = Status.STOPPED;

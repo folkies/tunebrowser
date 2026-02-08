@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 import { TuneBookReference } from '../../model/tunebook-reference';
@@ -9,13 +9,15 @@ import { TuneBookReference } from '../../model/tunebook-reference';
     standalone: false
 })
 export class BooksListComponent {
+    private collectionService = inject(TuneBookCollectionService);
+    private googleAuth = inject(GoogleAuthService);
+
 
     books: TuneBookReference[] = [];
 
     signedIn = false;
 
-    constructor(private collectionService: TuneBookCollectionService,
-        private googleAuth: GoogleAuthService) {
+    constructor() {
         this.googleAuth.authState.subscribe(auth => {
             this.signedIn = !!auth;
         });
