@@ -40,8 +40,8 @@ html, body {
     height: 100%;
     overflow: hidden;
     --mat-option-label-text-tracking: normal;
-    --mdc-list-list-item-label-text-tracking: normal;
-    --mdc-protected-button-label-text-tracking: normal;
+    --mat-list-list-item-label-text-tracking: normal;
+    --mat-button-protected-label-text-tracking: normal;
  }
 
 .search-panel mat-form-field, .tags-form mat-form-field {
