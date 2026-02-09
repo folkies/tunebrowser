@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { TuneBook } from 'abcjs';
 import { Observable, ReplaySubject } from 'rxjs';
-import { TuneBookCollection, TuneBookDescriptor, TuneDescriptor } from '../model/tunebook-collection';
+import { TuneBookCollection, TuneBookDescriptor, mergeBooks } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
 import { GoogleDriveTunebookLoaderService } from './google-drive-tunebook-loader.service';
 import { Loader } from './loader';
@@ -105,58 +105,11 @@ export class TuneBookCollectionService {
 
     loadAndMergeCollections(target: TuneBookCollection, mixin: TuneBookCollection): void {
         mixin.books.forEach(mixinBook => { 
-            const mergedBook = this.mergeBooks(target.books, mixinBook);
+            const mergedBook = mergeBooks(target.books, mixinBook);
             this.loadBook(mergedBook);
         });
     }
 
-    mergeCollections(target: TuneBookCollection, mixin: TuneBookCollection): void {
-        mixin.books.forEach(mixinBook => this.mergeBooks(target.books, mixinBook));
-    }
-
-    private mergeBooks(targetBooks: TuneBookDescriptor[], mixinBook: TuneBookDescriptor): TuneBookDescriptor {
-        const targetBook = targetBooks.find(book => book.id === mixinBook.id);
-        if (targetBook === undefined) {
-            targetBooks.push(mixinBook);
-            return mixinBook;
-        } else if (mixinBook.tunes) {
-            if (targetBook.tunes === undefined) {
-                targetBook.tunes = mixinBook.tunes;
-            } else {
-                this.mergeTunes(targetBook.tunes, mixinBook.tunes);
-            }
-        }
-        return targetBook;
-    }
-
-    private mergeTunes(targetTunes: TuneDescriptor[], mixinTunes: TuneDescriptor[]) {
-        mixinTunes.forEach(mixinTune => {
-            const targetTune = targetTunes.find(tune => tune.id === mixinTune.id);
-            if (targetTune === undefined) {
-                targetTunes.push(mixinTune);
-            } else {
-                this.mergeTune(targetTune, mixinTune);
-            }
-        });
-    }
-
-    private mergeTune(targetTune: TuneDescriptor, mixinTune: TuneDescriptor) {
-        if (targetTune.key === undefined) {
-            targetTune.key = mixinTune.key;
-        }
-
-        if (targetTune.rhythm === undefined) {
-            targetTune.rhythm = mixinTune.rhythm;
-        }
-
-        if (targetTune.tags === undefined) {
-            targetTune.tags = mixinTune.tags;
-        } else if (mixinTune.tags) {
-            const tags = new Set(targetTune.tags);
-            mixinTune.tags.forEach(tag => tags.add(tag));
-            targetTune.tags = Array.from(tags.keys());
-        }
-    }
 
     private addTagsToIndex(): void {
         for (const book of this.collection.books) {
