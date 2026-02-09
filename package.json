@@ -2,11 +2,10 @@
   "name": "folkies",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href=/tunebook/",
-    "test": "vitest run",
+    "test": "vitest run --silent",
     "metadata": "tsx src/app/service/metadata-extractor.ts",
     "lint": "ng lint",
     "e2e": "ng e2e",
