@@ -8,7 +8,6 @@
     "test": "vitest run --silent",
     "metadata": "tsx src/app/service/metadata-extractor.ts",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "test:watch": "vitest --watch"
   },
   "private": true,
