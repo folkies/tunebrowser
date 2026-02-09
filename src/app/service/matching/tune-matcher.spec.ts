@@ -1,6 +1,7 @@
 import { getLogger, Logger } from '@log4js2/core';
 import fs from 'fs';
 import { TuneMatcher } from "./tune-matcher-impl";
+import { describe, test } from 'vitest';
 
 describe('TuneMatcher', () => {
     const log: Logger = getLogger('TuneMatcherSpec');

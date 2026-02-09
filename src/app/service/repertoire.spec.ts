@@ -1,5 +1,6 @@
 import { reviveRepertoire } from "./repertoire-repository";
 import { Repertoire } from '../model/repertoire';
+import { describe, expect, test } from "vitest";
 
 describe('Repertoire', () => {
 

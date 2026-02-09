@@ -1,9 +1,11 @@
 import { TuneBook } from 'abcjs';
 import fs from 'fs';
-import { TuneBookIndex } from './tunebook-index';
+import { beforeAll, describe, expect, test } from 'vitest';
+
+import { tagQuery, titleQuery } from '../model/tune-query';
 import { TuneBookDescriptor } from '../model/tunebook-collection';
 import { TuneBookReference } from '../model/tunebook-reference';
-import { titleQuery, tagQuery } from '../model/tune-query';
+import { TuneBookIndex } from './tunebook-index';
 
 describe('TuneBookIndex', () => {
     let tunebook: TuneBook;

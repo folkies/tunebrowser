@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { TuneBookBuilder } from './tunebook-builder';
+import { beforeEach, describe, expect, test } from 'vitest';
 
 const singleFileDir = '/home/hwellmann/tmp/tunes';
 const bookDir = '/home/hwellmann/tmp/ds';

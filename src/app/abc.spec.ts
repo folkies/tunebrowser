@@ -1,5 +1,6 @@
+import { numberOfTunes, parseOnly, signature, TuneBook } from 'abcjs';
 import fs from 'fs';
-import { numberOfTunes, TuneBook, parseOnly, signature } from 'abcjs';
+import { describe, expect, test } from 'vitest';
 
 function includeNumberInTitle(abc: string): string {
     const match = abc.match(/^T:(\s*)(\d+[a-z]?\s*)/m);

@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { minEditDistance } from "./edit-distance";
 
 describe('Edit distance', () => {

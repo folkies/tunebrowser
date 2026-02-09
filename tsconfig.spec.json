@@ -6,7 +6,6 @@
       "gapi",
       "gapi.auth2",
       "gapi.client.drive",
-      "jest",
       "node"
     ]
 },

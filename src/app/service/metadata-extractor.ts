@@ -1,4 +1,5 @@
 import { extractAllMetadata } from './abc-util';
+import { describe, test } from 'vitest'
 import { TuneBookDescriptor, TuneBookCollection } from '../model/tunebook-collection';
 import { TuneBookCollectionService } from './tunebook-collection.service';
 import fs from 'fs';
@@ -15,7 +16,7 @@ function mergeMetadata(targetCollection: TuneBookCollection, book: TuneBookDescr
             uri: ''
         };
         const mixinCollection: TuneBookCollection = { books: [mixin]};
-        const service = new TuneBookCollectionService(undefined, undefined, undefined);
+        const service = new TuneBookCollectionService();
         service.mergeCollections(targetCollection, mixinCollection);
 }
 
