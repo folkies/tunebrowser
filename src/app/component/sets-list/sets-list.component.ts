@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { MatMenuTrigger, MatMenu, MatMenuItem } from '@angular/material/menu';
 import { CreateSetDialogComponent } from '../create-set-dialog/create-set-dialog.component';
 import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-repertoire-item.component';
+import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-sets-list',
@@ -39,6 +40,7 @@ import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-
 export class SetsListComponent implements OnInit {
     private dialog = inject(MatDialog);
     private repository = inject(TuneSetRepository);
+    private index = inject(TuneBookIndex);
     private router = inject(Router);
 
     @ViewChild(MatSort, { static: true })
@@ -49,7 +51,7 @@ export class SetsListComponent implements OnInit {
     displayedColumns: string[] = ['name', 'tuneCount', 'created', 'modified', 'action'];
 
     async ngOnInit(): Promise<void> {
-        await this.loadSets();
+        this.index.allReady.subscribe(() => this.loadSets());
     }
 
     async loadSets(): Promise<void> {

@@ -2,10 +2,9 @@ import { Injectable, inject } from '@angular/core';
 import { TuneBook } from 'abcjs';
 import { TuneBookCollection, TuneBookDescriptor } from "../model/tunebook-collection";
 import { TuneBookReference } from '../model/tunebook-reference';
-import { GoogleDriveService } from './google-drive.service';
+import { GoogleDriveService, TUNE_FOLDER } from './google-drive.service';
 import { Loader } from './loader';
 
-const TUNE_FOLDER = 'Tune Browser';
 const TUNEBOOK_COLLECTION = 'tunebook-collection.json';
 
 @Injectable()

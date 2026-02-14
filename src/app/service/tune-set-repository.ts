@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable, inject } from '@angular/core';
 import { TuneSet, TuneSetCollection } from '../model/tune-set';
-import { GoogleDriveService } from './google-drive.service';
+import { GoogleDriveService, TUNE_FOLDER } from './google-drive.service';
 import { TuneReference } from '../model/repertoire';
 
-const TUNE_FOLDER = 'Tune Browser';
 const TUNE_SETS_FILE = 'tune-sets.json';
+export const MAX_TUNES_PER_SET = 5;
 
 /**
  * Reviver function for JSON.parse() to handle Date objects.
@@ -119,7 +119,7 @@ export class TuneSetRepository {
     async addTuneToSet(setId: string, tune: TuneReference): Promise<void> {
         await this.load();
         const set = this.tuneSetCollection.sets.find(s => s.id === setId);
-        if (set && set.tunes.length < 5) {
+        if (set && set.tunes.length < MAX_TUNES_PER_SET) {
             set.tunes.push(tune);
             set.modified = new Date();
             await this.save();

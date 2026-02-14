@@ -1,12 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
+import { MatButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
+import { IndexEntry } from 'src/app/model/index-entry';
 import { TuneSet } from 'src/app/model/tune-set';
 import { TuneSetRepository } from 'src/app/service/tune-set-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
-import { IndexEntry } from 'src/app/model/index-entry';
 import { TuneViewComponent } from '../tune-view/tune-view.component';
-import { MatButton } from '@angular/material/button';
-import { MatIcon } from '@angular/material/icon';
 
 interface TuneWithAbc {
     entry: IndexEntry;
@@ -33,8 +33,11 @@ export class SetViewComponent implements OnInit {
     tunesWithAbc: TuneWithAbc[] = [];
 
     async ngOnInit(): Promise<void> {
-        await this.index.allReady.toPromise();
-        const setId = this.route.snapshot.paramMap.get('id');
+        this.index.allReady.subscribe(() => this.loadSet());
+    }
+
+    private async loadSet(): Promise<void> {
+        const setId = this.route.snapshot.paramMap.get('id');        console.log('Set id from route', setId);
         if (setId) {
             this.set = await this.repository.getSet(setId);
             if (this.set) {

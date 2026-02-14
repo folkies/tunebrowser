@@ -4,7 +4,7 @@ import { ReplaySubject } from 'rxjs';
 import { GoogleApiLoaderService, GoogleAuthService } from '../../lib/google-sign-in';
 import { MultiPartBuilder } from './multipart-builder';
 
-const TUNE_FOLDER = 'Tune Browser';
+export const TUNE_FOLDER = 'Tune Browser';
 
 export interface FileReference {
     id: string;

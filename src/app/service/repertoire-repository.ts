@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable, inject } from '@angular/core';
 import { Repertoire, RepertoireCollection, RepertoireItem, TuneReference } from '../model/repertoire';
-import { GoogleDriveService } from './google-drive.service';
+import { GoogleDriveService, TUNE_FOLDER } from './google-drive.service';
 import { RepertoireSelection } from '../component/add-to-repertoire/add-to-repertoire.component';
 
-const TUNE_FOLDER = 'Tune Browser';
 const REPERTOIRE_COLLECTION = 'repertoire-collection.json';
 export const INTERVALS: number[] = [1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 6, 6, 15];
 
