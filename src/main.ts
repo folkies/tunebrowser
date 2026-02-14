@@ -43,6 +43,9 @@ import { PracticeComponent } from './app/component/practice/practice.component';
 import { RecordComponent } from './app/component/record/record.component';
 import { RepertoireComponent } from './app/component/repertoire/repertoire.component';
 import { SearchComponent } from './app/component/search/search.component';
+import { SetsListComponent } from './app/component/sets-list/sets-list.component';
+import { SetEditorComponent } from './app/component/set-editor/set-editor.component';
+import { SetViewComponent } from './app/component/set-view/set-view.component';
 import { TuneEditorComponent } from './app/component/tune-editor/tune-editor.component';
 import { TunePageComponent } from './app/component/tune-page/tune-page.component';
 import { TunesListComponent } from './app/component/tunes-list/tunes-list.component';
@@ -53,6 +56,7 @@ import { RestTuneMatcher } from './app/service/matching/rest-tune-matcher';
 import { PdfService } from './app/service/pdf-service';
 import { PracticeService } from './app/service/practice-service';
 import { RepertoireRepository } from './app/service/repertoire-repository';
+import { TuneSetRepository } from './app/service/tune-set-repository';
 import { AudioContextProvider } from './app/service/transcription/audio-context-provider';
 import { Recorder } from './app/service/transcription/recorder';
 import { TranscriberProvider } from './app/service/transcription/transcriber-provider';
@@ -86,6 +90,9 @@ const appRoutes: Routes = [
     { path: 'record', component: RecordComponent },
     { path: 'repertoire', component: RepertoireComponent },
     { path: 'search', component: SearchComponent },
+    { path: 'sets', component: SetsListComponent },
+    { path: 'set/:id', component: SetViewComponent },
+    { path: 'set/:id/edit', component: SetEditorComponent },
     { path: 'tune/:bookId/:ref', component: TunePageComponent },
     {
         path: '',
@@ -119,6 +126,7 @@ bootstrapApplication(AppComponent, {
         PracticeService,
         RepertoireRepository,
         RestTuneMatcher,
+        TuneSetRepository,
         { provide: RouteReuseStrategy, useClass: CustomReuseStrategy },
         TranscriberProvider,
         TuneBookCollectionService,

@@ -1,0 +1,60 @@
+<div class="set-editor-container" *ngIf="set">
+  <h2 class="mat-h2">Edit Set</h2>
+
+  <mat-form-field class="full-width">
+    <mat-label>Set Name</mat-label>
+    <input matInput [(ngModel)]="set.name" placeholder="Enter set name">
+  </mat-form-field>
+
+  <div class="tunes-section">
+    <h3 class="mat-h3">Tunes in Set ({{tunesInSet.length}}/5)</h3>
+
+    <mat-list>
+      @for (tune of tunesInSet; track tune.reference; let i = $index) {
+        <mat-list-item>
+          <div class="tune-item">
+            <span class="tune-title">{{i + 1}}. {{tune.entry.title}}</span>
+            <div class="tune-actions">
+              <button mat-icon-button (click)="moveTuneUp(i)" [disabled]="i === 0">
+                <mat-icon>arrow_upward</mat-icon>
+              </button>
+              <button mat-icon-button (click)="moveTuneDown(i)" [disabled]="i === tunesInSet.length - 1">
+                <mat-icon>arrow_downward</mat-icon>
+              </button>
+              <button mat-icon-button (click)="removeTune(i)" color="warn">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </mat-list-item>
+      }
+    </mat-list>
+
+    @if (canAddMore()) {
+      <div class="add-tune-section">
+        <h4 class="mat-h4">Add Tune</h4>
+        <mat-form-field class="full-width">
+          <mat-label>Search for a tune</mat-label>
+          <input 
+            matInput 
+            [(ngModel)]="searchText" 
+            (ngModelChange)="onSearchTextChange()"
+            [matAutocomplete]="auto"
+            placeholder="Type to search...">
+          <mat-autocomplete #auto="matAutocomplete">
+            @for (tune of filteredTunes; track tune) {
+              <mat-option (click)="addTune(tune)">
+                {{tune.title}} ({{tune.book}})
+              </mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+    }
+  </div>
+
+  <div class="actions">
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button mat-button color="primary" (click)="save()">Save</button>
+  </div>
+</div>

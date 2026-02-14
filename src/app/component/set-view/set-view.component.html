@@ -1,0 +1,30 @@
+<div class="set-view-container" *ngIf="set">
+  <div class="set-header">
+    <h2 class="mat-h2">{{set.name}}</h2>
+    <div class="header-actions">
+      <button mat-button (click)="editSet()">
+        <mat-icon>edit</mat-icon> Edit
+      </button>
+      <button mat-button (click)="backToList()">
+        <mat-icon>arrow_back</mat-icon> Back to Sets
+      </button>
+    </div>
+  </div>
+
+  <p class="mat-body set-info">{{tunesWithAbc.length}} tunes</p>
+
+  <div class="tunes-notation">
+    @for (tune of tunesWithAbc; track tune.entry; let i = $index) {
+      <div class="tune-section">
+        <h3 class="mat-h3">{{i + 1}}. {{tune.entry.title}}</h3>
+        <app-tune-view [tune]="tuneForDisplay(tune.abc)"></app-tune-view>
+      </div>
+    }
+  </div>
+
+  @if (tunesWithAbc.length === 0) {
+    <div class="empty-state">
+      <p class="mat-body">This set is empty. Click "Edit" to add tunes.</p>
+    </div>
+  }
+</div>

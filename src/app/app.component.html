@@ -30,6 +30,11 @@
           <mat-icon>work</mat-icon> <span class="nav-caption">Repertoire</span>
         </a>
       }
+      @if (signedIn) {
+        <a mat-list-item routerLink="/sets" (click)="onClick()">
+          <mat-icon>queue_music</mat-icon> <span class="nav-caption">Sets</span>
+        </a>
+      }
       @if (!signedIn) {
         <a mat-list-item routerLink="/login" (click)="onClick()">
           <mat-icon>exit_to_app</mat-icon> <span class="nav-caption">Log in</span>

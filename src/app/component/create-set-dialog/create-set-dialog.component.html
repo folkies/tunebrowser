@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Create New Set</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Set Name</mat-label>
+    <input matInput [(ngModel)]="setName" (keyup.enter)="onCreate()" placeholder="Enter set name">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" (click)="onCreate()" [disabled]="!setName.trim()">Create</button>
+</mat-dialog-actions>

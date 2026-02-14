@@ -1,0 +1,51 @@
+<div>
+  <div class="sets-header">
+    <h2 class="mat-h2">Tune Sets</h2>
+    <button mat-button color="primary" (click)="openCreateSetDialog()">
+      <mat-icon>add</mat-icon> New Set
+    </button>
+  </div>
+
+  <p class="mat-body">{{sets.length}} sets</p>
+
+  <table mat-table matSort [dataSource]="dataSource" class="sets-table">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let set">
+        <div class="set-link" (click)="viewSet(set)">{{set.name}}</div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tuneCount">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Tunes</th>
+      <td mat-cell *matCellDef="let set">{{set.tunes.length}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="created">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Created</th>
+      <td mat-cell *matCellDef="let set">{{set.created.toLocaleDateString()}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="modified">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Modified</th>
+      <td mat-cell *matCellDef="let set">{{set.modified.toLocaleDateString()}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let set">
+        <button mat-icon-button [matMenuTriggerFor]="setMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #setMenu="matMenu">
+          <button mat-menu-item (click)="viewSet(set)">View</button>
+          <button mat-menu-item (click)="editSet(set)">Edit</button>
+          <button mat-menu-item (click)="deleteSet(set)">Delete</button>
+        </mat-menu>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

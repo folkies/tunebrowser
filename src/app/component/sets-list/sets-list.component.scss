@@ -1,0 +1,19 @@
+.sets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sets-table {
+  width: 100%;
+}
+
+.set-link {
+  cursor: pointer;
+  color: #1976d2;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
