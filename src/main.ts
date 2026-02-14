@@ -1,4 +1,4 @@
-import { enableProdMode, importProvidersFrom } from '@angular/core';
+import { enableProdMode, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { configure, LogLevel } from '@log4js2/core';
 
 import { LayoutModule } from '@angular/cdk/layout';
@@ -133,7 +133,8 @@ bootstrapApplication(AppComponent, {
         TuneBookIndex,
         TuneBookLoaderService,
         provideHttpClient(withInterceptorsFromDi()),
-        provideRouter(appRoutes)
+        provideRouter(appRoutes),
+        provideZoneChangeDetection({eventCoalescing: true})
     ]
 })
   .catch(err => console.error(err));

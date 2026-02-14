@@ -18,6 +18,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
     private parsedTune: abcjs.TuneObject;
     private synthControl: abcjs.SynthObjectController;
+    private synthControlLoaded = false;
 
     private tempoSource = new BehaviorSubject<number>(100);
 
@@ -48,7 +49,9 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     constructor() {
         this.synthControl = new abcjs.synth.SynthController();
         this.tempoSource.pipe(throttleTime(500, asyncScheduler, {trailing: true})).subscribe( tempo => {
-            this.synthControl.setWarp(tempo);
+            if (this.synthControlLoaded) {
+                this.synthControl.setWarp(tempo);
+            }
         })
     }
 
@@ -78,10 +81,12 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
             );
             // ugly hack for setting the tempo, since the audioParams seem to have no effect
             this.parsedTune.metaText.tempo = {bpm: this.bpm, startChar: 0, endChar: 0};
-            return this.synthControl.setTune(this.parsedTune, true, {
+            const result = this.synthControl.setTune(this.parsedTune, true, {
                 chordsOff: true, 
                 program: this.instrumentByName('flute')
             });
+            this.synthControlLoaded = true;
+            return result;
         }
     }
 
