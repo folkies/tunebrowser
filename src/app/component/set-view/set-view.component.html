@@ -14,9 +14,11 @@
 
         @if (tunesWithAbc.length > 0) {
             <div class="tunes-list">
-                    @for (tune of tunesWithAbc; track tune.entry) {
+                    @for (tune of tunesWithAbc; track tune.entry; let isLast = $last) {
                         <span class="mat-h4 tune-link" (click)="openTune(tune.entry)">{{ tune.entry.title }}</span>
-                        <br/>
+                        @if (!isLast) { 
+                            <span class="separator"> | </span> 
+                        }
                     }
             </div>
 

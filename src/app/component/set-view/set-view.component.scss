@@ -23,7 +23,6 @@
 
 .tunes-list {
   margin-bottom: 2rem;
-  padding: 1rem;
   background-color: #f9f9f9;
   border-radius: 4px;
 
@@ -33,10 +32,10 @@
   }
 }
 
-.tune-list {
-  list-style: decimal;
-  padding-left: 1.5rem;
-  margin: 0;
+
+.separator {
+  color: #666;
+  margin: 0 0.25rem;
 }
 
 
