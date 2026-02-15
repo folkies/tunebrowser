@@ -5,6 +5,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href=/tunebook/",
+    "serve:prod": "npx http-server dist/folkies/browser -p 8080",    
     "test": "vitest run --silent",
     "metadata": "tsx src/app/service/metadata-extractor.ts",
     "lint": "ng lint",

@@ -148,7 +148,7 @@ export class RepertoireComponent implements OnInit {
             lastPracticed: item.lastPracticed,
             timesPracticed: item.timesPracticed,
             title: titleWithoutNumber(entry.title),
-            uri: `../tune/${item.tune.bookId}/${item.tune.tuneId}`
+            uri: `/tune/${item.tune.bookId}/${item.tune.tuneId}`
         };
     }
 }
