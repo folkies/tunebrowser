@@ -1,8 +1,12 @@
 <h2 mat-dialog-title>Create New Set</h2>
 <mat-dialog-content>
-  <mat-form-field>
+  <mat-form-field class="full-width">
     <mat-label>Set Name</mat-label>
     <input matInput [(ngModel)]="setName" (keyup.enter)="onCreate()" placeholder="Enter set name">
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Tags (comma-separated)</mat-label>
+    <input matInput [(ngModel)]="tags" (keyup.enter)="onCreate()" placeholder="e.g., performance, competition, session">
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">

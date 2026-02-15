@@ -13,6 +13,9 @@ export interface TuneSet {
     /** Ordered list of tune references (max 5). */
     tunes: TuneReference[];
 
+    /** Tags for categorizing and filtering sets. */
+    tags: string[];
+
     /** Date when the set was created. */
     created: Date;
 

@@ -1,4 +1,8 @@
 import { Component, OnInit, ViewChild, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import { MatChipSet, MatChip, MatChipRemove } from '@angular/material/chips';
 import { TuneSet } from 'src/app/model/tune-set';
 import { TuneSetRepository } from 'src/app/service/tune-set-repository';
 import { MatSort, MatSortHeader } from '@angular/material/sort';
@@ -17,8 +21,16 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
     templateUrl: './sets-list.component.html',
     styleUrls: ['./sets-list.component.scss'],
     imports: [
+        FormsModule,
+        MatFormField,
+        MatLabel,
+        MatInput,
         MatButton,
+        MatIconButton,
         MatIcon,
+        MatChipSet,
+        MatChip,
+        MatChipRemove,
         MatTable,
         MatSort,
         MatColumnDef,
@@ -48,7 +60,20 @@ export class SetsListComponent implements OnInit {
 
     dataSource: MatTableDataSource<TuneSet>;
     sets: TuneSet[] = [];
-    displayedColumns: string[] = ['name', 'tuneCount', 'created', 'modified', 'action'];
+    allSets: TuneSet[] = [];
+    displayedColumns: string[] = ['name', 'tags', 'tuneCount', 'created', 'modified', 'action'];
+    filterText = '';
+
+    // Get all unique tags from all sets
+    get allTags(): string[] {
+        const tagSet = new Set<string>();
+        this.allSets.forEach(set => {
+            if (set.tags) {
+                set.tags.forEach(tag => tagSet.add(tag));
+            }
+        });
+        return Array.from(tagSet).sort();
+    }
 
     async ngOnInit(): Promise<void> {
         this.index.allReady.subscribe(() => this.loadSets());
@@ -56,16 +81,36 @@ export class SetsListComponent implements OnInit {
 
     async loadSets(): Promise<void> {
         const collection = await this.repository.load();
-        this.sets = collection.sets;
+        this.allSets = collection.sets;
+        this.applyFilter();
+    }
+
+    applyFilter(): void {
+        const filterLower = this.filterText.toLowerCase().trim();
+        if (!filterLower) {
+            this.sets = [...this.allSets];
+        } else {
+            this.sets = this.allSets.filter(set => {
+                // Match by name
+                if (set.name.toLowerCase().includes(filterLower)) {
+                    return true;
+                }
+                // Match by any tag
+                if (set.tags && set.tags.some(tag => tag.toLowerCase().includes(filterLower))) {
+                    return true;
+                }
+                return false;
+            });
+        }
         this.dataSource = new MatTableDataSource(this.sets);
         this.dataSource.sort = this.sort;
     }
 
     openCreateSetDialog(): void {
         const dialogRef = this.dialog.open(CreateSetDialogComponent);
-        dialogRef.afterClosed().subscribe(async (name: string) => {
-            if (name) {
-                await this.repository.createSet(name);
+        dialogRef.afterClosed().subscribe(async (result: { name: string, tags: string[] } | undefined) => {
+            if (result && result.name) {
+                await this.repository.createSet(result.name, result.tags);
                 await this.loadSets();
             }
         });

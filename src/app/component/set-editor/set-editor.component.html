@@ -11,6 +11,15 @@
             />
         </mat-form-field>
 
+        <mat-form-field class="full-width">
+            <mat-label>Tags (comma-separated)</mat-label>
+            <input
+                matInput
+                [(ngModel)]="tagsText"
+                placeholder="e.g., performance, competition, session"
+            />
+        </mat-form-field>
+
         <div class="tunes-section">
             <h3 class="mat-h3">Tunes in Set ({{ tunesInSet.length }}/{{ maxTunes }})</h3>
 

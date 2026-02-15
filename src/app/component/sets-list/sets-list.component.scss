@@ -5,8 +5,28 @@
   margin-bottom: 1rem;
 }
 
+.filter-section {
+  margin-bottom: 1rem;
+}
+
+.filter-field {
+  width: 100%;
+  max-width: 400px;
+}
+
 .sets-table {
   width: 100%;
+}
+
+mat-chip-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+mat-chip {
+  font-size: 0.75rem;
+  min-height: 24px;
 }
 
 .set-link {

@@ -1,0 +1,10 @@
+.full-width {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+}

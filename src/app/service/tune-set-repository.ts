@@ -8,11 +8,18 @@ const TUNE_SETS_FILE = 'tune-sets.json';
 export const MAX_TUNES_PER_SET = 5;
 
 /**
- * Reviver function for JSON.parse() to handle Date objects.
+ * Reviver function for JSON.parse() to handle Date objects and migration.
  */
 export function reviveTuneSet(key: string, value: any): any {
     if (key === 'created' || key === 'modified') {
         return new Date(value);
+    }
+    // Ensure tags field exists for backward compatibility
+    if (key === 'sets' && Array.isArray(value)) {
+        return value.map((set: any) => ({
+            ...set,
+            tags: set.tags || []
+        }));
     }
     return value;
 }
@@ -70,15 +77,17 @@ export class TuneSetRepository {
     /**
      * Creates a new tune set.
      * @param name name of the set
+     * @param tags optional tags for the set
      * @return the created tune set
      */
-    async createSet(name: string): Promise<TuneSet> {
+    async createSet(name: string, tags: string[] = []): Promise<TuneSet> {
         await this.load();
         const now = new Date();
         const newSet: TuneSet = {
             id: this.generateId(),
             name,
             tunes: [],
+            tags: tags || [],
             created: now,
             modified: now
         };

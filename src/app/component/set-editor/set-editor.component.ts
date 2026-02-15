@@ -50,6 +50,7 @@ export class SetEditorComponent implements OnInit {
     tunesInSet: TuneInSet[] = [];
     searchText = '';
     filteredTunes: IndexEntry[] = [];
+    tagsText = '';
 
     async ngOnInit(): Promise<void> {
         this.index.allReady.subscribe(() => this.loadSet());
@@ -61,6 +62,7 @@ export class SetEditorComponent implements OnInit {
             this.set = await this.repository.getSet(setId);
             if (this.set) {
                 this.loadTunesInSet();
+                this.tagsText = (this.set.tags || []).join(', ');
             }
         }
     }
@@ -117,6 +119,8 @@ export class SetEditorComponent implements OnInit {
     }
 
     async save(): Promise<void> {
+        // Parse tags from the text input
+        this.set.tags = this.tagsText.split(',').map(t => t.trim()).filter(t => t.length > 0);
         await this.repository.updateSet(this.set);
         this.router.navigate(['/sets']);
     }
