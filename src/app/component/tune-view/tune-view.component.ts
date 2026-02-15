@@ -10,6 +10,9 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
     @Input()
     tune = '';
 
+    @Input()
+    showNumberInTitle = true;
+
     @ViewChild('notation', { static: false })
     div: ElementRef;
 
@@ -25,7 +28,7 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
         if (this.div !== undefined && this.tune.length > 0) {
             abcjs.renderAbc(
                 this.div.nativeElement,
-                this.includeNumberInTitle(this.tune),
+                this.showNumberInTitle ? this.includeNumberInTitle(this.tune) : this.tune,
                 {
                     paddingleft: 0,
                     paddingright: 0,
@@ -44,7 +47,7 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
         }
         const idMatch = abc.match(/^X:(\s*)(\w+)/m);
         if (!idMatch) {
-            return;
+            return abc;
         }
         const id = idMatch[2];
         const titleMatch = abc.match(/^T:(\s*)(.+?)(, The)?$/m);

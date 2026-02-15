@@ -7,6 +7,7 @@ import { TuneSet } from 'src/app/model/tune-set';
 import { TuneSetRepository } from 'src/app/service/tune-set-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { TuneViewComponent } from '../tune-view/tune-view.component';
+import { purgeHeaders } from 'src/app/service/abc-util';
 
 interface TuneWithAbc {
     entry: IndexEntry;
@@ -37,7 +38,7 @@ export class SetViewComponent implements OnInit {
     }
 
     private async loadSet(): Promise<void> {
-        const setId = this.route.snapshot.paramMap.get('id');        console.log('Set id from route', setId);
+        const setId = this.route.snapshot.paramMap.get('id');
         if (setId) {
             this.set = await this.repository.getSet(setId);
             if (this.set) {
@@ -67,6 +68,15 @@ export class SetViewComponent implements OnInit {
 
     tuneForDisplay(abc: string): string {
         return '%%stretchlast\n' + abc;
+    }
+
+    getConcatenatedAbc(): string {
+        const concatenated = this.tunesWithAbc
+            .map(tune => tune.abc.trim())
+            .map(abc => purgeHeaders(abc))
+            .join('\n').trim();
+        console.log(concatenated);
+        return '%%stretchlast\nX: 1\n' + concatenated;
     }
 
     openTune(entry: IndexEntry): void {

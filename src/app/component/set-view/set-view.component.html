@@ -12,18 +12,18 @@
             </div>
         </div>
 
-        <p class="mat-body set-info">{{ tunesWithAbc.length }} tunes</p>
+        @if (tunesWithAbc.length > 0) {
+            <div class="tunes-list">
+                    @for (tune of tunesWithAbc; track tune.entry) {
+                        <span class="mat-h4 tune-link" (click)="openTune(tune.entry)">{{ tune.entry.title }}</span>
+                        <br/>
+                    }
+            </div>
 
-        <div class="tunes-notation">
-            @for (tune of tunesWithAbc; track tune.entry; let i = $index) {
-                <div class="tune-section">
-                    <h3 class="mat-h3 tune-link" (click)="openTune(tune.entry)">{{ i + 1 }}. {{ tune.entry.title }}</h3>
-                    <app-tune-view
-                        [tune]="tuneForDisplay(tune.abc)"
-                    ></app-tune-view>
-                </div>
-            }
-        </div>
+            <div class="tunes-notation">
+                <app-tune-view [tune]="getConcatenatedAbc()" [showNumberInTitle]="false"></app-tune-view>
+            </div>
+        }
 
         @if (tunesWithAbc.length === 0) {
             <div class="empty-state">

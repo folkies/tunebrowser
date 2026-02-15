@@ -93,3 +93,22 @@ export function titleWithoutNumber(titleWithNumber: string): string {
     }
     return title;
 }
+
+export function purgeHeaders(abc: string): string {
+    const lines = abc.split('\n');
+    const filteredLines = [];
+    for (const line of lines) {
+        // headers
+        if (/^[A-Za-z]:/.test(line)) {
+            // only keep headers absolutely required
+            if (/^[TMLK]:/.test(line)) {
+                filteredLines.push(line.trim());
+            }
+        } else {
+            if (line.trim().length > 0) {
+                filteredLines.push(line.trim());
+            }
+        }
+    }
+    return filteredLines.join('\n');
+}

@@ -21,17 +21,30 @@
   color: #666;
 }
 
-.tunes-notation {
-  margin-top: 2rem;
+.tunes-list {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
 }
 
-.tune-section {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #e0e0e0;
+.tune-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 0;
+}
 
-  &:last-child {
-    border-bottom: none;
+
+.tunes-notation {
+  margin-top: 2rem;
+
+  h3 {
+    margin-bottom: 1rem;
   }
 }
 
