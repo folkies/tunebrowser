@@ -182,6 +182,16 @@ export class TuneSetRepository {
      * @return unique ID
      */
     private generateId(): string {
-        return `set_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        if (!this.tuneSetCollection || this.tuneSetCollection.sets.length === 0) {
+            return '1';
+        }
+        
+        // Find the highest numeric ID
+        const maxId = this.tuneSetCollection.sets.reduce((max, set) => {
+            const numId = parseInt(set.id, 10);
+            return !isNaN(numId) && numId > max ? numId : max;
+        }, 0);
+        
+        return (maxId + 1).toString();
     }
 }

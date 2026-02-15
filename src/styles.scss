@@ -305,19 +305,18 @@ mat-chip {
     margin-top: 2rem;
 }
 
-.tune-item {
+app-set-editor .tune-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
     padding: 0.5rem 0;
 }
 
-.tune-title {
+app-set-editor .tune-title {
     flex: 1;
 }
 
-.tune-actions {
+app-set-editor .tune-actions {
     display: flex;
     gap: 0.5rem;
 }

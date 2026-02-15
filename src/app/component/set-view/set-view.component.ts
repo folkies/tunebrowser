@@ -4,10 +4,10 @@ import { MatIcon } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IndexEntry } from 'src/app/model/index-entry';
 import { TuneSet } from 'src/app/model/tune-set';
+import { purgeHeaders } from 'src/app/service/abc-util';
 import { TuneSetRepository } from 'src/app/service/tune-set-repository';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { TuneViewComponent } from '../tune-view/tune-view.component';
-import { purgeHeaders } from 'src/app/service/abc-util';
 
 interface TuneWithAbc {
     entry: IndexEntry;

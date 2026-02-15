@@ -1,20 +1,20 @@
 import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatButton, MatIconButton } from '@angular/material/button';
+import { MatChip, MatChipSet } from '@angular/material/chips';
+import { MatDialog } from '@angular/material/dialog';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatIcon } from '@angular/material/icon';
 import { MatInput } from '@angular/material/input';
-import { MatChipSet, MatChip, MatChipRemove } from '@angular/material/chips';
+import { MatMenu, MatMenuItem, MatMenuTrigger } from '@angular/material/menu';
+import { MatSort, MatSortHeader } from '@angular/material/sort';
+import { MatCell, MatCellDef, MatColumnDef, MatHeaderCell, MatHeaderCellDef, MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef, MatTable, MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { TuneSet } from 'src/app/model/tune-set';
 import { TuneSetRepository } from 'src/app/service/tune-set-repository';
-import { MatSort, MatSortHeader } from '@angular/material/sort';
-import { MatTableDataSource, MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, MatCell, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog';
-import { MatMiniFabButton, MatIconButton, MatButton } from '@angular/material/button';
-import { MatIcon } from '@angular/material/icon';
-import { Router } from '@angular/router';
-import { MatMenuTrigger, MatMenu, MatMenuItem } from '@angular/material/menu';
+import { TuneBookIndex } from 'src/app/service/tunebook-index';
 import { CreateSetDialogComponent } from '../create-set-dialog/create-set-dialog.component';
 import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-repertoire-item.component';
-import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-sets-list',
@@ -29,7 +29,6 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
         MatIcon,
         MatChipSet,
         MatChip,
-        MatChipRemove,
         MatTable,
         MatSort,
         MatColumnDef,
