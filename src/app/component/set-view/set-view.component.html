@@ -17,7 +17,7 @@
         <div class="tunes-notation">
             @for (tune of tunesWithAbc; track tune.entry; let i = $index) {
                 <div class="tune-section">
-                    <h3 class="mat-h3">{{ i + 1 }}. {{ tune.entry.title }}</h3>
+                    <h3 class="mat-h3 tune-link" (click)="openTune(tune.entry)">{{ i + 1 }}. {{ tune.entry.title }}</h3>
                     <app-tune-view
                         [tune]="tuneForDisplay(tune.abc)"
                     ></app-tune-view>

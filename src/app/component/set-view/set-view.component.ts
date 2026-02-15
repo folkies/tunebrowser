@@ -68,4 +68,8 @@ export class SetViewComponent implements OnInit {
     tuneForDisplay(abc: string): string {
         return '%%stretchlast\n' + abc;
     }
+
+    openTune(entry: IndexEntry): void {
+        this.router.navigate(['/tune', entry.book, entry.id]);
+    }
 }

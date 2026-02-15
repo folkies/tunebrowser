@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'vitest';
+
 describe('date-fns', () => {
     test('should write day as UTC', () => {
         const day = new Date("2019-12-01T00:00:00");
