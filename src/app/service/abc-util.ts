@@ -6,7 +6,7 @@ const MODE_MAP = {
     "m": "m",
     "maj": "",
     "dor": "dor",
-    "min": "mix",
+    "min": "m",
     "lyd": "lyd",
     "mix": "mix",
     "phr": "phr",
@@ -81,7 +81,7 @@ export function extractSnippet(abc: string): string {
 }
 
 /**
- * Strips an optional number prefix from the given title, and moves an optinal ", The" suffix to the front.
+ * Strips an optional number prefix from the given title, and moves an optional ", The" suffix to the front.
  * @param titleWithNumber title with optional prefix and suffix
  * @returns title for display, without number
  */
@@ -94,6 +94,12 @@ export function titleWithoutNumber(titleWithNumber: string): string {
     return title;
 }
 
+/**
+ * Purges all headers except the absolutely required ones (T, M, L, K) from the given ABC tune, and trims whitespace.
+ * This is useful for concatenating tunes in a tune set to display all tunes in one component.
+ * @param abc ABC tune
+ * @returns purged ABC tune
+ */
 export function purgeHeaders(abc: string): string {
     const lines = abc.split('\n');
     const filteredLines = [];
