@@ -271,8 +271,8 @@ afdf e2 (3ABc :|2 defg ~a2ab | afdf edd2 ||
 
 X: 23
 T: Gatehouse Maid
-R: C|
-M: 4/4
+R: reel
+M: C|
 L: 1/8
 K: Am
 A2Bd edBA|G^FGA GEDE|A2Bd edBd|egdB BAA2 :|
@@ -3621,3 +3621,15 @@ K: Gmaj
 "G"B2 d ded|"G"BAB G2B|"D"AGE "C"DEG|"D"ABA "G"G2:|
 |:A|"G"B2 G GAB|"C"c2c ABc|"G"B2G GAB|"D"ABc "C"d2 c|
 "G"B2G GAB|"C"cdc "G"BcB|"D"AGE "C"DEG|"D"ABA "G"G2:| 
+
+X: 306
+T: The Butchers' March
+T: The Butcher's Fancy
+R: jig
+M: 6/8
+L: 1/8
+K: Gmaj
+B|:ded BAB|dBA A2B|ded BAB|dBG G2B|
+ded BAB|dBA A2g|faf gfe|1 dBG GBc:|2 dBG GBd||
+|:eAA fAA|eAA ABd|eAA gfe|dBG GBd|
+eAA fAA|eAA efg|faf gfe|1 dBG GBd:|2 dBG G3|| 
