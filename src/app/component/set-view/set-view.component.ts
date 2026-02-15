@@ -73,8 +73,7 @@ export class SetViewComponent implements OnInit {
         const concatenated = this.tunesWithAbc
             .map(tune => tune.abc.trim())
             .map(abc => purgeHeaders(abc))
-            .join('\n').trim();
-        console.log(concatenated);
+            .join('\n');
         return '%%stretchlast\nX: 1\n' + concatenated;
     }
 
