@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatChip, MatChipSet } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
-import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
 import { MatInput } from '@angular/material/input';
 import { MatMenu, MatMenuItem, MatMenuTrigger } from '@angular/material/menu';
@@ -23,6 +23,7 @@ import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-
         FormsModule,
         MatFormField,
         MatLabel,
+        MatSuffix,
         MatInput,
         MatButton,
         MatIconButton,
