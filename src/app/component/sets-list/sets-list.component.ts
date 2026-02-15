@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatChip, MatChipSet } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
@@ -53,6 +54,7 @@ export class SetsListComponent implements OnInit {
     private repository = inject(TuneSetRepository);
     private index = inject(TuneBookIndex);
     private router = inject(Router);
+    private breakpointObserver = inject(BreakpointObserver);
 
     @ViewChild(MatSort, { static: true })
     sort: MatSort;
@@ -62,6 +64,16 @@ export class SetsListComponent implements OnInit {
     allSets: TuneSet[] = [];
     displayedColumns: string[] = ['name', 'tags', 'tuneCount', 'created', 'modified', 'action'];
     filterText = '';
+
+    constructor() {
+        this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
+            if (result.matches) {
+                this.displayedColumns = ['name', 'tags', 'action'];
+            } else {
+                this.displayedColumns = ['name', 'tags', 'tuneCount', 'created', 'modified', 'action'];
+            }
+        });
+    }
 
     // Get all unique tags from all sets
     get allTags(): string[] {
