@@ -17,7 +17,6 @@ interface TuneWithAbc {
 @Component({
     selector: 'app-set-view',
     templateUrl: './set-view.component.html',
-    styleUrls: ['./set-view.component.scss'],
     imports: [
         TuneViewComponent,
         MatButton,

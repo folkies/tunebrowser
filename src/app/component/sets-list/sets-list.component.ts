@@ -19,7 +19,6 @@ import { TuneBookIndex } from 'src/app/service/tunebook-index';
 @Component({
     selector: 'app-sets-list',
     templateUrl: './sets-list.component.html',
-    styleUrls: ['./sets-list.component.scss'],
     imports: [
         FormsModule,
         MatFormField,

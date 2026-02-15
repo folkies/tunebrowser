@@ -22,7 +22,6 @@ interface TuneInSet {
 @Component({
     selector: 'app-set-editor',
     templateUrl: './set-editor.component.html',
-    styleUrls: ['./set-editor.component.scss'],
     imports: [
         FormsModule,
         MatFormField,

@@ -8,7 +8,6 @@ import { MatButton } from '@angular/material/button';
 @Component({
     selector: 'app-create-set-dialog',
     templateUrl: './create-set-dialog.component.html',
-    styleUrls: ['./create-set-dialog.component.scss'],
     imports: [
         MatDialogTitle,
         MatDialogContent,
