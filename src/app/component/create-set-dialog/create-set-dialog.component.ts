@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialogRef, MatDialogTitle, MatDialogContent, MatDialogActions } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
@@ -23,7 +23,7 @@ export class CreateSetDialogComponent {
     setName = '';
     tags = '';
 
-    constructor(public dialogRef: MatDialogRef<CreateSetDialogComponent>) {}
+    dialogRef = inject<MatDialogRef<CreateSetDialogComponent>>(MatDialogRef);
 
     onCancel(): void {
         this.dialogRef.close();

@@ -57,7 +57,7 @@ describe('abc-util', () => {
     });
 
     test('should extract metadata', () => {
-        var tune = new TuneBook(tolka).tunes[0];
+        const tune = new TuneBook(tolka).tunes[0];
         expect(extractMetadata(tune)).toEqual({
             id: '20a',
             rhythm: 'polka',
