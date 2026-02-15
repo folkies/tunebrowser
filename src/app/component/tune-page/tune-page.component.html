@@ -31,3 +31,34 @@
 
 <button mat-raised-button routerLink="../{{nextRef}}" class="tune-button" color="primary"
 [disabled]="!nextRef">Next tune</button>
+@if (signedIn && (containingSets.length > 0 || containingRepertoires.length > 0)) {
+  <div class="containing-collections">
+    <h3 class="mat-h3">This tune appears in:</h3>
+    
+    @if (containingSets.length > 0) {
+      <div class="containing-section">
+        <h4 class="mat-body-strong">Tune Sets:</h4>
+        <ul>
+          @for (set of containingSets; track set.id) {
+            <li class="mat-body">
+              <a routerLink="/set/{{set.id}}">{{set.name}}</a>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+    
+    @if (containingRepertoires.length > 0) {
+      <div class="containing-section">
+        <h4 class="mat-body-strong">Repertoires:</h4>
+        <ul>
+          @for (repertoire of containingRepertoires; track repertoire.name) {
+            <li class="mat-body">
+              <a routerLink="/repertoire/{{repertoire.name}}">{{repertoire.name}}</a>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+}

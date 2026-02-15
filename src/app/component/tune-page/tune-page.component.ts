@@ -6,6 +6,9 @@ import { PdfService } from 'src/app/service/pdf-service';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
 import { csvToArray } from 'src/app/service/tags';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
+import { TuneSetRepository } from 'src/app/service/tune-set-repository';
+import { TuneSet } from 'src/app/model/tune-set';
+import { Repertoire } from 'src/app/model/repertoire';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 import { TuneBookIndex } from '../../service/tunebook-index';
 import { AddToRepertoireComponent, RepertoireSelection } from '../add-to-repertoire/add-to-repertoire.component';
@@ -33,6 +36,7 @@ export class TunePageComponent implements OnInit {
     private dialog = inject(MatDialog);
     private collectionService = inject(TuneBookCollectionService);
     private repertoireRepository = inject(RepertoireRepository);
+    private tuneSetRepository = inject(TuneSetRepository);
 
 
     tune = '';
@@ -41,6 +45,9 @@ export class TunePageComponent implements OnInit {
 
     prevRef: string;
     nextRef: string;
+
+    containingSets: TuneSet[] = [];
+    containingRepertoires: Repertoire[] = [];
 
     private bookId: string;
     private ref: string;
@@ -95,7 +102,7 @@ export class TunePageComponent implements OnInit {
         this.displayTune(this.bookId, this.ref);
     }
 
-    private displayTune(bookId: string, ref: string): void {
+    private async displayTune(bookId: string, ref: string): Promise<void> {
         if (ref !== undefined && this.index.isReady()) {
             const entry = this.index.findEntryByTuneReference({ bookId, tuneId: ref });
             if (entry) {
@@ -116,7 +123,31 @@ export class TunePageComponent implements OnInit {
                 if (nextPos < book.tuneBook.tunes.length) {
                     this.nextRef = book.tuneBook.tunes[nextPos].id;
                 }
+                
+                // Find containing sets and repertoires
+                await this.findContainingSetsAndRepertoires(bookId, ref);
             }
         }
+    }
+
+    private async findContainingSetsAndRepertoires(bookId: string, tuneId: string): Promise<void> {
+        this.containingSets = [];
+        this.containingRepertoires = [];
+        
+        if (!this.signedIn) {
+            return;
+        }
+
+        // Find tune sets containing this tune
+        const setsCollection = await this.tuneSetRepository.load();
+        this.containingSets = setsCollection.sets.filter(set => 
+            set.tunes.some(tune => tune.bookId === bookId && tune.tuneId === tuneId)
+        );
+
+        // Find repertoires containing this tune
+        const repertoireCollection = await this.repertoireRepository.load();
+        this.containingRepertoires = repertoireCollection.repertoires.filter(rep =>
+            rep.items.some(item => item.tune.bookId === bookId && item.tune.tuneId === tuneId)
+        );
     }
 }

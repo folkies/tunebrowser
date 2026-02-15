@@ -88,6 +88,7 @@ const appRoutes: Routes = [
     { path: 'match/:transcription', component: MatcherComponent },
     { path: 'practice', component: PracticeComponent },
     { path: 'record', component: RecordComponent },
+    { path: 'repertoire/:name', component: RepertoireComponent },
     { path: 'repertoire', component: RepertoireComponent },
     { path: 'search', component: SearchComponent },
     { path: 'sets', component: SetsListComponent },

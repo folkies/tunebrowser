@@ -12,7 +12,7 @@ import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-
 import { MatMiniFabButton, MatIconButton } from '@angular/material/button';
 import { MatMenuTrigger, MatMenu, MatMenuItem } from '@angular/material/menu';
 import { MatIcon } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
+import { RouterLink, ActivatedRoute, Router } from '@angular/router';
 
 export interface RepertoireTune {
     item: RepertoireItem;
@@ -32,6 +32,8 @@ export class RepertoireComponent implements OnInit {
     private dialog = inject(MatDialog);
     private repertoireRepository = inject(RepertoireRepository);
     private index = inject(TuneBookIndex);
+    private route = inject(ActivatedRoute);
+    private router = inject(Router);
 
 
     @ViewChild(MatSort, { static: true })
@@ -49,7 +51,11 @@ export class RepertoireComponent implements OnInit {
     private repertoireCollection: RepertoireCollection;
 
     ngOnInit(): void {
-        this.index.allReady.subscribe(() => this.loadRepertoire());
+        this.index.allReady.subscribe(() => {
+            this.route.paramMap.subscribe(() => {
+                this.loadRepertoire();
+            });
+        });
     }
 
     newRepertoire(rep: Repertoire) {
@@ -73,8 +79,7 @@ export class RepertoireComponent implements OnInit {
         });
     }
     selectRepertoire(repertoire: Repertoire): void {
-        this.currentRepertoire = repertoire;
-        this.prepareTunes();
+        this.router.navigate(['/repertoire', repertoire.name]);
     }
 
     repertoires(): Repertoire[] {
@@ -105,7 +110,23 @@ export class RepertoireComponent implements OnInit {
 
     private async loadRepertoire() {
         this.repertoireCollection = await this.repertoireRepository.load();
-        const rep = await this.repertoireRepository.findRepertoire();
+        
+        // Check if a specific repertoire name is requested via route parameter
+        const routeName = this.route.snapshot.paramMap.get('name');
+        let rep: Repertoire;
+        
+        if (routeName) {
+            // Find repertoire by name from URL
+            rep = this.repertoireCollection.repertoires.find(r => r.name === routeName);
+            if (!rep) {
+                // If not found, fall back to default
+                rep = await this.repertoireRepository.findRepertoire();
+            }
+        } else {
+            // No name specified, use default
+            rep = await this.repertoireRepository.findRepertoire();
+        }
+        
         this.currentRepertoire = rep;
         if (!rep) {
             return;
