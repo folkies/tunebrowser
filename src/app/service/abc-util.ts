@@ -103,6 +103,7 @@ export function titleWithoutNumber(titleWithNumber: string): string {
 export function purgeHeaders(abc: string): string {
     const lines = abc.split('\n');
     const filteredLines = [];
+    let lengthSeen = false;
     for (const line of lines) {
         // headers
         if (/^[A-Za-z]:/.test(line)) {
@@ -110,7 +111,14 @@ export function purgeHeaders(abc: string): string {
             if (/^[TMLK]:/.test(line)) {
                 filteredLines.push(line.trim());
             }
+            if (/^L:/.test(line)) {
+                lengthSeen = true;
+            }
         } else {
+            if (!lengthSeen) {
+                filteredLines.push('L:1/8');
+                lengthSeen = true;
+            }
             if (line.trim().length > 0) {
                 filteredLines.push(line.trim());
             }
