@@ -5,10 +5,10 @@
     "types": [
       "gapi",
       "gapi.auth2",
-      "gapi.client.drive",
+      "gapi.client.drive-v3",
       "node"
     ]
-},
+  },
   "files": [
     "src/polyfills.ts"
   ],
