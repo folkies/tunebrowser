@@ -11,10 +11,13 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
     tune = '';
 
     @Input()
+    transposeSemitones = 0;
+
+    @Input()
     showNumberInTitle = true;
 
     @ViewChild('notation', { static: false })
-    div: ElementRef;
+    div!: ElementRef;
 
     ngAfterViewInit() {
         this.renderNotation();
@@ -35,7 +38,8 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
                     paddingtop: 0,
                     paddingbottom: 0,
                     staffwidth: 1000,
-                    responsive: 'resize'
+                    responsive: 'resize',
+                    visualTranspose: this.transposeSemitones
                 });
         }
     }
@@ -51,6 +55,9 @@ export class TuneViewComponent implements AfterViewInit, OnChanges {
         }
         const id = idMatch[2];
         const titleMatch = abc.match(/^T:(\s*)(.+?)(, The)?$/m);
+        if (!titleMatch) {
+            return abc;
+        }
         const title = titleMatch[2];
         const article = titleMatch[3] ? 'The ' : '';
         return abc.replace(titleMatch[0], `T: ${id} ${article}${title}`);

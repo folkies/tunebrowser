@@ -40,6 +40,7 @@ export class TunePageComponent implements OnInit {
 
 
     tune = '';
+    transposeSemitones = 0;
     allTags = '';
     signedIn = false;
 
@@ -83,8 +84,28 @@ export class TunePageComponent implements OnInit {
         this.snackBar.open(`PDF will be displayed in separate window`, 'Dismiss', { duration: 3000 });
     }
 
+    transposeUp(): void {
+        this.transposeSemitones += 1;
+    }
+
+    transposeDown(): void {
+        this.transposeSemitones -= 1;
+    }
+
+    tuneForPlayer(): string {
+        return this.tune;
+    }
+
     tuneForDisplay(): string {
         return '%%stretchlast\n' + this.tune;
+    }
+
+    transposeLabel(): string {
+        if (this.transposeSemitones === 0) {
+            return 'Concert pitch';
+        }
+        const sign = this.transposeSemitones > 0 ? '+' : '';
+        return `Transpose ${sign}${this.transposeSemitones}`;
     }
 
     private async addToRepertoire(selection: RepertoireSelection): Promise<void> {
@@ -99,6 +120,7 @@ export class TunePageComponent implements OnInit {
     private consumeRef(map: ParamMap): void {
         this.ref = map.get('ref');
         this.bookId = map.get('bookId');
+        this.transposeSemitones = 0;
         this.displayTune(this.bookId, this.ref);
     }
 

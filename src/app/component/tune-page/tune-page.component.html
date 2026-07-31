@@ -1,6 +1,12 @@
+<div class="transpose-controls">
+  <button mat-stroked-button color="primary" (click)="transposeDown()" aria-label="Transpose down a semitone">-1 semitone</button>
+  <button mat-stroked-button color="primary" (click)="transposeUp()" aria-label="Transpose up a semitone">+1 semitone</button>
+  <span class="mat-body transpose-label">{{transposeLabel()}}</span>
+</div>
+
 <div class="player-controls">
     <div class="player">
-        <app-tune-player #player [tune]="tune"></app-tune-player>
+  <app-tune-player #player [tune]="tuneForPlayer()" [transposeSemitones]="transposeSemitones"></app-tune-player>
     </div>
     <div class="tempo-slider">
         <mat-label class="mat-body tempo-label">Tempo {{player.tempo}}</mat-label>
@@ -9,7 +15,7 @@
         </mat-slider>
     </div>
 </div>
-<app-tune-view [tune]="tuneForDisplay()"></app-tune-view>
+<app-tune-view [tune]="tuneForDisplay()" [transposeSemitones]="transposeSemitones"></app-tune-view>
 
 <form class="tags-form">
     <mat-form-field class="tags">
