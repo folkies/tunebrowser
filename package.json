@@ -50,7 +50,7 @@
     "iconv-lite": "^0.5.2",
     "istanbul-lib-instrument": "^6.0.3",
     "path": "^0.12.7",
-    "ts-node": "~7.0.0",
+    "ts-node": "~10.9.2",
     "tsx": "^4.23.1",
     "typescript": "~6.0.2",
     "vitest": "^4.1.10"
