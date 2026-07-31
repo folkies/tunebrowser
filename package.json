@@ -46,7 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "angular-eslint": "^22.1.0",
-    "eslint": "^9.39.5",
+    "eslint": "^10.8.0",
     "iconv-lite": "^0.5.2",
     "istanbul-lib-instrument": "^6.0.3",
     "path": "^0.12.7",
@@ -57,6 +57,10 @@
   },
   "resolutions": {
     "@babel/preset-env": "^7.8.7"
+  },
+  "overrides": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@hono/node-server": "2.0.12"
   },
   "allowScripts": {
     "esbuild@0.28.1": true,
