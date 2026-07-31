@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
-import abcjs, { parseOnly, TuneBook } from 'abcjs';
+import { parseOnly, renderAbc, strTranspose, TuneBook } from 'abcjs';
 import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
@@ -104,7 +104,7 @@ export class TuneEditorComponent implements AfterViewInit {
     private renderNotation(abc: string): void {
         this.renderedAbc = abc;
         if (this.div !== undefined && abc.length > 0) {
-            abcjs.renderAbc(this.div.nativeElement, abc,
+            renderAbc(this.div.nativeElement, abc,
                 {
                     paddingleft: 0,
                     paddingright: 0,
@@ -150,11 +150,7 @@ export class TuneEditorComponent implements AfterViewInit {
 
     private transposeTuneText(abc: string, delta: number): string {
         const parsed = parseOnly(abc);
-        const transposer = (abcjs as unknown as { strTranspose?: (originalAbc: string, visualObj: unknown, steps: number) => string }).strTranspose;
-        if (!transposer) {
-            return abc;
-        }
-        return transposer(abc, parsed, delta);
+        return strTranspose(abc, parsed, delta);
     }
 
     private extractTuneAtCaret(pos: number): string {
