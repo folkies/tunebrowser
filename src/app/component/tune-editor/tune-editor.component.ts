@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
-import abcjs, { TuneBook } from 'abcjs';
+import { parseOnly, renderAbc, strTranspose, TuneBook } from 'abcjs';
 import { ICaret } from 'src/app/directive/caret-tracker.directive';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
@@ -29,8 +29,10 @@ export class TuneEditorComponent implements AfterViewInit {
     private snackBar = inject(MatSnackBar);
 
     private abc = '';
-    private bookId: string;
-    private bookRef: TuneBookReference;
+    private renderedAbc = '';
+    private caretPos = 0;
+    private bookId = '';
+    private bookRef!: TuneBookReference;
 
     @Input()
     set tune(abc: string) {
@@ -42,12 +44,15 @@ export class TuneEditorComponent implements AfterViewInit {
     }
 
     @ViewChild('notation', { static: false })
-    div: ElementRef;
+    div!: ElementRef;
 
     constructor() {
 
         this.route.paramMap.subscribe(paramMap => {
-            this.bookId = paramMap.get('id');
+            this.bookId = paramMap.get('id') ?? '';
+            if (!this.bookId) {
+                return;
+            }
             this.bookRef = this.index.getBookById(this.bookId);
             this.tune = this.bookRef.abc;
         });
@@ -66,6 +71,7 @@ export class TuneEditorComponent implements AfterViewInit {
     }
 
     onCaret(caret: ICaret) {
+        this.caretPos = caret.textPos;
         this.renderNotation(this.extractTuneAtCaret(caret.textPos));
     }
 
@@ -87,9 +93,18 @@ export class TuneEditorComponent implements AfterViewInit {
         this.snackBar.open(`PDF will be displayed in separate window`, 'Dismiss', { duration: 3000 });
     }
 
+    transposeUp(): void {
+        this.transposeCurrentTune(1);
+    }
+
+    transposeDown(): void {
+        this.transposeCurrentTune(-1);
+    }
+
     private renderNotation(abc: string): void {
+        this.renderedAbc = abc;
         if (this.div !== undefined && abc.length > 0) {
-            abcjs.renderAbc(this.div.nativeElement, abc,
+            renderAbc(this.div.nativeElement, abc,
                 {
                     paddingleft: 0,
                     paddingright: 0,
@@ -99,6 +114,43 @@ export class TuneEditorComponent implements AfterViewInit {
                     responsive: 'resize'
                 });
         }
+    }
+
+    private transposeCurrentTune(delta: number): void {
+        if (!this.tune || delta === 0) {
+            return;
+        }
+        const { start, end } = this.tuneRangeAtCaret();
+        const currentTune = this.tune.substring(start, end);
+        const transposed = this.transposeTuneText(currentTune, delta);
+        this.tune = this.tune.substring(0, start) + transposed + this.tune.substring(end);
+        this.renderNotation(transposed);
+    }
+
+    private tuneRangeAtCaret(): { start: number; end: number } {
+        const starts: number[] = [];
+        const tuneStartRegex = /^X:/gm;
+        let match: RegExpExecArray | null;
+        while ((match = tuneStartRegex.exec(this.tune)) !== null) {
+            starts.push(match.index);
+        }
+        if (starts.length === 0) {
+            return { start: 0, end: this.tune.length };
+        }
+        let start = starts[0];
+        let end = this.tune.length;
+        for (let i = 0; i < starts.length; i++) {
+            if (starts[i] <= this.caretPos) {
+                start = starts[i];
+                end = i + 1 < starts.length ? starts[i + 1] : this.tune.length;
+            }
+        }
+        return { start, end };
+    }
+
+    private transposeTuneText(abc: string, delta: number): string {
+        const parsed = parseOnly(abc);
+        return strTranspose(abc, parsed, delta);
     }
 
     private extractTuneAtCaret(pos: number): string {

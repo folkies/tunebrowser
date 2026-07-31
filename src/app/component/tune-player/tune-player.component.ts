@@ -15,8 +15,9 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     private bpm = 100;
 
     private abc = '';
+    private transpose = 0;
 
-    private parsedTune: abcjs.TuneObject;
+    private parsedTune!: abcjs.TuneObject;
     private synthControl: abcjs.SynthObjectController;
     private synthControlLoaded = false;
 
@@ -24,7 +25,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
 
     @ViewChild('midiplayer', { static: true })
-    div: ElementRef;
+    div!: ElementRef;
 
     @Input()
     set tune(tune: string) {
@@ -34,6 +35,15 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
     get tune(): string {
         return this.abc;
+    }
+
+    @Input()
+    set transposeSemitones(transpose: number) {
+        this.transpose = transpose ?? 0;
+    }
+
+    get transposeSemitones(): number {
+        return this.transpose;
     }
 
     @Input()
@@ -64,7 +74,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
        this.renderMidiPlayer();
     }
 
-    private async renderMidiPlayer(): Promise<abcjs.SynthInitResponse> {
+    private async renderMidiPlayer(): Promise<abcjs.SynthInitResponse | undefined> {
         if (this.div !== undefined && this.tune.length > 0) {
 
             console.log("reload player");
@@ -83,11 +93,14 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
             this.parsedTune.metaText.tempo = {bpm: this.bpm, startChar: 0, endChar: 0};
             const result = this.synthControl.setTune(this.parsedTune, true, {
                 chordsOff: true, 
-                program: this.instrumentByName('flute')
+                program: this.instrumentByName('flute'),
+                midiTranspose: this.transpose,
+                visualTranspose: this.transpose
             });
             this.synthControlLoaded = true;
             return result;
         }
+        return undefined;
     }
 
     private instrumentByName(name: string): number {
