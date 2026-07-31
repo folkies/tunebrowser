@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/scrolling';
-import { Component, NgZone, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, NgZone, OnInit, ViewChild, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
 import { GoogleAccessTokenService } from 'src/lib/google-sign-in/lib/services/google-access-token.service';
 import { GoogleDriveService } from './service/google-drive.service';
@@ -15,6 +15,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatToolbar, MatIconButton, MatIcon, MatSidenavContainer, MatSidenav, MatNavList, MatListItem, RouterLink, MatSidenavContent, CdkScrollable, RouterOutlet]
 })
 export class AppComponent implements OnInit {
@@ -46,11 +47,11 @@ export class AppComponent implements OnInit {
 
         this.scroll
             .scrolled()
-            .subscribe((scrollable: CdkScrollable | void) => {
-                if (!scrollable) {
+            .subscribe((scrollTarget) => {
+                if (!this.isCdkScrollable(scrollTarget)) {
                     return;
                 }
-                this.zone.run(() => this.onWindowScroll(scrollable));
+                this.zone.run(() => this.onWindowScroll(scrollTarget));
             });
 
         this.googleDriveService.driveApiLoaded.subscribe(_ => {
@@ -88,5 +89,9 @@ export class AppComponent implements OnInit {
         }
         this.lastOffset = scrollTop;
         this.toolbarVisible = !this.isHandset || shouldShowToolbar;
+    }
+
+    private isCdkScrollable(scrollTarget: unknown): scrollTarget is CdkScrollable {
+        return !!scrollTarget && typeof scrollTarget === 'object' && 'getElementRef' in scrollTarget;
     }
 }

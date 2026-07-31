@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { AnalyzedTune } from 'abcjs';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
@@ -8,6 +8,7 @@ import { MatList, MatListItem } from '@angular/material/list';
 @Component({
     selector: 'app-tunes-list',
     templateUrl: './tunes-list.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatList, MatListItem, RouterLink]
 })
 export class TunesListComponent {

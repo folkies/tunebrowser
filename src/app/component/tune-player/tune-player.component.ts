@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import abcjs from 'abcjs';
 import { asyncScheduler, BehaviorSubject } from 'rxjs';
@@ -7,6 +7,7 @@ import { throttleTime } from 'rxjs/operators';
 
 @Component({
     selector: 'app-tune-player',
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './tune-player.component.html'
 })
 export class TunePlayerComponent implements AfterViewInit, OnChanges {

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, OnInit, ViewChild, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RepertoireItem, RepertoireCollection, Repertoire } from 'src/app/model/repertoire';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
@@ -26,6 +26,7 @@ export interface RepertoireTune {
 @Component({
     selector: 'app-repertoire',
     templateUrl: './repertoire.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatMiniFabButton, MatMenuTrigger, MatIcon, MatMenu, MatMenuItem, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatSortHeader, MatCellDef, MatCell, RouterLink, MatIconButton, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow]
 })
 export class RepertoireComponent implements OnInit {

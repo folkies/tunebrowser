@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
@@ -25,6 +25,7 @@ import { MatIcon } from '@angular/material/icon';
 @Component({
     selector: 'app-tune-page',
     templateUrl: './tune-page.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [TunePlayerComponent, MatLabel, MatSlider, MatSliderThumb, FormsModule, TuneViewComponent, MatFormField, MatInput, MatButton, MatIcon, RouterLink]
 })
 export class TunePageComponent implements OnInit {

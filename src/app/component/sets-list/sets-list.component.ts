@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, OnInit, ViewChild, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatButton, MatIconButton } from '@angular/material/button';
@@ -20,6 +20,7 @@ import { DeleteRepertoireItemComponent } from '../delete-repertoire-item/delete-
 @Component({
     selector: 'app-sets-list',
     templateUrl: './sets-list.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         FormsModule,
         MatFormField,

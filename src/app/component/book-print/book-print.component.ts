@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PdfService } from 'src/app/service/pdf-service';
 import { TuneBookIndex } from 'src/app/service/tunebook-index';
 
 @Component({
     selector: 'app-book-print',
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './book-print.component.html'
 })
 export class BookPrintComponent {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { UntypedFormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose } from '@angular/material/dialog';
 import { Repertoire } from 'src/app/model/repertoire';
@@ -10,6 +10,7 @@ import { MatButton } from '@angular/material/button';
 @Component({
     selector: 'app-new-repertoire',
     templateUrl: './new-repertoire.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatDialogTitle, CdkScrollable, MatDialogContent, MatFormField, MatInput, FormsModule, ReactiveFormsModule, MatDialogActions, MatButton, MatDialogClose]
 })
 export class NewRepertoireComponent {

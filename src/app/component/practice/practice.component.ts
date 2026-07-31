@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IndexEntry } from 'src/app/model/index-entry';
 import { Repertoire, RepertoireCollection, RepertoireItem } from 'src/app/model/repertoire';
@@ -22,6 +22,7 @@ import { RouterLink } from '@angular/router';
 @Component({
     selector: 'app-practice',
     templateUrl: './practice.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatFormField, MatLabel, MatSelect, MatOption, MatInput, FormsModule, MatButton, MatList, MatListItem, RouterLink]
 })
 export class PracticeComponent {

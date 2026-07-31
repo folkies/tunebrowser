@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { UntypedFormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose } from '@angular/material/dialog';
 import { RepertoireRepository } from 'src/app/service/repertoire-repository';
@@ -18,6 +18,7 @@ export interface RepertoireSelection {
 @Component({
     selector: 'app-add-to-repertoire',
     templateUrl: './add-to-repertoire.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatDialogTitle, CdkScrollable, MatDialogContent, MatFormField, MatLabel, MatInput, FormsModule, MatAutocompleteTrigger, ReactiveFormsModule, MatAutocomplete, MatOption, MatDatepickerInput, MatDatepicker, MatDatepickerToggle, MatSuffix, MatDialogActions, MatButton, MatDialogClose]
 })
 export class AddToRepertoireComponent implements OnInit {

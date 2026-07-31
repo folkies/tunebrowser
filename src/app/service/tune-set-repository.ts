@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable, inject } from '@angular/core';
 import { TuneSet, TuneSetCollection } from '../model/tune-set';
 import { GoogleDriveService, TUNE_FOLDER } from './google-drive.service';

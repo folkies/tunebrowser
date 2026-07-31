@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,6 +17,7 @@ interface TuneWithAbc {
 @Component({
     selector: 'app-set-view',
     templateUrl: './set-view.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         TuneViewComponent,
         MatButton,

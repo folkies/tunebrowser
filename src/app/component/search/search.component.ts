@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable, inject } from '@angular/core';
+import { Component, OnInit, Injectable, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { TuneBookReference } from 'src/app/model/tunebook-reference';
 import { csvToArray } from 'src/app/service/tags';
@@ -40,6 +40,7 @@ export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy 
     selector: 'app-search',
     templateUrl: './search.component.html',
     providers: [{ provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, FormsModule, MatFormField, MatLabel, MatInput, MatSelect, MatOption, MatExpansionPanelActionRow, MatButton, CdkVirtualScrollViewport, CdkVirtualForOf, SnippetViewComponent]
 })
 export class SearchComponent implements OnInit {
