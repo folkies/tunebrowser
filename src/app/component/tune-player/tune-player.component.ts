@@ -17,7 +17,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
     private abc = '';
     private transpose = 0;
 
-    private parsedTune: abcjs.TuneObject;
+    private parsedTune!: abcjs.TuneObject;
     private synthControl: abcjs.SynthObjectController;
     private synthControlLoaded = false;
 
@@ -25,7 +25,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
 
 
     @ViewChild('midiplayer', { static: true })
-    div: ElementRef;
+    div!: ElementRef;
 
     @Input()
     set tune(tune: string) {
@@ -74,7 +74,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
        this.renderMidiPlayer();
     }
 
-    private async renderMidiPlayer(): Promise<abcjs.SynthInitResponse> {
+    private async renderMidiPlayer(): Promise<abcjs.SynthInitResponse | undefined> {
         if (this.div !== undefined && this.tune.length > 0) {
 
             console.log("reload player");
@@ -100,6 +100,7 @@ export class TunePlayerComponent implements AfterViewInit, OnChanges {
             this.synthControlLoaded = true;
             return result;
         }
+        return undefined;
     }
 
     private instrumentByName(name: string): number {
