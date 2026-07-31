@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, NgZone, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, NgZone, inject, ChangeDetectionStrategy } from '@angular/core';
 import abcjs from 'abcjs';
 import { extractSnippet } from 'src/app/service/abc-util';
 
 @Component({
     selector: 'app-snippet-view',
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './snippet-view.component.html'
 })
 export class SnippetViewComponent implements AfterViewInit, OnChanges {

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { parseOnly, renderAbc, strTranspose, TuneBook } from 'abcjs';
@@ -18,6 +18,7 @@ import { MatIcon } from '@angular/material/icon';
 @Component({
     selector: 'app-tune-editor',
     templateUrl: './tune-editor.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [FormsModule, MatFormField, MatInput, CaretTrackerDirective, MatButton, MatIcon]
 })
 export class TuneEditorComponent implements AfterViewInit {

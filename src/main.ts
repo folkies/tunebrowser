@@ -3,7 +3,7 @@ import { configure, LogLevel } from '@log4js2/core';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -133,7 +133,7 @@ bootstrapApplication(AppComponent, {
         TuneBookCollectionService,
         TuneBookIndex,
         TuneBookLoaderService,
-        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClient(withXhr(), withInterceptorsFromDi()),
         provideRouter(appRoutes),
         provideZoneChangeDetection({eventCoalescing: true})
     ]

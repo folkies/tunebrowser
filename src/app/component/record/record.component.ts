@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { Recorder } from 'src/app/service/transcription/recorder';
@@ -8,6 +8,7 @@ import { MatButton } from '@angular/material/button';
 @Component({
     selector: 'app-record',
     templateUrl: './record.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatProgressBar, MatButton]
 })
 export class RecordComponent {

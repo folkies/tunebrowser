@@ -1,4 +1,4 @@
-import { Component, NgZone, inject } from '@angular/core';
+import { Component, NgZone, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 
@@ -7,6 +7,7 @@ import { GoogleAuthService } from 'src/lib/google-sign-in';
  */
 @Component({
     selector: 'app-login',
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: ''
 })
 export class LoginComponent {

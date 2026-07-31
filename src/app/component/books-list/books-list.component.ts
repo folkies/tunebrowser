@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
 import { GoogleAuthService } from 'src/lib/google-sign-in';
 import { TuneBookReference } from '../../model/tunebook-reference';
@@ -10,6 +10,7 @@ import { MatIcon } from '@angular/material/icon';
 @Component({
     selector: 'app-books-list',
     templateUrl: './books-list.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatList, MatListItem, MatIconButton, RouterLink, MatIcon, MatButton]
 })
 export class BooksListComponent {

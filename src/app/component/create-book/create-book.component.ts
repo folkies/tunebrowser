@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { GoogleDriveService } from 'src/app/service/google-drive.service';
 import { TuneBookCollectionService } from 'src/app/service/tunebook-collection.service';
@@ -11,6 +11,7 @@ import { MatButton } from '@angular/material/button';
 @Component({
     selector: 'app-create-book',
     templateUrl: './create-book.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [FormsModule, MatFormField, MatInput, MatButton]
 })
 export class CreateBookComponent {

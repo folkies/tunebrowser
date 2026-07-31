@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import abcjs from 'abcjs';
 
 @Component({
     selector: 'app-tune-view',
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './tune-view.component.html'
 })
 export class TuneViewComponent implements AfterViewInit, OnChanges {

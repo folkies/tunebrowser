@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { NormalizedTune } from 'src/app/model/normalized-tune';
 import { titleWithoutNumber } from 'src/app/service/abc-util';
@@ -9,6 +9,7 @@ import { MatList, MatListItem } from '@angular/material/list';
 @Component({
     selector: 'app-matcher',
     templateUrl: './matcher.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatProgressBar, MatList, MatListItem]
 })
 export class MatcherComponent {
