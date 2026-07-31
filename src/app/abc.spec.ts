@@ -8,8 +8,14 @@ function includeNumberInTitle(abc: string): string {
         return abc;
     }
     const idMatch = abc.match(/^X:(\s*)(\w+)/);
+    if (!idMatch) {
+        return abc;
+    }
     const id = idMatch[2];
     const titleMatch = abc.match(/^T:(\s*)(.+?)(, The)?$/m);
+    if (!titleMatch) {
+        return abc;
+    }
     const title = titleMatch[2];
     const article = titleMatch[3] ? 'The ' : '';
     return abc.replace(titleMatch[0], `T: ${id} ${article}${title}`);
@@ -87,7 +93,11 @@ eaa efg|dec BAB|GBd gdB|1~A3 A2d:|2~A3 ABd|
         expect(tune.metaText.url).toBe('http://example.com/tunes/20a');
         expect(tune.metaText.rhythm).toBe('polka');
         const multiStaff = tune.lines[0];
-        const key = multiStaff.staff[0].key;
+        const key = multiStaff.staff?.[0]?.key;
+        expect(key).toBeDefined();
+        if (!key) {
+            throw new Error('Expected first staff key to be defined');
+        }
         expect(key.root).toBe('A');
         expect(key.mode).toBe('Dor');
     });
