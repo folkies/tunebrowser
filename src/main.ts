@@ -25,7 +25,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideRouter, RouteReuseStrategy, Routes } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { GSI_CONFIG } from 'src/lib/google-sign-in';
@@ -115,7 +114,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(BrowserAnimationsModule, BrowserModule, GoogleSignInModule.forRoot({
+        importProvidersFrom(BrowserModule, GoogleSignInModule.forRoot({
             provide: GSI_CONFIG,
             useValue: googleApiClientConfig
         }), FormsModule, LayoutModule, MatAutocompleteModule, MatButtonModule, MatDatepickerModule, MatDialogModule, MatExpansionModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatNativeDateModule, MatProgressBarModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSnackBarModule, MatSortModule, MatTableModule, MatToolbarModule, ReactiveFormsModule, ScrollingModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })),
