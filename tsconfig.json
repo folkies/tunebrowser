@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -11,7 +12,7 @@
     "importHelpers": true,
     "paths": {
       "abcjs": [
-        "./src/@types/abcjs"
+        "src/@types/abcjs"
       ]
     },
     "target": "es2022",

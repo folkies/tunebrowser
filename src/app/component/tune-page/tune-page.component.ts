@@ -100,14 +100,6 @@ export class TunePageComponent implements OnInit {
         return '%%stretchlast\n' + this.tune;
     }
 
-    transposeLabel(): string {
-        if (this.transposeSemitones === 0) {
-            return 'Concert pitch';
-        }
-        const sign = this.transposeSemitones > 0 ? '+' : '';
-        return `Transpose ${sign}${this.transposeSemitones}`;
-    }
-
     private async addToRepertoire(selection: RepertoireSelection): Promise<void> {
         if (!selection) {
             return;
