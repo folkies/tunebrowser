@@ -31,8 +31,8 @@ export class TuneEditorComponent implements AfterViewInit {
     private abc = '';
     private renderedAbc = '';
     private caretPos = 0;
-    private bookId: string;
-    private bookRef: TuneBookReference;
+    private bookId = '';
+    private bookRef!: TuneBookReference;
 
     @Input()
     set tune(abc: string) {
@@ -44,12 +44,15 @@ export class TuneEditorComponent implements AfterViewInit {
     }
 
     @ViewChild('notation', { static: false })
-    div: ElementRef;
+    div!: ElementRef;
 
     constructor() {
 
         this.route.paramMap.subscribe(paramMap => {
-            this.bookId = paramMap.get('id');
+            this.bookId = paramMap.get('id') ?? '';
+            if (!this.bookId) {
+                return;
+            }
             this.bookRef = this.index.getBookById(this.bookId);
             this.tune = this.bookRef.abc;
         });
@@ -127,7 +130,7 @@ export class TuneEditorComponent implements AfterViewInit {
     private tuneRangeAtCaret(): { start: number; end: number } {
         const starts: number[] = [];
         const tuneStartRegex = /^X:/gm;
-        let match: RegExpExecArray;
+        let match: RegExpExecArray | null;
         while ((match = tuneStartRegex.exec(this.tune)) !== null) {
             starts.push(match.index);
         }
