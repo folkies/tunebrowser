@@ -12,9 +12,6 @@
     "paths": {
       "src/*": [
         "./src/*"
-      ],
-      "abcjs": [
-        "./src/@types/abcjs"
       ]
     },
     "target": "es2022",
