@@ -39,7 +39,7 @@
     "@angular/cli": "22.1.2",
     "@angular/compiler-cli": "22.1.0",
     "@angular/language-service": "22.1.0",
-    "@types/gapi": "0.0.39",
+    "@types/gapi": "0.0.47",
     "@types/gapi.auth2": "0.0.61",
     "@types/gapi.client.drive-v3": "^0.0.5",
     "@types/node": "^26.1.1",
