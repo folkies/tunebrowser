@@ -5,7 +5,6 @@
     "types": [
       "gapi",
       "gapi.auth2",
-      "gapi.client",
       "gapi.client.drive-v3"
     ]
   },

@@ -26,7 +26,8 @@ export class GoogleApiLoaderService {
 
         this.loadGapi();
 
-        forkJoin([this.onLoad(), this.gsiLoader.onLoad()]).subscribe(([_1, _2]) => {
+        forkJoin([this.onLoad(), this.gsiLoader.onLoad()]).subscribe({
+            next: ([_1, _2]) => {
 
             this.client = google.accounts.oauth2.initTokenClient({
                 client_id: config.client_id,
@@ -37,6 +38,8 @@ export class GoogleApiLoaderService {
 
             this.clientLoaded.next(this.client);
             this.clientLoaded.complete();
+            },
+            error: error => this.clientLoaded.error(error)
         });
     }
 
@@ -48,7 +51,22 @@ export class GoogleApiLoaderService {
         return this.gapiLoaded;
     }
 
+    public setToken(accessToken: string): void {
+        gapi.client.setToken({ access_token: accessToken });
+    }
+
     private loadGapi(): void {
+        const existingScript = document.querySelector(`script[src="${GAPI_URL}"]`);
+        if (existingScript && typeof gapi !== 'undefined') {
+            gapi.load('client', () => {
+                gapi.client.init({}).then(() => {
+                    this.gapiLoaded.next(true);
+                    this.gapiLoaded.complete();
+                }).catch(error => this.gapiLoaded.error(error));
+            });
+            return;
+        }
+
         const node = document.createElement('script');
         node.src = GAPI_URL;
         node.type = 'text/javascript';
@@ -57,9 +75,10 @@ export class GoogleApiLoaderService {
                 gapi.client.init({}).then(() => {
                     this.gapiLoaded.next(true);
                     this.gapiLoaded.complete();
-                })
+                }).catch(error => this.gapiLoaded.error(error));
             })
         };
+        node.onerror = () => this.gapiLoaded.error(new Error('Unable to load the Google API client'));
         document.getElementsByTagName('head')[0].appendChild(node);
     }
 }

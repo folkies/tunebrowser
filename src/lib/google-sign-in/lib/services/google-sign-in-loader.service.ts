@@ -9,6 +9,13 @@ export class GoogleSignInLoaderService {
     private gsiLoadedSource = new ReplaySubject<boolean>(1);
 
     constructor() {
+        const existingScript = document.querySelector(`script[src="${GSI_URL}"]`);
+        if (existingScript) {
+            this.gsiLoadedSource.next(true);
+            this.gsiLoadedSource.complete();
+            return;
+        }
+
         const node = document.createElement('script');
         node.src = GSI_URL;
         node.type = 'text/javascript';
@@ -16,6 +23,7 @@ export class GoogleSignInLoaderService {
             this.gsiLoadedSource.next(true);
             this.gsiLoadedSource.complete();
         };
+        node.onerror = () => this.gsiLoadedSource.error(new Error('Unable to load Google Identity Services'));
         document.getElementsByTagName('head')[0].appendChild(node);
     }
 

@@ -12,15 +12,17 @@ export class GoogleAccessTokenService {
 
 
     private accessToken: string;
-    private tokenClient: TokenClient;
+    private accessTokenRequest: Promise<string>;
 
     readonly accessTokenSource = new ReplaySubject<string>(1);
 
     constructor() {
-        this.googleApiLoader.onClientLoaded().subscribe((client) => this.checkStoredAccessToken(client));
+        this.googleApiLoader.onClientLoaded().subscribe({
+            next: client => this.checkStoredAccessToken(client),
+            error: () => this.accessTokenSource.next('')
+        });
     }
     private checkStoredAccessToken(client: TokenClient): void {
-        this.tokenClient = client;
         const accessToken = localStorage.getItem(ACCESS_TOKEN);
 
         if (accessToken) {
@@ -28,35 +30,61 @@ export class GoogleAccessTokenService {
                 console.log('reusing stored access token');
                 if (!this.accessToken) {
                     this.accessToken = accessToken;
-                    gapi.client.setToken({ access_token: this.accessToken });
+                    this.googleApiLoader.setToken(this.accessToken);
                     this.accessTokenSource.next(this.accessToken);
                 }
             } else {
-                this.fetchAccessToken();
+                this.fetchAccessToken().catch(() => this.accessTokenSource.next(''));
             }
+        } else {
+            this.accessTokenSource.next('');
         }
     }
 
     private isTokenValid(): boolean {
         const accessToken = localStorage.getItem(ACCESS_TOKEN);
-        const refresh = parseInt(localStorage.getItem(ACCESS_TOKEN_REFRESH))
+        const refresh = parseInt(localStorage.getItem(ACCESS_TOKEN_REFRESH), 10);
         const now = new Date().getTime();
-        return accessToken && (now < refresh);
+        return !!accessToken && Number.isFinite(refresh) && now < refresh;
     }
 
     async fetchAccessToken(): Promise<string> {
-        return new Promise((resolve) => {
-            if (this.isTokenValid()) {
-                resolve(this.accessToken);
-            } else {
-                this.googleApiLoader.onClientLoaded().subscribe(client => {
-                    this.tokenClient = client;
+        if (this.isTokenValid()) {
+            this.accessToken ||= localStorage.getItem(ACCESS_TOKEN);
+            return this.accessToken;
+        }
+
+        if (this.accessTokenRequest) {
+            return this.accessTokenRequest;
+        }
+
+        this.accessTokenRequest = this.requestAccessToken();
+        this.accessTokenRequest.then(
+            () => this.accessTokenRequest = undefined,
+            () => this.accessTokenRequest = undefined
+        );
+        return this.accessTokenRequest;
+    }
+
+    private requestAccessToken(): Promise<string> {
+        return new Promise((resolve, reject) => {
+            this.googleApiLoader.onClientLoaded().subscribe({
+                next: client => {
                     client.callback = (response) => {
+                        if (response.error) {
+                            reject(new Error(response.error_description || response.error));
+                            return;
+                        }
+                        if (!response.access_token) {
+                            reject(new Error('Google did not return an access token'));
+                            return;
+                        }
                         resolve(this.handleAccessToken(response));
                     };
-                    client.requestAccessToken({login_hint: localStorage.getItem(PREFERRED_ACCOUNT)});
-                });
-            }
+                    client.requestAccessToken({ login_hint: localStorage.getItem(PREFERRED_ACCOUNT) });
+                },
+                error: reject
+            });
         });
     }
 
@@ -85,11 +113,11 @@ export class GoogleAccessTokenService {
     }
 
     invalidate() {
-        if (this.accessToken && this.tokenClient) {
-            localStorage.removeItem(ACCESS_TOKEN);
-            localStorage.removeItem(ACCESS_TOKEN_REFRESH);    
-            this.accessToken = '';
-            this.accessTokenSource.next(this.accessToken);
-        }
+        localStorage.removeItem(ACCESS_TOKEN);
+        localStorage.removeItem(ACCESS_TOKEN_REFRESH);
+        localStorage.removeItem(PREFERRED_ACCOUNT);
+        this.accessToken = '';
+        this.googleApiLoader.setToken('');
+        this.accessTokenSource.next(this.accessToken);
     }
 }
