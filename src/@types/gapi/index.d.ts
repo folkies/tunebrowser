@@ -1,9 +1,8 @@
-interface GapiRuntime {
-    load(apiName: string, callback: () => void): void;
-    client: {
-        init(options: object): Promise<void>;
-        setToken(token: { access_token: string }): void;
-    };
-}
+declare namespace gapi {
+    function load(apiName: string, callback: () => void): void;
 
-declare const gapi: GapiRuntime;
+    namespace client {
+        function init(options: object): Promise<void>;
+        function setToken(token: { access_token: string }): void;
+    }
+}
