@@ -9,20 +9,17 @@ const PREFERRED_ACCOUNT = 'preferredAccount';
 @Injectable()
 export class GoogleAccessTokenService {
     private googleApiLoader = inject(GoogleApiLoaderService);
-
-
     private accessToken: string;
     private accessTokenRequest: Promise<string>;
-
     readonly accessTokenSource = new ReplaySubject<string>(1);
 
     constructor() {
         this.googleApiLoader.onClientLoaded().subscribe({
-            next: client => this.checkStoredAccessToken(client),
+            next: () => this.checkStoredAccessToken(),
             error: () => this.accessTokenSource.next('')
         });
     }
-    private checkStoredAccessToken(client: TokenClient): void {
+    private checkStoredAccessToken(): void {
         const accessToken = localStorage.getItem(ACCESS_TOKEN);
 
         if (accessToken) {
