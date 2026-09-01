@@ -46,7 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "angular-eslint": "^22.1.0",
-    "eslint": "^10.8.0",
+    "eslint": "^10.9.0",
     "http-server": "^14.1.1",
     "path": "^0.12.7",
     "ts-node": "~10.9.2",
