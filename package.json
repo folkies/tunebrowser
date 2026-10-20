@@ -21,7 +21,7 @@
     "@angular/forms": "22.1.0",
     "@angular/material": "22.1.0",
     "@angular/platform-browser": "22.1.0",
-    "@angular/router": "22.1.0",
+    "@angular/router": "22.2.1",
     "@angular/service-worker": "22.1.0",
     "@log4js2/core": "^2.0.9",
     "abcjs": "^6.6.4",
